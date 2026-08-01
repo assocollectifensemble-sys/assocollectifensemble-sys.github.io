@@ -29,6 +29,12 @@ IMG = {
     "coffre":     "1Rh98q64ssm7AbMxzQGfp9DIwnrCDO5UF",
     "grand1":     "1vQs4v02tbcMTqCGIRPnqusMN1XAcKNU0",
     "grand2":     "1GzjxQrBywQPhAAKnCYyOqh343YJz7-Zk",
+    "debout1":    "1fRn1f9MCqlzkA4Dlcpz24AkVMelGbzYw",
+    "debout2":    "11isaKxY6_GOv9gavFWRSrIy2ouwCVxoC",
+    "shoot_couple":"1t6fFhqI3LgeFTm8o2LGkBHAY684T96TH",
+    "champagne":  "1BB6Du0igxpZ1susdvBIH_-vjHwEjY721",
+    "debout_mini":"1rNPrHVkCwENVXc-kXynArG30OcUAsp7P",
+    "jonglage":   "1rD3VKtFJIc4PnzJsqTK1lW7seBVADcqN",
 }
 
 WSVG = '<svg viewBox="0 0 24 24" class="wa-ico"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>'
@@ -137,15 +143,26 @@ biz_jsonld = {
 }
 
 index_body = navbar() + """
+<div id="intro-cine" aria-hidden="true">
+  <video id="intro-vid" muted playsinline preload="auto" poster="/intro/poster-court.jpg"><source src="/intro/intro-court.mp4" type="video/mp4"></video>
+  <div class="intro-mot">Il était une fois…</div>
+  <div class="intro-passer">Passer l'intro →</div>
+</div>
+
 <audio id="musique" loop preload="auto">
-  <source src="https://cdn.pixabay.com/audio/2026/03/21/14-39-25-311.mp3" type="audio/mpeg">
-  <source src="https://cdn.pixabay.com/audio/2026/01/22/08-13-37-150.mp3" type="audio/mpeg">
+  <source src="/assets/musique.mp3" type="audio/mpeg">
 </audio>
 <button class="sound" id="btn-son" title="Couper / remettre la musique" aria-label="Couper ou remettre la musique">🎷</button>
 
 <header class="hero">
   <div class="hero-visuel">
-    <img class="hero-img" src="%(cover)s" alt="Rosalie et Soizig, nos deux 2CV décorées pour un mariage face à l'océan à La Réunion">
+    <div class="hero-img hero-diapo" style="background-image:url('%(cover)s')">
+      <img class="dp" src="%(cover)s" alt="Rosalie et Soizig, nos deux 2CV décorées pour un mariage face à l'océan à La Réunion">
+      <img class="dp" src="%(sunset_hero)s" alt="Balade en 2CV au coucher de soleil à La Réunion" loading="lazy">
+      <img class="dp" src="%(debout_hero)s" alt="Les mariés debout dans la 2CV, toit panoramique grand ouvert" loading="lazy">
+      <img class="dp" src="%(eglise_hero)s" alt="Sortie d'église en 2CV à La Réunion" loading="lazy">
+      <img class="dp" src="%(champ_hero)s" alt="On trinque au champagne à bord de la 2CV" loading="lazy">
+    </div>
     <div class="hero-veil"></div>
     <div class="il-etait">Il était une fois…</div>
   </div>
@@ -189,6 +206,19 @@ index_body = navbar() + """
   <p class="sous-note reveal">Toutes les prestations sont <strong>avec chauffeur VTC agréé</strong> — vous profitez, je conduis. En option : décoration florale (votre fleuriste ou le nôtre), animations & spectacles.</p>
 </section>
 
+<section id="jonathan">
+  <div class="feature" style="max-width:960px">
+    <div class="photo reveal" style="max-width:380px;justify-self:center;border-radius:50%%;overflow:hidden;aspect-ratio:1;box-shadow:0 18px 50px rgba(58,49,41,.2)"><img src="%(jona_photo)s" alt="Jonathan et sa 2CV" style="height:100%%;object-fit:cover"></div>
+    <div class="reveal">
+      <p class="kicker" style="text-align:left">L'homme derrière le volant</p>
+      <h2>Moi, c'est <span class="script">Jonathan</span></h2>
+      <p>Artiste jongleur et danseur, chauffeur VTC agréé — et surtout, amoureux fou de cette voiture. Rosalie, la 2CV blanche, c'est celle de ma maman et de mon grand-père : le premier volant que j'ai tenu, assis sur ses genoux.</p>
+      <p>Alors quand vous montez à bord, vous ne louez pas une voiture : <strong>vous entrez dans une histoire</strong> — et on y écrit un chapitre ensemble.</p>
+      <a href="#histoire" style="font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--terre);text-decoration:none;border-bottom:1px solid var(--nude);padding-bottom:3px">Mon histoire avec Rosalie ↓</a>
+    </div>
+  </div>
+</section>
+
 <section id="mariage" class="fond-mariage">
   <div class="cadre-univers">
   <div class="feature">
@@ -199,6 +229,7 @@ index_body = navbar() + """
       <p>Le plus beau des cortèges est aussi le plus simple : une 2CV blanche, des rubans, et vous deux. Je viens vous chercher, je vous conduis, je klaxonne votre bonheur — vous n'avez plus qu'à vivre l'instant.</p>
       <ul class="liste-opts">
         <li>Cortège & sortie de cérémonie, partout sur l'île</li>
+        <li>Trajet debout dans la 2CV, toit panoramique grand ouvert — l'arrivée effet waouh</li>
         <li>Séance photo des mariés sur les plus beaux paysages</li>
         <li>Décoration personnalisée — votre fleuriste ou le nôtre</li>
         <li>EVJF / EVJG & demandes en mariage en toute complicité</li>
@@ -292,6 +323,15 @@ index_body = navbar() + """
   <p class="centre reveal" style="margin-top:36px"><a class="btn btn-brun" href="/rosalie-et-soizig.html">Leur histoire complète</a></p>
 </section>
 
+<section id="film">
+  <p class="kicker reveal">Le film</p>
+  <h2 class="titre reveal">25 secondes <span class="script">de bonheur</span></h2>
+  <p class="intro reveal">Le teaser complet, monté à partir de vrais mariages à bord de Rosalie. Montez le son — le klaxon fait partie du voyage.</p>
+  <div class="film-cadre reveal">
+    <video controls playsinline preload="metadata" poster="/intro/poster.jpg"><source src="/intro/teaser.mp4" type="video/mp4"></video>
+  </div>
+</section>
+
 <section class="doux" id="histoire">
   <p class="kicker reveal">La vraie histoire</p>
   <h2 class="titre reveal">Rosalie, <span class="script">de mémoire de famille</span></h2>
@@ -322,9 +362,9 @@ index_body = navbar() + """
   <p class="kicker reveal">Les questions qu'on me pose</p>
   <h2 class="titre reveal">Petites questions, <span class="script">grandes histoires</span></h2>
   <div class="faq reveal">
-    <details><summary>Ma robe de mariée va-t-elle rentrer dans la 2CV ?</summary><div class="rep">Oui ! Même les robes les plus volumineuses trouvent leur place — c'est un petit rituel que je maîtrise parfaitement, et le toit ouvrant aide beaucoup. <span class="video-tag">🎬 Vidéo : une grande robe embarque à bord</span></div></details>
+    <details><summary>Ma robe de mariée va-t-elle rentrer dans la 2CV ?</summary><div class="rep">Oui ! Même les robes les plus volumineuses trouvent leur place — c'est un petit rituel que je maîtrise parfaitement. Et grâce au toit panoramique grand ouvert, vous pouvez même faire le trajet debout, comme une star : l'arrivée dont tout le monde se souvient. <span class="video-tag">🎬 Vidéo : une grande robe embarque à bord</span></div></details>
     <details><summary>La 2CV peut-elle monter dans les hauts ?</summary><div class="rep">Oui : elle grimpe sans rougir les grandes côtes et les hauts de l'île, de quoi célébrer avec la vue. Pour les routes de montagne les plus longues, on regarde ensemble le trajet et je vous dis simplement ce qui est possible.</div></details>
-    <details><summary>Est-ce que je conduis moi-même ?</summary><div class="rep">Non — et c'est tant mieux : toutes les prestations sont <strong>avec chauffeur VTC agréé</strong>. Pas de permis à fournir, pas de caution, pas de stress.</div></details>
+    <details><summary>Est-ce que je conduis moi-même ?</summary><div class="rep">Non — et c'est tant mieux : toutes les prestations sont <strong>avec chauffeur VTC agréé</strong>. Pas de permis à fournir, pas de caution, pas de stress — juste le plaisir : vous montez, vous trinquez, vous profitez du paysage.</div></details>
     <details><summary>Combien ça coûte ?</summary><div class="rep">Chaque événement a son déroulé, ses horaires, ses trajets — c'est pour cela qu'il n'y a pas de tarif unique. Écrivez-moi sur WhatsApp avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement.</div></details>
   </div>
   <p class="centre reveal" style="margin-top:32px"><a class="btn btn-brun" href="/faq.html">Toutes les questions</a></p>
@@ -351,7 +391,7 @@ index_body = navbar() + """
   <div class="contact-grille">
     <div class="wa-carte reveal">
       <div class="grand-wa">%(wsvg)s</div>
-      <h3>Par WhatsApp <span class="script">c'est mieux !</span></h3>
+      <h3>Par WhatsApp <span class="script">c'est plus vivant !</span></h3>
       <p>C'est vivant, c'est rapide, et on peut s'envoyer photos et idées en direct. Je réponds généralement dans la journée.</p>
       <a class="btn btn-wa" href="%(wa)s">Démarrer la conversation</a>
       <a class="tel" href="tel:+262693828108">📞 0693 82 81 08</a>
@@ -361,7 +401,7 @@ index_body = navbar() + """
       <input type="hidden" name="_subject" value="🌿 Nouvelle demande — Une 2CV, mille histoires">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://assocollectifensemble-sys.github.io/merci.html">
+      <input type="hidden" name="_next" value="https://une2cv-mille-histoires.higgsfield.app/merci">
       <input type="text" name="_honey" class="cache">
       <label>Ou par formulaire</label>
       <input type="text" name="nom" placeholder="Votre prénom & nom" required>
@@ -375,6 +415,8 @@ index_body = navbar() + """
 </section>
 """ % {
     "cover": D(IMG["cover"], 1920), "logo": D(IMG["logo"], 600),
+    "sunset_hero": D(IMG["sunset_couple"], 1600), "debout_hero": D(IMG["debout1"], 1600),
+    "eglise_hero": D(IMG["eglise"], 1600), "champ_hero": D(IMG["champagne"], 1600),
     "btnwa": btn_wa("Écrire votre histoire", WA),
     "eglise": D(IMG["eglise"]), "sunset": D(IMG["sunset_couple"]), "shoot": D(IMG["shooting_nb"]),
     "couple": D(IMG["couple_rosalie"], 1400), "btnwa_mariage": btn_wa("Parler de votre mariage", WA_MARIAGE),
@@ -387,6 +429,7 @@ index_body = navbar() + """
     "homme_rosalie": D(IMG["homme_rosalie"], 800), "slackline": D(IMG["slackline"], 800),
     "rosalie_deco": D(IMG["rosalie_deco"], 800), "coffre": D(IMG["coffre"], 800),
     "insta": INSTA, "fb": FB, "wsvg": WSVG, "wa": WA,
+    "jona_photo": D(IMG["jonglage"], 800),
 }
 
 pages["index.html"] = head(
@@ -412,7 +455,7 @@ mariage_body = navbar("mariage") + page_hero("eglise", "Le plus beau jour",
 <section>
   <div class="prose reveal">
     <p>Chercher une <strong>voiture de mariage à La Réunion</strong>, c'est chercher bien plus qu'un moyen de transport : c'est choisir l'image que garderont vos invités, la douceur du trajet entre la cérémonie et la fête, le décor de vos plus belles photos. À bord de <strong>Rosalie</strong>, 2CV blanche de 1983, ou de <strong>Soizig</strong>, bleue et blanche de 1990, votre mariage prend des airs de film — klaxon d'honneur inclus.</p>
-    <p>Toutes les prestations se font <strong>avec chauffeur VTC agréé</strong> : pas de permis à fournir, pas de caution, pas de stress. Vous vivez l'instant, je m'occupe de la route — de Saint-Leu à Saint-Philippe, sur toute l'île de La Réunion.</p>
+    <p>Toutes les prestations se font <strong>avec chauffeur VTC agréé</strong> : pas de permis à fournir, pas de caution, pas de stress. Vous vivez l'instant, je m'occupe de la route — partout sur l'île de La Réunion, et même en tour de l'île si le cœur vous en dit.</p>
   </div>
 </section>
 
@@ -423,7 +466,7 @@ mariage_body = navbar("mariage") + page_hero("eglise", "Le plus beau jour",
     <div class="deroule reveal">
       <div class="temps"><div class="num">1</div><div><h3>On imagine ensemble</h3><p>Un message WhatsApp, votre date, vos lieux, vos envies — je vous propose un déroulé sur mesure et une proposition claire, sans engagement.</p></div></div>
       <div class="temps"><div class="num">2</div><div><h3>La décoration</h3><p>Rubans, fleurs fraîches, panneaux personnalisés : votre fleuriste s'en charge, ou je vous conseille le nôtre, qui connaît Rosalie par cœur. La robe blanche de Rosalie accueille toutes les couleurs de votre mariage.</p></div></div>
-      <div class="temps"><div class="num">3</div><div><h3>Le jour J</h3><p>J'arrive en avance, la voiture est prête et étincelante. Préparatifs, mairie, église ou cérémonie laïque : je vous conduis à chaque étape, au rythme de votre journée. Et même les plus grandes robes embarquent sans souci — toit ouvrant à l'appui.</p></div></div>
+      <div class="temps"><div class="num">3</div><div><h3>Le jour J</h3><p>J'arrive en avance, la voiture est prête et étincelante. Préparatifs, mairie, église ou cérémonie laïque : je vous conduis à chaque étape, au rythme de votre journée. Même les plus grandes robes embarquent sans souci — c'est un petit rituel que je maîtrise. Et grâce au toit panoramique grand ouvert, vous pouvez faire le trajet debout : l'arrivée effet waouh dont tout le monde se souvient.</p></div></div>
       <div class="temps"><div class="num">4</div><div><h3>Les photos</h3><p>Pendant le cocktail, escapade avec votre photographe : la 2CV se prête à tous les cadrages, capot, portières, toit ouvert. Des images que personne d'autre n'aura.</p></div></div>
       <div class="temps"><div class="num">5</div><div><h3>La touche spectacle <em>(en option)</em></h3><p>Artiste jongleur et danseur, je peux aussi faire durer la magie : jonglage pour les enfants, spectacle de feu en soirée, animations… La 2CV n'est jamais très loin du spectacle.</p></div></div>
     </div>
@@ -449,14 +492,14 @@ mariage_body = navbar("mariage") + page_hero("eglise", "Le plus beau jour",
     <div class="gitem"><img src="%(couple)s" alt="Mariés montant à bord de la 2CV Rosalie" loading="lazy"></div>
     <div class="gitem"><img src="%(rosalie_deco)s" alt="2CV blanche décorée de fleurs pour un mariage" loading="lazy"></div>
     <div class="gitem"><img src="%(cover)s" alt="Les deux 2CV décorées face à l'océan" loading="lazy"></div>
-    <div class="gitem"><img src="%(coffre)s" alt="Souvenirs de mariage en 2CV" loading="lazy"></div>
-    <div class="gitem"><img src="%(shoot)s" alt="Shooting de couple avec la 2CV" loading="lazy"></div>
+    <div class="gitem"><img src="%(champagne)s" alt="Mariés debout dans la 2CV, coupes de champagne" loading="lazy"></div>
+    <div class="gitem"><img src="%(debout2)s" alt="Couple debout dans la 2CV, toit panoramique ouvert" loading="lazy"></div>
   </div>
 </section>
 """ % {
     "eglise": D(IMG["eglise"], 1000), "couple": D(IMG["couple_rosalie"], 1000),
     "rosalie_deco": D(IMG["rosalie_deco"], 1000), "cover": D(IMG["cover"], 1000),
-    "coffre": D(IMG["coffre"], 1000), "shoot": D(IMG["shooting_nb"], 1000),
+    "champagne": D(IMG["champagne"], 1000), "debout2": D(IMG["debout2"], 1000),
 } + cta_band("Parlons de votre", "mariage", "Écrire notre histoire", WA_MARIAGE)
 
 pages["mariage.html"] = head(
@@ -488,7 +531,7 @@ balades_body = navbar("balades") + page_hero("sunset_couple", "Prendre le temps"
 
 <section>
   <div class="prose reveal">
-    <p>Envie d'une <strong>activité insolite à La Réunion</strong> ? Montez à bord d'une vraie 2CV de collection et laissez-vous conduire. Chaque balade est pensée comme une petite histoire : un itinéraire qui prend son temps, des arrêts photos, des attentions à bord — et un chauffeur passionné qui connaît les plus beaux détours de l'île. Le toit s'ouvre en grand, les fenêtres aussi : parfait pour les photos sans reflet et le vent dans les cheveux.</p>
+    <p>Envie d'une <strong>activité insolite à La Réunion</strong> ? Montez à bord d'une vraie 2CV de collection et laissez-vous conduire. Chaque balade est pensée comme une petite histoire : un itinéraire qui prend son temps, des arrêts photos, des attentions à bord — et un chauffeur passionné qui connaît les plus beaux détours de l'île. Le toit panoramique s'ouvre en grand : parfait pour les photos, le vent dans les cheveux — et même pour se tenir debout, le temps d'un moment inoubliable.</p>
   </div>
 </section>
 
@@ -560,17 +603,17 @@ shoot_body = navbar("shooting") + page_hero("shooting_nb", "Lumière !",
   <h2 class="titre reveal">Elle adore <span class="script">la caméra</span></h2>
   <div class="galerie reveal">
     <div class="gitem"><img src="%(shoot)s" alt="Shooting photo noir et blanc avec la 2CV Soizig" loading="lazy"></div>
+    <div class="gitem"><img src="%(shoot_couple)s" alt="Shooting photo de couple avec la 2CV" loading="lazy"></div>
+    <div class="gitem"><img src="%(debout1)s" alt="Couple debout dans la 2CV en shooting" loading="lazy"></div>
     <div class="gitem"><img src="%(homme_rosalie)s" alt="Shooting avec Rosalie, 2CV blanche" loading="lazy"></div>
     <div class="gitem"><img src="%(slackline)s" alt="Spectacle de slackline sur la 2CV" loading="lazy"></div>
-    <div class="gitem"><img src="%(interieur)s" alt="Intérieur vintage de la 2CV" loading="lazy"></div>
     <div class="gitem"><img src="%(sunset)s" alt="La 2CV au coucher de soleil" loading="lazy"></div>
-    <div class="gitem"><img src="%(soizig)s" alt="Soizig, 2CV bleue et blanche en bord de mer" loading="lazy"></div>
   </div>
 </section>
 """ % {
     "shoot": D(IMG["shooting_nb"], 1000), "homme_rosalie": D(IMG["homme_rosalie"], 1000),
-    "slackline": D(IMG["slackline"], 1000), "interieur": D(IMG["interieur"], 1000),
-    "sunset": D(IMG["sunset_soizig"], 1000), "soizig": D(IMG["soizig"], 1000),
+    "slackline": D(IMG["slackline"], 1000), "shoot_couple": D(IMG["shoot_couple"], 1000),
+    "debout1": D(IMG["debout1"], 1000), "sunset": D(IMG["sunset_soizig"], 1000),
 } + cta_band("Un projet, une", "idée folle ?", "Proposer mon projet", WA_SHOOT)
 
 pages["shooting-evenements.html"] = head(
@@ -648,11 +691,11 @@ pages["rosalie-et-soizig.html"] = head(
 # ============================================================ FAQ
 faqs = [
  ("Ma robe de mariée va-t-elle rentrer dans la 2CV ?",
-  "Oui ! Même les robes les plus volumineuses trouvent leur place — c'est un petit rituel que je maîtrise parfaitement, et le toit ouvrant aide beaucoup. Une vidéo le montre en images sur nos réseaux."),
+  "Oui ! Même les robes les plus volumineuses trouvent leur place — c'est un petit rituel que je maîtrise parfaitement. Et grâce au toit panoramique grand ouvert, vous pouvez même faire le trajet debout, comme une star : l'arrivée dont tout le monde se souvient. Une vidéo le montre en images sur nos réseaux."),
  ("La 2CV peut-elle monter dans les hauts ?",
   "Oui : elle grimpe sans rougir les grandes côtes et les hauts de l'île, de quoi célébrer avec la vue. Pour les routes de montagne les plus longues, on regarde ensemble le trajet et je vous dis simplement ce qui est possible."),
  ("Est-ce que je conduis moi-même ?",
-  "Non — et c'est tant mieux : toutes les prestations sont avec chauffeur VTC agréé. Pas de permis à fournir, pas de caution, pas de stress. Vous profitez, je m'occupe de la route."),
+  "Non — et c'est tant mieux : toutes les prestations sont avec chauffeur VTC agréé. Pas de permis à fournir, pas de caution, pas de stress — juste le plaisir : vous montez, vous trinquez, vous profitez du paysage."),
  ("Combien de personnes peuvent monter à bord ?",
   "Jusqu'à 3 passagers par 2CV en plus du chauffeur. Et pour les grands cortèges, Rosalie et Soizig peuvent rouler ensemble !"),
  ("Combien coûte une voiture de mariage ou une balade en 2CV à La Réunion ?",
@@ -662,7 +705,7 @@ faqs = [
  ("Et s'il pleut ?",
   "La capote se ferme en un instant et la balade continue, ambiance cocooning. Pour les mariages, on ajuste le déroulé ensemble — à La Réunion, le soleil n'est jamais bien loin."),
  ("Vous déplacez-vous partout sur l'île ?",
-  "Oui, toute l'île de La Réunion, de Saint-Denis à Saint-Philippe. Les frais de déplacement sont simplement intégrés à la proposition selon le lieu de votre événement."),
+  "Oui, partout sur toute l'île de La Réunion — et pourquoi pas un tour de l'île complet ! Les frais de déplacement sont simplement intégrés à la proposition selon le lieu de votre événement."),
  ("Combien de temps à l'avance faut-il réserver ?",
   "Pour un mariage, le plus tôt est le mieux — les samedis de la saison partent vite. Pour une balade, quelques jours suffisent souvent. Dans tous les cas, écrivez-nous : on trouve des solutions."),
  ("Peut-on privatiser la 2CV pour un tournage ou un shooting professionnel ?",
@@ -694,7 +737,7 @@ contact_body = navbar() + page_hero("sunset_couple", "Le premier chapitre",
   <div class="contact-grille">
     <div class="wa-carte reveal">
       <div class="grand-wa">%(wsvg)s</div>
-      <h3>Par WhatsApp <span class="script">c'est mieux !</span></h3>
+      <h3>Par WhatsApp <span class="script">c'est plus vivant !</span></h3>
       <p>C'est vivant, c'est rapide, et on peut s'envoyer photos et idées en direct. Je réponds généralement dans la journée.</p>
       <a class="btn btn-wa" href="%(wa)s">Démarrer la conversation</a>
       <a class="tel" href="tel:+262693828108">📞 0693 82 81 08</a>
@@ -705,7 +748,7 @@ contact_body = navbar() + page_hero("sunset_couple", "Le premier chapitre",
       <input type="hidden" name="_subject" value="🌿 Nouvelle demande — Une 2CV, mille histoires">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://assocollectifensemble-sys.github.io/merci.html">
+      <input type="hidden" name="_next" value="https://une2cv-mille-histoires.higgsfield.app/merci">
       <input type="text" name="_honey" class="cache">
       <label>Ou par formulaire</label>
       <input type="text" name="nom" placeholder="Votre prénom & nom" required>
@@ -750,7 +793,7 @@ mentions_body = navbar(opaque=True) + """
     <h2>Hébergement</h2>
     <p>Site hébergé par GitHub Pages — GitHub, Inc., 88 Colin P. Kelly Jr Street, San Francisco, CA 94107, États-Unis.</p>
     <h2>Propriété intellectuelle</h2>
-    <p>L'ensemble des textes, photographies et vidéos de ce site sont la propriété de l'association Collectif Ensemble ou de leurs auteurs respectifs. Toute reproduction sans autorisation est interdite. Musique d'ambiance : contenu libre de droits (licence Pixabay).</p>
+    <p>L'ensemble des textes, photographies et vidéos de ce site sont la propriété de l'association Collectif Ensemble ou de leurs auteurs respectifs. Toute reproduction sans autorisation est interdite. Musique du site et des vidéos : « Bossa Antigua » — Kevin MacLeod (incompetech.com), licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener" target="_blank">Creative Commons BY 4.0</a>.</p>
     <h2>Données personnelles</h2>
     <p>Les informations transmises via le formulaire de contact sont utilisées uniquement pour répondre à votre demande. Elles ne sont ni cédées ni utilisées à des fins publicitaires. Vous pouvez demander leur suppression à tout moment par email.</p>
   </div>

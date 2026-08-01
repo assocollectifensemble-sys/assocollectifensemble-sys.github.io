@@ -1,5 +1,27 @@
 /* Une 2CV, mille histoires — scripts communs */
 (function(){
+  /* intro cinéma : joue une fois par session puis ouvre le site tout seul */
+  var ic=document.getElementById('intro-cine');
+  if(ic){
+    var vu=false; try{vu=!!sessionStorage.getItem('introVue');}catch(e){}
+    if(vu){ ic.parentNode.removeChild(ic); }
+    else{
+      document.documentElement.classList.add('intro-lock');
+      var iv=document.getElementById('intro-vid');
+      var fini=false;
+      var fin=function(){ if(fini)return; fini=true;
+        try{sessionStorage.setItem('introVue','1');}catch(e){}
+        ic.classList.add('fini');
+        document.documentElement.classList.remove('intro-lock');
+        setTimeout(function(){ if(ic&&ic.parentNode)ic.parentNode.removeChild(ic); },1000); };
+      iv.addEventListener('ended',fin);
+      iv.addEventListener('error',fin);
+      ic.querySelector('.intro-passer').addEventListener('click',fin);
+      var p=iv.play(); if(p&&p.catch){p.catch(fin);}
+      setTimeout(fin,9000);
+    }
+  }
+
   var nav=document.getElementById('nav');
   function onScroll(){ if(nav) nav.classList.toggle('scrolled', scrollY>60); }
   addEventListener('scroll', onScroll); onScroll();
@@ -8,6 +30,18 @@
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 
   var mq=document.getElementById('mq'); if(mq){ mq.innerHTML+=mq.innerHTML; }
+
+  /* masque la bulle WhatsApp flottante quand un gros bouton WhatsApp est visible */
+  var waFloat=document.querySelector('.wa-float');
+  if(waFloat){
+    var visibles=0;
+    var ioWa=new IntersectionObserver(function(es){
+      es.forEach(function(e){ visibles+=e.isIntersecting?1:-1; });
+      if(visibles<0)visibles=0;
+      waFloat.classList.toggle('cache-float', visibles>0);
+    },{threshold:.4});
+    document.querySelectorAll('.btn-wa').forEach(function(b){ if(b!==waFloat) ioWa.observe(b); });
+  }
 
   var audio=document.getElementById('musique');
   var btnSon=document.getElementById('btn-son');

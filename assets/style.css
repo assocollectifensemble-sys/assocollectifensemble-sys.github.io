@@ -42,6 +42,7 @@ nav a.actif{color:var(--terre)}
 .wa-float:hover{transform:scale(1.1)}
 .wa-float svg{width:32px;height:32px;fill:#fff}
 @keyframes pulseWA{0%,100%{box-shadow:0 10px 30px rgba(37,211,102,.5)}50%{box-shadow:0 10px 30px rgba(37,211,102,.5),0 0 0 14px rgba(37,211,102,.12)}}
+.wa-float.cache-float{opacity:0;pointer-events:none;transform:scale(.6)}
 
 /* ============ HERO ACCUEIL ============ */
 header.hero{position:relative;height:100svh;overflow:hidden}
@@ -62,14 +63,15 @@ header.hero{position:relative;height:100svh;overflow:hidden}
   .hero-img{position:relative;inset:auto;width:100%;height:auto;display:block;object-fit:unset;animation:none}
   .hero-veil{background:linear-gradient(180deg, rgba(30,24,18,.38) 0%, rgba(30,24,18,0) 30%, rgba(30,24,18,0) 82%, rgba(69,57,48,.9) 100%)}
   .il-etait{top:74px;left:6vw;font-size:clamp(30px,8.5vw,42px)}
-  .hero-bas{position:relative;left:auto;right:auto;bottom:auto;background:var(--brun);padding:24px 6vw 40px}
-  .hero-logo{width:min(230px,56vw)}
+  .hero-bas{position:relative;left:auto;right:auto;bottom:auto;background:linear-gradient(180deg,#3a3129,#453930);padding:18px 6vw 30px;gap:12px}
+  .hero-logo{width:min(190px,48vw)}
 }
 
 /* ============ HERO PAGES INTÉRIEURES ============ */
 .page-hero{position:relative;min-height:46vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--brun)}
 .page-hero img.fond{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.page-hero .voile{position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,24,18,.45) 0%,rgba(30,24,18,.15) 45%,rgba(30,24,18,.72) 100%)}
+.page-hero .voile{position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,24,18,.55) 0%,rgba(30,24,18,.3) 40%,rgba(30,24,18,.85) 100%)}
+.page-hero h1,.page-hero .accroche,.page-hero .kicker{text-shadow:0 2px 18px rgba(0,0,0,.85),0 1px 4px rgba(0,0,0,.6)}
 .page-hero .contenu{position:relative;z-index:2;padding:120px 6vw 44px;color:#fff;max-width:900px}
 .page-hero .kicker{color:#e6d3ba;text-align:left;margin-bottom:8px}
 .page-hero h1{color:#fff;font-size:clamp(30px,5vw,54px);line-height:1.12;text-shadow:0 2px 26px rgba(0,0,0,.6)}
@@ -253,3 +255,28 @@ footer img.logo-pied{width:160px;margin-bottom:12px;filter:brightness(0) invert(
 footer a{color:var(--nude);text-decoration:none}
 footer .liens-pages{margin:6px 0}
 footer .liens-pages a{margin:0 8px}
+
+/* ---- intro cinéma ---- */
+#intro-cine{position:fixed;inset:0;z-index:300;background:#191410;transition:opacity .9s ease}
+#intro-cine video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#intro-cine.fini{opacity:0;pointer-events:none}
+html.intro-lock,html.intro-lock body{overflow:hidden}
+.intro-mot{position:absolute;left:0;right:0;bottom:11vh;text-align:center;color:#f7efe2;font-family:'Pinyon Script';font-size:clamp(36px,9vw,60px);text-shadow:0 2px 22px rgba(0,0,0,.6);opacity:0;animation:rise 1.2s .5s forwards;z-index:2}
+.intro-passer{position:absolute;top:18px;right:20px;z-index:3;color:rgba(255,255,255,.8);font-size:13px;letter-spacing:.1em;cursor:pointer;padding:8px 10px}
+
+/* ---- diaporama lent du hero ---- */
+.hero-diapo{overflow:hidden;background-size:cover;background-position:center;animation:none}
+.hero-diapo .dp{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:diapo 36s linear infinite}
+.hero-diapo .dp:nth-child(2){animation-delay:7.2s}
+.hero-diapo .dp:nth-child(3){animation-delay:14.4s}
+.hero-diapo .dp:nth-child(4){animation-delay:21.6s}
+.hero-diapo .dp:nth-child(5){animation-delay:28.8s}
+@keyframes diapo{0%{opacity:0;transform:scale(1)}5%{opacity:1}20%{opacity:1}26%{opacity:0;transform:scale(1.07)}100%{opacity:0}}
+
+/* ---- le film sur l'accueil ---- */
+#film .film-cadre{max-width:390px;margin:26px auto 0}
+#film video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:20px;background:#191410;box-shadow:0 24px 60px rgba(58,49,41,.35)}
+
+@media (max-width:760px){
+  .hero-diapo{position:relative;inset:auto;height:auto;aspect-ratio:4/3;animation:none}
+}
