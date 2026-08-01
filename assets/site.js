@@ -49,8 +49,11 @@
     audio.volume=0.35;
     var musicOn=true;
     function tryPlay(){ if(musicOn && audio.paused){ audio.play().catch(function(){}); } }
+    tryPlay();
+    document.addEventListener('DOMContentLoaded', tryPlay);
     addEventListener('load', tryPlay);
-    ['pointerdown','touchstart','keydown','scroll'].forEach(function(ev){ addEventListener(ev, tryPlay, {passive:true}); });
+    var essais=0, relance=setInterval(function(){ essais++; if(!audio.paused||essais>16){clearInterval(relance);return;} tryPlay(); },600);
+    ['pointerdown','touchstart','keydown','scroll','click'].forEach(function(ev){ addEventListener(ev, tryPlay, {passive:true}); });
     btnSon.addEventListener('click', function(e){
       e.stopPropagation();
       musicOn=!musicOn;

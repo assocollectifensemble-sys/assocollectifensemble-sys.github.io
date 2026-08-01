@@ -71,17 +71,18 @@ def head(title, desc, path, jsonld=None, noindex=False):
 <body>
 """ % (title, desc, DOMAIN, path, robots, title, desc, D(IMG["cover"], 1200), DOMAIN, path, D(IMG["logo"], 200), j)
 
-def navbar(active="", opaque=False):
+def navbar(active="", opaque=False, wa=True):
     links = [("mariage.html","Mariage","mariage"),("balades.html","Balades","balades"),
              ("shooting-evenements.html","Shootings","shooting"),
              ("rosalie-et-soizig.html","Rosalie & Soizig","voitures"),("faq.html","Questions","faq")]
     lis = "".join('<li><a href="/%s"%s>%s</a></li>' % (h, ' class="actif"' if k==active else "", t) for h,t,k in links)
+    nav_wa = '<li class="keep"><a class="nav-wa" href="%s">%s WhatsApp</a></li>' % (WA, WSVG) if wa else ""
     return """<nav id="nav"%s>
   <a class="logo-lien" href="/"><img src="%s" alt="Une 2CV, mille histoires — logo"></a>
-  <ul>%s<li class="keep"><a class="nav-wa" href="%s">%s WhatsApp</a></li></ul>
+  <ul>%s%s</ul>
 </nav>
 <a class="wa-float" href="%s" aria-label="Discuter sur WhatsApp">%s</a>
-""" % (' class="opaque"' if opaque else "", D(IMG["logo"], 400), lis, WA, WSVG, WA, WSVG)
+""" % (' class="opaque"' if opaque else "", D(IMG["logo"], 400), lis, nav_wa, WA, WSVG)
 
 def footer():
     return """<footer>
@@ -142,7 +143,7 @@ biz_jsonld = {
   ]
 }
 
-index_body = navbar() + """
+index_body = navbar(wa=False) + """
 <div id="intro-cine" aria-hidden="true">
   <video id="intro-vid" muted playsinline preload="auto" poster="/intro/poster-court.jpg"><source src="/intro/intro-court.mp4" type="video/mp4"></video>
   <div class="intro-mot">Il était une fois…</div>
@@ -391,7 +392,7 @@ index_body = navbar() + """
   <div class="contact-grille">
     <div class="wa-carte reveal">
       <div class="grand-wa">%(wsvg)s</div>
-      <h3>Par WhatsApp <span class="script">c'est plus vivant !</span></h3>
+      <h3>Par WhatsApp<br><span class="script">c'est plus vivant !</span></h3>
       <p>C'est vivant, c'est rapide, et on peut s'envoyer photos et idées en direct. Je réponds généralement dans la journée.</p>
       <a class="btn btn-wa" href="%(wa)s">Démarrer la conversation</a>
       <a class="tel" href="tel:+262693828108">📞 0693 82 81 08</a>
@@ -737,7 +738,7 @@ contact_body = navbar() + page_hero("sunset_couple", "Le premier chapitre",
   <div class="contact-grille">
     <div class="wa-carte reveal">
       <div class="grand-wa">%(wsvg)s</div>
-      <h3>Par WhatsApp <span class="script">c'est plus vivant !</span></h3>
+      <h3>Par WhatsApp<br><span class="script">c'est plus vivant !</span></h3>
       <p>C'est vivant, c'est rapide, et on peut s'envoyer photos et idées en direct. Je réponds généralement dans la journée.</p>
       <a class="btn btn-wa" href="%(wa)s">Démarrer la conversation</a>
       <a class="tel" href="tel:+262693828108">📞 0693 82 81 08</a>
