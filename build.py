@@ -3,7 +3,7 @@
 import os, json
 
 OUT = os.path.dirname(os.path.abspath(__file__))
-DOMAIN = "https://une2cvmillehistoires.re"
+DOMAIN = "https://une2cv-mille-histoires.higgsfield.app"  # <- remettre https://une2cvmillehistoires.re le jour de la migration
 WA = "https://wa.me/262693828108?text=Bonjour%20Jonathan%20!%20Je%20souhaite%20%C3%A9crire%20une%20histoire%20avec%20la%202CV%20%F0%9F%8C%BF"
 WA_MARIAGE = "https://wa.me/262693828108?text=Bonjour%20!%20Nous%20nous%20marions%20et%20la%202CV%20nous%20fait%20r%C3%AAver%20%F0%9F%92%8D"
 WA_BALADE = "https://wa.me/262693828108?text=Bonjour%20Jonathan%20!%20Je%20souhaite%20r%C3%A9server%20une%20balade%20en%202CV%20%F0%9F%8C%BF"
@@ -42,7 +42,9 @@ WSVG = '<svg viewBox="0 0 24 24" class="wa-ico"><path d="M17.472 14.382c-.297-.1
 INSTA = "https://www.instagram.com/une2cv.millehistoires/"
 FB = "https://www.facebook.com/profile.php?id=61586545132399"
 
-def head(title, desc, path, jsonld=None, noindex=False):
+def head(title, desc, path, jsonld=None, noindex=False, og_img=None):
+    if path != "/": path = path.replace(".html", "")
+    og_img = og_img or D(IMG["cover"], 1200)
     j = ""
     if jsonld:
         j = '<script type="application/ld+json">%s</script>' % json.dumps(jsonld, ensure_ascii=False)
@@ -64,17 +66,19 @@ def head(title, desc, path, jsonld=None, noindex=False):
 <meta property="og:url" content="%s%s">
 <link rel="icon" type="image/png" href="%s">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://lh3.googleusercontent.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 %s
 </head>
 <body>
-""" % (title, desc, DOMAIN, path, robots, title, desc, D(IMG["cover"], 1200), DOMAIN, path, D(IMG["logo"], 200), j)
+""" % (title, desc, DOMAIN, path, robots, title, desc, og_img, DOMAIN, path, D(IMG["logo"], 200), j)
 
 def navbar(active="", opaque=False, wa=True):
-    links = [("mariage.html","Mariage","mariage"),("balades.html","Balades","balades"),
-             ("shooting-evenements.html","Shootings","shooting"),
-             ("rosalie-et-soizig.html","Rosalie & Soizig","voitures"),("faq.html","Questions","faq")]
+    links = [("mariage","Mariage","mariage"),("balades","Balades","balades"),
+             ("shooting-evenements","Shootings","shooting"),
+             ("rosalie-et-soizig","Rosalie & Soizig","voitures"),("faq","Questions","faq"),("contact","Contact","contact")]
     lis = "".join('<li><a href="/%s"%s>%s</a></li>' % (h, ' class="actif"' if k==active else "", t) for h,t,k in links)
     nav_wa = '<li class="keep"><a class="nav-wa" href="%s">%s WhatsApp</a></li>' % (WA, WSVG) if wa else ""
     return """<nav id="nav"%s>
@@ -87,10 +91,10 @@ def navbar(active="", opaque=False, wa=True):
 def footer():
     return """<footer>
   <img class="logo-pied" src="%s" alt="Une 2CV, mille histoires">
-  <br>2CV avec chauffeur VTC agréé — mariages, balades, shootings & évènements — toute l'île de La Réunion
-  <div class="liens-pages"><a href="/mariage.html">Mariage</a> · <a href="/balades.html">Balades</a> · <a href="/shooting-evenements.html">Shootings</a> · <a href="/rosalie-et-soizig.html">Rosalie & Soizig</a> · <a href="/faq.html">FAQ</a> · <a href="/contact.html">Contact</a></div>
+  <br>Citroën 2CV de collection avec chauffeur VTC agréé — mariages, balades, shootings & évènements — toute l'île de La Réunion (974)
+  <div class="liens-pages"><a href="/mariage">Mariage</a> · <a href="/balades">Balades</a> · <a href="/shooting-evenements">Shootings</a> · <a href="/rosalie-et-soizig">Rosalie & Soizig</a> · <a href="/faq">FAQ</a> · <a href="/contact">Contact</a></div>
   <a href="%s">Instagram</a> · <a href="%s">Facebook</a> · <a href="%s">WhatsApp</a> · <a href="tel:+262693828108">0693 82 81 08</a><br>
-  Projet porté par l'association Collectif Ensemble — Saint-Leu, La Réunion · <a href="/mentions-legales.html">Mentions légales</a>
+  Projet porté par l'association Collectif Ensemble — 97436 Saint-Leu, La Réunion · <a href="/mentions-legales">Mentions légales</a>
 </footer>
 <script src="/assets/site.js"></script>
 </body>
@@ -99,9 +103,9 @@ def footer():
 def btn_wa(txt, url):
     return '<a class="btn btn-wa" href="%s">%s %s</a>' % (url, WSVG, txt)
 
-def page_hero(img_key, kicker, h1, accroche):
+def page_hero(img_key, kicker, h1, accroche, alt=""):
     return """<div class="page-hero">
-  <img class="fond" src="%s" alt="">
+  <img class="fond" src="%s" alt="%s">
   <div class="voile"></div>
   <div class="contenu">
     <p class="kicker">%s</p>
@@ -109,13 +113,13 @@ def page_hero(img_key, kicker, h1, accroche):
     <p class="accroche">%s</p>
   </div>
 </div>
-""" % (D(IMG[img_key], 1920), kicker, h1, accroche)
+""" % (D(IMG[img_key], 1920), alt, kicker, h1, accroche)
 
 def cta_band(titre, script, btxt, burl):
     return """<section class="cta-band">
   <h2 class="titre reveal">%s <span class="script">%s</span></h2>
   <div class="reveal">%s</div>
-  <p class="sous-note reveal">Ou par téléphone : <a href="tel:+262693828108" style="color:var(--terre)">0693 82 81 08</a> · <a href="/contact.html" style="color:var(--terre)">formulaire de contact</a></p>
+  <p class="sous-note reveal">Ou par téléphone : <a href="tel:+262693828108" style="color:var(--terre)">0693 82 81 08</a> · <a href="/contact" style="color:var(--terre)">formulaire de contact</a></p>
 </section>
 """ % (titre, script, btn_wa(btxt, burl))
 
@@ -125,6 +129,7 @@ pages = {}
 biz_jsonld = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": DOMAIN + "/#business",
   "name": "Une 2CV, mille histoires",
   "description": "Location de 2CV avec chauffeur VTC agréé pour mariages, balades, shootings et évènements à La Réunion.",
   "url": DOMAIN,
@@ -132,16 +137,21 @@ biz_jsonld = {
   "email": "asso.collectif.ensemble@gmail.com",
   "image": D(IMG["cover"], 1200),
   "logo": D(IMG["logo"], 400),
-  "address": {"@type": "PostalAddress", "addressLocality": "Saint-Leu", "addressRegion": "La Réunion", "addressCountry": "RE"},
+  "address": {"@type": "PostalAddress", "addressLocality": "Saint-Leu", "postalCode": "97436", "addressRegion": "La Réunion", "addressCountry": "RE"},
+  "geo": {"@type": "GeoCoordinates", "latitude": -21.1703, "longitude": 55.2884},
+  "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "08:00", "closes": "20:00"},
+  "legalName": "Association Collectif Ensemble",
   "areaServed": {"@type": "AdministrativeArea", "name": "Île de La Réunion"},
-  "priceRange": "Sur devis",
+  "priceRange": "€€",
   "sameAs": [INSTA, FB],
   "makesOffer": [
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Voiture de mariage 2CV avec chauffeur", "url": DOMAIN + "/mariage.html"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Balades en 2CV avec chauffeur", "url": DOMAIN + "/balades.html"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Location 2CV shooting photo, cinéma et évènements", "url": DOMAIN + "/shooting-evenements.html"}}
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Voiture de mariage 2CV avec chauffeur", "url": DOMAIN + "/mariage"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Balades en 2CV avec chauffeur", "url": DOMAIN + "/balades"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Location 2CV shooting photo, cinéma et évènements", "url": DOMAIN + "/shooting-evenements"}}
   ]
 }
+
+website_jsonld = {"@context": "https://schema.org", "@type": "WebSite", "name": "Une 2CV, mille histoires", "alternateName": ["Une 2CV mille histoires", "2CV mariage Réunion"], "url": DOMAIN + "/"}
 
 index_body = navbar(wa=False) + """
 <div id="intro-cine" aria-hidden="true">
@@ -169,7 +179,7 @@ index_body = navbar(wa=False) + """
   </div>
   <div class="hero-bas">
     <img class="hero-logo" src="%(logo)s" alt="Une 2CV, mille histoires">
-    <div class="hero-mots">Mariages · Balades · Shootings — La Réunion</div>
+    <h1 class="hero-mots">Voiture de mariage · Balades · Shootings en 2CV — La Réunion</h1>
     <div class="hero-actions">
       %(btnwa)s
       <a class="btn btn-ligne" href="#prestations">Découvrir</a>
@@ -185,19 +195,19 @@ index_body = navbar(wa=False) + """
   <p class="kicker reveal">Les possibilités</p>
   <h2 class="titre reveal">Quelle histoire écrirons-nous <span class="script">ensemble ?</span></h2>
   <div class="prestas">
-    <a class="presta reveal" href="/mariage.html">
+    <a class="presta reveal" href="/mariage">
       <div class="cadre"><div class="imgbox"><img src="%(eglise)s" alt="Sortie d'église en 2CV à La Réunion" loading="lazy"></div></div>
       <h3>Évènements</h3>
       <p class="souligne">Mariage · Elopement · EVJF / EVJG · Anniversaire · Demande en mariage</p>
       <span class="plus">Découvrir</span>
     </a>
-    <a class="presta reveal" href="/balades.html">
+    <a class="presta reveal" href="/balades">
       <div class="cadre"><div class="imgbox"><img src="%(sunset)s" alt="Balade en 2CV au coucher de soleil à La Réunion" loading="lazy"></div></div>
       <h3>Balades</h3>
       <p class="souligne">Coucher de soleil · Brunch · Tour de l'île · Journées à thème</p>
       <span class="plus">Choisir sa balade</span>
     </a>
-    <a class="presta reveal" href="/shooting-evenements.html">
+    <a class="presta reveal" href="/shooting-evenements">
       <div class="cadre"><div class="imgbox"><img src="%(shoot)s" alt="Shooting photo de couple avec la 2CV" loading="lazy"></div></div>
       <h3>Shootings</h3>
       <p class="souligne">Photo · Cinéma · Clips · Évènement particulier</p>
@@ -236,7 +246,7 @@ index_body = navbar(wa=False) + """
         <li>EVJF / EVJG & demandes en mariage en toute complicité</li>
         <li>En option : spectacle de feu, jonglage, animations pour les enfants</li>
       </ul>
-      <a class="btn btn-brun" href="/mariage.html" style="margin-right:10px;margin-bottom:10px">La page mariage</a>
+      <a class="btn btn-brun" href="/mariage" style="margin-right:10px;margin-bottom:10px">La page mariage</a>
       %(btnwa_mariage)s
     </div>
   </div>
@@ -257,37 +267,37 @@ index_body = navbar(wa=False) + """
       <div class="imgbox"><img src="%(sunset_soizig)s" alt="Coucher de soleil en 2CV à La Réunion" loading="lazy"></div>
       <div class="corps"><span class="meta">± 2h · L'incontournable</span><h3>Coucher de soleil & apéro</h3>
       <p>Entre forêt et littoral, puis pause face à l'océan pour l'apéro au soleil couchant. Le classique qui ne déçoit jamais.</p>
-      <a href="/balades.html#sunset">En savoir plus</a></div>
+      <a href="/balades#sunset">En savoir plus</a></div>
     </div>
     <div class="balade reveal">
       <div class="imgbox"><img src="%(interieur)s" alt="À bord de la 2CV, ambiance cosy" loading="lazy"></div>
       <div class="corps"><span class="meta">± 3h · Gourmande</span><h3>Balade brunch</h3>
       <p>Une virée matinale sur les belles routes, puis un brunch aux saveurs péi dans un joli spot. Douceur de vivre garantie.</p>
-      <a href="/balades.html#brunch">En savoir plus</a></div>
+      <a href="/balades#brunch">En savoir plus</a></div>
     </div>
     <div class="balade reveal">
       <div class="imgbox"><img src="%(grand1)s" alt="Lever de soleil en 2CV" loading="lazy"></div>
       <div class="corps"><span class="meta">± 5h · Grand spectacle</span><h3>Lever de soleil</h3>
       <p>Départ avant l'aube, plaids et boissons chaudes à bord, pour accueillir le soleil depuis un beau point de vue.</p>
-      <a href="/balades.html#lever">En savoir plus</a></div>
+      <a href="/balades#lever">En savoir plus</a></div>
     </div>
     <div class="balade reveal">
       <div class="imgbox"><img src="%(creole)s" alt="Tour de l'île en 2CV" loading="lazy"></div>
       <div class="corps"><span class="meta">Journée · L'aventure</span><h3>Tour de l'île</h3>
       <p>Côtes sauvages, cascades, plages et villages… Une journée entière à sillonner La Réunion en 2CV.</p>
-      <a href="/balades.html#tour">En savoir plus</a></div>
+      <a href="/balades#tour">En savoir plus</a></div>
     </div>
     <div class="balade reveal">
       <div class="imgbox"><img src="%(jonathan)s" alt="Journée à thème en 2CV" loading="lazy"></div>
       <div class="corps"><span class="meta">Selon le thème</span><h3>Journées à thème</h3>
       <p>Anniversaires, EVJF/EVJG, surprises en amoureux, sorties entre amis… On imagine ensemble le fil rouge.</p>
-      <a href="/balades.html#theme">En savoir plus</a></div>
+      <a href="/balades#theme">En savoir plus</a></div>
     </div>
     <div class="balade reveal">
       <div class="imgbox"><img src="%(grand2)s" alt="Balade sur-mesure en 2CV" loading="lazy"></div>
       <div class="corps"><span class="meta">À votre image</span><h3>Sur-mesure</h3>
       <p>Un lieu qui vous est cher, une idée précise, un moment à marquer ? Racontez-moi votre rêve de balade.</p>
-      <a href="/balades.html#surmesure">En savoir plus</a></div>
+      <a href="/balades#surmesure">En savoir plus</a></div>
     </div>
   </div>
   <div class="note-balades reveal">
@@ -303,7 +313,7 @@ index_body = navbar(wa=False) + """
     <div class="fiche reveal">
       <div class="cadre2">
         <img src="%(rosalie)s" alt="Rosalie, 2CV blanche de 1983" loading="lazy">
-        <span class="badge">Blanche · 1983</span>
+        <span class="badge">Citroën 2CV blanche · 1983</span>
       </div>
       <div class="corps">
         <h3>Rosalie <span class="script">la pureté</span></h3>
@@ -313,7 +323,7 @@ index_body = navbar(wa=False) + """
     <div class="fiche reveal">
       <div class="cadre2">
         <img src="%(soizig)s" alt="Soizig, 2CV bleue et blanche de 1990" loading="lazy">
-        <span class="badge">Bleue & blanche · 1990</span>
+        <span class="badge">Citroën 2CV bleue & blanche · 1990</span>
       </div>
       <div class="corps">
         <h3>Soizig <span class="script">la dolce vita</span></h3>
@@ -321,7 +331,7 @@ index_body = navbar(wa=False) + """
       </div>
     </div>
   </div>
-  <p class="centre reveal" style="margin-top:36px"><a class="btn btn-brun" href="/rosalie-et-soizig.html">Leur histoire complète</a></p>
+  <p class="centre reveal" style="margin-top:36px"><a class="btn btn-brun" href="/rosalie-et-soizig">Leur histoire complète</a></p>
 </section>
 
 <section id="film">
@@ -368,7 +378,7 @@ index_body = navbar(wa=False) + """
     <details><summary>Est-ce que je conduis moi-même ?</summary><div class="rep">Non — et c'est tant mieux : toutes les prestations sont <strong>avec chauffeur VTC agréé</strong>. Pas de permis à fournir, pas de caution, pas de stress — juste le plaisir : vous montez, vous trinquez, vous profitez du paysage.</div></details>
     <details><summary>Combien ça coûte ?</summary><div class="rep">Chaque événement a son déroulé, ses horaires, ses trajets — c'est pour cela qu'il n'y a pas de tarif unique. Écrivez-moi sur WhatsApp avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement.</div></details>
   </div>
-  <p class="centre reveal" style="margin-top:32px"><a class="btn btn-brun" href="/faq.html">Toutes les questions</a></p>
+  <p class="centre reveal" style="margin-top:32px"><a class="btn btn-brun" href="/faq">Toutes les questions</a></p>
 </section>
 
 <section class="social-band">
@@ -434,9 +444,9 @@ index_body = navbar(wa=False) + """
 }
 
 pages["index.html"] = head(
-    "Une 2CV, mille histoires 🌿 — Voiture de mariage & balades en 2CV à La Réunion",
+    "Voiture de mariage & balades en 2CV à La Réunion (974) | Une 2CV, mille histoires",
     "Mariages, balades coucher de soleil, shootings et évènements à bord de Rosalie et Soizig, 2CV de collection avec chauffeur VTC agréé. Toute l'île de La Réunion.",
-    "/", biz_jsonld) + index_body + footer()
+    "/", [biz_jsonld, website_jsonld]) + index_body + footer()
 
 # ============================================================ MARIAGE
 mariage_jsonld = {
@@ -445,7 +455,7 @@ mariage_jsonld = {
   "serviceType": "Location de voiture de mariage avec chauffeur",
   "provider": {"@type": "LocalBusiness", "name": "Une 2CV, mille histoires", "telephone": "+262693828108", "url": DOMAIN},
   "areaServed": {"@type": "AdministrativeArea", "name": "Île de La Réunion"},
-  "url": DOMAIN + "/mariage.html",
+  "url": DOMAIN + "/mariage",
   "image": D(IMG["eglise"], 1200)
 }
 
@@ -455,8 +465,8 @@ mariage_body = navbar("mariage") + page_hero("eglise", "Le plus beau jour",
 
 <section>
   <div class="prose reveal">
-    <p>Chercher une <strong>voiture de mariage à La Réunion</strong>, c'est chercher bien plus qu'un moyen de transport : c'est choisir l'image que garderont vos invités, la douceur du trajet entre la cérémonie et la fête, le décor de vos plus belles photos. À bord de <strong>Rosalie</strong>, 2CV blanche de 1983, ou de <strong>Soizig</strong>, bleue et blanche de 1990, votre mariage prend des airs de film — klaxon d'honneur inclus.</p>
-    <p>Toutes les prestations se font <strong>avec chauffeur VTC agréé</strong> : pas de permis à fournir, pas de caution, pas de stress. Vous vivez l'instant, je m'occupe de la route — partout sur l'île de La Réunion, et même en tour de l'île si le cœur vous en dit.</p>
+    <p>Chercher une <strong>voiture de mariage à La Réunion</strong>, c'est chercher bien plus qu'un moyen de transport : c'est choisir l'image que garderont vos invités, la douceur du trajet entre la cérémonie et la fête, le décor de vos plus belles photos. À bord de <strong>Rosalie</strong>, Citroën 2CV blanche de 1983, ou de <strong>Soizig</strong>, bleue et blanche de 1990 — de vraies voitures anciennes de collection, au charme vintage intact —, votre mariage prend des airs de film — klaxon d'honneur inclus.</p>
+    <p>Toutes les prestations se font <strong>avec chauffeur VTC agréé</strong> : pas de permis à fournir, pas de caution, pas de stress. Vous vivez l'instant, je m'occupe de la route — partout sur l'île de La Réunion (974), et même en tour de l'île si le cœur vous en dit. Saint-Denis, Saint-Paul, Saint-Gilles-les-Bains, Saint-Pierre, Saint-Leu, le Sud sauvage ou les hauts de l'île : la 2CV vient à vous, où que se raconte votre histoire.</p>
   </div>
 </section>
 
@@ -506,7 +516,7 @@ mariage_body = navbar("mariage") + page_hero("eglise", "Le plus beau jour",
 pages["mariage.html"] = head(
     "Voiture de mariage à La Réunion — 2CV avec chauffeur | Une 2CV, mille histoires",
     "Location de 2CV avec chauffeur VTC agréé pour votre mariage à La Réunion : cortège, sortie de cérémonie, photos, décoration florale, EVJF/EVJG. Devis rapide par WhatsApp.",
-    "/mariage.html", mariage_jsonld) + mariage_body + footer()
+    "/mariage", mariage_jsonld, og_img=D(IMG["eglise"], 1200)) + mariage_body + footer()
 
 # ============================================================ BALADES
 balades_jsonld = {
@@ -515,7 +525,7 @@ balades_jsonld = {
   "serviceType": "Balade touristique en voiture de collection avec chauffeur",
   "provider": {"@type": "LocalBusiness", "name": "Une 2CV, mille histoires", "telephone": "+262693828108", "url": DOMAIN},
   "areaServed": {"@type": "AdministrativeArea", "name": "Île de La Réunion"},
-  "url": DOMAIN + "/balades.html",
+  "url": DOMAIN + "/balades",
   "image": D(IMG["sunset_couple"], 1200)
 }
 
@@ -583,7 +593,7 @@ balades_body = navbar("balades") + page_hero("sunset_couple", "Prendre le temps"
 pages["balades.html"] = head(
     "Balades en 2CV à La Réunion — coucher de soleil, brunch, tour de l'île | Une 2CV, mille histoires",
     "Balade insolite à La Réunion en 2CV avec chauffeur : coucher de soleil & apéro, brunch, lever de soleil, tour de l'île, journées à thème et sur-mesure. Réservation simple par WhatsApp.",
-    "/balades.html", balades_jsonld) + balades_body + footer()
+    "/balades", balades_jsonld) + balades_body + footer()
 
 # ============================================================ SHOOTING
 shoot_body = navbar("shooting") + page_hero("shooting_nb", "Lumière !",
@@ -617,10 +627,20 @@ shoot_body = navbar("shooting") + page_hero("shooting_nb", "Lumière !",
     "debout1": D(IMG["debout1"], 1000), "sunset": D(IMG["sunset_soizig"], 1000),
 } + cta_band("Un projet, une", "idée folle ?", "Proposer mon projet", WA_SHOOT)
 
+shoot_jsonld = {
+  "@context": "https://schema.org", "@type": "Service",
+  "name": "Location de 2CV avec chauffeur pour shootings, tournages et évènements à La Réunion",
+  "serviceType": "Location de voiture de collection avec chauffeur pour shooting et évènementiel",
+  "provider": {"@type": "LocalBusiness", "name": "Une 2CV, mille histoires", "telephone": "+262693828108", "url": DOMAIN},
+  "areaServed": {"@type": "AdministrativeArea", "name": "Île de La Réunion"},
+  "url": DOMAIN + "/shooting-evenements",
+  "image": D(IMG["shooting_nb"], 1200)
+}
+
 pages["shooting-evenements.html"] = head(
     "Location 2CV pour shooting photo, cinéma & évènements à La Réunion | Une 2CV, mille histoires",
     "Louez une 2CV de collection avec chauffeur pour vos shootings photo, tournages, clips et évènements à La Réunion. Options spectacle : jonglage, feu, animations.",
-    "/shooting-evenements.html") + shoot_body + footer()
+    "/shooting-evenements", shoot_jsonld, og_img=D(IMG["shooting_nb"], 1200)) + shoot_body + footer()
 
 # ============================================================ ROSALIE & SOIZIG
 voitures_body = navbar("voitures") + page_hero("cover", "Deux héroïnes",
@@ -632,7 +652,7 @@ voitures_body = navbar("voitures") + page_hero("cover", "Deux héroïnes",
     <div class="fiche reveal">
       <div class="cadre2">
         <img src="%(rosalie)s" alt="Rosalie, 2CV blanche de 1983" loading="lazy">
-        <span class="badge">Blanche · 1983</span>
+        <span class="badge">Citroën 2CV blanche · 1983</span>
       </div>
       <div class="corps">
         <h3>Rosalie <span class="script">la pureté</span></h3>
@@ -642,7 +662,7 @@ voitures_body = navbar("voitures") + page_hero("cover", "Deux héroïnes",
     <div class="fiche reveal">
       <div class="cadre2">
         <img src="%(soizig)s" alt="Soizig, 2CV bleue et blanche de 1990" loading="lazy">
-        <span class="badge">Bleue & blanche · 1990</span>
+        <span class="badge">Citroën 2CV bleue & blanche · 1990</span>
       </div>
       <div class="corps">
         <h3>Soizig <span class="script">la dolce vita</span></h3>
@@ -687,7 +707,7 @@ voitures_body = navbar("voitures") + page_hero("cover", "Deux héroïnes",
 pages["rosalie-et-soizig.html"] = head(
     "Rosalie & Soizig — nos 2CV de collection à La Réunion | Une 2CV, mille histoires",
     "Découvrez Rosalie, 2CV blanche de 1983 à l'histoire familiale unique, et Soizig, 2CV bleue et blanche de 1990. Deux voitures de collection avec chauffeur à La Réunion.",
-    "/rosalie-et-soizig.html") + voitures_body + footer()
+    "/rosalie-et-soizig") + voitures_body + footer()
 
 # ============================================================ FAQ
 faqs = [
@@ -711,6 +731,10 @@ faqs = [
   "Pour un mariage, le plus tôt est le mieux — les samedis de la saison partent vite. Pour une balade, quelques jours suffisent souvent. Dans tous les cas, écrivez-nous : on trouve des solutions."),
  ("Peut-on privatiser la 2CV pour un tournage ou un shooting professionnel ?",
   "Oui : cinéma, clips, publicités, shootings mode ou grossesse… La voiture vient toujours accompagnée de son chauffeur, sur toute l'île. Parlons de votre projet !"),
+ ("Peut-on louer une 2CV sans chauffeur à La Réunion ?",
+  "Non — et c'est voulu : toutes nos locations de 2CV se font avec chauffeur VTC agréé. Pas de permis à fournir, pas de caution, pas de prise en main d'une voiture ancienne : vous montez, vous profitez, je conduis."),
+ ("Quelle voiture de mariage originale choisir à La Réunion ?",
+  "Une voiture ancienne pleine de charme : la Citroën 2CV ! Entre rétro et poésie, Rosalie (blanche, 1983) et Soizig (bleue et blanche, 1990) transforment le cortège en scène de cinéma — klaxon d'honneur, toit panoramique ouvert et sourires garantis, partout sur l'île (974)."),
 ]
 faq_jsonld = {
   "@context": "https://schema.org", "@type": "FAQPage",
@@ -723,12 +747,24 @@ faq_body = navbar("faq") + page_hero("interieur", "On vous dit tout",
 <section>
   <div class="faq reveal">%s</div>
 </section>
+
+<section class="doux">
+  <p class="kicker reveal">En bref</p>
+  <h2 class="titre reveal">L'essentiel <span class="script">en un coup d'œil</span></h2>
+  <div class="prose reveal">
+    <p><strong>Qui ?</strong> Jonathan — artiste jongleur et danseur, chauffeur VTC agréé. Projet porté par l'association Collectif Ensemble.</p>
+    <p><strong>Quoi ?</strong> Deux Citroën 2CV de collection avec chauffeur : voiture de mariage, balades, shootings photo & évènements.</p>
+    <p><strong>Où ?</strong> Toute l'île de La Réunion (974) — base à Saint-Leu (97436).</p>
+    <p><strong>Combien de places ?</strong> Jusqu'à 3 passagers par 2CV — et Rosalie et Soizig peuvent rouler ensemble.</p>
+    <p><strong>Tarifs ?</strong> Proposition sur mesure, rapide et sans engagement, par WhatsApp au <a href="https://wa.me/262693828108">0693 82 81 08</a>.</p>
+  </div>
+</section>
 """ % faq_items + cta_band("Une autre", "question ?", "Poser ma question", WA)
 
 pages["faq.html"] = head(
     "FAQ — 2CV mariage & balades à La Réunion | Une 2CV, mille histoires",
     "Robe de mariée dans une 2CV, trajets dans les hauts, tarifs, réservation, météo : toutes les réponses sur nos prestations de 2CV avec chauffeur à La Réunion.",
-    "/faq.html", faq_jsonld) + faq_body + footer()
+    "/faq", faq_jsonld, og_img=D(IMG["interieur"], 1200)) + faq_body + footer()
 
 # ============================================================ CONTACT
 contact_body = navbar() + page_hero("sunset_couple", "Le premier chapitre",
@@ -766,7 +802,7 @@ contact_body = navbar() + page_hero("sunset_couple", "Le premier chapitre",
 pages["contact.html"] = head(
     "Contact — Une 2CV, mille histoires | 2CV avec chauffeur à La Réunion",
     "Contactez Une 2CV, mille histoires : WhatsApp 0693 82 81 08, formulaire ou email. Mariages, balades et shootings en 2CV avec chauffeur sur toute l'île de La Réunion.",
-    "/contact.html") + contact_body + footer()
+    "/contact") + contact_body + footer()
 
 # ============================================================ MERCI
 merci_body = navbar(opaque=True) + """
@@ -781,7 +817,7 @@ merci_body = navbar(opaque=True) + """
 
 pages["merci.html"] = head(
     "Merci — Une 2CV, mille histoires", "Votre demande a bien été envoyée.",
-    "/merci.html", noindex=True) + merci_body + footer()
+    "/merci", noindex=True) + merci_body + footer()
 
 # ============================================================ MENTIONS
 mentions_body = navbar(opaque=True) + """
@@ -792,7 +828,7 @@ mentions_body = navbar(opaque=True) + """
     <p>« Une 2CV, mille histoires » est un projet porté par l'association <strong>Collectif Ensemble</strong> — Saint-Leu, La Réunion.<br>
     SIRET : 934 556 036 00010 · Email : asso.collectif.ensemble@gmail.com · Téléphone : 0693 82 81 08.</p>
     <h2>Hébergement</h2>
-    <p>Site hébergé par GitHub Pages — GitHub, Inc., 88 Colin P. Kelly Jr Street, San Francisco, CA 94107, États-Unis.</p>
+    <p>Site hébergé via la plateforme Higgsfield (higgsfield.ai), distribué par Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, États-Unis.</p>
     <h2>Propriété intellectuelle</h2>
     <p>L'ensemble des textes, photographies et vidéos de ce site sont la propriété de l'association Collectif Ensemble ou de leurs auteurs respectifs. Toute reproduction sans autorisation est interdite. Musique du site et des vidéos : « Bossa Antigua » — Kevin MacLeod (incompetech.com), licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener" target="_blank">Creative Commons BY 4.0</a>.</p>
     <h2>Données personnelles</h2>
@@ -801,15 +837,39 @@ mentions_body = navbar(opaque=True) + """
 </section>
 """
 pages["mentions-legales.html"] = head(
-    "Mentions légales — Une 2CV, mille histoires", "Mentions légales du site une2cvmillehistoires.re.",
-    "/mentions-legales.html", noindex=True) + mentions_body + footer()
+    "Mentions légales — Une 2CV, mille histoires", "Mentions légales du site Une 2CV, mille histoires.",
+    "/mentions-legales", noindex=True) + mentions_body + footer()
 
 # ============================================================ ROBOTS / SITEMAP
 robots = "User-agent: *\nAllow: /\nSitemap: %s/sitemap.xml\n" % DOMAIN
-urls = ["/", "/mariage.html", "/balades.html", "/shooting-evenements.html", "/rosalie-et-soizig.html", "/faq.html", "/contact.html"]
+urls = ["/", "/mariage", "/balades", "/shooting-evenements", "/rosalie-et-soizig", "/faq", "/contact"]
 sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + \
     "".join("  <url><loc>%s%s</loc></url>\n" % (DOMAIN, u) for u in urls) + "</urlset>\n"
 
+llms = """# Une 2CV, mille histoires
+
+> Location de Citroën 2CV de collection AVEC chauffeur VTC agréé à La Réunion (974) : voiture de mariage, balades touristiques (coucher de soleil, brunch, lever de soleil, tour de l'île), shootings photo/cinéma et évènements. Aucune location sans chauffeur.
+
+## Faits clés
+- Deux voitures : Rosalie (Citroën 2CV blanche, 1983, voiture de famille restaurée) et Soizig (Citroën 2CV bleue et blanche, 1990).
+- Chauffeur : Jonathan, artiste jongleur et danseur, chauffeur VTC agréé.
+- Zone : toute l'île de La Réunion — base à Saint-Leu (97436).
+- Capacité : jusqu'à 3 passagers par voiture ; les deux 2CV peuvent rouler ensemble.
+- Particularité : toit panoramique ouvert — les mariés peuvent faire le trajet debout.
+- Tarifs : sur devis rapide via WhatsApp.
+- Contact : WhatsApp +262 693 82 81 08 · asso.collectif.ensemble@gmail.com
+- Structure : association Collectif Ensemble (SIRET 934 556 036 00010).
+
+## Pages
+- """ + DOMAIN + """/ : accueil
+- """ + DOMAIN + """/mariage : voiture de mariage 2CV avec chauffeur
+- """ + DOMAIN + """/balades : balades en 2CV (sunset, brunch, tour de l'île, EVJF/EVJG)
+- """ + DOMAIN + """/shooting-evenements : shootings, tournages, évènements
+- """ + DOMAIN + """/rosalie-et-soizig : les deux voitures et leur histoire
+- """ + DOMAIN + """/faq : questions fréquentes (robe, pluie, hauts, tarifs)
+- """ + DOMAIN + """/contact : contact
+"""
+with open(os.path.join(OUT, "llms.txt"), "w") as f: f.write(llms)
 with open(os.path.join(OUT, "robots.txt"), "w") as f: f.write(robots)
 with open(os.path.join(OUT, "sitemap.xml"), "w") as f: f.write(sitemap)
 for name, html in pages.items():

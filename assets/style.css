@@ -280,3 +280,6 @@ html.intro-lock,html.intro-lock body{overflow:hidden}
 @media (max-width:760px){
   .hero-diapo{position:relative;inset:auto;height:auto;aspect-ratio:4/3;animation:none}
 }
+
+/* h1 discret du hero */
+h1.hero-mots{margin:0;font-weight:400;font-family:Jost,sans-serif}
