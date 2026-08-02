@@ -145,8 +145,8 @@ biz_jsonld = {
   "priceRange": "€€",
   "sameAs": [INSTA, FB],
   "makesOffer": [
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Voiture de mariage 2CV avec chauffeur", "url": DOMAIN + "/mariage"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Balades en 2CV avec chauffeur", "url": DOMAIN + "/balades"}},
+    {"@type": "Offer", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 250, "priceCurrency": "EUR"}, "itemOffered": {"@type": "Service", "name": "Voiture de mariage 2CV avec chauffeur", "url": DOMAIN + "/mariage"}},
+    {"@type": "Offer", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 90, "priceCurrency": "EUR"}, "itemOffered": {"@type": "Service", "name": "Balades en 2CV avec chauffeur", "url": DOMAIN + "/balades"}},
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Location 2CV shooting photo, cinéma et évènements", "url": DOMAIN + "/shooting-evenements"}}
   ]
 }
@@ -154,12 +154,6 @@ biz_jsonld = {
 website_jsonld = {"@context": "https://schema.org", "@type": "WebSite", "name": "Une 2CV, mille histoires", "alternateName": ["Une 2CV mille histoires", "2CV mariage Réunion"], "url": DOMAIN + "/"}
 
 index_body = navbar(wa=False) + """
-<div id="intro-cine" aria-hidden="true">
-  <video id="intro-vid" muted playsinline preload="auto" poster="/intro/poster-court.jpg"><source src="/intro/intro-court.mp4" type="video/mp4"></video>
-  <div class="intro-mot">Il était une fois…</div>
-  <div class="intro-passer">Passer l'intro →</div>
-</div>
-
 <audio id="musique" loop preload="auto">
   <source src="/assets/musique.mp3" type="audio/mpeg">
 </audio>
@@ -265,7 +259,7 @@ index_body = navbar(wa=False) + """
   <div class="balades">
     <div class="balade reveal">
       <div class="imgbox"><img src="%(sunset_soizig)s" alt="Coucher de soleil en 2CV à La Réunion" loading="lazy"></div>
-      <div class="corps"><span class="meta">± 2h · L'incontournable</span><h3>Coucher de soleil & apéro</h3>
+      <div class="corps"><span class="meta">± 2h · À partir de 90 €</span><h3>Coucher de soleil & apéro</h3>
       <p>Entre forêt et littoral, puis pause face à l'océan pour l'apéro au soleil couchant. Le classique qui ne déçoit jamais.</p>
       <a href="/balades#sunset">En savoir plus</a></div>
     </div>
@@ -376,7 +370,7 @@ index_body = navbar(wa=False) + """
     <details><summary>Ma robe de mariée va-t-elle rentrer dans la 2CV ?</summary><div class="rep">Oui ! Même les robes les plus volumineuses trouvent leur place — c'est un petit rituel que je maîtrise parfaitement. Et grâce au toit panoramique grand ouvert, vous pouvez même faire le trajet debout, comme une star : l'arrivée dont tout le monde se souvient. <span class="video-tag">🎬 Vidéo : une grande robe embarque à bord</span></div></details>
     <details><summary>La 2CV peut-elle monter dans les hauts ?</summary><div class="rep">Oui : elle grimpe sans rougir les grandes côtes et les hauts de l'île, de quoi célébrer avec la vue. Pour les routes de montagne les plus longues, on regarde ensemble le trajet et je vous dis simplement ce qui est possible.</div></details>
     <details><summary>Est-ce que je conduis moi-même ?</summary><div class="rep">Non — et c'est tant mieux : toutes les prestations sont <strong>avec chauffeur VTC agréé</strong>. Pas de permis à fournir, pas de caution, pas de stress — juste le plaisir : vous montez, vous trinquez, vous profitez du paysage.</div></details>
-    <details><summary>Combien ça coûte ?</summary><div class="rep">Chaque événement a son déroulé, ses horaires, ses trajets — c'est pour cela qu'il n'y a pas de tarif unique. Écrivez-moi sur WhatsApp avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement.</div></details>
+    <details><summary>Combien ça coûte ?</summary><div class="rep">Chaque événement a son déroulé, ses horaires, ses trajets — c'est pour cela qu'il n'y a pas de tarif unique. À titre de repère : les balades démarrent à 90 € (coucher de soleil & apéro) et les mariages à partir de 250 € (formule simple de deux heures près de chez vous). Écrivez-moi sur WhatsApp avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement.</div></details>
   </div>
   <p class="centre reveal" style="margin-top:32px"><a class="btn btn-brun" href="/faq">Toutes les questions</a></p>
 </section>
@@ -456,7 +450,8 @@ mariage_jsonld = {
   "provider": {"@type": "LocalBusiness", "name": "Une 2CV, mille histoires", "telephone": "+262693828108", "url": DOMAIN},
   "areaServed": {"@type": "AdministrativeArea", "name": "Île de La Réunion"},
   "url": DOMAIN + "/mariage",
-  "image": D(IMG["eglise"], 1200)
+  "image": D(IMG["eglise"], 1200),
+  "offers": {"@type": "Offer", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 250, "priceCurrency": "EUR"}}
 }
 
 mariage_body = navbar("mariage") + page_hero("eglise", "Le plus beau jour",
@@ -466,7 +461,7 @@ mariage_body = navbar("mariage") + page_hero("eglise", "Le plus beau jour",
 <section>
   <div class="prose reveal">
     <p>Chercher une <strong>voiture de mariage à La Réunion</strong>, c'est chercher bien plus qu'un moyen de transport : c'est choisir l'image que garderont vos invités, la douceur du trajet entre la cérémonie et la fête, le décor de vos plus belles photos. À bord de <strong>Rosalie</strong>, Citroën 2CV blanche de 1983, ou de <strong>Soizig</strong>, bleue et blanche de 1990 — de vraies voitures anciennes de collection, au charme vintage intact —, votre mariage prend des airs de film — klaxon d'honneur inclus.</p>
-    <p>Toutes les prestations se font <strong>avec chauffeur VTC agréé</strong> : pas de permis à fournir, pas de caution, pas de stress. Vous vivez l'instant, je m'occupe de la route — partout sur l'île de La Réunion (974), et même en tour de l'île si le cœur vous en dit. Saint-Denis, Saint-Paul, Saint-Gilles-les-Bains, Saint-Pierre, Saint-Leu, le Sud sauvage ou les hauts de l'île : la 2CV vient à vous, où que se raconte votre histoire.</p>
+    <p>Toutes les prestations se font <strong>avec chauffeur VTC agréé</strong> : pas de permis à fournir, pas de caution, pas de stress. Côté budget, les formules démarrent à 250 € pour un cortège simple de deux heures près de chez vous — chaque histoire reçoit ensuite sa proposition sur mesure. Vous vivez l'instant, je m'occupe de la route — partout sur l'île de La Réunion (974), et même en tour de l'île si le cœur vous en dit. Saint-Denis, Saint-Paul, Saint-Gilles-les-Bains, Saint-Pierre, Saint-Leu, le Sud sauvage ou les hauts de l'île : la 2CV vient à vous, où que se raconte votre histoire.</p>
   </div>
 </section>
 
@@ -526,7 +521,8 @@ balades_jsonld = {
   "provider": {"@type": "LocalBusiness", "name": "Une 2CV, mille histoires", "telephone": "+262693828108", "url": DOMAIN},
   "areaServed": {"@type": "AdministrativeArea", "name": "Île de La Réunion"},
   "url": DOMAIN + "/balades",
-  "image": D(IMG["sunset_couple"], 1200)
+  "image": D(IMG["sunset_couple"], 1200),
+  "offers": {"@type": "Offer", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 90, "priceCurrency": "EUR"}}
 }
 
 def bloc_balade(anchor, img, meta, titre, texte, alt):
@@ -565,11 +561,11 @@ balades_body = navbar("balades") + page_hero("sunset_couple", "Prendre le temps"
   </div>
   <div class="note-balades reveal">
     %(btnwa)s
-    <p>Les tarifs varient selon le déroulé, la durée et le lieu de départ — réponse rapide et sans engagement.</p>
+    <p>Balades à partir de 90 € (coucher de soleil & apéro). Le tarif exact varie selon le déroulé, la durée et le lieu de départ — réponse rapide et sans engagement.</p>
   </div>
 </section>
 """ % {
-    "b1": bloc_balade("sunset", D(IMG["sunset_soizig"], 1000), "± 2h · L'incontournable", "Coucher de soleil & apéro",
+    "b1": bloc_balade("sunset", D(IMG["sunset_soizig"], 1000), "± 2h · À partir de 90 €", "Coucher de soleil & apéro",
         "Départ en fin d'après-midi, entre forêt et littoral, puis pause face à l'océan pour l'apéro au soleil couchant. Le classique qui ne déçoit jamais — idéal en amoureux ou entre amis.",
         "Balade coucher de soleil en 2CV à La Réunion"),
     "b2": bloc_balade("brunch", D(IMG["interieur"], 1000), "± 3h · Gourmande", "Balade brunch",
@@ -720,7 +716,7 @@ faqs = [
  ("Combien de personnes peuvent monter à bord ?",
   "Jusqu'à 3 passagers par 2CV en plus du chauffeur. Et pour les grands cortèges, Rosalie et Soizig peuvent rouler ensemble !"),
  ("Combien coûte une voiture de mariage ou une balade en 2CV à La Réunion ?",
-  "Chaque événement a son déroulé, ses horaires, ses trajets — c'est pour cela qu'il n'y a pas de tarif unique. Écrivez-nous sur WhatsApp au 0693 82 81 08 avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement."),
+  "Chaque événement a son déroulé, ses horaires, ses trajets — c'est pour cela qu'il n'y a pas de tarif unique. À titre de repère : les balades démarrent à 90 € (coucher de soleil & apéro) et les mariages à partir de 250 € (formule simple de deux heures près de chez vous). Écrivez-nous sur WhatsApp au 0693 82 81 08 avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement."),
  ("Peut-on décorer la voiture ?",
   "Avec plaisir : rubans, fleurs, panneaux personnalisés… Vous pouvez confier la décoration florale à votre fleuriste, ou nous vous conseillons le nôtre, qui connaît Rosalie par cœur."),
  ("Et s'il pleut ?",
@@ -756,7 +752,7 @@ faq_body = navbar("faq") + page_hero("interieur", "On vous dit tout",
     <p><strong>Quoi ?</strong> Deux Citroën 2CV de collection avec chauffeur : voiture de mariage, balades, shootings photo & évènements.</p>
     <p><strong>Où ?</strong> Toute l'île de La Réunion (974) — base à Saint-Leu (97436).</p>
     <p><strong>Combien de places ?</strong> Jusqu'à 3 passagers par 2CV — et Rosalie et Soizig peuvent rouler ensemble.</p>
-    <p><strong>Tarifs ?</strong> Proposition sur mesure, rapide et sans engagement, par WhatsApp au <a href="https://wa.me/262693828108">0693 82 81 08</a>.</p>
+    <p><strong>Tarifs ?</strong> Balades à partir de 90 € (coucher de soleil & apéro), mariages à partir de 250 € (formule 2 h) — proposition sur mesure, rapide et sans engagement, par WhatsApp au <a href="https://wa.me/262693828108">0693 82 81 08</a>.</p>
   </div>
 </section>
 """ % faq_items + cta_band("Une autre", "question ?", "Poser ma question", WA)
@@ -856,7 +852,7 @@ llms = """# Une 2CV, mille histoires
 - Zone : toute l'île de La Réunion — base à Saint-Leu (97436).
 - Capacité : jusqu'à 3 passagers par voiture ; les deux 2CV peuvent rouler ensemble.
 - Particularité : toit panoramique ouvert — les mariés peuvent faire le trajet debout.
-- Tarifs : sur devis rapide via WhatsApp.
+- Tarifs : balades à partir de 90 € (coucher de soleil & apéro), mariages à partir de 250 € (formule simple 2 h) ; proposition sur mesure via WhatsApp.
 - Contact : WhatsApp +262 693 82 81 08 · asso.collectif.ensemble@gmail.com
 - Structure : association Collectif Ensemble (SIRET 934 556 036 00010).
 
