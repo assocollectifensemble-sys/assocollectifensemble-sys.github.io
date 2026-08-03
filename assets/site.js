@@ -40,45 +40,60 @@
     });
   }
 })();
-/* ---- formulaire : téléphone obligatoire + envoi résistant aux pannes ---- */
+/* ---- formulaires : téléphone obligatoire + envoi résistant aux pannes ---- */
 (function(){
-  var f=document.querySelector('form.formulaire'); if(!f) return;
-  var tel=f.querySelector('#f-tel');
+  var forms=document.querySelectorAll('form.formulaire');
+  if(!forms.length) return;
   function nbChiffres(v){ return (v.match(/[0-9]/g)||[]).length; }
-  function verifTel(){
-    if(!tel) return;
-    var n=nbChiffres(tel.value);
-    if(n===0) tel.setCustomValidity("Merci d'indiquer un numéro de téléphone : c'est par là que je vous réponds le plus vite.");
-    else if(n<9) tel.setCustomValidity("Ce numéro semble incomplet. Écrivez-le en entier, par exemple 0692 12 34 56.");
-    else tel.setCustomValidity("");
-  }
-  if(tel){ tel.addEventListener('input',verifTel); tel.addEventListener('blur',verifTel); verifTel(); }
-  function lienMail(){
-    var g=function(n){ var e=f.querySelector('[name="'+n+'"]'); return e? e.value : ''; };
-    var corps="Prénom et nom : "+g('nom')+"\n"
-      +"Téléphone : "+g('telephone')+"\n"
-      +"Email : "+g('email')+"\n"
-      +"Type d'évènement : "+g('evenement')+"\n"
-      +"Date envisagée : "+g('date')+"\n\n"+g('message');
-    return "mailto:asso.collectif.ensemble@gmail.com?subject="
-      +encodeURIComponent("Demande — Une 2CV, mille histoires")
-      +"&body="+encodeURIComponent(corps);
-  }
-  f.addEventListener('submit',function(e){
-    verifTel();
-    if(!f.checkValidity()){ return; }
-    if(!window.fetch){ return; }
-    e.preventDefault();
-    var btn=f.querySelector('button[type=submit]'); var txt=btn.textContent;
-    btn.disabled=true; btn.textContent='Envoi en cours…';
-    var url=f.action.replace('formsubmit.co/','formsubmit.co/ajax/');
-    fetch(url,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
-      .then(function(r){ if(!r.ok) throw new Error('ko'); window.location.href='/merci'; })
-      .catch(function(){
-        btn.disabled=false; btn.textContent=txt;
-        var d=document.getElementById('form-secours');
-        if(d){ d.hidden=false; var a=d.querySelector('a.secours-mail'); if(a) a.href=lienMail();
-               d.scrollIntoView({behavior:'smooth',block:'center'}); }
-      });
+  Array.prototype.forEach.call(forms, function(f){
+    var tel=f.querySelector('[name="telephone"]');
+    function verifTel(){
+      if(!tel) return;
+      var n=nbChiffres(tel.value);
+      if(n===0) tel.setCustomValidity("Merci d'indiquer un numéro de téléphone : c'est par là que je vous réponds le plus vite.");
+      else if(n<9) tel.setCustomValidity("Ce numéro semble incomplet. Écrivez-le en entier, par exemple 0692 12 34 56.");
+      else tel.setCustomValidity("");
+    }
+    if(tel){
+      tel.setAttribute('required','required');
+      tel.addEventListener('input',verifTel);
+      tel.addEventListener('blur',verifTel);
+      verifTel();
+    }
+    function lienMail(){
+      var g=function(n){ var e=f.querySelector('[name="'+n+'"]'); return e? e.value : ''; };
+      var corps="Prénom et nom : "+g('nom')+"\n"
+        +"Téléphone : "+g('telephone')+"\n"
+        +"Email : "+g('email')+"\n"
+        +"Type d'évènement : "+g('evenement')+"\n"
+        +"Date envisagée : "+g('date')+"\n\n"+g('message');
+      return "mailto:asso.collectif.ensemble@gmail.com?subject="
+        +encodeURIComponent("Demande — Une 2CV, mille histoires")
+        +"&body="+encodeURIComponent(corps);
+    }
+    f.addEventListener('submit',function(e){
+      verifTel();
+      if(tel && nbChiffres(tel.value)<9){
+        e.preventDefault(); e.stopPropagation();
+        if(f.reportValidity) f.reportValidity(); else tel.focus();
+        tel.focus();
+        return false;
+      }
+      if(!f.checkValidity()){ return; }
+      if(!window.fetch){ return; }
+      e.preventDefault();
+      var btn=f.querySelector('button[type=submit]'); var txt=btn.textContent;
+      btn.disabled=true; btn.textContent='Envoi en cours…';
+      var url=f.action.replace('formsubmit.co/','formsubmit.co/ajax/');
+      fetch(url,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+        .then(function(r){ return r.json(); })
+        .then(function(d){ if(d && d.success==='true'){ window.location.href='/merci'; } else { throw new Error('ko'); } })
+        .catch(function(){
+          btn.disabled=false; btn.textContent=txt;
+          var d=f.parentNode.querySelector('.secours');
+          if(d){ d.hidden=false; var a=d.querySelector('a.secours-mail'); if(a) a.href=lienMail();
+                 d.scrollIntoView({behavior:'smooth',block:'center'}); }
+        });
+    }, true);
   });
 })();

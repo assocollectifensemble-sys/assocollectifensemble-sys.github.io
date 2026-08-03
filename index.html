@@ -21,7 +21,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/jost-400-normal-latin.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/playfairdisplay-400-normal-latin.woff2">
 <link rel="preload" as="image" href="https://une2cvmillehistoires.re/img/photos/cover.jpg" imagesrcset="https://une2cvmillehistoires.re/img/photos/cover-760.jpg 760w, https://une2cvmillehistoires.re/img/photos/cover.jpg 1400w" imagesizes="100vw" fetchpriority="high">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v=20260803c">
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Une 2CV, mille histoires", "description": "Location de 2CV avec chauffeur VTC agréé pour mariages, balades, shootings et évènements à La Réunion.", "url": "https://une2cvmillehistoires.re", "telephone": "+262693828108", "email": "asso.collectif.ensemble@gmail.com", "image": "https://une2cvmillehistoires.re/img/photos/cover.jpg", "logo": {"@type": "ImageObject", "url": "https://une2cvmillehistoires.re/img/photos/logo.png", "width": 700, "height": 382}, "address": {"@type": "PostalAddress", "addressLocality": "Saint-Leu", "addressRegion": "La Réunion", "addressCountry": "RE", "postalCode": "97436"}, "areaServed": [{"@type": "City", "name": "Saint-Leu"}, {"@type": "City", "name": "Saint-Paul"}, {"@type": "City", "name": "Saint-Gilles-les-Bains"}, {"@type": "City", "name": "La Saline"}, {"@type": "City", "name": "Trois-Bassins"}, {"@type": "City", "name": "L'Étang-Salé"}, {"@type": "City", "name": "Saint-Pierre"}, {"@type": "City", "name": "Le Tampon"}, {"@type": "City", "name": "Saint-Louis"}, {"@type": "City", "name": "Saint-Denis"}, {"@type": "City", "name": "Sainte-Marie"}, {"@type": "City", "name": "Saint-André"}, {"@type": "City", "name": "Saint-Benoît"}, {"@type": "City", "name": "Sainte-Suzanne"}, {"@type": "AdministrativeArea", "name": "Île de La Réunion"}], "priceRange": "125 € - 550 €", "sameAs": ["https://www.instagram.com/une2cv.millehistoires/", "https://www.facebook.com/profile.php?id=61586545132399", "https://maps.app.goo.gl/eB1CGDT7FjFVzcnCA"], "hasMap": "https://maps.app.goo.gl/eB1CGDT7FjFVzcnCA", "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Voiture de mariage 2CV avec chauffeur", "url": "https://une2cvmillehistoires.re/mariage"}, "priceSpecification": {"@type": "PriceSpecification", "minPrice": 350, "priceCurrency": "EUR"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Balades en 2CV avec chauffeur", "url": "https://une2cvmillehistoires.re/balades"}, "priceSpecification": {"@type": "PriceSpecification", "minPrice": 125, "priceCurrency": "EUR"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Location 2CV shooting photo, cinéma et évènements", "url": "https://une2cvmillehistoires.re/shooting-evenements"}}], "@id": "https://une2cvmillehistoires.re/#business", "legalName": "Association Collectif Ensemble", "geo": {"@type": "GeoCoordinates", "latitude": -21.1703, "longitude": 55.2884}, "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "08:00", "closes": "20:00"}, "currenciesAccepted": "EUR", "identifier": {"@type": "PropertyValue", "name": "SIRET", "value": "93455603600010"}, "founder": {"@type": "Person", "name": "Jonathan"}, "slogan": "Vous ne louez pas une voiture, vous entrez dans une histoire.", "knowsLanguage": ["fr"]}, {"@context": "https://schema.org", "@type": "WebSite", "name": "Une 2CV, mille histoires", "alternateName": ["Une 2CV mille histoires", "2CV mariage Réunion"], "url": "https://une2cvmillehistoires.re/"}]</script>
 <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
@@ -286,15 +286,20 @@
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://une2cvmillehistoires.re/merci">
-      <input type="text" name="_honey" class="cache">
-      <label>Ou par formulaire</label>
-      <input type="text" name="nom" placeholder="Votre prénom & nom" required>
-      <input type="tel" name="telephone" placeholder="Votre téléphone / WhatsApp">
-      <select name="evenement"><option>Type d'événement…</option><option>Mariage</option><option>EVJF / EVJG</option><option>Balade</option><option>Shooting / tournage</option><option>Autre histoire</option></select>
-      <input type="date" name="date" title="Date envisagée">
-      <textarea rows="4" name="message" placeholder="Racontez-moi votre projet : lieu, date, envies…"></textarea>
+      <input type="text" name="_honey" class="cache" tabindex="-1" autocomplete="off">
+      <p class="label-form">Ou par formulaire</p>
+      <label class="sr" for="h-nom">Prénom et nom</label><input id="h-nom" type="text" name="nom" placeholder="Votre prénom &amp; nom" required>
+      <label class="sr" for="h-tel">Téléphone ou WhatsApp (obligatoire)</label><input id="h-tel" type="tel" name="telephone" inputmode="tel" autocomplete="tel" required minlength="9" maxlength="24" pattern="[0-9+ ().\-]{9,24}" title="Indiquez un numéro joignable, par exemple 0692 12 34 56" placeholder="Votre téléphone / WhatsApp *"><p class="aide-form">Un numéro joignable, WhatsApp de préférence — c'est le plus rapide pour vous répondre.</p>
+      <label class="sr" for="h-mail">Adresse email</label><input id="h-mail" type="email" name="email" placeholder="Votre email *" required>
+      <label class="sr" for="h-evt">Type d'événement</label><select id="h-evt" name="evenement"><option value="" disabled selected>Type d'événement…</option><option>Mariage</option><option>EVJF / EVJG</option><option>Balade</option><option>Shooting / tournage</option><option>Autre histoire</option></select>
+      <label class="sr" for="h-date">Date envisagée</label><input id="h-date" type="date" name="date" title="Date envisagée">
+      <label class="sr" for="h-msg">Votre message</label><textarea id="h-msg" rows="4" name="message" placeholder="Racontez-moi votre projet : lieu, date, envies…"></textarea>
       <button class="btn btn-brun" type="submit" style="border-radius:0;justify-content:center">Envoyer ma demande</button>
     </form>
+    <div class="secours" hidden>
+      <p><strong>L'envoi n'a pas abouti.</strong> Votre message n'est pas perdu — choisissez une autre voie :</p>
+      <p><a class="secours-mail" href="#">Ouvrir dans ma messagerie</a> · <a href="https://wa.me/262693828108?text=Bonjour%20Jonathan%20!%20Je%20souhaite%20%C3%A9crire%20une%20histoire%20avec%20la%202CV%20%F0%9F%8C%BF">Écrire sur WhatsApp</a> · <a href="tel:+262693828108">0693 82 81 08</a></p>
+    </div>
   </div>
 </section>
 </main>
@@ -319,6 +324,6 @@
     </div>
   </div>
 </footer>
-<script src="/assets/site.js"></script>
+<script src="/assets/site.js?v=20260803c"></script>
 </body>
 </html>
