@@ -93,7 +93,7 @@ def footer():
     return """<footer>
   <img class="logo-pied" src="%s" alt="Une 2CV, mille histoires">
   <br>Citroën 2CV de collection avec chauffeur VTC agréé — mariages, balades, shootings & évènements — toute l'île de La Réunion (974)
-  <div class="liens-pages"><a href="/mariage">Mariage</a> · <a href="/evjf-evjg">EVJF & EVJG</a> · <a href="/balades">Balades</a> · <a href="/shooting-evenements">Shootings</a> · <a href="/rosalie-et-soizig">Rosalie & Soizig</a> · <a href="/faq">FAQ</a> · <a href="/contact">Contact</a></div>
+  <div class="liens-pages"><a href="/mariage">Mariage</a> · <a href="/evjf-evjg">EVJF & EVJG</a> · <a href="/balades">Balades</a> · <a href="/shooting-evenements">Shootings</a> · <a href="/rosalie-et-soizig">Rosalie & Soizig</a> · <a href="/histoires">Histoires</a> · <a href="/faq">FAQ</a> · <a href="/contact">Contact</a></div>
   <a href="%s">Instagram</a> · <a href="%s">Facebook</a> · <a href="%s">WhatsApp</a> · <a href="tel:+262693828108">0693 82 81 08</a><br>
   Projet porté par l'association Collectif Ensemble — 97436 Saint-Leu, La Réunion · <a href="/mentions-legales">Mentions légales</a>
 </footer>
@@ -511,6 +511,7 @@ mariage_body = navbar("mariage") + page_hero("eglise", "Le plus beau jour",
     <div class="gitem"><img src="%(champagne)s" alt="Mariés debout dans la 2CV, coupes de champagne" loading="lazy"></div>
     <div class="gitem"><img src="%(debout2)s" alt="Couple debout dans la 2CV, toit panoramique ouvert" loading="lazy"></div>
   </div>
+  <p class="centre reveal" style="margin-top:36px"><a class="btn btn-contour" href="/histoires">Lire l'histoire d'un vrai mariage</a></p>
 </section>
 """ % {
     "eglise": D(IMG["eglise"], 1000), "couple": D(IMG["couple_rosalie"], 1000),
@@ -931,9 +932,107 @@ pages["evjf-evjg.html"] = head(
     "Idée d'EVJF ou d'EVJG originale à La Réunion : virée en 2CV de collection avec chauffeur, jeu de piste et chasse au trésor sur mesure, jusqu'à 6 personnes avec les deux voitures.",
     "/evjf-evjg", evjf_jsonld, og_img=D(IMG["champagne"], 1200)) + evjf_body + footer()
 
+# ============================================================ HISTOIRES
+IMGH = "/img/histoires/emma-fabien/"
+histoires_jsonld = {
+  "@context": "https://schema.org", "@type": "Article",
+  "headline": "Emma & Fabien, une promesse renouvelée — un mariage en 2CV à La Réunion",
+  "author": {"@type": "Person", "name": "Jonathan"},
+  "publisher": {"@type": "Organization", "name": "Une 2CV, mille histoires", "url": DOMAIN},
+  "image": DOMAIN + IMGH + "01-depart-ocean.jpg",
+  "mainEntityOfPage": DOMAIN + "/histoires",
+  "about": "Mariage en Citroën 2CV avec chauffeur à La Réunion"
+}
+
+histoires_body = navbar() + """
+<div class="page-hero">
+  <img class="fond" alt="La 2CV des mariés s'éloigne vers l'océan au coucher du soleil à La Réunion" src="%(hero)s">
+  <div class="voile"></div>
+  <div class="contenu">
+    <p class="kicker">Le carnet de bord</p>
+    <h1>Histoires de mariages en 2CV à La Réunion</h1>
+    <p class="accroche">Derrière chaque prestation, il y a une journée entière, des visages, des imprévus et des fous rires. Voici ces journées, racontées depuis le siège du chauffeur.</p>
+  </div>
+</div>
+
+<article class="histoire" id="emma-fabien">
+  <section>
+    <p class="kicker reveal">Histoire n° 1 · Dans l'Ouest</p>
+    <h2 class="titre reveal">Emma &amp; Fabien, <span class="script">une promesse renouvelée</span></h2>
+    <div class="prose reveal">
+      <p>C'était ma toute première journée en tant que chauffeur de mariage. Je ne savais pas encore qu'on pouvait être aussi ému au volant d'une voiture qu'on croit connaître par cœur.</p>
+
+      <h3>Quelques jours avant : la question des fleurs</h3>
+      <p>L'aventure commence bien avant le grand jour, dans la boutique de <strong>Pauline, de Happiness Blossom</strong>, la fleuriste du mariage. On se rencontre, on discute, on essaie différents systèmes d'accroche sur la carrosserie de Rosalie — parce qu'une 2CV, ça ne se décore pas comme une berline. Les mariés avaient choisi la ventouse : c'est parfait, ça tient, et ça ne laisse aucune trace sur la peinture. Très belle boutique, au passage.</p>
+
+      <h3>La veille : les petites attentions</h3>
+      <p>Ma femme écrit les prénoms des mariés sur les vitres, au marqueur craie. On décore simplement, et on glisse quelques attentions à l'intérieur : des éventails sur la banquette — à La Réunion, c'est loin d'être un détail — et de quoi se rafraîchir. Le lendemain matin, je lave la voiture, je pose les dernières touches, et c'est parti.</p>
+
+      <h3>9 h : chez la mariée</h3>
+      <p>J'arrive dans l'allée, la 2CV fleurie derrière moi. À l'intérieur, <strong>Raphaël</strong> le maquilleur et <strong>Jessica</strong> la coiffeuse sont à l'œuvre, les enfants d'honneur attendent sagement, le photographe tourne autour. Puis Emma finit de se préparer et descend l'escalier — une descente de marches qui n'avait rien à envier au Festival de Cannes.</p>
+      <p>Et là, petit imprévu : au moment de partir, <strong>il manque un fermoir de boucle d'oreille</strong>. On cherche partout. Introuvable. On décide de partir quand même vers l'église, en se disant qu'on trouvera bien une solution.</p>
+
+      <h3>Sur la route</h3>
+      <p>Top trajet. Emma adore le bruit du levier de vitesses — ce geste au tableau de bord que seules les 2CV ont — et cette voiture qui lui rappelle son grand-père. C'est exactement ce qui se passe à chaque fois : la 2CV ne transporte pas seulement des mariés, elle réveille des souvenirs de famille.</p>
+      <p>Arrivés devant l'église, une amie nous sauve avec un fermoir. Petit miracle du jour J. Et cerise sur le gâteau : la voiture était assortie à la tenue du prêtre — même bleu, mêmes ornements. On a fait forte impression.</p>
+
+      <h3>La cérémonie</h3>
+      <p>Cérémonie touchante, portée par la voix de <strong>Karha Wedding Singer</strong> et le violon d'<strong>Elise Lauret</strong>. De magnifiques louanges, et les mots des mariés qui m'ont mis la larme à l'œil. Je ne m'attendais pas à ressentir autant d'émotions dans cette nouvelle activité.</p>
+      <p>Sortie d'église haute en couleurs, puis direction le <strong>jardin botanique de Saint-Leu</strong> pour la séance photo. Le photographe se transforme carrément en acrobate pour attraper les meilleurs angles. On joue devant la voiture, et je repars ensuite avec le couple.</p>
+
+      <h3>45 minutes de route, et un marié qui s'endort</h3>
+      <p>Direction leur magnifique domaine pour la suite de la journée. Trois quarts d'heure de route de joie, de rires, de fête… et de repos pour le marié : oui, il s'est assoupi. La 2CV est un vrai petit cocon, elle vous berce. Emma, elle, riait aux éclats à côté de lui.</p>
+      <p>Arrivée au domaine <strong>debout dans le toit ouvert</strong>, sous les palmiers, sous les applaudissements. C'est le genre d'entrée qu'on ne recommence pas deux fois. Je retire ensuite le bouquet du capot pour le mettre à l'abri, et je laisse la place aux autres prestataires.</p>
+
+      <h3>Le reste de la journée</h3>
+      <p>L'équipe du chef <strong>Romain Durand</strong> assure le déjeuner, <strong>33 Tours</strong> met l'ambiance aux platines, un magnifique gâteau signé <strong>Tikatoune</strong> attend son heure, <strong>Nanasfigue</strong> prend le service du soir, et la robe venait du <strong>Secret d'Agapé</strong>.</p>
+      <p>Emma, Fabien et vous tous : merci d'avoir rendu ma première expérience de chauffeur de mariage aussi joyeuse. À très vite pour de nouvelles histoires.</p>
+    </div>
+  </section>
+
+  <section class="doux">
+    <p class="kicker reveal">En images</p>
+    <h2 class="titre reveal">La journée <span class="script">en quelques instants</span></h2>
+    <div class="galerie reveal">
+      <div class="gitem"><img src="%(g1)s" alt="Écriture des prénoms des mariés sur la vitre de la 2CV" loading="lazy"></div>
+      <div class="gitem"><img src="%(g2)s" alt="La 2CV fleurie devant l'église à La Réunion" loading="lazy"></div>
+      <div class="gitem"><img src="%(g3)s" alt="La 2CV dans la cour de l'église le jour du mariage" loading="lazy"></div>
+      <div class="gitem"><img src="%(g4)s" alt="Les mariés debout dans la 2CV sous les palmiers" loading="lazy"></div>
+      <div class="gitem"><img src="%(g5)s" alt="Emma et Fabien posant près de la 2CV" loading="lazy"></div>
+      <div class="gitem"><img src="%(g6)s" alt="Rires des mariés sur la banquette arrière de la 2CV" loading="lazy"></div>
+    </div>
+    <p class="sous-note reveal">Photos extraites du film de la journée. Les images du photographe arrivent bientôt.</p>
+  </section>
+
+  <section>
+    <div class="prose reveal">
+      <h3>Les artisans de cette journée</h3>
+      <p>Fleurs : Happiness Blossom · Maquillage : Raphaël · Coiffure : Jessica · Chant : Karha Wedding Singer · Violon : Elise Lauret · Traiteur : chef Romain Durand · DJ : 33 Tours · Gâteau : Tikatoune · Service du soir : Nanasfigue · Robe : Le Secret d'Agapé · Voiture &amp; chauffeur : Rosalie et moi.</p>
+    </div>
+  </section>
+</article>
+
+<section class="doux">
+  <div class="prose reveal centre">
+    <h2>La prochaine histoire, c'est peut-être la vôtre</h2>
+    <p>Chaque mariage a son grain de sel, ses imprévus et ses moments suspendus. Racontez-moi le vôtre — et un jour, il aura sa page ici.</p>
+  </div>
+</section>
+""" % {
+    "hero": IMGH + "01-depart-ocean.jpg",
+    "g1": IMGH + "03-vive-les-maries.jpg", "g2": IMGH + "04-eglise.jpg",
+    "g3": IMGH + "05-cour-eglise.jpg", "g4": IMGH + "07-debout-palmiers.jpg",
+    "g5": IMGH + "08-couple-voiture.jpg", "g6": IMGH + "09-rires-banquette.jpg",
+} + cta_band("Écrivons la", "vôtre", "Raconter notre mariage", WA_MARIAGE)
+
+pages["histoires.html"] = head(
+    "Histoires de mariages en 2CV à La Réunion | Une 2CV, mille histoires",
+    "Le carnet de bord de Jonathan, chauffeur de 2CV à La Réunion : de vraies journées de mariage racontées de l'intérieur, avec les lieux, les imprévus et les artisans qui les ont rendues belles.",
+    "/histoires", histoires_jsonld, og_img="https://une2cvmillehistoires.re/img/histoires/emma-fabien/01-depart-ocean.jpg") + histoires_body + footer()
+
 # ============================================================ ROBOTS / SITEMAP
 robots = "User-agent: *\nAllow: /\nSitemap: %s/sitemap.xml\n" % DOMAIN
-urls = ["/", "/mariage", "/evjf-evjg", "/balades", "/shooting-evenements", "/rosalie-et-soizig", "/faq", "/contact"]
+urls = ["/", "/mariage", "/histoires", "/evjf-evjg", "/balades", "/shooting-evenements", "/rosalie-et-soizig", "/faq", "/contact"]
 sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + \
     "".join("  <url><loc>%s%s</loc></url>\n" % (DOMAIN, u) for u in urls) + "</urlset>\n"
 
@@ -958,6 +1057,7 @@ llms = """# Une 2CV, mille histoires
 - """ + DOMAIN + """/balades : balades en 2CV (sunset, brunch, tour de l'île)
 - """ + DOMAIN + """/shooting-evenements : shootings, tournages, évènements
 - """ + DOMAIN + """/rosalie-et-soizig : les deux voitures et leur histoire
+- """ + DOMAIN + """/histoires : carnet de bord, de vrais mariages racontés (lieux, prestataires, anecdotes)
 - """ + DOMAIN + """/faq : questions fréquentes (robe, pluie, hauts, tarifs)
 - """ + DOMAIN + """/contact : contact
 """
