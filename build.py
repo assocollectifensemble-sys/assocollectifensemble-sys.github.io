@@ -1,4 +1,14 @@
 # -*- coding: utf-8 -*-
+# ==========================================================================
+#  ⚠️  ARCHIVE — NE PLUS EXÉCUTER POUR PUBLIER
+#  Depuis le 03/08/2026, la SOURCE DE VÉRITÉ est le dépôt GitHub
+#  assocollectifensemble-sys/assocollectifensemble-sys.github.io (branche main),
+#  qui contient en plus : CNAME, .nojekyll, img/photos/, img/histoires/, 404.html,
+#  et de nombreuses corrections SEO appliquées directement sur le HTML.
+#  Lancer ce script écraserait tout cela.
+#  Pour modifier le site : cloner le dépôt (git clone -b main …) et éditer
+#  les fichiers HTML par script, puis git push origin main.
+# ==========================================================================
 """Générateur du site « Une 2CV, mille histoires »."""
 import os, json, re
 
