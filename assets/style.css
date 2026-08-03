@@ -281,3 +281,11 @@ h1.hero-mots{margin:0;font-weight:400;font-family:Jost,sans-serif}
 
 .hero-bas .btn-ligne{border:1.5px solid var(--terre);color:var(--terre);backdrop-filter:none}
 .hero-bas .btn-ligne:hover{background:rgba(169,126,95,.08)}
+
+.btn-contour{border:1.5px solid var(--terre);color:var(--terre);background:transparent}
+.btn-contour:hover{background:rgba(169,126,95,.09)}
+.forfaits{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;max-width:1000px;margin:0 auto 10px}
+.forfait{background:var(--blanc);border:1px solid #ece2d4;border-radius:18px;padding:26px 24px;text-align:center;box-shadow:0 10px 30px rgba(58,49,41,.06)}
+.forfait .zone{display:block;letter-spacing:.28em;text-transform:uppercase;font-size:11.5px;color:var(--terre);margin-bottom:10px}
+.forfait .prix{display:block;font-family:'Playfair Display',serif;font-size:30px;color:var(--brun);margin-bottom:12px}
+.forfait p{font-weight:300;font-size:14.5px;line-height:1.7;color:#5a4f43;margin:0}
