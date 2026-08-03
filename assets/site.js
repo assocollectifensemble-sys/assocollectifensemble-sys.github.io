@@ -1,48 +1,63 @@
-/* Une 2CV, mille histoires — interactions */
+/* Une 2CV, mille histoires — scripts communs */
 (function(){
-  // Nav : fond opaque après défilement
-  var nav = document.getElementById('nav');
-  if (nav) {
-    var majNav = function(){ nav.classList.toggle('scrolled', window.scrollY > 40); };
-    window.addEventListener('scroll', majNav, {passive:true});
-    majNav();
+  var ic=document.getElementById('intro-cine');
+  if(ic){
+    var vu=false; try{vu=!!sessionStorage.getItem('introVue');}catch(e){}
+    if(vu){ ic.parentNode.removeChild(ic); }
+    else{
+      document.documentElement.classList.add('intro-lock');
+      var iv=document.getElementById('intro-vid');
+      var fini=false;
+      var fin=function(){ if(fini)return; fini=true;
+        try{sessionStorage.setItem('introVue','1');}catch(e){}
+        ic.classList.add('fini');
+        document.documentElement.classList.remove('intro-lock');
+        setTimeout(function(){ if(ic&&ic.parentNode)ic.parentNode.removeChild(ic); },1000); };
+      iv.addEventListener('ended',fin);
+      iv.addEventListener('error',fin);
+      ic.querySelector('.intro-passer').addEventListener('click',fin);
+      var p=iv.play(); if(p&&p.catch){p.catch(fin);}
+      setTimeout(fin,9000);
+    }
   }
 
-  // Apparitions au défilement
-  var els = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
-      });
-    }, {threshold: 0.12});
-    els.forEach(function(el){ io.observe(el); });
-  } else {
-    els.forEach(function(el){ el.classList.add('on'); });
+  var nav=document.getElementById('nav');
+  function onScroll(){ if(nav) nav.classList.toggle('scrolled', scrollY>60); }
+  addEventListener('scroll', onScroll); onScroll();
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('on');});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  var mq=document.getElementById('mq'); if(mq){ mq.innerHTML+=mq.innerHTML; }
+
+  /* masque la bulle WhatsApp flottante quand un gros bouton WhatsApp est visible */
+  var waFloat=document.querySelector('.wa-float');
+  if(waFloat){
+    var visibles=0;
+    var ioWa=new IntersectionObserver(function(es){
+      es.forEach(function(e){ visibles+=e.isIntersecting?1:-1; });
+      if(visibles<0)visibles=0;
+      waFloat.classList.toggle('cache-float', visibles>0);
+    },{threshold:.4});
+    document.querySelectorAll('.btn-wa').forEach(function(b){ if(b!==waFloat) ioWa.observe(b); });
   }
 
-  // Musique d'ambiance (page d'accueil)
-  var audio = document.getElementById('musique');
-  var btn = document.getElementById('btn-son');
-  if (audio && btn) {
-    audio.volume = 0.35;
-    var maj = function(){ btn.classList.toggle('off', audio.paused); };
-    var lancer = function(){ audio.play().then(maj).catch(maj); };
-    btn.addEventListener('click', function(ev){
-      ev.stopPropagation();
-      if (audio.paused) lancer(); else { audio.pause(); maj(); }
+  var audio=document.getElementById('musique');
+  var btnSon=document.getElementById('btn-son');
+  if(audio&&btnSon){
+    audio.volume=0.35;
+    var musicOn=true;
+    function tryPlay(){ if(musicOn && audio.paused){ audio.play().catch(function(){}); } }
+    tryPlay();
+    document.addEventListener('DOMContentLoaded', tryPlay);
+    addEventListener('load', tryPlay);
+    var essais=0, relance=setInterval(function(){ essais++; if(!audio.paused||essais>16){clearInterval(relance);return;} tryPlay(); },600);
+    ['pointerdown','touchstart','keydown','scroll','click'].forEach(function(ev){ addEventListener(ev, tryPlay, {passive:true}); });
+    btnSon.addEventListener('click', function(e){
+      e.stopPropagation();
+      musicOn=!musicOn;
+      if(musicOn){ audio.play().catch(function(){}); btnSon.classList.remove('off'); }
+      else { audio.pause(); btnSon.classList.add('off'); }
     });
-    // L'autoplay est souvent bloqué : on retente au premier geste du visiteur
-    var premierGeste = function(){
-      if (audio.paused && !btn.dataset.coupe) lancer();
-      document.removeEventListener('click', premierGeste);
-      document.removeEventListener('touchstart', premierGeste);
-      window.removeEventListener('scroll', premierGeste);
-    };
-    btn.addEventListener('click', function(){ btn.dataset.coupe = audio.paused ? '1' : ''; });
-    lancer();
-    document.addEventListener('click', premierGeste);
-    document.addEventListener('touchstart', premierGeste, {passive:true});
-    window.addEventListener('scroll', premierGeste, {passive:true});
   }
 })();
