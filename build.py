@@ -7,6 +7,7 @@ DOMAIN = "https://une2cvmillehistoires.re"
 WA = "https://wa.me/262693828108?text=Bonjour%20Jonathan%20!%20Je%20souhaite%20%C3%A9crire%20une%20histoire%20avec%20la%202CV%20%F0%9F%8C%BF"
 WA_MARIAGE = "https://wa.me/262693828108?text=Bonjour%20!%20Nous%20nous%20marions%20et%20la%202CV%20nous%20fait%20r%C3%AAver%20%F0%9F%92%8D"
 WA_BALADE = "https://wa.me/262693828108?text=Bonjour%20Jonathan%20!%20Je%20souhaite%20r%C3%A9server%20une%20balade%20en%202CV%20%F0%9F%8C%BF"
+WA_EVJF = "https://wa.me/262693828108?text=Bonjour%20!%20On%20pr%C3%A9pare%20un%20EVJF%2FEVJG%20et%20la%202CV%20nous%20tente%20%F0%9F%A5%82"
 WA_SHOOT = "https://wa.me/262693828108?text=Bonjour%20!%20J%27ai%20un%20projet%20de%20shooting%2Fanimation%20avec%20la%202CV%20%F0%9F%93%B8"
 
 D = lambda i, w=1200: "https://lh3.googleusercontent.com/d/%s=w%d" % (i, w)
@@ -92,7 +93,7 @@ def footer():
     return """<footer>
   <img class="logo-pied" src="%s" alt="Une 2CV, mille histoires">
   <br>Citroën 2CV de collection avec chauffeur VTC agréé — mariages, balades, shootings & évènements — toute l'île de La Réunion (974)
-  <div class="liens-pages"><a href="/mariage">Mariage</a> · <a href="/balades">Balades</a> · <a href="/shooting-evenements">Shootings</a> · <a href="/rosalie-et-soizig">Rosalie & Soizig</a> · <a href="/faq">FAQ</a> · <a href="/contact">Contact</a></div>
+  <div class="liens-pages"><a href="/mariage">Mariage</a> · <a href="/evjf-evjg">EVJF & EVJG</a> · <a href="/balades">Balades</a> · <a href="/shooting-evenements">Shootings</a> · <a href="/rosalie-et-soizig">Rosalie & Soizig</a> · <a href="/faq">FAQ</a> · <a href="/contact">Contact</a></div>
   <a href="%s">Instagram</a> · <a href="%s">Facebook</a> · <a href="%s">WhatsApp</a> · <a href="tel:+262693828108">0693 82 81 08</a><br>
   Projet porté par l'association Collectif Ensemble — 97436 Saint-Leu, La Réunion · <a href="/mentions-legales">Mentions légales</a>
 </footer>
@@ -191,9 +192,15 @@ index_body = navbar(wa=False) + """
   <div class="prestas">
     <a class="presta reveal" href="/mariage">
       <div class="cadre"><div class="imgbox"><img src="%(eglise)s" alt="Sortie d'église en 2CV à La Réunion" loading="lazy"></div></div>
-      <h3>Évènements</h3>
-      <p class="souligne">Mariage · Elopement · EVJF / EVJG · Anniversaire · Demande en mariage</p>
+      <h3>Mariage</h3>
+      <p class="souligne">Cortège & sortie de cérémonie · Elopement · Demande en mariage</p>
       <span class="plus">Découvrir</span>
+    </a>
+    <a class="presta reveal" href="/evjf-evjg">
+      <div class="cadre"><div class="imgbox"><img src="%(champ_presta)s" alt="EVJF en 2CV à La Réunion, coupes de champagne" loading="lazy"></div></div>
+      <h3>EVJF & EVJG</h3>
+      <p class="souligne">Virée entre copines ou copains · Jeu de piste · Chasse au trésor</p>
+      <span class="plus">Voir les idées</span>
     </a>
     <a class="presta reveal" href="/balades">
       <div class="cadre"><div class="imgbox"><img src="%(sunset)s" alt="Balade en 2CV au coucher de soleil à La Réunion" loading="lazy"></div></div>
@@ -240,7 +247,7 @@ index_body = navbar(wa=False) + """
         <li>EVJF / EVJG & demandes en mariage en toute complicité</li>
         <li>En option : spectacle de feu, jonglage, animations pour les enfants</li>
       </ul>
-      <a class="btn btn-brun" href="/mariage" style="margin-right:10px;margin-bottom:10px">La page mariage</a>
+      <a class="btn btn-contour" href="/mariage" style="margin-right:10px;margin-bottom:10px">Plus de détails</a>
       %(btnwa_mariage)s
     </div>
   </div>
@@ -361,7 +368,7 @@ index_body = navbar(wa=False) + """
     <details><summary>Ma robe de mariée va-t-elle rentrer dans la 2CV ?</summary><div class="rep">Oui ! Même les robes les plus volumineuses trouvent leur place — c'est un petit rituel que je maîtrise parfaitement. Et grâce au toit panoramique grand ouvert, vous pouvez même faire le trajet debout, comme une star : l'arrivée dont tout le monde se souvient. <span class="video-tag">🎬 Vidéo : une grande robe embarque à bord</span></div></details>
     <details><summary>La 2CV peut-elle monter dans les hauts ?</summary><div class="rep">Oui : elle grimpe sans rougir les grandes côtes et les hauts de l'île, de quoi célébrer avec la vue. Pour les routes de montagne les plus longues, on regarde ensemble le trajet et je vous dis simplement ce qui est possible.</div></details>
     <details><summary>Est-ce que je conduis moi-même ?</summary><div class="rep">Non — et c'est tant mieux : toutes les prestations sont <strong>avec chauffeur VTC agréé</strong>. Pas de permis à fournir, pas de caution, pas de stress — juste le plaisir : vous montez, vous trinquez, vous profitez du paysage.</div></details>
-    <details><summary>Combien ça coûte ?</summary><div class="rep">Chaque événement a son déroulé, ses horaires, ses trajets — c'est pour cela qu'il n'y a pas de tarif unique. À titre de repère : les balades démarrent à 90 € (coucher de soleil & apéro) et les mariages à partir de 350 € (formule simple de deux heures près de chez vous). Écrivez-moi sur WhatsApp avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement.</div></details>
+    <details><summary>Combien ça coûte ?</summary><div class="rep">Chaque événement a son déroulé, ses horaires, ses trajets — c'est pour cela qu'il n'y a pas de tarif unique. À titre de repère : les balades démarrent à 90 € (coucher de soleil & apéro) et les mariages à partir de 350 € dans l'Ouest, 450 € dans le Sud et le Nord, 550 € dans l'Est — la durée de présence de la voiture et les options font ensuite varier le tarif final. Écrivez-moi sur WhatsApp avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement.</div></details>
   </div>
   <p class="centre reveal" style="margin-top:32px"><a class="btn btn-brun" href="/faq">Toutes les questions</a></p>
 </section>
@@ -415,6 +422,7 @@ index_body = navbar(wa=False) + """
     "eglise_hero": D(IMG["eglise"], 1600), "champ_hero": D(IMG["champagne"], 1600),
     "btnwa": btn_wa("Écrire votre histoire", WA),
     "eglise": D(IMG["eglise"]), "sunset": D(IMG["sunset_couple"]), "shoot": D(IMG["shooting_nb"]),
+    "champ_presta": D(IMG["champagne"]),
     "couple": D(IMG["couple_rosalie"], 1400), "btnwa_mariage": btn_wa("Parler de votre mariage", WA_MARIAGE),
     "creole": D(IMG["creole"], 1920),
     "sunset_soizig": D(IMG["sunset_soizig"], 1000), "interieur": D(IMG["interieur"], 1000),
@@ -452,7 +460,7 @@ mariage_body = navbar("mariage") + page_hero("eglise", "Le plus beau jour",
 <section>
   <div class="prose reveal">
     <p>Chercher une <strong>voiture de mariage à La Réunion</strong>, c'est chercher bien plus qu'un moyen de transport : c'est choisir l'image que garderont vos invités, la douceur du trajet entre la cérémonie et la fête, le décor de vos plus belles photos. À bord de <strong>Rosalie</strong>, Citroën 2CV blanche de 1983, ou de <strong>Soizig</strong>, bleue et blanche de 1990 — de vraies voitures anciennes de collection, au charme vintage intact —, votre mariage prend des airs de film — klaxon d'honneur inclus.</p>
-    <p>Toutes les prestations se font <strong>avec chauffeur VTC agréé</strong> : pas de permis à fournir, pas de caution, pas de stress. Côté budget, les formules démarrent à 350 € pour un cortège simple de deux heures près de chez vous — chaque histoire reçoit ensuite sa proposition sur mesure. Vous vivez l'instant, je m'occupe de la route — partout sur l'île de La Réunion (974), et même en tour de l'île si le cœur vous en dit. Saint-Denis, Saint-Paul, Saint-Gilles-les-Bains, Saint-Pierre, Saint-Leu, le Sud sauvage ou les hauts de l'île : la 2CV vient à vous, où que se raconte votre histoire.</p>
+    <p>Toutes les prestations se font <strong>avec chauffeur VTC agréé</strong> : pas de permis à fournir, pas de caution, pas de stress. Côté budget, les forfaits démarrent à 350 € dans l'Ouest — le détail par zone est un peu plus bas. Vous vivez l'instant, je m'occupe de la route — partout sur l'île de La Réunion (974), et même en tour de l'île si le cœur vous en dit. Saint-Denis, Saint-Paul, Saint-Gilles-les-Bains, Saint-Pierre, Saint-Leu, le Sud sauvage ou les hauts de l'île : la 2CV vient à vous, où que se raconte votre histoire.</p>
   </div>
 </section>
 
@@ -479,6 +487,17 @@ mariage_body = navbar("mariage") + page_hero("eglise", "Le plus beau jour",
     <p><strong>Demande en mariage</strong> — je vous aide à organiser la surprise : trajet complice, spot de rêve au coucher du soleil, et la bague au fond du coffre… chut.</p>
     <p><strong>Anniversaires de mariage</strong> — refaire le trajet des années plus tard, dans la même voiture ou presque : c'est exactement le genre d'histoires que Rosalie adore.</p>
   </div>
+</section>
+
+<section class="doux">
+  <p class="kicker reveal">Les forfaits</p>
+  <h2 class="titre reveal">Une idée <span class="script">du budget</span></h2>
+  <div class="forfaits reveal">
+    <div class="forfait"><span class="zone">Ouest</span><span class="prix">dès 350 €</span><p>Saint-Leu, Saint-Paul, Saint-Gilles, La Saline et alentours.</p></div>
+    <div class="forfait"><span class="zone">Sud & Nord</span><span class="prix">dès 450 €</span><p>Saint-Pierre, Le Tampon, Saint-Denis, Sainte-Marie et alentours.</p></div>
+    <div class="forfait"><span class="zone">Est</span><span class="prix">dès 550 €</span><p>Saint-André, Saint-Benoît, Sainte-Suzanne et alentours.</p></div>
+  </div>
+  <p class="sous-note reveal">Ces montants sont donnés <strong>à titre indicatif</strong> : la durée de présence de la voiture et du chauffeur, le déroulé de votre journée et les options choisies font varier le tarif final. Racontez-moi votre projet, vous recevrez une proposition claire et sans engagement.</p>
 </section>
 
 <section>
@@ -705,9 +724,9 @@ faqs = [
  ("Est-ce que je conduis moi-même ?",
   "Non — et c'est tant mieux : toutes les prestations sont avec chauffeur VTC agréé. Pas de permis à fournir, pas de caution, pas de stress — juste le plaisir : vous montez, vous trinquez, vous profitez du paysage."),
  ("Combien de personnes peuvent monter à bord ?",
-  "Jusqu'à 3 passagers par 2CV en plus du chauffeur. Et pour les grands cortèges, Rosalie et Soizig peuvent rouler ensemble !"),
+  "3 passagers par 2CV en plus du chauffeur. Et pour les grands cortèges ou les EVJF/EVJG, Rosalie et Soizig roulent ensemble — soit jusqu'à 6 personnes en convoi !"),
  ("Combien coûte une voiture de mariage ou une balade en 2CV à La Réunion ?",
-  "Chaque événement a son déroulé, ses horaires, ses trajets — c'est pour cela qu'il n'y a pas de tarif unique. À titre de repère : les balades démarrent à 90 € (coucher de soleil & apéro) et les mariages à partir de 350 € (formule simple de deux heures près de chez vous). Écrivez-nous sur WhatsApp au 0693 82 81 08 avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement."),
+  "Chaque événement a son déroulé, ses horaires, ses trajets — c'est pour cela qu'il n'y a pas de tarif unique. À titre de repère : les balades démarrent à 90 € (coucher de soleil & apéro) et les mariages à partir de 350 € dans l'Ouest, 450 € dans le Sud et le Nord, 550 € dans l'Est — la durée de présence de la voiture et les options font ensuite varier le tarif final. Écrivez-nous sur WhatsApp au 0693 82 81 08 avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement."),
  ("Peut-on décorer la voiture ?",
   "Avec plaisir : rubans, fleurs, panneaux personnalisés… Vous pouvez confier la décoration florale à votre fleuriste, ou nous vous conseillons le nôtre, qui connaît Rosalie par cœur."),
  ("Et s'il pleut ?",
@@ -743,7 +762,7 @@ faq_body = navbar("faq") + page_hero("interieur", "On vous dit tout",
     <p><strong>Quoi ?</strong> Deux Citroën 2CV de collection avec chauffeur : voiture de mariage, balades, shootings photo & évènements.</p>
     <p><strong>Où ?</strong> Toute l'île de La Réunion (974) — base à Saint-Leu (97436).</p>
     <p><strong>Combien de places ?</strong> Jusqu'à 3 passagers par 2CV — et Rosalie et Soizig peuvent rouler ensemble.</p>
-    <p><strong>Tarifs ?</strong> Balades à partir de 90 € (coucher de soleil & apéro), mariages à partir de 350 € (formule 2 h) — proposition sur mesure, rapide et sans engagement, par WhatsApp au <a href="https://wa.me/262693828108">0693 82 81 08</a>.</p>
+    <p><strong>Tarifs ?</strong> Balades à partir de 90 €, mariages à partir de 350 € dans l'Ouest (450 € Sud et Nord, 550 € Est) — proposition sur mesure, rapide et sans engagement, par WhatsApp au <a href="https://wa.me/262693828108">0693 82 81 08</a>.</p>
   </div>
 </section>
 """ % faq_items + cta_band("Une autre", "question ?", "Poser ma question", WA)
@@ -827,9 +846,94 @@ pages["mentions-legales.html"] = head(
     "Mentions légales — Une 2CV, mille histoires", "Mentions légales du site Une 2CV, mille histoires.",
     "/mentions-legales", noindex=True) + mentions_body + footer()
 
+# ============================================================ EVJF / EVJG
+evjf_jsonld = {
+  "@context": "https://schema.org", "@type": "Service",
+  "name": "EVJF et EVJG en 2CV avec chauffeur à La Réunion",
+  "serviceType": "Enterrement de vie de jeune fille et de jeune garcon en voiture de collection avec chauffeur",
+  "provider": {"@type": "LocalBusiness", "name": "Une 2CV, mille histoires", "telephone": "+262693828108", "url": DOMAIN},
+  "areaServed": {"@type": "AdministrativeArea", "name": "Île de La Réunion"},
+  "url": DOMAIN + "/evjf-evjg",
+  "image": D(IMG["champagne"], 1200)
+}
+
+evjf_body = navbar() + page_hero("champagne", "Entre copines, entre copains",
+    "EVJF & EVJG à La Réunion : la virée en 2CV",
+    "Une voiture qui fait tourner les tetes, un chauffeur complice, et un jeu de piste sur mesure : l'enterrement de vie de jeune fille dont tout le monde reparlera.",
+    "Groupe d'amies trinquant à bord de la 2CV lors d'un EVJF à La Réunion") + """
+
+<section>
+  <div class="prose reveal">
+    <p>Vous cherchez une <strong>idée d'EVJF originale à La Réunion</strong> — ou un EVJG qui sort du bowling et du karting ? Montez à bord. Rosalie et Soizig, nos deux <strong>Citroën 2CV de collection</strong>, transforment une simple journée entre amis en souvenir de cinéma : cheveux au vent, toit panoramique grand ouvert, klaxon d'honneur a chaque village traversé, et les regards qui se retournent sur votre passage.</p>
+    <p>Je conduis, vous profitez. <strong>Chauffeur VTC agréé</strong>, pas de permis a fournir, pas de caution : la future mariée et sa bande n'ont qu'à lever leur verre.</p>
+    <h2>Combien peut-on être ?</h2>
+    <p><strong>3 passagers par voiture</strong>, en plus du chauffeur. Et comme Rosalie et Soizig roulent volontiers ensemble, votre groupe peut atteindre <strong>6 personnes en convoi</strong> — deux 2CV qui se suivent sur la route du littoral, c'est déjà un spectacle en soi, et les photos sont incomparables.</p>
+  </div>
+</section>
+
+<section class="doux">
+  <p class="kicker reveal">Trois façons de le vivre</p>
+  <h2 class="titre reveal">Choisissez votre <span class="script">aventure</span></h2>
+  <div class="balades">
+    <div class="balade reveal">
+      <div class="imgbox"><img src="%(sunset)s" alt="EVJF au coucher de soleil en 2CV à La Réunion" loading="lazy"></div>
+      <div class="corps"><span class="meta">Demi-journée</span><h3>La virée sunset</h3>
+      <p>Départ en fin d'après-midi, les plus belles routes du littoral, arrêts photos à volonté, puis apéro face au soleil couchant. Simple, chic, et parfaitement irrésistible.</p></div>
+    </div>
+    <div class="balade reveal">
+      <div class="imgbox"><img src="%(grand2)s" alt="Journée EVJG en 2CV à La Réunion" loading="lazy"></div>
+      <div class="corps"><span class="meta">Journée complete</span><h3>La grande journée</h3>
+      <p>Brunch quelque part, montée vers les hauts, plage, marché, glace, fous rires : on construit le fil rouge ensemble et je vous emmène d'étape en étape, sans que personne n'ait a conduire.</p></div>
+    </div>
+    <div class="balade reveal">
+      <div class="imgbox"><img src="%(coffre)s" alt="Jeu de piste et chasse au trésor en 2CV à La Réunion" loading="lazy"></div>
+      <div class="corps"><span class="meta">L'originale</span><h3>Le jeu de piste</h3>
+      <p>Une chasse au trésor grandeur nature à bord des 2CV : énigmes, indices cachés, épreuves, complices sur le parcours. La mariée ne sait rien, vous savez tout — et la voiture devient le vaisseau de l'aventure.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="prose reveal">
+    <h2>La chasse au trésor, notre petite spécialité</h2>
+    <p>Avant d'etre chauffeur, je suis <strong>artiste et animateur</strong> : jonglage, danse, spectacle. Alors quand on me demande un EVJF, je ne me contente pas de conduire — je peux écrire pour vous une <strong>aventure immersive</strong> sur mesure.</p>
+    <p>Le principe : la future mariée (ou le futur marie) monte à bord sans rien savoir. À chaque étape, une énigme, un personnage, une épreuve. Les 2CV emmènent l'equipe d'un lieu à l'autre, le coffre cache les indices, et le dénouement se joue là où vous l'avez décidé — sur une plage, dans un jardin, chez vous. On adapte le scénario à votre groupe, à vos souvenirs communs et aux petites bêtises de la mariée : c'est ce qui rend chaque partie unique.</p>
+    <h2>En option, pour aller plus loin</h2>
+    <p><strong>Décoration</strong> — rubans, fleurs, panneaux personnalisés aux prénoms, ballons : la voiture se met a vos couleurs.<br>
+    <strong>Spectacle</strong> — jonglage, numero de feu en soirée, animation surprise a l'arrivée.<br>
+    <strong>Reportage photo</strong> — on peut vous mettre en relation avec un photographe qui connaît bien la voiture et ses meilleurs angles.<br>
+    <strong>Apéro à bord</strong> — coupes, glacière, petites attentions : dites-moi ce qui vous ferait plaisir.</p>
+  </div>
+</section>
+
+<section class="doux">
+  <p class="kicker reveal">En images</p>
+  <h2 class="titre reveal">L'ambiance <span class="script">à bord</span></h2>
+  <div class="galerie reveal">
+    <div class="gitem"><img src="%(champagne)s" alt="Trinquer à bord de la 2CV pendant un EVJF" loading="lazy"></div>
+    <div class="gitem"><img src="%(debout2)s" alt="Debout dans la 2CV, toit panoramique ouvert" loading="lazy"></div>
+    <div class="gitem"><img src="%(cover)s" alt="Les deux 2CV en convoi face a l'océan" loading="lazy"></div>
+    <div class="gitem"><img src="%(jonglage)s" alt="Jonathan, artiste jongleur et chauffeur de la 2CV" loading="lazy"></div>
+    <div class="gitem"><img src="%(interieur)s" alt="Intérieur cosy de la 2CV" loading="lazy"></div>
+    <div class="gitem"><img src="%(grand1)s" alt="Balade en 2CV dans les hauts de La Réunion" loading="lazy"></div>
+  </div>
+</section>
+""" % {
+    "sunset": D(IMG["sunset_soizig"], 1000), "grand2": D(IMG["grand2"], 1000),
+    "coffre": D(IMG["coffre"], 1000), "champagne": D(IMG["champagne"], 1000),
+    "debout2": D(IMG["debout2"], 1000), "cover": D(IMG["cover"], 1000),
+    "jonglage": D(IMG["jonglage"], 1000), "interieur": D(IMG["interieur"], 1000),
+    "grand1": D(IMG["grand1"], 1000),
+} + cta_band("On prépare votre", "surprise ?", "Organiser notre EVJF / EVJG", WA_EVJF)
+
+pages["evjf-evjg.html"] = head(
+    "EVJF & EVJG à La Réunion : idée originale en 2CV avec chauffeur | Une 2CV, mille histoires",
+    "Idée d'EVJF ou d'EVJG originale à La Réunion : virée en 2CV de collection avec chauffeur, jeu de piste et chasse au trésor sur mesure, jusqu'à 6 personnes avec les deux voitures.",
+    "/evjf-evjg", evjf_jsonld, og_img=D(IMG["champagne"], 1200)) + evjf_body + footer()
+
 # ============================================================ ROBOTS / SITEMAP
 robots = "User-agent: *\nAllow: /\nSitemap: %s/sitemap.xml\n" % DOMAIN
-urls = ["/", "/mariage", "/balades", "/shooting-evenements", "/rosalie-et-soizig", "/faq", "/contact"]
+urls = ["/", "/mariage", "/evjf-evjg", "/balades", "/shooting-evenements", "/rosalie-et-soizig", "/faq", "/contact"]
 sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + \
     "".join("  <url><loc>%s%s</loc></url>\n" % (DOMAIN, u) for u in urls) + "</urlset>\n"
 
@@ -841,16 +945,17 @@ llms = """# Une 2CV, mille histoires
 - Deux voitures : Rosalie (Citroën 2CV blanche, 1983, voiture de famille restaurée) et Soizig (Citroën 2CV bleue et blanche, 1990).
 - Chauffeur : Jonathan, artiste jongleur et danseur, chauffeur VTC agréé.
 - Zone : toute l'île de La Réunion — base à Saint-Leu (97436).
-- Capacité : jusqu'à 3 passagers par voiture ; les deux 2CV peuvent rouler ensemble.
+- Capacité : 3 passagers par voiture en plus du chauffeur ; les deux 2CV peuvent rouler ensemble, soit jusqu'à 6 personnes.
 - Particularité : toit panoramique ouvert — les mariés peuvent faire le trajet debout.
-- Tarifs : balades à partir de 90 € (coucher de soleil & apéro), mariages à partir de 350 € (formule simple 2 h) ; proposition sur mesure via WhatsApp.
+- Tarifs mariage indicatifs par zone : Ouest dès 350 €, Sud et Nord dès 450 €, Est dès 550 € (la durée et les options font varier). Balades dès 90 € (coucher de soleil & apéro).
 - Contact : WhatsApp +262 693 82 81 08 · asso.collectif.ensemble@gmail.com
 - Structure : association Collectif Ensemble (SIRET 934 556 036 00010).
 
 ## Pages
 - """ + DOMAIN + """/ : accueil
 - """ + DOMAIN + """/mariage : voiture de mariage 2CV avec chauffeur
-- """ + DOMAIN + """/balades : balades en 2CV (sunset, brunch, tour de l'île, EVJF/EVJG)
+- """ + DOMAIN + """/evjf-evjg : EVJF et EVJG en 2CV (jeu de piste, chasse au trésor, jusqu'à 6 personnes avec les deux voitures)
+- """ + DOMAIN + """/balades : balades en 2CV (sunset, brunch, tour de l'île)
 - """ + DOMAIN + """/shooting-evenements : shootings, tournages, évènements
 - """ + DOMAIN + """/rosalie-et-soizig : les deux voitures et leur histoire
 - """ + DOMAIN + """/faq : questions fréquentes (robe, pluie, hauts, tarifs)
