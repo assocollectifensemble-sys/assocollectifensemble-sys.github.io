@@ -7,6 +7,7 @@
 <meta name="description" content="Contactez Une 2CV, mille histoires : WhatsApp 0693 82 81 08, formulaire ou email. Mariages, balades et shootings en 2CV avec chauffeur sur toute l'île de La Réunion.">
 <link rel="canonical" href="https://une2cvmillehistoires.re/contact">
 
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://une2cvmillehistoires.re/"}, {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://une2cvmillehistoires.re/contact"}]}</script>
 <meta property="og:title" content="Contact — Une 2CV, mille histoires | 2CV avec chauffeur à La Réunion">
 <meta property="og:description" content="Contactez Une 2CV, mille histoires : WhatsApp 0693 82 81 08, formulaire ou email. Mariages, balades et shootings en 2CV avec chauffeur sur toute l'île de La Réunion.">
 <meta property="og:image" content="https://une2cvmillehistoires.re/img/photos/sunset_couple.jpg">
@@ -55,12 +56,12 @@
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://une2cvmillehistoires.re/merci">
       <input type="text" name="_honey" class="cache">
-      <label>Ou par formulaire</label>
-      <input type="text" name="nom" placeholder="Votre prénom & nom" required>
-      <input type="tel" name="telephone" placeholder="Votre téléphone / WhatsApp">
-      <select name="evenement"><option>Type d'événement…</option><option>Mariage</option><option>EVJF / EVJG</option><option>Balade</option><option>Shooting / tournage</option><option>Autre histoire</option></select>
-      <input type="date" name="date" title="Date envisagée">
-      <textarea rows="5" name="message" placeholder="Racontez-moi votre projet : lieu, date, envies…"></textarea>
+      <p class="label-form">Ou par formulaire</p>
+      <label class="sr" for="f-nom">Prénom et nom</label><input id="f-nom" type="text" name="nom" placeholder="Votre prénom & nom" required>
+      <label class="sr" for="f-tel">Téléphone ou WhatsApp</label><input id="f-tel" type="tel" name="telephone" placeholder="Votre téléphone / WhatsApp"><label class="sr" for="f-mail">Adresse email</label><input id="f-mail" type="email" name="email" placeholder="Votre email" required>
+      <label class="sr" for="f-evt">Type d'événement</label><select id="f-evt" name="evenement"><option value="" disabled selected>Type d'événement…</option><option>Mariage</option><option>EVJF / EVJG</option><option>Balade</option><option>Shooting / tournage</option><option>Autre histoire</option></select>
+      <label class="sr" for="f-date">Date envisagée</label><input id="f-date" type="date" name="date" title="Date envisagée">
+      <label class="sr" for="f-msg">Votre message</label><textarea id="f-msg" rows="5" name="message" placeholder="Racontez-moi votre projet : lieu, date, envies…"></textarea>
       <button class="btn btn-brun" type="submit" style="border-radius:0;justify-content:center">Envoyer ma demande</button>
     </form>
   </div>
