@@ -13,10 +13,10 @@
 - Structure : association Collectif Ensemble (SIRET 934 556 036 00010).
 
 ## Pages
-- https://une2cv-mille-histoires.higgsfield.app/ : accueil
-- https://une2cv-mille-histoires.higgsfield.app/mariage : voiture de mariage 2CV avec chauffeur
-- https://une2cv-mille-histoires.higgsfield.app/balades : balades en 2CV (sunset, brunch, tour de l'île, EVJF/EVJG)
-- https://une2cv-mille-histoires.higgsfield.app/shooting-evenements : shootings, tournages, évènements
-- https://une2cv-mille-histoires.higgsfield.app/rosalie-et-soizig : les deux voitures et leur histoire
-- https://une2cv-mille-histoires.higgsfield.app/faq : questions fréquentes (robe, pluie, hauts, tarifs)
-- https://une2cv-mille-histoires.higgsfield.app/contact : contact
+- https://une2cvmillehistoires.re/ : accueil
+- https://une2cvmillehistoires.re/mariage : voiture de mariage 2CV avec chauffeur
+- https://une2cvmillehistoires.re/balades : balades en 2CV (sunset, brunch, tour de l'île, EVJF/EVJG)
+- https://une2cvmillehistoires.re/shooting-evenements : shootings, tournages, évènements
+- https://une2cvmillehistoires.re/rosalie-et-soizig : les deux voitures et leur histoire
+- https://une2cvmillehistoires.re/faq : questions fréquentes (robe, pluie, hauts, tarifs)
+- https://une2cvmillehistoires.re/contact : contact

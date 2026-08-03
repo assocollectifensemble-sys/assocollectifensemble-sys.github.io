@@ -3,7 +3,7 @@
 import os, json
 
 OUT = os.path.dirname(os.path.abspath(__file__))
-DOMAIN = "https://une2cv-mille-histoires.higgsfield.app"  # <- remettre https://une2cvmillehistoires.re le jour de la migration
+DOMAIN = "https://une2cvmillehistoires.re"
 WA = "https://wa.me/262693828108?text=Bonjour%20Jonathan%20!%20Je%20souhaite%20%C3%A9crire%20une%20histoire%20avec%20la%202CV%20%F0%9F%8C%BF"
 WA_MARIAGE = "https://wa.me/262693828108?text=Bonjour%20!%20Nous%20nous%20marions%20et%20la%202CV%20nous%20fait%20r%C3%AAver%20%F0%9F%92%8D"
 WA_BALADE = "https://wa.me/262693828108?text=Bonjour%20Jonathan%20!%20Je%20souhaite%20r%C3%A9server%20une%20balade%20en%202CV%20%F0%9F%8C%BF"
@@ -397,7 +397,7 @@ index_body = navbar(wa=False) + """
       <input type="hidden" name="_subject" value="🌿 Nouvelle demande — Une 2CV, mille histoires">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://une2cv-mille-histoires.higgsfield.app/merci">
+      <input type="hidden" name="_next" value="https://une2cvmillehistoires.re/merci">
       <input type="text" name="_honey" class="cache">
       <label>Ou par formulaire</label>
       <input type="text" name="nom" placeholder="Votre prénom & nom" required>
@@ -772,7 +772,7 @@ contact_body = navbar() + page_hero("sunset_couple", "Le premier chapitre",
       <input type="hidden" name="_subject" value="🌿 Nouvelle demande — Une 2CV, mille histoires">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://une2cv-mille-histoires.higgsfield.app/merci">
+      <input type="hidden" name="_next" value="https://une2cvmillehistoires.re/merci">
       <input type="text" name="_honey" class="cache">
       <label>Ou par formulaire</label>
       <input type="text" name="nom" placeholder="Votre prénom & nom" required>

@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://une2cv-mille-histoires.higgsfield.app/sitemap.xml
+Sitemap: https://une2cvmillehistoires.re/sitemap.xml
