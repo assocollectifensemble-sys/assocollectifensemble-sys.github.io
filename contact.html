@@ -63,21 +63,39 @@
       <input type="text" name="_honey" class="cache">
       <p class="label-form">Ou par formulaire</p>
       <label class="sr" for="f-nom">Prénom et nom</label><input id="f-nom" type="text" name="nom" placeholder="Votre prénom & nom" required>
-      <label class="sr" for="f-tel">Téléphone ou WhatsApp</label><input id="f-tel" type="tel" name="telephone" placeholder="Votre téléphone / WhatsApp"><label class="sr" for="f-mail">Adresse email</label><input id="f-mail" type="email" name="email" placeholder="Votre email" required>
+      <label class="sr" for="f-tel">Téléphone ou WhatsApp (obligatoire)</label><input id="f-tel" type="tel" name="telephone" inputmode="tel" autocomplete="tel" required minlength="9" maxlength="24" pattern="[0-9+ ().\-]{9,24}" title="Indiquez un numéro joignable, par exemple 0692 12 34 56" placeholder="Votre téléphone / WhatsApp *"><p class="aide-form">Un numéro joignable, WhatsApp de préférence — c'est le plus rapide pour vous répondre.</p><label class="sr" for="f-mail">Adresse email</label><input id="f-mail" type="email" name="email" placeholder="Votre email" required>
       <label class="sr" for="f-evt">Type d'événement</label><select id="f-evt" name="evenement"><option value="" disabled selected>Type d'événement…</option><option>Mariage</option><option>EVJF / EVJG</option><option>Balade</option><option>Shooting / tournage</option><option>Autre histoire</option></select>
       <label class="sr" for="f-date">Date envisagée</label><input id="f-date" type="date" name="date" title="Date envisagée">
       <label class="sr" for="f-msg">Votre message</label><textarea id="f-msg" rows="5" name="message" placeholder="Racontez-moi votre projet : lieu, date, envies…"></textarea>
       <button class="btn btn-brun" type="submit" style="border-radius:0;justify-content:center">Envoyer ma demande</button>
     </form>
+    <div id="form-secours" class="secours" hidden>
+      <p><strong>L'envoi n'a pas abouti.</strong> Votre message n'est pas perdu — choisissez une autre voie :</p>
+      <p><a class="secours-mail" href="#">Ouvrir dans ma messagerie</a> · <a href="https://wa.me/262693828108?text=Bonjour%20Jonathan%20!%20Je%20souhaite%20%C3%A9crire%20une%20histoire%20avec%20la%202CV%20%F0%9F%8C%BF">Écrire sur WhatsApp</a> · <a href="tel:+262693828108">0693 82 81 08</a></p>
+    </div>
   </div>
 </section>
 </main>
 <footer>
-  <img class="logo-pied" loading="lazy" decoding="async" src="https://une2cvmillehistoires.re/img/photos/logo.png" alt="Une 2CV, mille histoires" width="700" height="382">
-  <br>Citroën 2CV de collection avec chauffeur VTC agréé — mariages, balades, shootings & évènements — toute l'île de La Réunion (974)
-  <div class="liens-pages"><a href="/mariage">Mariage</a> · <a href="/evjf-evjg">EVJF & EVJG</a> · <a href="/balades">Balades</a> · <a href="/shooting-evenements">Shootings</a> · <a href="/rosalie-et-soizig">Rosalie & Soizig</a> · <a href="/location-2cv-reunion">Location</a> · <a href="/tarifs">Tarifs</a> · <a href="/histoires">Histoires</a> · <a href="/faq">FAQ</a> · <a href="/contact">Contact</a></div>
-  <a href="https://www.instagram.com/une2cv.millehistoires/">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61586545132399">Facebook</a> · <a href="https://wa.me/262693828108?text=Bonjour%20Jonathan%20!%20Je%20souhaite%20%C3%A9crire%20une%20histoire%20avec%20la%202CV%20%F0%9F%8C%BF">WhatsApp</a> · <a href="tel:+262693828108">0693 82 81 08</a><br>
-  Projet porté par l'association Collectif Ensemble — 97436 Saint-Leu, La Réunion · <a href="/mentions-legales">Mentions légales</a>
+  <div class="pied-grille">
+    <div class="pied-marque">
+      <img class="logo-pied" loading="lazy" decoding="async" src="https://une2cvmillehistoires.re/img/photos/logo.png" alt="Une 2CV, mille histoires" width="700" height="382">
+      <p class="pied-baseline">Citroën 2CV de collection avec chauffeur VTC agréé — mariages, balades, shootings &amp; évènements — toute l'île de La Réunion (974).</p>
+    </div>
+    <div class="pied-plan">
+      <p class="pied-titre">Le site</p>
+      <div class="liens-pages"><a href="/mariage">Mariage</a><a href="/evjf-evjg">EVJF &amp; EVJG</a><a href="/balades">Balades</a><a href="/shooting-evenements">Shootings</a><a href="/rosalie-et-soizig">Rosalie &amp; Soizig</a><a href="/location-2cv-reunion">Location</a><a href="/tarifs">Tarifs</a><a href="/histoires">Histoires</a><a href="/faq">FAQ</a><a href="/contact">Contact</a></div>
+    </div>
+    <div class="pied-contact">
+      <p class="pied-titre">Écrire, appeler</p>
+      <a class="pied-tel" href="tel:+262693828108">0693 82 81 08</a>
+      <div class="pied-reseaux"><a href="https://wa.me/262693828108?text=Bonjour%20Jonathan%20!%20Je%20souhaite%20%C3%A9crire%20une%20histoire%20avec%20la%202CV%20%F0%9F%8C%BF">WhatsApp</a> · <a href="https://www.instagram.com/une2cv.millehistoires/">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61586545132399">Facebook</a></div>
+    </div>
+    <div class="pied-legal">
+      <span>Projet porté par l'association Collectif Ensemble — 97436 Saint-Leu, La Réunion</span>
+      <a href="/mentions-legales">Mentions légales</a>
+    </div>
+  </div>
 </footer>
 <script src="/assets/site.js"></script>
 </body>
