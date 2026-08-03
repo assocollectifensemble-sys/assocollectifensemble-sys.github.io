@@ -289,3 +289,6 @@ h1.hero-mots{margin:0;font-weight:400;font-family:Jost,sans-serif}
 .forfait .zone{display:block;letter-spacing:.28em;text-transform:uppercase;font-size:11.5px;color:var(--terre);margin-bottom:10px}
 .forfait .prix{display:block;font-family:'Playfair Display',serif;font-size:30px;color:var(--brun);margin-bottom:12px}
 .forfait p{font-weight:300;font-size:14.5px;line-height:1.7;color:#5a4f43;margin:0}
+
+.histoire .prose h3{color:var(--terre);font-family:'Playfair Display',serif;font-size:clamp(19px,2.6vw,24px);margin:34px 0 12px}
+.histoire .sous-note{text-align:center;font-size:13.5px;color:#8b7a67;margin-top:22px}
