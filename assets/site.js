@@ -1,27 +1,11 @@
 /* Une 2CV, mille histoires — scripts communs */
 (function(){
-  var ic=document.getElementById('intro-cine');
-  if(ic){
-    var vu=false; try{vu=!!sessionStorage.getItem('introVue');}catch(e){}
-    if(vu){ ic.parentNode.removeChild(ic); }
-    else{
-      document.documentElement.classList.add('intro-lock');
-      var iv=document.getElementById('intro-vid');
-      var fini=false;
-      var fin=function(){ if(fini)return; fini=true;
-        try{sessionStorage.setItem('introVue','1');}catch(e){}
-        ic.classList.add('fini');
-        document.documentElement.classList.remove('intro-lock');
-        setTimeout(function(){ if(ic&&ic.parentNode)ic.parentNode.removeChild(ic); },1000); };
-      iv.addEventListener('ended',fin);
-      iv.addEventListener('error',fin);
-      ic.querySelector('.intro-passer').addEventListener('click',fin);
-      var p=iv.play(); if(p&&p.catch){p.catch(fin);}
-      setTimeout(fin,9000);
-    }
-  }
-
   var nav=document.getElementById('nav');
+  var bg=document.getElementById('burger'), ul=document.querySelector('nav ul');
+  if(bg&&ul){
+    bg.addEventListener('click',function(){var o=ul.classList.toggle('ouvert');bg.setAttribute('aria-expanded',o?'true':'false');});
+    ul.addEventListener('click',function(e){if(e.target.closest('a')){ul.classList.remove('ouvert');bg.setAttribute('aria-expanded','false');}});
+  }
   function onScroll(){ if(nav) nav.classList.toggle('scrolled', scrollY>60); }
   addEventListener('scroll', onScroll); onScroll();
 
@@ -46,13 +30,8 @@
   var btnSon=document.getElementById('btn-son');
   if(audio&&btnSon){
     audio.volume=0.35;
-    var musicOn=true;
-    function tryPlay(){ if(musicOn && audio.paused){ audio.play().catch(function(){}); } }
-    tryPlay();
-    document.addEventListener('DOMContentLoaded', tryPlay);
-    addEventListener('load', tryPlay);
-    var essais=0, relance=setInterval(function(){ essais++; if(!audio.paused||essais>16){clearInterval(relance);return;} tryPlay(); },600);
-    ['pointerdown','touchstart','keydown','scroll','click'].forEach(function(ev){ addEventListener(ev, tryPlay, {passive:true}); });
+    var musicOn=false;
+    btnSon.classList.add('off');
     btnSon.addEventListener('click', function(e){
       e.stopPropagation();
       musicOn=!musicOn;
