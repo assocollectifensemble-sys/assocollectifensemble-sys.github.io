@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Générateur du site « Une 2CV, mille histoires »."""
-import os, json
+import os, json, re
 
 OUT = os.path.dirname(os.path.abspath(__file__))
 DOMAIN = "https://une2cvmillehistoires.re"
@@ -10,7 +10,20 @@ WA_BALADE = "https://wa.me/262693828108?text=Bonjour%20Jonathan%20!%20Je%20souha
 WA_EVJF = "https://wa.me/262693828108?text=Bonjour%20!%20On%20pr%C3%A9pare%20un%20EVJF%2FEVJG%20et%20la%202CV%20nous%20tente%20%F0%9F%A5%82"
 WA_SHOOT = "https://wa.me/262693828108?text=Bonjour%20!%20J%27ai%20un%20projet%20de%20shooting%2Fanimation%20avec%20la%202CV%20%F0%9F%93%B8"
 
-D = lambda i, w=1200: "https://lh3.googleusercontent.com/d/%s=w%d" % (i, w)
+DIMS = {'champagne': (833, 1400), 'coffre': (960, 1280), 'couple_rosalie': (1080, 734), 'cover': (1400, 594), 'creole': (1080, 1012), 'debout1': (904, 1400), 'debout2': (630, 1400), 'debout_mini': (1400, 1151), 'eglise': (1080, 965), 'grand1': (1400, 1054), 'grand2': (1400, 1054), 'homme_rosalie': (1400, 933), 'interieur': (1050, 1400), 'jonathan': (933, 1400), 'jonglage': (1152, 896), 'logo': (700, 382), 'rosalie': (1080, 715), 'rosalie_deco': (1003, 832), 'shoot_couple': (823, 1400), 'shooting_nb': (1257, 838), 'slackline': (1400, 933), 'soizig': (1001, 828), 'sunset_couple': (1080, 1001), 'sunset_soizig': (1152, 896)}
+ID2NOM = {}
+def D(i, w=1200):
+    n = ID2NOM[i]
+    return DOMAIN + "/img/photos/" + n + (".png" if n == "logo" else ".jpg")
+def finaliser(html):
+    def dim(m):
+        t = m.group(0)
+        if "width=" in t: return t
+        sm = re.search(r'src="[^"]*/img/photos/([a-z0-9_]+)\.(?:jpg|png)"', t)
+        if not sm or sm.group(1) not in DIMS: return t
+        w, h = DIMS[sm.group(1)]
+        return t[:-1] + ' width="%d" height="%d">' % (w, h)
+    return re.sub(r"<img [^>]*>", dim, html)
 IMG = {
     "cover":      "1NjNyYuacmAvG1c_-7PBwufJfvmw9mf7S",
     "logo":       "1lu2qT2IH4eq5LVziqZFny9bxDXRXNJuF",
@@ -37,6 +50,8 @@ IMG = {
     "debout_mini":"1rNPrHVkCwENVXc-kXynArG30OcUAsp7P",
     "jonglage":   "1rD3VKtFJIc4PnzJsqTK1lW7seBVADcqN",
 }
+
+ID2NOM.update({v: k for k, v in IMG.items()})
 
 WSVG = '<svg viewBox="0 0 24 24" class="wa-ico"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>'
 
@@ -68,8 +83,8 @@ def head(title, desc, path, jsonld=None, noindex=False, og_img=None):
 <link rel="icon" type="image/png" href="%s">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://lh3.googleusercontent.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/img/photos/cover.jpg" fetchpriority="high">
 <link rel="stylesheet" href="/assets/style.css">
 %s
 </head>
@@ -1065,6 +1080,7 @@ with open(os.path.join(OUT, "llms.txt"), "w") as f: f.write(llms)
 with open(os.path.join(OUT, "robots.txt"), "w") as f: f.write(robots)
 with open(os.path.join(OUT, "sitemap.xml"), "w") as f: f.write(sitemap)
 for name, html in pages.items():
+    html = finaliser(html)
     with open(os.path.join(OUT, name), "w") as f: f.write(html)
     print("OK", name, len(html))
 print("Terminé.")
