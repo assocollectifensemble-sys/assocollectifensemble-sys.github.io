@@ -464,3 +464,7 @@ h1.hero-mots{margin:0;font-weight:400;font-family:Jost,sans-serif}
 .tableau tbody th{font-family:'Playfair Display',serif;font-weight:600;color:var(--brun);font-size:17px}
 .tableau .prix-cell{font-family:'Playfair Display',serif;font-size:20px;color:var(--terre);white-space:nowrap}
 @media(max-width:640px){.tableau th,.tableau td{padding:12px 10px;font-size:14px}.tableau .prix-cell{font-size:17px}}
+
+.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{position:fixed;left:12px;top:12px;width:auto;height:auto;z-index:9999;background:var(--blanc);color:var(--brun);padding:12px 20px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.18);font-family:'Jost',sans-serif;font-size:.95rem}
+main{display:block}
