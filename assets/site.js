@@ -55,7 +55,6 @@
   var btnSon=document.getElementById('btn-son');
   if(audio&&btnSon){
     var VOL=0.32, musicOn=false, coupee=false, minuteur=null;
-    try{ coupee = sessionStorage.getItem('2cv-son')==='off'; }catch(e){}
     audio.volume=0;
     btnSon.classList.add('off');
     function fondu(vers,duree){
@@ -76,19 +75,19 @@
       btnSon.setAttribute('aria-label','Couper la musique');
       fondu(VOL,2200); retirerGestes();
     }
-    var gestes=['pointerdown','touchstart','keydown','wheel','scroll'];
+    var gestes=['touchend','click','pointerup','pointerdown','touchstart','keydown','wheel','scroll'];
     function surGeste(){ if(!musicOn&&!coupee) allumer(); }
     function retirerGestes(){ gestes.forEach(function(g){ removeEventListener(g,surGeste); }); }
-    if(!coupee) gestes.forEach(function(g){ addEventListener(g,surGeste,{passive:true}); });
+    gestes.forEach(function(g){ addEventListener(g,surGeste,{passive:true}); });
     btnSon.addEventListener('click', function(e){
       e.stopPropagation();
       if(musicOn){
         musicOn=false; coupee=true; retirerGestes();
-        try{ sessionStorage.setItem('2cv-son','off'); }catch(err){}
         btnSon.classList.add('off'); btnSon.setAttribute('aria-label','Écouter la musique');
         fondu(0,500);
       } else {
-        coupee=false; try{ sessionStorage.removeItem('2cv-son'); }catch(err){}
+        coupee=false;
+        gestes.forEach(function(g){ addEventListener(g,surGeste,{passive:true}); });
         allumer();
       }
     });
