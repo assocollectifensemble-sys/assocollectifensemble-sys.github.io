@@ -200,7 +200,9 @@ nav.scrolled .burger span,nav.opaque .burger span{background:var(--encre)}
 .wa-float:hover{transform:scale(1.1)}
 .wa-float svg{width:32px;height:32px;fill:#fff}
 @keyframes pulseWA{0%,100%{box-shadow:0 10px 30px rgba(37,211,102,.5)}50%{box-shadow:0 10px 30px rgba(37,211,102,.5),0 0 0 14px rgba(37,211,102,.12)}}
-.wa-float.cache-float{opacity:0;pointer-events:none;transform:scale(.6)}
+.wa-float{transition:opacity .5s ease, transform .5s cubic-bezier(.34,1.4,.64,1)}
+.wa-float.cache-float,.wa-float.pas-encore{opacity:0;pointer-events:none;transform:scale(.55) translateY(16px)}
+.wa-float.pas-encore{animation:none}
 
 /* ============ HERO ACCUEIL ============ */
 header.hero{position:relative;height:100svh;display:flex;flex-direction:column;background:var(--creme)}

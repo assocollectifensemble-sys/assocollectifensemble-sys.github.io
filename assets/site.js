@@ -28,9 +28,20 @@
 
   var mq=document.getElementById('mq'); if(mq){ mq.innerHTML+=mq.innerHTML; }
 
-  /* masque la bulle WhatsApp flottante quand un gros bouton WhatsApp est visible */
+  /* bulle WhatsApp : absente à l'arrivée, elle apparaît quand on atteint les prestations,
+     et s'efface quand un grand bouton WhatsApp est déjà à l'écran */
   var waFloat=document.querySelector('.wa-float');
   if(waFloat){
+    var declencheur=document.getElementById('prestations');
+    if(declencheur&&'IntersectionObserver' in window){
+      waFloat.classList.add('pas-encore');
+      var ioApparition=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(e.isIntersecting){ waFloat.classList.remove('pas-encore'); ioApparition.disconnect(); }
+        });
+      },{rootMargin:'0px 0px -18% 0px'});
+      ioApparition.observe(declencheur);
+    }
     var visibles=0;
     var ioWa=new IntersectionObserver(function(es){
       es.forEach(function(e){ visibles+=e.isIntersecting?1:-1; });
@@ -43,16 +54,46 @@
   var audio=document.getElementById('musique');
   var btnSon=document.getElementById('btn-son');
   if(audio&&btnSon){
-    audio.volume=0.35;
-    var musicOn=false;
+    var VOL=0.32, musicOn=false, coupee=false, minuteur=null;
+    try{ coupee = sessionStorage.getItem('2cv-son')==='off'; }catch(e){}
+    audio.volume=0;
     btnSon.classList.add('off');
+    function fondu(vers,duree){
+      clearInterval(minuteur);
+      var depart=audio.volume, t0=Date.now();
+      minuteur=setInterval(function(){
+        var k=Math.min(1,(Date.now()-t0)/duree);
+        audio.volume=depart+(vers-depart)*k;
+        if(k>=1){ clearInterval(minuteur); if(vers===0) audio.pause(); }
+      },40);
+    }
+    function allumer(){
+      var p=audio.play();
+      if(p&&p.then){ p.then(reussi).catch(function(){}); } else { reussi(); }
+    }
+    function reussi(){
+      musicOn=true; btnSon.classList.remove('off');
+      btnSon.setAttribute('aria-label','Couper la musique');
+      fondu(VOL,2200); retirerGestes();
+    }
+    var gestes=['pointerdown','touchstart','keydown','wheel','scroll'];
+    function surGeste(){ if(!musicOn&&!coupee) allumer(); }
+    function retirerGestes(){ gestes.forEach(function(g){ removeEventListener(g,surGeste); }); }
+    if(!coupee) gestes.forEach(function(g){ addEventListener(g,surGeste,{passive:true}); });
     btnSon.addEventListener('click', function(e){
       e.stopPropagation();
-      musicOn=!musicOn;
-      if(musicOn){ audio.play().catch(function(){}); btnSon.classList.remove('off'); }
-      else { audio.pause(); btnSon.classList.add('off'); }
+      if(musicOn){
+        musicOn=false; coupee=true; retirerGestes();
+        try{ sessionStorage.setItem('2cv-son','off'); }catch(err){}
+        btnSon.classList.add('off'); btnSon.setAttribute('aria-label','Écouter la musique');
+        fondu(0,500);
+      } else {
+        coupee=false; try{ sessionStorage.removeItem('2cv-son'); }catch(err){}
+        allumer();
+      }
     });
   }
+
 })();
 /* ---- formulaires : téléphone obligatoire + envoi résistant aux pannes ---- */
 (function(){
