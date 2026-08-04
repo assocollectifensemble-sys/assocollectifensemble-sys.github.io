@@ -540,3 +540,25 @@ footer .liens-pages a{margin:0}
   font-size:14px;line-height:1.75;font-weight:300;color:#6b5b4a}
 .secours strong{color:var(--brun);font-weight:500}
 .secours a{color:var(--terre);text-decoration:underline;text-underline-offset:3px}
+/* ============ MENU MOBILE — correction du panneau ============ */
+/* Bug : nav.scrolled porte un backdrop-filter, ce qui fait de <nav> le bloc
+   conteneur des enfants en position:fixed. Le panneau du menu se repliait donc
+   dans la barre de 72 px dès qu'on avait scrollé. On neutralise le filtre
+   pendant l'ouverture. */
+nav.menu-ouvert{background:transparent !important;-webkit-backdrop-filter:none !important;
+  backdrop-filter:none !important;box-shadow:none !important;z-index:70}
+nav.menu-ouvert:after{content:"";position:fixed;inset:0;z-index:55;
+  background:rgba(26,20,15,.42);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);
+  animation:voileMenu .3s ease forwards}
+@keyframes voileMenu{from{opacity:0}to{opacity:1}}
+nav.menu-ouvert .logo-lien img{filter:brightness(0) invert(1) !important}
+html.menu-ouvert,html.menu-ouvert body{overflow:hidden}
+@media(max-width:1080px){
+  nav ul{background:var(--creme);-webkit-backdrop-filter:none;backdrop-filter:none;
+    padding:0 34px;gap:22px;overflow-y:auto}
+  nav ul.ouvert{box-shadow:-16px 0 60px rgba(26,20,15,.35)}
+  nav ul li{width:100%}
+  nav ul a{display:block;padding:4px 0}
+  nav ul li:not(.keep) a{border-bottom:1px solid #ece2d4;padding-bottom:14px}
+  nav ul .nav-wa{justify-content:center;width:100%;margin-top:6px}
+}
