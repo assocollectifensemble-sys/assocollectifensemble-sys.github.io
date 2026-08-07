@@ -155,6 +155,8 @@ Une palette de terre et de papier, tirée de la carrosserie, du cuir et du sable
 
 **La Règle du Trois Cent.** Le texte courant est en graisse 300, jamais 400. C'est ce qui donne au site son air de page imprimée plutôt que d'interface.
 
+**La Règle du Tiret Rare.** Le tiret cadratin ne sert qu'à une vraie incise ou à un étiquetage (`Mariage — Ouest`). Il ne sert jamais à accrocher une chute de phrase, parce que répétée quinze fois sur une page cette cadence devient la signature d'un texte écrit par une machine, ce que ce site n'a pas le droit de laisser croire. Une chute se ponctue au deux-points quand elle explique, à la virgule quand elle prolonge, au point quand elle frappe. Une incise complète passe entre parenthèses.
+
 ## Layout
 
 Grilles fluides en `repeat(auto-fit, minmax(...))`, jamais de nombre de colonnes figé : les cartes se réorganisent seules entre 1 et 4 colonnes. Les largeurs maximales sont graduées selon la densité du contenu — 1150 px pour les grilles de prestations, 1080 px pour les blocs image-texte, 760 px pour le texte courant, 640 px pour les chapôs centrés.
