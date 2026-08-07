@@ -1,5 +1,11 @@
 # Ce que je ne peux pas faire — à toi de jouer
 
+> **Mise à jour du 7 août, après-midi.** Deux changements depuis la première version :
+> - **Le point 2 (snippet) n'est plus urgent** : j'ai trouvé un contournement, j'ai écrit les 10 titres SEO et les 10 métas moi-même. Tu n'as plus rien à copier-coller.
+> - **Le point 3 change de priorité** : ce n'est pas la FAQ en double le plus important, c'est le **schema `Course` manquant** sur la page PYM. Explication dans `05-tutos-mobile.md`.
+>
+> 👉 **Pour les tutos pas-à-pas, y compris ce qui est faisable depuis le téléphone : lis `05-tutos-mobile.md`.** Ce fichier-ci n'est que la vue d'ensemble.
+
 Rangé par rentabilité. Le n°1 vaut plus que tous les autres réunis.
 
 ---

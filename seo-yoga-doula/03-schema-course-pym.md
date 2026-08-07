@@ -49,11 +49,19 @@ Le schema `Course` est ce qui permet à Google — et surtout aux IA type ChatGP
 
 ---
 
-## Le vrai chantier : les 4 `FAQPage` concurrents
+## Les 4 `FAQPage` concurrents — à corriger, mais moins urgent que je ne l'ai dit
 
-C'est plus important que le `Course`. Quatre FAQ déclarées sur une même page, Google n'en retient aucune — et on perd les 16 questions/réponses qui pourraient remonter en résultats enrichis.
+**Correction par rapport à ma première analyse :** j'avais classé ce point en priorité n°1. Après vérification du code source, c'est moins grave que je ne le pensais. Depuis 2023, Google n'affiche plus les résultats enrichis FAQ que pour les sites gouvernementaux et de santé publique — donc ces 16 questions n'auraient de toute façon pas remonté en résultats enrichis. **La vraie priorité, c'est le `Course` manquant**, qui lui produit encore des résultats enrichis et surtout qui est lu par les IA.
 
-**Origine probable :** les widgets « Accordéon / FAQ » d'Elementor et d'ElementsKit émettent chacun leur propre schema FAQ, en plus de celui de Rank Math.
+Cela dit, quatre `FAQPage` sur une même page reste une déclaration incohérente, et ça brouille la lecture par les modèles d'IA. À corriger quand tu seras devant l'ordinateur, pas en urgence.
+
+**Origine confirmée (analyse du code source) :** un seul bloc vient de Rank Math (il porte la classe `rank-math-schema` et contient Organization, WebSite, WebPage, Article, Person, BreadcrumbList — tout va bien de ce côté). Les **4 blocs `FAQPage` sont émis par 4 widgets accordéon distincts** de la section « Foire aux questions », sans classe identifiante — typiquement Elementor Pro ou ElementsKit.
+
+Les 4 groupes sont repérables par leur première question :
+1. « Je n'ai jamais suivi de formation de yoga : puis-je suivre le programme Yoga Maternité… »
+2. « Quand commence et quand se termine le programme Yoga Maternité ? »
+3. « Quels sont les frais annexes du programme Yoga Maternité ? »
+4. « Comment obtenir mon certificat d'accomplissement ? »
 
 **Ce qu'il faut faire (dans Elementor, donc côté toi ou Fabien) :**
 
