@@ -1,3 +1,12 @@
 User-agent: *
 Allow: /
+
+# Documents de travail versionnés avec le site : ils sont servis par GitHub Pages
+# puisque .nojekyll publie aussi les fichiers commençant par un point.
+# Rien de confidentiel, mais ils n'ont pas à remonter dans les résultats de recherche.
+Disallow: /DESIGN.md
+Disallow: /AUDIT.md
+Disallow: /.claude/
+Disallow: /.impeccable/
+
 Sitemap: https://une2cvmillehistoires.re/sitemap.xml
