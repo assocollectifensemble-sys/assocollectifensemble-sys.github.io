@@ -1,3 +1,5 @@
+> ⚠️ **CORRECTION DU 7 AOÛT, EN SOIRÉE.** En creusant pour appliquer ce tuto, j'ai vérifié le HTML brut réel de l'accueil et de la page Formation Yoga Doula (pas une extraction IA cette fois, un comptage direct des balises `<h1>`). **Verdict : chaque page n'a qu'UN SEUL H1** (« Deviens DOULA »). Mon chiffre de « 9 » et « 8 » H1 venait d'une extraction par IA qui avait mal classé des titres de section (H2) comme des H1 — j'ai vérifié un exemple précis (« Foire aux questions ») et c'est bien un H2 dans les données réelles. **Il n'y a donc rien à corriger sur ces deux pages.** Rangez ce tuto — il ne s'applique pas comme prévu. Détail dans le message de la session.
+
 # Tuto : les titres H1 (et pourquoi il n'en faut qu'un)
 
 ⏱️ 30-45 min · 💻 ordinateur uniquement (Elementor)
