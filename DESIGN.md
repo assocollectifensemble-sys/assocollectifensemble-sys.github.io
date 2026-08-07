@@ -7,11 +7,13 @@ colors:
   sable: "#f1eae0"
   nude: "#c9a98d"
   terre: "#a97e5f"
+  terre-lien: "#8a6244"
   brun: "#453930"
   encre: "#3a3129"
   sauge: "#8a9a83"
-  wa: "#25d366"
-  wa-fonce: "#128c4a"
+  vert-note: "#4c6b53"
+  wa: "#157f45"
+  wa-fonce: "#0f6437"
 typography:
   script:
     fontFamily: "Pinyon Script, cursive"
@@ -107,12 +109,14 @@ La densité est basse et assumée. Les sections respirent (34 à 60 px de goutti
 Une palette de terre et de papier, tirée de la carrosserie, du cuir et du sable, à laquelle se greffe un seul vert vif fonctionnel.
 
 ### Primary
-- **Terre Cuite Patinée** (`{colors.terre}`) : l'accent chaud du site. Liens de survol, filets, contours de boutons secondaires, titres de niveau trois dans les récits. C'est la couleur de la 2CV vieillie au soleil.
-- **Nude Sable** (`{colors.nude}`) : la version claire du même accent. Bordures, encadrements, soulignements. Elle marque sans jamais crier.
+- **Terre Cuite Patinée** (`{colors.terre}`) : l'accent chaud du site, en usage **décoratif uniquement**. Filets, encadrements, contours de boutons, chiffres décoratifs, survol de la navigation transparente. C'est la couleur de la 2CV vieillie au soleil.
+- **Terre Lisible** (`{colors.terre-lien}`) : la version assombrie de la précédente, réservée au **texte**. Liens dans le corps de texte, en-têtes de tableau, survol de la navigation opaque. Même famille chromatique, contraste suffisant.
+- **Nude Sable** (`{colors.nude}`) : la version claire de l'accent. Bordures, encadrements, soulignements. Jamais du texte.
 
 ### Secondary
-- **Vert WhatsApp** (`{colors.wa}`) : strictement fonctionnel. Le seul vert du site, réservé au bouton de contact et à la bulle flottante. Sa version foncée (`{colors.wa-fonce}`) ne sert qu'au survol.
+- **Vert WhatsApp Profond** (`{colors.wa}`) : strictement fonctionnel. Le seul vert saturé du site, réservé au bouton de contact et à la bulle flottante. Sa version foncée (`{colors.wa-fonce}`) ne sert qu'au survol. Ce n'est pas le `#25d366` officiel de WhatsApp : celui-ci ne donne que 1,98:1 avec du blanc, illisible en plein soleil. L'icône porte la reconnaissance de la marque, la couleur porte la lisibilité.
 - **Sauge** (`{colors.sauge}`) : accent végétal rare, pour les touches secondaires qui ne doivent pas devenir des appels à l'action.
+- **Vert Note** (`{colors.vert-note}`) : le texte secondaire posé sur la carte WhatsApp de la page contact, dont le fond est un dégradé vert pâle. Seul endroit où il apparaît.
 
 ### Neutral
 - **Papier Crème** (`{colors.creme}`) : le fond dominant des sections de contenu. C'est la page du carnet.
@@ -126,6 +130,8 @@ Une palette de terre et de papier, tirée de la carrosserie, du cuir et du sable
 **La Règle du Vert Unique.** Le vert WhatsApp est la seule couleur saturée du site. Elle ne désigne qu'une chose : écrire à Jonathan. Aucun titre, aucun filet, aucune icône décorative n'a le droit de la porter. Sa rareté est ce qui la rend efficace.
 
 **La Règle du Papier.** Aucune grande surface n'est en blanc pur. Le blanc est un matériau de carte posée sur du papier, pas un fond de page. Si une section paraît vide et froide, le correctif est le crème, pas une bordure.
+
+**La Règle des Deux Terres.** `{colors.terre}` dessine, `{colors.terre-lien}` se lit. Un filet, un cadre, un chiffre décoratif prennent la première ; dès qu'il s'agit d'un mot que quelqu'un doit déchiffrer, c'est la seconde. Cette paire existe parce que le terre d'origine plafonne à 3,37:1 sur le crème.
 
 ## Typography
 

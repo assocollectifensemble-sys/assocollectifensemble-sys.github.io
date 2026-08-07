@@ -145,7 +145,13 @@
 
 :root{
   --blanc:#ffffff; --creme:#faf7f2; --sable:#f1eae0; --nude:#c9a98d;
-  --terre:#a97e5f; --brun:#453930; --encre:#3a3129; --sauge:#8a9a83; --wa:#25d366; --wa-fonce:#128c4a;
+  --terre:#a97e5f; --brun:#453930; --encre:#3a3129; --sauge:#8a9a83;
+  /* --terre sert d'accent decoratif (filets, cadres) : 3.37:1 sur creme, insuffisant pour du
+     texte. --terre-lien est sa version lisible (5.02:1 sur creme, 4.50:1 sur sable). */
+  --terre-lien:#8a6244;
+  /* Vert WhatsApp assombri : le #25d366 de la marque ne donne que 1.98:1 avec du blanc,
+     illisible au soleil comme pour un daltonien. #157f45 monte a 5.06:1 en restant identifiable. */
+  --wa:#157f45; --wa-fonce:#0f6437;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -165,6 +171,9 @@ nav ul{display:flex;gap:clamp(8px,2vw,24px);list-style:none;align-items:center}
 nav a{color:#fff;text-decoration:none;font-size:13px;letter-spacing:.11em;text-transform:uppercase;transition:color .3s;text-shadow:0 1px 8px rgba(0,0,0,.4)}
 nav.scrolled a,nav.opaque a{color:var(--encre);text-shadow:none}
 nav a:hover{color:var(--nude)}
+/* Sur la barre transparente le nude se detache d'une photo sombre ; une fois la barre opaque
+   il tombe a 2.2:1 sur le creme. Le survol y passe donc sur la version lisible du terre. */
+nav.scrolled a:hover,nav.opaque a:hover{color:var(--terre-lien)}
 nav a.actif{color:var(--terre)}
 .nav-wa{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:#fff !important;padding:9px 18px;border-radius:30px;font-weight:500;text-shadow:none !important}
 .nav-wa:hover{background:var(--wa-fonce)}
@@ -187,7 +196,7 @@ nav.scrolled .burger span,nav.opaque .burger span{background:var(--encre)}
 /* ============ BOUTONS / FLOTTANTS ============ */
 .btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-size:14px;letter-spacing:.12em;text-transform:uppercase;padding:14px 28px;border-radius:40px;transition:.3s;font-weight:500;border:none;cursor:pointer;font-family:'Jost'}
 .btn:hover{transform:translateY(-3px)}
-.btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 34px rgba(37,211,102,.4)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 34px rgba(21,127,69,.34)}
 .btn-wa:hover{background:var(--wa-fonce)}
 .btn-ligne{border:1.5px solid rgba(255,255,255,.85);color:#fff;backdrop-filter:blur(3px)}
 .btn-ligne:hover{background:rgba(255,255,255,.16)}
@@ -196,10 +205,10 @@ nav.scrolled .burger span,nav.opaque .burger span{background:var(--encre)}
 .sound{position:fixed;bottom:24px;left:20px;z-index:48;width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.95);border:1px solid #e6ded2;font-size:23px;cursor:pointer;box-shadow:0 6px 22px rgba(58,49,41,.25);transition:.3s;display:flex;align-items:center;justify-content:center}
 .sound:hover{transform:scale(1.08)}
 .sound.off{opacity:.55;filter:grayscale(1)}
-.wa-float{position:fixed;bottom:22px;right:20px;z-index:48;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(37,211,102,.5);animation:pulseWA 2.6s infinite;transition:transform .3s}
+.wa-float{position:fixed;bottom:22px;right:20px;z-index:48;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(21,127,69,.4);animation:pulseWA 2.6s infinite;transition:transform .3s}
 .wa-float:hover{transform:scale(1.1)}
 .wa-float svg{width:32px;height:32px;fill:#fff}
-@keyframes pulseWA{0%,100%{box-shadow:0 10px 30px rgba(37,211,102,.5)}50%{box-shadow:0 10px 30px rgba(37,211,102,.5),0 0 0 14px rgba(37,211,102,.12)}}
+@keyframes pulseWA{0%,100%{box-shadow:0 10px 30px rgba(21,127,69,.4)}50%{box-shadow:0 10px 30px rgba(21,127,69,.4),0 0 0 14px rgba(21,127,69,.14)}}
 .wa-float{transition:opacity .5s ease, transform .5s cubic-bezier(.34,1.4,.64,1)}
 .wa-float.cache-float,.wa-float.pas-encore{opacity:0;pointer-events:none;transform:scale(.55) translateY(16px)}
 .wa-float.pas-encore{animation:none}
@@ -392,8 +401,8 @@ section.doux{background:var(--creme)}
 
 /* contact */
 .contact-grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:50px;max-width:1060px;margin:0 auto;align-items:start}
-.wa-carte{background:linear-gradient(160deg,#eaf7ee,#ddf1e3);border:1px solid #bfe4cb;padding:36px 32px;text-align:center;box-shadow:0 16px 44px rgba(37,211,102,.15)}
-.wa-carte .grand-wa{width:74px;height:74px;border-radius:50%;background:var(--wa);display:inline-flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 10px 28px rgba(37,211,102,.4)}
+.wa-carte{background:linear-gradient(160deg,#eaf7ee,#ddf1e3);border:1px solid #bfe4cb;padding:36px 32px;text-align:center;box-shadow:0 16px 44px rgba(21,127,69,.15)}
+.wa-carte .grand-wa{width:74px;height:74px;border-radius:50%;background:var(--wa);display:inline-flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 10px 28px rgba(21,127,69,.34)}
 .wa-carte .grand-wa svg{width:40px;height:40px;fill:#fff}
 .wa-carte h3{font-size:26px;margin-bottom:10px}
 .wa-carte p{font-weight:300;line-height:1.7;color:#3c4a3f;margin-bottom:20px}
@@ -457,10 +466,31 @@ h1.hero-mots{margin:0;font-weight:400;font-family:Jost,sans-serif}
 .tableau table{width:100%;border-collapse:collapse;font-weight:300;font-size:15.5px;color:#5a4f43}
 .tableau caption{caption-side:bottom;padding-top:14px;font-size:13px;color:#8b7a67;text-align:left}
 .tableau th,.tableau td{padding:16px 18px;border-bottom:1px solid #ece2d4;text-align:left;vertical-align:top}
-.tableau thead th{font-family:'Jost',sans-serif;font-weight:500;letter-spacing:.16em;text-transform:uppercase;font-size:11.5px;color:var(--terre);border-bottom:1.5px solid var(--nude)}
+.tableau thead th{font-family:'Jost',sans-serif;font-weight:500;letter-spacing:.16em;text-transform:uppercase;font-size:11.5px;color:var(--terre-lien);border-bottom:1.5px solid var(--nude);white-space:nowrap}
 .tableau tbody th{font-family:'Playfair Display',serif;font-weight:600;color:var(--brun);font-size:17px}
 .tableau .prix-cell{font-family:'Playfair Display',serif;font-size:20px;color:var(--terre);white-space:nowrap}
 @media(max-width:640px){.tableau th,.tableau td{padding:12px 10px;font-size:14px}.tableau .prix-cell{font-size:17px}}
+/* Sous 620px, trois colonnes ecrasent la colonne des zones en un ruban illisible.
+   Chaque ligne devient une fiche, et l'en-tete de colonne repasse en etiquette via data-libelle. */
+@media(max-width:620px){
+  .tableau{overflow-x:visible}
+  /* caption-side ne s'applique plus des que la table quitte display:table ; l'ordre flex
+     remet la note sous les fiches au lieu de la coincer dans une colonne d'une ligne. */
+  .tableau table{display:flex;flex-direction:column;width:100%}
+  .tableau tbody{order:1;display:block;width:100%}
+  .tableau caption{order:2;display:block;width:100%}
+  .tableau tr,.tableau tbody th,.tableau td{display:block;width:100%}
+  .tableau thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+  .tableau tr{background:#fff;border:1px solid #ecdfd0;padding:18px 20px;margin-bottom:14px}
+  .tableau tbody th{border-bottom:none;padding:0 0 10px;font-size:20px;line-height:1.25}
+  .tableau td{border-bottom:none;padding:0}
+  .tableau td+td{margin-top:10px;padding-top:10px;border-top:1px solid #f2e9dc}
+  .tableau td::before{content:attr(data-libelle);display:block;font-family:'Jost',sans-serif;
+    font-weight:500;letter-spacing:.16em;text-transform:uppercase;font-size:10.5px;
+    color:var(--terre-lien);margin-bottom:4px}
+  .tableau .prix-cell{font-size:26px;white-space:normal;color:var(--brun)}
+  .tableau caption{padding-top:4px}
+}
 
 .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
 .skip:focus{position:fixed;left:12px;top:12px;width:auto;height:auto;z-index:9999;background:var(--blanc);color:var(--brun);padding:12px 20px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.18);font-family:'Jost',sans-serif;font-size:.95rem}
@@ -541,7 +571,7 @@ footer .liens-pages a{margin:0}
 .secours{margin-top:18px;padding:18px 20px;background:#fdf3ec;border:1px solid #efd9c6;
   font-size:14px;line-height:1.75;font-weight:300;color:#6b5b4a}
 .secours strong{color:var(--brun);font-weight:500}
-.secours a{color:var(--terre);text-decoration:underline;text-underline-offset:3px}
+.secours a{color:var(--terre-lien);text-decoration:underline;text-underline-offset:3px}
 /* ============ MENU MOBILE — correction du panneau ============ */
 /* Bug : nav.scrolled porte un backdrop-filter, ce qui fait de <nav> le bloc
    conteneur des enfants en position:fixed. Le panneau du menu se repliait donc

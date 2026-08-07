@@ -8,78 +8,249 @@
         "role": "neutral",
         "displayName": "Papier Crème",
         "canonical": "#faf7f2",
-        "tonalRamp": ["#2a2621", "#4a443c", "#6b6257", "#8d8375", "#b0a696", "#d2c9ba", "#e9e2d7", "#faf7f2"]
+        "tonalRamp": [
+          "#2a2621",
+          "#4a443c",
+          "#6b6257",
+          "#8d8375",
+          "#b0a696",
+          "#d2c9ba",
+          "#e9e2d7",
+          "#faf7f2"
+        ]
       },
       "sable": {
         "role": "neutral",
         "displayName": "Sable Clair",
         "canonical": "#f1eae0",
-        "tonalRamp": ["#2b261f", "#4b4438", "#6d6353", "#8f836f", "#b1a48d", "#d1c5ae", "#e4dacb", "#f1eae0"]
+        "tonalRamp": [
+          "#2b261f",
+          "#4b4438",
+          "#6d6353",
+          "#8f836f",
+          "#b1a48d",
+          "#d1c5ae",
+          "#e4dacb",
+          "#f1eae0"
+        ]
       },
       "nude": {
         "role": "primary",
         "displayName": "Nude Sable",
         "canonical": "#c9a98d",
-        "tonalRamp": ["#2e2419", "#4d3c2a", "#6d553b", "#8d6f4e", "#ad8a64", "#c9a98d", "#dcc4ad", "#efe2d4"]
+        "tonalRamp": [
+          "#2e2419",
+          "#4d3c2a",
+          "#6d553b",
+          "#8d6f4e",
+          "#ad8a64",
+          "#c9a98d",
+          "#dcc4ad",
+          "#efe2d4"
+        ]
       },
       "terre": {
         "role": "primary",
         "displayName": "Terre Cuite Patinée",
         "canonical": "#a97e5f",
-        "tonalRamp": ["#2a1d13", "#452f1f", "#61432c", "#7d583a", "#996c49", "#a97e5f", "#c6a184", "#e3cdb8"]
+        "tonalRamp": [
+          "#2a1d13",
+          "#452f1f",
+          "#61432c",
+          "#7d583a",
+          "#996c49",
+          "#a97e5f",
+          "#c6a184",
+          "#e3cdb8"
+        ]
       },
       "brun": {
         "role": "neutral",
         "displayName": "Brun Reliure",
         "canonical": "#453930",
-        "tonalRamp": ["#191410", "#2b231d", "#3a302a", "#453930", "#6a594c", "#907c6b", "#b8a693", "#ded3c6"]
+        "tonalRamp": [
+          "#191410",
+          "#2b231d",
+          "#3a302a",
+          "#453930",
+          "#6a594c",
+          "#907c6b",
+          "#b8a693",
+          "#ded3c6"
+        ]
       },
       "encre": {
         "role": "neutral",
         "displayName": "Encre",
         "canonical": "#3a3129",
-        "tonalRamp": ["#151110", "#252019", "#3a3129", "#544940", "#736558", "#968676", "#bcae9e", "#e2d8cb"]
+        "tonalRamp": [
+          "#151110",
+          "#252019",
+          "#3a3129",
+          "#544940",
+          "#736558",
+          "#968676",
+          "#bcae9e",
+          "#e2d8cb"
+        ]
       },
       "sauge": {
         "role": "tertiary",
         "displayName": "Sauge",
         "canonical": "#8a9a83",
-        "tonalRamp": ["#1c211a", "#2f382c", "#43503e", "#586852", "#6e8067", "#8a9a83", "#adb9a7", "#d1d9cc"]
+        "tonalRamp": [
+          "#1c211a",
+          "#2f382c",
+          "#43503e",
+          "#586852",
+          "#6e8067",
+          "#8a9a83",
+          "#adb9a7",
+          "#d1d9cc"
+        ]
       },
       "wa": {
         "role": "secondary",
-        "displayName": "Vert WhatsApp",
-        "canonical": "#25d366",
-        "tonalRamp": ["#062b13", "#0a4a20", "#0e6b2e", "#128c4a", "#17ad52", "#25d366", "#6ee79c", "#b8f5d0"]
+        "displayName": "Vert WhatsApp Profond",
+        "canonical": "#157f45",
+        "tonalRamp": [
+          "#04180c",
+          "#072a15",
+          "#0a3f1f",
+          "#0f6437",
+          "#157f45",
+          "#2fa763",
+          "#77cd9c",
+          "#c2ebd3"
+        ]
+      },
+      "terre-lien": {
+        "role": "primary",
+        "displayName": "Terre Lisible",
+        "canonical": "#8a6244",
+        "tonalRamp": [
+          "#241a12",
+          "#3b2a1d",
+          "#523a28",
+          "#6e4e35",
+          "#8a6244",
+          "#a97e5f",
+          "#c9a98d",
+          "#e8d8c6"
+        ]
+      },
+      "vert-note": {
+        "role": "tertiary",
+        "displayName": "Vert Note",
+        "canonical": "#4c6b53",
+        "tonalRamp": [
+          "#141c16",
+          "#223026",
+          "#31452f",
+          "#3f583f",
+          "#4c6b53",
+          "#6f8d74",
+          "#9db69f",
+          "#cfdfd2"
+        ]
       }
     },
     "typographyMeta": {
-      "script": { "displayName": "Manuscrite", "purpose": "Phrases de bascule et mots posés sur une photographie. Une seule occurrence visible par écran." },
-      "display": { "displayName": "Titre de page", "purpose": "Le H1, toujours sur photographie, en blanc avec ombre portée." },
-      "headline": { "displayName": "Titre de bloc", "purpose": "Blocs image-texte en deux colonnes." },
-      "title": { "displayName": "Titre courant", "purpose": "H2 dans les textes longs." },
-      "body": { "displayName": "Texte courant", "purpose": "Jost 300, plafonné à 760px de large." },
-      "label": { "displayName": "Étiquette", "purpose": "Boutons, navigation, surtitres. Capitales interlettrées." }
+      "script": {
+        "displayName": "Manuscrite",
+        "purpose": "Phrases de bascule et mots posés sur une photographie. Une seule occurrence visible par écran."
+      },
+      "display": {
+        "displayName": "Titre de page",
+        "purpose": "Le H1, toujours sur photographie, en blanc avec ombre portée."
+      },
+      "headline": {
+        "displayName": "Titre de bloc",
+        "purpose": "Blocs image-texte en deux colonnes."
+      },
+      "title": {
+        "displayName": "Titre courant",
+        "purpose": "H2 dans les textes longs."
+      },
+      "body": {
+        "displayName": "Texte courant",
+        "purpose": "Jost 300, plafonné à 760px de large."
+      },
+      "label": {
+        "displayName": "Étiquette",
+        "purpose": "Boutons, navigation, surtitres. Capitales interlettrées."
+      }
     },
     "shadows": [
-      { "name": "repos", "value": "0 12px 34px rgba(58,49,41,.08)", "purpose": "Cartes de prestation et cadres photo au repos." },
-      { "name": "survol", "value": "0 20px 48px rgba(58,49,41,.15)", "purpose": "La même carte soulevée de 7px au survol." },
-      { "name": "flottant-wa", "value": "0 10px 30px rgba(37,211,102,.5)", "purpose": "Boutons WhatsApp. Seule ombre teintée du site." },
-      { "name": "panneau", "value": "-12px 0 44px rgba(58,49,41,.2)", "purpose": "Menu mobile glissant depuis la droite." }
+      {
+        "name": "repos",
+        "value": "0 12px 34px rgba(58,49,41,.08)",
+        "purpose": "Cartes de prestation et cadres photo au repos."
+      },
+      {
+        "name": "survol",
+        "value": "0 20px 48px rgba(58,49,41,.15)",
+        "purpose": "La même carte soulevée de 7px au survol."
+      },
+      {
+        "name": "flottant-wa",
+        "value": "0 10px 30px rgba(21,127,69,.4)",
+        "purpose": "Boutons WhatsApp. Seule ombre teintée du site."
+      },
+      {
+        "name": "panneau",
+        "value": "-12px 0 44px rgba(58,49,41,.2)",
+        "purpose": "Menu mobile glissant depuis la droite."
+      }
     ],
     "motion": [
-      { "name": "ease-standard", "value": "cubic-bezier(.4,0,.2,1)", "purpose": "Ouverture du menu mobile, transitions d'état." },
-      { "name": "ease-rebond", "value": "cubic-bezier(.34,1.4,.64,1)", "purpose": "Apparition de la bulle WhatsApp flottante." },
-      { "name": "duree-etat", "value": "0.3s", "purpose": "Survol des boutons et des liens." },
-      { "name": "duree-image", "value": "0.8s", "purpose": "Agrandissement d'une image dans son cadre au survol de la carte." },
-      { "name": "reveal", "value": "opacity .9s ease, transform .9s ease", "purpose": "Apparition des blocs au défilement, via IntersectionObserver." }
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(.4,0,.2,1)",
+        "purpose": "Ouverture du menu mobile, transitions d'état."
+      },
+      {
+        "name": "ease-rebond",
+        "value": "cubic-bezier(.34,1.4,.64,1)",
+        "purpose": "Apparition de la bulle WhatsApp flottante."
+      },
+      {
+        "name": "duree-etat",
+        "value": "0.3s",
+        "purpose": "Survol des boutons et des liens."
+      },
+      {
+        "name": "duree-image",
+        "value": "0.8s",
+        "purpose": "Agrandissement d'une image dans son cadre au survol de la carte."
+      },
+      {
+        "name": "reveal",
+        "value": "opacity .9s ease, transform .9s ease",
+        "purpose": "Apparition des blocs au défilement, via IntersectionObserver."
+      }
     ],
     "breakpoints": [
-      { "name": "cartes", "value": "560px" },
-      { "name": "cartes-large", "value": "620px" },
-      { "name": "empilement", "value": "820px" },
-      { "name": "colonnes", "value": "900px" },
-      { "name": "burger", "value": "1080px" }
+      {
+        "name": "cartes",
+        "value": "560px"
+      },
+      {
+        "name": "cartes-large",
+        "value": "620px"
+      },
+      {
+        "name": "empilement",
+        "value": "820px"
+      },
+      {
+        "name": "colonnes",
+        "value": "900px"
+      },
+      {
+        "name": "burger",
+        "value": "1080px"
+      }
     ]
   },
   "components": [
@@ -89,7 +260,7 @@
       "refersTo": "button-whatsapp",
       "description": "L'action par défaut du site. Le seul élément qui porte du vert saturé.",
       "html": "<a class=\"ds-btn ds-btn-wa\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"currentColor\"><path d=\"M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413A11.815 11.815 0 0012.05 0zm0 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885z\"/></svg> WhatsApp</a>",
-      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; padding: 14px 28px; border-radius: 40px; border: none; cursor: pointer; transition: .3s; } .ds-btn-wa { background: #25d366; color: #fff; box-shadow: 0 10px 34px rgba(37,211,102,.4); } .ds-btn-wa:hover { background: #128c4a; transform: translateY(-3px); } .ds-btn-wa:focus-visible { outline: 2px solid #453930; outline-offset: 3px; }"
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; padding: 14px 28px; border-radius: 40px; border: none; cursor: pointer; transition: .3s; } .ds-btn-wa { background: #157f45; color: #fff; box-shadow: 0 10px 34px rgba(21,127,69,.34); } .ds-btn-wa:hover { background: #0f6437; transform: translateY(-3px); } .ds-btn-wa:focus-visible { outline: 2px solid #453930; outline-offset: 3px; }"
     },
     {
       "name": "Bouton brun",
@@ -129,7 +300,7 @@
       "refersTo": null,
       "description": "Transparente sur la photographie du hero, opaque après 60px de défilement.",
       "html": "<nav class=\"ds-nav\"><ul><li><a href=\"#\">Mariage</a></li><li><a href=\"#\">Balades</a></li><li><a href=\"#\">Tarifs</a></li></ul></nav>",
-      "css": ".ds-nav { display: flex; align-items: center; justify-content: flex-end; padding: 10px 4vw; background: rgba(250,247,242,.985); backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(58,49,41,.06); } .ds-nav ul { display: flex; gap: 26px; list-style: none; margin: 0; padding: 0; } .ds-nav a { color: #453930; text-decoration: none; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: .11em; text-transform: uppercase; transition: color .3s; } .ds-nav a:hover { color: #a97e5f; } .ds-nav a:focus-visible { outline: 2px solid #a97e5f; outline-offset: 4px; }"
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: flex-end; padding: 10px 4vw; background: rgba(250,247,242,.985); backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(58,49,41,.06); } .ds-nav ul { display: flex; gap: 26px; list-style: none; margin: 0; padding: 0; } .ds-nav a { color: #453930; text-decoration: none; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: .11em; text-transform: uppercase; transition: color .3s; } .ds-nav a:hover { color: #8a6244; } .ds-nav a:focus-visible { outline: 2px solid #8a6244; outline-offset: 4px; }"
     }
   ],
   "narrative": {
@@ -143,11 +314,36 @@
       "Basse densité, longues respirations verticales"
     ],
     "rules": [
-      { "name": "La Règle du Vert Unique", "body": "Le vert WhatsApp est la seule couleur saturée du site. Elle ne désigne qu'une chose : écrire à Jonathan. Aucun titre, aucun filet, aucune icône décorative n'a le droit de la porter. Sa rareté est ce qui la rend efficace.", "section": "colors" },
-      { "name": "La Règle du Papier", "body": "Aucune grande surface n'est en blanc pur. Le blanc est un matériau de carte posée sur du papier, pas un fond de page. Si une section paraît vide et froide, le correctif est le crème, pas une bordure.", "section": "colors" },
-      { "name": "La Règle des Trois Voix", "body": "Manuscrite pour l'émotion, serif pour l'autorité, sans-serif pour l'information. Une voix ne fait jamais le travail d'une autre : un prix ne s'écrit pas en Pinyon Script, une phrase de bascule ne s'écrit pas en Jost.", "section": "typography" },
-      { "name": "La Règle du Trois Cent", "body": "Le texte courant est en graisse 300, jamais 400. C'est ce qui donne au site son air de page imprimée plutôt que d'interface.", "section": "typography" },
-      { "name": "La Règle de l'Ombre Longue", "body": "Toute ombre a un flou d'au moins 22px et une opacité inférieure à 0.2. Une ombre courte et dure appartient à une interface logicielle, pas à ce site.", "section": "elevation" }
+      {
+        "name": "La Règle du Vert Unique",
+        "body": "Le vert WhatsApp est la seule couleur saturée du site. Elle ne désigne qu'une chose : écrire à Jonathan. Aucun titre, aucun filet, aucune icône décorative n'a le droit de la porter. Sa rareté est ce qui la rend efficace.",
+        "section": "colors"
+      },
+      {
+        "name": "La Règle du Papier",
+        "body": "Aucune grande surface n'est en blanc pur. Le blanc est un matériau de carte posée sur du papier, pas un fond de page. Si une section paraît vide et froide, le correctif est le crème, pas une bordure.",
+        "section": "colors"
+      },
+      {
+        "name": "La Règle des Deux Terres",
+        "body": "--terre dessine, --terre-lien se lit. Un filet, un cadre, un chiffre décoratif prennent la première ; dès qu'il s'agit d'un mot que quelqu'un doit déchiffrer, c'est la seconde.",
+        "section": "colors"
+      },
+      {
+        "name": "La Règle des Trois Voix",
+        "body": "Manuscrite pour l'émotion, serif pour l'autorité, sans-serif pour l'information. Une voix ne fait jamais le travail d'une autre : un prix ne s'écrit pas en Pinyon Script, une phrase de bascule ne s'écrit pas en Jost.",
+        "section": "typography"
+      },
+      {
+        "name": "La Règle du Trois Cent",
+        "body": "Le texte courant est en graisse 300, jamais 400. C'est ce qui donne au site son air de page imprimée plutôt que d'interface.",
+        "section": "typography"
+      },
+      {
+        "name": "La Règle de l'Ombre Longue",
+        "body": "Toute ombre a un flou d'au moins 22px et une opacité inférieure à 0.2. Une ombre courte et dure appartient à une interface logicielle, pas à ce site.",
+        "section": "elevation"
+      }
     ],
     "dos": [
       "Do utiliser crème (#faf7f2) ou sable (#f1eae0) en fond de section, et réserver le blanc aux cartes posées dessus.",
