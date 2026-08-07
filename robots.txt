@@ -1,11 +1,10 @@
 User-agent: *
 Allow: /
 
-# Documents de travail versionnés avec le site : ils sont servis par GitHub Pages
-# puisque .nojekyll publie aussi les fichiers commençant par un point.
-# Rien de confidentiel, mais ils n'ont pas à remonter dans les résultats de recherche.
+# Le site est publié depuis le dépôt tel quel, et .nojekyll fait servir jusqu'aux
+# dossiers commençant par un point. Ces chemins sont des outils de travail : rien de
+# confidentiel, mais ils n'ont pas à remonter dans les résultats de recherche.
 Disallow: /DESIGN.md
-Disallow: /AUDIT.md
 Disallow: /.claude/
 Disallow: /.impeccable/
 
