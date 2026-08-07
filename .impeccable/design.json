@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-07T00:00:00Z",
+  "title": "Design System: Une 2CV, mille histoires",
+  "extensions": {
+    "colorMeta": {
+      "creme": {
+        "role": "neutral",
+        "displayName": "Papier Crème",
+        "canonical": "#faf7f2",
+        "tonalRamp": ["#2a2621", "#4a443c", "#6b6257", "#8d8375", "#b0a696", "#d2c9ba", "#e9e2d7", "#faf7f2"]
+      },
+      "sable": {
+        "role": "neutral",
+        "displayName": "Sable Clair",
+        "canonical": "#f1eae0",
+        "tonalRamp": ["#2b261f", "#4b4438", "#6d6353", "#8f836f", "#b1a48d", "#d1c5ae", "#e4dacb", "#f1eae0"]
+      },
+      "nude": {
+        "role": "primary",
+        "displayName": "Nude Sable",
+        "canonical": "#c9a98d",
+        "tonalRamp": ["#2e2419", "#4d3c2a", "#6d553b", "#8d6f4e", "#ad8a64", "#c9a98d", "#dcc4ad", "#efe2d4"]
+      },
+      "terre": {
+        "role": "primary",
+        "displayName": "Terre Cuite Patinée",
+        "canonical": "#a97e5f",
+        "tonalRamp": ["#2a1d13", "#452f1f", "#61432c", "#7d583a", "#996c49", "#a97e5f", "#c6a184", "#e3cdb8"]
+      },
+      "brun": {
+        "role": "neutral",
+        "displayName": "Brun Reliure",
+        "canonical": "#453930",
+        "tonalRamp": ["#191410", "#2b231d", "#3a302a", "#453930", "#6a594c", "#907c6b", "#b8a693", "#ded3c6"]
+      },
+      "encre": {
+        "role": "neutral",
+        "displayName": "Encre",
+        "canonical": "#3a3129",
+        "tonalRamp": ["#151110", "#252019", "#3a3129", "#544940", "#736558", "#968676", "#bcae9e", "#e2d8cb"]
+      },
+      "sauge": {
+        "role": "tertiary",
+        "displayName": "Sauge",
+        "canonical": "#8a9a83",
+        "tonalRamp": ["#1c211a", "#2f382c", "#43503e", "#586852", "#6e8067", "#8a9a83", "#adb9a7", "#d1d9cc"]
+      },
+      "wa": {
+        "role": "secondary",
+        "displayName": "Vert WhatsApp",
+        "canonical": "#25d366",
+        "tonalRamp": ["#062b13", "#0a4a20", "#0e6b2e", "#128c4a", "#17ad52", "#25d366", "#6ee79c", "#b8f5d0"]
+      }
+    },
+    "typographyMeta": {
+      "script": { "displayName": "Manuscrite", "purpose": "Phrases de bascule et mots posés sur une photographie. Une seule occurrence visible par écran." },
+      "display": { "displayName": "Titre de page", "purpose": "Le H1, toujours sur photographie, en blanc avec ombre portée." },
+      "headline": { "displayName": "Titre de bloc", "purpose": "Blocs image-texte en deux colonnes." },
+      "title": { "displayName": "Titre courant", "purpose": "H2 dans les textes longs." },
+      "body": { "displayName": "Texte courant", "purpose": "Jost 300, plafonné à 760px de large." },
+      "label": { "displayName": "Étiquette", "purpose": "Boutons, navigation, surtitres. Capitales interlettrées." }
+    },
+    "shadows": [
+      { "name": "repos", "value": "0 12px 34px rgba(58,49,41,.08)", "purpose": "Cartes de prestation et cadres photo au repos." },
+      { "name": "survol", "value": "0 20px 48px rgba(58,49,41,.15)", "purpose": "La même carte soulevée de 7px au survol." },
+      { "name": "flottant-wa", "value": "0 10px 30px rgba(37,211,102,.5)", "purpose": "Boutons WhatsApp. Seule ombre teintée du site." },
+      { "name": "panneau", "value": "-12px 0 44px rgba(58,49,41,.2)", "purpose": "Menu mobile glissant depuis la droite." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(.4,0,.2,1)", "purpose": "Ouverture du menu mobile, transitions d'état." },
+      { "name": "ease-rebond", "value": "cubic-bezier(.34,1.4,.64,1)", "purpose": "Apparition de la bulle WhatsApp flottante." },
+      { "name": "duree-etat", "value": "0.3s", "purpose": "Survol des boutons et des liens." },
+      { "name": "duree-image", "value": "0.8s", "purpose": "Agrandissement d'une image dans son cadre au survol de la carte." },
+      { "name": "reveal", "value": "opacity .9s ease, transform .9s ease", "purpose": "Apparition des blocs au défilement, via IntersectionObserver." }
+    ],
+    "breakpoints": [
+      { "name": "cartes", "value": "560px" },
+      { "name": "cartes-large", "value": "620px" },
+      { "name": "empilement", "value": "820px" },
+      { "name": "colonnes", "value": "900px" },
+      { "name": "burger", "value": "1080px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Bouton WhatsApp",
+      "kind": "button",
+      "refersTo": "button-whatsapp",
+      "description": "L'action par défaut du site. Le seul élément qui porte du vert saturé.",
+      "html": "<a class=\"ds-btn ds-btn-wa\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"currentColor\"><path d=\"M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413A11.815 11.815 0 0012.05 0zm0 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885z\"/></svg> WhatsApp</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; padding: 14px 28px; border-radius: 40px; border: none; cursor: pointer; transition: .3s; } .ds-btn-wa { background: #25d366; color: #fff; box-shadow: 0 10px 34px rgba(37,211,102,.4); } .ds-btn-wa:hover { background: #128c4a; transform: translateY(-3px); } .ds-btn-wa:focus-visible { outline: 2px solid #453930; outline-offset: 3px; }"
+    },
+    {
+      "name": "Bouton brun",
+      "kind": "button",
+      "refersTo": "button-brun",
+      "description": "Action secondaire, pour la navigation interne sur fond clair.",
+      "html": "<a class=\"ds-btn ds-btn-brun\" href=\"#\">Voir les tarifs</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; padding: 14px 28px; border-radius: 40px; border: none; cursor: pointer; transition: .3s; } .ds-btn-brun { background: #453930; color: #fff; } .ds-btn-brun:hover { background: #2f2620; transform: translateY(-3px); } .ds-btn-brun:focus-visible { outline: 2px solid #a97e5f; outline-offset: 3px; }"
+    },
+    {
+      "name": "Bouton contour",
+      "kind": "button",
+      "refersTo": "button-contour",
+      "description": "Action tertiaire sur fond crème ou sable.",
+      "html": "<a class=\"ds-btn ds-btn-contour\" href=\"#\">En savoir plus</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; padding: 14px 28px; border-radius: 40px; cursor: pointer; transition: .3s; } .ds-btn-contour { border: 1.5px solid #a97e5f; color: #a97e5f; background: transparent; } .ds-btn-contour:hover { background: rgba(169,126,95,.09); transform: translateY(-3px); } .ds-btn-contour:focus-visible { outline: 2px solid #a97e5f; outline-offset: 3px; }"
+    },
+    {
+      "name": "Carte de prestation",
+      "kind": "card",
+      "refersTo": "carte-prestation",
+      "description": "Le composant signature : un tirage papier dans son cadre, posé sur la page du carnet.",
+      "html": "<a class=\"ds-presta\" href=\"#\"><div class=\"ds-cadre\"><div class=\"ds-imgbox\"><img src=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='380' height='330'%3E%3Crect width='380' height='330' fill='%23c9a98d'/%3E%3C/svg%3E\" alt=\"\"></div></div><h3>Mariage</h3><p class=\"ds-souligne\">À partir de 350 €</p><span class=\"ds-plus\">Découvrir</span></a>",
+      "css": ".ds-presta { display: block; text-align: center; text-decoration: none; color: #3a3129; font-family: 'Jost', sans-serif; max-width: 380px; } .ds-cadre { border: 1px solid #ecdfd0; padding: 10px; background: #fff; box-shadow: 0 12px 34px rgba(58,49,41,.08); transition: transform .4s, box-shadow .4s; } .ds-presta:hover .ds-cadre { transform: translateY(-7px); box-shadow: 0 20px 48px rgba(58,49,41,.15); } .ds-imgbox { height: 330px; overflow: hidden; position: relative; background: #fff; } .ds-imgbox img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s; display: block; } .ds-presta:hover .ds-imgbox img { transform: scale(1.06); } .ds-presta h3 { font-family: 'Playfair Display', serif; font-weight: 600; color: #453930; font-size: 27px; margin: 22px 0 6px; } .ds-souligne { font-size: 14px; letter-spacing: .1em; color: #6b5b4a; } .ds-plus { display: inline-block; margin-top: 12px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; border-bottom: 1px solid #c9a98d; padding-bottom: 3px; color: #8a6f52; }"
+    },
+    {
+      "name": "Cadre photo de carnet",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "L'encadrement identitaire : filet nude doublé d'un outline décalé, comme la marge d'un tirage collé.",
+      "html": "<div class=\"ds-cadre-univers\"><p>Vous ne louez pas une voiture, vous entrez dans une histoire.</p></div>",
+      "css": ".ds-cadre-univers { max-width: 620px; background: #fffdf9; border: 1px solid #c9a98d; outline: 1px solid #c9a98d; outline-offset: 6px; padding: clamp(24px, 5vw, 54px); font-family: 'Playfair Display', serif; font-style: italic; color: #453930; text-align: center; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Transparente sur la photographie du hero, opaque après 60px de défilement.",
+      "html": "<nav class=\"ds-nav\"><ul><li><a href=\"#\">Mariage</a></li><li><a href=\"#\">Balades</a></li><li><a href=\"#\">Tarifs</a></li></ul></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: flex-end; padding: 10px 4vw; background: rgba(250,247,242,.985); backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(58,49,41,.06); } .ds-nav ul { display: flex; gap: 26px; list-style: none; margin: 0; padding: 0; } .ds-nav a { color: #453930; text-decoration: none; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: .11em; text-transform: uppercase; transition: color .3s; } .ds-nav a:hover { color: #a97e5f; } .ds-nav a:focus-visible { outline: 2px solid #a97e5f; outline-offset: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Le Carnet du Lagon",
+    "overview": "Un carnet de voyage tenu dans la lumière du lagon. Le papier crème, l'encre brune et l'écriture manuscrite d'un côté ; la lenteur, le sel et la lumière rasante de fin de journée de l'autre. Le site n'est pas une vitrine commerciale : c'est le carnet où l'on consigne des trajets déjà vécus, ouvert sur une table en fin d'après-midi.\n\nCette double nature commande tout le reste. Le fond n'est jamais blanc pur là où le contenu respire : il est crème (#faf7f2) ou sable (#f1eae0), comme une page qui a pris le soleil. Les titres sont en Playfair Display, une serif de livre, jamais une sans-serif de tableau de bord. Et les moments d'émotion passent en Pinyon Script, une anglaise manuscrite qui joue le rôle de la note écrite à la main dans la marge.\n\nLa densité est basse et assumée. Les sections respirent, les colonnes sont larges, le texte courant plafonne à 760px. Rien ne se bouscule, parce que le produit vendu est précisément le contraire de la vitesse.",
+    "keyCharacteristics": [
+      "Papier crème et encre brune, jamais de blanc clinique sur les grandes surfaces",
+      "Trois voix typographiques strictement séparées : manuscrite, livre, courante",
+      "Photographie pleine largeur, non recadrée en vignette : l'île est le décor",
+      "Vert WhatsApp comme unique couleur vive, réservée à l'action",
+      "Basse densité, longues respirations verticales"
+    ],
+    "rules": [
+      { "name": "La Règle du Vert Unique", "body": "Le vert WhatsApp est la seule couleur saturée du site. Elle ne désigne qu'une chose : écrire à Jonathan. Aucun titre, aucun filet, aucune icône décorative n'a le droit de la porter. Sa rareté est ce qui la rend efficace.", "section": "colors" },
+      { "name": "La Règle du Papier", "body": "Aucune grande surface n'est en blanc pur. Le blanc est un matériau de carte posée sur du papier, pas un fond de page. Si une section paraît vide et froide, le correctif est le crème, pas une bordure.", "section": "colors" },
+      { "name": "La Règle des Trois Voix", "body": "Manuscrite pour l'émotion, serif pour l'autorité, sans-serif pour l'information. Une voix ne fait jamais le travail d'une autre : un prix ne s'écrit pas en Pinyon Script, une phrase de bascule ne s'écrit pas en Jost.", "section": "typography" },
+      { "name": "La Règle du Trois Cent", "body": "Le texte courant est en graisse 300, jamais 400. C'est ce qui donne au site son air de page imprimée plutôt que d'interface.", "section": "typography" },
+      { "name": "La Règle de l'Ombre Longue", "body": "Toute ombre a un flou d'au moins 22px et une opacité inférieure à 0.2. Une ombre courte et dure appartient à une interface logicielle, pas à ce site.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do utiliser crème (#faf7f2) ou sable (#f1eae0) en fond de section, et réserver le blanc aux cartes posées dessus.",
+      "Do séparer deux sections successives par une alternance de fond, jamais par un filet horizontal.",
+      "Do garder le texte courant en Jost 300 à 16.5px, plafonné à 760px de large.",
+      "Do limiter Pinyon Script à une occurrence visible par écran.",
+      "Do définir les grilles en repeat(auto-fit, minmax(...)) pour qu'elles se réorganisent seules.",
+      "Do respecter prefers-reduced-motion pour toute nouvelle animation, comme le fait déjà la feuille de style."
+    ],
+    "donts": [
+      "Don't employer le vert WhatsApp ailleurs que sur une action de contact.",
+      "Don't arrondir les angles d'une carte de contenu : les coins ronds appartiennent aux actions.",
+      "Don't poser une ombre courte et dure (flou inférieur à 22px ou opacité supérieure à 0.2).",
+      "Don't écrire un prix, une date ou une information pratique en Pinyon Script.",
+      "Don't introduire une quatrième famille typographique.",
+      "Don't recadrer les photographies en petites vignettes carrées : le paysage fait partie du produit."
+    ]
+  }
+}
