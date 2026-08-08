@@ -8,4 +8,9 @@ Disallow: /DESIGN.md
 Disallow: /.claude/
 Disallow: /.impeccable/
 
+# L'étude de marché est un document commercial interne (analyse concurrentielle,
+# grilles de commission, stratégie tarifaire). Elle n'a rien à faire dans les
+# résultats de recherche.
+Disallow: /etude-marche/
+
 Sitemap: https://une2cvmillehistoires.re/sitemap.xml
