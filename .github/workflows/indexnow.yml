@@ -1,0 +1,79 @@
+name: IndexNow
+
+# Prévient Bing et Yandex dès qu'une page change, sans attendre leur prochain passage.
+# C'est le seul canal par lequel on pousse une mise à jour au lieu de l'attendre, et il
+# compte double ici : Bing alimente aussi les réponses de plusieurs assistants.
+#
+# Déclenchement manuel (onglet Actions du dépôt) : soumet toutes les pages du site.
+
+on:
+  push:
+    branches: [main]
+    paths: ['**.html', 'sitemap.xml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    env:
+      HOST: une2cvmillehistoires.re
+      KEY: 3f12a3a15e327f78fd328d92bf36ff7b
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Soumettre les pages modifiées à IndexNow
+        env:
+          EVENT: ${{ github.event_name }}
+          BEFORE: ${{ github.event.before }}
+          SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+
+          # Sur un déclenchement manuel, ou si la comparaison de commits échoue
+          # (premier push, historique tronqué), on resoumet tout : douze URL, c'est sans
+          # conséquence pour IndexNow.
+          if [ "$EVENT" = "workflow_dispatch" ] \
+             || ! fichiers=$(git diff --name-only --diff-filter=AM "$BEFORE" "$SHA" -- '*.html' 2>/dev/null); then
+            fichiers=$(ls ./*.html)
+          fi
+
+          : > /tmp/urls.txt
+          for f in $fichiers; do
+            case "$(basename "$f")" in
+              404.html|merci.html) continue ;;                # sans intérêt pour l'index
+              index.html) echo "https://$HOST/" >> /tmp/urls.txt ;;
+              *.html) echo "https://$HOST/$(basename "$f" .html)" >> /tmp/urls.txt ;;
+            esac
+          done
+
+          if [ ! -s /tmp/urls.txt ]; then
+            echo "Aucune page modifiée, rien à soumettre."
+            exit 0
+          fi
+          cat /tmp/urls.txt
+
+          jq -Rsc 'split("\n") | map(select(length > 0))' < /tmp/urls.txt > /tmp/liste.json
+          jq -nc \
+            --arg host "$HOST" \
+            --arg key "$KEY" \
+            --arg loc "https://$HOST/$KEY.txt" \
+            --slurpfile urlList /tmp/liste.json \
+            '{host: $host, key: $key, keyLocation: $loc, urlList: $urlList[0]}' > /tmp/payload.json
+
+          code=$(curl -sS -o /tmp/reponse.txt -w '%{http_code}' \
+            -X POST 'https://api.indexnow.org/IndexNow' \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data @/tmp/payload.json)
+          echo "Réponse HTTP $code"
+          cat /tmp/reponse.txt || true
+          # 200 et 202 valent acceptation ; 422 signale des URL hors du domaine déclaré.
+          case "$code" in 200|202) ;; *) exit 1 ;; esac
