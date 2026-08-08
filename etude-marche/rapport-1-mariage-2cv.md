@@ -37,7 +37,11 @@ La comparaison qui tranche : **V8 Run Event** vend un forfait de **5 h — exact
 
 **La question décisive est tranchée : un profil gratuit EST bien affiché.** ✅ La catégorie « voiture mariage / La Réunion » compte **21 prestataires sur une seule page**, dont **15 avec zéro avis** — un annuaire qui n'afficherait que les payants ne présenterait pas 15 fiches vides. Les packs payants achètent la **position**, pas l'existence : le Pack Premium promet « à partir de la 22ᵉ position », or il n'y a que 21 fiches. **Une fiche gratuite atterrit en première page.** 📐
 
-**La cause la plus probable de ton blocage est juridique.** Ton association a pour objet déclaré *« favoriser, développer et promouvoir la création artistique, le bien-être et les arts du spectacle vivants »* ✅ (RNA W122009051) — aucun rapport avec le transport de personnes. Une plateforme qui exige un SIRET pour la catégorie « voiture mariage » bloque silencieusement ce type de dossier. **Ton auto-entreprise VTC est le préalable, pas une formalité annexe.**
+**Nuance importante : tu as déjà un SIRET.** Le `934 556 036 00010` figure dans tes mentions légales et dans les données structurées de ton site ✅. Ce n'est donc **pas** l'absence de SIRET qui bloque — et ça veut dire que tu peux **dès aujourd'hui** poster dans les groupes Facebook qui l'exigent, et ouvrir un compte pro leboncoin.
+
+**Ce qui peut bloquer, en revanche, c'est la cohérence du dossier.** Ton association a pour objet déclaré *« favoriser, développer et promouvoir la création artistique, le bien-être et les arts du spectacle vivants »* ✅ (RNA W122009051) — aucun rapport avec le transport de personnes. Une plateforme peut refuser une inscription en catégorie « voiture mariage » au nom d'une entité dont l'objet statutaire est le spectacle vivant, ou d'un nom commercial (« Une 2CV, mille histoires ») qui ne correspond à aucune entité enregistrée.
+
+📐 **Ne présume pas la cause : appelle et demande.** Le SIRET existant enlève l'hypothèse la plus lourde. Les deux causes désormais les plus probables sont bien plus simples : **la fiche n'a jamais été soumise à validation** (le tunnel d'inscription sauvegarde en brouillon, et on croit sincèrement avoir terminé), ou **elle est sous le seuil de complétion** exigé pour la publication. Les deux se lisent en 30 secondes dans l'espace pro.
 
 **Effort :** 1 h + un appel. **Impact : FORT** — c'est le canal à intention d'achat la plus haute du marché.
 
@@ -243,12 +247,15 @@ Un concurrent le reconnaît lui-même publiquement. VIP Car Réunion écrit sur 
 **① Bat Kare Méhari 2CV — la seule autre 2CV de l'île, et elle est vulnérable**
 Saint-Louis · [fiche Mariages.net](https://www.mariages.net/voiture-mariage/bat-kare-mehari-2cv--e147491) · **135 à 309 €** ✅ · Méhari + 2CV 6 Spéciale blanche + 2CV Charleston bordeaux
 - ⚠️ **Location SANS CHAUFFEUR.** La mariée conduit elle-même, en robe. C'est un vrai frein émotionnel et pratique.
-- **1 seul avis, daté du 28/04/2018.** Photos de 2017-2019, aucun site, aucun réseau social actif. **Prestataire dormant.**
+- **1 seul avis, daté du 28/04/2018.** Photos de 2017-2019, aucun site, aucun réseau social actif.
+- ✅ **Confirmé par Jonathan (août 2026) : cet acteur ne semble plus en activité.** Le seul autre 2CV de l'île est donc hors jeu. **Tu es, de fait, la seule 2CV de mariage de La Réunion.** C'est une phrase que tu peux écrire partout.
 - À imiter : le storytelling thématique. L'avis client dit exactement *« nous avons choisi cette voiture car elle correspondait parfaitement au thème de notre mariage »* — **la demande 2CV est prouvée, exprimée par une mariée réunionnaise.**
 
-**② Sea, Cox & Sun — le benchmark à battre, et il est dans ton village**
+**② Sea, Cox & Sun — ⚠️ cédé en 2026, et c'est une fenêtre qui s'ouvre**
 [seacoxandsun.re](https://www.seacoxandsun.re) · Combi VW 1972 « Tinhobus » + Coccinelle · **dès 700 €** · **22 avis à 5,0 — le meilleur volume du marché** ✅ · fiche mise à jour juillet 2026
-- ⚠️ L'Office de Tourisme de l'Ouest le localise à **Piton Saint-Leu** — ton village (adresses divergentes selon les sources : Saint-Pierre, Le Tampon, Piton Saint-Leu).
+- 🔴 **Jonathan indique que l'entreprise a été vendue (août 2026).** À vérifier, mais si la reprise se passe mal — ou si le nouveau propriétaire n'est pas « Bambou » — **les 22 avis à 5,0 perdent leur socle, et la première place du segment vintage devient vacante.** C'est la meilleure fenêtre de tir de toute cette étude : la place se prend en trois mois d'avis, pas en trois ans.
+- L'Office de Tourisme de l'Ouest le localise à **Piton Saint-Leu** — ton village (adresses divergentes selon les sources : Saint-Pierre, Le Tampon, Piton Saint-Leu).
+- 📐 **Surveille sa fiche Mariages.net et sa page Facebook chaque mois.** Un changement de nom, un ralentissement des publications ou des avis qui s'arrêtent net sont les signaux à guetter.
 - Notoriété réelle : véhicules loués pour le film *Le Petit Piaf* de Gérard Jugnot et la vidéo de sécurité d'Air Austral.
 - **À imiter absolument : le chauffeur est le produit.** « Bambou » est une marque dans la marque — les avis parlent d'elle **avant** de parler du véhicule. **Jonathan doit être le personnage central, pas la voiture.**
 - Faiblesses : aucun prix mariage sur son propre site (uniquement devis), contenus datés 2020-2022, et **ce n'est pas une voiture de mariés** — c'est un van 7 places, sans effet « carrosse à deux ». **Ton créneau est libre.**
@@ -296,7 +303,7 @@ Saint-Paul · **450 à 700 €** · **10 avis à 4,8**, 96 % de recommandation, 
 - [ ] Appel à Yann Bénard (0692 66 89 40) — annuaire Le Rozie + ROZIE#11
 - [ ] Nouvelle grille tarifaire en ligne (500 / 650 / 750 € + 60 €/h + 300 € les deux voitures)
 - [ ] **Tester le formulaire de contact de bout en bout** — il passe par formsubmit.co, un tiers gratuit jamais vérifié
-- [ ] Corriger le code postal (97436 sur le site vs 97424 sur Google) et fixer un nom de marque unique partout
+- [x] ~~Corriger le code postal~~ → fait, 97424 partout. Reste à fixer un nom de marque unique sur les 4 canaux
 - [ ] Recatégoriser la fiche Google : « agence de visites touristiques » ne te fera jamais sortir sur « voiture mariage »
 - [ ] Nom d'utilisateur Facebook (`facebook.com/une2cvmillehistoires` au lieu de `profile.php?id=…`) — 10 minutes
 

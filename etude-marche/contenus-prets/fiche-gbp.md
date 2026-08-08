@@ -16,7 +16,7 @@
 - [ ] **Nom exact** — identique partout, sans variante : `Une 2CV, mille histoires`
   *(retire l'emoji 🌿 du nom Google : il n'apparaît ni sur ton site, ni sur Instagram, ni sur Facebook, et il disperse les signaux d'entité)*
 - [ ] **Téléphone** : `0693 82 81 08` · **Site** : `https://une2cvmillehistoires.re/`
-- [ ] **Trancher le code postal** — ta fiche Google dit 97424 (Piton Saint-Leu), ton site dit 97436 (Saint-Leu centre), 15 fois. **Choisis le vrai et aligne les deux.**
+- [x] ~~Trancher le code postal~~ → **97424, Piton Saint-Leu.** Le site est corrigé, la fiche Google était déjà juste. NAP aligné.
 - [ ] **15 photos minimum**, prises sur place, horizontales, sans sous-titres incrustés
 - [ ] Compter **48 h** pour que les zones desservies s'affichent
 

@@ -249,6 +249,8 @@ Annuaire officiel : https://en.reunion.fr/organize/sorganiser-en/all-agencies/
 ⚠️ **Et le concurrent le plus direct est dans ton village.**
 
 **Sea, Cox & Sun** — Combi VW 1972 avec chauffeur, **Piton Saint-Leu** ✅
+> 🔴 **Jonathan indique que l'entreprise a été cédée (août 2026).** Si c'est confirmé, le leader du segment vintage change de mains — et une reprise, c'est toujours plusieurs mois de flottement : fiches non mises à jour, avis qui s'arrêtent, clientèle qui cherche ailleurs. **Sa fiche Office de Tourisme est déjà obsolète** (elle affiche 22 €/pers quand son site dit 224 € le combi). Sa grille reste le meilleur modèle à imiter, mais la place de leader est en train de se libérer.
+
 [seacoxandsun.re](https://www.seacoxandsun.re) · [fiche OTI Ouest](https://www.ouest-lareunion.com/se-deplacer/transports-insolites) · [fiche TripAdvisor](https://www.tripadvisor.fr/Attraction_Review-g12875244-d17323525-Reviews-Sea_Cox_Sun-Piton_Saint_Leu_Arrondissement_of_Saint_Paul.html) · 0693 32 89 23
 
 | Tour | Prix véhicule | Prix/pers (base 7) | Durée |
@@ -340,6 +342,7 @@ Tu arrives **en pleine haute saison** (juillet-août, puis octobre-novembre). Pr
 - [ ] Tournée physique : Blue Margouillat, Iloha, Wood, LUX*, Akoya + les 4 conciergeries — offre 15 % ou code partenaire 10 % + éductour
 - [ ] Demander le devis QTIR à l'IRT
 - [ ] Prendre contact avec Kélonia (point de départ/dépose, flyer boutique)
+- [ ] **Surveiller la reprise de Sea, Cox & Sun** — leur fiche OTI, leur page Facebook, la date de leur dernier avis. Si le repreneur flotte, c'est ta fenêtre pour prendre la première place du segment vintage
 
 ### Semaines 7-12 — Le B2B et le contra-saisonnier
 - [ ] Réceptifs : Papangue Tours, Mille Tours, Bourbon Voyages — tarif net B2B

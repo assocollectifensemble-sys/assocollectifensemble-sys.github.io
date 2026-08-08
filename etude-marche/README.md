@@ -45,9 +45,9 @@
 
 ## Les 6 actions à faire cette semaine
 
-1. **Finaliser l'auto-entreprise VTC** — elle débloque Mariages.net, les groupes Facebook à SIRET, leboncoin pro, SOUBIK et les OTA. Tout en dépend.
+1. **Poster dans les groupes Facebook dès maintenant** — tu as déjà un SIRET (934 556 036 00010, dans tes mentions légales), c'est la seule condition qu'ils posent. L'auto-entreprise VTC reste à finaliser pour la licence, mais elle ne bloque plus ce canal-là.
 2. **Masquer ton adresse personnelle sur Google Business** — elle est publique, et Google peut suspendre la fiche pour ça.
-3. **Tester ton formulaire de contact** de bout en bout — il passe par un service tiers gratuit et n'a jamais été vérifié. 20 minutes.
+3. **Tester ton formulaire de contact** depuis ton mobile — formsubmit.co est bloqué par le réseau de l'environnement d'étude, le test n'a pas pu être fait à distance. 5 minutes, et ça vaut le coup : un formulaire cassé sur un site à 0 trafic est indétectable.
 4. **Appeler Mariages.net** au (+33) 1 73 06 86 89 pour connaître le statut réel de ta fiche.
 5. **Appeler Yann Bénard** au 0692 66 89 40 (Le Rozie) — un seul concurrent dans la catégorie Transport.
 6. **Demander un avis Google** à tous les couples déjà servis. Tu en as zéro ; 3 à 5 te font passer devant 15 des 21 concurrents.
@@ -62,7 +62,7 @@ L'étude marque explicitement 🔴 tout ce qui n'a pas pu être vérifié, plut�
 - Les tarifs de stand ROZIE et Nordev, et le devis d'un pack Mariages.net (aucun n'est public)
 - Le coût du label QTIR et d'une éventuelle adhésion à l'Office de Tourisme de l'Ouest
 - Le taux de rétrocession pratiqué par les hôtels et conciergeries du 974 — aucun ne le publie, ça se demande au téléphone
-- **Le bon code postal** : ton site dit 97436, ta fiche Google dit 97424
+- ~~Le bon code postal~~ → **tranché : 97424, Piton Saint-Leu.** Le site est corrigé (13 pieds de page, données structurées, FAQ).
 
 ---
 
