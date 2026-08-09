@@ -39,19 +39,23 @@ jobs:
           set -euo pipefail
 
           # Sur un déclenchement manuel, ou si la comparaison de commits échoue
-          # (premier push, historique tronqué), on resoumet tout : douze URL, c'est sans
-          # conséquence pour IndexNow.
+          # (premier push, historique tronqué), on resoumet tout le site : une poignée
+          # d'URL, c'est sans conséquence pour IndexNow.
           if [ "$EVENT" = "workflow_dispatch" ] \
              || ! fichiers=$(git diff --name-only --diff-filter=AM "$BEFORE" "$SHA" -- '*.html' 2>/dev/null); then
-            fichiers=$(ls ./*.html)
+            fichiers=$(git ls-files '*.html')
           fi
 
+          # Le chemin du fichier moins son extension EST l'URL : histoires/emma-fabien.html
+          # devient /histoires/emma-fabien. Surtout pas de basename ici, il aplatirait
+          # les récits en /emma-fabien.
           : > /tmp/urls.txt
           for f in $fichiers; do
-            case "$(basename "$f")" in
+            chemin=${f#./}
+            case "$chemin" in
               404.html|merci.html) continue ;;                # sans intérêt pour l'index
               index.html) echo "https://$HOST/" >> /tmp/urls.txt ;;
-              *.html) echo "https://$HOST/$(basename "$f" .html)" >> /tmp/urls.txt ;;
+              *) echo "https://$HOST/${chemin%.html}" >> /tmp/urls.txt ;;
             esac
           done
 

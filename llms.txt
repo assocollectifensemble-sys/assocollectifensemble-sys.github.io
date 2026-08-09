@@ -38,7 +38,8 @@
 - https://une2cvmillehistoires.re/shooting-evenements : shootings, tournages, évènements
 - https://une2cvmillehistoires.re/rosalie-et-soizig : les deux voitures et leur histoire
 - https://une2cvmillehistoires.re/tarifs : tarifs détaillés par zone, ce qui est inclus, acompte et réservation
-- https://une2cvmillehistoires.re/histoires : carnet de bord, de vrais mariages racontés
+- https://une2cvmillehistoires.re/histoires : carnet de bord, de vrais mariages racontés — une page par mariage
+- https://une2cvmillehistoires.re/histoires/emma-fabien : récit complet du mariage d'Emma & Fabien dans l'Ouest (août 2026)
 - https://une2cvmillehistoires.re/faq : questions fréquentes (robe, pluie, hauts, tarifs, réservation)
 - https://une2cvmillehistoires.re/contact : contact
 

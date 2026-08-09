@@ -67,12 +67,33 @@ Tout cela consolide. **Rien de tout cela ne suffira** : le blocage est hors du d
    Leur demander un lien en retour est la manière la plus naturelle d'obtenir des
    liens réels, locaux, thématiquement justes — exactement ce qui manque.
 
+## Une page par histoire (fait le 9 août 2026)
+
+`/histoires` est devenu le carnet — une carte par récit — et chaque mariage a sa propre
+URL : `/histoires/emma-fabien`. Le récit y porte un `BlogPosting` complet, le carnet un
+`Blog` qui le référence, et le fil d'Ariane compte trois niveaux.
+
+**Pour ajouter un mariage**, copier `histoires/emma-fabien.html`, puis quatre gestes
+qu'il ne faut pas oublier :
+
+1. Ajouter une carte dans `histoires.html` et une entrée dans son `blogPost`.
+2. Ajouter l'URL au `sitemap.xml`.
+3. Ajouter la page à `PAGES` dans `.claude/build-llms-full.py`, puis relancer le script.
+4. Ajouter la ligne correspondante dans `llms.txt`.
+
+Deux pièges rencontrés, notés pour ne pas les reproduire :
+
+- **Le chemin du fichier EST l'URL.** Le workflow IndexNow construisait les URL avec
+  `basename`, ce qui aurait aplati `histoires/emma-fabien.html` en `/emma-fabien`.
+  Il utilise maintenant le chemin complet moins l'extension.
+- **`histoires.html` et le dossier `histoires/` cohabitent volontairement.** GitHub Pages
+  sert `histoires.html` pour `/histoires` et `histoires/emma-fabien.html` pour
+  `/histoires/emma-fabien` : aucune redirection, et l'URL `/histoires`, déjà indexée par
+  Google, ne bouge pas. Ne pas créer `histoires/index.html` : il entrerait en concurrence
+  avec `histoires.html` sur la même URL.
+
 ## À faire ensuite sur le site
 
-- **Une page par histoire.** Aujourd'hui `/histoires` porte un seul récit sur une seule
-  URL. Une URL par mariage, avec son propre `Article`, multiplie les portes d'entrée et
-  donne à chaque prestataire cité une page précise à lier. C'est le meilleur rapport
-  effort/effet du site, et la condition d'un flux RSS qui ait un sens.
 - **Les avis en `Review`.** Dès qu'il y a des avis Google, les reprendre sur le site en
   `Review` / `AggregateRating` — jamais inventés, jamais reformulés. Les assistants
   citent volontiers ce qui est chiffré et attribué.
