@@ -544,6 +544,21 @@ main{display:block}
   .prestas{grid-template-columns:repeat(2,1fr);max-width:820px}
 }
 
+/* ============ CARNET DE BORD — une carte par mariage ============ */
+/* .prestas est calibrée pour quatre prestations de front : réutilisée ici, elle
+   découpait quatre colonnes pour un seul récit. Le carnet a son propre gabarit,
+   qui garde des cartes lisibles et centrées qu'il y ait une histoire ou vingt. */
+.recits{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),340px));
+  gap:40px;justify-content:center;max-width:1150px;margin:0 auto}
+.recits .presta .imgbox{height:300px}
+.recits .presta .resume{font-size:15px;font-weight:300;line-height:1.7;color:#5a4f43;margin-top:10px}
+/* Bannière du récit d'Emma & Fabien. L'image est un portrait extrait du film, avec
+   des incrustations à partir des trois quarts bas : le cadrage vise la voiture sans
+   les atteindre. La bande visible est étroite en large et haute en étroit, d'où
+   deux ancrages plutôt qu'un. */
+.hero-eglise{object-position:50% 56%}
+@media(max-width:759px){ .hero-eglise{object-position:50% 45%} }
+
 /* ============ PIED DE PAGE ============ */
 footer{background:var(--encre);color:#a99c8b;padding:56px 6vw 96px;text-align:center;font-weight:300;font-size:13.5px;line-height:1.9}
 footer img.logo-pied{width:150px;margin:0 auto 16px;display:block;filter:brightness(0) invert(1);opacity:.9}
