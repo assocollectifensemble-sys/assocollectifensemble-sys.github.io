@@ -1,0 +1,74 @@
+name: Publier sur Facebook et Instagram
+
+on:
+  schedule:
+    # Toutes les 15 minutes. GitHub exécute les crons avec du retard (5 à 20 min
+    # en pratique) : c'est sans effet sur Facebook, dont l'heure est tenue par
+    # Meta, mais un post Instagram peut sortir un peu après l'heure prévue.
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      simulation:
+        description: "Simulation — affiche ce qui partirait, sans rien publier"
+        type: boolean
+        default: false
+      forcer:
+        description: "Publier aussi les posts en retard de plus de 48 h"
+        type: boolean
+        default: false
+
+# Deux exécutions en parallèle republieraient le même post : on sérialise.
+concurrency:
+  group: publier-meta
+  cancel-in-progress: false
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dépendances
+        run: pip install --quiet requests pyyaml
+
+      - name: Publier
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+          MEDIA_BASE_URL: ${{ vars.MEDIA_BASE_URL }}
+          META_API_VERSION: ${{ vars.META_API_VERSION }}
+        run: |
+          python scripts/publier_meta.py \
+            ${{ inputs.simulation && '--simulation' || '' }} \
+            ${{ inputs.forcer && '--forcer' || '' }}
+
+      - name: Enregistrer ce qui a été publié
+        if: ${{ !cancelled() && !inputs.simulation }}
+        run: |
+          [ -f posts/.etat.json ] || exit 0
+          # « git add » d'abord : au premier passage le fichier n'est pas encore
+          # suivi, et « git diff » seul ne le verrait pas.
+          git add posts/.etat.json
+          if git diff --cached --quiet -- posts/.etat.json; then
+            echo "Rien de nouveau à enregistrer."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Posts publiés sur Meta"
+          # Un push du site pendant l'exécution ferait échouer le nôtre : on rejoue
+          # notre commit par-dessus et on réessaie.
+          for essai in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" \
+              && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((essai * 5))
+          done
+          echo "::error::Impossible d'enregistrer posts/.etat.json — risque de republication."
+          exit 1
