@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 """Générateur du site « Une 2CV, mille histoires »."""
 import os, json
+from urllib.parse import quote
 
 OUT = os.path.dirname(os.path.abspath(__file__))
 DOMAIN = "https://une2cvmillehistoires.re"
+wa_link = lambda msg: "https://wa.me/262693828108?text=" + quote(msg)
 WA = "https://wa.me/262693828108?text=Bonjour%20Jonathan%20!%20Je%20souhaite%20%C3%A9crire%20une%20histoire%20avec%20la%202CV%20%F0%9F%8C%BF"
 WA_MARIAGE = "https://wa.me/262693828108?text=Bonjour%20!%20Nous%20nous%20marions%20et%20la%202CV%20nous%20fait%20r%C3%AAver%20%F0%9F%92%8D"
 WA_BALADE = "https://wa.me/262693828108?text=Bonjour%20Jonathan%20!%20Je%20souhaite%20r%C3%A9server%20une%20balade%20en%202CV%20%F0%9F%8C%BF"
@@ -475,12 +477,14 @@ balades_jsonld = {
   "image": D(IMG["sunset_couple"], 1200)
 }
 
-def bloc_balade(anchor, img, meta, titre, texte, alt):
+def bloc_balade(anchor, img, meta, titre, texte, alt, wa_msg):
+    """wa_msg : message WhatsApp pré-rempli propre à la formule, pour savoir
+    laquelle a été cliquée."""
     return """<div class="balade reveal" id="%s">
       <div class="imgbox"><img src="%s" alt="%s" loading="lazy"></div>
       <div class="corps"><span class="meta">%s</span><h3>%s</h3><p>%s</p>
       <a href="%s">Réserver cette balade</a></div>
-    </div>""" % (anchor, img, alt, meta, titre, texte, WA_BALADE)
+    </div>""" % (anchor, img, alt, meta, titre, texte, wa_link(wa_msg))
 
 balades_body = navbar("balades") + page_hero("sunset_couple", "Prendre le temps",
     "Balades en 2CV à La Réunion, avec chauffeur",
@@ -505,7 +509,7 @@ balades_body = navbar("balades") + page_hero("sunset_couple", "Prendre le temps"
   </div>
   <div class="inclus-liste reveal">
     <div class="col"><h3>Inclus dans toutes les balades</h3>
-      <ul><li>Chauffeur VTC agréé — vous profitez</li><li>Arrêts photos à volonté</li><li>Petites attentions à bord</li><li>Itinéraire adapté à vos envies</li><li>La bonne humeur de rigueur</li></ul></div>
+      <ul><li>Chauffeur VTC agréé — vous profitez</li><li>Jusqu'à 3 passagers par 2CV, 6 avec les deux voitures</li><li>Arrêts photos à volonté</li><li>Petites attentions à bord</li><li>Itinéraire adapté à vos envies</li><li>La bonne humeur de rigueur</li></ul></div>
     <div class="col"><h3>À prévoir</h3>
       <ul><li>Lunettes de soleil & chapeau</li><li>Un lainage pour les hauts ou l'aube</li><li>Votre plus beau sourire</li><li>Appareil photo (ou pas : je vous en prends !)</li></ul></div>
   </div>
@@ -517,22 +521,28 @@ balades_body = navbar("balades") + page_hero("sunset_couple", "Prendre le temps"
 """ % {
     "b1": bloc_balade("sunset", D(IMG["sunset_soizig"], 1000), "± 2h · L'incontournable", "Coucher de soleil & apéro",
         "Départ en fin d'après-midi, entre forêt et littoral, puis pause face à l'océan pour l'apéro au soleil couchant. Le classique qui ne déçoit jamais — idéal en amoureux ou entre amis.",
-        "Balade coucher de soleil en 2CV à La Réunion"),
+        "Balade coucher de soleil en 2CV à La Réunion",
+        "Bonjour Jonathan ! Je souhaite réserver la balade « Coucher de soleil & apéro » (± 2h) 🌿"),
     "b2": bloc_balade("brunch", D(IMG["interieur"], 1000), "± 3h · Gourmande", "Balade brunch",
         "Une virée matinale sur les belles routes de l'île, puis un brunch aux saveurs péi dans un joli spot. La douceur de vivre, version quatre roues et petites madeleines.",
-        "Balade brunch en 2CV à La Réunion"),
+        "Balade brunch en 2CV à La Réunion",
+        "Bonjour Jonathan ! Je souhaite réserver la « Balade brunch » (± 3h) 🌿"),
     "b3": bloc_balade("lever", D(IMG["grand1"], 1000), "± 5h · Grand spectacle", "Lever de soleil",
         "Départ avant l'aube, plaids et boissons chaudes à bord, pour accueillir le premier rayon depuis un beau point de vue. Redescente par les plus jolis détours, pause bouchons-samoussas en option.",
-        "Lever de soleil en 2CV à La Réunion"),
+        "Lever de soleil en 2CV à La Réunion",
+        "Bonjour Jonathan ! Je souhaite réserver la balade « Lever de soleil » (± 5h) 🌿"),
     "b4": bloc_balade("tour", D(IMG["creole"], 1000), "Journée · L'aventure", "Tour de l'île",
         "Le grand voyage : côtes sauvages, cascades, plages et villages créoles… Une journée entière à sillonner La Réunion en 2CV, avec autant d'arrêts que d'envies.",
-        "Tour de l'île de La Réunion en 2CV"),
+        "Tour de l'île de La Réunion en 2CV",
+        "Bonjour Jonathan ! Je souhaite réserver le « Tour de l'île » (à la journée) 🌿"),
     "b5": bloc_balade("theme", D(IMG["jonathan"], 1000), "Selon le thème", "Journées à thème",
-        "Anniversaire, EVJF/EVJG, surprise en amoureux, sortie entre amis, rallye photo… On imagine ensemble le fil rouge de la journée, je m'occupe du reste — jonglage en bonus si le cœur vous en dit.",
-        "Journée à thème en 2CV à La Réunion"),
+        "Anniversaire, EVJF/EVJG, surprise en amoureux, sortie entre amis, rallye photo… On imagine ensemble le fil rouge de la journée, je m'occupe du reste — jonglage en bonus si le cœur vous en dit. À deux voitures, Rosalie et Soizig emmènent jusqu'à 6 passagers.",
+        "Journée à thème en 2CV à La Réunion",
+        "Bonjour Jonathan ! Je souhaite organiser une journée à thème en 2CV 🌿"),
     "b6": bloc_balade("surmesure", D(IMG["grand2"], 1000), "À votre image", "Sur-mesure",
         "Un lieu qui vous est cher, une idée précise, un moment à marquer ? Racontez-moi votre rêve de balade : nous l'écrirons ensemble, au rythme qui vous ressemble.",
-        "Balade sur-mesure en 2CV à La Réunion"),
+        "Balade sur-mesure en 2CV à La Réunion",
+        "Bonjour Jonathan ! J'aimerais imaginer une balade sur-mesure en 2CV 🌿"),
     "btnwa": btn_wa("Je réserve une balade", WA_BALADE),
 } + cta_band("Une question, une", "envie ?", "Discuter sur WhatsApp", WA_BALADE)
 
