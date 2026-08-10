@@ -231,7 +231,7 @@ index_body = navbar() + """
     </div>
     <div class="balade reveal">
       <div class="imgbox"><img src="%(interieur)s" alt="À bord de la 2CV, ambiance cosy" loading="lazy"></div>
-      <div class="corps"><span class="meta">± 3h · dès 175 €</span><h3>Balade brunch</h3>
+      <div class="corps"><span class="meta">± 3h · 175 € pour 2</span><h3>Balade brunch</h3>
       <p>Une virée matinale sur les belles routes, puis un brunch aux saveurs péi dans un joli spot. Douceur de vivre garantie.</p>
       <a href="/balades.html#brunch">En savoir plus</a></div>
     </div>
@@ -249,7 +249,7 @@ index_body = navbar() + """
     </div>
     <div class="balade reveal">
       <div class="imgbox"><img src="%(jonathan)s" alt="Journée à thème en 2CV" loading="lazy"></div>
-      <div class="corps"><span class="meta">Journée · 680 € à deux voitures</span><h3>Journées à thème</h3>
+      <div class="corps"><span class="meta">Journée · 450 €</span><h3>Journées à thème</h3>
       <p>Anniversaires, EVJF/EVJG, surprises en amoureux, sorties entre amis… On imagine ensemble le fil rouge.</p>
       <a href="/balades.html#theme">En savoir plus</a></div>
     </div>
@@ -515,7 +515,7 @@ balades_body = navbar("balades") + page_hero("sunset_couple", "Prendre le temps"
   </div>
   <div class="note-balades reveal">
     %(btnwa)s
-    <p>Tarifs par voiture, jusqu'à 3 passagers, au départ de l'Ouest — chauffeur, carburant et déplacement compris. Supplément de 40 € pour le Sud et le Nord, 70 € pour l'Est. Le règlement se fait à la réservation.</p>
+    <p>Tarifs par voiture, jusqu'à 3 passagers, au départ de l'Ouest — chauffeur, carburant et déplacement compris. Sur les balades courtes, comptez 40 € de supplément pour le Sud et le Nord, 70 € pour l'Est. Les journées à thème se font dans l'Ouest, le Sud et le Nord ; l'Est sur demande. Le règlement se fait à la réservation.</p>
   </div>
 </section>
 """ % {
@@ -523,7 +523,7 @@ balades_body = navbar("balades") + page_hero("sunset_couple", "Prendre le temps"
         "Départ en fin d'après-midi, entre forêt et littoral, puis pause face à l'océan pour l'apéro au soleil couchant. Le classique qui ne déçoit jamais — idéal en amoureux ou entre amis.",
         "Balade coucher de soleil en 2CV à La Réunion",
         "Bonjour Jonathan ! Je souhaite réserver la balade « Coucher de soleil & apéro » (± 2h) 🌿"),
-    "b2": bloc_balade("brunch", D(IMG["interieur"], 1000), "± 3h · dès 175 €", "Balade brunch",
+    "b2": bloc_balade("brunch", D(IMG["interieur"], 1000), "± 3h · 175 € pour 2", "Balade brunch",
         "Une virée matinale sur les belles routes de l'île, puis un brunch aux saveurs péi dans un joli spot. La douceur de vivre, version quatre roues et petites madeleines.",
         "Balade brunch en 2CV à La Réunion",
         "Bonjour Jonathan ! Je souhaite réserver la « Balade brunch » (± 3h) 🌿"),
@@ -535,8 +535,8 @@ balades_body = navbar("balades") + page_hero("sunset_couple", "Prendre le temps"
         "Le grand voyage : côtes sauvages, cascades, plages et villages créoles… Une journée entière à sillonner La Réunion en 2CV, avec autant d'arrêts que d'envies.",
         "Tour de l'île de La Réunion en 2CV",
         "Bonjour Jonathan ! Je souhaite réserver le « Tour de l'île » (à la journée) 🌿"),
-    "b5": bloc_balade("theme", D(IMG["jonathan"], 1000), "Journée · 680 € à deux voitures", "Journées à thème",
-        "Anniversaire, EVJF/EVJG, surprise en amoureux, sortie entre amis, rallye photo… On imagine ensemble le fil rouge de la journée, je m'occupe du reste — jonglage en bonus si le cœur vous en dit. À deux voitures, Rosalie et Soizig emmènent jusqu'à 6 passagers.",
+    "b5": bloc_balade("theme", D(IMG["jonathan"], 1000), "Journée · 450 €", "Journées à thème",
+        "Anniversaire, EVJF/EVJG, surprise en amoureux, sortie entre amis, rallye photo… On imagine ensemble le fil rouge de la journée, je m'occupe du reste — jonglage en bonus si le cœur vous en dit. 450 € la journée, dans l'Ouest, le Sud ou le Nord. À deux voitures, Rosalie et Soizig emmènent jusqu'à 6 passagers : 680 € la journée.",
         "Journée à thème en 2CV à La Réunion",
         "Bonjour Jonathan ! Je souhaite organiser une journée à thème en 2CV 🌿"),
     "b6": bloc_balade("surmesure", D(IMG["grand2"], 1000), "65 €/h · 2h minimum", "Sur-mesure",
@@ -559,7 +559,7 @@ shoot_body = navbar("shooting") + page_hero("shooting_nb", "Lumière !",
 <section>
   <div class="prose reveal">
     <h2>Un décor qui roule</h2>
-    <p>Photographes, vidéastes, réalisateurs : une <strong>2CV de collection à La Réunion</strong>, c'est un décor à elle toute seule. Lignes rondes, chromes, capot ouvert sur l'océan — elle donne du caractère à un shooting couple ou grossesse, une séance mode, un clip, une publicité ou un film. Je me déplace sur toute l'île avec la voiture, et je reste sur place pendant votre séance : la 2CV est toujours accompagnée de son chauffeur.</p>
+    <p>Photographes, vidéastes, réalisateurs : une <strong>2CV de collection à La Réunion</strong>, c'est un décor à elle toute seule. Lignes rondes, chromes, capot ouvert sur l'océan — elle donne du caractère à un shooting couple ou grossesse, une séance mode, un clip, une publicité ou un film. Je me déplace sur toute l'île avec la voiture, et je reste sur place pendant votre séance : la 2CV est toujours accompagnée de son chauffeur. Le tarif est simple : <strong>65 € de l'heure, deux heures minimum</strong>, voiture et chauffeur compris. Au-delà d'une demi-journée ou pour un dispositif particulier, écrivez-moi et je vous fais une proposition.</p>
     <h2>Pour vos évènements</h2>
     <p>Anniversaires, fêtes de famille, salons, inaugurations, marchés et festivals : la 2CV attire tous les regards — en exposition, en arrivée surprise ou en séance photo souvenir pour vos invités. Et comme je suis aussi <strong>artiste jongleur et danseur</strong>, l'animation peut suivre : jonglage pour les enfants, spectacle de feu, numéro de slackline sur le toit de Rosalie… du jamais-vu dans un évènement.</p>
   </div>
