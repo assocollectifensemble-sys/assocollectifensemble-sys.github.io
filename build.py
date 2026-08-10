@@ -225,37 +225,37 @@ index_body = navbar() + """
   <div class="balades">
     <div class="balade reveal">
       <div class="imgbox"><img src="%(sunset_soizig)s" alt="Coucher de soleil en 2CV à La Réunion" loading="lazy"></div>
-      <div class="corps"><span class="meta">± 2h · L'incontournable</span><h3>Coucher de soleil & apéro</h3>
+      <div class="corps"><span class="meta">± 2h · 125 €</span><h3>Coucher de soleil & apéro</h3>
       <p>Entre forêt et littoral, puis pause face à l'océan pour l'apéro au soleil couchant. Le classique qui ne déçoit jamais.</p>
       <a href="/balades.html#sunset">En savoir plus</a></div>
     </div>
     <div class="balade reveal">
       <div class="imgbox"><img src="%(interieur)s" alt="À bord de la 2CV, ambiance cosy" loading="lazy"></div>
-      <div class="corps"><span class="meta">± 3h · Gourmande</span><h3>Balade brunch</h3>
+      <div class="corps"><span class="meta">± 3h · dès 175 €</span><h3>Balade brunch</h3>
       <p>Une virée matinale sur les belles routes, puis un brunch aux saveurs péi dans un joli spot. Douceur de vivre garantie.</p>
       <a href="/balades.html#brunch">En savoir plus</a></div>
     </div>
     <div class="balade reveal">
       <div class="imgbox"><img src="%(grand1)s" alt="Lever de soleil en 2CV" loading="lazy"></div>
-      <div class="corps"><span class="meta">± 5h · Grand spectacle</span><h3>Lever de soleil</h3>
+      <div class="corps"><span class="meta">± 3h · 190 €</span><h3>Lever de soleil</h3>
       <p>Départ avant l'aube, plaids et boissons chaudes à bord, pour accueillir le soleil depuis un beau point de vue.</p>
       <a href="/balades.html#lever">En savoir plus</a></div>
     </div>
     <div class="balade reveal">
       <div class="imgbox"><img src="%(creole)s" alt="Tour de l'île en 2CV" loading="lazy"></div>
-      <div class="corps"><span class="meta">Journée · L'aventure</span><h3>Tour de l'île</h3>
+      <div class="corps"><span class="meta">Journée · 550 €</span><h3>Tour de l'île</h3>
       <p>Côtes sauvages, cascades, plages et villages… Une journée entière à sillonner La Réunion en 2CV.</p>
       <a href="/balades.html#tour">En savoir plus</a></div>
     </div>
     <div class="balade reveal">
       <div class="imgbox"><img src="%(jonathan)s" alt="Journée à thème en 2CV" loading="lazy"></div>
-      <div class="corps"><span class="meta">Selon le thème</span><h3>Journées à thème</h3>
+      <div class="corps"><span class="meta">Journée · 680 € à deux voitures</span><h3>Journées à thème</h3>
       <p>Anniversaires, EVJF/EVJG, surprises en amoureux, sorties entre amis… On imagine ensemble le fil rouge.</p>
       <a href="/balades.html#theme">En savoir plus</a></div>
     </div>
     <div class="balade reveal">
       <div class="imgbox"><img src="%(grand2)s" alt="Balade sur-mesure en 2CV" loading="lazy"></div>
-      <div class="corps"><span class="meta">À votre image</span><h3>Sur-mesure</h3>
+      <div class="corps"><span class="meta">65 €/h · 2h minimum</span><h3>Sur-mesure</h3>
       <p>Un lieu qui vous est cher, une idée précise, un moment à marquer ? Racontez-moi votre rêve de balade.</p>
       <a href="/balades.html#surmesure">En savoir plus</a></div>
     </div>
@@ -327,7 +327,7 @@ index_body = navbar() + """
     <details><summary>Ma robe de mariée va-t-elle rentrer dans la 2CV ?</summary><div class="rep">Oui ! Même les robes les plus volumineuses trouvent leur place — c'est un petit rituel que je maîtrise parfaitement, et le toit ouvrant aide beaucoup. <span class="video-tag">🎬 Vidéo : une grande robe embarque à bord</span></div></details>
     <details><summary>La 2CV peut-elle monter dans les hauts ?</summary><div class="rep">Oui : elle grimpe sans rougir les grandes côtes et les hauts de l'île, de quoi célébrer avec la vue. Pour les routes de montagne les plus longues, on regarde ensemble le trajet et je vous dis simplement ce qui est possible.</div></details>
     <details><summary>Est-ce que je conduis moi-même ?</summary><div class="rep">Non — et c'est tant mieux : toutes les prestations sont <strong>avec chauffeur VTC agréé</strong>. Pas de permis à fournir, pas de caution, pas de stress.</div></details>
-    <details><summary>Combien ça coûte ?</summary><div class="rep">Chaque événement a son déroulé, ses horaires, ses trajets — c'est pour cela qu'il n'y a pas de tarif unique. Écrivez-moi sur WhatsApp avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement.</div></details>
+    <details><summary>Combien ça coûte ?</summary><div class="rep">Les balades sont à prix fixe, par voiture et jusqu'à 3 passagers : 125 € le coucher de soleil (± 2h), 190 € le lever de soleil (± 3h), 550 € le tour de l'île. Chauffeur, carburant et déplacement compris. Pour un mariage, le tarif dépend de la zone et de la durée de présence : écrivez-moi sur WhatsApp avec votre date et votre projet, vous recevrez une proposition claire et rapide, sans engagement.</div></details>
   </div>
   <p class="centre reveal" style="margin-top:32px"><a class="btn btn-brun" href="/faq.html">Toutes les questions</a></p>
 </section>
@@ -515,31 +515,31 @@ balades_body = navbar("balades") + page_hero("sunset_couple", "Prendre le temps"
   </div>
   <div class="note-balades reveal">
     %(btnwa)s
-    <p>Les tarifs varient selon le déroulé, la durée et le lieu de départ — réponse rapide et sans engagement.</p>
+    <p>Tarifs par voiture, jusqu'à 3 passagers, au départ de l'Ouest — chauffeur, carburant et déplacement compris. Supplément de 40 € pour le Sud et le Nord, 70 € pour l'Est. Le règlement se fait à la réservation.</p>
   </div>
 </section>
 """ % {
-    "b1": bloc_balade("sunset", D(IMG["sunset_soizig"], 1000), "± 2h · L'incontournable", "Coucher de soleil & apéro",
+    "b1": bloc_balade("sunset", D(IMG["sunset_soizig"], 1000), "± 2h · 125 €", "Coucher de soleil & apéro",
         "Départ en fin d'après-midi, entre forêt et littoral, puis pause face à l'océan pour l'apéro au soleil couchant. Le classique qui ne déçoit jamais — idéal en amoureux ou entre amis.",
         "Balade coucher de soleil en 2CV à La Réunion",
         "Bonjour Jonathan ! Je souhaite réserver la balade « Coucher de soleil & apéro » (± 2h) 🌿"),
-    "b2": bloc_balade("brunch", D(IMG["interieur"], 1000), "± 3h · Gourmande", "Balade brunch",
+    "b2": bloc_balade("brunch", D(IMG["interieur"], 1000), "± 3h · dès 175 €", "Balade brunch",
         "Une virée matinale sur les belles routes de l'île, puis un brunch aux saveurs péi dans un joli spot. La douceur de vivre, version quatre roues et petites madeleines.",
         "Balade brunch en 2CV à La Réunion",
         "Bonjour Jonathan ! Je souhaite réserver la « Balade brunch » (± 3h) 🌿"),
-    "b3": bloc_balade("lever", D(IMG["grand1"], 1000), "± 5h · Grand spectacle", "Lever de soleil",
+    "b3": bloc_balade("lever", D(IMG["grand1"], 1000), "± 3h · 190 €", "Lever de soleil",
         "Départ avant l'aube, plaids et boissons chaudes à bord, pour accueillir le premier rayon depuis un beau point de vue. Redescente par les plus jolis détours, pause bouchons-samoussas en option.",
         "Lever de soleil en 2CV à La Réunion",
         "Bonjour Jonathan ! Je souhaite réserver la balade « Lever de soleil » (± 5h) 🌿"),
-    "b4": bloc_balade("tour", D(IMG["creole"], 1000), "Journée · L'aventure", "Tour de l'île",
+    "b4": bloc_balade("tour", D(IMG["creole"], 1000), "Journée · 550 €", "Tour de l'île",
         "Le grand voyage : côtes sauvages, cascades, plages et villages créoles… Une journée entière à sillonner La Réunion en 2CV, avec autant d'arrêts que d'envies.",
         "Tour de l'île de La Réunion en 2CV",
         "Bonjour Jonathan ! Je souhaite réserver le « Tour de l'île » (à la journée) 🌿"),
-    "b5": bloc_balade("theme", D(IMG["jonathan"], 1000), "Selon le thème", "Journées à thème",
+    "b5": bloc_balade("theme", D(IMG["jonathan"], 1000), "Journée · 680 € à deux voitures", "Journées à thème",
         "Anniversaire, EVJF/EVJG, surprise en amoureux, sortie entre amis, rallye photo… On imagine ensemble le fil rouge de la journée, je m'occupe du reste — jonglage en bonus si le cœur vous en dit. À deux voitures, Rosalie et Soizig emmènent jusqu'à 6 passagers.",
         "Journée à thème en 2CV à La Réunion",
         "Bonjour Jonathan ! Je souhaite organiser une journée à thème en 2CV 🌿"),
-    "b6": bloc_balade("surmesure", D(IMG["grand2"], 1000), "À votre image", "Sur-mesure",
+    "b6": bloc_balade("surmesure", D(IMG["grand2"], 1000), "65 €/h · 2h minimum", "Sur-mesure",
         "Un lieu qui vous est cher, une idée précise, un moment à marquer ? Racontez-moi votre rêve de balade : nous l'écrirons ensemble, au rythme qui vous ressemble.",
         "Balade sur-mesure en 2CV à La Réunion",
         "Bonjour Jonathan ! J'aimerais imaginer une balade sur-mesure en 2CV 🌿"),
@@ -666,7 +666,7 @@ faqs = [
  ("Combien de personnes peuvent monter à bord ?",
   "Jusqu'à 3 passagers par 2CV en plus du chauffeur. Et pour les grands cortèges, Rosalie et Soizig peuvent rouler ensemble !"),
  ("Combien coûte une voiture de mariage ou une balade en 2CV à La Réunion ?",
-  "Chaque événement a son déroulé, ses horaires, ses trajets — c'est pour cela qu'il n'y a pas de tarif unique. Écrivez-nous sur WhatsApp au 0693 82 81 08 avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement."),
+  "Les balades sont à prix fixe, par voiture et jusqu'à 3 passagers, au départ de l'Ouest : 125 € le coucher de soleil et apéro (± 2h), 190 € le lever de soleil (± 3h), 550 € le tour de l'île à la journée, 65 € de l'heure en sur-mesure. Chauffeur, carburant et déplacement compris ; comptez 40 € de supplément pour le Sud et le Nord, 70 € pour l'Est. Pour un mariage, le tarif dépend de la zone et de la durée de présence de la voiture : écrivez-nous sur WhatsApp au 0693 82 81 08 avec votre date et votre projet, vous recevrez une proposition claire et rapide, sans engagement."),
  ("Peut-on décorer la voiture ?",
   "Avec plaisir : rubans, fleurs, panneaux personnalisés… Vous pouvez confier la décoration florale à votre fleuriste, ou nous vous conseillons le nôtre, qui connaît Rosalie par cœur."),
  ("Et s'il pleut ?",
