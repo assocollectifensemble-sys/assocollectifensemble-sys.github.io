@@ -225,14 +225,14 @@ index_body = navbar() + """
   <div class="balades">
     <div class="balade reveal">
       <div class="imgbox"><img src="%(sunset_soizig)s" alt="Coucher de soleil en 2CV à La Réunion" loading="lazy"></div>
-      <div class="corps"><span class="meta">± 2h · 125 €</span><h3>Coucher de soleil & apéro</h3>
+      <div class="corps"><span class="meta">± 2h30 · 150 €</span><h3>Coucher de soleil & apéro</h3>
       <p>Entre forêt et littoral, puis pause face à l'océan pour l'apéro au soleil couchant. Le classique qui ne déçoit jamais.</p>
       <a href="/balades.html#sunset">En savoir plus</a></div>
     </div>
     <div class="balade reveal">
       <div class="imgbox"><img src="%(interieur)s" alt="À bord de la 2CV, ambiance cosy" loading="lazy"></div>
-      <div class="corps"><span class="meta">± 3h · 175 € pour 2</span><h3>Balade brunch</h3>
-      <p>Une virée matinale sur les belles routes, puis un brunch aux saveurs péi dans un joli spot. Douceur de vivre garantie.</p>
+      <div class="corps"><span class="meta">± 3h · 175 € pour 2</span><h3>Balade brunch péï</h3>
+      <p>Une virée matinale sur les belles routes, puis un coffret de ti gato péï dans un joli spot. Douceur de vivre garantie.</p>
       <a href="/balades.html#brunch">En savoir plus</a></div>
     </div>
     <div class="balade reveal">
@@ -327,7 +327,7 @@ index_body = navbar() + """
     <details><summary>Ma robe de mariée va-t-elle rentrer dans la 2CV ?</summary><div class="rep">Oui ! Même les robes les plus volumineuses trouvent leur place — c'est un petit rituel que je maîtrise parfaitement, et le toit ouvrant aide beaucoup. <span class="video-tag">🎬 Vidéo : une grande robe embarque à bord</span></div></details>
     <details><summary>La 2CV peut-elle monter dans les hauts ?</summary><div class="rep">Oui : elle grimpe sans rougir les grandes côtes et les hauts de l'île, de quoi célébrer avec la vue. Pour les routes de montagne les plus longues, on regarde ensemble le trajet et je vous dis simplement ce qui est possible.</div></details>
     <details><summary>Est-ce que je conduis moi-même ?</summary><div class="rep">Non — et c'est tant mieux : toutes les prestations sont <strong>avec chauffeur VTC agréé</strong>. Pas de permis à fournir, pas de caution, pas de stress.</div></details>
-    <details><summary>Combien ça coûte ?</summary><div class="rep">Les balades sont à prix fixe, par voiture et jusqu'à 3 passagers : 125 € le coucher de soleil (± 2h), 190 € le lever de soleil (± 3h), 550 € le tour de l'île. Chauffeur, carburant et déplacement compris. Pour un mariage, le tarif dépend de la zone et de la durée de présence : écrivez-moi sur WhatsApp avec votre date et votre projet, vous recevrez une proposition claire et rapide, sans engagement.</div></details>
+    <details><summary>Combien ça coûte ?</summary><div class="rep">Les balades sont à prix fixe, par voiture et jusqu'à 3 passagers : 150 € le coucher de soleil et apéro (± 2h30), 175 € la balade brunch péï (± 3h), 190 € le lever de soleil (± 3h), 450 € la journée à thème, 550 € le tour de l'île. Chauffeur, carburant et déplacement compris ; nous roulons dans l'Ouest et le Sud, le Nord sur demande. Pour un mariage, le tarif dépend de la zone et de la durée de présence : écrivez-moi sur WhatsApp avec votre date et votre projet, vous recevrez une proposition claire et rapide, sans engagement.</div></details>
   </div>
   <p class="centre reveal" style="margin-top:32px"><a class="btn btn-brun" href="/faq.html">Toutes les questions</a></p>
 </section>
@@ -515,16 +515,16 @@ balades_body = navbar("balades") + page_hero("sunset_couple", "Prendre le temps"
   </div>
   <div class="note-balades reveal">
     %(btnwa)s
-    <p>Tarifs par voiture, jusqu'à 3 passagers, au départ de l'Ouest — chauffeur, carburant et déplacement compris. Sur les balades courtes, comptez 40 € de supplément pour le Sud et le Nord, 70 € pour l'Est. Les journées à thème se font dans l'Ouest, le Sud et le Nord ; l'Est sur demande. Le règlement se fait à la réservation.</p>
+    <p>Tarifs par voiture, jusqu'à 3 passagers — chauffeur, carburant et déplacement compris. Rosalie et Soizig roulent dans l'Ouest et le Sud ; le Nord sur demande. Le règlement se fait à la réservation.</p>
   </div>
 </section>
 """ % {
-    "b1": bloc_balade("sunset", D(IMG["sunset_soizig"], 1000), "± 2h · 125 €", "Coucher de soleil & apéro",
+    "b1": bloc_balade("sunset", D(IMG["sunset_soizig"], 1000), "± 2h30 · 150 €", "Coucher de soleil & apéro",
         "Départ en fin d'après-midi, entre forêt et littoral, puis pause face à l'océan pour l'apéro au soleil couchant. Le classique qui ne déçoit jamais — idéal en amoureux ou entre amis.",
         "Balade coucher de soleil en 2CV à La Réunion",
         "Bonjour Jonathan ! Je souhaite réserver la balade « Coucher de soleil & apéro » (± 2h) 🌿"),
-    "b2": bloc_balade("brunch", D(IMG["interieur"], 1000), "± 3h · 175 € pour 2", "Balade brunch",
-        "Une virée matinale sur les belles routes de l'île, puis un brunch aux saveurs péi dans un joli spot. La douceur de vivre, version quatre roues et petites madeleines.",
+    "b2": bloc_balade("brunch", D(IMG["interieur"], 1000), "± 3h · 175 € pour 2", "Balade brunch péï",
+        "Une virée matinale sur les belles routes de l'île, puis pause gourmande dans un joli spot : un coffret de ti gato péï artisanaux et de confitures maison, avec les boissons chaudes préparées à bord. La douceur de vivre, version quatre roues.",
         "Balade brunch en 2CV à La Réunion",
         "Bonjour Jonathan ! Je souhaite réserver la « Balade brunch » (± 3h) 🌿"),
     "b3": bloc_balade("lever", D(IMG["grand1"], 1000), "± 3h · 190 €", "Lever de soleil",
@@ -536,7 +536,7 @@ balades_body = navbar("balades") + page_hero("sunset_couple", "Prendre le temps"
         "Tour de l'île de La Réunion en 2CV",
         "Bonjour Jonathan ! Je souhaite réserver le « Tour de l'île » (à la journée) 🌿"),
     "b5": bloc_balade("theme", D(IMG["jonathan"], 1000), "Journée · 450 €", "Journées à thème",
-        "Anniversaire, EVJF/EVJG, surprise en amoureux, sortie entre amis, rallye photo… On imagine ensemble le fil rouge de la journée, je m'occupe du reste — jonglage en bonus si le cœur vous en dit. 450 € la journée, dans l'Ouest, le Sud ou le Nord. À deux voitures, Rosalie et Soizig emmènent jusqu'à 6 passagers : 680 € la journée.",
+        "Anniversaire, EVJF/EVJG, surprise en amoureux, sortie entre amis, rallye photo… On imagine ensemble le fil rouge de la journée, je m'occupe du reste — jonglage en bonus si le cœur vous en dit. 450 € la journée, dans l'Ouest et le Sud. À deux voitures, Rosalie et Soizig emmènent jusqu'à 6 passagers : 680 € la journée.",
         "Journée à thème en 2CV à La Réunion",
         "Bonjour Jonathan ! Je souhaite organiser une journée à thème en 2CV 🌿"),
     "b6": bloc_balade("surmesure", D(IMG["grand2"], 1000), "65 €/h · 2h minimum", "Sur-mesure",
@@ -666,7 +666,7 @@ faqs = [
  ("Combien de personnes peuvent monter à bord ?",
   "Jusqu'à 3 passagers par 2CV en plus du chauffeur. Et pour les grands cortèges, Rosalie et Soizig peuvent rouler ensemble !"),
  ("Combien coûte une voiture de mariage ou une balade en 2CV à La Réunion ?",
-  "Les balades sont à prix fixe, par voiture et jusqu'à 3 passagers, au départ de l'Ouest : 125 € le coucher de soleil et apéro (± 2h), 190 € le lever de soleil (± 3h), 550 € le tour de l'île à la journée, 65 € de l'heure en sur-mesure. Chauffeur, carburant et déplacement compris ; comptez 40 € de supplément pour le Sud et le Nord, 70 € pour l'Est. Pour un mariage, le tarif dépend de la zone et de la durée de présence de la voiture : écrivez-nous sur WhatsApp au 0693 82 81 08 avec votre date et votre projet, vous recevrez une proposition claire et rapide, sans engagement."),
+  "Les balades sont à prix fixe, par voiture et jusqu'à 3 passagers : 150 € le coucher de soleil et apéro (± 2h30), 175 € la balade brunch péï pour deux (± 3h), 190 € le lever de soleil (± 3h), 450 € la journée à thème, 550 € le tour de l'île, 65 € de l'heure en sur-mesure. Chauffeur, carburant et déplacement compris ; Rosalie et Soizig roulent dans l'Ouest et le Sud, le Nord sur demande. Pour un mariage, le tarif dépend de la zone et de la durée de présence de la voiture : écrivez-nous sur WhatsApp au 0693 82 81 08 avec votre date et votre projet, vous recevrez une proposition claire et rapide, sans engagement."),
  ("Peut-on décorer la voiture ?",
   "Avec plaisir : rubans, fleurs, panneaux personnalisés… Vous pouvez confier la décoration florale à votre fleuriste, ou nous vous conseillons le nôtre, qui connaît Rosalie par cœur."),
  ("Et s'il pleut ?",
