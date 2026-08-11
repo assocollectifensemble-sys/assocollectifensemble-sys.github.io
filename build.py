@@ -162,7 +162,7 @@ index_body = navbar() + """
 </header>
 
 <div class="marquee"><div class="track" id="mq">
-  <span>Mariages</span>·<span>EVJF & EVJG</span>·<span>Balades coucher de soleil</span>·<span>Brunch</span>·<span>Lever de soleil</span>·<span>Shootings</span>·<span>Cinéma</span>·<span>Spectacles</span>·<span>Chauffeur VTC agréé</span>·
+  <span>Mariages</span>·<span>EVJF & EVJG</span>·<span>Balades coucher de soleil</span>·<span>Brunch péï</span>·<span>Lever de soleil</span>·<span>EVJF & EVJG</span>·<span>Shootings</span>·<span>Cinéma</span>·<span>Spectacles</span>·<span>Chauffeur VTC agréé</span>·
 </div></div>
 
 <section id="prestations" class="doux">
@@ -240,6 +240,12 @@ index_body = navbar() + """
       <div class="corps"><span class="meta">± 3h · 160 €</span><h3>Lever de soleil</h3>
       <p>Départ avant l'aube, plaids et boissons chaudes à bord, pour accueillir le soleil depuis un beau point de vue.</p>
       <a href="/balades.html#lever">En savoir plus</a></div>
+    </div>
+    <div class="balade reveal">
+      <div class="imgbox"><img src="%(creole)s" alt="EVJF en 2CV à La Réunion" loading="lazy"></div>
+      <div class="corps"><span class="meta">½ journée · 250 € par voiture</span><h3>Demi-journée EVJF & EVJG</h3>
+      <p>Quatre heures de virée, arrêts photos, jeu de piste et jonglage en bonus. De 3 à 6 personnes.</p>
+      <a href="/balades.html#evjf">En savoir plus</a></div>
     </div>
     <div class="balade reveal">
       <div class="imgbox"><img src="%(jonathan)s" alt="Journée à thème en 2CV" loading="lazy"></div>
@@ -321,7 +327,7 @@ index_body = navbar() + """
     <details><summary>Ma robe de mariée va-t-elle rentrer dans la 2CV ?</summary><div class="rep">Oui ! Même les robes les plus volumineuses trouvent leur place — c'est un petit rituel que je maîtrise parfaitement, et le toit ouvrant aide beaucoup. <span class="video-tag">🎬 Vidéo : une grande robe embarque à bord</span></div></details>
     <details><summary>La 2CV peut-elle monter dans les hauts ?</summary><div class="rep">Oui : elle grimpe sans rougir les grandes côtes et les hauts de l'île, de quoi célébrer avec la vue. Pour les routes de montagne les plus longues, on regarde ensemble le trajet et je vous dis simplement ce qui est possible.</div></details>
     <details><summary>Est-ce que je conduis moi-même ?</summary><div class="rep">Non — et c'est tant mieux : toutes les prestations sont <strong>avec chauffeur VTC agréé</strong>. Pas de permis à fournir, pas de caution, pas de stress.</div></details>
-    <details><summary>Combien ça coûte ?</summary><div class="rep">Les balades sont à prix fixe, par voiture et jusqu'à 3 passagers : 150 € le coucher de soleil et apéro (± 2h30), 175 € la balade brunch péï (± 3h), 160 € le lever de soleil (± 3h), 450 € la journée à thème. Chauffeur, carburant et déplacement compris ; nous roulons dans l'Ouest et le Sud, le Nord sur demande. Pour un mariage, le tarif dépend de la zone et de la durée de présence : écrivez-moi sur WhatsApp avec votre date et votre projet, vous recevrez une proposition claire et rapide, sans engagement.</div></details>
+    <details><summary>Combien ça coûte ?</summary><div class="rep">Les balades sont à prix fixe, par voiture et jusqu'à 3 passagers : 150 € le coucher de soleil et apéro (± 2h30), 175 € la balade brunch péï (± 3h), 160 € le lever de soleil (± 3h), 250 € la demi-journée EVJF ou EVJG par voiture, 450 € la journée à thème. Chauffeur, carburant et déplacement compris ; nous roulons dans l'Ouest et le Sud, le Nord sur demande. Pour un mariage, le tarif dépend de la zone et de la durée de présence : écrivez-moi sur WhatsApp avec votre date et votre projet, vous recevrez une proposition claire et rapide, sans engagement.</div></details>
   </div>
   <p class="centre reveal" style="margin-top:32px"><a class="btn btn-brun" href="/faq.html">Toutes les questions</a></p>
 </section>
@@ -497,6 +503,7 @@ balades_body = navbar("balades") + page_hero("sunset_couple", "Prendre le temps"
     %(b1)s
     %(b2)s
     %(b3)s
+    %(b4)s
     %(b5)s
     %(b6)s
   </div>
@@ -524,6 +531,10 @@ balades_body = navbar("balades") + page_hero("sunset_couple", "Prendre le temps"
         "Départ avant l'aube, plaids et boissons chaudes à bord, pour accueillir le premier rayon depuis un beau point de vue. Redescente par les plus jolis détours, pause bouchons-samoussas en option.",
         "Lever de soleil en 2CV à La Réunion",
         "Bonjour Jonathan ! Je souhaite réserver la balade « Lever de soleil » (± 5h) 🌿"),
+    "b4": bloc_balade("evjf", D(IMG["creole"], 1000), "½ journée · 250 € par voiture", "Demi-journée EVJF & EVJG",
+        "L'enterrement de vie de jeune fille ou de garçon qui ne ressemble à aucun autre : quatre heures de virée en 2CV, arrêts photos, jeu de piste ou rallye si vous voulez, et le jonglage en bonus. 250 € par voiture, de 3 à 6 personnes selon qu'on sort Rosalie seule ou les deux ensemble.",
+        "EVJF et EVJG en 2CV à La Réunion",
+        "Bonjour Jonathan ! Je souhaite organiser une demi-journée EVJF / EVJG en 2CV 🌿"),
     "b5": bloc_balade("theme", D(IMG["jonathan"], 1000), "Journée · 450 €", "Journées à thème",
         "Anniversaire, EVJF/EVJG, surprise en amoureux, sortie entre amis, rallye photo… On imagine ensemble le fil rouge de la journée, je m'occupe du reste — jonglage en bonus si le cœur vous en dit. 450 € la journée, dans l'Ouest et le Sud. À deux voitures, Rosalie et Soizig emmènent jusqu'à 6 passagers : 750 € la journée.",
         "Journée à thème en 2CV à La Réunion",
@@ -655,7 +666,7 @@ faqs = [
  ("Combien de personnes peuvent monter à bord ?",
   "Jusqu'à 3 passagers par 2CV en plus du chauffeur. Et pour les grands cortèges, Rosalie et Soizig peuvent rouler ensemble !"),
  ("Combien coûte une voiture de mariage ou une balade en 2CV à La Réunion ?",
-  "Les balades sont à prix fixe, par voiture et jusqu'à 3 passagers : 150 € le coucher de soleil et apéro (± 2h30), 175 € la balade brunch péï pour deux (± 3h), 160 € le lever de soleil (± 3h), 450 € la journée à thème à une voiture et 750 € à deux voitures, 60 € de l'heure en sur-mesure. Chauffeur, carburant et déplacement compris ; Rosalie et Soizig roulent dans l'Ouest et le Sud, le Nord sur demande. Pour un mariage, le tarif dépend de la zone et de la durée de présence de la voiture : écrivez-nous sur WhatsApp au 0693 82 81 08 avec votre date et votre projet, vous recevrez une proposition claire et rapide, sans engagement."),
+  "Les balades sont à prix fixe, par voiture et jusqu'à 3 passagers : 150 € le coucher de soleil et apéro (± 2h30), 175 € la balade brunch péï pour deux (± 3h), 160 € le lever de soleil (± 3h), 250 € la demi-journée EVJF ou EVJG par voiture, 450 € la journée à thème à une voiture et 750 € à deux voitures, 60 € de l'heure en sur-mesure. Chauffeur, carburant et déplacement compris ; Rosalie et Soizig roulent dans l'Ouest et le Sud, le Nord sur demande. Pour un mariage, le tarif dépend de la zone et de la durée de présence de la voiture : écrivez-nous sur WhatsApp au 0693 82 81 08 avec votre date et votre projet, vous recevrez une proposition claire et rapide, sans engagement."),
  ("Peut-on décorer la voiture ?",
   "Avec plaisir : rubans, fleurs, panneaux personnalisés… Vous pouvez confier la décoration florale à votre fleuriste, ou nous vous conseillons le nôtre, qui connaît Rosalie par cœur."),
  ("Et s'il pleut ?",
