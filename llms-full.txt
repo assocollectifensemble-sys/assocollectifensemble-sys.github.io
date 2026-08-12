@@ -4,7 +4,7 @@
 > voiture de mariage, EVJF/EVJG, balades, shootings et évènements.
 > Aucune location sans chauffeur.
 > Fiche courte : https://une2cvmillehistoires.re/llms.txt
-> Généré le 9 août 2026 à partir des pages publiées.
+> Généré le 12 août 2026 à partir des pages publiées.
 
 
 ---
@@ -12,28 +12,28 @@
 ## Accueil
 Source : https://une2cvmillehistoires.re/
 
+🎷
 Il était une fois…
 Voiture de mariage · Balades · Shootings en 2CV — La Réunion
 Écrire votre histoire
 Découvrir
-Découvrir
-Mariages · EVJF & EVJG · Balades coucher de soleil · Brunch · Tour de l'île · Shootings · Cinéma · Spectacles · Projet associatif ·
+Mariages · EVJF & EVJG · Balades coucher de soleil · Brunch · Shootings · Cinéma · Spectacles · Projet associatif ·
 Les possibilités
 Quelle histoire écrirons-nous ensemble ?
 Mariage
 Cortège & sortie de cérémonie · Elopement · Demande en mariage
 Découvrir
 EVJF & EVJG
-Virée entre copines ou copains · Jeu de piste · Chasse au trésor
+Virée entre copines ou copains · Jeux lontan · Chasse au trésor
 Voir les idées
 Balades
-Coucher de soleil · Brunch · Tour de l'île · Journées à thème
+Coucher de soleil · Brunch péï · Lever de soleil · Journée à thème
 Choisir sa balade
 Shootings
 Photo · Cinéma · Clips · Évènement particulier
 Proposer un projet
 Toutes les prestations sont avec chauffeur : vous profitez, je conduis. En option : décoration florale (votre fleuriste ou le nôtre), animations & spectacles.
-Les tarifs sont publics : à partir de 350 € pour un mariage et 125 € pour une balade . Et non, la location d'une 2CV sans chauffeur n'est pas proposée, on vous explique pourquoi.
+Les tarifs sont publics : à partir de 350 € pour un mariage et 150 € pour une balade . Et non, la location d'une 2CV sans chauffeur n'est pas proposée, on vous explique pourquoi.
 L'homme derrière le volant
 Moi, c'est Jonathan
 Artiste jongleur et danseur, et surtout amoureux fou de cette voiture. Rosalie, la 2CV blanche, c'est celle de ma maman et de mon grand-père : le premier volant que j'ai tenu, assis sur ses genoux.
@@ -42,7 +42,7 @@ Mon histoire avec Rosalie ↓
 Le plus beau jour
 Votre mariage en 2CV
 Le plus beau des cortèges est aussi le plus simple : une 2CV blanche, des rubans, et vous deux. Je viens vous chercher, je vous conduis, je klaxonne votre bonheur. Vous n'avez plus qu'à vivre l'instant.
-Cortège & sortie de cérémonie, partout sur l'île
+Cortège & sortie de cérémonie, dans l'Ouest, le Sud et le Nord
 Trajet debout dans la 2CV, toit panoramique grand ouvert — l'arrivée effet waouh
 Séance photo des mariés sur les plus beaux paysages
 Décoration personnalisée — votre fleuriste ou le nôtre
@@ -54,22 +54,28 @@ Parler de votre mariage
 Prendre le temps
 Nos balades avec chauffeur
 Cheveux au vent, toit ouvert sur le ciel de l'île. Choisissez votre chapitre : chaque balade s'adapte à vos envies.
-± 2h · À partir de 125 € Coucher de soleil & apéro
+± 2h30 · 150 € par voiture
+Coucher de soleil & apéro
 Entre forêt et littoral, puis pause face à l'océan pour l'apéro au soleil couchant. Le classique qui ne déçoit jamais.
 En savoir plus
-± 3h · Gourmande Balade brunch
-Une virée matinale sur les belles routes, puis un brunch aux saveurs péi dans un joli spot. Douceur de vivre garantie.
+± 3h · 175 € par voiture
+Balade brunch péï
+Une virée matinale sur les belles routes, puis un brunch aux saveurs péï dans un joli spot. Douceur de vivre garantie.
 En savoir plus
-± 5h · Grand spectacle Lever de soleil
+± 3h · 160 € par voiture
+Lever de soleil
 Départ avant l'aube, plaids et boissons chaudes à bord, pour accueillir le soleil depuis un beau point de vue.
 En savoir plus
-Journée · L'aventure Tour de l'île
-Côtes sauvages, cascades, plages et villages… Une journée entière à sillonner La Réunion en 2CV.
+½ journée · 250 € par voiture
+Demi-journée EVJF & EVJG
+Quatre heures de virée, arrêts photos, jeu de piste si vous voulez, et le jonglage en bonus. Une 2CV pour 3 personnes, les deux ensemble pour 6.
 En savoir plus
-Selon le thème Journées à thème
-Anniversaires, EVJF/EVJG, surprises en amoureux, sorties entre amis… On imagine ensemble le fil rouge.
+Journée · 450 € par voiture
+Journée à thème
+Anniversaire, surprise en amoureux, sortie entre amis, rallye photo… On imagine ensemble le fil rouge.
 En savoir plus
-À votre image Sur-mesure
+3 h min · 60 € / h
+Sur-mesure
 Un lieu qui vous est cher, une idée précise, un moment à marquer ? Racontez-moi votre rêve de balade.
 En savoir plus
 Je réserve une balade
@@ -85,10 +91,18 @@ Bleue et blanche comme un air de vacances éternelles. Elle roule aux côtés de
 Leur histoire complète
 La vraie histoire
 Rosalie, de mémoire de famille
-Au commencement Rosalie entre dans la famille Elle appartient à ma maman et à mon grand-père. Sur les genoux de ce dernier, les mains sur ce volant, je conduis pour la toute première fois.
-La restauration Trois cousins, mille boulons Avec mon frère et mon cousin, nous la restaurons de fond en comble. Chaque pièce démontée est un souvenir remonté.
-Le grand jour Mon propre mariage C'est à son bord que je me marie. Rosalie devient officiellement la voiture des plus beaux jours.
-Aujourd'hui La traversée vers La Réunion Par passion pour cette voiture et son histoire, je la fais voyager jusqu'à l'île, pour perpétuer ces histoires et écrire les vôtres.
+Au commencement
+Rosalie entre dans la famille
+Elle appartient à ma maman et à mon grand-père. Sur les genoux de ce dernier, les mains sur ce volant, je conduis pour la toute première fois.
+La restauration
+Trois cousins, mille boulons
+Avec mon frère et mon cousin, nous la restaurons de fond en comble. Chaque pièce démontée est un souvenir remonté.
+Le grand jour
+Mon propre mariage
+C'est à son bord que je me marie. Rosalie devient officiellement la voiture des plus beaux jours.
+Aujourd'hui
+La traversée vers La Réunion
+Par passion pour cette voiture et son histoire, je la fais voyager jusqu'à l'île, pour perpétuer ces histoires et écrire les vôtres.
 Comme un air de mariage…
 L'artiste & sa complice
 Prête pour le grand jour
@@ -97,10 +111,14 @@ Au volant : Jonathan, votre chauffeur
 Artiste jongleur et danseur, passionné de ce modèle mythique et de son histoire. Le projet est porté par l'association Collectif Ensemble, à Saint-Leu.
 Les questions qu'on me pose
 Petites questions, grandes histoires
-Ma robe de mariée va-t-elle rentrer dans la 2CV ? Oui ! Même les robes les plus volumineuses trouvent leur place, c'est un petit rituel que je maîtrise parfaitement. Et grâce au toit panoramique grand ouvert, vous pouvez même faire le trajet debout, comme une star : l'arrivée dont tout le monde se souvient. 🎬 Vidéo : une grande robe embarque à bord
-La 2CV peut-elle monter dans les hauts ? Oui : elle grimpe sans rougir les grandes côtes et les hauts de l'île, de quoi célébrer avec la vue. Pour les routes de montagne les plus longues, on regarde ensemble le trajet et je vous dis simplement ce qui est possible.
-Est-ce que je conduis moi-même ? Non — et c'est tant mieux : toutes les prestations sont avec chauffeur . Pas de permis à fournir, pas de caution, pas de stress, juste le plaisir : vous montez, vous trinquez, vous profitez du paysage.
-Combien ça coûte ? Chaque événement a son déroulé, ses horaires, ses trajets, c'est pour cela qu'il n'y a pas de tarif unique. À titre de repère : les balades démarrent à 125 € (coucher de soleil & apéro) et les mariages à partir de 350 € dans l'Ouest, 450 € dans le Sud et le Nord, 550 € dans l'Est ; la durée de présence de la voiture et les options font ensuite varier le tarif final. Écrivez-moi sur WhatsApp avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement.
+Ma robe de mariée va-t-elle rentrer dans la 2CV ?
+Oui ! Même les robes les plus volumineuses trouvent leur place, c'est un petit rituel que je maîtrise parfaitement. Et grâce au toit panoramique grand ouvert, vous pouvez même faire le trajet debout, comme une star : l'arrivée dont tout le monde se souvient. 🎬 Vidéo : une grande robe embarque à bord
+La 2CV peut-elle monter dans les hauts ?
+Oui : elle grimpe sans rougir les grandes côtes et les hauts de l'île, de quoi célébrer avec la vue. Pour les routes de montagne les plus longues, on regarde ensemble le trajet et je vous dis simplement ce qui est possible.
+Est-ce que je conduis moi-même ?
+Non — et c'est tant mieux : toutes les prestations sont avec chauffeur . Pas de permis à fournir, pas de caution, pas de stress, juste le plaisir : vous montez, vous trinquez, vous profitez du paysage.
+Combien ça coûte ?
+Les balades sont à prix ferme, par voiture et jusqu'à 3 passagers : 150 € le coucher de soleil avec apéro (± 2 h 30), 175 € la balade brunch péï (± 3 h), 160 € le lever de soleil (± 3 h), 250 € la demi-journée EVJF ou EVJG, 450 € la journée à thème, et 60 € de l'heure en sur-mesure (3 h minimum). Chauffeur, carburant et déplacement compris. Seuls les mariages font l'objet d'un devis : à partir de 350 € dans l'Ouest et 450 € dans le Sud et le Nord, selon la durée de présence de la voiture. Écrivez-moi sur WhatsApp au 0693 82 81 08 avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement.
 Toutes les questions
 Les histoires continuent
 Suivez les aventures de Rosalie & Soizig
@@ -110,18 +128,27 @@ Une 2CV, mille histoires
 Le premier chapitre
 Écrivons votre histoire
 Le plus simple et le plus rapide : un petit message WhatsApp. Racontez-moi votre projet, je vous réponds vite avec une proposition sur mesure.
-Par WhatsApp c'est plus vivant !
+Par WhatsApp
+c'est plus vivant !
 C'est vivant, c'est rapide, et on peut s'envoyer photos et idées en direct. Je réponds généralement dans la journée.
 Démarrer la conversation
 📞 0693 82 81 08
 ✉️ asso.collectif.ensemble@gmail.com
 Ou par formulaire
 Prénom et nom
-Téléphone ou WhatsApp (obligatoire) Un numéro joignable, WhatsApp de préférence, c'est le plus rapide pour vous répondre.
+Téléphone ou WhatsApp (obligatoire)
+Un numéro joignable, WhatsApp de préférence, c'est le plus rapide pour vous répondre.
 Adresse email
-Type d'événement Type d'événement… Mariage EVJF / EVJG Balade Shooting / tournage Autre histoire
+Type d'événement
+Type d'événement…
+Mariage
+EVJF / EVJG
+Balade
+Shooting / tournage
+Autre histoire
 Date envisagée
 Votre message
+Envoyer ma demande
 L'envoi n'a pas abouti. Votre message n'est pas perdu, choisissez une autre voie :
 Ouvrir dans ma messagerie · Écrire sur WhatsApp · 0693 82 81 08
 
@@ -134,14 +161,24 @@ Le plus beau jour
 Votre voiture de mariage à La Réunion : la 2CV, avec chauffeur
 Un cortège qui fait sourire toute la rue, des photos hors du temps, un chauffeur qui prend soin de vous, et une voiture qui a une âme.
 Chercher une voiture de mariage à La Réunion , c'est chercher bien plus qu'un moyen de transport : c'est choisir l'image que garderont vos invités, la douceur du trajet entre la cérémonie et la fête, le décor de vos plus belles photos. À bord de Rosalie , Citroën 2CV blanche de 1983, ou de Soizig , bleue et blanche de 1990 (de vraies voitures anciennes de collection, au charme vintage intact), votre mariage prend des airs de film — klaxon d'honneur inclus.
-Toutes les prestations se font avec chauffeur : pas de permis à fournir, pas de caution, pas de stress. Côté budget, les forfaits démarrent à 350 € dans l'Ouest ; le détail par zone est un peu plus bas. Vous vivez l'instant, je m'occupe de la route, partout sur l'île de La Réunion (974), et même en tour de l'île si le cœur vous en dit. Saint-Denis, Saint-Paul, Saint-Gilles-les-Bains, Saint-Pierre, Saint-Leu, le Sud sauvage ou les hauts de l'île : la 2CV vient à vous, où que se raconte votre histoire.
+Toutes les prestations se font avec chauffeur : pas de permis à fournir, pas de caution, pas de stress. Côté budget, les forfaits démarrent à 350 € dans l'Ouest ; le détail par zone est un peu plus bas. Et si la demande n'est pas encore faite, on a une page rien que pour ça . Vous vivez l'instant, je m'occupe de la route, sur l'Ouest, le Sud et le Nord de La Réunion (974). Saint-Denis, Saint-Paul, Saint-Gilles-les-Bains, Saint-Pierre, Saint-Leu, le Sud sauvage ou les hauts accessibles : la 2CV vient à vous, où que se raconte votre histoire.
 Votre journée
 Comment se déroule votre histoire ?
-1 On imagine ensemble Un message WhatsApp, votre date, vos lieux, vos envies : je vous propose un déroulé sur mesure et une proposition claire, sans engagement.
-2 La décoration Rubans, fleurs fraîches, panneaux personnalisés : votre fleuriste s'en charge, ou je vous conseille le nôtre, qui connaît Rosalie par cœur. La robe blanche de Rosalie accueille toutes les couleurs de votre mariage.
-3 Le jour J J'arrive en avance, la voiture est prête et étincelante. Je reste avec vous toute la journée : j'attends pendant la mairie, pendant la cérémonie, je vous suis pour la séance photo et je vous conduis jusqu'au lieu de réception, carburant et déplacement compris. Préparatifs, mairie, église ou cérémonie laïque : je vous conduis à chaque étape, au rythme de votre journée. Même les plus grandes robes embarquent sans souci, c'est un petit rituel que je maîtrise. Et grâce au toit panoramique grand ouvert, vous pouvez faire le trajet debout : l'arrivée effet waouh dont tout le monde se souvient.
-4 Les photos Pendant le cocktail, escapade avec votre photographe : la 2CV se prête à tous les cadrages, capot, portières, toit ouvert. Des images que personne d'autre n'aura.
-5 La touche spectacle (en option) Artiste jongleur et danseur, je peux aussi faire durer la magie : jonglage pour les enfants, spectacle de feu en soirée, animations… La 2CV n'est jamais très loin du spectacle.
+1
+On imagine ensemble
+Un message WhatsApp, votre date, vos lieux, vos envies : je vous propose un déroulé sur mesure et une proposition claire, sans engagement.
+2
+La décoration
+Rubans, fleurs fraîches, panneaux personnalisés : votre fleuriste s'en charge, ou je vous conseille le nôtre, qui connaît Rosalie par cœur. La robe blanche de Rosalie accueille toutes les couleurs de votre mariage.
+3
+Le jour J
+J'arrive en avance, la voiture est prête et étincelante. Je reste avec vous toute la journée : j'attends pendant la mairie, pendant la cérémonie, je vous suis pour la séance photo et je vous conduis jusqu'au lieu de réception, carburant et déplacement compris. Préparatifs, mairie, église ou cérémonie laïque : je vous conduis à chaque étape, au rythme de votre journée. Même les plus grandes robes embarquent sans souci, c'est un petit rituel que je maîtrise. Et grâce au toit panoramique grand ouvert, vous pouvez faire le trajet debout : l'arrivée effet waouh dont tout le monde se souvient.
+4
+Les photos
+Pendant le cocktail, escapade avec votre photographe : la 2CV se prête à tous les cadrages, capot, portières, toit ouvert. Des images que personne d'autre n'aura.
+5
+La touche spectacle (en option)
+Artiste jongleur et danseur, je peux aussi faire durer la magie : jonglage pour les enfants, spectacle de feu en soirée, animations… La 2CV n'est jamais très loin du spectacle.
 Aussi pour
 Elopement, EVJF, demandes en mariage…
 Elopement & petits comités — un mariage intime à deux ou presque : la 2CV vous emmène vers un lieu secret, face à l'océan ou dans les hauts, pour échanger vos vœux loin du monde.
@@ -150,9 +187,10 @@ Demande en mariage — je vous aide à organiser la surprise : trajet complice, 
 Anniversaires de mariage — refaire le trajet des années plus tard, dans la même voiture ou presque : c'est exactement le genre d'histoires que Rosalie adore.
 Les forfaits
 Une idée du budget
-Ouest dès 350 € Saint-Leu, Saint-Paul, Saint-Gilles, La Saline et alentours.
-Sud & Nord dès 450 € Saint-Pierre, Le Tampon, Saint-Denis, Sainte-Marie et alentours.
-Est dès 550 € Saint-André, Saint-Benoît, Sainte-Suzanne et alentours.
+Ouest dès 350 €
+Saint-Leu, Saint-Paul, Saint-Gilles, La Saline et alentours.
+Sud & Nord dès 450 €
+Saint-Pierre, Le Tampon, Saint-Denis, Sainte-Marie et alentours.
 Ces montants sont donnés à titre indicatif : la durée de présence de la voiture et du chauffeur, le déroulé de votre journée et les options choisies font varier le tarif final. Racontez-moi votre projet, vous recevrez une proposition claire et sans engagement. Voir le détail des tarifs et ce qui est inclus .
 En images
 Des mariages plein le rétro
@@ -163,24 +201,102 @@ Ou par téléphone : 0693 82 81 08 · formulaire de contact
 
 ---
 
+## Demande en mariage en 2CV
+Source : https://une2cvmillehistoires.re/demande-en-mariage-2cv
+
+La question qui change tout
+Demande en mariage originale à La Réunion : la mise en scène en 2CV
+Il y a la bague, il y a les mots — et il y a la voiture qui arrive au bon moment. Une 2CV de collection, une route de bord de mer, et une seconde que personne n'oubliera.
+Une demande en mariage originale à La Réunion , ce n'est pas une question de budget. C'est une question de mise en scène : un décor, un timing, et un élément de surprise qui fait basculer une journée ordinaire dans le souvenir. La 2CV fait les trois d'un coup. Elle arrive, on la regarde, on sourit — et pendant qu'on la regarde, vous avez les mains libres.
+Je m'appelle Jonathan. Rosalie, la 2CV blanche, est la voiture de ma maman et de mon grand-père ; c'est à son bord que je me suis marié. Soizig, la bleue et blanche, l'a rejointe depuis. Je les conduis moi-même, et depuis que je propose des balades à La Réunion, j'ai eu le privilège d'être le complice d'un certain nombre de demandes. Voici ce que j'ai appris — et six façons de vous y prendre.
+Ce qui fait qu'une demande fonctionne
+Trois choses, toujours les mêmes. Le prétexte d'abord : il faut une raison crédible d'être là, habillé un peu mieux que d'habitude, à cette heure-là. « On va boire un verre chez des amis » marche mieux que « j'ai une surprise ». Le lieu ensuite : un endroit ouvert, où le regard porte loin, sans monde autour. Le temps enfin : à La Réunion, le soleil se couche vite et bien. Vingt minutes d'or, puis la nuit. On cale tout là-dessus.
+La voiture apporte le quatrième ingrédient, celui qu'on ne peut pas fabriquer : le décalage . Un klaxon de 2CV dans une allée, une capote qu'on ouvre en grand, une portière qui claque avec ce bruit d'un autre siècle — l'autre comprend que quelque chose sort du programme bien avant de comprendre quoi.
+Six mises en scène
+Choisissez votre scénario
+La valeur sûre
+Le coucher de soleil à la Pointe au Sel
+On part vers 16 h 30 sous prétexte d'un apéro. Arrêts photos le long du littoral, puis je me gare face à l'océan et je m'éclipse « chercher quelque chose dans le coffre ». Le coffre contient le champagne. Vous avez le soleil dans le dos et vingt minutes de lumière devant vous.
+Voir la balade coucher de soleil
+Le classique retourné
+Le pique-nique qui n'en est pas un
+Vous annoncez un pique-nique. Nappe, panier, tout est déjà dans le coffre — préparé la veille avec moi. Au moment du dessert, j'apporte une boîte que vous ne m'avez « pas demandé d'apporter ». C'est la plus simple des sept, et statistiquement la plus efficace.
+Voir les tarifs
+Plein cadre
+Debout à travers le toit
+La capote s'ouvre entièrement : on peut se tenir debout, à l'arrêt, la tête au-dessus de la voiture. Certains font la demande comme ça, en pleine lumière, sur un point de vue des hauts. C'est théâtral, c'est assumé, et ça donne des photos que personne d'autre n'a.
+Découvrir les deux 2CV
+L'option spectacle
+Le numéro qui n'était pas prévu
+Je suis aussi jongleur et danseur. On peut donc glisser un petit numéro : je commence à jongler pendant que vous vous levez, l'attention est ailleurs, et quand elle revient sur vous — vous êtes à genou. Fonctionne très bien avec du public, notamment en famille.
+Voir les animations
+Le faux shooting
+La séance photo qui dérape
+Vous offrez « une séance photo de couple ». Le photographe est réel, la séance aussi — et au bout de vingt minutes, il vous demande de vous retourner vers la voiture. Un complice de plus, un souvenir en haute définition, et zéro doute sur le fait que la scène sera bien capturée.
+Voir les shootings
+Pour les grandes familles
+L'arrivée devant tout le monde
+Anniversaire, repas de famille, fête créole : la 2CV se gare devant la maison, décorée, klaxon à l'appui. Tout le monde sort voir. Vous descendez de la voiture et vous posez la question devant les trente personnes qui comptent. Irréversible, et c'est bien l'idée.
+Voir la page mariage
+La variante longue : le circuit des lieux qui comptent
+Si vous avez une demi-journée devant vous, il y a mieux qu'un seul arrêt : un circuit de trois ou quatre lieux qui comptent pour vous deux — là où vous vous êtes rencontrés, le premier restaurant, la plage du premier week-end. À chaque étape, une enveloppe attend dans la boîte à gants. La dernière contient la question. C'est la demi-journée , et c'est de loin la mise en scène la plus émouvante — prévoyez des mouchoirs, pas seulement pour elle.
+Le secret, mode d'emploi
+On prépare tout par message, entre vous et moi. Vous me donnez l'heure, le lieu, le prétexte et le prénom de la personne. Je vous donne en retour un déroulé minuté : à quelle minute j'arrive, où je me gare, ce que je réponds si on me demande pourquoi je suis là, à quel moment je m'éloigne. Si vous avez des complices — un frère, une amie, un photographe — je les intègre au plan.
+Une seule règle de mon côté : je ne dis jamais rien. Ni avant, ni pendant, ni sur les réseaux sans votre accord. Une demande en mariage, ça n'appartient qu'à deux personnes.
+Ce qui est prévu à bord
+Le champagne au frais et les coupes, si vous le souhaitez — vous apportez la bouteille, je m'occupe de la glacière. Une enceinte pour votre morceau, à lancer au bon moment. Des plaids pour les hauts et les fins de journée. Et la balade elle-même : chauffeur, carburant et déplacement compris, dans l'Ouest, le Sud et le Nord de l'île.
+Ce qui reste à vous : la bague, les mots, et le courage. Pour le reste, on a une voiture.
+Et après ?
+La moitié des couples qui font leur demande à bord reviennent pour le mariage. C'est logique : la voiture fait déjà partie de l'histoire. Si c'est votre cas, la page voiture de mariage détaille le cortège, la sortie de cérémonie et les zones desservies ; les tarifs sont publics ; et le carnet de bord raconte de vraies journées, de l'intérieur.
+En images
+Des secondes qu'on ne rejoue pas
+Les questions qu'on me pose
+Bon à savoir
+Combien coûte une demande en mariage en 2CV à La Réunion ?
+La formule la plus choisie est la balade coucher de soleil & apéro : 150 € , prix ferme, par voiture et jusqu'à 3 passagers, environ 2 h 30, chauffeur, carburant et déplacement compris. Pour une mise en scène plus longue — récupérer les témoins, enchaîner deux lieux, prévoir le champagne et le jonglage — comptez la demi-journée à 250 € ou la journée à thème à 450 € .
+Vous gardez le secret ?
+C'est même la partie que je préfère. On cale tout par message avec vous seul : l'heure exacte, le prétexte donné à l'autre, le point de rendez-vous, le mot que je dirai en arrivant si on me pose une question. Le jour J, je joue mon rôle jusqu'au bout — et je n'ai encore jamais vendu la mèche.
+Où faire sa demande en mariage à La Réunion ?
+Mes trois valeurs sûres : la Pointe au Sel à Saint-Leu au soleil couchant, le lagon de l'Hermitage quand la lumière passe à l'orange, et un point de vue des hauts de Saint-Leu face à l'océan, souvent désert en semaine. On peut aussi partir d'un lieu qui compte pour vous : la plage de votre premier week-end, la case de vos grands-parents.
+Et si elle (ou il) dit oui ? On enchaîne ?
+Champagne au frais dans le coffre, coupes fournies, playlist prête, et la route qui continue le temps que vous redescendiez sur terre. Beaucoup enchaînent sur un dîner : je vous y dépose. Et si la réponse débouche sur un mariage, vous savez déjà quelle voiture vous attend à la sortie de la mairie.
+Peut-on faire photographier la demande ?
+Oui, et c'est une bonne idée : un photographe posté à distance capte la seconde du oui sans que personne ne le remarque. Je travaille régulièrement avec des photographes de l'Ouest et je peux vous en recommander. Sinon, je filme discrètement au téléphone depuis le volant — ce n'est pas du cinéma, mais ça reste un souvenir.
+Faut-il réserver longtemps à l'avance ?
+Deux à trois semaines suffisent en général, et je garde souvent une place pour les demandes de dernière minute — l'idée arrive rarement six mois avant. En haute saison (juillet-août, décembre-janvier), prenez un peu de marge.
+On prépare votre demande ?
+Préparer ma demande
+Ou par téléphone : 0693 82 81 08 — réponse rapide, sans engagement.
+
+---
+
 ## Tarifs
 Source : https://une2cvmillehistoires.re/tarifs
 
 En toute transparence
 Tarifs d'une 2CV avec chauffeur à La Réunion
 Des repères clairs pour vous projeter, et une proposition sur mesure pour votre projet réel.
-Chaque événement a son déroulé, ses horaires et ses trajets : il n'existe donc pas de tarif unique. Voici néanmoins les points de départ , pour que vous sachiez tout de suite à quoi vous en tenir.
-Tarifs indicatifs — 2CV de collection avec chauffeur, La Réunion (974)
-Prestation À partir de Zone / durée
-Mariage — Ouest 350 € Saint-Leu, Saint-Paul, Saint-Gilles-les-Bains, La Saline, Trois-Bassins, L'Étang-Salé Mariage — Sud et Nord 450 € Saint-Pierre, Le Tampon, Saint-Louis, Saint-Denis, Sainte-Marie Mariage — Est 550 € Saint-André, Saint-Benoît, Sainte-Suzanne Balade coucher de soleil & apéro 125 € Environ 2 h, au départ de l'Ouest
+Les balades sont à prix ferme : le tarif affiché est celui que vous payez, par voiture et jusqu'à 3 passagers — le même que vous soyez un, deux ou trois. Seuls les mariages font l'objet d'un devis, parce que la zone et la durée de présence y changent vraiment tout.
+Les balades se font dans l' Ouest et le Sud de l'île, le Nord sur demande . L'Est n'est pas desservi : la route y est trop exigeante pour des 2CV de collection.
+Tarifs 2CV avec chauffeur, La Réunion (974) — balades à prix ferme par voiture, mariages sur devis
+Prestation Prix Zone / durée
+Coucher de soleil & apéro 150 € ± 2 h 30, par voiture
+Balade brunch péï 175 € ± 3 h, par voiture
+Lever de soleil 160 € ± 3 h, par voiture
+Demi-journée EVJF & EVJG 250 € ½ journée, par voiture
+Journée à thème 450 € Journée, par voiture
+Sur-mesure, shootings & évènements 60 € / heure 3 h minimum
+Mariage — Ouest dès 350 € Saint-Leu, Saint-Paul, Saint-Gilles-les-Bains, La Saline, Trois-Bassins, L'Étang-Salé
+Mariage — Sud et Nord dès 450 € Saint-Pierre, Le Tampon, Saint-Louis, Saint-Denis, Sainte-Marie
 Ce qui est toujours compris
 Le chauffeur , le carburant et le déplacement de la voiture, l' attente pendant la mairie et la cérémonie , l'accompagnement pour la séance photo puis jusqu'au lieu de réception, les arrêts photos et les petites attentions à bord. Pas de permis à fournir, pas de caution .
 Ce qui fait varier le prix
-La durée de présence de la voiture et du chauffeur est le premier facteur : un cortège de deux heures et une journée complète ne se comparent pas. Viennent ensuite la zone de l'île, le nombre d'étapes de votre journée, la présence des deux voitures plutôt qu'une, et les options choisies : décoration florale, spectacle de feu, jonglage, jeu de piste pour un EVJF ou un EVJG .
+Pour les balades, rien ne varie : le prix du tableau est le prix final, par voiture. Pour être six, on sort les deux 2CV : le tarif de la formule est alors simplement doublé.
+Pour un mariage , en revanche, trois choses comptent : la zone de l'île, la durée de présence de la voiture et du chauffeur — un cortège de deux heures et une journée complète ne se comparent pas — et les options choisies : décoration florale, spectacle de feu, jonglage, jeu de piste .
 Réservation et paiement
 En saison, réservez entre une semaine et un mois à l'avance pour les dates les plus demandées : les samedis partent vite. Un acompte de 30 % confirme la réservation d'un mariage, le solde se règle le jour J ; une balade se règle en totalité à la réservation. Aucune caution n'est demandée.
 Et pour les shootings et les évènements ?
-Tournages, clips, publicités, salons, anniversaires : le tarif dépend de la durée et du dispositif. Décrivez-moi votre projet sur la page dédiée ou directement par WhatsApp, la réponse arrive vite.
+Tournages, clips, publicités, salons, anniversaires : comptez 60 € de l'heure, 3 h minimum . Au-delà — plusieurs voitures, dispositif lourd, journée entière de tournage — on établit un devis. Décrivez-moi votre projet sur la page dédiée ou directement par WhatsApp, la réponse arrive vite.
 Votre projet, votre proposition
 Poser ma question
 Ou par téléphone : 0693 82 81 08 · formulaire de contact
@@ -190,7 +306,7 @@ Ou par téléphone : 0693 82 81 08 · formulaire de contact
 ## Location de 2CV à La Réunion
 Source : https://une2cvmillehistoires.re/location-2cv-reunion
 
-Avec chauffeur, partout sur l'île
+Avec chauffeur, dans l'Ouest, le Sud et le Nord
 Location de 2CV à La Réunion
 Deux Citroën 2CV de collection, un chauffeur, et 2 512 km² de routes qui méritent qu'on les prenne lentement.
 Vous cherchez à louer une 2CV à La Réunion , pour un mariage, un anniversaire, une demande en mariage, une séance photo ou simplement pour le plaisir de rouler capote ouverte le long du lagon. Voici comment cela fonctionne, en toute clarté.
@@ -200,13 +316,13 @@ Concrètement, cela vous arrange plus que cela ne vous limite : pas de permis à
 Ce que comprend la location
 Le chauffeur, le carburant et le déplacement de la voiture jusqu'à vous, où que vous soyez sur l'île. Les arrêts photos en route. La décoration de la voiture aux couleurs de votre événement s'il s'agit d'un mariage. L'attente pendant la mairie et la cérémonie, puis l'accompagnement jusqu'au lieu de réception. Et, si vous le souhaitez, les extras maison : jonglage, spectacle de feu, jeu de piste en convoi.
 Combien ça coûte
-Une balade au coucher du soleil avec apéro démarre à 125 € . Un mariage démarre à 350 € dans l'Ouest, 450 € pour le Sud et le Nord, 550 € pour l'Est. Le détail complet, avec ce qui fait varier le prix, se trouve sur la page Tarifs . Un acompte de 30 % confirme un mariage ; une balade se règle en totalité à la réservation.
+Une balade au coucher du soleil avec apéro est à 150 € , prix ferme, par voiture et jusqu'à 3 passagers (± 2 h 30). Un mariage démarre à 350 € dans l'Ouest, 450 € pour le Sud et le Nord. Le détail complet, avec ce qui fait varier le prix, se trouve sur la page Tarifs . Un acompte de 30 % confirme un mariage ; une balade se règle en totalité à la réservation.
 Combien de personnes dans une 2CV ?
 Trois passagers par voiture , en plus du chauffeur. Et comme Rosalie et Soizig roulent volontiers ensemble, un convoi de deux 2CV emmène six personnes : c'est le format idéal pour un EVJF ou un EVJG , une famille, ou un groupe d'amis en vacances.
 Pour quelles occasions
-Le plus souvent : un mariage , de la sortie de la mairie jusqu'au domaine. Ensuite, les balades : coucher de soleil sur la côte ouest, brunch dans les hauts, tour de l'île à la journée. Puis les enterrements de vie de jeune fille et de garçon , souvent en convoi et avec un jeu de piste. Enfin les shootings, tournages et évènements : clips, publicités, salons, anniversaires, demandes en mariage.
+Le plus souvent : un mariage , de la sortie de la mairie jusqu'au domaine. Ensuite, les balades : coucher de soleil sur la côte ouest, brunch péï dans les hauts, lever de soleil avant l'aube. Puis les enterrements de vie de jeune fille et de garçon , souvent en convoi et avec un jeu de piste. Enfin les shootings, tournages et évènements : clips, publicités, salons, anniversaires, demandes en mariage.
 Où la 2CV peut aller — et où elle ne va pas
-Toute la côte, sans exception : Saint-Leu, Saint-Gilles-les-Bains, Saint-Paul, Saint-Pierre, Saint-Denis, Sainte-Suzanne, Saint-Benoît, le Grand Brûlé, Saint-Philippe, Manapany, Grand Anse, L'Étang-Salé. Les hauts modérés aussi : les Colimaçons, les hauts de Saint-Leu, la forêt de L'Étang-Salé, la Plaine des Cafres par la route des Plaines.
+La côte ouest, le Sud et le Nord : Saint-Leu, Saint-Gilles-les-Bains, Saint-Paul, Trois-Bassins, L'Étang-Salé, Saint-Louis, Saint-Pierre, Le Tampon, Manapany, Grand Anse, Saint-Denis, Sainte-Marie. Les hauts modérés aussi : les Colimaçons, les hauts de Saint-Leu, la forêt de L'Étang-Salé, la Plaine des Cafres par la route des Plaines.
 En revanche, soyons honnêtes : le Maïdo et les cirques ne sont pas le terrain de jeu d'une 2CV . Ces routes sont trop hautes et trop exigeantes mécaniquement pour deux voitures de plus de trente ans que nous tenons à voir rouler encore longtemps. Mieux vaut le savoir avant de réserver que le découvrir en chemin.
 Faut-il réserver longtemps à l'avance ?
 En saison, comptez entre une semaine et un mois à l'avance pour les dates les plus demandées : les samedis de mariage partent vite. Pour une balade, quelques jours suffisent souvent, mais un message la veille reçoit parfois un oui, alors n'hésitez pas à demander.
@@ -224,19 +340,29 @@ Source : https://une2cvmillehistoires.re/evjf-evjg
 Entre copines, entre copains
 EVJF & EVJG à La Réunion : la virée en 2CV
 Une voiture qui fait tourner les tetes, un chauffeur complice, et un jeu de piste sur mesure : l'enterrement de vie de jeune fille dont tout le monde reparlera.
-Vous cherchez une idée d'EVJF originale à La Réunion , ou un EVJG qui sort du bowling et du karting ? Montez à bord. Rosalie et Soizig, nos deux Citroën 2CV de collection , transforment une simple journée entre amis en souvenir de cinéma : cheveux au vent, toit panoramique grand ouvert, klaxon d'honneur a chaque village traversé, et les regards qui se retournent sur votre passage.
-Je conduis, vous profitez : pas de permis a fournir, pas de caution : la future mariée et sa bande n'ont qu'à lever leur verre.
+Vous cherchez une idée d'EVJF originale à La Réunion , ou un EVJG qui sort du bowling et du karting ? Montez à bord. Rosalie et Soizig, nos deux Citroën 2CV de collection , transforment une simple journée entre amis en souvenir de cinéma : cheveux au vent, toit panoramique grand ouvert, klaxon d'honneur à chaque village traversé, et les regards qui se retournent sur votre passage.
+Je conduis, vous profitez : pas de permis à fournir, pas de caution : la future mariée et sa bande n'ont qu'à lever leur verre.
 Combien peut-on être ?
 3 passagers par voiture , en plus du chauffeur. Et comme Rosalie et Soizig roulent volontiers ensemble, votre groupe peut atteindre 6 personnes en convoi : deux 2CV qui se suivent sur la route du littoral, c'est déjà un spectacle en soi, et les photos sont incomparables.
+Combien ça coûte ?
+La formule dédiée, c'est la demi-journée EVJF & EVJG :
+250 € par voiture , environ quatre heures, chauffeur, carburant et déplacement compris.
+Une seule 2CV pour 3 personnes, les deux ensemble pour 6 (500 €). Pour une journée complète, comptez
+450 € par voiture . Prix fermes, réglés à la réservation — le détail est sur la
+page Tarifs .
 Trois façons de le vivre
 Choisissez votre aventure
-Demi-journée La virée sunset
+Demi-journée
+La virée sunset
 Départ en fin d'après-midi, les plus belles routes du littoral, arrêts photos à volonté, puis apéro face au soleil couchant. Simple, chic, et parfaitement irrésistible.
-Journée complete La grande journée
+Journée complète
+La grande journée
 Brunch quelque part, montée vers les hauts, plage, marché, glace, fous rires : on construit le fil rouge ensemble et je vous emmène d'étape en étape, sans que personne n'ait a conduire.
-L'originale Le jeu de piste
+L'originale
+Le jeu de piste
 Une chasse au trésor grandeur nature à bord des 2CV : énigmes, indices cachés, épreuves, complices sur le parcours. La mariée ne sait rien, vous savez tout, et la voiture devient le vaisseau de l'aventure.
 La chasse au trésor, notre petite spécialité
+On lui a consacré une page entière : chasse au trésor, jeux lontan et convoi de deux 2CV — le scénario, les complices, les étapes, et ce qu'il faut nous dire pour qu'on l'écrive.
 Avant d'etre chauffeur, je suis artiste et animateur : jonglage, danse, spectacle. Alors quand on me demande un EVJF, je ne me contente pas de conduire — je peux écrire pour vous une aventure immersive sur mesure.
 Le principe : la future mariée (ou le futur marie) monte à bord sans rien savoir. À chaque étape, une énigme, un personnage, une épreuve. Les 2CV emmènent l'equipe d'un lieu à l'autre, le coffre cache les indices, et le dénouement se joue là où vous l'avez décidé : sur une plage, dans un jardin, chez vous. On adapte le scénario à votre groupe, à vos souvenirs communs et aux petites bêtises de la mariée : c'est ce qui rend chaque partie unique.
 En option, pour aller plus loin
@@ -252,6 +378,68 @@ Ou par téléphone : 0693 82 81 08 · formulaire de contact
 
 ---
 
+## EVJF & EVJG : chasse au trésor et jeux lontan
+Source : https://une2cvmillehistoires.re/evjf-evjg-chasse-au-tresor
+
+Deux voitures, une bande
+EVJF & EVJG à La Réunion : chasse au trésor, jeux lontan et deux 2CV
+Six copines ou six copains, deux Citroën de collection qui se suivent, des énigmes cachées sur toute la côte et des jeux qu'on croyait avoir oubliés.
+Un EVJF à La Réunion , ça se joue rarement au bowling. Le problème n'est pas le manque d'idées : c'est qu'elles se ressemblent toutes. Brunch, plage, photos, restaurant. Très bien, mais la mariée l'a déjà fait trois fois cette année pour ses copines.
+Ce qu'on propose ici est différent pour une raison simple : la voiture n'est pas un transport, c'est le décor et le vaisseau de l'aventure . Deux 2CV de collection roulent en convoi, capotes ouvertes, klaxon d'honneur à chaque village. Je conduis — donc personne ne se dévoue, personne ne compte ses verres. Et je suis aussi artiste jongleur et danseur , ce qui veut dire qu'entre deux étapes, il se passe quelque chose.
+Pourquoi deux voitures changent tout
+Une 2CV, c'est joli. Deux 2CV qui se suivent sur la route du littoral, c'est un convoi — et un convoi, ça se regarde, ça se klaxonne, ça se prend en photo depuis les autres voitures. Le groupe se scinde naturellement en deux équipes, ce qui ouvre tout un champ de bêtises : défis d'une voiture à l'autre, courses aux énigmes, équipe des rouges contre équipe des bleus. Six personnes maximum, trois par voiture, et personne n'est laissé sur le bas-côté.
+Rosalie, la blanche de 1983, et Soizig, la bleue et blanche de 1990, ont chacune leur caractère. Vous verrez : à la fin de la journée, tout le monde a choisi son camp.
+Le programme
+Trois façons de s'y prendre
+L'originale · demi-journée
+La chasse au trésor grandeur nature
+Une histoire écrite pour la mariée, découpée en étapes sur la côte ouest. À chaque arrêt : une énigme, un indice caché dans un lieu réel, un complice qui n'a pas l'air d'en être un. Le coffre de la 2CV sert de coffre au trésor. Personne ne connaît la fin — pas même vous, si vous voulez jouer aussi.
+Voir la demi-journée
+Le rire garanti · en option
+Les jeux lontan, version 2CV
+Zoulou tracé à la craie sur un parking désert, billes sur le capot, toupie, lastik, course en sac sur le sable. Des jeux d'enfance créoles, revisités en défis entre les deux équipages. C'est gratuit, c'est ridicule, et c'est systématiquement le moment dont on reparle six mois après.
+Voir toutes les formules
+La grande journée · 450 €
+Le rallye côte ouest
+La journée complète : brunch dans les hauts, descente vers le lagon, arrêts photos, apéro au coucher du soleil. On construit le fil rouge ensemble, d'étape en étape, sans que personne n'ait à conduire ni à regarder l'heure.
+Voir les tarifs
+La chasse au trésor, dans le détail
+C'est notre spécialité, et c'est aussi ce qui demande le plus de préparation — donc parlons-en franchement.
+Tout part d'un questionnaire que je vous envoie : les surnoms de la mariée, sa première bêtise, le prénom du témoin, le lieu de la rencontre, la chanson qu'elle chante mal. Avec ça, j'écris un scénario en cinq à sept étapes , chacune ancrée dans un lieu réel : un banc de la Pointe au Sel, le comptoir d'une boutik, le manguier d'un jardin de Saint-Leu. À chaque étape, une énigme — souvent une devinette qui n'a de sens que pour elle — et un indice matériel à récupérer : une photo, une clé, un morceau de carte.
+Les complices sont la partie amusante. Un commerçant prévenu la veille, une amie postée avec un plateau, un inconnu qui n'en est pas un. Ils ne jouent pas la comédie très longtemps : dix secondes suffisent à faire vaciller la mariée, qui passe le reste du trajet à soupçonner tout le monde.
+Et à la fin, le trésor. Vous le fournissez : la lettre de sa mère, le cadeau collectif, la vidéo des absents. Je le cache dans le coffre de la 2CV depuis le début de la journée — elle s'est assise dessus quatre heures durant sans le savoir.
+Les jeux lontan, sans nostalgie forcée
+On les appelle les jeux lontan : les jeux d'avant, ceux qui se jouaient dans les cours et devant les cases. Le zoulou , notre marelle créole, tracé à la craie sur un bout de bitume. Les billes , qu'on fait rouler sur le capot bombé de Rosalie — la pente naturelle en fait un terrain de jeu parfait. La toupie , le lastik , le koud'poin , la course en sac.
+Pourquoi ça marche pour un EVJF ? Parce que personne n'a besoin d'explication, parce que tout le monde retrouve d'un coup ses réflexes de gamin, et parce qu'une adulte en robe qui saute à cloche-pied dans un zoulou, c'est une photo qu'on garde. On peut y greffer des gages, des équipes, un classement — ou juste laisser faire.
+Et l'EVJG, alors ?
+Exactement le même dispositif, avec un dosage différent : plus de route, plus de défis, souvent un objectif absurde à atteindre en fin de parcours. Les 2CV ne sont pas des voitures viriles, et c'est précisément ce qui rend la journée drôle — six garçons dans deux Citroën de collection, capotes ouvertes, ça désamorce tout. Le jonglage et le spectacle de feu passent très bien en fin de soirée.
+Ce qui est compris, ce qui reste à vous
+Compris : la ou les voitures, le chauffeur, le carburant, le déplacement dans l'Ouest, le Sud et le Nord de l'île, les arrêts photos à volonté, les petites attentions à bord, la glacière, l'enceinte, et l'écriture du scénario de la chasse au trésor.
+À vous : les boissons, le trésor final, les éventuels gages, et les tenues — parce qu'un EVJF en 2CV mérite mieux qu'un jean. Les tarifs sont fermes et publics : 250 € la demi-journée par voiture , 500 € pour les deux, 450 € la journée par voiture.
+En images
+Deux voitures, une bande
+Les questions qu'on me pose
+Bon à savoir
+Combien coûte un EVJF ou un EVJG en 2CV à La Réunion ?
+La demi-journée EVJF & EVJG est à 250 € par voiture (environ quatre heures) : une 2CV pour 3 personnes, les deux ensemble pour 6, soit 500 €. La journée complète est à 450 € par voiture . Chauffeur, carburant et déplacement compris, prix ferme réglé à la réservation. Le détail est sur la page Tarifs .
+Combien peut-on être ?
+3 passagers par voiture , en plus du chauffeur. Rosalie et Soizig roulant volontiers ensemble, un groupe de 6 personnes tient en convoi. Au-delà, on organise des rotations ou on cale un point de rendez-vous où le reste du groupe attend — dites-moi votre effectif, on trouve.
+C'est quoi, les jeux lontan ?
+Les jeux d'avant, ceux des cours d'école créoles : le zoulou (la marelle), les billes , la toupie , le lastik (élastique), la course en sac , le koud'poin . Ils ne coûtent rien, tout le monde y a joué, et ils font rire des adultes en dix secondes — ce qui est exactement le but d'un EVJF.
+La future mariée est-elle au courant ?
+C'est vous qui décidez. La plupart du temps, elle sait qu'il se passe quelque chose sans savoir quoi : on la récupère chez elle, deux 2CV klaxonnent dans la rue, et la journée démarre. Je peux aussi jouer un rôle — chauffeur d'un « transfert » qui n'en est pas un.
+Peut-on boire à bord ?
+Oui pour les passagers, jamais pour le chauffeur — c'est moi qui conduis, du début à la fin. Le champagne voyage au frais dans le coffre, les coupes sont fournies. On s'arrête pour trinquer : c'est meilleur à l'arrêt, face à l'océan.
+Et s'il pleut ?
+La capote se ferme, la balade continue — à La Réunion, une averse dure vingt minutes. Si la météo annonce vraiment mauvais sur toute la journée, on décale sans frais à une date qui vous arrange. Je préfère reporter que vous faire vivre une demi-journée trempée.
+Faut-il réserver longtemps à l'avance ?
+Comptez trois semaines à un mois, davantage en haute saison et pour les samedis. Les EVJF se calent souvent le week-end qui précède le mariage : ces dates partent vite.
+On organise votre aventure ?
+Organiser notre EVJF
+Ou par téléphone : 0693 82 81 08 — réponse rapide, sans engagement.
+
+---
+
 ## Balades
 Source : https://une2cvmillehistoires.re/balades
 
@@ -261,26 +449,46 @@ Cheveux au vent, toit ouvert sur le ciel de l'île : une façon unique et insoli
 Envie d'une activité insolite à La Réunion ? Montez à bord d'une vraie 2CV de collection et laissez-vous conduire. Chaque balade est pensée comme une petite histoire : un itinéraire qui prend son temps, des arrêts photos, des attentions à bord, et un chauffeur passionné qui connaît les plus beaux détours de l'île. Le toit panoramique s'ouvre en grand : parfait pour les photos, le vent dans les cheveux, et même pour se tenir debout, le temps d'un moment inoubliable.
 Nos formules
 Choisissez votre chapitre
-± 2h · À partir de 125 € Coucher de soleil & apéro Départ en fin d'après-midi, cap sur la côte ouest par la route du littoral : la Pointe au Sel, le lagon de l'Hermitage, les plages de Boucan Canot ou de Trois-Bassins selon l'envie. Arrêts photos à volonté, puis pause face à l'océan pour l'apéro au soleil couchant. Le classique qui ne déçoit jamais : idéal en amoureux ou entre amis.
+± 2h30 · 150 €
+Coucher de soleil & apéro
+Départ en fin d'après-midi, cap sur la côte ouest par la route du littoral : la Pointe au Sel, le lagon de l'Hermitage, les plages de Boucan Canot ou de Trois-Bassins selon l'envie. Arrêts photos à volonté, puis pause face à l'océan pour l'apéro au soleil couchant. Le classique qui ne déçoit jamais : idéal en amoureux ou entre amis.
 Réserver cette balade
-± 3h · Gourmande Balade brunch Une virée matinale sur les belles routes de l'Ouest : les hauts de Saint-Leu, les Colimaçons et leurs cases créoles, la forêt de l'Étang-Salé, puis un brunch aux saveurs péi dans un joli spot. La douceur de vivre, version quatre roues et petites madeleines.
+± 3h · 175 €
+Balade brunch péï
+Une virée matinale sur les belles routes de l'île, puis pause gourmande dans un joli spot : un coffret de ti gato péï artisanaux et de confitures maison , avec les boissons chaudes préparées à bord. La douceur de vivre, version quatre roues.
 Réserver cette balade
-± 5h · Grand spectacle Lever de soleil Départ avant l'aube, plaids et boissons chaudes à bord, pour accueillir le premier rayon depuis un point de vue choisi ensemble : l'océan qui s'allume, l'île qui se réveille, et les routes rien que pour vous. Redescente par les plus jolis détours, pause bouchons-samoussas en option.
+± 3h · 160 €
+Lever de soleil
+Départ avant l'aube, plaids et boissons chaudes à bord, pour accueillir le premier rayon depuis un point de vue choisi ensemble : l'océan qui s'allume, l'île qui se réveille, et les routes rien que pour vous. Redescente par les plus jolis détours, pause bouchons-samoussas en option.
 Réserver cette balade
-Journée · L'aventure Tour de l'île Le grand voyage, par la route côtière : Saint-Denis et son front de mer, Sainte-Suzanne, Saint-Benoît et l'Est verdoyant, le Grand Brûlé et ses coulées de lave, le Sud sauvage de Saint-Philippe à Manapany, Grand Anse, Saint-Pierre, l'Étang-Salé, et retour par l'Ouest. Une journée entière à faire le tour de La Réunion en 2CV, avec autant d'arrêts que d'envies.
+½ journée · 250 € par voiture
+Demi-journée EVJF & EVJG
+L'enterrement de vie de jeune fille ou de garçon qui ne ressemble à aucun autre : quatre heures de virée en 2CV, arrêts photos, chasse au trésor ou jeux lontan si vous voulez, et le jonglage en bonus. 250 € par voiture : une seule 2CV pour 3 personnes, les deux ensemble pour 6 (500 €).
 Réserver cette balade
-Selon le thème Journées à thème Anniversaire, EVJF/EVJG , surprise en amoureux, sortie entre amis, rallye photo… On imagine ensemble le fil rouge de la journée, je m'occupe du reste — jonglage en bonus si le cœur vous en dit.
+Journée · 450 € par voiture
+Journée à thème
+Anniversaire, surprise en amoureux, sortie entre amis, rallye photo… On imagine ensemble le fil rouge de la journée, je m'occupe du reste — jonglage en bonus si le cœur vous en dit. 450 € par voiture, jusqu'à 3 passagers, 6 avec les deux 2CV.
 Réserver cette balade
-À votre image Sur-mesure Un lieu qui vous est cher, une idée précise, un moment à marquer ? Racontez-moi votre rêve de balade : nous l'écrirons ensemble, au rythme qui vous ressemble.
-Réserver cette balade
+3 h minimum · 60 € / heure
+Sur-mesure, shootings & évènements
+Un lieu qui vous est cher, une idée précise, un moment à marquer ? Racontez-moi votre rêve de balade : nous l'écrirons ensemble, au rythme qui vous ressemble.
+Parler de mon projet
 Inclus dans toutes les balades
-Jonathan au volant — vous profitez Arrêts photos à volonté Petites attentions à bord Itinéraire adapté à vos envies La bonne humeur de rigueur
+Jusqu'à 3 passagers par 2CV, 6 avec les deux voitures
+Jonathan au volant — vous profitez
+Arrêts photos à volonté
+Petites attentions à bord
+Itinéraire adapté à vos envies
+La bonne humeur de rigueur
 À prévoir
-Lunettes de soleil & chapeau Un lainage pour les hauts ou l'aube Votre plus beau sourire Appareil photo (ou pas : je vous en prends !)
+Lunettes de soleil & chapeau
+Un lainage pour les hauts ou l'aube
+Votre plus beau sourire
+Appareil photo (ou pas : je vous en prends !)
 Je réserve une balade
-Balades à partir de 125 € (coucher de soleil & apéro). Le tarif exact varie selon le déroulé, la durée et le lieu de départ. Réponse rapide et sans engagement.
+Prix fermes, par voiture et jusqu'à 3 passagers : chauffeur, carburant et déplacement compris, règlement à la réservation. Balades dans l' Ouest et le Sud , Nord sur demande. Voir tous les tarifs .
 Où roulent Rosalie et Soizig ?
-Partout où la route est belle : le littoral de l'Ouest et du Sud, la route des Tamarins, les villages créoles, les hauts accessibles comme les Colimaçons ou les hauts de Saint-Leu, et bien sûr le tour complet de l'île par la côte. En toute honnêteté : ces deux Citroën 2CV de collection ne sont pas faites pour les routes de montagne les plus raides : le Maïdo et les cirques ne sont pas leur terrain de jeu. On choisit ensemble le plus bel itinéraire à leur mesure, et croyez-moi, il y a de quoi faire.
+Partout où la route est belle : le littoral de l'Ouest et du Sud, la route des Tamarins, les villages créoles, les hauts accessibles comme les Colimaçons ou les hauts de Saint-Leu. Les balades se font dans l' Ouest et le Sud , le Nord sur demande. En toute honnêteté : ces deux Citroën 2CV de collection ne sont pas faites pour les routes de montagne les plus raides : le Maïdo et les cirques ne sont pas leur terrain de jeu. On choisit ensemble le plus bel itinéraire à leur mesure, et croyez-moi, il y a de quoi faire.
 Toutes les balades se font avec chauffeur : vous montez, vous trinquez, vous profitez du paysage. Carburant et déplacement sont compris dans le tarif, et le règlement se fait à la réservation. Voir les tarifs · toutes les questions fréquentes .
 Une question, une envie ?
 Discuter sur WhatsApp
@@ -295,7 +503,7 @@ Lumière !
 Shootings photo, cinéma & évènements avec une 2CV à La Réunion
 Une voiture de collection qui crève l'écran : shootings, tournages, clips, salons, anniversaires : Rosalie et Soizig volent la vedette avec élégance.
 Un décor qui roule
-Photographes, vidéastes, réalisateurs : une 2CV de collection à La Réunion , c'est un décor à elle toute seule. Lignes rondes, chromes, capot ouvert sur l'océan, elle donne du caractère à un shooting couple ou grossesse, une séance mode, un clip, une publicité ou un film. Je me déplace sur toute l'île avec la voiture, et je reste sur place pendant votre séance : la 2CV est toujours accompagnée de son chauffeur.
+Photographes, vidéastes, réalisateurs : une 2CV de collection à La Réunion , c'est un décor à elle toute seule. Lignes rondes, chromes, capot ouvert sur l'océan, elle donne du caractère à un shooting couple ou grossesse, une séance mode, un clip, une publicité ou un film. Je me déplace dans l'Ouest, le Sud et le Nord avec la voiture, et je reste sur place pendant votre séance : la 2CV est toujours accompagnée de son chauffeur.
 Pour vos évènements
 Anniversaires, fêtes de famille, salons, inaugurations, marchés et festivals : la 2CV attire tous les regards : en exposition, en arrivée surprise ou en séance photo souvenir pour vos invités. Et comme je suis aussi artiste jongleur et danseur , l'animation peut suivre : jonglage pour les enfants, spectacle de feu, numéro de slackline sur le toit de Rosalie… du jamais-vu dans un évènement.
 En images
@@ -305,9 +513,9 @@ Deux Citroën 2CV de collection : Rosalie, blanche, de 1983, et Soizig, bleue et
 La 2CV se prête aussi bien au plan fixe qu'au plan roulant : décor immobile pour une séance mode ou un portrait de couple, ou voiture en mouvement suivie par un véhicule caméra. Elle peut être décorée, fleurie, chargée, ouverte. La voiture ne part jamais seule : Jonathan la conduit et reste sur place pendant toute la séance.
 Où tourner avec une 2CV à La Réunion
 Quelques décors qui fonctionnent particulièrement bien avec cette voiture : la route des Tamarins et ses viaducs, la Pointe au Sel à Saint-Leu au soleil couchant, le lagon de l'Hermitage et ses filaos, Boucan Canot , les champs de canne des Colimaçons et des hauts de Saint-Leu, la forêt de L'Étang-Salé , le front de mer de Saint-Pierre , Grand Anse , et la côte sauvage du Grand Brûlé vers Saint-Philippe. Je connais les horaires de lumière de chacun de ces endroits et les places où se garer sans gêner. Dites-moi l'ambiance recherchée, je vous propose le lieu.
-Une limite à connaître avant de repérer : ces voitures de plus de trente ans ne montent ni au Maïdo ni dans les cirques , dont les routes sont trop hautes et trop exigeantes pour leur mécanique. Le littoral, les hauts modérés et le tour de l'île, en revanche, leur vont très bien.
+Une limite à connaître avant de repérer : ces voitures de plus de trente ans ne montent ni au Maïdo ni dans les cirques , dont les routes sont trop hautes et trop exigeantes pour leur mécanique. Le littoral et les hauts modérés, en revanche, leur vont très bien.
 Combien coûte une séance ?
-Le tarif dépend de la durée, du nombre de voitures et du dispositif : une séance photo d'une heure et une journée de tournage ne se comparent pas. Le devis est établi sur mesure, et comme pour toutes nos prestations, le carburant, le déplacement de la voiture sur toute l'île et la présence du chauffeur sont compris . Les repères tarifaires de nos autres prestations sont publiés sur la page Tarifs , et la page location répond aux questions les plus fréquentes.
+La base est de 60 € de l'heure, 3 h minimum , par voiture. Au-delà — plusieurs voitures, dispositif lourd, journée entière de tournage — le devis est établi sur mesure, et comme pour toutes nos prestations, le carburant, le déplacement de la voiture et la présence du chauffeur sont compris . Les repères tarifaires de nos autres prestations sont publiés sur la page Tarifs , et la page location répond aux questions les plus fréquentes.
 Et l'animation, si c'est un évènement
 Au-delà de la voiture, je suis artiste jongleur et danseur . Pour une inauguration, un salon, un festival ou un anniversaire, la 2CV peut n'être que le point de départ : jonglage, spectacle de feu à la tombée de la nuit, numéro de slackline tendue sur le toit de Rosalie, arrivée surprise d'un invité d'honneur, ou photobooth roulant pour vos convives. Racontez-moi l'évènement, je propose le dispositif.
 Un projet, une idée folle ?
@@ -330,10 +538,18 @@ Soizig la dolce vita
 Bleue et blanche comme un air de vacances éternelles, née en 1990, Soizig respire la dolce vita. Elle appartient à une propriétaire complice et roule aux côtés de Rosalie : deux 2CV, deux ambiances, et le double de possibilités pour vos cortèges et vos balades en bande.
 La vraie histoire
 Rosalie, de mémoire de famille
-Au commencement Rosalie entre dans la famille Elle appartient à ma maman et à mon grand-père. Sur les genoux de ce dernier, les mains sur ce volant, je conduis pour la toute première fois.
-La restauration Trois cousins, mille boulons Avec mon frère et mon cousin, nous la restaurons de fond en comble. Chaque pièce démontée est un souvenir remonté.
-Le grand jour Mon propre mariage C'est à son bord que je me marie. Rosalie devient officiellement la voiture des plus beaux jours.
-Aujourd'hui La traversée vers La Réunion Par passion pour cette voiture et son histoire, je la fais voyager jusqu'à l'île, pour perpétuer ces histoires et écrire les vôtres.
+Au commencement
+Rosalie entre dans la famille
+Elle appartient à ma maman et à mon grand-père. Sur les genoux de ce dernier, les mains sur ce volant, je conduis pour la toute première fois.
+La restauration
+Trois cousins, mille boulons
+Avec mon frère et mon cousin, nous la restaurons de fond en comble. Chaque pièce démontée est un souvenir remonté.
+Le grand jour
+Mon propre mariage
+C'est à son bord que je me marie. Rosalie devient officiellement la voiture des plus beaux jours.
+Aujourd'hui
+La traversée vers La Réunion
+Par passion pour cette voiture et son histoire, je la fais voyager jusqu'à l'île, pour perpétuer ces histoires et écrire les vôtres.
 Comme un air de mariage…
 L'artiste & sa complice
 Prête pour le grand jour
@@ -347,7 +563,7 @@ Surtout, elle ne va pas vite — et c'est exactement le point. Une 2CV vous obli
 Trois places passagers en plus du chauffeur, et la capote en toile qui s'ouvre entièrement , du pare-brise jusqu'au coffre : c'est un cabriolet quand il fait beau, une voiture fermée quand une averse passe. Les vitres avant se rabattent, les banquettes se démontent, la décoration se fixe sans percer. Rosalie, toute blanche, se prête à toutes les couleurs de cérémonie ; Soizig, bleue et blanche, arrive déjà habillée en vacances.
 Ensemble, les deux voitures forment un convoi de six passagers : le format qui convient à un EVJF ou un EVJG , à une famille ou à un groupe d'amis. C'est aussi l'image que l'on garde d'un cortège de mariage : deux 2CV à la file, klaxons et rubans.
 Entretenues pour durer
-Une voiture de plus de trente ans ne se conduit pas comme une voiture de location. Rosalie a été restaurée de fond en comble (chaque pièce démontée, nettoyée, remontée), puis convoyée jusqu'à La Réunion. Les deux 2CV sont suivies mécaniquement, contrôlées avant chaque prestation, et conduites par quelqu'un qui les connaît. C'est aussi la raison pour laquelle elles ne montent ni au Maïdo ni dans les cirques : ces routes sont trop hautes et trop exigeantes pour leur mécanique, et nous préférons les voir rouler encore vingt ans. Le littoral, les hauts modérés et le tour de l'île, en revanche, leur vont parfaitement.
+Une voiture de plus de trente ans ne se conduit pas comme une voiture de location. Rosalie a été restaurée de fond en comble (chaque pièce démontée, nettoyée, remontée), puis convoyée jusqu'à La Réunion. Les deux 2CV sont suivies mécaniquement, contrôlées avant chaque prestation, et conduites par quelqu'un qui les connaît. C'est aussi la raison pour laquelle elles ne montent ni au Maïdo ni dans les cirques : ces routes sont trop hautes et trop exigeantes pour leur mécanique, et nous préférons les voir rouler encore vingt ans. Le littoral et les hauts modérés, en revanche, leur vont parfaitement.
 Elles se conduisent toujours avec leur chauffeur : la location sans chauffeur n'est pas proposée , ce qui vous évite le permis, la caution et l'assurance, et vous laisse regarder le paysage.
 Laquelle conduira votre histoire ?
 Écrire votre histoire
@@ -420,16 +636,45 @@ Source : https://une2cvmillehistoires.re/faq
 On vous dit tout
 Questions fréquentes
 La robe, la pluie, les hauts, les tarifs… toutes les réponses avant d'embarquer.
-Ma robe de mariée va-t-elle rentrer dans la 2CV ? Oui ! Même les robes les plus volumineuses trouvent leur place, c'est un petit rituel que je maîtrise parfaitement. Et grâce au toit panoramique grand ouvert, vous pouvez même faire le trajet debout, comme une star : l'arrivée dont tout le monde se souvient. Une vidéo le montre en images sur nos réseaux. La 2CV peut-elle monter dans les hauts ? Oui : elle grimpe sans rougir les grandes côtes et les hauts de l'île, de quoi célébrer avec la vue. Pour les routes de montagne les plus longues, on regarde ensemble le trajet et je vous dis simplement ce qui est possible. Est-ce que je conduis moi-même ? Non — et c'est tant mieux : toutes les prestations sont avec chauffeur. Pas de permis à fournir, pas de caution, pas de stress, juste le plaisir : vous montez, vous trinquez, vous profitez du paysage. Combien de personnes peuvent monter à bord ? 3 passagers par 2CV en plus du chauffeur. Et pour les grands cortèges ou les EVJF/EVJG, Rosalie et Soizig roulent ensemble, soit jusqu'à 6 personnes en convoi ! Combien coûte une voiture de mariage ou une balade en 2CV à La Réunion ? Chaque événement a son déroulé, ses horaires, ses trajets, c'est pour cela qu'il n'y a pas de tarif unique. À titre de repère : les balades démarrent à 125 € (coucher de soleil & apéro) et les mariages à partir de 350 € dans l'Ouest, 450 € dans le Sud et le Nord, 550 € dans l'Est ; la durée de présence de la voiture et les options font ensuite varier le tarif final. Écrivez-nous sur WhatsApp au 0693 82 81 08 avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement. Peut-on décorer la voiture ? Avec plaisir : rubans, fleurs, panneaux personnalisés… Vous pouvez confier la décoration florale à votre fleuriste, ou nous vous conseillons le nôtre, qui connaît Rosalie par cœur. Et s'il pleut ? La capote se ferme en un instant et la balade continue, ambiance cocooning. Pour les mariages, on ajuste le déroulé ensemble ; à La Réunion, le soleil n'est jamais bien loin. Vous déplacez-vous partout sur l'île ? Oui, partout sur toute l'île de La Réunion, et pourquoi pas un tour de l'île complet ! Les frais de déplacement sont simplement intégrés à la proposition selon le lieu de votre événement. Combien de temps à l'avance faut-il réserver ? En saison, comptez entre une semaine et un mois à l'avance pour les dates les plus demandées : les samedis partent vite. Pour une balade, quelques jours suffisent souvent. Dans tous les cas, écrivez-nous : on trouve presque toujours une solution. Peut-on privatiser la 2CV pour un tournage ou un shooting professionnel ? Oui : cinéma, clips, publicités, shootings mode ou grossesse… La voiture vient toujours accompagnée de son chauffeur, sur toute l'île. Parlons de votre projet ! Peut-on louer une 2CV sans chauffeur à La Réunion ? Non. Et c'est voulu : toutes nos locations de 2CV se font avec chauffeur. Pas de permis à fournir, pas de caution, pas de prise en main d'une voiture ancienne : vous montez, vous profitez, je conduis. Quelle voiture de mariage originale choisir à La Réunion ? Une voiture ancienne pleine de charme : la Citroën 2CV ! Entre rétro et poésie, Rosalie (blanche, 1983) et Soizig (bleue et blanche, 1990) transforment le cortège en scène de cinéma : klaxon d'honneur, toit panoramique ouvert et sourires garantis, partout sur l'île (974). Le carburant et les déplacements sont-ils inclus dans le tarif ? Oui, entièrement. Le prix annoncé comprend le carburant ainsi que le déplacement de la voiture et du chauffeur, où que se déroule votre événement sur l'île. Aucune surprise sur la facture. Comment se passe le paiement ? Y a-t-il un acompte ? Pour un mariage, un acompte de 30 % confirme la réservation de votre date, le solde se règle le jour J. Pour une balade, le règlement se fait en totalité à la réservation. Et dans tous les cas : aucune caution à déposer. Attendez-vous pendant la mairie et la cérémonie à l'église ? Bien sûr, et c'est compris dans la prestation. J'attends pendant la mairie, j'attends pendant la cérémonie, je vous accompagne ensuite pour la séance photo, puis je vous conduis jusqu'au lieu de réception. Vous n'avez jamais à vous demander où est la voiture ni à qui la confier.
+Ma robe de mariée va-t-elle rentrer dans la 2CV ?
+Oui ! Même les robes les plus volumineuses trouvent leur place, c'est un petit rituel que je maîtrise parfaitement. Et grâce au toit panoramique grand ouvert, vous pouvez même faire le trajet debout, comme une star : l'arrivée dont tout le monde se souvient. Une vidéo le montre en images sur nos réseaux.
+La 2CV peut-elle monter dans les hauts ?
+Oui : elle grimpe sans rougir les grandes côtes et les hauts de l'île, de quoi célébrer avec la vue. Pour les routes de montagne les plus longues, on regarde ensemble le trajet et je vous dis simplement ce qui est possible.
+Est-ce que je conduis moi-même ?
+Non — et c'est tant mieux : toutes les prestations sont avec chauffeur. Pas de permis à fournir, pas de caution, pas de stress, juste le plaisir : vous montez, vous trinquez, vous profitez du paysage.
+Combien de personnes peuvent monter à bord ?
+3 passagers par 2CV en plus du chauffeur. Et pour les grands cortèges ou les EVJF/EVJG, Rosalie et Soizig roulent ensemble, soit jusqu'à 6 personnes en convoi !
+Combien coûte une voiture de mariage ou une balade en 2CV à La Réunion ?
+Les balades sont à prix ferme, par voiture et jusqu'à 3 passagers : 150 € le coucher de soleil avec apéro (± 2 h 30), 175 € la balade brunch péï (± 3 h), 160 € le lever de soleil (± 3 h), 250 € la demi-journée EVJF ou EVJG, 450 € la journée à thème, et 60 € de l'heure en sur-mesure (3 h minimum). Chauffeur, carburant et déplacement compris. Seuls les mariages font l'objet d'un devis : à partir de 350 € dans l'Ouest et 450 € dans le Sud et le Nord, selon la durée de présence de la voiture. Écrivez-moi sur WhatsApp au 0693 82 81 08 avec votre date et votre projet : vous recevrez une proposition claire et rapide, sans engagement.
+Peut-on décorer la voiture ?
+Avec plaisir : rubans, fleurs, panneaux personnalisés… Vous pouvez confier la décoration florale à votre fleuriste, ou nous vous conseillons le nôtre, qui connaît Rosalie par cœur.
+Et s'il pleut ?
+La capote se ferme en un instant et la balade continue, ambiance cocooning. Pour les mariages, on ajuste le déroulé ensemble ; à La Réunion, le soleil n'est jamais bien loin.
+Dans quelles zones de l'île vous déplacez-vous ?
+Sur l'Ouest, le Sud et le Nord de l'île — les frais de déplacement sont simplement intégrés à la proposition selon le lieu de votre événement. L'Est n'est en revanche pas desservi, et le tour complet de l'île n'est plus proposé : les routes sont trop exigeantes pour des 2CV de collection.
+Combien de temps à l'avance faut-il réserver ?
+En saison, comptez entre une semaine et un mois à l'avance pour les dates les plus demandées : les samedis partent vite. Pour une balade, quelques jours suffisent souvent. Dans tous les cas, écrivez-nous : on trouve presque toujours une solution.
+Peut-on privatiser la 2CV pour un tournage ou un shooting professionnel ?
+Oui : cinéma, clips, publicités, shootings mode ou grossesse… La voiture vient toujours accompagnée de son chauffeur, dans l'Ouest, le Sud et le Nord de l'île. Parlons de votre projet !
+Peut-on louer une 2CV sans chauffeur à La Réunion ?
+Non. Et c'est voulu : toutes nos locations de 2CV se font avec chauffeur. Pas de permis à fournir, pas de caution, pas de prise en main d'une voiture ancienne : vous montez, vous profitez, je conduis.
+Quelle voiture de mariage originale choisir à La Réunion ?
+Une voiture ancienne pleine de charme : la Citroën 2CV ! Entre rétro et poésie, Rosalie (blanche, 1983) et Soizig (bleue et blanche, 1990) transforment le cortège en scène de cinéma : klaxon d'honneur, toit panoramique ouvert et sourires garantis, dans l'Ouest, le Sud et le Nord (974).
+Le carburant et les déplacements sont-ils inclus dans le tarif ?
+Oui, entièrement. Le prix annoncé comprend le carburant ainsi que le déplacement de la voiture et du chauffeur, où que se déroule votre événement dans les zones desservies. Aucune surprise sur la facture.
+Comment se passe le paiement ? Y a-t-il un acompte ?
+Pour un mariage, un acompte de 30 % confirme la réservation de votre date, le solde se règle le jour J. Pour une balade, le règlement se fait en totalité à la réservation. Et dans tous les cas : aucune caution à déposer.
+Attendez-vous pendant la mairie et la cérémonie à l'église ?
+Bien sûr, et c'est compris dans la prestation. J'attends pendant la mairie, j'attends pendant la cérémonie, je vous accompagne ensuite pour la séance photo, puis je vous conduis jusqu'au lieu de réception. Vous n'avez jamais à vous demander où est la voiture ni à qui la confier.
 En bref
 L'essentiel en un coup d'œil
 Qui ? Jonathan — artiste jongleur et danseur. Projet porté par Collectif Ensemble, association d'intérêt général.
 Quoi ? Deux Citroën 2CV de collection avec chauffeur : voiture de mariage, balades, shootings photo & évènements.
-Où ? Toute l'île de La Réunion (974), base à Saint-Leu (97436).
+Où ? L'Ouest, le Sud et le Nord de La Réunion (974), base à Saint-Leu (97436). L'Est n'est pas desservi.
 Combien de places ? Jusqu'à 3 passagers par 2CV, et Rosalie et Soizig peuvent rouler ensemble.
 Inclus ? Le chauffeur, le carburant, le déplacement, l'attente pendant la mairie et la cérémonie, et l'accompagnement jusqu'au lieu de réception.
 Réservation ? Une semaine à un mois à l'avance en saison pour les dates les plus demandées. Acompte de 30 % pour un mariage, règlement intégral à la réservation pour une balade, jamais de caution.
-Tarifs ? Balades à partir de 125 €, mariages à partir de 350 € dans l'Ouest (450 € Sud et Nord, 550 € Est). Proposition sur mesure, rapide et sans engagement, par WhatsApp au 0693 82 81 08 .
+Tarifs ? Balades à prix ferme, de 150 à 450 € selon la formule ; mariages à partir de 350 € dans l'Ouest (450 € Sud et Nord). Proposition sur mesure, rapide et sans engagement, par WhatsApp au 0693 82 81 08 .
 Une autre question ?
 Poser ma question
 Ou par téléphone : 0693 82 81 08 · formulaire de contact
@@ -442,18 +687,28 @@ Source : https://une2cvmillehistoires.re/contact
 Le premier chapitre
 Écrivons votre histoire
 WhatsApp, téléphone ou formulaire : racontez-nous votre projet, la réponse arrive vite.
-Par WhatsApp c'est plus vivant !
+Par WhatsApp
+c'est plus vivant !
 C'est vivant, c'est rapide, et on peut s'envoyer photos et idées en direct. Je réponds généralement dans la journée.
 Démarrer la conversation
 📞 0693 82 81 08
 ✉️ asso.collectif.ensemble@gmail.com
-Basé à Saint-Leu · déplacements sur toute l'île de La Réunion
+Basé à Saint-Leu · déplacements dans l'Ouest, le Sud et le Nord
 Ou par formulaire
 Prénom et nom
-Téléphone ou WhatsApp (obligatoire) Un numéro joignable, WhatsApp de préférence, c'est le plus rapide pour vous répondre. Adresse email
-Type d'événement Type d'événement… Mariage EVJF / EVJG Balade Shooting / tournage Autre histoire
+Téléphone ou WhatsApp (obligatoire)
+Un numéro joignable, WhatsApp de préférence, c'est le plus rapide pour vous répondre.
+Adresse email
+Type d'événement
+Type d'événement…
+Mariage
+EVJF / EVJG
+Balade
+Shooting / tournage
+Autre histoire
 Date envisagée
 Votre message
+Envoyer ma demande
 L'envoi n'a pas abouti. Votre message n'est pas perdu, choisissez une autre voie :
 Ouvrir dans ma messagerie · Écrire sur WhatsApp · 0693 82 81 08
 
