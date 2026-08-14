@@ -162,7 +162,10 @@ img{max-width:100%;height:auto}
 .wa-ico{width:20px;height:20px;fill:#fff;flex-shrink:0}
 
 /* ============ NAV ============ */
-nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:10px 4vw;transition:.4s}
+/* La transition porte sur des proprietes nommees, jamais sur backdrop-filter : anime, il
+   restait un flou residuel pendant 400 ms, et un element floute est bloc conteneur pour ses
+   descendants position:fixed. Le panneau du menu s'ouvrait alors enferme dans la barre. */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:10px 4vw;transition:background .4s, box-shadow .4s}
 nav.scrolled,nav.opaque{background:rgba(255,255,255,.95);backdrop-filter:blur(10px);box-shadow:0 1px 24px rgba(58,49,41,.09)}
 nav .logo-lien{display:flex;align-items:center}
 nav .logo-lien img{height:52px;width:auto;filter:brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,.45));transition:filter .4s}
@@ -174,7 +177,11 @@ nav a:hover{color:var(--nude)}
 /* Sur la barre transparente le nude se detache d'une photo sombre ; une fois la barre opaque
    il tombe a 2.2:1 sur le creme. Le survol y passe donc sur la version lisible du terre. */
 nav.scrolled a:hover,nav.opaque a:hover{color:var(--terre-lien)}
-nav a.actif{color:var(--terre)}
+/* --terre sur une photo de hero : 1.2:1, et 3.6:1 une fois la barre opaque. La couleur ne
+   peut pas porter cet etat seule. L'onglet courant garde donc la couleur des autres et se
+   distingue par un filet — visible sur tous les fonds, et pas uniquement pour qui percoit
+   les nuances. */
+nav a.actif{border-bottom:2px solid currentColor;padding-bottom:4px}
 .nav-wa{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:#fff !important;padding:9px 18px;border-radius:30px;font-weight:500;text-shadow:none !important}
 .nav-wa:hover{background:var(--wa-fonce)}
 .nav-wa svg{width:17px;height:17px;fill:#fff}
@@ -204,6 +211,9 @@ nav.scrolled .burger span,nav.opaque .burger span{background:var(--encre)}
 .btn-brun:hover{background:#2f2620}
 .sound{position:fixed;bottom:46px;left:20px;z-index:48;width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.95);border:1px solid #e6ded2;font-size:23px;cursor:pointer;box-shadow:0 6px 22px rgba(58,49,41,.25);transition:.3s;display:flex;align-items:center;justify-content:center}
 .sound:hover{transform:scale(1.08)}
+/* Sur les petits ecrans il recouvrait l'angle du bouton principal du hero (53 x 10 px a
+   320 px) : on le descend au niveau de la bulle WhatsApp, en face d'elle. */
+@media(max-width:460px){ .sound{bottom:18px;width:48px;height:48px;font-size:20px} }
 .sound.off{opacity:.55;filter:grayscale(1)}
 .wa-float{position:fixed;bottom:22px;right:20px;z-index:48;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(21,127,69,.4);animation:pulseWA 2.6s infinite;transition:transform .3s}
 .wa-float:hover{transform:scale(1.1)}
@@ -266,6 +276,9 @@ section.doux{background:var(--creme)}
 .prose h2{font-size:clamp(24px,3.4vw,34px);margin:38px 0 16px}
 .prose h3{font-size:21px;margin:28px 0 12px}
 .prose strong{color:var(--brun);font-weight:500}
+/* Filet de securite : un lien de contenu sans classe ni style inline tombait sur le bleu du
+   navigateur, en rupture nette avec la charte. Les liens habilles gardent leur habit. */
+main a:not([class]){color:var(--terre-lien);text-decoration:underline;text-underline-offset:3px}
 
 /* prestations — texte sous l'image */
 .prestas{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:34px;max-width:1150px;margin:0 auto}
@@ -331,7 +344,7 @@ section.doux{background:var(--creme)}
 .fiche:hover img{transform:scale(1.05)}
 .fiche .badge{position:absolute;top:16px;left:16px;background:#fff;border-radius:30px;padding:6px 16px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--terre-lien);box-shadow:0 4px 14px rgba(0,0,0,.12)}
 .fiche .corps{padding:26px 28px 30px}
-.fiche h3{font-size:26px}
+.fiche h2,.fiche h3{font-size:26px}
 .fiche p{font-weight:300;line-height:1.7;color:#5a4f43;margin-top:10px;font-size:15.5px}
 
 /* histoire */
@@ -370,6 +383,9 @@ section.doux{background:var(--creme)}
 /* déroulé (page mariage) */
 .deroule{max-width:820px;margin:0 auto;display:grid;gap:0}
 .temps{display:grid;grid-template-columns:64px 1fr;gap:22px;padding:22px 0;border-bottom:1px solid #eee3d4;align-items:start}
+/* Sous 420 px, la colonne du chiffre mangeait 40 % de l'ecran et laissait 152 px au texte,
+   soit une vingtaine de caracteres par ligne. Le chiffre passe au-dessus. */
+@media(max-width:420px){ .temps{grid-template-columns:1fr;gap:8px} }
 .temps:last-child{border-bottom:none}
 .temps .num{font-family:'Pinyon Script';font-size:44px;color:var(--nude);line-height:1}
 .temps h3{font-size:21px;margin-bottom:6px}
@@ -407,7 +423,7 @@ section.doux{background:var(--creme)}
 .wa-carte{background:linear-gradient(160deg,#eaf7ee,#ddf1e3);border:1px solid #bfe4cb;padding:36px 32px;text-align:center;box-shadow:0 16px 44px rgba(21,127,69,.15)}
 .wa-carte .grand-wa{width:74px;height:74px;border-radius:50%;background:var(--wa);display:inline-flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 10px 28px rgba(21,127,69,.34)}
 .wa-carte .grand-wa svg{width:40px;height:40px;fill:#fff}
-.wa-carte h3{font-size:26px;margin-bottom:10px}
+.wa-carte h2,.wa-carte h3{font-size:26px;margin-bottom:10px}
 .wa-carte p{font-weight:300;line-height:1.7;color:#3c4a3f;margin-bottom:20px}
 .wa-carte .btn-wa{justify-content:center;width:100%;font-size:15px}
 .wa-carte .tel{display:block;margin-top:14px;color:#2c5e3f;font-size:15px;text-decoration:none;letter-spacing:.05em}
@@ -430,12 +446,18 @@ html.intro-lock,html.intro-lock body{overflow:hidden}
 .intro-mot{position:absolute;left:0;right:0;bottom:11vh;text-align:center;color:#f7efe2;font-family:'Pinyon Script';font-size:clamp(36px,9vw,60px);text-shadow:0 2px 22px rgba(0,0,0,.6);opacity:0;animation:rise 1.2s .5s forwards;z-index:2}
 .intro-passer{position:absolute;top:18px;right:20px;z-index:3;color:rgba(255,255,255,.8);font-size:13px;letter-spacing:.1em;cursor:pointer;padding:8px 10px}
 /* ---- diaporama lent du hero ---- */
-.hero-diapo{overflow:hidden;background-size:cover;background-position:center;animation:none}
+.hero-diapo{overflow:hidden;background:var(--brun);background-size:cover;background-position:center;animation:none}
 .hero-diapo .dp{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:diapo 36s linear infinite}
-.hero-diapo .dp:nth-child(2){animation-delay:7.2s}
-.hero-diapo .dp:nth-child(3){animation-delay:14.4s}
-.hero-diapo .dp:nth-child(4){animation-delay:21.6s}
-.hero-diapo .dp:nth-child(5){animation-delay:28.8s}
+/* Chaque image est enveloppee dans un <picture> : elle y est toujours le 2e enfant, apres
+   le <source>. Un :nth-child(3..5) sur .dp ne visait donc rien, et :nth-child(2) les visait
+   toutes — les cinq photos jouaient l'animation en meme temps. On decale les <picture>.
+   Le premier delai est negatif pour que la photo d'ouverture soit deja pleine au premier
+   rendu : le hero n'a plus besoin d'une copie en background-image pour boucher le trou. */
+.hero-diapo picture:nth-of-type(1) .dp{animation-delay:-1.8s}
+.hero-diapo picture:nth-of-type(2) .dp{animation-delay:5.4s}
+.hero-diapo picture:nth-of-type(3) .dp{animation-delay:12.6s}
+.hero-diapo picture:nth-of-type(4) .dp{animation-delay:19.8s}
+.hero-diapo picture:nth-of-type(5) .dp{animation-delay:27s}
 @keyframes diapo{0%{opacity:0;transform:scale(1)}5%{opacity:1}20%{opacity:1}26%{opacity:0;transform:scale(1.07)}100%{opacity:0}}
 /* ---- le film sur l'accueil ---- */
 #film .film-cadre{max-width:390px;margin:26px auto 0}
@@ -505,9 +527,11 @@ main{display:block}
 @media(min-width:1081px){
   header.hero{display:block}
   .hero-visuel{position:absolute;inset:0;flex:none}
+  /* Le voile etait regle sur la seule photo reellement affichee. Le diaporama repare, il doit
+     tenir aussi sur le coucher de soleil, ou le logo blanc tombait a 1.96:1. */
   .hero-veil{background:
-     linear-gradient(180deg,rgba(26,20,15,.44) 0%,rgba(26,20,15,.14) 24%,rgba(26,20,15,.20) 52%,rgba(26,20,15,.60) 100%),
-     radial-gradient(150% 105% at 50% 48%,rgba(26,20,15,.06) 0%,rgba(26,20,15,.16) 55%,rgba(26,20,15,.34) 100%)}
+     linear-gradient(180deg,rgba(26,20,15,.54) 0%,rgba(26,20,15,.30) 24%,rgba(26,20,15,.40) 52%,rgba(26,20,15,.70) 100%),
+     radial-gradient(150% 105% at 50% 48%,rgba(26,20,15,.26) 0%,rgba(26,20,15,.36) 55%,rgba(26,20,15,.50) 100%)}
   .hero-bas{position:absolute;inset:0;z-index:3;background:none;justify-content:center;align-items:center;
     gap:0;padding:0 6vw 7vh;text-align:center}
   .hero-logo{width:min(330px,34vw);margin-bottom:30px;
@@ -520,7 +544,10 @@ main{display:block}
   h1.hero-mots{color:#f6efe4;font-size:14px;letter-spacing:.3em;line-height:2.1;margin-bottom:36px;
     text-shadow:0 2px 24px rgba(14,10,6,.78),0 1px 3px rgba(14,10,6,.5)}
   .hero-actions{justify-content:center}
-  .hero-bas .btn-ligne{border:1.5px solid rgba(247,239,226,.85);color:#f7efe2;background:rgba(255,255,255,.06);
+  /* Fond assombri et ombre portee : le libelle clair tombait a 3.0:1 sur le sable et les
+     fleurs sechees de la photo d'ouverture. */
+  .hero-bas .btn-ligne{border:1.5px solid rgba(247,239,226,.9);color:#fbf5ec;background:rgba(26,20,15,.38);
+    text-shadow:0 1px 6px rgba(14,10,6,.75);
     -webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
   .hero-bas .btn-ligne:hover{background:rgba(255,255,255,.18)}
   .il-etait{top:auto;bottom:9.5vh;left:6vw;font-size:clamp(42px,4.4vw,62px);z-index:4}
@@ -569,11 +596,13 @@ footer a:hover{color:#e8d9c4}
 .pied-titre{font-family:'Playfair Display',serif;color:#e7dccc;font-size:14px;letter-spacing:.16em;
   text-transform:uppercase;margin-bottom:14px;font-weight:500}
 footer .liens-pages{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:center}
-footer .liens-pages a{margin:0}
+/* Cibles tactiles : ces liens ne faisaient que 25 px de haut. */
+footer .liens-pages a{margin:0;display:inline-block;padding:9px 2px}
 .pied-tel{display:inline-block;font-family:'Playfair Display',serif;font-size:22px;color:#f2e8da !important;
   letter-spacing:.04em;margin-bottom:10px}
 .pied-reseaux{font-size:13px}
-.pied-legal{border-top:1px solid rgba(255,255,255,.09);padding-top:24px;font-size:12.5px;color:#8d8170;
+/* #8d8170 sur l'encre du pied : 3.33:1, sous le seuil. Aligne sur la couleur du pied. */
+.pied-legal{border-top:1px solid rgba(255,255,255,.09);padding-top:24px;font-size:12.5px;color:#a99c8b;
   display:flex;flex-direction:column;gap:6px;align-items:center}
 @media(min-width:900px){
   footer{text-align:left;padding:64px 6vw 78px}

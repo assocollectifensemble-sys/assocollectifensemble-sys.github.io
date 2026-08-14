@@ -43,3 +43,25 @@ filigrane Instagram du compte, et souvent un texte incrusté en bas. `object-fit
 bande noire (le cadre utile va de y=388 à y=1044 dans l'original), ce qui a fait tomber
 au passage l'incrustation. `06-preparatifs.jpg` a été supprimée : la vignette ne montrait
 que de la végétation, aucun sujet.
+
+## Deux pièges du 12 août 2026, à ne pas reproduire
+
+**`:nth-child` ne traverse pas `<picture>`.** Le diaporama du hero n'a jamais défilé : ses
+délais visaient `.dp:nth-child(2..5)`, alors que chaque image est enveloppée dans son propre
+`<picture>` et y est toujours le 2ᵉ enfant, après le `<source>`. Résultat, `:nth-child(2)`
+attrapait les cinq images et les autres règles ne visaient rien — les cinq photos jouaient
+l'animation en même temps, on n'en voyait qu'une. Les délais portent désormais sur les
+`picture:nth-of-type()`. Dès qu'on emballe une image dans un `<picture>`, tout sélecteur
+positionnel écrit pour l'`<img>` est à revoir.
+
+**Une transition « toutes propriétés » anime aussi `backdrop-filter`.** Le menu mobile se
+repliait dans la barre dès que la page était défilée : `nav.menu-ouvert{backdrop-filter:none
+!important}` fixait bien la valeur, mais `nav{transition:.4s}` l'interpolait pendant 400 ms,
+et un élément qui porte un flou reste bloc conteneur pour ses descendants `position:fixed`.
+La transition nomme maintenant ses propriétés. Ce bug avait déjà été corrigé une fois sous
+une autre forme : il revient tant qu'on écrit `transition:<durée>` toute seule.
+
+**Un `<a>` ne peut pas en contenir un autre.** Les cartes de l'accueil sont des liens ; y
+insérer un lien dans la description faisait éclater la grille (le navigateur ferme la carte
+avant le lien imbriqué). Vérification rapide : `document.querySelectorAll('a a').length`
+doit valoir 0 sur chaque page.
