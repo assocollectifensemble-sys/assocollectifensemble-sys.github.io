@@ -185,7 +185,7 @@ nav a.actif{border-bottom:2px solid currentColor;padding-bottom:4px}
 .nav-wa{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:#fff !important;padding:9px 18px;border-radius:30px;font-weight:500;text-shadow:none !important}
 .nav-wa:hover{background:var(--wa-fonce)}
 .nav-wa svg{width:17px;height:17px;fill:#fff}
-.burger{display:none;background:none;border:0;cursor:pointer;width:46px;height:42px;flex-direction:column;justify-content:center;gap:5px;padding:0 11px;z-index:62}
+.burger{display:none;background:none;border:0;cursor:pointer;width:46px;height:44px;flex-direction:column;justify-content:center;gap:5px;padding:0 11px;z-index:62}
 .burger span{display:block;height:2px;background:#fff;border-radius:2px;transition:.3s}
 nav.scrolled .burger span,nav.opaque .burger span{background:var(--encre)}
 .burger[aria-expanded="true"] span{background:var(--encre)}
@@ -222,6 +222,9 @@ nav.scrolled .burger span,nav.opaque .burger span{background:var(--encre)}
 .wa-float{transition:opacity .5s ease, transform .5s cubic-bezier(.34,1.4,.64,1)}
 .wa-float.cache-float,.wa-float.pas-encore{opacity:0;pointer-events:none;transform:scale(.55) translateY(16px)}
 .wa-float.pas-encore{animation:none}
+/* Moins de surface masquee sur les petits ecrans : la bulle occupe en permanence le coin
+   bas droit, ou se trouvent souvent un prix ou un lien. */
+@media(max-width:460px){ .wa-float{width:52px;height:52px} .wa-float svg{width:27px;height:27px} }
 
 /* ============ HERO ACCUEIL ============ */
 header.hero{position:relative;height:100svh;display:flex;flex-direction:column;background:var(--creme)}
@@ -290,7 +293,7 @@ main a:not([class]){color:var(--terre-lien);text-decoration:underline;text-under
 .presta:hover .imgbox img{transform:scale(1.06)}
 .presta h3{font-size:27px;margin:22px 0 6px}
 .presta p.souligne{font-size:14px;letter-spacing:.1em;color:#6b5b4a}
-.presta .plus{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid var(--nude);padding-bottom:3px;color:#8a6f52}
+.presta .plus{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid var(--nude);padding-bottom:3px;color:#7d6047}
 .sous-note{max-width:640px;margin:44px auto 0;text-align:center;font-weight:300;font-size:15px;color:#6b5b4a;line-height:1.7}
 
 /* univers mariage */
@@ -428,7 +431,7 @@ main a:not([class]){color:var(--terre-lien);text-decoration:underline;text-under
 .wa-carte .btn-wa{justify-content:center;width:100%;font-size:15px}
 .wa-carte .tel{display:block;margin-top:14px;color:#2c5e3f;font-size:15px;text-decoration:none;letter-spacing:.05em}
 .formulaire{display:grid;gap:14px}
-.formulaire label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8a7a63;margin-bottom:-8px}
+.formulaire label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#7a6b55;margin-bottom:-8px}
 .formulaire input,.formulaire select,.formulaire textarea{width:100%;padding:14px 16px;border:1px solid #ddd0bd;background:#fff;color:var(--encre);font-family:'Jost';font-size:15px}
 .formulaire input:focus,.formulaire textarea:focus,.formulaire select:focus{outline:2px solid var(--nude)}
 .cache{display:none}
@@ -480,7 +483,7 @@ h1.hero-mots{margin:0;font-weight:400;font-family:Jost,sans-serif}
 .forfait p{font-weight:300;font-size:14.5px;line-height:1.7;color:#5a4f43;margin:0}
 
 .histoire .prose h3{color:var(--terre);font-family:'Playfair Display',serif;font-size:clamp(19px,2.6vw,24px);margin:34px 0 12px}
-.histoire .sous-note{text-align:center;font-size:13.5px;color:#8b7a67;margin-top:22px}
+.histoire .sous-note{text-align:center;font-size:13.5px;color:#79695a;margin-top:22px}
 
 @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}*{animation-duration:.01ms !important}}
 
@@ -489,12 +492,15 @@ h1.hero-mots{margin:0;font-weight:400;font-family:Jost,sans-serif}
 
 .tableau{max-width:900px;margin:34px auto;overflow-x:auto}
 .tableau table{width:100%;border-collapse:collapse;font-weight:300;font-size:15.5px;color:#5a4f43}
-.tableau caption{caption-side:bottom;padding-top:14px;font-size:13px;color:#8b7a67;text-align:left}
+.tableau caption{caption-side:bottom;padding-top:14px;font-size:13px;color:#79695a;text-align:left}
 .tableau th,.tableau td{padding:16px 18px;border-bottom:1px solid #ece2d4;text-align:left;vertical-align:top}
 .tableau thead th{font-family:'Jost',sans-serif;font-weight:500;letter-spacing:.16em;text-transform:uppercase;font-size:11.5px;color:var(--terre-lien);border-bottom:1.5px solid var(--nude);white-space:nowrap}
 .tableau tbody th{font-family:'Playfair Display',serif;font-weight:600;color:var(--brun);font-size:17px}
 .tableau .prix-cell{font-family:'Playfair Display',serif;font-size:20px;color:var(--terre-lien);white-space:nowrap}
-@media(max-width:640px){.tableau th,.tableau td{padding:12px 10px;font-size:14px}.tableau .prix-cell{font-size:17px}}
+@media(max-width:640px){.tableau th,.tableau td{padding:12px 10px;font-size:14px}.tableau .prix-cell{font-size:17px}
+  /* Le tableau passe en cartes empilees : sans cette reserve, le prix finit sous la bulle
+     WhatsApp, qui occupe en permanence le coin bas droit. */
+  .tableau .prix-cell{padding-right:70px}}
 /* Sous 620px, trois colonnes ecrasent la colonne des zones en un ruban illisible.
    Chaque ligne devient une fiche, et l'en-tete de colonne repasse en etiquette via data-libelle. */
 @media(max-width:620px){

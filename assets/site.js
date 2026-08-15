@@ -49,6 +49,9 @@
       waFloat.classList.toggle('cache-float', visibles>0);
     },{threshold:.4});
     document.querySelectorAll('.btn-wa').forEach(function(b){ if(b!==waFloat) ioWa.observe(b); });
+    // La bulle occupe en permanence le coin bas droit : elle s'efface aussi devant le pied
+    // de page, ou vivent le telephone, l'adresse et les liens des reseaux.
+    var pied=document.querySelector('footer'); if(pied) ioWa.observe(pied);
   }
 
   var audio=document.getElementById('musique');
