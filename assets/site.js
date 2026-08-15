@@ -9,7 +9,19 @@
       bg.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');
       if(nav) nav.classList.toggle('menu-ouvert',o);
       document.documentElement.classList.toggle('menu-ouvert',o);
+      // Le focus suit le menu : sinon la tabulation traverse le voile et parcourt la page
+      // qui se trouve derriere, sans qu'on voie ou l'on est.
+      if(o){ var premier=ul.querySelector('a'); if(premier) premier.focus(); }
+      else if(document.activeElement && ul.contains(document.activeElement)){ bg.focus(); }
     };
+    // Piege de tabulation : tant que le menu est ouvert, on tourne dedans.
+    ul.addEventListener('keydown',function(e){
+      if(e.key!=='Tab'||!ul.classList.contains('ouvert')) return;
+      var f=ul.querySelectorAll('a'); if(!f.length) return;
+      var premier=f[0], dernier=f[f.length-1];
+      if(e.shiftKey && document.activeElement===premier){ e.preventDefault(); dernier.focus(); }
+      else if(!e.shiftKey && document.activeElement===dernier){ e.preventDefault(); bg.focus(); }
+    });
     bg.addEventListener('click',function(e){ e.stopPropagation(); setMenu(!ul.classList.contains('ouvert')); });
     ul.addEventListener('click',function(e){ if(e.target.closest('a')) setMenu(false); });
     if(nav) nav.addEventListener('click',function(e){
@@ -52,6 +64,18 @@
     // La bulle occupe en permanence le coin bas droit : elle s'efface aussi devant le pied
     // de page, ou vivent le telephone, l'adresse et les liens des reseaux.
     var pied=document.querySelector('footer'); if(pied) ioWa.observe(pied);
+    // La bulle occupe le coin bas droit en permanence et se pose parfois sur le marqueur
+    // d'ouverture d'une question. Plutot que de la sacrifier, on l'efface pendant la lecture
+    // vers le bas : l'intention de contact suit un arret, jamais un defilement rapide.
+    var dernierY=scrollY, minuteur=null;
+    addEventListener('scroll',function(){
+      var y=scrollY;
+      if(y>dernierY+8 && y>200){ waFloat.classList.add('en-lecture'); }
+      else if(y<dernierY-8){ waFloat.classList.remove('en-lecture'); }
+      dernierY=y;
+      clearTimeout(minuteur);
+      minuteur=setTimeout(function(){ waFloat.classList.remove('en-lecture'); },400);
+    },{passive:true});
   }
 
   var audio=document.getElementById('musique');
@@ -149,7 +173,9 @@
           btn.disabled=false; btn.textContent=txt;
           var d=f.parentNode.querySelector('.secours');
           if(d){ d.hidden=false; var a=d.querySelector('a.secours-mail'); if(a) a.href=lienMail();
-                 d.scrollIntoView({behavior:'smooth',block:'center'}); }
+                 // Sans role/tabindex, un lecteur d'ecran n'apprend jamais que l'envoi a echoue.
+                 d.setAttribute('role','alert'); d.setAttribute('tabindex','-1');
+                 d.scrollIntoView({behavior:'smooth',block:'center'}); d.focus(); }
         });
     }, true);
   });

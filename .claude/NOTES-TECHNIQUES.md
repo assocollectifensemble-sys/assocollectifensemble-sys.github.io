@@ -65,3 +65,32 @@ une autre forme : il revient tant qu'on écrit `transition:<durée>` toute seule
 insérer un lien dans la description faisait éclater la grille (le navigateur ferme la carte
 avant le lien imbriqué). Vérification rapide : `document.querySelectorAll('a a').length`
 doit valoir 0 sur chaque page.
+
+## Ce que la contre-expertise du 12 août a rattrapé
+
+Trois régressions introduites par mes propres correctifs, trouvées par un agent mandaté pour
+me contredire. À relire avant de « nettoyer » quoi que ce soit dans ce fichier.
+
+**Le `background-image` du hero avait deux rôles, pas un.** Je l'avais supprimé comme doublon
+du diaporama. Il bouchait aussi le trou sous les fondus — deux photos à demi opaques laissent
+passer le fond 21 % du temps — et surtout il était la seule image visible sous
+`prefers-reduced-motion`, où le hero devenait un aplat brun. Un fond CSS léger l'a remplacé.
+
+**`prefers-reduced-motion` sans `animation-iteration-count:1`** ne fait qu'accélérer les
+animations infinies : elles tournent à ~100 000 itérations par seconde au lieu de s'arrêter.
+C'est ce qui vidait le diaporama de ses images.
+
+**Un « filet de sécurité » doit s'écrire avec `:where()`.** `main a:not([class])` a une
+spécificité de (0,1,2) et passait devant `.balade a` (0,1,1) : 22 liens de cartes se
+retrouvaient soulignés deux fois. `main :where(a:not([class]))` tombe à (0,0,0) et ne rattrape
+que ce qui n'est habillé par personne.
+
+Et deux leçons de méthode :
+
+- **Un test qui échoue n'est pas toujours un défaut.** Trois de mes contrôles mesuraient
+  pendant une transition (`.reveal` à l'impression), pendant un défilement fluide (la bulle),
+  ou avant la fin d'un `scroll-behavior:smooth` (les ancres). Mesurer l'état stable, pas
+  l'état transitoire.
+- **Une correction non écrite n'existe pas.** Un script Python a levé une exception avant son
+  `open(..., "w")` : les trois premiers remplacements avaient l'air appliqués — ils étaient
+  affichés — mais rien n'avait touché le disque. Vérifier le fichier, pas la sortie du script.

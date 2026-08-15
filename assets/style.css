@@ -194,7 +194,11 @@ nav.scrolled .burger span,nav.opaque .burger span{background:var(--encre)}
 .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 @media(max-width:1080px){
   .burger{display:flex}
-  nav ul{position:fixed;top:0;right:0;bottom:0;width:min(80vw,330px);background:rgba(250,247,242,.985);backdrop-filter:blur(12px);flex-direction:column;justify-content:center;align-items:flex-start;gap:24px;padding:0 34px;transform:translateX(105%);transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:-12px 0 44px rgba(58,49,41,.2);z-index:60}
+  nav ul{position:fixed;top:0;right:0;bottom:0;width:min(80vw,330px);background:rgba(250,247,242,.985);backdrop-filter:blur(12px);flex-direction:column;justify-content:center;align-items:flex-start;gap:24px;padding:0 34px;transform:translateX(105%);transition:transform .35s cubic-bezier(.4,0,.2,1), visibility 0s .35s;
+    visibility:hidden;box-shadow:-12px 0 44px rgba(58,49,41,.2);z-index:60}
+  /* Sans visibility, les huit liens du panneau ferme restaient tabulables a 440 px du bord :
+     la tabulation partait dans le vide avant d'atteindre la page. */
+  nav.menu-ouvert ul{visibility:visible;transition:transform .35s cubic-bezier(.4,0,.2,1), visibility 0s 0s}
   nav ul.ouvert{transform:none}
   nav ul a{color:var(--encre) !important;text-shadow:none !important;font-size:15px;letter-spacing:.14em}
   nav ul .nav-wa{color:#fff !important}
@@ -220,7 +224,7 @@ nav.scrolled .burger span,nav.opaque .burger span{background:var(--encre)}
 .wa-float svg{width:32px;height:32px;fill:#fff}
 @keyframes pulseWA{0%,100%{box-shadow:0 10px 30px rgba(21,127,69,.4)}50%{box-shadow:0 10px 30px rgba(21,127,69,.4),0 0 0 14px rgba(21,127,69,.14)}}
 .wa-float{transition:opacity .5s ease, transform .5s cubic-bezier(.34,1.4,.64,1)}
-.wa-float.cache-float,.wa-float.pas-encore{opacity:0;pointer-events:none;transform:scale(.55) translateY(16px)}
+.wa-float.cache-float,.wa-float.pas-encore,.wa-float.en-lecture{opacity:0;pointer-events:none;transform:scale(.55) translateY(16px)}
 .wa-float.pas-encore{animation:none}
 /* Moins de surface masquee sur les petits ecrans : la bulle occupe en permanence le coin
    bas droit, ou se trouvent souvent un prix ou un lien. */
@@ -281,7 +285,9 @@ section.doux{background:var(--creme)}
 .prose strong{color:var(--brun);font-weight:500}
 /* Filet de securite : un lien de contenu sans classe ni style inline tombait sur le bleu du
    navigateur, en rupture nette avec la charte. Les liens habilles gardent leur habit. */
-main a:not([class]){color:var(--terre-lien);text-decoration:underline;text-underline-offset:3px}
+/* :where() ramene la specificite a zero : le filet rattrape les liens orphelins sans jamais
+   passer devant une regle de la charte — .balade a se retrouvait souligne deux fois. */
+main :where(a:not([class])){color:var(--terre-lien);text-decoration:underline;text-underline-offset:3px}
 
 /* prestations — texte sous l'image */
 .prestas{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:34px;max-width:1150px;margin:0 auto}
@@ -397,6 +403,10 @@ main a:not([class]){color:var(--terre-lien);text-decoration:underline;text-under
 /* galerie */
 .galerie{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr));gap:14px;max-width:1150px;margin:0 auto}
 .galerie .gitem{overflow:hidden;background:#fff;border:1px solid #ecdfd0}
+/* Six vignettes sur quatre colonnes laissent un vide de 554 x 260 px en bas a droite.
+   Trois colonnes donnent deux rangees pleines et des photos 32 % plus larges. La galerie
+   de sept vignettes garde ses quatre colonnes, faute de correspondre au selecteur. */
+@media(min-width:1000px){ .galerie:has(> :nth-child(6):last-child){grid-template-columns:repeat(3,1fr)} }
 /* Les vues de la galerie sont des captures du film de la journee : le sous-titre incruste et
    le filigrane vivent dans le tiers bas de l'image. Remonter le point de recadrage a 35 %
    les laisse hors cadre et centre la vignette sur le sujet plutot que sur le milieu du 9:16. */
@@ -449,7 +459,9 @@ html.intro-lock,html.intro-lock body{overflow:hidden}
 .intro-mot{position:absolute;left:0;right:0;bottom:11vh;text-align:center;color:#f7efe2;font-family:'Pinyon Script';font-size:clamp(36px,9vw,60px);text-shadow:0 2px 22px rgba(0,0,0,.6);opacity:0;animation:rise 1.2s .5s forwards;z-index:2}
 .intro-passer{position:absolute;top:18px;right:20px;z-index:3;color:rgba(255,255,255,.8);font-size:13px;letter-spacing:.1em;cursor:pointer;padding:8px 10px}
 /* ---- diaporama lent du hero ---- */
-.hero-diapo{overflow:hidden;background:var(--brun);background-size:cover;background-position:center;animation:none}
+/* Un fond photo derriere les calques : pendant les fondus, deux images a demi opaques
+   laissaient transparaitre le brun a 21 %, soit une brume grise un cinquieme du temps. */
+.hero-diapo{overflow:hidden;background:var(--brun) url(/img/photos/cover-760.webp) center/cover;animation:none}
 .hero-diapo .dp{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:diapo 36s linear infinite}
 /* Chaque image est enveloppee dans un <picture> : elle y est toujours le 2e enfant, apres
    le <source>. Un :nth-child(3..5) sur .dp ne visait donc rien, et :nth-child(2) les visait
@@ -485,8 +497,19 @@ h1.hero-mots{margin:0;font-weight:400;font-family:Jost,sans-serif}
 .histoire .prose h3{color:var(--terre);font-family:'Playfair Display',serif;font-size:clamp(19px,2.6vw,24px);margin:34px 0 12px}
 .histoire .sous-note{text-align:center;font-size:13.5px;color:#79695a;margin-top:22px}
 
-@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}*{animation-duration:.01ms !important}}
+/* La regle ne fixait pas animation-iteration-count : les animations infinies (diaporama,
+   marquee, pulsation de la bulle) tournaient a ~100 000 iterations par seconde au lieu de
+   s'arreter, et le diaporama retombait sur opacity:0 — le hero devenait un aplat brun. */
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;scroll-behavior:auto !important}
+  .hero-diapo .dp{animation:none}
+  .hero-diapo picture:nth-of-type(1) .dp{opacity:1}
+}
 
+/* La barre fait 77 px : sans reserve, une ancre cale sa cible dessous. */
+[id]{scroll-margin-top:120px}
 .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .label-form{letter-spacing:.2em;text-transform:uppercase;font-size:12px;color:var(--terre-lien);margin-bottom:6px}
 
@@ -497,10 +520,7 @@ h1.hero-mots{margin:0;font-weight:400;font-family:Jost,sans-serif}
 .tableau thead th{font-family:'Jost',sans-serif;font-weight:500;letter-spacing:.16em;text-transform:uppercase;font-size:11.5px;color:var(--terre-lien);border-bottom:1.5px solid var(--nude);white-space:nowrap}
 .tableau tbody th{font-family:'Playfair Display',serif;font-weight:600;color:var(--brun);font-size:17px}
 .tableau .prix-cell{font-family:'Playfair Display',serif;font-size:20px;color:var(--terre-lien);white-space:nowrap}
-@media(max-width:640px){.tableau th,.tableau td{padding:12px 10px;font-size:14px}.tableau .prix-cell{font-size:17px}
-  /* Le tableau passe en cartes empilees : sans cette reserve, le prix finit sous la bulle
-     WhatsApp, qui occupe en permanence le coin bas droit. */
-  .tableau .prix-cell{padding-right:70px}}
+@media(max-width:640px){.tableau th,.tableau td{padding:12px 10px;font-size:14px}.tableau .prix-cell{font-size:17px}}
 /* Sous 620px, trois colonnes ecrasent la colonne des zones en un ruban illisible.
    Chaque ligne devient une fiche, et l'en-tete de colonne repasse en etiquette via data-libelle. */
 @media(max-width:620px){
@@ -593,6 +613,14 @@ main{display:block}
 @media(max-width:759px){ .hero-eglise{object-position:50% 45%} }
 
 /* ============ PIED DE PAGE ============ */
+/* Focus clavier : les deux boutons d'action n'avaient aucun anneau, et celui des champs
+   tombait a 2,2:1 sur blanc. Le formulaire de contact est un chemin de conversion. */
+:focus-visible{outline:3px solid var(--brun);outline-offset:3px}
+.btn-wa:focus-visible,.btn-brun:focus-visible,.nav-wa:focus-visible,.wa-float:focus-visible{
+  outline-color:#fff;box-shadow:0 0 0 5px rgba(58,49,41,.85)}
+.formulaire input:focus-visible,.formulaire textarea:focus-visible,.formulaire select:focus-visible{
+  outline:3px solid var(--terre-lien);outline-offset:2px}
+nav a:focus-visible{outline-color:currentColor}
 footer{background:var(--encre);color:#a99c8b;padding:56px 6vw 96px;text-align:center;font-weight:300;font-size:13.5px;line-height:1.9}
 footer img.logo-pied{width:150px;margin:0 auto 16px;display:block;filter:brightness(0) invert(1);opacity:.9}
 footer a{color:var(--nude);text-decoration:none;transition:color .25s}
@@ -645,8 +673,27 @@ html.menu-ouvert,html.menu-ouvert body{overflow:hidden}
   nav ul li{width:100%}
   nav ul a{display:block;padding:4px 0}
   nav ul li:not(.keep) a{border-bottom:1px solid #ece2d4;padding-bottom:14px}
+  /* Sans cela, le filet de l'onglet courant prend la couleur du separateur commun. */
+  nav ul li:not(.keep) a.actif{border-bottom-width:2px;border-bottom-color:currentColor}
   nav ul .nav-wa{justify-content:center;width:100%;margin-top:6px}
 }
 
 /* palier galerie : évite la ligne orpheline entre 1024 et 1180 px */
 @media(min-width:1000px) and (max-width:1179px){.galerie{grid-template-columns:repeat(4,1fr)}}
+
+/* ============ IMPRESSION ============ */
+/* Sans cela, les blocs .reveal jamais entres dans le viewport s'impriment a opacity:0 :
+   46 blocs sur 46 disparaissaient de l'accueil, et /tarifs est justement la page qu'un
+   couple imprime ou envoie en PDF a son organisateur. */
+@media print{
+  /* transition:none, sinon l apparition progressive est encore en cours au moment ou le
+     moteur fige la page pour l impression. */
+  .reveal{opacity:1 !important;transform:none !important;transition:none !important}
+  nav,.wa-float,.sound,.hero-defiler,.skip,.burger{display:none !important}
+  .hero-veil,.voile{display:none}
+  body{background:#fff;color:#000}
+  footer{background:#fff;color:#000;border-top:1px solid #999}
+  footer a,.pied-legal{color:#000}
+  main a[href^="http"]:after{content:" (" attr(href) ")";font-size:10px;word-break:break-all}
+  section{break-inside:avoid;page-break-inside:avoid}
+}
