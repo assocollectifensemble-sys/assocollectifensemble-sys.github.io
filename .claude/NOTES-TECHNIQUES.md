@@ -94,3 +94,17 @@ Et deux leçons de méthode :
 - **Une correction non écrite n'existe pas.** Un script Python a levé une exception avant son
   `open(..., "w")` : les trois premiers remplacements avaient l'air appliqués — ils étaient
   affichés — mais rien n'avait touché le disque. Vérifier le fichier, pas la sortie du script.
+
+## Le sitemap ne doit lister que des pages indexables (17 août 2026)
+
+Google a envoyé « Exclue par la balise noindex » : `mentions-legales.html` porte un
+`noindex` volontaire, et elle avait été ajoutée au sitemap. Demander l'indexation d'une
+page qui l'interdit est une contradiction que Search Console remonte comme une erreur.
+
+Trois pages portent un `noindex` — `mentions-legales`, `merci`, `404` — et aucune ne doit
+figurer dans `sitemap.xml`. Le contrôle est désormais dans la suite de tests.
+
+À ne pas confondre avec l'autre état, visible sur les pages du sitemap : **« Discovered –
+currently not indexed », dernier crawl vide**. Là, rien n'est cassé : Google connaît l'URL
+par le sitemap mais ne l'a jamais explorée. C'est une question de budget d'exploration, et
+il se gagne avec des liens entrants, pas avec du balisage.
