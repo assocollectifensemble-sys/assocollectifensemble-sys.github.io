@@ -53,7 +53,9 @@ jobs:
           for f in $fichiers; do
             chemin=${f#./}
             case "$chemin" in
-              404.html|merci.html) continue ;;                # sans intérêt pour l'index
+              # Les trois pages en noindex : demander leur indexation est la meme
+              # contradiction que de les mettre au sitemap. La regle vaut ici aussi.
+              404.html|merci.html|mentions-legales.html) continue ;;
               index.html) echo "https://$HOST/" >> /tmp/urls.txt ;;
               *) echo "https://$HOST/${chemin%.html}" >> /tmp/urls.txt ;;
             esac
