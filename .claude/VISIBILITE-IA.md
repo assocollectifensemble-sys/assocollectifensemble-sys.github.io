@@ -97,3 +97,42 @@ Deux pièges rencontrés, notés pour ne pas les reproduire :
 - **Les avis en `Review`.** Dès qu'il y a des avis Google, les reprendre sur le site en
   `Review` / `AggregateRating` — jamais inventés, jamais reformulés. Les assistants
   citent volontiers ce qui est chiffré et attribué.
+
+## Où en est le chantier (23 août 2026)
+
+Un audit externe a été commandé, puis contre-expertisé par trois agents et vérifié en
+production. Sa conclusion de fond est juste, mais sa liste de travaux visait une version
+périmée du site : titres, descriptions, canonical, données structurées, images locales,
+URL propres, blocs citables — tout cela était déjà fait. Deux choses seulement lui ont
+échappé côté dépôt, et elles sont corrigées : le `robots.txt` qui laissait Bingbot lire
+`/.claude/`, et les `@id` JSON-LD qui ne définissaient rien hors de l'accueil.
+
+Ce qui est mesuré, en revanche, n'a pas bougé, et c'est le seul chiffre qui compte :
+`"une2cvmillehistoires.re" -site:une2cvmillehistoires.re` **ne renvoie aucun résultat**.
+Zéro citation externe. Trois pages sur quatorze ressortent avec un extrait ; les onze
+autres sont découvertes et jamais retenues. Aucun balisage ne débloquera cela.
+
+Ce qui a été fait ici pour préparer le terrain :
+
+- **Les dix artisans du mariage d'Emma & Fabien sont liés** (huit sur dix ; la violoniste
+  n'a qu'un compte privé, et le photographe n'est pas nommé dans le récit). C'est le
+  point 5 de la liste ci-dessus, et il est maintenant prêt : il ne reste qu'à leur
+  demander le lien en retour.
+- **Le carnet est sorti du pied de page** : « Histoires » entre au menu, et l'accueil
+  porte un bloc « la dernière histoire ». Le récit recevait deux liens internes contre
+  quinze pour les autres pages.
+- **Un sitemap images** déclare soixante photos, sur un canal jusqu'ici à zéro.
+- **`.claude/verifier.py`** contrôle ce qui se reperd : sitemap dans les deux sens,
+  fraîcheur des `lastmod`, `@id` orphelins, synchronisation FAQ, images absentes,
+  version des assets, IndexNow, `llms-full.txt`.
+
+Ce qui reste hors du dépôt, par ordre de rendement — inchangé depuis le 8 août, et c'est
+le problème : Google Business Profile et les avis, le nom de la fiche Mariages.net (elle
+s'appelle encore « Association Collectif Ensemble » et compte zéro avis face à 22 chez
+Sea Cox & Sun), Bing Webmaster Tools, les annuaires, les liens des partenaires, et une
+propriété GA4 — il n'en existe aucune, donc rien n'est mesuré côté site.
+
+**Sur `llms.txt`, une mise au point.** Le fichier est bon et doit rester à jour, mais il
+ne crée aucune découverte : il n'a d'effet que pour un agent qui visite déjà le domaine.
+Tant qu'aucun lien externe ne mène ici, c'est un panneau d'accueil sur une route où
+personne ne passe. Ne pas le compter comme un levier d'acquisition.

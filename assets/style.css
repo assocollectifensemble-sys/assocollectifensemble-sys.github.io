@@ -320,6 +320,21 @@ main :where(a:not([class])){color:var(--terre-lien);text-decoration:underline;te
 /* parallax */
 .pause{height:56vh;background-size:cover;background-position:center 60%;background-attachment:fixed;position:relative;display:flex;align-items:flex-start;justify-content:center}
 @media(max-width:900px){.pause{background-attachment:scroll;background-position:center 70%}}
+/* La bande parallaxe chargeait creole.jpg — 152 Ko en JPEG pleine taille — avant meme
+   l'evenement load, alors qu'elle est sous la ligne de flottaison : c'etait le plus gros
+   fichier du chemin critique de l'accueil, devant les cinq photos du hero reunies.
+   image-set() sert le WebP aux navigateurs qui le comprennent (91 Ko), le palier 760 aux
+   ecrans ou la bande ne fait plus que defiler (56 Ko), et la premiere declaration laisse
+   le JPEG aux autres. Les deux declarations sont volontaires : la seconde gagne la ou
+   image-set() est compris, la premiere sert de repli partout ailleurs. */
+.pause-creole{background-image:url('/img/photos/creole.jpg');
+  background-image:image-set(url('/img/photos/creole.webp') type('image/webp'),
+                             url('/img/photos/creole.jpg') type('image/jpeg'))}
+@media(max-width:900px){
+  .pause-creole{background-image:url('/img/photos/creole-760.jpg');
+    background-image:image-set(url('/img/photos/creole-760.webp') type('image/webp'),
+                               url('/img/photos/creole-760.jpg') type('image/jpeg'))}
+}
 .pause .voile{position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,30,20,.45) 0%,rgba(40,30,20,.08) 45%,rgba(40,30,20,.05) 100%)}
 .pause .mot{position:relative;color:#fff;font-family:'Pinyon Script';font-size:clamp(38px,6vw,66px);text-shadow:0 2px 26px rgba(0,0,0,.7);text-align:center;padding:5vh 6vw 0}
 

@@ -30,7 +30,7 @@
       setMenu(false);
     });
     addEventListener('keydown',function(e){ if(e.key==='Escape') setMenu(false); });
-    addEventListener('resize',function(){ if(innerWidth>1080) setMenu(false); });
+    addEventListener('resize',function(){ if(innerWidth>1180) setMenu(false); });
   }
   function onScroll(){ if(nav) nav.classList.toggle('scrolled', scrollY>60); }
   addEventListener('scroll', onScroll); onScroll();
@@ -179,4 +179,5 @@
         });
     }, true);
   });
+
 })();

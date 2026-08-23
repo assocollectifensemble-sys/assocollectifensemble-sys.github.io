@@ -19,7 +19,8 @@ rapport n'est pas favorable sur un site de cette taille.
 sont déjà très compressées à la source, et descendre plus bas dégraderait visiblement le
 grain. Elles restent les deux fichiers les plus lourds du site.
 
-**Pas de palier 320px.** Aucune image n'est surdimensionnée à 1440 px ni à 390 px. Le seul
+**Pas de palier 320px.** Aucune image n'est surdimensionnée à 1440 px ni à 390 px — sauf
+le logo, ce que ce paragraphe a longtemps manqué : voir « La passe du 23 août 2026 ». Le seul
 palier manquant serait un 320 px pour les portraits ronds de 158 px, qui économiserait
 quelques dizaines de kilo-octets sur desktop uniquement.
 
@@ -108,3 +109,59 @@ figurer dans `sitemap.xml`. Le contrôle est désormais dans la suite de tests.
 currently not indexed », dernier crawl vide**. Là, rien n'est cassé : Google connaît l'URL
 par le sitemap mais ne l'a jamais explorée. C'est une question de budget d'exploration, et
 il se gagne avec des liens entrants, pas avec du balisage.
+
+## La passe du 23 août 2026
+
+**Un groupe robots.txt qui nommait des robots annulait les Disallow du groupe `*`.**
+La spécification est sans détour : un robot qui trouve un groupe le nommant ignore
+entièrement le groupe `*`. Nos quatre `Disallow` ne vivaient que dans ce dernier ; les
+vingt-deux robots nommés plus bas — Bingbot compris — étaient donc explicitement
+autorisés à explorer `/.claude/` et `/DESIGN.md`. Vérifié en production avant correction :
+Bingbot était ALLOWED sur `/.claude/VISIBILITE-IA.md`, qui répondait 200. Les quatre
+lignes sont maintenant répétées dans le second groupe. **Toute nouvelle règle d'exclusion
+doit être écrite dans les deux groupes.** Et un `Disallow` reste une consigne
+d'exploration, pas une protection : si ces notes doivent devenir privées, il faudra les
+sortir du dépôt publié.
+
+**Un `@id` ne traverse pas les pages.** Onze pages renvoyaient à `#business` par `@id`
+sans que le nœud soit défini chez elles — il ne l'était que sur l'accueil. Google analyse
+les données structurées page par page : sur `/mariage`, le `provider` du `Service` était
+un nœud vide, sans type ni nom. Chaque page porte désormais une souche compacte, que le
+`@id` identique fait fusionner avec le nœud complet. **En ajoutant une page qui cite
+`#business`, `#jonathan` ou `#carnet`, copier la souche correspondante** — ou lancer
+`.claude/verifier.py`, qui le contrôle.
+
+**`loading="lazy"` diffère bien les diapositives du hero.** Un audit a conclu l'inverse,
+et l'argument était solide : les cinq images sont en `position:absolute` dans un hero en
+`100svh`, donc dans le viewport, et le lazy-loading ne défère que ce qui en sort. Mesure
+faite au navigateur avant/après : **strictement identique** — 259 Ko avant l'événement
+`load`, 128 Ko après, dans les deux versions. Chromium les défère déjà. La tentative de
+les promouvoir en JavaScript après `load` a donc été retirée : elle n'apportait rien et
+ajoutait un chemin sans JS à maintenir. **Ne pas recommencer sans mesurer d'abord.**
+
+**Le vrai poids du chemin critique était la bande parallaxe.** `creole.jpg`, 152 Ko en
+JPEG pleine taille, était chargé avant `load` alors que la bande est sous la ligne de
+flottaison — plus lourd, à lui seul, que les cinq photos du hero réunies. Le fond est
+passé de l'attribut `style` en ligne à une classe `.pause-creole` qui sert le WebP par
+`image-set()`, avec un palier 760 sous 900 px. Mesuré sur un viewport de 390 px :
+**259 Ko → 186 Ko avant l'événement `load`**, sans changement visible.
+
+**Le logo était la seule image surdimensionnée du site**, et ce fichier disait le
+contraire. Sa plus petite variante faisait 480 px et 35 Ko pour un emplacement de 95 px,
+sur les dix-sept pages. Un palier `logo-200` (8 Ko en WebP) a été généré.
+
+**Le préchargement de police visait la mauvaise graisse.** Playfair 400 était préchargé,
+alors que `h1` et `h2` sont en 600 : la graisse réellement affichée n'était découverte
+qu'après le parsing du CSS.
+
+**Un huitième lien ne tenait plus dans la barre.** L'entrée « Histoires » a fait passer
+le seuil du menu burger de 1080 à 1180 px — mesuré au navigateur, la liste passait à
+trois lignes et touchait le logo à 1081 px. **Le seuil est écrit à trois endroits** : deux
+`@media` dans `style.css` et un `innerWidth` dans `site.js`. Les trois doivent bouger
+ensemble.
+
+**Le récit disait « Raphaël le maquilleur ».** La personne créditée est Raphaëlle, « la
+Fée Raphinée », maquilleuse. Corrigé dans la page, dans `llms.txt` et dans
+`llms-full.txt`. Rappel de méthode : avant de lier un prestataire, ouvrir la page et lire
+le nom affiché, l'activité et l'ancrage — un homonyme métropolitain existe pour « 33
+Tours », avec une fiche Mariages.net crédible et un site infecté de spam.
