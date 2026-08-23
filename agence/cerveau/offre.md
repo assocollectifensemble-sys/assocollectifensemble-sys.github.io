@@ -1,38 +1,60 @@
 # L'offre — trois étages
 
-> Version validée dans le plan du 2026-08-23. Le détail commercial (fiches packs,
-> argumentaires) est produit par les agents dans `agence/offre/` et résumé ici.
+> Synthèse. Version 2026-08-23 — offre commerciale complète produite dans
+> `agence/offre/` (agents strategie + redaction). Les fiches détaillées font foi.
 
-## Étage 1 — Packs de démarrage (one-shot, 490 → 3 500 €)
+## Étage 1 — Packs de démarrage (one-shot)
 
-| Pack | Prix indicatif | Contenu |
+| Pack | Prix ferme | Délai | Fiche |
+|---|---|---|---|
+| Diagnostic Digital & IA | **590 €**, déduits si pack signé sous 60 j | 1 semaine | `agence/offre/pack-diagnostic.md` |
+| Conformité Facture Électronique | **Solo 690 € / Équipe 1 290 €** | 10 j (5 j urgence) | `agence/offre/pack-facture-electronique.md` |
+| Présence | **2 400 €** (1 900–3 500 selon config) | 3 semaines | `agence/offre/pack-presence.md` |
+| Automatisation | **1 900 €** (processus suivant 1 200 €) | 2–3 semaines | `agence/offre/pack-automatisation.md` |
+| Vidéo & Formation en ligne | Vidéo dès **900 €** / formation dès **2 500 €** (devis) | 2 sem. / 4–6 sem. | `agence/offre/pack-video-formation.md` |
+
+Base de chiffrage commune : ~600 €/jour homme réel, production accélérée par IA
+(un pack = 1 à 5 jours réels). Paiement 3× sans frais dès 1 500 € [à valider par Jon].
+
+## Étage 2 — Abonnement « Pilotage digital » (le cœur du modèle)
+
+Détail complet : `agence/offre/abonnement-pilotage.md`.
+
+| Niveau | Prix/mois | Résumé |
 |---|---|---|
-| Diagnostic Digital & IA | 490–900 € | Audit des postes, plan d'action chiffré (déduit si pack ensuite) |
-| Pack Présence | 1 500–3 500 € | Site vitrine, réseaux sociaux, Google Business, outils de base |
-| Pack Conformité Facture Électronique | 500–1 500 € | Migration plateforme agréée avant sept. 2026 — le coin d'entrée commercial |
-| Pack Automatisation / Agent IA | 1 000–3 000 € | Un processus chronophage automatisé et documenté |
-| Pack Vidéo & Formation en ligne | sur devis | Captation, montage, mise en ligne |
+| Essentiel | **150 €** | Maintenance, sauvegardes, hébergement, 1 h modifs, veille conformité, support 1 j |
+| Croissance | **350 €** | + 4 publications/mois, optimisation continue, 2 automatisations suivies, 1 mini-formation/trimestre, support 4 h |
+| Partenaire | **750 €** (600–900 selon périmètre) | + toutes automatisations maintenues, réunion mensuelle, 1 journée optimisation/trimestre, 1 formation/mois, support 2 h, coordination prestataires |
 
-## Étage 2 — Abonnement « Pilotage digital » (récurrent, le cœur du modèle)
-
-| Niveau | Prix/mois | Contenu |
-|---|---|---|
-| Essentiel | ~150 € | Maintenance, mises à jour, support, veille |
-| Croissance | ~350 € | + contenu assisté IA, optimisation continue, 1 mini-formation/trimestre |
-| Partenaire | 600–900 € | + agents IA maintenus, priorité, réunion mensuelle (modèle Croc Parc formalisé) |
-
-Objectif 12 mois : 8–12 abonnés = 2 500–4 500 € MRR.
-Résiliable avec préavis 1 mois (argument de vente : pas d'engagement piège).
+- **Sans engagement, préavis 1 mois par email** — argument de vente central.
+- Rapport mensuel IA relu par Jon à tous les niveaux. Heures non reportables.
+- Prérequis : au moins un pack ou diagnostic réalisé.
+- Avantages abonnés : sur-mesure réservé, Automatisation à 1 200 €, −10 % Vidéo.
+- Objectif 12 mois : mix 5 Essentiel + 4 Croissance + 2 Partenaire = **3 650 € MRR**.
 
 ## Étage 3 — Projets sur mesure (sur devis, 1 500 € +)
 
-Apps, réponses aux appels d'offres publics, formations complètes, refontes.
-Réservé aux clients en abonnement.
+Apps, appels d'offres publics, formations complètes, refontes.
+Réservé aux clients en abonnement ; tarif jour préférentiel abonné.
+
+## Documents commerciaux
+
+- Grille récapitulative prospect : `agence/offre/grille-tarifaire.md`
+- Pitch rendez-vous (cycle 4 temps + 5 objections) : `agence/offre/argumentaire-general.md`
 
 ## Règles commerciales
 
-- Chaque pack débouche naturellement sur l'abonnement.
+- Chaque pack débouche naturellement sur l'abonnement (passerelle écrite dans chaque fiche).
 - Prix affichés publiquement (différenciation locale).
-- Chaque abonné reçoit un rapport mensuel généré par IA puis relu par Jon.
+- Vendre le résultat (« en règle », « heures gagnées », « équipe autonome »), jamais « l'IA ».
+- Honnêteté qui vend : orienter vers Tiime/Qonto & co si un simple logiciel suffit ;
+  refuser une automatisation non rentabilisée en < 6 mois.
 - Prestation « contrats » = préparation documentaire + validation par avocat
   partenaire (jamais « rédaction d'actes juridiques » — activité réglementée).
+
+## Points en attente de Jon
+
+- Régime TVA / mention TTC selon statut (micro en franchise ?) — impacte la grille.
+- Validation du paiement en 3× sans frais.
+- Chiffres et citations Yoga Doula / Croc Parc pour les études de cas et le pitch.
+- Périmètre exact du niveau Partenaire pour Croc Parc (base 750 €/mois proposée).
