@@ -3,6 +3,41 @@
 > Chaque agent ajoute une entrée À LA FIN de sa mission : date, agent, mission,
 > livrables (chemins de fichiers), points ouverts. Ordre antichronologique.
 
+## 2026-08-23 — web — site vitrine complet de l'agence
+
+- Livrables sous `agence/site/` — statique portable (HTML/CSS/JS, zéro build, zéro
+  backend), déployable tel quel sur un dépôt GitHub Pages dédié :
+  - `index.html` — promesse (un interlocuteur, 974), cycle 4 temps, références
+    Yoga Doula + Croc Parc (prestations seulement, aucun chiffre inventé),
+    aperçu des 6 offres avec prix, CTA diagnostic, bandeau échéance facture électronique
+  - `offres.html` — 5 packs détaillés (livrables, prix, délais depuis `agence/offre/`),
+    passerelle pack→abonnement écrite dans chaque fiche, comparatif des 3 niveaux
+    d'abonnement (cartes + tableau), conditions et avantages abonnés, étage 3 sur mesure
+  - `facture-electronique.html` — coin d'entrée : compte à rebours J−N vers le
+    01/09/2026 (bascule seul en « Obligation en vigueur » après), la loi sans jargon,
+    Solo 690 € / Équipe 1 290 €, FAQ reprise des objections, urgence sans catastrophisme
+  - `contact.html` — coordonnées en placeholders `[À COMPLÉTER PAR JON]`, formulaire
+    **mailto** (aucun serveur), liens tel:/wa.me prêts en commentaires HTML
+  - `mentions-legales.html` — squelette complet avec placeholders, en `noindex`
+    tant que non complété
+  - `assets/` : `tokens.css` (copie de `agence/design/tokens.css`), `site.css`
+    (mobile-first, clair+sombre via tokens, focus visibles, tableau scrollable),
+    `site.js` (optionnel : année, J−N, composition mailto)
+  - `README.md` — modifier, changer le nom de marque (rechercher-remplacer documenté),
+    resynchroniser les tokens, déployer sur GitHub Pages + domaine
+- Choix notables : identité recommandée « Otonom Digital » incarnée (baseline
+  « Installé. Formé. Otonom. »), nom en dur dans le HTML pour le SEO + procédure de
+  renommage en 3 chaînes dans le README ; nav sans hamburger (fonctionne sans JS) ;
+  une seule touche Braise par écran (règle identite.md) ; JSON-LD LocalBusiness/Service
+  avec placeholders ; vendu au résultat — « IA » n'apparaît que dans le nom officiel
+  du pack « Diagnostic Digital & IA », jamais en argument de vente ;
+  pas de sitemap/robots tant que l'URL définitive n'existe pas ; site 2CV racine intact.
+- En attente de Jon : nom définitif (site prêt à renommer), coordonnées (tél/WhatsApp,
+  email — y compris `data-mailto` du formulaire), mentions légales (SIREN, statut, TVA,
+  hébergeur), décision hébergement (dépôt dédié + domaine .re/.fr recommandés), URL
+  définitive à reporter dans les JSON-LD, chiffres/citations clients pour de vraies
+  études de cas.
+
 ## 2026-08-23 — video — supports formation & vidéo (Temps 2 + moteur commercial)
 
 - Livrables sous `agence/formation/` :
@@ -12,6 +47,21 @@
   - `script-video-vitrine.md` — script vidéo 60–90 s (8 blocs : accroche, cycle 4 temps, preuve locale, CTA Diagnostic) + plan de tournage 3 séances et liste de 10 plans de coupe ; tourné en 9:16 + 16:9, sous-titres obligatoires
 - Choix notables : le mot « IA » n'est jamais l'argument (une seule occurrence dans le script vidéo) ; hors Qualiopi rappelé en tête de chaque support ; jamais de données/écrans d'un client sans accord écrit (démos = contenus fictifs préparés) ; le critère d'autonomie daté matérialise le passage au Temps 3
 - Points ouverts (Jon) : inventaire précis des outils Croc Parc + état des formations déjà faites ; accords écrits Croc Parc / Yoga Doula pour citation et tournage + un chiffre ou une citation défendable (bloc preuve) ; tutoiement ou vouvoiement de la vidéo ; nom de marque (bloque l'écran de fin et les incrustations, pas le tournage)
+
+## 2026-08-23 — automatisation — playbooks de livraison + machine interne
+
+- Playbooks sous `agence/playbooks/` (un par pack, alignés sur les fiches `agence/offre/` : déroulé jour par jour, checklist, outils, prompts à variables, pièges, critère de « fini ») :
+  - `playbook-diagnostic.md` — 1re livraison 2 j → cible 1 j
+  - `playbook-facture-electronique.md` — Solo 2 j → 1 j ; Équipe 3,5 j → 2 j (annexe RGPD obligatoire avant reprise des fiches clients)
+  - `playbook-presence.md` — 8 j → 4 j (le ÷2 vient du site-mère + gabarits)
+  - `playbook-automatisation.md` — 6 j → 3 j (processus suivant même client : 2 j) ; règle : notification d'échec + reprise manuelle documentée sur chaque flux
+  - `playbook-video-formation.md` — Format A 4 j → 2 j ; Format B 9 j → 4,5–5 j
+- Machine interne sous `agence/machine/` :
+  - `crm.md` — 3 tables (pipeline / clients actifs / abonnements + idées d'optimisation), vues, règles de mise à jour, automatisations minimales avec reprise manuelle ; CRM = registre responsable de traitement (renvoi rgpd.md)
+  - `rapport-mensuel-modele.md` — 6 sections, ton sans jargon, données à injecter par niveau, prompt de génération, relecture Jon obligatoire (anti-hallucination : comparaison chiffre à chiffre)
+  - `sequence-prospection-fe.md` — email + WhatsApp initial, relances J+7 et J+21 (annoncée comme dernière), script d'appel 2 min, règles B2B (identification, STOP → liste Opposé définitive, 3 messages + 1 appel max, pas d'envoi en masse)
+  - `routine-hebdo.md` — semaine type à 10 abonnés (~10–11 h/sem d'abonnements, mardi/jeudi terrain sanctuarisés, max 2 chantiers de packs en parallèle) ; ligne rouge écrite : RDV, formations, appels jamais automatisés
+- Points ouverts (Jon) : la PA de référence (decisions.md, urgent) bloque la 1re vente du pack FE ET l'outil de facturation récurrente des abonnés ; plateforme de formation de référence à choisir (Format B) ; gabarit d'autorisation droit à l'image à faire valider par l'avocat ; nom d'agence à trancher avant d'envoyer la séquence de prospection (signature des messages).
 
 ## 2026-08-23 — juridique — socle documentaire de l'agence
 
