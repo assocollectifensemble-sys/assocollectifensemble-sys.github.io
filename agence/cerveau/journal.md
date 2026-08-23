@@ -3,6 +3,16 @@
 > Chaque agent ajoute une entrée À LA FIN de sa mission : date, agent, mission,
 > livrables (chemins de fichiers), points ouverts. Ordre antichronologique.
 
+## 2026-08-23 — video — supports formation & vidéo (Temps 2 + moteur commercial)
+
+- Livrables sous `agence/formation/` :
+  - `atelier-ia-tpe.md` — micro-atelier commercial « l'IA pour ta TPE » (45 min) : déroulé minuté, 3 démos ancrées 974 (devis artisan, publications commerce, avis Google), plan de 10 slides, script de transition vers le Diagnostic sans forcing (sortie honorable explicite), matériel + plan B hors ligne
+  - `trame-formation-outil.md` — trame générique du « Temps 2 : Former » (1–2 h sur poste) : boucle en 4 temps par geste (je montre → tu fais guidé → tu fais seul → validé), variables entre crochets, séquence « erreur volontaire », fiche mémo 1 page, critère d'autonomie mesurable écrit AVANT la session et validé par le dirigeant
+  - `formation-croc-parc-modele.md` — déclinaison parc de loisirs (modèle Croc Parc) : sessions courtes 1 h/outil, pédagogie « surveiller et rattraper » pour les automatisations, kit nouvel arrivant (turnover saisonnier) ; inventaire réel des outils = [À DEMANDER À JON] partout où le cerveau ne documente pas les faits
+  - `script-video-vitrine.md` — script vidéo 60–90 s (8 blocs : accroche, cycle 4 temps, preuve locale, CTA Diagnostic) + plan de tournage 3 séances et liste de 10 plans de coupe ; tourné en 9:16 + 16:9, sous-titres obligatoires
+- Choix notables : le mot « IA » n'est jamais l'argument (une seule occurrence dans le script vidéo) ; hors Qualiopi rappelé en tête de chaque support ; jamais de données/écrans d'un client sans accord écrit (démos = contenus fictifs préparés) ; le critère d'autonomie daté matérialise le passage au Temps 3
+- Points ouverts (Jon) : inventaire précis des outils Croc Parc + état des formations déjà faites ; accords écrits Croc Parc / Yoga Doula pour citation et tournage + un chiffre ou une citation défendable (bloc preuve) ; tutoiement ou vouvoiement de la vidéo ; nom de marque (bloque l'écran de fin et les incrustations, pas le tournage)
+
 ## 2026-08-23 — juridique — socle documentaire de l'agence
 
 - Livrables sous `agence/juridique/` (tous en-têtés « trame à faire valider par un avocat / expert-comptable ») :
