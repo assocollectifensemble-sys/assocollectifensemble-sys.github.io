@@ -3,7 +3,9 @@
 > **Trame de travail — à faire valider par un avocat / expert-comptable avant usage.**
 > Document interne de l'agence (nom de travail : Couteau Suisse Digital 974).
 > Cette trame couvre l'étage 2 de l'offre : l'abonnement mensuel récurrent en trois
-> niveaux (Essentiel ~150 €/mois, Croissance ~350 €/mois, Partenaire 600–900 €/mois),
+> niveaux (prix fermes fixés par l'offre commerciale du 2026-08-23 : Essentiel
+> 150 €/mois, Croissance 350 €/mois, Partenaire 750 €/mois — voir
+> `agence/offre/abonnement-pilotage.md`),
 > **résiliable avec préavis d'un mois** — c'est l'argument commercial « pas
 > d'engagement piège », il doit rester vrai dans le contrat.
 
@@ -56,7 +58,7 @@ sommes dues au titre des services déjà rendus restent exigibles.
 
 3.2. Périmètre par niveau (détaillé et chiffré en **Annexe Périmètre**) :
 
-| | **Essentiel** (~150 €/mois) | **Croissance** (~350 €/mois) | **Partenaire** (600–900 €/mois) |
+| | **Essentiel** (150 €/mois) | **Croissance** (350 €/mois) | **Partenaire** (750 €/mois) |
 |---|---|---|---|
 | Maintenance et mises à jour (site, outils installés) | ✔ | ✔ | ✔ |
 | Support par e-mail/WhatsApp, réponse sous `[2 jours ouvrés]` | ✔ | ✔ | ✔ (prioritaire, sous `[1 jour ouvré]`) |
