@@ -1,0 +1,7 @@
+# Bytecode Python : .claude/build-llms-full.py en génère à chaque exécution.
+__pycache__/
+*.pyc
+
+# Fichiers système
+.DS_Store
+Thumbs.db
