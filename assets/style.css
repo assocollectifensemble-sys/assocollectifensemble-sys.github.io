@@ -192,11 +192,11 @@ nav.scrolled .burger span,nav.opaque .burger span{background:var(--encre)}
 .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
 .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-@media(max-width:1080px){
+@media(max-width:1180px){
   .burger{display:flex}
   nav ul{position:fixed;top:0;right:0;bottom:0;width:min(80vw,330px);background:rgba(250,247,242,.985);backdrop-filter:blur(12px);flex-direction:column;justify-content:center;align-items:flex-start;gap:24px;padding:0 34px;transform:translateX(105%);transition:transform .35s cubic-bezier(.4,0,.2,1), visibility 0s .35s;
     visibility:hidden;box-shadow:-12px 0 44px rgba(58,49,41,.2);z-index:60}
-  /* Sans visibility, les huit liens du panneau ferme restaient tabulables a 440 px du bord :
+  /* Sans visibility, les neuf liens du panneau ferme restaient tabulables a 440 px du bord :
      la tabulation partait dans le vide avant d'atteindre la page. */
   nav.menu-ouvert ul{visibility:visible;transition:transform .35s cubic-bezier(.4,0,.2,1), visibility 0s 0s}
   nav ul.ouvert{transform:none}
@@ -666,7 +666,7 @@ nav.menu-ouvert:after{content:"";position:fixed;inset:0;z-index:55;
 @keyframes voileMenu{from{opacity:0}to{opacity:1}}
 nav.menu-ouvert .logo-lien img{filter:brightness(0) invert(1) !important}
 html.menu-ouvert,html.menu-ouvert body{overflow:hidden}
-@media(max-width:1080px){
+@media(max-width:1180px){
   nav ul{background:var(--creme);-webkit-backdrop-filter:none;backdrop-filter:none;
     padding:0 34px;gap:22px;overflow-y:auto}
   nav ul.ouvert{box-shadow:-16px 0 60px rgba(26,20,15,.35)}
