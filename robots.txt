@@ -37,6 +37,14 @@ User-agent: cohere-ai
 User-agent: CCBot
 User-agent: YouBot
 Allow: /
+# Un robot qui trouve un groupe le nommant ignore entierement le groupe « * » :
+# les quatre Disallow du haut ne s'appliquent pas a lui tant qu'ils ne sont pas
+# repetes ici. Sans ces quatre lignes, Bingbot et les robots d'assistants sont
+# autorises a explorer les notes de travail — et a les citer.
+Disallow: /DESIGN.md
+Disallow: /.claude/
+Disallow: /.impeccable/
+Disallow: /.github/
 
 # Résumé factuel du site pour les modèles de langage :
 # https://une2cvmillehistoires.re/llms.txt   (fiche courte)
