@@ -3,6 +3,21 @@
 > Chaque agent ajoute une entrée À LA FIN de sa mission : date, agent, mission,
 > livrables (chemins de fichiers), points ouverts. Ordre antichronologique.
 
+## 2026-08-23 — automatisation — playbooks de livraison + machine interne
+
+- Playbooks sous `agence/playbooks/` (un par pack, alignés sur les fiches `agence/offre/` : déroulé jour par jour, checklist, outils, prompts à variables, pièges, critère de « fini ») :
+  - `playbook-diagnostic.md` — 1re livraison 2 j → cible 1 j
+  - `playbook-facture-electronique.md` — Solo 2 j → 1 j ; Équipe 3,5 j → 2 j (annexe RGPD obligatoire avant reprise des fiches clients)
+  - `playbook-presence.md` — 8 j → 4 j (le ÷2 vient du site-mère + gabarits)
+  - `playbook-automatisation.md` — 6 j → 3 j (processus suivant même client : 2 j) ; règle : notification d'échec + reprise manuelle documentée sur chaque flux
+  - `playbook-video-formation.md` — Format A 4 j → 2 j ; Format B 9 j → 4,5–5 j
+- Machine interne sous `agence/machine/` :
+  - `crm.md` — 3 tables (pipeline / clients actifs / abonnements + idées d'optimisation), vues, règles de mise à jour, automatisations minimales avec reprise manuelle ; CRM = registre responsable de traitement (renvoi rgpd.md)
+  - `rapport-mensuel-modele.md` — 6 sections, ton sans jargon, données à injecter par niveau, prompt de génération, relecture Jon obligatoire (anti-hallucination : comparaison chiffre à chiffre)
+  - `sequence-prospection-fe.md` — email + WhatsApp initial, relances J+7 et J+21 (annoncée comme dernière), script d'appel 2 min, règles B2B (identification, STOP → liste Opposé définitive, 3 messages + 1 appel max, pas d'envoi en masse)
+  - `routine-hebdo.md` — semaine type à 10 abonnés (~10–11 h/sem d'abonnements, mardi/jeudi terrain sanctuarisés, max 2 chantiers de packs en parallèle) ; ligne rouge écrite : RDV, formations, appels jamais automatisés
+- Points ouverts (Jon) : la PA de référence (decisions.md, urgent) bloque la 1re vente du pack FE ET l'outil de facturation récurrente des abonnés ; plateforme de formation de référence à choisir (Format B) ; gabarit d'autorisation droit à l'image à faire valider par l'avocat ; nom d'agence à trancher avant d'envoyer la séquence de prospection (signature des messages).
+
 ## 2026-08-23 — web — site vitrine complet de l'agence
 
 - Livrables sous `agence/site/` — statique portable (HTML/CSS/JS, zéro build, zéro
@@ -47,21 +62,6 @@
   - `script-video-vitrine.md` — script vidéo 60–90 s (8 blocs : accroche, cycle 4 temps, preuve locale, CTA Diagnostic) + plan de tournage 3 séances et liste de 10 plans de coupe ; tourné en 9:16 + 16:9, sous-titres obligatoires
 - Choix notables : le mot « IA » n'est jamais l'argument (une seule occurrence dans le script vidéo) ; hors Qualiopi rappelé en tête de chaque support ; jamais de données/écrans d'un client sans accord écrit (démos = contenus fictifs préparés) ; le critère d'autonomie daté matérialise le passage au Temps 3
 - Points ouverts (Jon) : inventaire précis des outils Croc Parc + état des formations déjà faites ; accords écrits Croc Parc / Yoga Doula pour citation et tournage + un chiffre ou une citation défendable (bloc preuve) ; tutoiement ou vouvoiement de la vidéo ; nom de marque (bloque l'écran de fin et les incrustations, pas le tournage)
-
-## 2026-08-23 — automatisation — playbooks de livraison + machine interne
-
-- Playbooks sous `agence/playbooks/` (un par pack, alignés sur les fiches `agence/offre/` : déroulé jour par jour, checklist, outils, prompts à variables, pièges, critère de « fini ») :
-  - `playbook-diagnostic.md` — 1re livraison 2 j → cible 1 j
-  - `playbook-facture-electronique.md` — Solo 2 j → 1 j ; Équipe 3,5 j → 2 j (annexe RGPD obligatoire avant reprise des fiches clients)
-  - `playbook-presence.md` — 8 j → 4 j (le ÷2 vient du site-mère + gabarits)
-  - `playbook-automatisation.md` — 6 j → 3 j (processus suivant même client : 2 j) ; règle : notification d'échec + reprise manuelle documentée sur chaque flux
-  - `playbook-video-formation.md` — Format A 4 j → 2 j ; Format B 9 j → 4,5–5 j
-- Machine interne sous `agence/machine/` :
-  - `crm.md` — 3 tables (pipeline / clients actifs / abonnements + idées d'optimisation), vues, règles de mise à jour, automatisations minimales avec reprise manuelle ; CRM = registre responsable de traitement (renvoi rgpd.md)
-  - `rapport-mensuel-modele.md` — 6 sections, ton sans jargon, données à injecter par niveau, prompt de génération, relecture Jon obligatoire (anti-hallucination : comparaison chiffre à chiffre)
-  - `sequence-prospection-fe.md` — email + WhatsApp initial, relances J+7 et J+21 (annoncée comme dernière), script d'appel 2 min, règles B2B (identification, STOP → liste Opposé définitive, 3 messages + 1 appel max, pas d'envoi en masse)
-  - `routine-hebdo.md` — semaine type à 10 abonnés (~10–11 h/sem d'abonnements, mardi/jeudi terrain sanctuarisés, max 2 chantiers de packs en parallèle) ; ligne rouge écrite : RDV, formations, appels jamais automatisés
-- Points ouverts (Jon) : la PA de référence (decisions.md, urgent) bloque la 1re vente du pack FE ET l'outil de facturation récurrente des abonnés ; plateforme de formation de référence à choisir (Format B) ; gabarit d'autorisation droit à l'image à faire valider par l'avocat ; nom d'agence à trancher avant d'envoyer la séquence de prospection (signature des messages).
 
 ## 2026-08-23 — juridique — socle documentaire de l'agence
 
