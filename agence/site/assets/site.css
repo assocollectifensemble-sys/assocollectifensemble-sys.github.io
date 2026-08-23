@@ -1,0 +1,629 @@
+/* ==========================================================================
+   Otonom Digital — styles du site vitrine
+   Construit sur assets/tokens.css (copie de agence/design/tokens.css —
+   source de vérité : agence/design/identite.md). Mobile-first.
+   Agent web — 2026-08-23
+   ========================================================================== */
+
+/* --- Reset minimal --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Structure --- */
+.container {
+  width: 100%;
+  max-width: 66rem;
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+main {
+  display: block;
+}
+
+section {
+  padding-block: var(--space-12);
+}
+
+.section-alt {
+  background: var(--color-surface);
+  border-block: var(--border-width) solid var(--color-border);
+}
+
+/* --- Lien d'évitement --- */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+  padding: var(--space-2) var(--space-4);
+  border-radius: 0 0 var(--radius-btn) 0;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0;
+  color: var(--color-text-inverse);
+}
+
+/* --- En-tête / navigation --- */
+.site-header {
+  background: var(--color-surface);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.site-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2) var(--space-6);
+  padding-block: var(--space-3);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--text-md);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: var(--color-accent-strong);
+}
+
+.brand .brand-suffix {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+
+.site-nav {
+  margin-left: auto;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+}
+
+.site-nav a {
+  display: inline-block;
+  padding-block: var(--space-1);
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-base);
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover {
+  color: var(--color-accent-strong);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-decor); /* souligné Curcuma = décor autorisé */
+}
+
+/* --- Héros --- */
+.hero {
+  padding-block: var(--space-12) var(--space-12);
+}
+
+.hero h1 {
+  font-size: var(--text-2xl);
+  margin: var(--space-4) 0;
+  max-width: 24ch;
+}
+
+.hero .lead {
+  font-size: var(--text-md);
+  color: var(--color-text-muted);
+  max-width: 55ch;
+  margin-block: 0 var(--space-6);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+@media (min-width: 48rem) {
+  .hero h1 {
+    font-size: var(--text-3xl);
+  }
+}
+
+/* --- Baseline créole --- */
+.baseline {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-base);
+  color: var(--color-accent);
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+/* --- Boutons --- */
+.btn {
+  display: inline-block;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-btn);
+  font-family: var(--font-text);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--text-base);
+  text-decoration: none;
+  border: var(--border-width) solid transparent;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-strong);
+  color: var(--color-text-inverse);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-accent);
+  border-color: var(--color-border);
+}
+
+.btn-secondary:hover {
+  color: var(--color-accent-strong);
+  border-color: var(--color-accent);
+}
+
+/* --- Badges --- */
+.badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.badge-decor {
+  background: var(--color-decor);
+  color: #23201B; /* Basalte imposé sur fond Curcuma, dans les deux modes */
+}
+
+.badge-ember {
+  background: var(--color-ember-soft);
+  color: var(--color-ember);
+}
+
+.badge-soft {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+/* --- Bandeau d'alerte (échéance) : la touche Braise, une par écran --- */
+.notice-ember {
+  background: var(--color-ember-soft);
+  border: var(--border-width) solid var(--color-ember);
+  border-radius: var(--radius-card);
+  padding: var(--space-4) var(--space-6);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+}
+
+.notice-ember strong {
+  color: var(--color-ember);
+}
+
+.notice-ember a {
+  font-weight: var(--font-weight-semibold);
+}
+
+/* --- Titres de section --- */
+.section-title {
+  font-size: var(--text-xl);
+  margin: 0 0 var(--space-2);
+}
+
+.section-intro {
+  color: var(--color-text-muted);
+  max-width: var(--measure);
+  margin-top: 0;
+}
+
+/* --- Grilles de cartes --- */
+.grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+  margin-block: var(--space-8) 0;
+}
+
+@media (min-width: 40rem) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 60rem) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  background: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-6);
+}
+
+.section-alt .card {
+  background: var(--color-bg);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: var(--text-lg);
+}
+
+.card ul {
+  padding-left: 1.2em;
+  margin-block: var(--space-3);
+}
+
+.card li {
+  margin-block: var(--space-1);
+}
+
+/* --- Cycle 4 temps --- */
+.cycle {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: var(--space-8) 0 0;
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 40rem) {
+  .cycle {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 60rem) {
+  .cycle {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.cycle li {
+  counter-increment: step;
+  background: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+}
+
+.section-alt .cycle li {
+  background: var(--color-bg);
+}
+
+.cycle li::before {
+  content: counter(step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-3);
+}
+
+.cycle h3 {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-md);
+}
+
+.cycle p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+}
+
+/* --- Prix --- */
+.price {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-xl);
+  color: var(--color-text);
+  display: block;
+  margin-block: var(--space-2);
+}
+
+.price small {
+  font-family: var(--font-text);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-muted);
+}
+
+.price-meta {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  margin-top: 0;
+}
+
+/* --- Fiches packs (page offres) --- */
+.pack {
+  scroll-margin-top: var(--space-8);
+}
+
+.pack-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2) var(--space-4);
+}
+
+.pack-header h3 {
+  margin-block: 0;
+}
+
+.pack-bridge {
+  border-left: 3px solid var(--color-decor);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-accent-soft);
+  border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+  font-size: var(--text-base);
+  margin-block: var(--space-4) 0;
+}
+
+.pack-bridge p {
+  margin: 0;
+}
+
+/* --- Tableaux --- */
+.table-wrap {
+  overflow-x: auto;
+  margin-block: var(--space-8) 0;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 38rem;
+  font-size: var(--text-base);
+}
+
+caption {
+  text-align: left;
+  padding: var(--space-4) var(--space-4) 0;
+  font-weight: var(--font-weight-semibold);
+}
+
+th,
+td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: var(--border-width) solid var(--color-border);
+  vertical-align: top;
+}
+
+thead th {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--text-base);
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody th[scope="row"] {
+  font-weight: var(--font-weight-medium);
+}
+
+td.yes {
+  color: var(--color-success);
+  font-weight: var(--font-weight-semibold);
+}
+
+td.no {
+  color: var(--color-text-muted);
+}
+
+/* --- FAQ (details/summary) --- */
+details {
+  background: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-4) var(--space-6);
+  margin-block: var(--space-3);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: var(--font-weight-semibold);
+}
+
+summary:hover {
+  color: var(--color-accent-strong);
+}
+
+details[open] summary {
+  margin-bottom: var(--space-2);
+}
+
+/* --- Formulaire --- */
+form {
+  max-width: 40rem;
+}
+
+.field {
+  margin-block: var(--space-4);
+}
+
+label {
+  display: block;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-1);
+}
+
+.field .hint {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: var(--space-3);
+  font: inherit;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-btn);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* --- Placeholder [À COMPLÉTER] --- */
+.todo {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+  border-radius: var(--radius-btn);
+  padding: 0 var(--space-1);
+  font-weight: var(--font-weight-semibold);
+  font-style: normal;
+}
+
+/* --- Compte à rebours (page facture électronique) --- */
+.deadline-figure {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-3xl);
+  color: var(--color-ember);
+  line-height: var(--leading-heading);
+  margin: 0;
+}
+
+/* --- Pied de page --- */
+.site-footer {
+  background: var(--color-surface);
+  border-top: var(--border-width) solid var(--color-border);
+  padding-block: var(--space-8);
+  margin-top: var(--space-16);
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+}
+
+.site-footer .container {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48rem) {
+  .site-footer .container {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.site-footer h2 {
+  font-size: var(--text-base);
+  font-family: var(--font-text);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-block: 0 var(--space-2);
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer li {
+  margin-block: var(--space-1);
+}
+
+.footer-legal {
+  grid-column: 1 / -1;
+  border-top: var(--border-width) solid var(--color-border);
+  padding-top: var(--space-4);
+  font-size: var(--text-xs);
+}
+
+/* --- Divers --- */
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.cta-block {
+  text-align: center;
+}
+
+.cta-block .hero-actions {
+  justify-content: center;
+}
+
+p,
+ul,
+ol {
+  max-width: var(--measure);
+}

@@ -1,0 +1,162 @@
+/* ==========================================================================
+   Otonom — design tokens (source de vérité : agence/design/identite.md)
+   Agent design — 2026-08-23
+   Clair par défaut ; sombre via prefers-color-scheme, forçable avec
+   <html data-theme="dark"> ou <html data-theme="light">.
+   Contrastes AA vérifiés (voir identite.md §5).
+   Chargement des fontes :
+   https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap
+   ========================================================================== */
+
+:root {
+  /* --- Couleurs, mode clair (défaut) --- */
+  --color-bg: #FAF6F0;             /* Sable — fond de page */
+  --color-surface: #FFFDF9;        /* Coton — cartes, panneaux, champs */
+  --color-border: #E5DCCE;         /* filets, séparateurs, contours */
+  --color-text: #23201B;           /* Basalte — titres et corps */
+  --color-text-muted: #5C554B;     /* secondaire — légendes, métadonnées */
+  --color-text-inverse: #FFFDF9;   /* texte sur boutons accent */
+
+  --color-accent: #1F6A4A;         /* Vert canne — liens, boutons, interactif */
+  --color-accent-strong: #175239;  /* Vétyver — hover / actif */
+  --color-accent-soft: #E3EFE8;    /* fond léger derrière l'accent (badges, lignes actives) */
+
+  --color-ember: #A03F14;          /* Braise — emphase rare, 1 max par écran */
+  --color-ember-soft: #F6E3D9;     /* fond léger braise */
+  --color-decor: #E0A320;          /* Curcuma — DÉCOR SEULEMENT en clair (jamais en texte) */
+
+  /* --- États --- */
+  --color-success: #1F6A4A;
+  --color-success-bg: #E3EFE8;
+  --color-warning: #8A6100;
+  --color-warning-bg: #F7ECD2;
+  --color-error: #B2361F;
+  --color-error-bg: #F8E2DC;
+  --color-focus-ring: #1F6A4A;
+
+  /* --- Typographie --- */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-text: "Work Sans", system-ui, "Segoe UI", Arial, sans-serif;
+
+  --text-xs: 0.8125rem;   /* 13px — mentions, badges */
+  --text-base: 1rem;      /* 16px — corps */
+  --text-md: 1.25rem;     /* 20px — intro, h4 */
+  --text-lg: 1.5625rem;   /* 25px — h3 */
+  --text-xl: 1.9375rem;   /* 31px — h2 */
+  --text-2xl: 2.4375rem;  /* 39px — h1 */
+  --text-3xl: 3.0625rem;  /* 49px — héro, chiffres clés */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --leading-body: 1.6;
+  --leading-heading: 1.15;
+  --measure: 70ch;         /* largeur max d'une colonne de texte */
+
+  /* --- Espacement (base 4px) --- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* --- Formes & ombres --- */
+  --radius-btn: 6px;
+  --radius-card: 8px;
+  --radius-pill: 999px;
+  --shadow-card: 0 1px 3px rgba(35, 32, 27, 0.08);
+  --border-width: 1px;
+  --focus-ring: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-focus-ring);
+
+  color-scheme: light;
+}
+
+/* --- Mode sombre automatique (préférence système, pas de choix explicite) --- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #191512;            /* Basalte nuit */
+    --color-surface: #221E19;
+    --color-border: #3A342C;
+    --color-text: #F2EDE4;
+    --color-text-muted: #B5AC9E;
+    --color-text-inverse: #14100D;  /* texte sur boutons accent clairs */
+
+    --color-accent: #7FC9A2;
+    --color-accent-strong: #A4DDBF;
+    --color-accent-soft: #24352C;
+
+    --color-ember: #E88B57;
+    --color-ember-soft: #3A2418;
+    --color-decor: #E8B84B;         /* utilisable en texte court en sombre */
+
+    --color-success: #7FC9A2;
+    --color-success-bg: #24352C;
+    --color-warning: #E8B84B;
+    --color-warning-bg: #3A2F14;
+    --color-error: #F09580;
+    --color-error-bg: #3E1F16;
+    --color-focus-ring: #7FC9A2;
+
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.4);
+    color-scheme: dark;
+  }
+}
+
+/* --- Mode sombre forcé (bascule utilisateur) --- */
+:root[data-theme="dark"] {
+  --color-bg: #191512;
+  --color-surface: #221E19;
+  --color-border: #3A342C;
+  --color-text: #F2EDE4;
+  --color-text-muted: #B5AC9E;
+  --color-text-inverse: #14100D;
+
+  --color-accent: #7FC9A2;
+  --color-accent-strong: #A4DDBF;
+  --color-accent-soft: #24352C;
+
+  --color-ember: #E88B57;
+  --color-ember-soft: #3A2418;
+  --color-decor: #E8B84B;
+
+  --color-success: #7FC9A2;
+  --color-success-bg: #24352C;
+  --color-warning: #E8B84B;
+  --color-warning-bg: #3A2F14;
+  --color-error: #F09580;
+  --color-error-bg: #3E1F16;
+  --color-focus-ring: #7FC9A2;
+
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.4);
+  color-scheme: dark;
+}
+
+/* --- Application minimale (l'agent web peut étendre, pas contredire) --- */
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-text);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+}
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-heading);
+}
+
+a {
+  color: var(--color-accent);
+}
+a:hover {
+  color: var(--color-accent-strong);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
