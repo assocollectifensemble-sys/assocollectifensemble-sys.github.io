@@ -18,7 +18,8 @@
 
 | Sujet | Options / recommandation | Statut |
 |---|---|---|
-| Nom de marque | « Couteau Suisse Digital 974 » = nom de travail ; propositions à générer | ouvert |
+| Nom de marque | 3 directions vérifiées dans `agence/design/noms-de-marque.md` ; reco design : **« Otonom Digital »** (usage court « Otonom », domaine otonom.re apparemment libre au 2026-08-23) | ouvert |
+| Identité visuelle | Système proposé pour la direction Otonom dans `agence/design/identite.md` + `tokens.css` (palette Sable/Basalte/Vert canne, Fraunces + Work Sans, clair+sombre AA) — à valider ou amender | ouvert |
 | Statut juridique | Reco : micro-entreprise jusqu'à ~40 k€ CA puis EURL/SASU — à valider avec expert-comptable | ouvert |
 | Hébergement du site vitrine | Ce dépôt héberge déjà le site 2CV à la racine → le site agence aura besoin de son propre dépôt/domaine (ou d'un sous-chemin). Reco : dépôt dédié + nom de domaine .re ou .fr | ouvert |
 | Niveaux d'abonnement à proposer à Yoga Doula et Croc Parc | Reco : Essentiel/Croissance pour Yoga Doula, Partenaire pour Croc Parc | ouvert |
