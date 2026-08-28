@@ -29,6 +29,7 @@ PAGES = [
     ("balades.html", "Balades", "/balades"),
     ("shooting-evenements.html", "Shootings et évènements", "/shooting-evenements"),
     ("rosalie-et-soizig.html", "Rosalie et Soizig, les deux voitures", "/rosalie-et-soizig"),
+    ("artisans.html", "Les artisans avec qui je travaille", "/artisans"),
     ("histoires.html", "Histoires de mariages — le carnet", "/histoires"),
     ("histoires/emma-fabien.html", "Récit : Emma & Fabien, un mariage en 2CV dans l'Ouest",
      "/histoires/emma-fabien"),

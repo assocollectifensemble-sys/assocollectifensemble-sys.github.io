@@ -1,7 +1,7 @@
 # Une 2CV, mille histoires
 
 > Location de Citroën 2CV de collection AVEC chauffeur à La Réunion (974) : voiture de mariage, EVJF/EVJG, balades touristiques, shootings photo/cinéma et évènements. Aucune location sans chauffeur.
-> Dernière mise à jour : 8 août 2026.
+> Dernière mise à jour : 28 août 2026.
 > Texte intégral des pages : https://une2cvmillehistoires.re/llms-full.txt
 
 ## Faits clés
@@ -40,13 +40,14 @@
 - https://une2cvmillehistoires.re/shooting-evenements : shootings, tournages, évènements
 - https://une2cvmillehistoires.re/rosalie-et-soizig : les deux voitures et leur histoire
 - https://une2cvmillehistoires.re/tarifs : tarifs détaillés par zone, ce qui est inclus, acompte et réservation
+- https://une2cvmillehistoires.re/artisans : les artisans du mariage avec qui Jonathan a travaillé (fleuriste, photographe, robe, gâteau...), classés par métier
 - https://une2cvmillehistoires.re/histoires : carnet de bord, de vrais mariages racontés — une page par mariage
 - https://une2cvmillehistoires.re/histoires/emma-fabien : récit complet du mariage d'Emma & Fabien dans l'Ouest (août 2026)
 - https://une2cvmillehistoires.re/faq : questions fréquentes (robe, pluie, hauts, tarifs, réservation)
 - https://une2cvmillehistoires.re/contact : contact
 
 ## Exemple de prestation documentée
-Mariage d'Emma & Fabien (récit complet sur /histoires) : préparation avec la fleuriste Happiness Blossom, cérémonie à l'église, séance photo au jardin botanique de Saint-Leu, arrivée au domaine debout dans le toit ouvert. Autres prestataires de cette journée : Raphaël (maquillage), Jessica (coiffure), Karha Wedding Singer (chant), Elise Lauret (violon), chef Romain Durand (traiteur), 33 Tours (DJ), Tikatoune (gâteau), Nanasfigue (service du soir), Le Secret d'Agapé (robe).
+Renouvellement de vœux d'Emma & Fabien (récit complet sur /histoires/emma-fabien) : préparation avec la fleuriste Happiness Blossom, cérémonie à l'église, séance photo au jardin botanique de Saint-Leu, arrivée au domaine debout dans le toit ouvert. Autres prestataires de cette journée : Raphaël (maquillage), Jessica (coiffure), Karha Wedding Singer (chant), Elise Lauret (violon), chef Romain Durand (traiteur), 33 Tours (DJ), Tikatoune (gâteau), Nanasfigue (service du soir), Le Secret d'Agapé (robe), Alexandre Bertucat (photographe).
 
 ## Location de 2CV à La Réunion
 La location sans chauffeur n'est PAS proposée : les deux 2CV de collection (1983 et 1990) roulent toujours avec leur chauffeur. Aucun permis, aucune caution, aucune assurance à souscrire pour le client. 3 passagers par voiture, 6 en convoi. Carburant et déplacement de la voiture inclus sur les zones desservies (Ouest, Sud, Nord). Page dédiée : https://une2cvmillehistoires.re/location-2cv-reunion
