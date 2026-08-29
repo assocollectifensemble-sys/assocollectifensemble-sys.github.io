@@ -74,7 +74,9 @@
 }
 .fiche-nom:hover{color:var(--terre-lien);border-bottom-color:var(--terre-lien)}
 /* Fleche discrete : signale un depart vers un autre site. */
-.fiche-nom::after{content:"↗";font-size:.72em;opacity:.5;font-family:'Jost',sans-serif}
+/* La fleche colle au dernier mot : sur un nom long qui passe sur deux
+   lignes, elle se retrouvait seule, decrochee sous le texte. */
+.fiche-nom::after{content:"\00a0\2197";font-size:.72em;opacity:.5;font-family:'Jost',sans-serif;white-space:nowrap}
 .fiche-nom.sans-lien{border-bottom:none;cursor:default}
 .fiche-nom.sans-lien::after{content:none}
 .fiche-metier{
