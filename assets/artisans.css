@@ -1,0 +1,129 @@
+/* ============================================================
+   PAGE ARTISANS — fiches vivantes
+   ============================================================
+   Chaque artisan porte une pastille ronde : sa photo quand on l'a,
+   sinon ses initiales sur un fond sable. Le monogramme n'est pas un
+   trou en attendant mieux — il se tient tout seul, et la page reste
+   homogene meme si la moitie des portraits manquent.
+
+   Les vignettes de fond sont volontairement discretes (opacite basse,
+   derriere le texte) : elles donnent de la matiere sans jamais
+   disputer la lisibilite au contenu.
+   ============================================================ */
+
+/* ---------- La fiche ---------- */
+.fiche{
+  position:relative;
+  display:grid;
+  grid-template-columns:64px 1fr;
+  gap:16px;
+  align-items:start;
+  padding:18px 20px;
+  margin:0 0 14px;
+  background:var(--blanc);
+  border:1px solid rgba(169,126,95,.16);
+  border-radius:14px;
+  overflow:hidden;
+  transition:border-color .25s, box-shadow .25s, transform .25s;
+}
+.fiche:hover{
+  border-color:rgba(169,126,95,.42);
+  box-shadow:0 6px 22px rgba(69,57,48,.09);
+  transform:translateY(-2px);
+}
+/* Le filet vertical rappelle la couture des sieges de la 2CV. */
+.fiche::before{
+  content:"";
+  position:absolute; left:0; top:14px; bottom:14px;
+  width:3px; border-radius:0 3px 3px 0;
+  background:linear-gradient(180deg,var(--nude),var(--terre));
+  opacity:.5;
+}
+
+/* ---------- La pastille ---------- */
+.avatar{
+  width:64px;height:64px;border-radius:50%;
+  overflow:hidden;flex-shrink:0;
+  background:linear-gradient(140deg,var(--sable),var(--nude));
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 0 3px var(--blanc), 0 0 0 4px rgba(169,126,95,.28);
+}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.avatar span{
+  font-family:'Playfair Display',serif;
+  font-size:1.32rem;letter-spacing:.5px;
+  color:var(--brun);opacity:.72;
+  -webkit-user-select:none;user-select:none;
+}
+
+/* ---------- Le texte ---------- */
+.fiche-corps{min-width:0}
+.fiche-nom{
+  font-family:'Playfair Display',serif;
+  font-size:1.07rem;font-weight:600;
+  color:var(--brun);text-decoration:none;
+  display:inline-flex;align-items:center;gap:6px;
+  /* 44px de hauteur tactile minimum (WCAG 2.5.5) : sans ce padding la
+     ligne ne faisait que 33px, sous le seuil du doigt sur telephone. */
+  min-height:44px;padding:2px 0;
+  border-bottom:1px solid transparent;
+  transition:color .2s,border-color .2s;
+}
+.fiche-nom:hover{color:var(--terre-lien);border-bottom-color:var(--terre-lien)}
+/* Fleche discrete : signale un depart vers un autre site. */
+.fiche-nom::after{content:"↗";font-size:.72em;opacity:.5;font-family:'Jost',sans-serif}
+.fiche-nom.sans-lien{border-bottom:none;cursor:default}
+.fiche-nom.sans-lien::after{content:none}
+.fiche-metier{
+  display:block;margin:2px 0 6px;
+  font-size:.73rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--terre-lien);opacity:.85;
+}
+.fiche-corps p{margin:0;font-size:.95rem;line-height:1.62}
+
+/* ---------- Vignette de fond ---------- */
+/* Posee dans l'angle, derriere le texte, en tres basse opacite.
+   inset:0 + right:0 la contient dans la fiche : en largeur pourcentage
+   sans borne, elle debordait du cadre arrondi sur grand ecran. */
+.fiche-fond{
+  position:absolute;right:0;top:0;bottom:0;
+  width:38%;max-width:190px;
+  background-size:cover;background-position:center;
+  opacity:.055;pointer-events:none;border-radius:0 14px 14px 0;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 78%);
+  mask-image:linear-gradient(90deg,transparent,#000 78%);
+}
+
+/* ---------- Rubrique ---------- */
+.rubrique{margin:34px 0 14px}
+.rubrique h3{
+  font-size:1.16rem;display:flex;align-items:center;gap:12px;
+  color:var(--brun);
+}
+.rubrique h3::after{
+  content:"";flex:1;height:1px;
+  background:linear-gradient(90deg,rgba(169,126,95,.34),transparent);
+}
+
+/* ---------- Deux colonnes sur grand ecran ---------- */
+/* align-items:stretch (defaut) donnerait des cartes de hauteur egale mais
+   du vide sous les textes courts. On laisse chaque fiche a sa hauteur. */
+@media(min-width:900px){
+  .fiches{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+  .fiches .fiche{margin:0}
+}
+
+/* ---------- Mobile ---------- */
+@media(max-width:560px){
+  .fiche{grid-template-columns:52px 1fr;gap:13px;padding:15px 16px}
+  .avatar{width:52px;height:52px}
+  .avatar span{font-size:1.1rem}
+  .fiche-corps p{font-size:.92rem;line-height:1.58}
+  .fiche-fond{width:46%;opacity:.07}
+}
+
+/* ---------- Accessibilite ---------- */
+@media(prefers-reduced-motion:reduce){
+  .fiche,.fiche-nom{transition:none}
+  .fiche:hover{transform:none}
+}
