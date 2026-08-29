@@ -35,7 +35,11 @@
   function onScroll(){ if(nav) nav.classList.toggle('scrolled', scrollY>60); }
   addEventListener('scroll', onScroll); onScroll();
 
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('on');});},{threshold:.12});
+  /* threshold .12 = 12% de l'AIRE du bloc visible : sur un bloc plus haut que
+   l'ecran (une liste de fiches), il fallait defiler tres loin avant que
+   l'apparition se declenche. threshold 0 + une marge negative de 60px
+   revele des que le haut du bloc entre dans l'ecran, quelle que soit sa taille. */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('on');});},{threshold:0,rootMargin:'0px 0px -60px 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 
   var mq=document.getElementById('mq'); if(mq){ mq.innerHTML+=mq.innerHTML; }

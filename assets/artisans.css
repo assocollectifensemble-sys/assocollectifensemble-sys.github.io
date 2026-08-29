@@ -136,3 +136,26 @@
   .fiche,.fiche-nom{transition:none}
   .fiche:hover{transform:none}
 }
+
+/* ============================================================
+   RESSERRAGE (29/08 b) — le contenu arrivait trop bas
+   ============================================================
+   Les sections generiques du site respirent beaucoup (jusqu'a 110px
+   haut et bas). Sur une page d'annuaire, ou l'on vient chercher des
+   noms, ce blanc repousse la premiere fiche sous la ligne de flottaison.
+   On reduit uniquement ici, sans toucher a la feuille globale. */
+main > section{padding-top:clamp(30px,3.4vw,46px);padding-bottom:clamp(30px,3.4vw,46px)}
+main > section:first-of-type{padding-top:clamp(26px,3vw,38px);padding-bottom:clamp(20px,2.4vw,30px)}
+.page-hero .contenu{padding-bottom:32px}
+.page-hero p.accroche{margin-top:9px}
+main > section > .prose > p:last-child{margin-bottom:0}
+.rubrique{margin:22px 0 11px}
+.fiches + .rubrique{margin-top:26px}
+.prose > .rubrique:first-child{margin-top:0}
+.prose h2{margin-top:0}
+
+/* Le titre tenait sur une seule ligne en 1600px de large : "je travaille"
+   passe a la ligne pour retrouver le rythme manuscrit sur deux niveaux. */
+@media(min-width:900px){
+  .page-hero h1 .script{display:block;margin-top:2px}
+}
