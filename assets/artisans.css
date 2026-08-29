@@ -52,7 +52,10 @@
 .avatar span{
   font-family:'Playfair Display',serif;
   font-size:1.32rem;letter-spacing:.5px;
-  color:var(--brun);opacity:.72;
+  /* Opacite .72 sur le cote fonce du degrade ne donnait que 3,07:1 —
+     un echec net (seuil 4,5:1 : 21px en graisse legere n'est PAS du
+     "gros texte" au sens WCAG). Couleur pleine + graisse 500. */
+  color:var(--encre);font-weight:500;
   -webkit-user-select:none;user-select:none;
 }
 
@@ -75,7 +78,7 @@
 .fiche-nom.sans-lien{border-bottom:none;cursor:default}
 .fiche-nom.sans-lien::after{content:none}
 .fiche-metier{
-  display:block;margin:2px 0 6px;
+  display:block;margin:6px 0;
   font-size:.73rem;letter-spacing:.12em;text-transform:uppercase;
   color:var(--terre-lien);opacity:.85;
 }
@@ -96,11 +99,11 @@
 
 /* ---------- Rubrique ---------- */
 .rubrique{margin:34px 0 14px}
-.rubrique h3{
+.rubrique h2{
   font-size:1.16rem;display:flex;align-items:center;gap:12px;
   color:var(--brun);
 }
-.rubrique h3::after{
+.rubrique h2::after{
   content:"";flex:1;height:1px;
   background:linear-gradient(90deg,rgba(169,126,95,.34),transparent);
 }
@@ -118,8 +121,12 @@
   .fiche{grid-template-columns:52px 1fr;gap:13px;padding:15px 16px}
   .avatar{width:52px;height:52px}
   .avatar span{font-size:1.1rem}
+  .fiche-nom{line-height:1.25}
   .fiche-corps p{font-size:.92rem;line-height:1.58}
-  .fiche-fond{width:46%;opacity:.07}
+  .fiche-fond{width:46%;opacity:.05}
+  /* La bulle WhatsApp flottante se posait sur le texte de la derniere
+     fiche. On degage la hauteur du bouton (52px) plus une marge. */
+  .fiches:last-of-type{padding-bottom:88px}
 }
 
 /* ---------- Accessibilite ---------- */
