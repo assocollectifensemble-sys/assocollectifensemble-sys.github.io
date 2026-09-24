@@ -44,3 +44,26 @@
   .pro-carte{padding:22px 20px 18px}
   .pro-final .pro-actions{flex-direction:column;gap:10px}
 }
+
+
+/* ---- illustrations -------------------------------------------------------
+   La page etait un mur de texte : quatre cartes d'offre alignees, puis des
+   paragraphes. Chaque carte porte maintenant sa vignette, et une bande de
+   trois images coupe la page avant la FAQ. */
+.pro-vign{margin:0 0 18px;border-radius:18px;overflow:hidden;background:var(--sable,#f1eae0)}
+.pro-vign img{display:block;width:100%;height:200px;object-fit:cover}
+/* Les dessins sepia sont sur fond creme : les recadrer serre les ampute.
+   On les laisse respirer, contenus, sur leur propre fond. */
+.pro-vign.dessin img{object-fit:contain;height:190px;padding:6px}
+
+.pro-bande{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+  padding:0 5vw;max-width:1180px;margin:0 auto 72px}
+.pro-bande-item{margin:0;border-radius:20px;overflow:hidden;background:var(--sable,#f1eae0)}
+.pro-bande-item img{display:block;width:100%;height:230px;object-fit:cover}
+.pro-bande-item:last-child img{object-fit:contain;padding:10px}
+
+@media(max-width:820px){
+  .pro-vign img,.pro-vign.dessin img{height:190px}
+  .pro-bande{grid-template-columns:1fr;gap:14px;margin-bottom:54px}
+  .pro-bande-item img{height:210px}
+}
