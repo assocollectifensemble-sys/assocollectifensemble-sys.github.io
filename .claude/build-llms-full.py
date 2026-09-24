@@ -27,6 +27,8 @@ PAGES = [
     ("evjf-evjg.html", "EVJF et EVJG", "/evjf-evjg"),
     ("evjf-evjg-chasse-au-tresor.html", "EVJF & EVJG : chasse au trésor et jeux lontan", "/evjf-evjg-chasse-au-tresor"),
     ("balades.html", "Balades", "/balades"),
+    ("spectacles-animations.html",
+     "Spectacles, ateliers et animations avec la 2CV", "/spectacles-animations"),
     ("shooting-evenements.html", "Shootings et évènements", "/shooting-evenements"),
     ("rosalie-et-soizig.html", "Rosalie et Soizig, les deux voitures", "/rosalie-et-soizig"),
     ("artisans.html", "Les artisans avec qui je travaille", "/artisans"),
