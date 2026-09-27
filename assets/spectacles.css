@@ -77,12 +77,12 @@
   box-shadow:0 26px 60px rgba(69,57,48,.22);
 }
 .scene-cadre::after{
-  content:""; position:absolute; inset:-14px -14px 14px -14px;
+  content:""; position:absolute; z-index:1; inset:-14px -14px 14px -14px;
   border:1px solid var(--nude); border-radius:232px 232px 34px 34px;
   pointer-events:none;
 }
 .scene-medaille{
-  position:absolute; left:-26px; bottom:34px;
+  position:absolute; z-index:2; left:-26px; bottom:34px;
   background:var(--blanc); border:1px solid var(--sable);
   border-radius:18px; padding:14px 20px; text-align:center;
   box-shadow:0 14px 34px rgba(69,57,48,.16);
