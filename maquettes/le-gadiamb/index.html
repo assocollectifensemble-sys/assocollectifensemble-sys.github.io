@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#2b1a11">
+<title>Lé Gadiamb · Cuisine créole au feu de bois · Saint-Denis</title>
+<meta name="description" content="Maquette : Lé Gadiamb, cuisine créole au feu de bois dans une case créole avec varangue, rue Roland Garros à Saint-Denis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bois:#2b1a11;      /* bois de la case, sombre */
+  --bois-2:#3a2418;
+  --braise:#d9531e;    /* feu / piment */
+  --piment:#b3261e;
+  --ocre:#e8b23a;      /* nappes jaunes */
+  --crème:#f6ecd8;
+  --crème-2:#efe0c2;
+  --varangue:#2f5b3f;  /* vert des motifs et du sol */
+  --tôle:#8d9490;
+  --encre:#24160e;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Karla',system-ui,sans-serif;
+  --bar:64px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-size:1.0625rem;line-height:1.65;color:var(--encre);background:var(--crème);padding-bottom:var(--bar);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ocre);outline-offset:3px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:900;line-height:1.02;letter-spacing:-.02em;text-wrap:balance}
+p{text-wrap:pretty}
+
+/* bandeau */
+.ruban{background:#16100b;color:#d9c7a6;font-size:.8rem;line-height:1.35;text-align:center;padding:.55rem 1rem;letter-spacing:.01em}
+.ruban b{color:var(--ocre);font-weight:700}
+
+/* texture bois : planches verticales */
+.planches{
+  background-color:var(--bois);
+  background-image:
+    repeating-linear-gradient(90deg,rgba(0,0,0,.28) 0 2px,transparent 2px 86px),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 1px,transparent 1px 43px),
+    linear-gradient(180deg,rgba(255,170,80,.05),rgba(0,0,0,.25));
+}
+
+/* HÉRO */
+.hero{position:relative;color:var(--crème);overflow:hidden;padding:clamp(2.2rem,6vw,4.5rem) 0 clamp(3rem,7vw,5.5rem)}
+.hero::before{ /* lueur de braise */
+  content:"";position:absolute;inset:auto -20% -35% -20%;height:75%;
+  background:radial-gradient(60% 70% at 30% 100%,rgba(217,83,30,.55),rgba(217,83,30,0) 70%);
+  animation:braise 5s ease-in-out infinite alternate;pointer-events:none}
+@keyframes braise{from{opacity:.65;transform:scale(1)}to{opacity:1;transform:scale(1.07)}}
+.hero .wrap{position:relative;display:grid;gap:2.2rem;align-items:end}
+.kicker{font-size:.82rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ocre)}
+.hero h1{font-size:clamp(4.2rem,19vw,10.5rem);margin:.5rem 0 .2rem;font-variation-settings:"opsz" 144;color:var(--crème)}
+.hero h1 em{display:block;font-style:italic;font-weight:700;color:var(--braise);font-size:.4em;letter-spacing:0;margin-top:.15em}
+.hero .accroche{font-family:var(--serif);font-size:clamp(1.25rem,3.6vw,1.8rem);line-height:1.3;font-weight:500;max-width:30ch;color:var(--crème-2)}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.8rem 1.5rem;border-radius:3px;font-weight:700;font-size:1.05rem;text-decoration:none;letter-spacing:.01em;transition:transform .2s,background .2s,color .2s}
+.btn-feu{background:var(--braise);color:#fff;box-shadow:0 6px 0 #8f3510}
+.btn-feu:hover{transform:translateY(2px);box-shadow:0 4px 0 #8f3510}
+.btn-ligne{border:2px solid var(--crème-2);color:var(--crème)}
+.btn-ligne:hover{background:var(--crème);color:var(--bois)}
+.arche{position:relative;justify-self:start;width:min(100%,430px)}
+.arche .cadre{border-radius:999px 999px 6px 6px;overflow:hidden;border:6px solid var(--crème);box-shadow:0 22px 50px rgba(0,0,0,.5);aspect-ratio:4/5;background:var(--bois-2)}
+.arche img{width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.arche figcaption{font-size:.78rem;color:#cdb893;margin-top:.7rem}
+
+/* bande tôle */
+.tole{height:26px;background:
+  repeating-linear-gradient(90deg,#aab0ac 0 9px,#7d8480 9px 18px);
+  border-block:2px solid #5d635f;
+  box-shadow:inset 0 -8px 10px rgba(0,0,0,.18)}
+
+/* HISTOIRE */
+.histoire{padding:clamp(3.5rem,9vw,7rem) 0;position:relative}
+.histoire .wrap{display:grid;gap:2.5rem}
+.etiquette{font-size:.8rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--piment);margin-bottom:.9rem}
+.histoire h2{font-size:clamp(2.3rem,7vw,4.4rem);margin-bottom:1.4rem}
+.histoire h2 span{color:var(--braise);font-style:italic}
+.histoire p+p{margin-top:1.1rem}
+.histoire .texte{max-width:56ch}
+.lead{font-family:var(--serif);font-size:1.3rem;line-height:1.45;font-weight:500}
+.glose{margin-top:1.6rem;padding:1.1rem 1.3rem;background:var(--crème-2);border-radius:4px;font-size:.98rem}
+.glose strong{font-family:var(--serif);font-size:1.15rem}
+.pile{position:relative;min-height:350px;margin-bottom:1.5rem}
+.pile figure{position:absolute;border:5px solid #fff;background:#fff;box-shadow:0 14px 30px rgba(43,26,17,.28)}
+.pile img{width:100%;height:100%;object-fit:cover}
+.pile .p1{left:0;top:0;width:68%;aspect-ratio:4/3;transform:rotate(-2.4deg)}
+.pile .p2{right:0;bottom:0;width:62%;aspect-ratio:4/3;transform:rotate(2.2deg)}
+.pile figcaption{position:absolute;left:0;right:0;bottom:-1.7rem;font-size:.74rem;color:#6b5844;text-align:center}
+.a-ecrire{margin-top:1.4rem;font-size:.92rem;color:#7a5d49;border:1.5px dashed #b99a7a;padding:.75rem 1rem;border-radius:4px}
+
+/* L'ARDOISE */
+.ardoise{color:var(--crème);padding:clamp(3.5rem,9vw,7rem) 0}
+.ardoise .wrap{display:grid;gap:2.5rem}
+.ardoise h2{font-size:clamp(2.3rem,7vw,4.4rem)}
+.ardoise .etiquette{color:var(--ocre)}
+.ardoise .intro{margin-top:1.2rem;max-width:42ch;color:var(--crème-2)}
+.plats{list-style:none;counter-reset:p}
+.plats li{counter-increment:p;display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:1.15rem 0;border-bottom:1px dashed rgba(246,236,216,.28)}
+.plats li::before{content:counter(p,decimal-leading-zero);font-family:var(--serif);font-style:italic;color:var(--braise);font-size:1.1rem;padding-top:.35rem}
+.plats h3{font-size:clamp(1.55rem,5vw,2.3rem);font-weight:700;letter-spacing:-.01em;line-height:1.1}
+.plats p{grid-column:2;font-size:.95rem;color:#cdb893}
+.plats li.grand h3{font-size:clamp(2rem,7vw,3.2rem);font-weight:900;color:var(--ocre)}
+.mention{margin-top:1.6rem;font-size:.95rem;color:var(--crème-2)}
+.mention b{color:var(--ocre)}
+.photo-plat{margin-top:1.8rem;border:1.5px dashed rgba(246,236,216,.4);border-radius:4px;padding:1.1rem;font-size:.9rem;color:#cdb893}
+
+/* AVIS */
+.avis{padding:clamp(3.5rem,9vw,7rem) 0;background:var(--ocre);position:relative;overflow:hidden}
+.avis .wrap{display:grid;gap:2.2rem}
+.avis h2{font-size:clamp(2.1rem,6.5vw,3.8rem);max-width:14ch}
+.avis .etiquette{color:var(--bois)}
+.note{font-size:.95rem;margin-top:1rem;max-width:34ch}
+blockquote{font-family:var(--serif);font-weight:500;line-height:1.28;border:0}
+blockquote p{font-size:clamp(1.25rem,4.4vw,1.75rem)}
+blockquote.grande p{font-size:clamp(1.45rem,5.2vw,2.35rem);font-weight:700}
+blockquote cite{display:block;margin-top:.8rem;font-family:var(--sans);font-style:normal;font-size:.85rem;font-weight:700;letter-spacing:.04em}
+.citations{display:grid;gap:2.2rem}
+.citations blockquote+blockquote{padding-top:2.2rem;border-top:2px solid rgba(43,26,17,.25)}
+
+/* INFOS */
+.infos{padding:clamp(3.5rem,9vw,7rem) 0;background:var(--crème)}
+.infos .wrap{display:grid;gap:2.4rem}
+.infos h2{font-size:clamp(2.3rem,7vw,4.2rem);margin-bottom:1.6rem}
+.dl{display:grid;gap:1.4rem}
+.dl dt{font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--piment)}
+.dl dd{font-family:var(--serif);font-size:1.35rem;line-height:1.3;font-weight:500;margin-top:.15rem}
+.dl dd small{display:block;font-family:var(--sans);font-size:.9rem;color:#6b5844;margin-top:.3rem}
+.dl a{text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-color:var(--braise)}
+.carte{display:flex;flex-direction:column;justify-content:flex-end;min-height:280px;padding:1.6rem;border-radius:4px;color:var(--crème);text-decoration:none;position:relative;overflow:hidden;
+  background:
+   repeating-linear-gradient(0deg,rgba(246,236,216,.09) 0 1px,transparent 1px 38px),
+   repeating-linear-gradient(90deg,rgba(246,236,216,.09) 0 1px,transparent 1px 38px),
+   var(--varangue)}
+.carte::after{content:"";position:absolute;right:2.2rem;top:2.4rem;width:26px;height:26px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--braise);box-shadow:0 0 0 8px rgba(217,83,30,.28)}
+.carte strong{font-family:var(--serif);font-size:1.7rem;line-height:1.1}
+.carte span{margin-top:.4rem;font-size:.95rem;text-decoration:underline;text-underline-offset:4px}
+
+/* PIED */
+footer{background:#16100b;color:#bba98a;padding:2.4rem 0 2.6rem;font-size:.9rem}
+footer .nom{font-family:var(--serif);font-weight:900;color:var(--crème);font-size:1.5rem}
+footer p{margin-top:.5rem;max-width:60ch}
+
+/* barre fixe mobile */
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;background:var(--bois);border-top:2px solid var(--braise);height:var(--bar)}
+.barre a{display:flex;align-items:center;justify-content:center;font-weight:700;text-decoration:none;color:var(--crème);font-size:1.05rem;min-height:44px}
+.barre a:first-child{background:var(--braise);color:#fff}
+
+/* apparition */
+.js .rev{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .rev.in{opacity:1;transform:none}
+
+@media (min-width:820px){
+  body{padding-bottom:0}
+  .barre{display:none}
+  .hero .wrap{grid-template-columns:1.35fr .8fr;gap:4rem}
+  .arche{justify-self:end;margin-bottom:-.5rem}
+  .histoire .wrap{grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+  .pile{min-height:520px}
+  .ardoise .wrap{grid-template-columns:.8fr 1.2fr;gap:5rem;align-items:start}
+  .avis .wrap{grid-template-columns:.8fr 1.2fr;gap:5rem}
+  .infos .wrap{grid-template-columns:1.1fr .9fr;gap:5rem;align-items:stretch}
+  .carte{min-height:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rev{opacity:1;transform:none}
+}
+</style>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lé Gadiamb — une page imaginée pour vous">
+<meta property="og:description" content="Cuisine créole au feu de bois, case créole et varangue à Saint-Denis : une maquette offerte par Aurélie &amp; Jonathan.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/le-gadiamb/img/gadiamb-5424.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/le-gadiamb/">
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour Lé Gadiamb</div>
+
+<header class="hero planches">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Cuisine créole au feu de bois · Saint-Denis</p>
+      <h1>Lé<br>Gadiamb<em>« c’est bon », comme on dit lontan</em></h1>
+      <p class="accroche">Une petite case créole, sa varangue, son jardin fleuri et le parfum du feu de bois.</p>
+      <div class="cta">
+        <a class="btn btn-feu" href="tel:+262262201079">Réserver · 0262 20 10 79</a>
+        <a class="btn btn-ligne" href="#histoire">Entrer dans la case</a>
+      </div>
+    </div>
+    <figure class="arche">
+      <div class="cadre"><img src="img/gadiamb-5424.jpg" alt="La terrasse ombragée de Lé Gadiamb : tables aux nappes jaunes et chaises en rotin sous un auvent rayé" width="640" height="480"></div>
+      <figcaption>La terrasse ombragée</figcaption>
+    </figure>
+  </div>
+</header>
+<div class="tole" aria-hidden="true"></div>
+
+<section class="histoire" id="histoire">
+  <div class="wrap">
+    <div class="texte rev">
+      <p class="etiquette">La case</p>
+      <h2>Entrez, <span>c’est bon</span> ici.</h2>
+      <p class="lead">Lé Gadiamb s’est installé dans une petite case créole, avec sa varangue et son jardin fleuri, meublée et décorée comme les cases d’autrefois.</p>
+      <p>Michel, Jessica et leur équipe cuisinent « Goûts et Traditions lontan » : une cuisine créole traditionnelle, essentiellement au feu de bois, avec les meilleurs produits de La Réunion, au gré des saisons et du marché local.</p>
+      <p>On s’y installe dans une rue calme de Saint-Denis, à l’ombre de la terrasse, avec un accueil et une ambiance que les convives décrivent volontiers comme chaleureux.</p>
+      <div class="glose"><strong>Lé gadiamb</strong>, vieille expression créole qui veut dire « c’est bon », « c’est agréable ». Le nom dit déjà tout.</div>
+      <p class="a-ecrire">[Votre histoire en 3 lignes : la case, sa famille, ce qui vous a donné envie d’ouvrir]</p>
+    </div>
+    <div class="pile rev" aria-label="Photos du restaurant">
+      <figure class="p1"><img src="img/gadiamb-5422.jpg" alt="La salle sous ses poutres apparentes : nappes jaunes, chaises en rotin et comptoir en bois" width="640" height="480" loading="lazy"></figure>
+      <figure class="p2"><img src="img/gadiamb-5423.jpg" alt="Un coin de salle dont les murs sont couverts de pages de journaux, table dressée aux nappes jaunes" width="360" height="480" loading="lazy" style="object-position:center"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="ardoise planches" id="carte">
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiquette">À l’ardoise</p>
+      <h2>Ce qui mijote sur le feu</h2>
+      <p class="intro">Civet zourite, canard à la vanille, cabri massalé et carrys généreux, les plats que la maison aime mettre en avant.</p>
+      <p class="mention"><b>Suggestions à l’ardoise de 17 € à 25 €.</b> Et pour finir, un petit rhum arrangé offert à la fin du repas.</p>
+      <p class="photo-plat">[Ici, vos plus belles photos de plats et de cuisine au feu de bois]</p>
+    </div>
+    <ul class="plats rev">
+      <li class="grand"><h3>Civet zourite</h3><p>Mis en avant sur la page Facebook de la maison.</p></li>
+      <li class="grand"><h3>Canard à la vanille</h3><p>Mis en avant sur la page Facebook de la maison.</p></li>
+      <li class="grand"><h3>Cabri massalé</h3><p>Mis en avant sur la page Facebook de la maison.</p></li>
+      <li><h3>Rougail saucisse</h3><p>Saucisses fraîches et fumées, saluées dans les avis d’avril 2026.</p></li>
+      <li><h3>Carry camarons</h3><p>Aux camarons, avec riz et grains.</p></li>
+      <li><h3>Sauté de snoock</h3><p>Une recette de poisson à la carte de la maison.</p></li>
+      <li><h3>Crème brûlée à la banane</h3><p>Parmi les desserts maison, avec des sorbets locaux : tangor, ananas, goyavier.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiquette">Ce qu’on en dit</p>
+      <h2>Des tablées qui reviennent</h2>
+      <p class="note">Avis publiés sur la fiche Petit Futé du restaurant, avril et mai 2026.</p>
+    </div>
+    <div class="citations rev">
+      <blockquote class="grande">
+        <p>« Tout était parfait : accueil très sympathique par Guillaume samedi midi. Serveuses très agréables. Cuisine excellente rougail saucisses avec saucisses fraîches et fumées. Dessert crème brûlée à la banane à tomber. Ti punch excellent. Un très agréable moment sur la jolie terrasse. »</p>
+        <cite>Isabelle M. · avril 2026</cite>
+      </blockquote>
+      <blockquote>
+        <p>« Excellent repas convivial et ombragé au gadiamb, nous recommandons tous les plats notamment le riz chauffé et les saucisses. Nous reviendrons à coup sûr ! »</p>
+        <cite>Avis Google · 23 avril 2026</cite>
+      </blockquote>
+      <blockquote>
+        <p>« Super cuisine! Les produits sont de très bonne qualité et ça se ressent dans la cuisine. »</p>
+        <cite>Avis Google · 5 avril 2026</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiquette">Venir</p>
+      <h2>À table, rue Roland Garros</h2>
+      <dl class="dl">
+        <div><dt>Adresse</dt><dd>104 rue Roland Garros<br>97400 Saint-Denis<small>Stationnement dans la rue.</small></dd></div>
+        <div><dt>Réserver</dt><dd><a href="tel:+262262201079">0262 20 10 79</a><small>Réserver est recommandé, surtout le soir.</small></dd></div>
+        <div><dt>Ouvert</dt><dd>Du lundi au samedi, midi et soir<small>Fermé le dimanche. [Horaires exacts à confirmer]</small></dd></div>
+        <div><dt>Aussi</dt><dd>Sur place, à emporter et service traiteur<small>Renseignements : <a href="mailto:legadiamb974@gmail.com">legadiamb974@gmail.com</a></small></dd></div>
+      </dl>
+    </div>
+    <a class="carte rev" href="https://www.google.com/maps/dir/?api=1&destination=-20.8814920,55.45658637" target="_blank" rel="noopener">
+      <strong>104 rue Roland Garros, Saint-Denis</strong>
+      <span>Ouvrir l’itinéraire dans Google Maps</span>
+    </a>
+  </div>
+</section>
+
+<div class="tole" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <p class="nom" style="margin-top:0">Lé Gadiamb</p>
+    <p>Cuisine créole au feu de bois · 104 rue Roland Garros, Saint-Denis · 0262 20 10 79</p>
+    <p>Maquette privée réalisée par Aurélie &amp; Jonathan à partir d’informations publiques. Photos : fiche Île de La Réunion Tourisme.</p>
+  </div>
+</footer>
+
+<nav class="barre" aria-label="Actions rapides">
+  <a href="tel:+262262201079">Appeler</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=-20.8814920,55.45658637" target="_blank" rel="noopener">Itinéraire</a>
+</nav>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=document.querySelectorAll('.rev');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

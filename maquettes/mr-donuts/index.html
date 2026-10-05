@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<meta name="robots" content="noindex, nofollow">
+<title>M.Donuts &amp; Bagels — Saint-Denis · Saint-Pierre</title>
+<meta name="description" content="Donuts, beignets fourrés et bagels à composer. Deux adresses : Saint-Denis et Saint-Pierre, La Réunion.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F6EBD6;      /* pâte / enseigne */
+  --cream-2:#EFDFC0;
+  --brown:#3A2218;      /* bordure de l'enseigne */
+  --brown-2:#5A3A28;
+  --orange:#D9591C;     /* lettrage DONUTS */
+  --orange-d:#B3470F;
+  --glaze:#F3C25B;      /* glaçage doré */
+  --pink:#E88FA3;       /* confettis, usage rare */
+  --ink:#2B1A12;
+  --muted:#6B5546;
+  --line:rgba(58,34,24,.18);
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Instrument Sans',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:4px}
+/* grain de papier kraft */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.07;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+
+.ribbon{background:var(--brown);color:var(--cream);font-size:13px;padding:9px var(--pad);letter-spacing:.01em}
+.ribbon b{font-weight:600;color:var(--glaze)}
+
+/* HERO */
+.hero{padding:clamp(28px,6vw,72px) var(--pad) clamp(40px,7vw,88px);display:grid;gap:36px;max-width:1180px;margin:0 auto;grid-template-columns:1fr}
+.hero .sign{width:112px;border:4px solid var(--brown);border-radius:10px;box-shadow:6px 6px 0 var(--brown);transform:rotate(-3deg)}
+.eyebrow{font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:var(--orange-d)}
+h1{font-family:var(--serif);font-weight:900;font-variation-settings:"opsz" 144;font-size:clamp(44px,11.5vw,112px);line-height:.94;letter-spacing:-.025em;color:var(--brown);margin:14px 0 22px}
+h1 em{font-style:italic;font-weight:500;color:var(--orange)}
+.lede{font-size:clamp(18px,2.4vw,22px);max-width:34ch;color:var(--brown-2)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--brown);transition:transform .2s ease,box-shadow .2s ease,background .2s}
+.btn.main{background:var(--orange);color:#fff;border-color:var(--orange);box-shadow:0 4px 0 var(--orange-d)}
+.btn.main:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--orange-d)}
+.btn.ghost{background:transparent;color:var(--brown)}
+.btn.ghost:hover{background:var(--brown);color:var(--cream)}
+.hero-photo{min-height:260px}
+.slot{border:2px dashed rgba(58,34,24,.35);border-radius:18px;display:flex;align-items:flex-end;padding:16px;font-size:13px;color:var(--muted);background:
+  repeating-linear-gradient(135deg,rgba(217,89,28,.05) 0 14px,transparent 14px 28px);position:relative;overflow:hidden}
+.slot span{background:var(--cream);padding:4px 10px;border-radius:999px;border:1px solid var(--line)}
+.confetti{position:absolute;inset:0;pointer-events:none}
+.confetti i{position:absolute;width:10px;height:10px;border-radius:50%}
+@media(min-width:860px){
+  .hero{grid-template-columns:1.25fr .75fr;align-items:end}
+  .hero-photo{min-height:460px;margin-bottom:6px}
+}
+
+/* BANDE ADRESSES */
+.tape{background:var(--brown);color:var(--cream);padding:18px var(--pad);overflow:hidden;white-space:nowrap}
+.tape p{display:inline-block;font-family:var(--serif);font-size:clamp(20px,3vw,30px);font-style:italic;animation:slide 38s linear infinite}
+.tape b{color:var(--glaze);font-style:normal;margin:0 .8em}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+section{padding:clamp(48px,8vw,104px) var(--pad);max-width:1180px;margin:0 auto}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(32px,6vw,60px);line-height:1;letter-spacing:-.02em;color:var(--brown);max-width:15ch}
+h2 em{color:var(--orange);font-weight:500}
+.kicker{margin-bottom:14px}
+
+/* ESPRIT */
+.spirit{display:grid;gap:32px}
+.spirit .txt p{font-size:19px;max-width:46ch;margin-bottom:16px;color:var(--brown-2)}
+.spirit .quote{font-family:var(--serif);font-style:italic;font-size:clamp(24px,4vw,36px);line-height:1.15;color:var(--orange-d);margin-top:20px}
+.spirit .quote small{display:block;font-family:var(--sans);font-style:normal;font-size:13px;color:var(--muted);margin-top:8px}
+@media(min-width:860px){.spirit{grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}}
+
+/* COMPOSER */
+.build{background:var(--cream-2);max-width:none}
+.build-in{max-width:1180px;margin:0 auto;display:grid;gap:36px}
+.stack{list-style:none;padding:0;display:grid;gap:0;max-width:440px;border:3px solid var(--brown);border-radius:22px;background:var(--cream);box-shadow:8px 8px 0 var(--brown);overflow:hidden}
+.stack li{padding:16px 22px;font-family:var(--serif);font-size:22px;font-weight:700;display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:2px dashed var(--line);transition:background .2s}
+.stack li:last-child{border-bottom:0}
+.stack li small{font-family:var(--sans);font-weight:500;font-size:13px;color:var(--muted)}
+.stack li:hover{background:var(--glaze)}
+.build p.note{max-width:44ch;color:var(--brown-2)}
+.build .src{font-size:13px;color:var(--muted);margin-top:14px}
+@media(min-width:860px){.build-in{grid-template-columns:1fr 1fr;align-items:center;gap:72px}}
+
+/* FAMILLES */
+.fam{margin-top:36px;border-top:2px solid var(--brown)}
+.fam article{display:grid;gap:6px;padding:22px 0;border-bottom:1px solid var(--line)}
+.fam h3{font-family:var(--serif);font-size:clamp(26px,4.4vw,40px);font-weight:700;line-height:1.05;color:var(--brown)}
+.fam h3 em{font-weight:500;color:var(--orange)}
+.fam p{color:var(--muted);max-width:52ch}
+.fam .n{font-family:var(--serif);font-style:italic;color:var(--orange);font-size:18px}
+@media(min-width:760px){.fam article{grid-template-columns:70px 1fr 1fr;align-items:baseline;gap:28px}}
+
+/* LIEUX */
+.places{display:grid;gap:20px;margin-top:36px}
+.place{border:3px solid var(--brown);border-radius:22px;padding:28px;background:var(--cream);box-shadow:8px 8px 0 var(--brown);display:grid;gap:10px;align-content:start}
+.place.alt{background:var(--glaze)}
+.place h3{font-family:var(--serif);font-size:34px;line-height:1}
+.place .a{font-weight:600}
+.place a.lnk{font-weight:600;color:var(--orange-d)}
+.place.alt a.lnk{color:var(--brown)}
+.place .tag{font-size:13px;text-transform:uppercase;letter-spacing:.12em;font-weight:600;color:var(--orange-d)}
+.place.alt .tag{color:var(--brown-2)}
+@media(min-width:760px){.places{grid-template-columns:1fr 1fr;gap:32px}}
+.wok{margin-top:26px;color:var(--muted);font-size:15px}
+
+/* AVIS */
+.reviews{background:var(--brown);color:var(--cream);max-width:none}
+.reviews-in{max-width:1180px;margin:0 auto}
+.reviews h2{color:var(--cream)}.reviews h2 em{color:var(--glaze)}
+.rv{display:grid;gap:0;margin-top:36px}
+.rv blockquote{padding:26px 0;border-top:1px solid rgba(246,235,214,.25);display:grid;gap:12px}
+.rv blockquote:last-child{border-bottom:1px solid rgba(246,235,214,.25)}
+.rv q{font-family:var(--serif);font-size:clamp(22px,3.4vw,32px);line-height:1.2;font-weight:500;quotes:"« " " »"}
+.rv cite{font-style:normal;font-size:14px;color:var(--glaze)}
+.rv.big blockquote:first-child q{font-size:clamp(28px,5vw,48px)}
+@media(min-width:860px){.rv{grid-template-columns:1.3fr 1fr;column-gap:56px}.rv blockquote:first-child{grid-row:span 3;border-bottom:1px solid rgba(246,235,214,.25)}}
+
+/* INFOS */
+.info{display:grid;gap:28px}
+dl{display:grid;gap:18px}
+dt{font-size:13px;text-transform:uppercase;letter-spacing:.12em;font-weight:600;color:var(--orange-d)}
+dd{font-size:19px}
+dd a{font-weight:600}
+.todo{font-size:13px;color:var(--muted);margin-top:4px}
+@media(min-width:860px){.info{grid-template-columns:.9fr 1.1fr;gap:72px}dl{grid-template-columns:1fr 1fr;gap:28px 40px}}
+
+footer{background:var(--cream-2);padding:36px var(--pad);font-size:14px;color:var(--muted)}
+footer .in{max-width:1180px;margin:0 auto;display:grid;gap:8px}
+footer strong{font-family:var(--serif);font-size:22px;color:var(--brown)}
+
+/* BARRE FIXE */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--brown);box-shadow:0 -6px 24px rgba(0,0,0,.2)}
+.bar a{flex:1;min-height:48px;display:flex;align-items:center;justify-content:center;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px}
+.bar .c{background:var(--orange);color:#fff}
+.bar .v{background:var(--cream);color:var(--brown)}
+@media(min-width:860px){.bar{left:auto;right:24px;bottom:24px;border-radius:999px;padding:8px;width:auto;gap:8px}.bar a{padding:0 22px;flex:none}body{padding-bottom:0}}
+
+/* APPARITIONS */
+.rv-in{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv-in.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .tape p{animation:none}
+  .rv-in{opacity:1;transform:none;transition:none}
+  .btn,.stack li{transition:none}
+}
+</style>
+<meta property="og:type" content="website">
+<meta property="og:title" content="M.Donuts &amp; Bagels — une page imaginée pour vous">
+<meta property="og:description" content="Donuts, bagels et milkshakes à Saint-Denis et Saint-Pierre : une maquette offerte par Aurélie &amp; Jonathan.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/mr-donuts/img/Menu_bagel_side_et_boisson.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/mr-donuts/">
+</head>
+<body>
+
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour M.Donuts &amp; Bagels</div>
+
+<header class="hero">
+  <div>
+    <img class="sign" src="img/fb-profil.jpg" alt="Enseigne M.Donuts &amp; Bagels" width="112" height="112">
+    <p class="eyebrow" style="margin-top:28px">Saint-Denis · Saint-Pierre · La Réunion</p>
+    <h1>Une petite douceur, <em>ça ne se refuse pas.</em></h1>
+    <p class="lede">Donuts, beignets fourrés et bagels que vous composez à votre goût. Deux adresses, un même plaisir de gourmandise.</p>
+    <div class="cta">
+      <a class="btn main" href="tel:+262693000293">Appeler Saint-Denis</a>
+      <a class="btn ghost" href="#adresses">Venir nous voir</a>
+    </div>
+  </div>
+  <figure class="hero-real" style="margin:0;position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 18px 40px -18px rgba(60,30,10,.45)">
+    <img src="img/Menu_bagel_side_et_boisson.jpg" alt="Bagel saumon cream cheese et sa salade croquante" style="width:100%;height:100%;object-fit:cover;display:block">
+    <figcaption style="position:absolute;left:12px;bottom:12px;background:rgba(255,248,238,.92);padding:6px 12px;border-radius:999px;font-size:.8rem">Le bagel saumon, frais et croquant</figcaption>
+  </figure>
+</header>
+
+<div class="tape" aria-hidden="true"><p>Donuts <b>✦</b> Beignets fourrés <b>✦</b> Bagels <b>✦</b> Wraps &amp; salades <b>✦</b> Milkshakes <b>✦</b> Donuts <b>✦</b> Beignets fourrés <b>✦</b> Bagels <b>✦</b> Wraps &amp; salades <b>✦</b> Milkshakes <b>✦</b></p></div>
+
+<section class="spirit rv-in">
+  <div>
+    <p class="eyebrow kicker">L'esprit de la maison</p>
+    <h2>Ici, on <em>choisit</em> sa gourmandise.</h2>
+  </div>
+  <div class="txt">
+    <p>Chez M.Donuts, tout commence par une envie : du sucré, du salé, ou les deux. Au bar à donuts, vous composez votre donut ou votre beignet fourré. Au bar à bagels, vous bâtissez le vôtre, chaud ou froid, avec ses frites et son petit dessert à emporter.</p>
+    <p>La maison est née à Saint-Denis, rue Issop Ravate, puis a ouvert sa deuxième adresse à Saint-Pierre. Le Nord et le Sud de l'île ont désormais leur rendez-vous gourmand.</p>
+    <p class="quote">« Vien tester, vien a zot. »<small>— l'invitation de M.Donuts sur Instagram</small></p>
+  </div>
+</section>
+
+<section class="build" aria-labelledby="t-build" style="padding-left:0;padding-right:0">
+  <div class="build-in rv-in" style="padding:0 var(--pad)">
+    <div>
+      <p class="eyebrow kicker">Un bagel, étage par étage</p>
+      <h2 id="t-build">Le bagel <em>saumon</em>, de la base au sommet.</h2>
+      <p class="note" style="margin-top:20px">Du premier ingrédient à la dernière touche, voici comment la maison le construit : du fondant, du frais et du croquant.</p>
+      <p class="src">D'après la vidéo de la page Facebook de M.Donuts.</p>
+    </div>
+    <ol class="stack" aria-label="Composition du bagel saumon">
+      <li>Le bagel <small>la base</small></li>
+      <li>Le cream cheese <small>le fondant</small></li>
+      <li>Le saumon <small>le cœur</small></li>
+      <li>La roquette <small>le frais</small></li>
+      <li>Les carottes <small>le croquant</small></li>
+      <li>Les oignons frits <small>la touche finale</small></li>
+    </ol>
+  </div>
+</section>
+
+<section class="rv-in" aria-labelledby="t-fam">
+  <p class="eyebrow kicker">À la carte</p>
+  <h2 id="t-fam">Cinq familles de <em>plaisirs.</em></h2>
+  <div class="fam">
+    <article><span class="n">01</span><h3>Donuts <em>faits maison</em></h3><p>À choisir au comptoir, ou à composer vous-même au bar à donuts.</p></article>
+    <article><span class="n">02</span><h3>Beignets <em>fourrés</em></h3><p>Les gourmands les composent au bar à donuts, comme leurs donuts.</p></article>
+    <article><span class="n">03</span><h3>Bagels <em>chauds ou froids</em></h3><p>Salés, garnis, à composer. Menu bagel avec accompagnement et boisson.</p></article>
+    <article><span class="n">04</span><h3>Wraps <em>et salades</em></h3><p>Pour les envies plus légères, avec la même générosité.</p></article>
+    <article><span class="n">05</span><h3>Boissons <em>gourmandes</em></h3><p>Mocktails, frappés et milkshakes, smoothies et jus.</p></article>
+  </div>
+</section>
+
+<section id="adresses" class="rv-in" aria-labelledby="t-lieux">
+  <p class="eyebrow kicker">Deux adresses</p>
+  <h2 id="t-lieux">Le Nord, <em>le Sud.</em></h2>
+  <div class="places">
+    <div class="place">
+      <span class="tag">Le premier</span>
+      <h3>Saint-Denis</h3>
+      <p class="a">22 rue Issop Ravate, 97400</p>
+      <a class="lnk" href="https://www.google.com/maps/search/?api=1&query=M.Donuts+%26+Bagels+22+rue+Issop+Ravate+97400+Saint-Denis" target="_blank" rel="noopener">Ouvrir l'itinéraire →</a>
+      <a class="lnk" href="tel:+262693000293">06 93 00 02 93</a>
+    </div>
+    <div class="place alt">
+      <span class="tag">Le deuxième</span>
+      <h3>Saint-Pierre</h3>
+      <p class="a">89 rue des Bons Enfants, 97410</p>
+      <a class="lnk" href="https://www.google.com/maps/search/?api=1&query=M.Donuts+%26+Bagels+89+rue+des+Bons+Enfants+97410+Saint-Pierre" target="_blank" rel="noopener">Ouvrir l'itinéraire →</a>
+      <p class="todo" style="color:var(--brown-2)">Numéro de la boutique : à préciser avec vous.</p>
+    </div>
+  </div>
+  <p class="wok">Et au Chaudron : <strong>Wok Wok &amp; Bowl</strong>, présenté sur la page de la maison.</p>
+</section>
+
+<section class="reviews" style="padding-left:0;padding-right:0" aria-labelledby="t-rv">
+  <div class="reviews-in rv-in" style="padding:0 var(--pad)">
+    <p class="eyebrow kicker" style="color:var(--glaze)">Ils en parlent</p>
+    <h2 id="t-rv">Des clients <em>conquis.</em></h2>
+    <div class="rv big">
+      <blockquote><q>Le restaurant est très joli et les bagels bien garnis. Je me suis régalée. Je recommande fortement.</q><cite>Avis PagesJaunes, avril 2025</cite></blockquote>
+      <blockquote><q>La meilleure expérience gustatives je m’en lasse jamais c’est super bon avec un accueille de qualité.</q><cite>Avis PagesJaunes, octobre 2024</cite></blockquote>
+      <blockquote><q>Tres bien personnel agreable</q><cite>Avis PagesJaunes, juillet 2026</cite></blockquote>
+    </div>
+    <p style="margin-top:22px;font-size:14px;color:rgba(246,235,214,.7)">Et sur Facebook, « Le Créole en Vadrouille » évoque « accueil au top, service vraiment professionnel et des produits avec un goût exceptionnel ».</p>
+  </div>
+</section>
+
+<section class="info rv-in" aria-labelledby="t-info">
+  <div>
+    <p class="eyebrow kicker">Pratique</p>
+    <h2 id="t-info">On vous <em>attend.</em></h2>
+  </div>
+  <dl>
+    <div><dt>Horaires</dt><dd>10h – 22h</dd><p class="todo">Jours d'ouverture : à confirmer avec vous.</p></div>
+    <div><dt>Sur place ou à emporter</dt><dd>Les deux, comme vous préférez.</dd></div>
+    <div><dt>Téléphone</dt><dd><a href="tel:+262693000293">06 93 00 02 93</a></dd></div>
+    <div><dt>Suivez-nous</dt><dd><a href="https://www.facebook.com/M.donuts974/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/m.donuts974/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@m.donuts974" target="_blank" rel="noopener">TikTok</a></dd></div>
+  </dl>
+</section>
+
+<footer>
+  <div class="in">
+    <strong>M.Donuts &amp; Bagels</strong>
+    <span>22 rue Issop Ravate, Saint-Denis · 89 rue des Bons Enfants, Saint-Pierre</span>
+    <span>Maquette privée, offerte par Aurélie &amp; Jonathan. Textes et avis issus de sources publiques, à valider avec vous.</span>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Actions rapides">
+  <a class="c" href="tel:+262693000293">Appeler</a>
+  <a class="v" href="#adresses">Venir à la boutique</a>
+</nav>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv-in');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('on')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

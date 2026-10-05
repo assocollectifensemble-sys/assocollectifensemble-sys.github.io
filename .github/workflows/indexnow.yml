@@ -53,6 +53,7 @@ jobs:
           for f in $fichiers; do
             chemin=${f#./}
             case "$chemin" in
+              maquettes/*) continue ;;                        # maquettes privées prospects, hors index
               404.html|merci.html) continue ;;                # sans intérêt pour l'index
               index.html) echo "https://$HOST/" >> /tmp/urls.txt ;;
               *) echo "https://$HOST/${chemin%.html}" >> /tmp/urls.txt ;;
