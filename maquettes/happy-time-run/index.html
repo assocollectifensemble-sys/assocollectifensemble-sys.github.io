@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>Happy Time.Run — restaurant &amp; coworking au Tampon</title>
+<meta name="description" content="Bistro de l'ardoise fait maison et espace coworking, 178 rue Jules Bertaut au Tampon. Ouvert du lundi au vendredi.">
+<meta property="og:title" content="Happy Time.Run — restaurant &amp; coworking au Tampon">
+<meta property="og:description" content="Une ardoise fait maison, des produits locaux, un coworking : une maquette offerte par Aurélie &amp; Jonathan.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/happy-time-run/img/p1.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/happy-time-run/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,500&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B1714; --ink-2:#2B2420; --cream:#FAF3E8; --cream-2:#F1E6D3;
+  --sun:#F2B632; --fan:#C23B2B;
+  --muted:#6B5F55; --line:rgba(27,23,20,.14);
+  --serif:'Fraunces',Georgia,serif; --sans:'Nunito',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:84px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+.ribbon{background:var(--ink);color:var(--cream);font-size:13px;padding:9px var(--pad)}
+.ribbon b{color:var(--sun)}
+.marquee{background:var(--sun);color:var(--ink);overflow:hidden;white-space:nowrap;font-family:var(--serif);font-weight:700;font-size:17px;padding:8px 0}
+.marquee div{display:inline-block;padding-left:100%;animation:slide 32s linear infinite}
+.marquee span{margin:0 18px}
+@keyframes slide{to{transform:translateX(-100%)}}
+.hero{max-width:1180px;margin:0 auto;padding:clamp(28px,6vw,80px) var(--pad);display:grid;gap:36px;align-items:center;overflow:hidden}
+@media(min-width:900px){.hero{grid-template-columns:1.05fr .95fr}}
+.kicker{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--fan)}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,9vw,88px);line-height:1;letter-spacing:-.015em;margin:12px 0 18px}
+h1 em{color:var(--fan);font-style:italic}
+.lede{max-width:38ch;font-size:clamp(18px,2.2vw,21px);color:var(--ink-2)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:800;text-decoration:none;border:2px solid var(--ink);transition:transform .2s,background .2s,color .2s}
+.btn.main{background:var(--ink);color:var(--cream)}
+.btn.main:hover{transform:translateY(-2px);background:var(--fan);border-color:var(--fan)}
+.btn.ghost:hover{background:var(--sun);border-color:var(--sun)}
+.pic{position:relative;max-width:520px;width:100%;justify-self:center;padding:14px 0 0 14px}
+.pic .frame{border-radius:28px 28px 120px 28px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 60px -28px rgba(27,23,20,.6);position:relative}
+.pic .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.07);transition:opacity 1.2s ease,transform 6s ease}
+.pic .frame img.on{opacity:1;transform:scale(1)}
+.pic .sun{position:absolute;left:0;top:0;width:84px;height:84px;border-radius:50%;background:var(--sun);display:grid;place-items:center;text-align:center;font-family:var(--serif);font-weight:700;font-size:13px;line-height:1.1;color:var(--ink);transform:rotate(-10deg);animation:bob 5s ease-in-out infinite}
+@keyframes bob{50%{transform:rotate(-3deg) translateY(-6px)}}
+.story{background:var(--ink);color:var(--cream);padding:clamp(56px,9vw,110px) var(--pad)}
+.story .in{max-width:1080px;margin:0 auto;display:grid;gap:34px}
+@media(min-width:860px){.story .in{grid-template-columns:.8fr 1.2fr}}
+.story .kicker{color:var(--sun)}
+.story h2{font-family:var(--serif);font-size:clamp(32px,5.2vw,54px);line-height:1.05;margin-top:10px}
+.story p{color:#E8DDCC;max-width:58ch}
+.story p+p{margin-top:14px}
+.story .quote{font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.8vw,27px);color:var(--sun);border-top:1px solid rgba(242,182,50,.4);padding-top:18px;margin-top:24px}
+.board{max-width:1080px;margin:0 auto;padding:clamp(56px,9vw,110px) var(--pad);display:grid;gap:36px}
+@media(min-width:900px){.board{grid-template-columns:1fr 1fr;align-items:start}}
+.board h2{font-family:var(--serif);font-size:clamp(32px,5vw,52px);line-height:1.05;margin:10px 0 14px}
+.board .note{color:var(--muted);max-width:44ch}
+.menu{background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(22px,4vw,34px);box-shadow:0 24px 50px -34px rgba(27,23,20,.5);border-top:6px solid var(--sun)}
+.menu .day{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:1.5px solid var(--sun);padding-bottom:10px;margin-bottom:6px}
+.menu .day b{font-family:var(--serif);font-size:25px}
+.menu .day span{font-size:13px;color:var(--muted)}
+.menu h3{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--fan);margin:16px 0 2px}
+.menu ul{list-style:none;padding:0}
+.menu li{display:flex;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px dotted var(--line);opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+.menu.seen li{opacity:1;transform:none}
+.menu li .n{flex:1}
+.menu li .n small{display:block;color:var(--muted);font-size:14px;line-height:1.35}
+.menu li .p{font-weight:800;white-space:nowrap}
+.menu .foot{margin-top:14px;font-size:14px;color:var(--muted)}
+.gallery{padding:0 0 clamp(56px,9vw,100px)}
+.gallery .head{max-width:1080px;margin:0 auto 22px;padding:0 var(--pad)}
+.gallery h2{font-family:var(--serif);font-size:clamp(30px,4.4vw,46px);margin-top:8px}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px var(--pad) 18px}
+.strip figure{flex:0 0 min(74vw,320px);scroll-snap-align:start}
+.strip img{aspect-ratio:1;width:100%;object-fit:cover;border-radius:18px;transition:transform .35s}
+.strip figure:hover img{transform:translateY(-4px) rotate(-1deg)}
+.strip figcaption{font-family:var(--serif);font-size:19px;margin-top:8px}
+.avis{background:var(--cream-2);padding:clamp(56px,9vw,100px) var(--pad)}
+.avis .in{max-width:1080px;margin:0 auto;display:grid;gap:24px}
+@media(min-width:820px){.avis .in{grid-template-columns:1fr 1fr}.avis .head{grid-column:1/-1}}
+.avis h2{font-family:var(--serif);font-size:clamp(30px,4.4vw,46px);margin-top:8px}
+blockquote{background:#fff;border-radius:18px;padding:22px 24px;border-left:6px solid var(--sun);font-family:var(--serif);font-size:19px;line-height:1.45}
+blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:13px;color:var(--muted);margin-top:10px}
+.info{padding:clamp(56px,9vw,100px) var(--pad)}
+.info .in{max-width:1080px;margin:0 auto;display:grid;gap:28px}
+@media(min-width:820px){.info .in{grid-template-columns:repeat(3,1fr)}}
+.info h3{font-family:var(--serif);font-size:27px;margin-bottom:8px}
+.info a.tel{font-family:var(--serif);font-size:26px;color:var(--fan);font-weight:700;text-decoration:none}
+footer{text-align:center;padding:34px var(--pad);color:var(--cream);background:var(--ink);font-size:14px}
+footer b{font-family:var(--serif);font-size:22px;display:block;margin-bottom:4px;color:var(--sun)}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px;background:rgba(250,243,232,.97);border:1px solid var(--line);border-radius:999px;padding:6px;box-shadow:0 12px 30px -12px rgba(0,0,0,.4)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:800;font-size:15px}
+.bar a.m{background:var(--ink);color:var(--cream)}
+@media(min-width:900px){.bar{left:auto;right:24px;width:380px}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.reveal.seen{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.menu li{opacity:1;transform:none}.marquee div{padding-left:0}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour Happy Time.Run</div>
+<div class="marquee" aria-hidden="true"><div><span>Fait maison</span>✦<span>Produits locaux</span>✦<span>Ardoise du jour</span>✦<span>Restaurant &amp; coworking</span>✦<span>Le rendez-vous du lundi soir</span>✦<span>Fait maison</span>✦<span>Produits locaux</span>✦<span>Ardoise du jour</span>✦<span>Restaurant &amp; coworking</span>✦</div></div>
+<header class="hero">
+  <div>
+    <p class="kicker">Restaurant &amp; coworking · Le Tampon</p>
+    <h1>Bonjour, chers <em>Happy Terriens</em> !</h1>
+    <p class="lede">Un bistro à l’ardoise, du fait maison, des produits sains, frais et locaux : une pause gourmande au cœur du Tampon, et un espace pour travailler.</p>
+    <div class="cta">
+      <a class="btn main" href="#ardoise">Voir l’ardoise du jour</a>
+      <a class="btn ghost" href="tel:+262692394213">Réserver : 06 92 39 42 13</a>
+    </div>
+  </div>
+  <div class="pic">
+    <div class="frame" aria-hidden="true">
+      <img class="on" src="img/p1.jpg" alt="">
+      <img src="img/p5.jpg" alt="">
+      <img src="img/p2.jpg" alt="">
+      <img src="img/p3.jpg" alt="">
+    </div>
+    <div class="sun" aria-hidden="true">Happy<br>Time</div>
+  </div>
+</header>
+<section class="story">
+  <div class="in">
+    <div class="reveal"><p class="kicker">L’esprit de la maison</p><h2>Simplicité et générosité</h2></div>
+    <div class="reveal">
+      <p>Le concept des gérants mêle simplicité et générosité : des produits sains, frais et locaux, à prix abordables. Le fait maison est au centre, d’où une ardoise qui change et suit les saisons.</p>
+      <p>La maison choisit aussi, dans la mesure du possible, des circuits courts, des matériaux recyclables et le tri des déchets. Et côté coworking, l’adresse accueille celles et ceux qui souhaitent travailler dans un cadre agréable.</p>
+      <p class="quote">« Le rendez-vous du lundi soir continue. »</p>
+    </div>
+  </div>
+</section>
+<section class="board" id="ardoise">
+  <div class="reveal">
+    <p class="kicker">L’ardoise</p>
+    <h2>Le menu du lundi 5 octobre</h2>
+    <p class="note">Chaque jour, l’ardoise voyage sur Facebook. Ici, elle aurait sa place d’honneur, lisible en un coup d’œil.</p>
+  </div>
+  <div class="menu" id="menu">
+    <div class="day"><b>Lundi midi</b><span>Commandes de 11h30 à 13h15</span></div>
+    <h3>Formule plat + dessert · 20 €</h3>
+    <ul>
+      <li><span class="n">Quiche au jambon et aux brèdes<small>servie avec frites &amp; salade</small></span></li>
+      <li><span class="n">ou Croustillant de bœuf<small>servi avec frites &amp; salade</small></span></li>
+      <li><span class="n">Et en dessert : gâteau à la banane</span></li>
+    </ul>
+    <h3>Suggestions du jour</h3>
+    <ul>
+      <li><span class="n">Pavé de saumon<small>riz persillé, velouté froid de poireaux</small></span><span class="p">27 €</span></li>
+      <li><span class="n">Steak d’espadon, sauce citronnée<small>riz persillé, légumes du jour</small></span><span class="p">24 €</span></li>
+    </ul>
+    <p class="foot">Un seul et unique numéro pour réserver : 06 92 39 42 13.</p>
+  </div>
+</section>
+<section class="gallery">
+  <div class="head reveal"><p class="kicker">Au fil des assiettes</p><h2>Quelques images de la maison</h2></div>
+  <div class="strip">
+    <figure><img src="img/p1.jpg" alt="La salle de Happy Time.Run, avec ses luminaires et sa décoration chaleureuse" loading="lazy"><figcaption>La salle</figcaption></figure>
+    <figure><img src="img/p2.jpg" alt="Assiette de viande et légumes avec du riz" loading="lazy"><figcaption>Une assiette de l’ardoise</figcaption></figure>
+    <figure><img src="img/p3.jpg" alt="Salade de tomates et mozzarella sur une table en bois" loading="lazy"><figcaption>Fraîcheur du midi</figcaption></figure>
+    <figure><img src="img/p4.jpg" alt="Viande servie dans un petit panier" loading="lazy"><figcaption>À partager</figcaption></figure>
+    <figure><img src="img/p5.jpg" alt="Plat de viande, riz et salade sur assiette noire" loading="lazy"><figcaption>Le plat du jour</figcaption></figure>
+  </div>
+</section>
+<section class="avis">
+  <div class="in">
+    <div class="head reveal"><p class="kicker">Ils en parlent</p><h2>Le mot des convives</h2></div>
+    <blockquote class="reveal">« Super expérience chez Happy Time ! Lily est vraiment très accueillante, le serveur aussi : sourire, gentillesse, on se sent tout de suite bien. »<cite>Avis Google sur la fiche de l’établissement</cite></blockquote>
+    <blockquote class="reveal">« Bonne adresse, le choix est limité mais les plats maitrisés, le tarif est plus que correct. Le personnel est agréable et le service rapide. »<cite>Avis Google, 4/5, décembre 2025</cite></blockquote>
+  </div>
+</section>
+<section class="info" id="infos">
+  <div class="in">
+    <div class="reveal"><h3>Venir</h3><p>178 rue Jules Bertaut,<br>Le Tampon</p><p>Repas sur place, en terrasse ou à emporter.</p></div>
+    <div class="reveal"><h3>Quand</h3><p>Du lundi au vendredi.<br>Midi : prise de commandes de 11h30 à 13h15 (lundi 5 octobre).</p></div>
+    <div class="reveal"><h3>Réserver</h3><p><a class="tel" href="tel:+262692394213">06 92 39 42 13</a></p><p><a href="https://www.facebook.com/happytimerun">facebook.com/happytimerun</a></p></div>
+  </div>
+</section>
+<footer><b>Happy Time.Run</b>Maquette privée réalisée par Aurélie &amp; Jonathan à partir d’informations publiques.</footer>
+<nav class="bar" aria-label="Actions rapides">
+  <a class="m" href="tel:+262692394213">Appeler</a>
+  <a href="#ardoise">L’ardoise</a>
+  <a href="#infos">Venir</a>
+</nav>
+<script>
+(function(){
+  var imgs=[].slice.call(document.querySelectorAll(".frame img")),i=0;
+  if(!matchMedia("(prefers-reduced-motion: reduce)").matches){
+    setInterval(function(){imgs[i].classList.remove("on");i=(i+1)%imgs.length;imgs[i].classList.add("on");},3800);
+  }
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("seen");io.unobserve(e.target);}})},{threshold:.15});
+  document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+  var menu=document.getElementById("menu");
+  [].slice.call(menu.querySelectorAll("li")).forEach(function(li,k){li.style.transitionDelay=(k*90)+"ms"});
+  io.observe(menu);
+})();
+</script>
+</body>
+</html>
