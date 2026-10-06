@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#14213d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Carnet">
+<title>Carnet prospects</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icone.svg">
+<link rel="apple-touch-icon" href="icone-180.png">
+<style>
+:root{--bg:#f4f1ea;--card:#fff;--ink:#1d2433;--mute:#4b5563;--line:#e5e0d5;--navy:#14213d;--or:#e9a23b;
+--L:#2a9d8f;--S:#e76f51;--V:#7b5ea7;--M:#d4a017}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html{scroll-padding-bottom:96px;-webkit-text-size-adjust:100%}
+body{margin:0;font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+header{position:sticky;top:0;z-index:5;background:var(--navy);color:#fff;padding:calc(10px + env(safe-area-inset-top)) 14px 10px}
+header h1{font-size:18px;margin:0 0 8px;display:flex;justify-content:space-between;align-items:center}
+header small{font-weight:400;opacity:.75;font-size:12px}
+#q{width:100%;font-size:17px;padding:12px 14px;border-radius:12px;border:0;outline:none}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:10px 14px 4px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 14px;font-size:14px;min-height:40px;color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
+main{padding:8px 14px}
+.card{background:var(--card);border-radius:14px;padding:13px 14px;margin:0 0 10px;box-shadow:0 1px 2px #0001;border-left:6px solid var(--c,#999);display:block;width:100%;text-align:left;font:inherit;color:inherit;border-top:0;border-right:0;border-bottom:0}
+.card b{font-size:18px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.meta{color:#4b5563;font-size:14px;margin-top:2px}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;background:#eee;margin:5px 6px 0 0}
+.st-chaud{background:#ffe1d6;color:#9a3412}.st-repondu{background:#dcfce7;color:#166534}.st-refus{background:#e5e7eb;color:#374151}.st-erreur{background:#fee2e2;color:#991b1b}.st-contacte{background:#e0e7ff;color:#3730a3}
+.act{color:#fff;background:var(--c)}
+.empty{text-align:center;color:var(--mute);padding:40px 10px}
+/* fiche */
+#fiche{position:fixed;inset:0;z-index:10;background:var(--bg);overflow-y:auto;padding-bottom:calc(90px + env(safe-area-inset-bottom))}
+#fiche .top{position:sticky;top:0;background:var(--c,var(--navy));color:#fff;padding:calc(10px + env(safe-area-inset-top)) 14px 14px;z-index:2}
+#fiche .top button{background:#ffffff26;color:#fff;border:0;border-radius:10px;padding:10px 14px;font-size:15px;min-height:44px}
+#fiche h2{margin:10px 0 2px;font-size:22px;line-height:1.2}
+.sec{background:#fff;border-radius:14px;margin:12px 14px;padding:12px 14px}
+.sec h3{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}
+.btns{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.btn{overflow-wrap:anywhere;display:flex;align-items:center;justify-content:center;gap:6px;min-height:48px;border-radius:12px;background:var(--navy);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:8px 10px;text-align:center;word-break:break-word;border:0}
+.btn.alt{background:#eef0f5;color:var(--navy)}
+.note{background:#fff8e6;border-left:4px solid var(--or);padding:8px 10px;border-radius:8px;margin:0 0 8px;font-size:15px}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{position:relative;padding:0 0 14px 22px;border-left:2px solid var(--line);margin-left:6px}
+.tl li:last-child{border-color:transparent}
+.tl li::before{content:"";position:absolute;left:-7px;top:3px;width:12px;height:12px;border-radius:50%;background:var(--dot,#9ca3af)}
+.tl .in{--dot:#16a34a}.tl .err{--dot:#dc2626}.tl .auto{--dot:#cbd5e1}
+.tl .d{font-size:13.5px;color:#374151}
+.tl .t{white-space:pre-wrap;font-size:15px;margin-top:2px}
+.tl .in .t{background:#f0fdf4;border-radius:10px;padding:8px 10px}
+details summary{cursor:pointer;color:var(--navy);font-size:14px;font-weight:600;padding:6px 0;min-height:32px}
+details pre{white-space:pre-wrap;font:14px/1.45 inherit;background:#f8f7f3;border-radius:10px;padding:10px;margin:4px 0 0}
+.of{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:0 0 8px}
+.of .h{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.of .h b{font-size:16px}.of .p{font-weight:800;color:var(--navy);white-space:nowrap}
+.of ul{margin:6px 0 0;padding-left:18px}.of li{margin:2px 0}
+.of .pour{color:var(--mute);font-size:14px;margin-top:2px}
+.faq b{display:block;margin-top:8px}
+nav{position:fixed;left:0;right:0;bottom:0;z-index:6;display:grid;grid-template-columns:1fr 1fr;background:#fff;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+nav button{border:0;background:none;padding:12px 4px;font-size:15px;font-weight:600;color:var(--mute);min-height:56px}
+nav button[aria-current=true]{color:var(--navy);box-shadow:inset 0 3px 0 var(--navy)}
+#lock{padding:40px 20px;text-align:center}
+.count{font-size:13px;color:var(--mute);margin:4px 2px 10px}
+</style>
+</head>
+<body>
+<div id="lock" hidden><h2>🔒 Carnet verrouillé</h2><p>Ouvre ce carnet avec le lien complet qu'on t'a envoyé sur Telegram (il contient la clé).</p></div>
+
+<div id="app" hidden>
+<header>
+  <h1><span id="titre">Carnet prospects</span><small id="maj"></small></h1>
+  <input id="q" type="search" placeholder="🔎 Nom, ville, téléphone, mail…" autocomplete="off" enterkeyhint="search">
+</header>
+
+<section id="vListe">
+  <div class="chips" id="cAct"></div>
+  <div class="chips" id="cSt"></div>
+  <main><div class="count" id="count"></div><div id="liste"></div></main>
+</section>
+
+<section id="vOffres" hidden><main id="offres"></main></section>
+
+<nav>
+  <button id="tListe" aria-current="true">📇 Contacts</button>
+  <button id="tOffres" aria-current="false">💶 Nos offres</button>
+</nav>
+</div>
+
+<div id="fiche" hidden></div>
+
+<script>
+const COUL={"Landing 974":"var(--L)","SOS Sites":"var(--S)","Visites immersives":"var(--V)","Automatisation menu":"var(--M)"};
+const ICO={"Landing 974":"🌐","SOS Sites":"🛠️","Visites immersives":"🗺️","Automatisation menu":"🍜"};
+const ST={"client chaud":"chaud","a répondu":"repondu","refus poli":"refus","mail en erreur":"erreur","contacté":"contacte"};
+const CANAL={mail:"✉️ Mail",whatsapp:"🟢 WhatsApp",messenger:"💬 Messenger",instagram:"📸 Instagram",telephone:"📞 Téléphone"};
+let D=null,fAct="Tous",fSt="Tous";
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const b64=s=>Uint8Array.from(atob(s.replace(/-/g,"+").replace(/_/g,"/")),c=>c.charCodeAt(0));
+const norm=s=>String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const fdate=d=>{if(!d)return"";const [a,h]=d.split(" ");const [y,m,j]=a.split("-");const jours=["dim","lun","mar","mer","jeu","ven","sam"];const w=new Date(+y,m-1,+j).getDay();return `${jours[w]} ${j}/${m} ${h||""}`};
+const telIntl=t=>{t=String(t).replace(/\D/g,"");if(/^0(69[2-3]|262)/.test(t))return"262"+t.slice(1);if(/^0[67]/.test(t))return"33"+t.slice(1);return t};
+const ftel=t=>String(t).replace(/(\d{4})(\d{2})(\d{2})(\d{2})$/,"$1 $2 $3 $4");
+
+async function charge(){
+  const h=new URLSearchParams(location.hash.slice(1));
+  if(h.get("k")){localStorage.setItem("carnetK",h.get("k"));history.replaceState(null,"",location.pathname)}
+  const k=localStorage.getItem("carnetK");
+  if(!k){$("#lock").hidden=false;return}
+  try{
+    const r=await fetch("data.bin?t="+Date.now(),{cache:"no-store"});
+    const buf=new Uint8Array(await r.arrayBuffer());
+    const key=await crypto.subtle.importKey("raw",b64(k),"AES-GCM",false,["decrypt"]);
+    const pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:buf.slice(0,12)},key,buf.slice(12));
+    D=JSON.parse(new TextDecoder().decode(pt));
+  }catch(e){$("#lock").hidden=false;$("#lock").insertAdjacentHTML("beforeend","<p style='color:#991b1b'>Clé invalide ou données inaccessibles.</p>");return}
+  $("#app").hidden=false;$("#maj").textContent="mis à jour "+fdate(D.genere);
+  chips();liste();offres();
+  ouvreDepuisHash();
+}
+function chips(){
+  const acts=["Tous",...new Set(D.fiches.map(f=>f.activite))];
+  $("#cAct").innerHTML=acts.map(a=>`<button class="chip" aria-pressed="${a===fAct}" data-a="${esc(a)}">${ICO[a]||""} ${esc(a)} <small>(${a==="Tous"?D.fiches.length:D.fiches.filter(f=>f.activite===a).length})</small></button>`).join("");
+  const sts=["Tous","client chaud","a répondu","mail en erreur","refus poli","contacté"].filter(s=>s==="Tous"||D.fiches.some(f=>f.statut===s));
+  $("#cSt").innerHTML=sts.map(s=>`<button class="chip" aria-pressed="${s===fSt}" data-s="${esc(s)}">${esc(s==="Tous"?"Tous statuts":s)}</button>`).join("");
+}
+$("#cAct").onclick=e=>{const b=e.target.closest("[data-a]");if(!b)return;fAct=b.dataset.a;chips();liste()};
+$("#cSt").onclick=e=>{const b=e.target.closest("[data-s]");if(!b)return;fSt=b.dataset.s;chips();liste()};
+$("#q").oninput=()=>{if($("#vListe").hidden)onglet("liste");liste()};
+const ordre={"client chaud":0,"a répondu":1,"mail en erreur":2,"contacté":3,"refus poli":4};
+function liste(){
+  const q=norm($("#q").value).trim(),qd=q.replace(/\D/g,"");
+  let L=D.fiches.filter(f=>(fAct==="Tous"||f.activite===fAct)&&(fSt==="Tous"||f.statut===fSt));
+  if(q)L=L.filter(f=>{const s=norm([f.nom,f.ville,f.site,f.emails.join(" "),f.notes.join(" "),f.activite].join(" "));
+    return q.split(/\s+/).every(w=>s.includes(w))||(qd.length>=4&&f.tels.some(t=>t.replace(/\D/g,"").includes(qd.replace(/^262/,"0"))))});
+  L.sort((a,b)=>(ordre[a.statut]-ordre[b.statut])||b.dernier.localeCompare(a.dernier));
+  $("#count").textContent=L.length+" contact"+(L.length>1?"s":"");
+  $("#liste").innerHTML=L.length?L.map(f=>{
+    const nIn=f.historique.filter(h=>h.sens==="reçu").length;
+    return `<button class="card" style="--c:${COUL[f.activite]}" data-id="${esc(f.id)}">
+      <b>${esc(f.nom)}</b>
+      <div class="meta">${ICO[f.activite]||""} ${esc(f.activite)}${f.ville?" · "+esc(f.ville):""}</div>
+      <span class="tag st-${ST[f.statut]}">${esc(f.statut)}</span><span class="tag">${esc(fdate(f.dernier))}${nIn?" · 💬 "+nIn:""}</span>
+    </button>`}).join(""):`<div class="empty">Aucun contact trouvé.<br>Essaie un bout du nom, la ville ou le numéro.</div>`;
+}
+$("#liste").onclick=e=>{const b=e.target.closest("[data-id]");if(b)ouvre(b.dataset.id)};
+
+function blocOffre(act,ouvert){
+  const O=D.offres[act];if(!O)return"";
+  return `<p style="margin:0 0 10px">${esc(O.pitch)}</p>`+O.formules.map(o=>`<div class="of"><div class="h"><b>${esc(o.nom)}</b><span class="p">${esc(o.prix)}</span></div><div class="pour">${esc(o.pour)}</div><ul>${o.contenu.map(c=>`<li>${esc(c)}</li>`).join("")}</ul></div>`).join("")
+   +(O.deroule?.length?`<details ${ouvert?"open":""}><summary>Comment ça se passe</summary><ol>${O.deroule.map(x=>`<li>${esc(x)}</li>`).join("")}</ol></details>`:"")
+   +(O.faq?.length?`<details ${ouvert?"open":""}><summary>Questions fréquentes</summary><div class="faq">${O.faq.map(x=>`<b>${esc(x.q)}</b>${esc(x.r)}`).join("")}</div></details>`:"");
+}
+function ouvre(id,push=true){
+  const f=D.fiches.find(x=>x.id===id);if(!f)return;
+  const F=$("#fiche");F.style.setProperty("--c",COUL[f.activite]);
+  const tels=f.tels.map(t=>`<a class="btn" href="tel:${esc(t)}">📞 ${esc(ftel(t))}</a><a class="btn alt" href="https://wa.me/${telIntl(t)}">🟢 WhatsApp</a>`).join("");
+  const mails=f.emails.map(m=>`<a class="btn alt" href="mailto:${esc(m)}">✉️ ${esc(m)}</a>`).join("");
+  const liens=f.liens.map(l=>`<a class="btn alt" href="${esc(l.u)}" target="_blank" rel="noopener">${l.t==="Maquette offerte"?"🎁":"🔗"} ${esc(l.t)}</a>`).join("");
+  const hist=[...f.historique].reverse().map(h=>{
+    const cls=h.sens==="reçu"?"in":h.sens==="erreur d'envoi"?"err":h.sens==="reçu (auto)"?"auto":"";
+    const qui=h.sens==="envoyé"?"Nous →":h.sens==="reçu"?"← Eux":h.sens==="reçu (auto)"?"← Réponse automatique":"⚠️ Non distribué";
+    const long=(h.corps||"");const txt=h.texte||"";
+    return `<li class="${cls}"><div class="d">${esc(fdate(h.date))} · ${CANAL[h.canal]||esc(h.canal)} · <b>${qui}</b></div>
+      <div class="t">${esc(cls==="in"||cls==="err"||h.canal!=="mail"?txt:(txt.length>140?txt.slice(0,140)+"…":txt))}</div>
+      ${long?`<details><summary>Lire le mail envoyé</summary><pre>${esc(long)}</pre></details>`:""}</li>`}).join("");
+  F.innerHTML=`<div class="top"><button id="retour">← Retour</button>
+     <h2>${esc(f.nom)}</h2><div>${ICO[f.activite]||""} ${esc(f.activite)}${f.ville?" · "+esc(f.ville):""}</div>
+     <span class="tag st-${ST[f.statut]}">${esc(f.statut)}</span>${f.offre?`<span class="tag">${esc(f.offre)}</span>`:""}</div>
+   ${f.notes.length?`<div class="sec"><h3>À savoir</h3>${f.notes.map(n=>`<div class="note">${esc(n)}</div>`).join("")}</div>`:""}
+   ${tels||mails||liens?`<div class="sec"><h3>Contact & liens</h3><div class="btns">${tels}${mails}${liens}</div></div>`:""}
+   <div class="sec"><h3>Historique (${f.historique.length})</h3><ul class="tl">${hist||"<li>Rien encore.</li>"}</ul></div>
+   <div class="sec"><h3>Offres ${esc(f.activite)}</h3>${blocOffre(f.activite)}</div>
+   ${f.nom==="So Thai"?`<div class="sec"><h3>Offre automatisation menu</h3>${blocOffre("Automatisation menu")}</div>`:""}`;
+  F.hidden=false;F.scrollTop=0;document.body.style.overflow="hidden";
+  $("#retour").onclick=()=>history.back();
+  if(push)history.pushState({id},"","#f="+encodeURIComponent(id));
+}
+function ferme(){$("#fiche").hidden=true;document.body.style.overflow=""}
+addEventListener("popstate",()=>{const m=location.hash.match(/f=([^&]+)/);m?ouvre(decodeURIComponent(m[1]),false):ferme()});
+function ouvreDepuisHash(){const m=location.hash.match(/f=([^&]+)/);if(m)ouvre(decodeURIComponent(m[1]),false)}
+function offres(){
+  $("#offres").innerHTML=Object.keys(D.offres).map(a=>`<div class="sec" style="margin:0 0 12px;border-top:6px solid ${COUL[a]}"><h3>${ICO[a]||""} ${esc(a)}</h3>${blocOffre(a,true)}</div>`).join("");
+}
+function onglet(t){$("#vListe").hidden=t!=="liste";$("#vOffres").hidden=t!=="offres";$("#tListe").setAttribute("aria-current",t==="liste");$("#tOffres").setAttribute("aria-current",t==="offres");scrollTo(0,0)}
+$("#tListe").onclick=()=>onglet("liste");$("#tOffres").onclick=()=>onglet("offres");
+addEventListener("visibilitychange",()=>{if(!document.hidden&&D)charge2()});
+async function charge2(){const k=localStorage.getItem("carnetK");if(!k)return;try{const r=await fetch("data.bin?t="+Date.now(),{cache:"no-store"});const buf=new Uint8Array(await r.arrayBuffer());const key=await crypto.subtle.importKey("raw",b64(k),"AES-GCM",false,["decrypt"]);D=JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:"AES-GCM",iv:buf.slice(0,12)},key,buf.slice(12))));$("#maj").textContent="mis à jour "+fdate(D.genere);chips();liste();offres()}catch(e){}}
+charge();
+</script>
+</body>
+</html>
