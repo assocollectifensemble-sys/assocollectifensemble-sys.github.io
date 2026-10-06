@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>So Thai — cuisine thaï à Sainte-Clotilde</title>
+<meta name="description" content="La cuisine thaïlandaise de Néo, un menu qui change chaque jour au gré du marché. 115 route de Bois de Nèfles, Sainte-Clotilde.">
+<meta property="og:title" content="So Thai — cuisine thaï à Sainte-Clotilde">
+<meta property="og:description" content="Pad thaï, curry panang, bol renversé : une maquette offerte par Aurélie &amp; Jonathan.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/so-thai/img/kaphrao.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F4EE; --paper-2:#EFE9DD;
+  --navy:#22324A; --navy-2:#34465F;
+  --gold:#C9A23A; --gold-l:#E4C977; --gold-d:#9C7A22;
+  --chili:#B5402A;
+  --ink:#1E2A3B; --muted:#5E6878; --line:rgba(34,50,74,.15);
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Karla',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:80px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.ribbon{background:var(--navy);color:var(--paper);font-size:13px;padding:9px var(--pad)}
+.ribbon b{color:var(--gold-l);font-weight:700}
+.hero{overflow:hidden;max-width:1180px;margin:0 auto;padding:clamp(28px,6vw,80px) var(--pad);display:grid;gap:40px;align-items:center}
+@media(min-width:900px){.hero{grid-template-columns:1.05fr .95fr}}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:76px;height:76px;border-radius:50%;border:2px solid var(--gold);object-fit:cover}
+.brand span{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-d);font-weight:700}
+.sawadee{font-family:var(--serif);font-style:italic;color:var(--gold-d);font-size:clamp(22px,3vw,28px);margin-top:26px}
+h1{font-family:var(--serif);font-weight:600;color:var(--navy);font-size:clamp(44px,9vw,92px);line-height:.98;letter-spacing:-.01em;margin:6px 0 20px}
+h1 em{color:var(--gold-d)}
+.lede{max-width:36ch;font-size:clamp(18px,2.2vw,21px);color:var(--navy-2)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--navy);transition:transform .2s,background .2s,color .2s}
+.btn.main{background:var(--navy);color:var(--paper)}
+.btn.main:hover{transform:translateY(-2px);background:var(--navy-2)}
+.btn.ghost:hover{background:var(--navy);color:var(--paper)}
+.plate{position:relative;aspect-ratio:1;max-width:520px;width:100%;justify-self:center}
+.plate .ring{position:absolute;inset:0;border-radius:50%;border:1.5px dashed var(--gold);animation:spin 60s linear infinite}
+.plate .disc{position:absolute;inset:6%;border-radius:50%;overflow:hidden;box-shadow:0 30px 60px -25px rgba(34,50,74,.55)}
+.plate .disc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1.2s ease,transform 6s ease}
+.plate .disc img.on{opacity:1;transform:scale(1)}
+.plate .tag{position:absolute;right:0;bottom:6%;background:var(--paper);border:1.5px solid var(--gold);border-radius:14px;padding:10px 16px;box-shadow:0 10px 24px -14px rgba(0,0,0,.4);max-width:66%}
+.plate .tag small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d);font-weight:700}
+.plate .tag strong{font-family:var(--serif);font-size:22px;color:var(--navy);line-height:1.1}
+@keyframes spin{to{transform:rotate(360deg)}}
+.story{background:var(--navy);color:var(--paper);padding:clamp(56px,9vw,110px) var(--pad)}
+.story .in{max-width:1080px;margin:0 auto;display:grid;gap:36px}
+@media(min-width:860px){.story .in{grid-template-columns:.8fr 1.2fr}}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--gold-l)}
+.story h2{font-family:var(--serif);font-weight:600;font-size:clamp(34px,5.4vw,56px);line-height:1.02;margin-top:10px}
+.story p{color:#D9DEE6;max-width:58ch}
+.story p+p{margin-top:14px}
+.story .quote{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.8vw,28px);color:var(--gold-l);border-top:1px solid rgba(228,201,119,.35);padding-top:18px;margin-top:24px}
+.board{max-width:1080px;margin:0 auto;padding:clamp(56px,9vw,110px) var(--pad);display:grid;gap:40px}
+@media(min-width:900px){.board{grid-template-columns:1fr 1fr;align-items:start}}
+.board h2{font-family:var(--serif);font-weight:600;color:var(--navy);font-size:clamp(34px,5vw,54px);line-height:1.02;margin:10px 0 14px}
+.board .kicker,.gallery .kicker{color:var(--gold-d)}
+.board .note{color:var(--muted);max-width:44ch}
+.menu{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(22px,4vw,36px);box-shadow:0 24px 50px -34px rgba(34,50,74,.5)}
+.menu .day{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:1.5px solid var(--gold);padding-bottom:10px;margin-bottom:8px}
+.menu .day b{font-family:var(--serif);font-size:26px;color:var(--navy)}
+.menu .day span{font-size:13px;color:var(--muted)}
+.menu ul{list-style:none;padding:0}
+.menu li{display:flex;gap:12px;align-items:baseline;padding:11px 0;border-bottom:1px dotted var(--line);opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+.menu.seen li{opacity:1;transform:none}
+.menu li .n{flex:1}
+.menu li .n small{display:block;color:var(--muted);font-size:14px;line-height:1.35}
+.menu li .p{font-weight:700;color:var(--navy);white-space:nowrap}
+.menu li.special .n{font-weight:700;color:var(--chili)}
+.menu .foot{margin-top:14px;font-size:14px;color:var(--muted)}
+.gallery{padding:0 0 clamp(56px,9vw,100px)}
+.gallery .head{max-width:1080px;margin:0 auto 22px;padding:0 var(--pad)}
+.gallery h2{font-family:var(--serif);font-weight:600;color:var(--navy);font-size:clamp(30px,4.4vw,46px)}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px var(--pad) 18px;scrollbar-width:thin}
+.strip figure{flex:0 0 min(72vw,300px);scroll-snap-align:start}
+.strip img{aspect-ratio:1;object-fit:cover;border-radius:16px;transition:transform .35s}
+.strip figure:hover img{transform:translateY(-4px) rotate(-1deg)}
+.strip figcaption{font-family:var(--serif);font-size:20px;color:var(--navy);margin-top:8px}
+.info{background:var(--paper-2);padding:clamp(56px,9vw,100px) var(--pad)}
+.info .in{max-width:1080px;margin:0 auto;display:grid;gap:28px}
+@media(min-width:820px){.info .in{grid-template-columns:repeat(3,1fr)}}
+.info h3{font-family:var(--serif);font-size:28px;color:var(--navy);margin-bottom:8px}
+.info p{color:var(--navy-2)}
+.info .big{font-family:var(--serif);font-size:24px;color:var(--gold-d)}
+footer{text-align:center;padding:36px var(--pad);color:var(--muted);font-size:14px}
+footer b{font-family:var(--serif);font-size:22px;color:var(--navy);display:block;margin-bottom:4px}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:10px;background:rgba(247,244,238,.96);border:1px solid var(--line);border-radius:999px;padding:6px;box-shadow:0 12px 30px -12px rgba(0,0,0,.35)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px}
+.bar a.m{background:var(--navy);color:var(--paper)}
+@media(min-width:900px){.bar{left:auto;right:24px;width:380px}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.reveal.seen{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.menu li{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — imaginée avec gourmandise pour So Thai</div>
+<header class="hero">
+  <div>
+    <div class="brand"><img src="img/logo.jpg" alt="Logo So Thai"><span>Cuisine thaï · Sainte-Clotilde</span></div>
+    <p class="sawadee">Sawadee !</p>
+    <h1>La Thaïlande, <em>servie chaque jour</em> au coin de la rue Tessan</h1>
+    <p class="lede">Pad thaï maison, curry Massaman au combava, bol renversé de la mer : un menu qui change tous les jours, au gré du marché.</p>
+    <div class="cta">
+      <a class="btn main" href="#ardoise">Voir le menu du jour</a>
+      <a class="btn ghost" href="https://www.facebook.com/SoThai974/">Réserver par Messenger</a>
+    </div>
+  </div>
+  <div class="plate" aria-hidden="true">
+    <div class="ring"></div>
+    <div class="disc">
+      <img class="on" src="img/kaphrao.jpg" alt="" data-n="Pad Kaphrao Kai">
+      <img src="img/padthai.jpg" alt="" data-n="Pad Thaï poulet">
+      <img src="img/kuaitiao.jpg" alt="" data-n="Kuaitiao Nam Kai">
+      <img src="img/panang.jpg" alt="" data-n="Curry panang">
+    </div>
+    <div class="tag"><small>Dans les barquettes</small><strong id="dish">Pad Kaphrao Kai</strong></div>
+  </div>
+</header>
+<section class="story">
+  <div class="in">
+    <div class="reveal">
+      <p class="kicker">L’histoire</p>
+      <h2>Du Barachois à sa propre maison</h2>
+    </div>
+    <div class="reveal">
+      <p>Pendant plusieurs années, Néo a régalé les gourmands de l’Arbradélis, sur le Barachois, avec ses spécialités thaïlandaises. En juillet 2022, elle a ouvert sa maison à elle : So Thai, à Sainte-Clotilde.</p>
+      <p>Le principe est le même depuis le premier jour : des ingrédients ultra frais, des sauces maison, et une carte qui se réinvente chaque matin. À emporter, ou à savourer sur la petite terrasse.</p>
+      <p class="quote">« Le menu change tous les jours, au gré du marché. »</p>
+    </div>
+  </div>
+</section>
+<section class="board" id="ardoise">
+  <div class="reveal">
+    <p class="kicker">L’ardoise</p>
+    <h2>Le menu du vendredi 2 octobre</h2>
+    <p class="note">Chaque jour, la carte de So Thai part sur Facebook. Ici, elle aurait sa place d’honneur : lisible en un coup d’œil, avec les photos des plats.</p>
+  </div>
+  <div class="menu" id="menu">
+    <div class="day"><b>Vendredi</b><span>11h30–14h · 18h–20h</span></div>
+    <ul>
+      <li class="special"><span class="n">Plat spécial : bol renversé de la mer<small>poisson croustillant, calamar, camarons, œuf, sauté de légumes frais</small></span><span class="p">12 €</span></li>
+      <li><span class="n">Pad Thaï poulet<small>nouilles de riz sautées, carottes, omelette, sauce pad thaï maison</small></span><span class="p">8,5 €</span></li>
+      <li><span class="n">Poisson croustillant au piment doux, riz jasmin thaï</span><span class="p">8,5 €</span></li>
+      <li><span class="n">Camarons sauce poivre noir, riz jasmin thaï</span><span class="p">9,5 €</span></li>
+      <li><span class="n">Poulet au curry Massaman<small>combava, lait de coco, riz jasmin thaï</small></span><span class="p">8,5 €</span></li>
+      <li><span class="n">Salade Bò Bùn poulet et nems végétariens</span><span class="p">10 €</span></li>
+      <li><span class="n">Nems légumes ou poulet</span><span class="p">1,5 €</span></li>
+      <li><span class="n">Banoffee maison<small>caramel, banane, chantilly maison, spéculos</small></span><span class="p">3,5 €</span></li>
+    </ul>
+    <p class="foot">Réservation par Messenger jusqu’à 11h pour le midi et 17h30 pour le soir, à retirer au comptoir.</p>
+  </div>
+</section>
+<section class="gallery">
+  <div class="head reveal"><p class="kicker">Dans les barquettes</p><h2>Quelques plats de la maison</h2></div>
+  <div class="strip">
+    <figure><img src="img/kaphrao.jpg" alt="Pad Kaphrao Kai, poulet au basilic sacré et œuf frit" loading="lazy"><figcaption>Pad Kaphrao Kai</figcaption></figure>
+    <figure><img src="img/bol-mer.jpg" alt="Bol renversé de la mer" loading="lazy"><figcaption>Bol renversé de la mer</figcaption></figure>
+    <figure><img src="img/padthai.jpg" alt="Pad thaï poulet" loading="lazy"><figcaption>Pad Thaï poulet</figcaption></figure>
+    <figure><img src="img/bobun.jpg" alt="Bò bún poulet" loading="lazy"><figcaption>Bò bún poulet</figcaption></figure>
+    <figure><img src="img/kuaitiao.jpg" alt="Kuaitiao Nam Kai, soupe de nouilles au poulet" loading="lazy"><figcaption>Kuaitiao Nam Kai</figcaption></figure>
+    <figure><img src="img/panang.jpg" alt="Curry panang" loading="lazy"><figcaption>Curry panang</figcaption></figure>
+  </div>
+</section>
+<section class="info" id="infos">
+  <div class="in">
+    <div class="reveal"><h3>Venir</h3><p>115 route de Bois de Nèfles,<br>à l’angle de la rue Tessan,<br>Sainte-Clotilde</p></div>
+    <div class="reveal"><h3>Horaires</h3><p>Du mardi au vendredi<br>11h30–14h et 18h–20h<br>Le samedi 11h30–14h</p></div>
+    <div class="reveal"><h3>Réserver</h3><p>Par Messenger, jusqu’à 11h pour le midi et 17h30 pour le soir.</p><p class="big">Kob Koon Ka !</p></div>
+  </div>
+</section>
+<footer><b>So Thai</b>Authentique cuisine thaï à emporter, et quelques places assises.<br>so.thai.reunion@gmail.com</footer>
+<nav class="bar" aria-label="Actions rapides">
+  <a class="m" href="https://www.facebook.com/SoThai974/">Réserver</a>
+  <a href="#infos">Venir</a>
+</nav>
+<script>
+(function(){
+  var imgs=[].slice.call(document.querySelectorAll(".disc img")),dish=document.getElementById("dish"),i=0;
+  if(!matchMedia("(prefers-reduced-motion: reduce)").matches){
+    setInterval(function(){imgs[i].classList.remove("on");i=(i+1)%imgs.length;imgs[i].classList.add("on");dish.textContent=imgs[i].dataset.n;},3800);
+  }
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("seen");io.unobserve(e.target);}})},{threshold:.15});
+  document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+  var menu=document.getElementById("menu");
+  [].slice.call(menu.querySelectorAll("li")).forEach(function(li,k){li.style.transitionDelay=(k*90)+"ms"});
+  io.observe(menu);
+})();
+</script>
+</body>
+</html>
