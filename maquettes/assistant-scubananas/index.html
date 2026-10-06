@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Maquette de démonstration — assistant pour Scubananas · Réunion Plongée</title>
+<style>
+:root{--navy:#06314c;--navy2:#122940;--deep:#0b1c2e;--sun:#ffd014;--sky:#81d4fa;--bg:#f5f5f5;--ink:#212121;--mut:#616161}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+.ribbon{background:var(--sun);color:var(--deep);text-align:center;font-size:14px;padding:8px 12px;font-weight:600;letter-spacing:.2px}
+header.top{background:var(--navy);color:#fff;padding:14px 24px;display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between}
+header.top .logo{font-weight:800;font-size:20px;letter-spacing:.5px}
+header.top .logo span{color:var(--sun)}
+header.top nav a{color:#fff;text-decoration:none;margin-right:18px;font-size:15px;opacity:.92}
+header.top .tel{font-size:14px;opacity:.9}
+.hero{background:linear-gradient(160deg,var(--deep),var(--navy) 60%,#0d4a6e);color:#fff;padding:72px 24px 80px;text-align:center}
+.hero small{color:var(--sky);letter-spacing:2px;text-transform:uppercase;font-size:13px}
+.hero h1{font-size:clamp(30px,5vw,50px);margin:12px 0 14px}
+.hero p{max-width:640px;margin:0 auto 26px;font-size:18px;opacity:.95}
+.btn{display:inline-block;background:var(--sun);color:var(--deep);padding:12px 26px;border-radius:999px;font-weight:700;text-decoration:none}
+.cards{max-width:1000px;margin:-40px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:#fff;border-radius:14px;padding:22px;box-shadow:0 6px 24px rgba(6,49,76,.12);border-top:4px solid var(--sun)}
+.card h3{margin:0 0 6px;color:var(--navy)}
+.card p{margin:0;color:var(--mut);font-size:15px}
+section.info{max-width:900px;margin:48px auto;padding:0 20px;color:var(--navy2)}
+section.info h2{color:var(--navy)}
+footer{background:var(--deep);color:#cfd8dc;padding:26px 20px 90px;text-align:center;font-size:13px}
+footer b{color:#fff}
+/* ---- assistant ---- */
+#sc-bubble{position:fixed;right:20px;bottom:20px;width:62px;height:62px;border-radius:50%;background:var(--sun);color:var(--deep);border:0;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.3);font-size:28px;z-index:9998}
+#sc-panel{position:fixed;right:20px;bottom:94px;width:370px;max-width:calc(100vw - 24px);height:560px;max-height:calc(100vh - 120px);background:#fff;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,.35);display:none;flex-direction:column;overflow:hidden;z-index:9999}
+#sc-panel.open{display:flex}
+.sc-head{background:var(--navy);color:#fff;padding:12px 14px;display:flex;align-items:center;justify-content:space-between}
+.sc-head b{display:block;font-size:15px}
+.sc-head small{opacity:.8;font-size:12px}
+.sc-lang button{background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:6px;padding:2px 7px;font-size:12px;cursor:pointer;margin-left:4px}
+.sc-lang button.on{background:var(--sun);color:var(--deep);border-color:var(--sun)}
+#sc-msgs{flex:1;overflow-y:auto;padding:14px;background:#eef3f6}
+.m{max-width:86%;margin:0 0 10px;padding:9px 12px;border-radius:14px;font-size:14.5px;white-space:pre-line}
+.m.bot{background:#fff;color:var(--ink);border-bottom-left-radius:4px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.m.user{background:var(--navy);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+.m a{color:var(--navy);font-weight:600}
+#sc-chips{padding:6px 12px;display:flex;flex-wrap:wrap;gap:6px;background:#eef3f6}
+#sc-chips button{background:#fff;border:1px solid var(--navy);color:var(--navy);border-radius:999px;padding:5px 11px;font-size:13px;cursor:pointer}
+#sc-chips button:hover{background:var(--navy);color:#fff}
+#sc-form{display:flex;border-top:1px solid #dde;background:#fff}
+#sc-input{flex:1;border:0;padding:13px;font-size:15px;outline:none}
+#sc-send{border:0;background:var(--sun);color:var(--deep);font-weight:700;padding:0 18px;cursor:pointer}
+.sc-note{font-size:11px;color:var(--mut);text-align:center;padding:4px 8px;background:#fff}
+
+/* ---- offre Ti Kozé ---- */
+section.offre{background:linear-gradient(180deg,#fff,#eaf4f9);padding:56px 20px 40px;margin-top:48px}
+.offre .wrap{max-width:1040px;margin:0 auto}
+.offre h2{font-size:clamp(24px,4.5vw,34px);color:var(--navy);text-align:center;margin:0 0 8px}
+.offre .lead{text-align:center;max-width:680px;margin:0 auto 22px;color:var(--mut);font-size:17px}
+.essai{background:var(--sun);color:var(--deep);border-radius:14px;padding:12px 18px;text-align:center;font-weight:700;max-width:760px;margin:0 auto 30px;box-shadow:0 4px 14px rgba(255,208,20,.35)}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;align-items:stretch}
+.plan{position:relative;background:#fff;border-radius:16px;padding:26px 22px 24px;box-shadow:0 6px 24px rgba(6,49,76,.12);border-top:4px solid var(--sky);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.plan:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(6,49,76,.18)}
+.plan.fav{border-top-color:var(--sun);box-shadow:0 10px 32px rgba(6,49,76,.22)}
+.plan .tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--sun);color:var(--deep);font-size:13px;font-weight:800;padding:4px 14px;border-radius:999px;white-space:nowrap}
+.plan .here{display:inline-block;background:#e3f2fd;color:var(--navy);font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;margin-bottom:8px;align-self:flex-start}
+.plan h3{margin:0 0 4px;color:var(--navy);font-size:21px}
+.plan .price{font-size:32px;font-weight:800;color:var(--navy);line-height:1.1}
+.plan .price small{font-size:15px;font-weight:600;color:var(--mut)}
+.plan .sub{color:var(--mut);font-size:14px;margin:4px 0 14px}
+.plan ul{margin:0;padding:0;list-style:none;font-size:15px;color:var(--navy2)}
+.plan li{padding:5px 0 5px 24px;position:relative}
+.plan li:before{content:"✓";position:absolute;left:0;color:#1e9e6a;font-weight:800}
+.offre .note{text-align:center;color:var(--mut);font-size:15px;max-width:720px;margin:26px auto 0}
+.contact-cta{max-width:760px;margin:34px auto 0;text-align:center}
+.contact-cta h3{color:var(--navy);margin:0 0 14px;font-size:22px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.cta{flex:1 1 260px;display:flex;align-items:center;justify-content:center;gap:10px;padding:18px 22px;border-radius:999px;font-size:18px;font-weight:800;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.24)}
+.cta.wa{background:#25d366;color:#053b1b}
+.cta.ml{background:var(--navy);color:#fff}
+.signature{text-align:center;margin:30px 0 0;color:var(--navy2)}
+.signature b{font-size:19px;color:var(--navy)}
+.signature span{display:block;color:var(--mut);font-size:15px}
+.reveal{animation:rv .7s ease both}
+.reveal.d2{animation-delay:.15s}.reveal.d3{animation-delay:.3s}
+@keyframes rv{from{transform:translateY(18px)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){.reveal{animation:none}.plan,.cta{transition:none}}
+@media (max-width:600px){
+ header.top{padding:12px 16px}header.top nav a{margin-right:12px;font-size:14px}
+ .hero{padding:48px 18px 60px}.hero p{font-size:16px}
+ section.offre{padding:40px 14px 130px}
+ .plan{padding:24px 18px 20px}.plan .price{font-size:28px}
+ .cta{font-size:17px;padding:16px 18px}
+ #sc-bubble{right:14px;bottom:14px;width:56px;height:56px;font-size:25px}
+ #sc-panel{right:8px;left:8px;bottom:80px;width:auto;max-width:none;height:calc(100vh - 100px);max-height:560px}
+ footer{padding-bottom:100px}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Démo offerte par Aurélie &amp; Jonathan — maquette non officielle, créée à partir des informations publiques du site reunionplongee.com</div>
+<header class="top">
+  <div class="logo">Scuba<span>nanas</span> · Réunion Plongée</div>
+  <nav><a href="#">Découvrir le club</a><a href="#">Tarifs</a><a href="#">Blog</a><a href="#">Contact</a></nav>
+  <div class="tel">Saint-Leu · +262 6 92 85 66 37</div>
+</header>
+<div class="hero">
+  <small>Au cœur de la réserve marine de Saint-Leu</small>
+  <h1>Plongez à la Réunion</h1>
+  <p>Initiation à la plongée, nage avec les dauphins et les baleines, formations tous niveaux. Centre SSI &amp; ANMP, ouvert 7j/7.</p>
+  <a class="btn" href="#" onclick="document.getElementById('sc-bubble').click();return false;">Poser une question à l'assistant</a>
+</div>
+<div class="cards">
+  <div class="card"><h3>S'initier à la plongée</h3><p>Baptême de plongée à partir de 8 ans, dans la baie de Saint-Leu.</p></div>
+  <div class="card"><h3>Observer la faune marine</h3><p>Observation responsable des dauphins et des baleines, en palmes, masque et tuba.</p></div>
+  <div class="card"><h3>Apprendre la plongée</h3><p>Formations SSI et ANMP, du premier niveau au Niveau 3.</p></div>
+</div>
+<section class="info">
+  <h2>Un centre de plongée où prime la bonne humeur</h2>
+  <p>Cette page est une maquette : elle reprend l'ambiance des couleurs du site de Scubananas pour montrer comment un assistant pourrait accueillir les visiteurs, en français, en anglais et en allemand, de jour comme de nuit. Cliquez sur la bulle jaune en bas à droite et posez une question.</p>
+</section>
+<section class="offre" id="offre">
+ <div class="wrap">
+  <h2>Et si votre site répondait à vos visiteurs ?</h2>
+  <p class="lead">Vous venez de discuter avec un assistant « Ti Kozé » (« petite causette » en créole). Voici comment il peut accueillir vos visiteurs, jour et nuit, sur votre propre site.</p>
+  <div class="essai">🌴 Essai 15 jours sur votre site : vous payez seulement si vous le gardez</div>
+  <div class="plans">
+   <article class="plan reveal">
+    <span class="here">Cette démo = formule Essentiel</span>
+    <h3>Ti Kozé Essentiel</h3>
+    <div class="price">89 €<small> une fois</small></div>
+    <div class="sub">0 €/mois</div>
+    <ul>
+     <li>Assistant questions-réponses sur votre site : environ 25 questions de vos visiteurs, en français, anglais et allemand</li>
+     <li>Boutons « Écrire sur WhatsApp » et « Envoyer un mail » vers vous</li>
+     <li>Hébergement offert</li>
+     <li>Changement d'infos plus tard : 15 € la mise à jour</li>
+    </ul>
+   </article>
+   <article class="plan fav reveal d2">
+    <span class="tag">⭐ Notre coup de cœur</span>
+    <h3>Ti Kozé Malin</h3>
+    <div class="price">190 €<small> puis 9 €/mois</small></div>
+    <div class="sub">Libre chaque mois · annuel : 12 mois pour le prix de 10 (90 €)</div>
+    <ul>
+     <li>Vraie IA : elle comprend n'importe quelle formulation et toutes les langues, et lit tout votre site</li>
+     <li>Chaque demande de réservation vous arrive par mail avec les coordonnées du visiteur</li>
+     <li>Les 9 €/mois couvrent : l'IA, l'hébergement, vos infos mises à jour sur simple message (illimité), un petit bilan mensuel « ce que vos visiteurs demandent »</li>
+    </ul>
+   </article>
+   <article class="plan reveal d3">
+    <h3>Ti Kozé Sérénité</h3>
+    <div class="price">290 €<small> puis 19 €/mois</small></div>
+    <div class="sub">Libre chaque mois · annuel : 190 €</div>
+    <ul>
+     <li>Tout Malin, plus le suivi complet du site : sauvegardes, sécurité, mises à jour, remise en ligne en cas de panne</li>
+     <li>Fiche Google mise à jour à l'installation</li>
+    </ul>
+   </article>
+  </div>
+  <p class="note">Prix nets : TVA non applicable (art. 293 B du CGI). Les réservations restent entre vos mains : l'assistant vous transmet chaque demande.</p>
+  <div class="contact-cta">
+   <h3>Envie d'en causer ? Écrivez-nous, on vous répond avec plaisir.</h3>
+   <div class="cta-row">
+    <a class="cta wa" href="https://wa.me/262693828108?text=Bonjour%20Aur%C3%A9lie%20%26%20Jonathan%2C%20j%27ai%20vu%20la%20d%C3%A9mo%20Ti%20Koz%C3%A9%20pour%20Scubananas" target="_blank" rel="noopener">💬 Écrire sur WhatsApp</a>
+    <a class="cta ml" href="mailto:aurelie.jonathanb@gmail.com?subject=Ti%20Koz%C3%A9%20Scubananas">✉️ Envoyer un mail</a>
+   </div>
+   <p class="signature"><b>Aurélie &amp; Jonathan</b><span>0693 82 81 08</span></p>
+  </div>
+ </div>
+</section>
+<footer><b>Démo</b> : l'assistant ci-contre répond uniquement à partir des pages publiques de reunionplongee.com. Aucun message n'est envoyé depuis cette maquette. Les prix et informations sont ceux du site à la date de la démo ; l'équipe du centre reste seule décisionnaire pour toute réservation.</footer>
+
+<button id="sc-bubble" aria-label="Ouvrir l'assistant" title="Assistant">💬</button>
+<div id="sc-panel" role="dialog" aria-label="Assistant Scubananas">
+  <div class="sc-head">
+    <div><b>Assistant Scubananas</b><small id="sc-sub">Assistant automatique · français, English, Deutsch</small></div>
+    <div class="sc-lang"><button data-l="fr" class="on">FR</button><button data-l="en">EN</button><button data-l="de">DE</button></div>
+  </div>
+  <div id="sc-msgs" aria-live="polite"></div>
+  <div id="sc-chips"></div>
+  <form id="sc-form" autocomplete="off"><input id="sc-input" type="text" placeholder="Votre question…" aria-label="Votre question"><button id="sc-send" type="submit">➤</button></form>
+  <div class="sc-note" id="sc-note">Démo — aucun message n'est envoyé.</div>
+</div>
+
+<script>
+(function(){
+"use strict";
+var SITE="https://reunionplongee.com";
+var CONTACT={
+ fr:"Pour une question précise, l'équipe vous répond : contact@reunionplongee.com · +262 6 92 85 66 37 (accueil tous les jours de 9h à 12h et de 14h à 18h).",
+ en:"For a specific question, the team will answer you: contact@reunionplongee.com · +262 6 92 85 66 37 (reception every day 9am–12pm and 2pm–6pm).",
+ de:"Für eine konkrete Frage antwortet Ihnen das Team: contact@reunionplongee.com · +262 6 92 85 66 37 (Empfang täglich 9–12 Uhr und 14–18 Uhr)."
+};
+var UI={
+ fr:{ph:"Votre question…",sub:"Assistant automatique · français, English, Deutsch",note:"Démo — aucun message n'est envoyé.",
+  hello:"Bonjour et bienvenue chez Scubananas ! 🌊 Je suis l'assistant du site : je réponds sur les horaires, les tarifs, l'accès, les plongées et les sorties dauphins/baleines. Pour toute réservation, c'est l'équipe qui valide. Que souhaitez-vous savoir ?",
+  chips:["Combien coûte un baptême de plongée ?","Quand voir les baleines ?","Quels sont vos horaires ?","Comment réserver ?"],
+  thanks:"Avec plaisir ! N'hésitez pas si vous avez d'autres questions. 🐢",
+  fallback:"Merci pour votre question ! Je préfère ne rien inventer : cette information ne figure pas sur le site, donc je la transmets à l'équipe du centre (dans cette démo, rien n'est réellement envoyé). "},
+ en:{ph:"Your question…",sub:"Automated assistant · français, English, Deutsch",note:"Demo — no message is actually sent.",
+  hello:"Hello and welcome to Scubananas! 🌊 I'm the website assistant: I can answer about opening hours, prices, directions, dives and dolphin/whale outings. Bookings are always confirmed by the team. What would you like to know?",
+  chips:["How much is an introductory dive?","When can I see whales?","What are your opening hours?","How do I book?"],
+  thanks:"You're welcome! Feel free to ask anything else. 🐢",
+  fallback:"Thanks for your question! I'd rather not guess: this information isn't on the website, so I'm passing it on to the dive centre team (in this demo nothing is actually sent). "},
+ de:{ph:"Ihre Frage…",sub:"Automatischer Assistent · Français, English, Deutsch",note:"Demo — es wird keine Nachricht gesendet.",
+  hello:"Hallo und willkommen bei Scubananas! 🌊 Ich bin der Assistent der Website: Ich antworte zu Öffnungszeiten, Preisen, Anfahrt, Tauchgängen und Delfin-/Walausflügen. Buchungen bestätigt immer das Team. Was möchten Sie wissen?",
+  chips:["Was kostet ein Schnuppertauchen?","Wann kann man Wale sehen?","Wie sind Ihre Öffnungszeiten?","Wie kann ich buchen?"],
+  thanks:"Gern geschehen! Fragen Sie ruhig weiter. 🐢",
+  fallback:"Danke für Ihre Frage! Ich möchte nichts erfinden: Diese Information steht nicht auf der Website, deshalb gebe ich sie an das Team des Tauchzentrums weiter (in dieser Demo wird nichts wirklich gesendet). "}
+};
+
+/* Base de connaissances : chaque réponse vient des pages publiques de reunionplongee.com (voir sources.md) */
+var KB=[
+{id:"horaires",w:1,kw:["horaire","ouvert","ouverture","a quelle heure","opening","hours","open","offnungszeit","geoffnet","offen","dimanche","sunday","sonntag","7j"],
+ fr:"Le centre est ouvert 7j/7. L'accueil est assuré tous les jours de 9h à 12h et de 14h à 18h.",
+ en:"The centre is open 7 days a week. Reception is open every day from 9am to 12pm and from 2pm to 6pm.",
+ de:"Das Zentrum ist 7 Tage die Woche geöffnet. Der Empfang ist täglich von 9 bis 12 Uhr und von 14 bis 18 Uhr besetzt."},
+{id:"adresse",w:1,kw:["adresse","ou etes","ou se trouve","situe","comment venir","acces","trouver","address","where are","located","directions","find you","how to get","wo seid","wo befindet","anfahrt","wie komme","liegt","standort","port","localisation"],
+ fr:"Scubananas est au 23 Bd de la Compagnie des Indes, 97436 Saint-Leu, à 100 mètres du port, face à la plage. Les douches de plage sont juste en face du centre. Au départ de Saint-Gilles-les-Bains, un camion tout équipé permet de rejoindre rapidement les sites plus au nord ; les sorties dauphins et baleines partent du port de Saint-Gilles.",
+ en:"Scubananas is at 23 Bd de la Compagnie des Indes, 97436 Saint-Leu, 100 metres from the harbour, facing the beach. Beach showers are right across from the centre. From Saint-Gilles-les-Bains, a fully equipped truck takes divers quickly to the northern sites; the dolphin and whale outings leave from Saint-Gilles harbour.",
+ de:"Scubananas befindet sich in der 23 Bd de la Compagnie des Indes, 97436 Saint-Leu, 100 Meter vom Hafen entfernt, direkt am Strand. Die Strandduschen liegen gegenüber vom Zentrum. Ab Saint-Gilles-les-Bains bringt ein voll ausgestatteter Truck die Taucher schnell zu den nördlichen Tauchplätzen; die Delfin- und Walausflüge starten im Hafen von Saint-Gilles."},
+{id:"contact",w:1,kw:["contact","telephone","tel","appeler","phone","call","email","e mail","mail","courriel","telefon","anrufen","kontakt","joindre","numero","number","nummer"],
+ fr:"Vous pouvez joindre le centre par e-mail à contact@reunionplongee.com ou par téléphone au +262 6 92 85 66 37 (accueil tous les jours de 9h à 12h et de 14h à 18h).",
+ en:"You can reach the centre by e-mail at contact@reunionplongee.com or by phone at +262 6 92 85 66 37 (reception every day 9am–12pm and 2pm–6pm).",
+ de:"Sie erreichen das Zentrum per E-Mail unter contact@reunionplongee.com oder telefonisch unter +262 6 92 85 66 37 (Empfang täglich 9–12 Uhr und 14–18 Uhr)."},
+{id:"reserver",w:1,kw:["reserver","reservation","reserve","book","booking","buchen","buchung","reservieren","planifier","disponibilite","disponible","available","availability","verfugbar","verfugbarkeit","en ligne","online"],
+ fr:"La réservation se fait en ligne depuis le site (bouton « Réserver », plateforme Zuurit). Je ne peux pas vérifier les disponibilités ni confirmer une place moi-même : c'est l'équipe du centre qui les gère. Pour une demande particulière, appelez le +262 6 92 85 66 37 ou écrivez à contact@reunionplongee.com.",
+ en:"Booking is done online from the website (« Réserver » button, Zuurit platform). I can't check availability or confirm a spot myself: the dive centre team handles that. For a special request, call +262 6 92 85 66 37 or write to contact@reunionplongee.com.",
+ de:"Die Buchung erfolgt online über die Website (Button « Réserver », Plattform Zuurit). Ich kann Verfügbarkeiten nicht prüfen und keinen Platz selbst bestätigen: Das übernimmt das Team des Tauchzentrums. Für Sonderwünsche rufen Sie +262 6 92 85 66 37 an oder schreiben Sie an contact@reunionplongee.com."},
+{id:"bapteme",w:1,kw:["bapteme","initiation","premiere plongee","premieres bulles","debutant","first dive","introductory","beginner","discover scuba","try dive","first time","anfanger","schnupper","erstes mal","erster tauchgang","tauchen ausprobieren","never dived","jamais plonge","savoir nager","non nageur","cant swim","nicht schwimmen"],
+ fr:"L'initiation à la plongée (le « baptême ») coûte 90 € pour 1 plongée : au moins 20 minutes sous l'eau avec un moniteur, dans la baie de Saint-Leu, dès 8 ans. Pas besoin d'être un grand sportif ni un super nageur : le moniteur vous met en confiance et va à votre rythme. L'Initiation Duo (2 personnes, chacun son moniteur) est à 210 €.",
+ en:"The introductory dive costs €90 for 1 dive: at least 20 minutes underwater with an instructor, in Saint-Leu bay, from age 8. You don't need to be a great athlete or a strong swimmer: the instructor builds your confidence and goes at your pace. The Duo introduction (2 people, one instructor each) is €210.",
+ de:"Das Schnuppertauchen (Initiation) kostet 90 € für 1 Tauchgang: mindestens 20 Minuten unter Wasser mit einem Tauchlehrer in der Bucht von Saint-Leu, ab 8 Jahren. Man muss weder besonders sportlich noch ein starker Schwimmer sein: Der Tauchlehrer gibt Ihnen Sicherheit und richtet sich nach Ihrem Tempo. Das Duo-Schnuppertauchen (2 Personen, jeweils ein eigener Tauchlehrer) kostet 210 €."},
+{id:"age",w:1,kw:["age","ans","enfant","enfants","kids","child","children","minimum","how old","old","alter","kinder","jahre","familie","famille","family","mineur"],
+ fr:"D'après le site : initiation à la plongée dès 8 ans ; sortie dauphins/baleines dès 8 ans, sous la responsabilité des parents ; Scuba Diver dès 10 ans ; Adventure Basic Diver et Open Water Diver dès 12 ans. Il n'y a pas de limite d'âge maximale mentionnée pour l'initiation, qui est ouverte « jusqu'aux séniors ».",
+ en:"According to the website: introductory dive from age 8; dolphin/whale outing from age 8, under parents' responsibility; Scuba Diver from age 10; Adventure Basic Diver and Open Water Diver from age 12. The introductory dive is open to everyone « up to seniors ».",
+ de:"Laut Website: Schnuppertauchen ab 8 Jahren; Delfin-/Walausflug ab 8 Jahren, unter Verantwortung der Eltern; Scuba Diver ab 10 Jahren; Adventure Basic Diver und Open Water Diver ab 12 Jahren. Das Schnuppertauchen steht allen offen, « bis zu den Senioren »."},
+{id:"cetaces",w:1,kw:["dauphin","baleine","cetace","megafaune","whale","dolphin","delfin","wal","wale","delphin","snorkeling","snorkel","tuba","nager avec","swim with","schwimmen mit","whale watching","quand voir","best time","beste zeit","saison","season","jahreszeit","juillet","july","juli"],
+ fr:"Les sorties d'observation responsable des dauphins et des baleines partent du port de Saint-Gilles-les-Bains, en palmes, masque et tuba (matériel et combinaison fournis). Dauphins : toute l'année. Baleines à bosse : du 1er juillet au 30 septembre. Tarif par personne : 135 € en saison baleines (sortie de 4 à 5 h), 110 € le reste de l'année (environ 3 h). Jusqu'à 12 personnes à bord, groupes de 6 nageurs maximum à l'eau. Dès 8 ans. L'équipe ne peut pas garantir l'observation : l'approche est passive et respectueuse des animaux.",
+ en:"The responsible dolphin and whale observation outings leave from Saint-Gilles-les-Bains harbour, with fins, mask and snorkel (equipment and wetsuit provided). Dolphins: all year round. Humpback whales: 1 July to 30 September. Price per person: €135 during whale season (4–5 h outing), €110 the rest of the year (about 3 h). Up to 12 people on board, in-water groups of max. 6 swimmers. From age 8. The team can't guarantee sightings: the approach is passive and respectful of the animals.",
+ de:"Die Ausflüge zur verantwortungsvollen Beobachtung von Delfinen und Walen starten im Hafen von Saint-Gilles-les-Bains, mit Flossen, Maske und Schnorchel (Ausrüstung und Neoprenanzug inklusive). Delfine: das ganze Jahr. Buckelwale: vom 1. Juli bis 30. September. Preis pro Person: 135 € in der Walsaison (Ausflug von 4–5 Std.), 110 € im restlichen Jahr (ca. 3 Std.). Bis zu 12 Personen an Bord, im Wasser Gruppen von max. 6 Schwimmern. Ab 8 Jahren. Das Team kann Sichtungen nicht garantieren: Die Annäherung ist passiv und respektiert die Tiere."},
+{id:"scooter",w:1,kw:["scooter","unterwasserscooter","underwater scooter","scooter sous marin"],
+ fr:"Le « Scooter découverte » est à 80 € pour 1 plongée : propulsé par un scooter sous-marin, vous longez la barrière de corail sans effort.",
+ en:"The « Scooter découverte » is €80 for 1 dive: powered by an underwater scooter, you glide along the coral barrier effortlessly.",
+ de:"Das « Scooter découverte » kostet 80 € für 1 Tauchgang: Mit einem Unterwasserscooter gleiten Sie mühelos an der Korallenbarriere entlang."},
+{id:"formations",w:1,kw:["formation","apprendre","open water","niveau 1","niveau 2","niveau 3","certification","brevet","diplome","ssi","anmp","learn to dive","padi","certif","ausbildung","kurs","zertifikat","lernen","tauchschein","pe 20","pa 20","pe20","pa20","level","scuba diver","advanced","rescue","course"],
+ fr:"Scubananas propose des formations SSI (certification internationale) et ANMP (niveaux français). Exemples de tarifs : Scuba Diver (dès 10 ans, 3 plongées) 320 € ; Open Water Diver (dès 12 ans, 6 plongées) 545 € ; PE 20 / Niveau 1 (5 plongées) 420 € ; Niveau 2 (PA 20 + PE 40, 10 plongées) 730 €. Les cours théoriques SSI peuvent se faire en ligne avant le voyage. Détails : reunionplongee.com/tarifs et /decouvrir/apprendre-la-plongee.",
+ en:"Scubananas offers SSI courses (international certification) and ANMP courses (French levels). Sample prices: Scuba Diver (from age 10, 3 dives) €320; Open Water Diver (from age 12, 6 dives) €545; PE 20 / Level 1 (5 dives) €420; Level 2 (PA 20 + PE 40, 10 dives) €730. The SSI theory can be done online before your trip. Details: reunionplongee.com/tarifs and /decouvrir/apprendre-la-plongee.",
+ de:"Scubananas bietet SSI-Kurse (internationale Zertifizierung) und ANMP-Kurse (französische Stufen). Beispielpreise: Scuba Diver (ab 10 Jahren, 3 Tauchgänge) 320 €; Open Water Diver (ab 12 Jahren, 6 Tauchgänge) 545 €; PE 20 / Level 1 (5 Tauchgänge) 420 €; Level 2 (PA 20 + PE 40, 10 Tauchgänge) 730 €. Die SSI-Theorie kann schon vor der Reise online gemacht werden. Details: reunionplongee.com/tarifs und /decouvrir/apprendre-la-plongee."},
+{id:"exploration",w:1,kw:["plongee d exploration","exploration","forfait","package","tarif plongee","dive price","10 plongees","5 plongees","plongeur autonome","plongee encadree","autonome","encadre","deja plonge","already certified","brevete","zertifiziert","bereits","fun dive","certified diver","tauchgang preis","tauchpaket"],
+ fr:"Pour les plongeurs brevetés (forfaits nominatifs, par plongée / 5 plongées / 10 plongées) : plongeur encadré non équipé 65 € / 315 € / 550 € ; plongeur autonome non équipé ou encadré équipé 55 € / 260 € / 500 € ; plongeur autonome équipé 45 € / 215 € / 400 €. Plongée profonde (N2-PE40) : supplément de 10 €.",
+ en:"For certified divers (named packages, per dive / 5 dives / 10 dives): guided diver, own equipment 65 € / 315 € / 550 €; autonomous diver with own equipment or guided diver with rental equipment 55 € / 260 € / 500 €; autonomous diver with rental equipment 45 € / 215 € / 400 €. Deep dive (N2-PE40): €10 supplement.",
+ de:"Für zertifizierte Taucher (namentliche Pakete, pro Tauchgang / 5 Tauchgänge / 10 Tauchgänge): geführter Taucher ohne Ausrüstung 65 € / 315 € / 550 €; selbstständiger Taucher ohne Ausrüstung oder geführter Taucher mit Ausrüstung 55 € / 260 € / 500 €; selbstständiger Taucher mit Ausrüstung 45 € / 215 € / 400 €. Tieftauchgang (N2-PE40): 10 € Aufpreis."},
+{id:"supplements",w:1,kw:["nitrox","supplement","plongee de nuit","night dive","night","nachttauchen","nachttauchgang","nacht","lampe","torch","surcharge","aufpreis","extra"],
+ fr:"Suppléments plongée indiqués sur le site : Nitrox 30 % 5 € ; Déco Nitrox 10 € ; plongée de nuit 10 € ; location de lampe 10 €.",
+ en:"Dive supplements listed on the website: Nitrox 30% €5; Deco Nitrox €10; night dive €10; torch rental €10.",
+ de:"Auf der Website genannte Tauchzuschläge: Nitrox 30 % 5 €; Deko-Nitrox 10 €; Nachttauchgang 10 €; Lampenmiete 10 €."},
+{id:"materiel",w:1,kw:["materiel","equipement","combinaison","wetsuit","gear","equipment","palmes","masque","mask","ausrustung","neopren","anzug","flossen","maske","apporter","what to bring","mitbringen","bring","fins"],
+ fr:"Pour les sorties dauphins/baleines, le matériel est fourni et inclus dans le prix : palmes, masque, tuba et combinaison adaptée (nettoyés et désinfectés après chaque sortie). Pour la plongée, le centre propose des équipements de marque régulièrement entretenus et renouvelés, pour petits et grands, avec remplissage à l'air ou au Nitrox. Ce qu'il est conseillé d'apporter n'est pas précisé sur le site : je peux transmettre la question à l'équipe.",
+ en:"For the dolphin/whale outings, equipment is provided and included in the price: fins, mask, snorkel and a suitable wetsuit (cleaned and disinfected after every trip). For diving, the centre provides well-known brands of equipment that are regularly maintained and renewed, for children and adults, with air or Nitrox fills. What to bring isn't specified on the website: I can pass that question on to the team.",
+ de:"Bei den Delfin-/Walausflügen ist die Ausrüstung im Preis inbegriffen: Flossen, Maske, Schnorchel und passender Neoprenanzug (nach jeder Fahrt gereinigt und desinfiziert). Zum Tauchen bietet das Zentrum regelmäßig gewartete und erneuerte Markenausrüstung für Klein und Groß, mit Luft- oder Nitrox-Füllung. Was Sie mitbringen sollten, steht nicht auf der Website: Ich kann die Frage an das Team weitergeben."},
+{id:"requins",w:1,kw:["requin","shark","hai","haie","haifisch","dangereux","danger","dangerous","gefahr","gefahrlich","securite","safe","safety","sicher","sicherheit","peur","afraid","angst"],
+ fr:"Le site consacre un article à ce sujet (« Requins et plongée à la Réunion »). Il indique notamment que les sites d'initiation sont choisis pour leurs eaux limpides et calmes, que deux moniteurs professionnels encadrent les mises à l'eau des sorties cétacés, qu'il n'y a pas de mise à l'eau si la visibilité est mauvaise, et que les moniteurs expliquent tout lors d'un briefing à bord. Cet article date de juin 2024 : pour la situation du moment, l’équipe vous répond directement, y compris sur les requins.",
+ en:"The website has an article on this topic (« Requins et plongée à la Réunion »). It states in particular that introductory dive sites are chosen for their clear, calm water, that two professional instructors supervise the in-water sessions on cetacean outings, that there is no entry in the water if visibility is poor, and that everything is explained in a briefing on board. That article dates from June 2024: for the current situation, the team will answer you directly, including about sharks.",
+ de:"Die Website widmet diesem Thema einen Artikel (« Requins et plongée à la Réunion »). Dort steht u. a., dass die Plätze für Schnuppertauchgänge wegen ihres klaren, ruhigen Wassers gewählt werden, dass bei den Walausflügen zwei professionelle Tauchlehrer das Zu-Wasser-Gehen betreuen, dass bei schlechter Sicht niemand ins Wasser geht und dass alles bei einem Briefing an Bord erklärt wird. Der Artikel stammt von Juni 2024: Zur aktuellen Lage antwortet Ihnen das Team direkt, auch zu Haien."},
+{id:"meteo",w:1,kw:["meteo","weather","wetter","pluie","rain","regen","annul","cancel","stornier","absage","mer","houle","swell","visibilite","visibility","sicht"],
+ fr:"D'après le site, la sortie dauphins/baleines n'est maintenue que si la météo est favorable, et il n'y a pas de mise à l'eau si la visibilité est mauvaise. Les conditions d'annulation ou de report ne sont pas détaillées sur le site : l'équipe vous les précisera au +262 6 92 85 66 37 ou à contact@reunionplongee.com.",
+ en:"According to the website, the dolphin/whale outing only goes ahead if the weather is favourable, and there's no entry in the water if visibility is poor. Cancellation or rescheduling conditions aren't detailed on the website: the team will clarify them at +262 6 92 85 66 37 or contact@reunionplongee.com.",
+ de:"Laut Website findet der Delfin-/Walausflug nur bei günstigem Wetter statt, und bei schlechter Sicht geht niemand ins Wasser. Die Bedingungen für Stornierung oder Verschiebung stehen nicht auf der Website: Das Team klärt sie unter +262 6 92 85 66 37 oder contact@reunionplongee.com."},
+{id:"plages",w:1,kw:["plage","baigner","baignade","beach","swim","strand","baden","filaos","pique nique","picnic","kiosque","where to swim"],
+ fr:"Le blog du centre donne des conseils baignade : juste en face du centre, la plage des Filaos offre une aire de pique-nique avec kiosques et barbecues (parking gratuit devant, mais on n'y baigne pas vraiment : trop de rochers). Plus au nord, le long du lagon de Saint-Leu, la baignade est possible, avec une zone surveillée devant le poste de secours. Détails : reunionplongee.com/blog/a-la-une/ou-se-baigner-a-la-reunion/",
+ en:"The centre's blog gives swimming tips: right across from the centre, Filaos beach has a picnic area with kiosks and barbecues (free parking in front, but it isn't really a swimming spot: too many rocks). Further north along Saint-Leu lagoon, swimming is possible, with a supervised zone in front of the lifeguard post. Details: reunionplongee.com/blog/a-la-une/ou-se-baigner-a-la-reunion/",
+ de:"Der Blog des Zentrums gibt Badetipps: Direkt gegenüber vom Zentrum bietet der Strand Filaos einen Picknickplatz mit Pavillons und Grills (kostenloser Parkplatz davor, zum Baden aber weniger geeignet: zu viele Felsen). Weiter nördlich an der Lagune von Saint-Leu kann man baden, mit einer überwachten Zone vor dem Rettungsposten. Details: reunionplongee.com/blog/a-la-une/ou-se-baigner-a-la-reunion/"},
+{id:"equipe",w:1,kw:["moniteur","instructeur","equipe","capitaine","xavier","instructor","team","staff","captain","tauchlehrer","lehrer","crew","label","o2cr"],
+ fr:"Le centre est dirigé par Xavier Malagié (Brevet d'État d'Éducateur Sportif 2e degré, instructeur SSI, moniteur de secourisme) : plus de 10 ans comme sauveteur en mer et plus de 15 ans dans l'enseignement sportif, avec « bonne humeur et sourire à gogo ». Scubananas a été en 2013 l'une des premières structures à obtenir le label d'observation responsable des cétacés (O²CR), label qui n'existe plus aujourd'hui.",
+ en:"The centre is run by Xavier Malagié (State diploma in sports education 2nd degree, SSI instructor, first-aid instructor): over 10 years as a sea rescuer and over 15 years in sports teaching, with « good humour and plenty of smiles ». In 2013, Scubananas was one of the first operators to obtain the responsible cetacean observation label (O²CR), a label that no longer exists today.",
+ de:"Das Zentrum wird von Xavier Malagié geleitet (Staatsdiplom Sportlehrer 2. Grades, SSI-Instruktor, Erste-Hilfe-Ausbilder): über 10 Jahre als Seenotretter und über 15 Jahre im Sportunterricht, mit « guter Laune und viel Lächeln ». 2013 gehörte Scubananas zu den ersten Betrieben mit dem Label für verantwortungsvolle Walbeobachtung (O²CR), das es heute nicht mehr gibt."},
+{id:"evenement",w:1,kw:["anniversaire","evg","evjf","evenement","groupe","group","birthday","private","prive","event","bachelor","geburtstag","gruppe","privat","entreprise","team building","seminaire"],
+ fr:"Le site mentionne les événements privés (anniversaire, EVG, EVJF…) avec la mention « Nous consulter » : il n'y a pas de tarif publié. Je transmets votre demande à l'équipe, qui vous répondra directement. " + "",
+ en:"The website lists private events (birthday, bachelor/bachelorette parties…) as « Nous consulter » (contact us): no price is published. I'll pass your request on to the team, who will answer you directly.",
+ de:"Die Website nennt private Veranstaltungen (Geburtstag, Junggesellenabschied…) mit dem Hinweis « Nous consulter » (bitte anfragen): Ein Preis ist nicht veröffentlicht. Ich gebe Ihre Anfrage an das Team weiter, das Ihnen direkt antwortet."},
+{id:"boutique",w:1,kw:["boutique","shop","store","laden","acheter","buy","kaufen","cadeau","gift","bon cadeau","geschenk","offrir","blog"],
+ fr:"Le centre a un petit espace magasin avec de petits équipements de plongée, et une boutique en ligne gérée sur la plateforme Zuurit (lien « Boutique » du site). Le site ne mentionne pas de bon cadeau : si vous souhaitez en offrir un, je transmets votre demande à l'équipe.",
+ en:"The centre has a small shop area with small diving accessories, and an online shop run on the Zuurit platform (« Boutique » link on the website). The website doesn't mention gift vouchers: if you'd like to give one, I'll pass your request on to the team.",
+ de:"Das Zentrum hat einen kleinen Shopbereich mit Tauchzubehör und einen Online-Shop auf der Plattform Zuurit (Link « Boutique » auf der Website). Geschenkgutscheine werden auf der Website nicht erwähnt: Wenn Sie einen verschenken möchten, gebe ich Ihre Anfrage an das Team weiter."},
+{id:"langues",w:1,kw:["parlez","langue","langues","speak","english","anglais","german","allemand","deutsch","englisch","sprecht","sprache","sprechen","francais","french"],
+ fr:"Le site de Scubananas est rédigé en français et n'indique pas quelles langues parle l'équipe. Je transmets votre question à l'équipe pour qu'elle vous réponde précisément.",
+ en:"The Scubananas website is written in French and doesn't say which languages the team speaks. I'll pass your question on to the team so they can answer you precisely.",
+ de:"Die Website von Scubananas ist auf Französisch verfasst und gibt nicht an, welche Sprachen das Team spricht. Ich gebe Ihre Frage an das Team weiter, damit es Ihnen genau antworten kann."},
+{id:"paiement",w:1,kw:["payer","paiement","payment","pay","card","cards","credit","carte","cash","especes","zahlung","bezahlen","karte","rembours","refund","erstattung","acompte","deposit","anzahlung","cheque"],
+ fr:"Les modes de paiement, acomptes et conditions de remboursement ne figurent pas sur les pages que j'ai à disposition. Je transmets votre question à l'équipe pour une réponse précise.",
+ en:"Payment methods, deposits and refund conditions aren't on the pages available to me. I'll pass your question on to the team for a precise answer.",
+ de:"Zahlungsarten, Anzahlungen und Erstattungsbedingungen stehen nicht auf den mir vorliegenden Seiten. Ich gebe Ihre Frage an das Team für eine genaue Antwort weiter."},
+{id:"duree",w:1,kw:["duree","combien de temps","how long","duration","dauer","wie lange","longtemps","minutes"],
+ fr:"Durées indiquées sur le site : initiation à la plongée, au moins 20 minutes sous l'eau avec un moniteur (durée selon votre aisance et l'organisation) ; séance Adventure Basic Diver, environ 50 minutes avec le moniteur ; sortie dauphins/baleines, environ 3 h hors saison et 4 à 5 h en saison baleines (durées indicatives).",
+ en:"Durations given on the website: introductory dive, at least 20 minutes underwater with an instructor (depending on your comfort and organisation); Adventure Basic Diver session, about 50 minutes with the instructor; dolphin/whale outing, about 3 h off-season and 4–5 h in whale season (indicative).",
+ de:"Auf der Website genannte Dauern: Schnuppertauchen, mindestens 20 Minuten unter Wasser mit einem Tauchlehrer (je nach Sicherheit und Organisation); Adventure-Basic-Diver-Einheit, ca. 50 Minuten mit dem Tauchlehrer; Delfin-/Walausflug, ca. 3 Std. außerhalb der Saison und 4–5 Std. in der Walsaison (Richtwerte)."},
+{id:"prix",w:0.5,kw:["prix","tarif","tarifs","combien","cout","how much","price","prices","cost","preis","preise","kostet","wie viel","wieviel"],
+ fr:"Quelques tarifs du site : initiation à la plongée 90 € ; Initiation Duo 210 € (2 personnes) ; Adventure Basic Diver 140 € ; Scooter découverte 80 € ; sortie dauphins/baleines 110 € (135 € en saison baleines) ; plongée d'exploration dès 45 € selon équipement et forfait ; formation Open Water Diver 545 €. Tous les tarifs : reunionplongee.com/tarifs. Sur quelle activité souhaitez-vous des détails ?",
+ en:"A few prices from the website: introductory dive €90; Duo introduction €210 (2 people); Adventure Basic Diver €140; Scooter discovery €80; dolphin/whale outing €110 (€135 in whale season); exploration dives from €45 depending on equipment and package; Open Water Diver course €545. All prices: reunionplongee.com/tarifs. Which activity would you like details on?",
+ de:"Einige Preise von der Website: Schnuppertauchen 90 €; Duo-Schnuppertauchen 210 € (2 Personen); Adventure Basic Diver 140 €; Scooter-Entdeckung 80 €; Delfin-/Walausflug 110 € (135 € in der Walsaison); Erkundungstauchgänge ab 45 € je nach Ausrüstung und Paket; Open-Water-Diver-Kurs 545 €. Alle Preise: reunionplongee.com/tarifs. Zu welcher Aktivität möchten Sie Details?"}
+];
+
+/* ---------- moteur ---------- */
+function norm(s){
+  s=String(s).toLowerCase().replace(/ß/g,"ss").replace(/œ/g,"oe").replace(/æ/g,"ae");
+  try{s=s.normalize("NFD").replace(/[\u0300-\u036f]/g,"");}catch(e){}
+  return s.replace(/['’`]/g," ").replace(/[^a-z0-9]+/g," ").trim();
+}
+var STOP={
+ fr:"le la les des du de un une est et ou pour avec que qui quoi comment combien quand je vous nous vos votre vous pas sur dans au aux ce ces quel quelle quels quelles peut peux puis faire y il elle ont avez etes sont mon ma mes ton ses cest jai quil".split(" "),
+ en:"the is are do does can you your what how when where i we an of to for with my it there have has would could should will which who this that me us our they their any".split(" "),
+ de:"der die das ist sind und ich wir sie ihr ihre wie was wann wo kann konnen gibt es mit fur ein eine nicht auch haben hat bei im zu von ob mein mir uns euch gibt werden wird welche welcher dem den dass".split(" ")
+};
+function detectLang(text,fallback){
+  var t=" "+norm(text)+" ", sc={fr:0,en:0,de:0};
+  ["fr","en","de"].forEach(function(l){STOP[l].forEach(function(w){if(t.indexOf(" "+w+" ")>-1)sc[l]++;});});
+  if(/[äöüß]/i.test(text))sc.de+=2; if(/[éèêàçùôî]/i.test(text))sc.fr+=2;
+  var best=fallback,bv=0;
+  ["fr","en","de"].forEach(function(l){if(sc[l]>bv){bv=sc[l];best=l;}});
+  return best;
+}
+function matchKB(text){
+  var t=" "+norm(text)+" ", best=null, bs=0;
+  KB.forEach(function(e){
+    var s=0;
+    e.kw.forEach(function(k){
+      var hit = k.length<=4 ? t.indexOf(" "+k+" ")>-1 : t.indexOf(" "+k)>-1;
+      if(hit) s+=k.length;
+    });
+    s*=e.w;
+    if(s>bs){bs=s;best=e;}
+  });
+  return bs>=4?best:null;
+}
+function answer(text,uiLang){
+  var n=norm(text), lang=detectLang(text,uiLang);
+  var t=" "+n+" ";
+  if(/ (merci|thanks|thank you|danke|dankeschon) /.test(t)) return {lang:lang,id:"thanks",text:UI[lang].thanks};
+  if(n.split(" ").length<=3 && /^(bonjour|bonsoir|salut|coucou|hello|hi|hey|hallo|guten tag|moin)( |$)/.test(n) && !matchKB(text)){ if(/^(hello|hi|hey)( |$)/.test(n))lang="en"; else if(/^(hallo|guten|moin)/.test(n))lang="de"; return {lang:lang,id:"hello",text:UI[lang].hello};}
+  var e=matchKB(text);
+  if(e) return {lang:lang,id:e.id,text:e[lang]};
+  return {lang:lang,id:"fallback",text:UI[lang].fallback+CONTACT[lang]};
+}
+window.__scAnswer=answer; /* utilisé uniquement pour les tests */
+
+/* ---------- interface ---------- */
+var $=function(id){return document.getElementById(id);};
+var uiLang="fr", started=false;
+function addMsg(who,text){
+  var d=document.createElement("div"); d.className="m "+who; d.textContent=text;
+  $("sc-msgs").appendChild(d); $("sc-msgs").scrollTop=$("sc-msgs").scrollHeight; return d;
+}
+function setLang(l){
+  uiLang=l;
+  var bs=document.querySelectorAll(".sc-lang button"); for(var i=0;i<bs.length;i++){bs[i].className=(bs[i].getAttribute("data-l")===l)?"on":"";}
+  $("sc-input").placeholder=UI[l].ph; $("sc-sub").textContent=UI[l].sub; $("sc-note").textContent=UI[l].note;
+  var c=$("sc-chips"); c.innerHTML="";
+  UI[l].chips.forEach(function(q){var b=document.createElement("button");b.type="button";b.textContent=q;b.onclick=function(){ask(q);};c.appendChild(b);});
+}
+function ask(q){
+  q=q.trim(); if(!q)return;
+  addMsg("user",q);
+  var r=answer(q,uiLang);
+  if(r.lang!==uiLang && r.id!=="thanks") setLang(r.lang);
+  setTimeout(function(){addMsg("bot",r.text);},350);
+}
+function open(){
+  $("sc-panel").className="open";
+  if(!started){started=true;setLang("fr");addMsg("bot",UI.fr.hello);}
+  $("sc-input").focus();
+}
+$("sc-bubble").onclick=function(){ if($("sc-panel").className.indexOf("open")>-1){$("sc-panel").className="";}else{open();} };
+$("sc-form").onsubmit=function(ev){ev.preventDefault();var v=$("sc-input").value;$("sc-input").value="";ask(v);};
+var lb=document.querySelectorAll(".sc-lang button");
+for(var i=0;i<lb.length;i++){lb[i].onclick=function(){setLang(this.getAttribute("data-l"));};}
+})();
+</script>
+</body>
+</html>
