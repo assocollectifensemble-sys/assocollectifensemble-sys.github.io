@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>Aqua-Salé — centre aquatique à L'Étang-Salé</title>
+<meta name="description" content="Aquagym, aquabike, aquatraining et natation au 207 avenue Raymond Barre, L'Étang-Salé. Maquette offerte par Aurélie &amp; Jonathan.">
+<meta property="og:title" content="Aqua-Salé — centre aquatique à L'Étang-Salé">
+<meta property="og:description" content="Aquagym, aquabike, aquatraining, natation : une maquette offerte par Aurélie &amp; Jonathan.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/aqua-sale/img/og.png">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/aqua-sale/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--water:#0E9BC9;--water-d:#06607F;--deep:#053B50;--aqua:#BFEFFA;--foam:#EFFBFE;--palm:#2E9B57;--palm-d:#1B6A3A;--sand:#FFF3D6;--ink:#0C2B38;--muted:#52707C;
+--disp:"Fredoka",system-ui,sans-serif;--body:"Nunito",system-ui,sans-serif;--pad:clamp(20px,5vw,64px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--body);background:var(--foam);color:var(--ink);font-size:17px;line-height:1.6;padding-bottom:84px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--palm);outline-offset:3px;border-radius:6px}
+.ribbon{background:var(--deep);color:#fff;font-size:13px;padding:9px var(--pad)}
+.ribbon b{color:#8BE3A8}
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#7FD6EE 0%,#0E9BC9 55%,#06607F 100%);color:#fff;padding:clamp(40px,7vw,90px) var(--pad) 150px}
+.sun{position:absolute;right:8%;top:30px;width:90px;height:90px;border-radius:50%;background:#FFE9A6;box-shadow:0 0 60px 20px rgba(255,233,166,.55);animation:pulse 6s ease-in-out infinite}
+.palm{position:absolute;bottom:60px;width:min(46vw,260px);fill:var(--palm-d);transform-origin:50% 100%;animation:sway 7s ease-in-out infinite}
+.palm.l{left:-30px}.palm.r{right:-40px;animation-delay:-3s;scale:-1 1}
+@keyframes sway{0%,100%{rotate:-2deg}50%{rotate:2.5deg}}
+.waves{position:absolute;left:0;right:0;bottom:0;height:90px;overflow:hidden}
+.waves svg{position:absolute;bottom:0;left:0;width:200%;height:90px;animation:slide 14s linear infinite}
+.waves svg+svg{opacity:.6;height:70px;animation-duration:22s;animation-direction:reverse}
+.hero .in{position:relative;max-width:900px;margin:0 auto;text-align:center}
+.kicker{font-weight:800;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--aqua)}
+h1{font-family:var(--disp);font-weight:700;font-size:clamp(50px,13vw,112px);line-height:.95;margin:8px 0 14px;text-shadow:0 6px 24px rgba(5,59,80,.35)}
+h1 em{font-style:normal;color:#9BF0B6}
+.lede{font-size:clamp(18px,2.4vw,22px);max-width:36ch;margin:0 auto;font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:999px;font:800 17px var(--body);text-decoration:none;border:3px solid #fff;cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn.main{background:#fff;color:var(--water-d)}.btn.main:hover{transform:translateY(-3px)}
+.btn.ghost{background:transparent;color:#fff}.btn.ghost:hover{background:#fff;color:var(--water-d)}
+.btn.dark{background:var(--water-d);border-color:var(--water-d);color:#fff}.btn.dark:hover{background:var(--deep)}
+.marquee{background:var(--palm-d);color:#E8FFF0;overflow:hidden;white-space:nowrap;font-family:var(--disp);font-weight:600;font-size:20px;padding:10px 0}
+.marquee div{display:inline-block;animation:slide 30s linear infinite}
+.marquee span{margin:0 22px}
+section{padding:clamp(52px,8vw,100px) var(--pad)}
+.wrap{max-width:1000px;margin:0 auto}
+h2{overflow-wrap:anywhere;font-family:var(--disp);font-weight:700;color:var(--water-d);font-size:clamp(30px,5.5vw,52px);line-height:1.05;margin:8px 0 16px}
+.eyebrow{font-weight:800;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--palm)}
+.about{display:grid;gap:28px}
+@media(min-width:860px){.about{grid-template-columns:1fr 1fr;align-items:start}}
+.about p+p{margin-top:12px}
+.facts{list-style:none;padding:0;display:grid;gap:12px}
+.facts li{background:#fff;border:2px solid var(--aqua);border-radius:18px;padding:14px 18px;display:flex;gap:14px;align-items:center;font-weight:600;transition:transform .25s}
+.facts li:hover{transform:translateX(6px)}
+.facts i{font-style:normal;font-size:26px}
+.acts{background:var(--aqua)}
+.grid{display:grid;gap:16px;margin-top:22px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.grid.c4{grid-template-columns:repeat(4,1fr)}.grid.c3{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border-radius:22px;padding:22px;box-shadow:0 18px 36px -26px rgba(6,96,127,.7);transition:transform .25s}
+.card:hover{transform:translateY(-5px)}
+.card .ic{width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,var(--water),var(--palm));display:grid;place-items:center;font-size:28px;margin-bottom:10px}
+.card h3{font-family:var(--disp);font-size:24px;color:var(--water-d)}
+.soon{display:inline-block;background:var(--sand);color:#8A5A00;font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:8px}
+.tag{display:inline-block;background:#FFE9A6;color:#6B4700;font-weight:800;font-size:13px;padding:4px 12px;border-radius:999px;vertical-align:middle}
+.tablewrap{overflow-x:auto;margin-top:18px;border-radius:18px;box-shadow:0 18px 36px -26px rgba(6,96,127,.7)}
+table{width:100%;min-width:560px;border-collapse:collapse;background:#fff}
+th,td{padding:11px 12px;border-bottom:1px solid var(--aqua);text-align:center;font-size:15px}
+th{background:var(--water-d);color:#fff;font-family:var(--disp);font-weight:500}
+td:first-child{font-weight:800;color:var(--water-d)}
+.note{font-size:14px;color:var(--muted);margin-top:12px}
+.future{background:linear-gradient(180deg,var(--foam),var(--sand))}
+.demo{background:var(--deep);color:#fff}
+.demo h2{color:#fff}.demo .eyebrow{color:#8BE3A8}
+.box{background:#fff;color:var(--ink);border-radius:26px;padding:clamp(18px,4vw,34px);margin-top:20px;box-shadow:0 30px 60px -30px #000}
+.demobadge{background:#FFE9A6;color:#6B4700;font-weight:800;font-size:13px;padding:6px 14px;border-radius:12px;display:inline-block;margin-bottom:14px}
+.steps{display:grid;gap:22px}
+@media(min-width:860px){.steps{grid-template-columns:1fr 1fr}}
+.steps h3{font-family:var(--disp);color:var(--water-d);font-size:20px;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid var(--aqua);background:var(--foam);border-radius:999px;padding:8px 16px;font:700 15px var(--body);color:var(--water-d);cursor:pointer;transition:all .15s}
+.chip:hover{border-color:var(--water)}
+.chip[aria-pressed=true]{background:var(--water-d);border-color:var(--water-d);color:#fff}
+.summary{margin-top:20px;background:var(--foam);border-radius:18px;padding:16px 18px;font-weight:600}
+.carnet{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.carnet b{width:28px;height:28px;border-radius:50%;background:var(--aqua);display:grid;place-items:center;font-size:13px;color:var(--water-d);transition:background .3s}
+.carnet b.on{background:var(--palm);color:#fff}
+.msg{margin-top:14px;padding:14px 18px;border-radius:16px;background:#E5F8EC;color:var(--palm-d);font-weight:700;display:none}
+.msg.show{display:block;animation:pop .4s}
+.contact{display:grid;gap:24px}
+@media(min-width:820px){.contact{grid-template-columns:1fr 1fr}}
+.contact .big{font-family:var(--disp);font-size:clamp(28px,6vw,40px);font-weight:700;color:var(--palm-d);text-decoration:none;display:inline-block;margin:6px 0}
+.contact p{margin-bottom:6px;overflow-wrap:anywhere}
+.map{background:linear-gradient(135deg,var(--aqua),#CDEFD8);border-radius:22px;padding:28px;display:grid;place-items:center;text-align:center;gap:10px;min-height:220px}
+.map .pin{font-size:48px;animation:bob 3s ease-in-out infinite}
+footer{text-align:center;padding:32px var(--pad);font-size:14px;color:var(--muted)}
+footer b{display:block;font-family:var(--disp);font-size:22px;color:var(--water-d)}
+.wa{position:fixed;left:14px;right:14px;bottom:14px;z-index:9;display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;border-radius:999px;background:#1FA855;color:#fff;font-weight:800;text-decoration:none;box-shadow:0 12px 30px -8px rgba(0,0,0,.45)}
+@media(min-width:700px){.wa{left:auto;right:22px;width:auto;padding:0 26px}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@keyframes slide{to{transform:translateX(-50%)}}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@keyframes pulse{50%{transform:scale(1.08)}}
+@keyframes pop{from{transform:scale(.95);opacity:0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour Aqua-Salé</div>
+
+<header class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <svg class="palm l" viewBox="0 0 200 300" aria-hidden="true"><path d="M95 300C98 220 100 160 110 110l10 2C112 165 112 225 118 300z"/><path d="M110 110C80 70 40 70 10 90c40-8 70 2 100 20zM110 110C90 60 60 30 20 28c40 14 62 42 90 82zM110 110C120 55 150 25 190 30c-38 10-60 40-80 80zM110 110c35-40 70-45 95-30-30-2-60 8-95 30zM110 110c-25 10-45 45-45 80 12-35 30-55 45-80z"/></svg>
+  <svg class="palm r" viewBox="0 0 200 300" aria-hidden="true"><path d="M95 300C98 220 100 160 110 110l10 2C112 165 112 225 118 300z"/><path d="M110 110C80 70 40 70 10 90c40-8 70 2 100 20zM110 110C90 60 60 30 20 28c40 14 62 42 90 82zM110 110C120 55 150 25 190 30c-38 10-60 40-80 80zM110 110c35-40 70-45 95-30-30-2-60 8-95 30z"/></svg>
+  <div class="waves" aria-hidden="true">
+    <svg viewBox="0 0 1200 90" preserveAspectRatio="none"><path fill="#EFFBFE" d="M0 50C100 20 200 20 300 50S500 80 600 50s200-30 300 0 200 30 300 0V90H0z"/></svg>
+    <svg viewBox="0 0 1200 90" preserveAspectRatio="none"><path fill="#BFEFFA" d="M0 40C100 70 200 70 300 40S500 10 600 40s200 30 300 0 200-30 300 0V90H0z"/></svg>
+  </div>
+  <div class="in">
+    <p class="kicker">Centre aquatique · L'Étang-Salé</p>
+    <h1>Aqua<em>-Salé</em></h1>
+    <p class="lede">Bouger dans l'eau, au pied des palmiers : aquagym, aquabike, aquatraining et natation.</p>
+    <div class="cta">
+      <a class="btn main" href="#reserver">Essayer la réservation (démo)</a>
+      <a class="btn ghost" href="tel:+262693849124">Appeler le 0693 84 91 24</a>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div><span>Aquagym</span>🌴<span>Aquabike</span>🌴<span>Aquatraining</span>🌴<span>Natation</span>🌴<span>L'Étang-Salé</span>🌴<span>Aquagym</span>🌴<span>Aquabike</span>🌴<span>Aquatraining</span>🌴<span>Natation</span>🌴<span>L'Étang-Salé</span>🌴</div></div>
+
+<section id="lieu">
+  <div class="wrap about">
+    <div class="reveal">
+      <p class="eyebrow">Le lieu</p>
+      <h2>Un coach passionné, une communauté qui grandit</h2>
+      <p>Aqua-Salé a retrouvé un nouveau souffle avec son gérant, coach venu d'Aquanore, qui a repris le lieu. Environ 70 membres actifs y bougent déjà dans une ambiance conviviale.</p>
+      <p>Chaque séance se vit dans l'eau, en douceur pour les articulations et avec de l'énergie pour tout le monde.</p>
+    </div>
+    <ul class="facts reveal">
+      <li><i>📍</i>207 avenue Raymond Barre, 97427 L'Étang-Salé</li>
+      <li><i>🏊</i>Aquagym, aquabike, aquatraining, natation</li>
+      <li><i>📞</i><a href="tel:+262693849124">0693 84 91 24</a></li>
+      <li><i>📸</i><a href="https://www.instagram.com/aquasale974/" target="_blank" rel="noopener">@aquasale974 sur Instagram</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="acts" id="activites">
+  <div class="wrap">
+    <p class="eyebrow">Les activités</p>
+    <h2>Quatre façons de se mettre à l'eau</h2>
+    <div class="grid c4">
+      <div class="card reveal"><div class="ic">🤸</div><h3>Aquagym</h3><p>Des mouvements dans l'eau pour se tonifier avec le sourire.</p></div>
+      <div class="card reveal"><div class="ic">🚴</div><h3>Aquabike</h3><p>Pédaler dans l'eau : un cardio agréable pour les jambes.</p></div>
+      <div class="card reveal"><div class="ic">💪</div><h3>Aquatraining</h3><p>Un entraînement dynamique dans l'eau, encadré par le coach.</p></div>
+      <div class="card reveal"><div class="ic">🏊</div><h3>Natation</h3><p>Apprendre, progresser ou entretenir sa technique à son rythme.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="planning">
+  <div class="wrap">
+    <p class="eyebrow">Planning</p>
+    <h2>Une semaine type <span class="tag">exemple à confirmer</span></h2>
+    <p>Voici comment le planning pourrait s'afficher sur le site, mis à jour par le centre. Les créneaux illustrent la présentation.</p>
+    <div class="tablewrap reveal">
+      <table>
+        <thead><tr><th>Créneau</th><th>Lun</th><th>Mar</th><th>Mer</th><th>Jeu</th><th>Ven</th><th>Sam</th></tr></thead>
+        <tbody>
+          <tr><td>Matin</td><td>Aquagym</td><td>Aquabike</td><td>Natation</td><td>Aquagym</td><td>Aquatraining</td><td>Aquabike</td></tr>
+          <tr><td>Midi</td><td>à définir</td><td>Aquatraining</td><td>à définir</td><td>Aquabike</td><td>à définir</td><td>à définir</td></tr>
+          <tr><td>Soir</td><td>Aquabike</td><td>Aquagym</td><td>Aquatraining</td><td>Natation</td><td>Aquagym</td><td>à définir</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Exemple à confirmer : jours, horaires et places réels seront renseignés par Aqua-Salé.</p>
+  </div>
+</section>
+
+<section class="future" id="bientot">
+  <div class="wrap">
+    <p class="eyebrow">Bientôt</p>
+    <h2>Des projets qui arrivent</h2>
+    <div class="grid c3">
+      <div class="card reveal"><span class="soon">Bientôt</span><div class="ic">🌺</div><h3>Stages de vacances</h3><p>Des journées dans l'eau pendant les vacances scolaires. Dates et tarifs : à définir.</p></div>
+      <div class="card reveal"><span class="soon">Bientôt</span><div class="ic">🎯</div><h3>Cours particuliers</h3><p>Un accompagnement sur mesure avec le coach. Tarifs : à définir.</p></div>
+      <div class="card reveal"><span class="soon">Bientôt</span><div class="ic">🎂</div><h3>Anniversaires</h3><p>Des forfaits pour fêter l'anniversaire des enfants au bord de l'eau. Formules : à définir.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="demo" id="reserver">
+  <div class="wrap">
+    <p class="eyebrow">Maquette interactive</p>
+    <h2>Réserver sa séance en ligne</h2>
+    <p>Un aperçu de ce que pourrait être la réservation : choisir un cours, utiliser son carnet de séances ou payer en ligne. Tout est simulé.</p>
+    <div class="box">
+      <span class="demobadge">DÉMO — aucune réservation ni paiement réel</span>
+      <div class="steps">
+        <div>
+          <h3>1. Activité</h3>
+          <div class="chips" data-k="act"></div>
+          <h3 style="margin-top:16px">2. Créneau (exemple)</h3>
+          <div class="chips" data-k="slot"></div>
+        </div>
+        <div>
+          <h3>3. Règlement</h3>
+          <div class="chips" data-k="pay"></div>
+          <h3 style="margin-top:16px">Mon carnet de séances (démo)</h3>
+          <div class="carnet" id="carnet"></div>
+          <p class="note" id="carnetTxt"></p>
+        </div>
+      </div>
+      <div class="summary" id="sum">Choisissez une activité, un créneau et un mode de règlement.</div>
+      <p style="margin-top:16px"><button class="btn dark" id="go" type="button">Valider (démo)</button></p>
+      <div class="msg" id="msg" role="status"></div>
+    </div>
+    <p class="note" style="color:#BFEFFA">Tarifs, nombre de séances par carnet et places : à définir par Aqua-Salé.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div class="reveal">
+      <p class="eyebrow">Venir nous voir</p>
+      <h2>Aqua-Salé</h2>
+      <p>207 avenue Raymond Barre<br>97427 L'Étang-Salé</p>
+      <a class="big" href="tel:+262693849124">0693 84 91 24</a>
+      <p><a href="https://www.instagram.com/aquasale974/" target="_blank" rel="noopener">Instagram @aquasale974</a></p>
+    </div>
+    <div class="map reveal"><div class="pin">📍</div><strong>207 avenue Raymond Barre</strong><span>L'Étang-Salé, La Réunion</span><a class="btn dark" href="https://www.openstreetmap.org/search?query=207%20avenue%20Raymond%20Barre%2097427%20L%27%C3%89tang-Sal%C3%A9" target="_blank" rel="noopener">Ouvrir le plan</a></div>
+  </div>
+</section>
+
+<footer><b>Aqua-Salé</b>Maquette privée réalisée par Aurélie &amp; Jonathan à partir d'informations publiques.</footer>
+
+<a class="wa" href="https://wa.me/262693849124" target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp au 0693 84 91 24">💬 WhatsApp · 0693 84 91 24</a>
+
+<script>
+const D={act:['Aquagym','Aquabike','Aquatraining','Natation'],slot:['Lun matin','Mer soir','Ven matin','Sam matin'],pay:['Utiliser mon carnet','Payer la séance en ligne (démo)']};
+const S={act:null,slot:null,pay:null};let left=6;
+const $=s=>document.querySelector(s);
+document.querySelectorAll('.chips').forEach(c=>{const k=c.dataset.k;D[k].forEach(v=>{const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=v;b.setAttribute('aria-pressed','false');b.onclick=()=>{S[k]=v;c.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x===b));upd()};c.appendChild(b)})});
+function carnet(){$('#carnet').innerHTML=Array.from({length:6},(_,i)=>`<b class="${i<left?'on':''}">${i+1}</b>`).join('');$('#carnetTxt').textContent=`Carnet d'exemple : ${left} séance${left>1?'s':''} restante${left>1?'s':''} sur 6 (nombre fictif).`}
+function upd(){const r=[S.act,S.slot,S.pay].filter(Boolean);$('#sum').textContent=r.length?'Votre choix : '+r.join(' · '):'Choisissez une activité, un créneau et un mode de règlement.'}
+$('#go').onclick=()=>{const m=$('#msg');if(!S.act||!S.slot||!S.pay){m.textContent='Il manque un choix : activité, créneau ou règlement.';m.classList.add('show');return}
+if(S.pay.startsWith('Utiliser')){if(left<1){m.textContent='Carnet épuisé dans cette démo : le rechargement en ligne serait proposé ici.'}else{left--;carnet();m.textContent=`Démo : ${S.act}, ${S.slot} réservé avec le carnet. Merci ! (rien n'a été enregistré)`}}
+else m.textContent=`Démo : paiement simulé pour ${S.act}, ${S.slot}. Dans la version complète, le règlement se ferait par carte. (rien n'a été enregistré)`;
+m.classList.add('show')};
+carnet();
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
