@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>Boulangerie La Mi Do Ré — boulangerie, pâtisserie &amp; glaces au Tampon</title>
+<meta name="description" content="Pains, viennoiseries, gâteaux sur commande et glaces : La Mi Do Ré, 234 rue Hubert Delisle au Tampon, ouverte dès 5h30.">
+<meta property="og:title" content="Boulangerie La Mi Do Ré — Le Tampon">
+<meta property="og:description" content="Pains, gâteaux, tartelettes aux fruits rouges et glaces : une maquette offerte par Aurélie &amp; Jonathan.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/mi-do-re/img/gateau-fraise.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FFF8F0;--cream-2:#F8EADB;--red:#B3202F;--red-d:#8A1623;--wine:#3A1A1E;--gold:#C9A24A;--gold-l:#E9CF8F;--rose:#E98BA0;--pistache:#A9C48A;--ink:#3A2326;--muted:#6F5A5C;--line:rgba(58,26,30,.15);--serif:"Playfair Display",Georgia,serif;--sans:"Nunito",system-ui,sans-serif;--pad:clamp(20px,5vw,64px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:84px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.ribbon{background:var(--wine);color:var(--cream);font-size:13px;padding:9px var(--pad)}
+.ribbon b{color:var(--gold-l)}
+.hero{max-width:1180px;margin:0 auto;padding:clamp(28px,6vw,80px) var(--pad);display:grid;gap:40px;align-items:center;overflow:hidden}
+@media(min-width:900px){.hero{grid-template-columns:1.05fr .95fr}}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:84px;height:84px;border-radius:50%;border:2px solid var(--gold);object-fit:cover;animation:bob 6s ease-in-out infinite}
+.brand span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);font-weight:700}
+.hello{font-family:var(--serif);font-style:italic;color:var(--red);font-size:clamp(22px,3vw,28px);margin-top:24px}
+h1{font-family:var(--serif);font-weight:700;color:var(--wine);font-size:clamp(38px,8.5vw,84px);line-height:1;letter-spacing:-.01em;margin:6px 0 20px}
+h1 em{color:var(--red)}
+.lede{max-width:38ch;font-size:clamp(18px,2.2vw,21px);color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--red);transition:transform .2s,background .2s,color .2s}
+.btn.main{background:var(--red);color:#fff}
+.btn.main:hover{transform:translateY(-2px);background:var(--red-d)}
+.btn.ghost{color:var(--red)}
+.btn.ghost:hover{background:var(--red);color:#fff}
+.plate{position:relative;aspect-ratio:1;max-width:500px;width:100%;justify-self:center}
+.plate .ring{position:absolute;inset:0;border-radius:50%;border:2px dashed var(--gold);animation:spin 60s linear infinite}
+.plate .disc{position:absolute;inset:6%;border-radius:50%;overflow:hidden;box-shadow:0 30px 60px -25px rgba(58,26,30,.6)}
+.plate .disc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1.2s ease,transform 6s ease}
+.plate .disc img.on{opacity:1;transform:scale(1)}
+.plate .tag{position:absolute;right:0;bottom:6%;background:var(--cream);border:1.5px solid var(--gold);border-radius:14px;padding:10px 16px;box-shadow:0 10px 24px -14px rgba(0,0,0,.4);max-width:66%}
+.plate .tag small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);font-weight:700}
+.plate .tag strong{font-family:var(--serif);font-size:20px;color:var(--wine);line-height:1.1}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bob{50%{transform:translateY(-4px) rotate(-3deg)}}
+@keyframes slide{to{transform:translateX(-50%)}}
+.marquee{background:var(--red);color:var(--cream);overflow:hidden;white-space:nowrap;padding:12px 0;font-family:var(--serif);font-style:italic;font-size:22px}
+.marquee div{display:inline-block;animation:slide 32s linear infinite}
+.marquee span{padding:0 22px}.marquee i{color:var(--gold-l);font-style:normal}
+.story{background:var(--wine);color:var(--cream);padding:clamp(56px,9vw,110px) var(--pad)}
+.story .in{max-width:1080px;margin:0 auto;display:grid;gap:36px}
+@media(min-width:860px){.story .in{grid-template-columns:.8fr 1.2fr}}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--gold-l)}
+.story h2{font-family:var(--serif);font-weight:700;font-size:clamp(32px,5.4vw,54px);line-height:1.05;margin-top:10px}
+.story p{color:#EBDCD3;max-width:58ch}
+.story p+p{margin-top:14px}
+.story .quote{font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.8vw,27px);color:var(--gold-l);border-top:1px solid rgba(233,207,143,.35);padding-top:18px;margin-top:24px}
+.carte{max-width:1080px;margin:0 auto;padding:clamp(56px,9vw,100px) var(--pad)}
+.carte .kicker,.gallery .kicker,.avis .kicker{color:var(--red)}
+.carte h2,.gallery h2,.avis h2{font-family:var(--serif);font-weight:700;color:var(--wine);font-size:clamp(30px,5vw,50px);line-height:1.05;margin:10px 0 24px}
+.cards{display:grid;gap:16px}
+@media(min-width:700px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 24px 50px -38px rgba(58,26,30,.6);transition:transform .3s}
+.card:hover{transform:translateY(-4px) rotate(-.5deg)}
+.card h3{font-family:var(--serif);font-size:24px;color:var(--red);margin-bottom:6px}
+.card p{color:var(--muted);font-size:16px}
+.card .dot{width:14px;height:14px;border-radius:50%;margin-bottom:12px}
+.gallery{padding:0 0 clamp(56px,9vw,100px)}
+.gallery .head{max-width:1080px;margin:0 auto;padding:0 var(--pad)}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px var(--pad) 18px}
+.strip figure{flex:0 0 min(74vw,320px);scroll-snap-align:start}
+.strip img{aspect-ratio:4/5;object-fit:cover;width:100%;border-radius:16px;transition:transform .35s}
+.strip figure:hover img{transform:translateY(-4px) rotate(-1deg)}
+.strip figcaption{font-family:var(--serif);font-size:19px;color:var(--wine);margin-top:8px}
+.avis{background:var(--cream-2);padding:clamp(56px,9vw,100px) var(--pad)}
+.avis .in{max-width:1080px;margin:0 auto}
+.q{display:grid;gap:16px}
+@media(min-width:760px){.q{grid-template-columns:1fr 1fr}}
+blockquote{background:#fff;border-left:4px solid var(--gold);border-radius:14px;padding:22px;font-family:var(--serif);font-style:italic;font-size:21px;color:var(--wine)}
+blockquote cite{display:block;margin-top:10px;font-family:var(--sans);font-style:normal;font-size:13px;color:var(--muted)}
+.info{padding:clamp(56px,9vw,100px) var(--pad)}
+.info .in{max-width:1080px;margin:0 auto;display:grid;gap:28px}
+@media(min-width:820px){.info .in{grid-template-columns:repeat(3,1fr)}}
+.info h3{font-family:var(--serif);font-size:26px;color:var(--red);margin-bottom:8px}
+.info .big{font-family:var(--serif);font-size:24px;color:var(--wine)}
+footer{text-align:center;padding:30px var(--pad) 36px;color:var(--muted);font-size:14px;background:var(--cream-2)}
+footer b{font-family:var(--serif);font-size:22px;color:var(--wine);display:block;margin-bottom:4px}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:10px;background:rgba(255,248,240,.96);border:1px solid var(--line);border-radius:999px;padding:6px;box-shadow:0 12px 30px -12px rgba(0,0,0,.35)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px}
+.bar a.m{background:var(--red);color:#fff}
+@media(min-width:900px){.bar{left:auto;right:24px;width:380px}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.reveal.seen{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour Boulangerie La Mi Do Ré</div>
+<header class="hero">
+  <div>
+    <div class="brand"><img src="img/logo.jpg" alt="Logo de La Mi Do Ré"><span>Boulangerie · Pâtissier · Glacier</span></div>
+    <p class="hello">Bonjour et bienvenue !</p>
+    <h1>Le pain du matin, <em>les gâteaux de la fête</em></h1>
+    <p class="lede">Au 234 rue Hubert Delisle, au Tampon, La Mi Do Ré prépare pains, viennoiseries, gâteaux sur commande et glaces, dès 5h30.</p>
+    <div class="cta">
+      <a class="btn main" href="tel:+262262256244">Appeler le 02 62 25 62 44</a>
+      <a class="btn ghost" href="https://www.facebook.com/boulangerie.la.mi.do.re.tampon">Voir leur Facebook</a>
+    </div>
+  </div>
+  <div class="plate" aria-hidden="true">
+    <div class="ring"></div>
+    <div class="disc">
+      <img class="on" src="img/gateau-fraise.jpg" alt="" data-n="Gâteau fraises &amp; crème">
+      <img src="img/tartelettes-2.jpg" alt="" data-n="Tartelettes aux fruits">
+      <img src="img/gateau-bougie.jpg" alt="" data-n="Gâteau d’anniversaire">
+      <img src="img/gateau-chocolat.jpg" alt="" data-n="Gâteau au chocolat">
+    </div>
+    <div class="tag"><small>Dans la vitrine</small><strong id="dish">Gâteau fraises &amp; crème</strong></div>
+  </div>
+</header>
+<div class="marquee" aria-hidden="true"><div>
+  <span>Pains frais <i>✦</i></span><span>Viennoiseries <i>✦</i></span><span>Gâteaux sur commande <i>✦</i></span><span>Glaces <i>✦</i></span><span>Pizzas, salades &amp; quiches <i>✦</i></span><span>Petits-fours <i>✦</i></span>
+  <span>Pains frais <i>✦</i></span><span>Viennoiseries <i>✦</i></span><span>Gâteaux sur commande <i>✦</i></span><span>Glaces <i>✦</i></span><span>Pizzas, salades &amp; quiches <i>✦</i></span><span>Petits-fours <i>✦</i></span>
+</div></div>
+<section class="story">
+  <div class="in">
+    <div class="reveal"><p class="kicker">La maison</p><h2>Une adresse du Tampon, ouverte depuis 2017</h2></div>
+    <div class="reveal">
+      <p>La Mi Do Ré est une boulangerie-pâtisserie du Tampon, installée rue Hubert Delisle depuis 2017. On y trouve un large choix de pains et de glaces, des petits-fours salés ou sucrés, des chocolats de Pâques et de Noël, des pièces montées, ainsi que des pizzas, des salades et des quiches.</p>
+      <p>Un parking accueille les clients, et la porte ouvre dès 5h30 pour que le pain frais accompagne le petit-déjeuner.</p>
+      <p class="quote">« Venez découvrir nos productions artisanales. »</p>
+    </div>
+  </div>
+</section>
+<section class="carte">
+  <div class="reveal"><p class="kicker">Au comptoir</p><h2>De quoi se faire plaisir à toute heure</h2></div>
+  <div class="cards">
+    <div class="card reveal"><div class="dot" style="background:var(--gold)"></div><h3>Boulangerie</h3><p>Un large choix de pains, des viennoiseries et des articles à faible teneur en sel.</p></div>
+    <div class="card reveal"><div class="dot" style="background:var(--rose)"></div><h3>Pâtisserie &amp; glaces</h3><p>Gâteaux sur commande, pièces montées, petits-fours salés ou sucrés, chocolats de fête et glaces.</p></div>
+    <div class="card reveal"><div class="dot" style="background:var(--pistache)"></div><h3>Salé du midi</h3><p>Pizzas, salades et quiches pour un déjeuner gourmand.</p></div>
+  </div>
+</section>
+<section class="gallery">
+  <div class="head reveal"><p class="kicker">Dans la vitrine</p><h2>Quelques douceurs de la maison</h2></div>
+  <div class="strip">
+    <figure><img src="img/gateau-fraise.jpg" alt="Gâteau aux fraises et à la crème" loading="lazy"><figcaption>Fraises &amp; crème</figcaption></figure>
+    <figure><img src="img/tartelettes.jpg" alt="Tartelettes aux fruits rouges et au kiwi" loading="lazy"><figcaption>Tartelettes aux fruits</figcaption></figure>
+    <figure><img src="img/gateau-bougie.jpg" alt="Gâteau d’anniversaire avec une bougie" loading="lazy"><figcaption>Pour les anniversaires</figcaption></figure>
+    <figure><img src="img/patisseries.jpg" alt="Assortiment de pâtisseries sur assiettes blanches" loading="lazy"><figcaption>Petites pâtisseries</figcaption></figure>
+    <figure><img src="img/gateau-chocolat.jpg" alt="Gâteau au chocolat et bougies" loading="lazy"><figcaption>Gâteau au chocolat</figcaption></figure>
+    <figure><img src="img/tartelettes-2.jpg" alt="Tartelettes garnies de fruits rouges" loading="lazy"><figcaption>Fruits rouges &amp; kiwi</figcaption></figure>
+  </div>
+</section>
+<section class="avis">
+  <div class="in">
+    <div class="reveal"><p class="kicker">Ils en parlent</p><h2>Des clients qui reviennent</h2></div>
+    <div class="q">
+      <blockquote class="reveal">« Super accueil ! Pâtisserie et viennoiserie de bonne qualité. Magnifique gâteau sur commande. »<cite>Avis Google, 5/5, août 2023</cite></blockquote>
+      <blockquote class="reveal">« … les crèmes dans les gâteaux sont tout simplement formidable. »<cite>Avis Google, 4/5, mai 2022</cite></blockquote>
+    </div>
+  </div>
+</section>
+<section class="info" id="infos">
+  <div class="in">
+    <div class="reveal"><h3>Venir</h3><p>234 rue Hubert Delisle<br>97430 Le Tampon<br>Parking pour les clients</p></div>
+    <div class="reveal"><h3>Horaires</h3><p>Ouvert dès 5h30<br>Du lundi au samedi jusqu’à 19h</p></div>
+    <div class="reveal"><h3>Commander</h3><p><a href="tel:+262262256244">02 62 25 62 44</a><br>ou via <a href="https://www.facebook.com/boulangerie.la.mi.do.re.tampon">Facebook</a></p><p class="big">À très vite !</p></div>
+  </div>
+</section>
+<footer><b>Boulangerie La Mi Do Ré</b>Maquette privée réalisée par Aurélie &amp; Jonathan à partir d’informations publiques.</footer>
+<nav class="bar" aria-label="Actions rapides">
+  <a class="m" href="tel:+262262256244">Appeler</a>
+  <a href="https://www.facebook.com/boulangerie.la.mi.do.re.tampon">Facebook</a>
+</nav>
+<script>
+(function(){
+  var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("seen");io.unobserve(x.target)}})},{threshold:.15});
+  document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+  var imgs=document.querySelectorAll(".disc img"),tag=document.getElementById("dish"),i=0;
+  if(!matchMedia("(prefers-reduced-motion: reduce)").matches){
+    setInterval(function(){imgs[i].classList.remove("on");i=(i+1)%imgs.length;imgs[i].classList.add("on");tag.innerHTML=imgs[i].dataset.n},3800);
+  }
+})();
+</script>
+</body>
+</html>

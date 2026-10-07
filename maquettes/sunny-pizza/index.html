@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>Sunny Pizza — pizzeria à La Montagne, Saint-Denis</title>
+<meta name="description" content="Pizzas à pâte fine, à emporter, au 29bis route des Eucalyptus à La Montagne. Ouvert tous les soirs dès 17h.">
+<meta property="og:title" content="Sunny Pizza — pizzeria à La Montagne">
+<meta property="og:description" content="Pâte fine, garniture généreuse, accueil souriant : une maquette offerte par Aurélie &amp; Jonathan.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/sunny-pizza/img/logo.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/sunny-pizza/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--sun:#FFD21F;--sun-d:#F5A400;--blue:#0A5BFF;--blue-d:#0A3FB5;--sky:#CFEAFF;--red:#E5321F;--cream:#FFFBEF;--ink:#13233F;--muted:#55627A;
+--disp:"Baloo 2",system-ui,sans-serif;--body:"Nunito",system-ui,sans-serif;--pad:clamp(20px,5vw,64px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--body);background:var(--cream);color:var(--ink);font-size:17px;line-height:1.6;padding-bottom:84px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.ribbon{background:var(--blue-d);color:#fff;font-size:13px;padding:9px var(--pad)}
+.ribbon b{color:var(--sun)}
+.hero{position:relative;overflow:hidden;background:var(--sun);padding:clamp(32px,6vw,80px) var(--pad)}
+.rays{position:absolute;left:50%;top:50%;width:220vmax;height:220vmax;margin:-110vmax 0 0 -110vmax;background:repeating-conic-gradient(from 0deg,rgba(255,255,255,.22) 0 7.5deg,transparent 7.5deg 15deg);animation:spin 120s linear infinite}
+.hero .in{position:relative;max-width:1080px;margin:0 auto;display:grid;gap:32px;align-items:center;justify-items:center;text-align:center}
+@media(min-width:860px){.hero .in{grid-template-columns:1.1fr .9fr;text-align:left;justify-items:start}}
+.logo{width:min(70vw,320px);aspect-ratio:1;border-radius:50%;border:6px solid var(--blue);box-shadow:0 24px 50px -20px rgba(10,63,181,.6);object-fit:cover;animation:bob 5s ease-in-out infinite;justify-self:center}
+.kicker{font-weight:800;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-d)}
+h1{font-family:var(--disp);font-weight:800;font-size:clamp(44px,10vw,88px);line-height:.95;color:var(--blue-d);margin:8px 0 14px}
+h1 em{font-style:normal;color:var(--red)}
+.lede{font-size:clamp(18px,2.3vw,21px);max-width:34ch;font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;justify-content:center}
+@media(min-width:860px){.cta{justify-content:flex-start}}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:999px;font-weight:800;text-decoration:none;border:3px solid var(--blue-d);transition:transform .2s,background .2s,color .2s}
+.btn.main{background:var(--blue-d);color:#fff}.btn.main:hover{transform:translateY(-3px) rotate(-1deg)}
+.btn.ghost{background:transparent;color:var(--blue-d)}.btn.ghost:hover{background:var(--blue-d);color:#fff}
+.marquee{background:var(--blue-d);color:var(--sun);overflow:hidden;white-space:nowrap;font-family:var(--disp);font-weight:700;font-size:20px;padding:10px 0}
+.marquee div{display:inline-block;animation:slide 28s linear infinite}
+.marquee span{margin:0 22px}
+section{padding:clamp(52px,8vw,100px) var(--pad)}
+.wrap{max-width:1000px;margin:0 auto}
+h2{overflow-wrap:anywhere;font-family:var(--disp);font-weight:800;color:var(--blue-d);font-size:clamp(28px,5.5vw,54px);line-height:1;margin:8px 0 16px}
+.about{display:grid;gap:28px}
+@media(min-width:860px){.about{grid-template-columns:1fr 1fr;align-items:start}}
+.about p+p{margin-top:12px}
+.facts{list-style:none;padding:0;display:grid;gap:12px}
+.facts li{background:#fff;border:2px solid var(--sky);border-radius:18px;padding:14px 18px;display:flex;gap:14px;align-items:center;font-weight:600;transition:transform .25s}
+.facts li:hover{transform:translateX(6px)}
+.facts i{font-style:normal;font-size:26px}
+.reviews{background:var(--sky)}
+.cards{display:grid;gap:16px;margin-top:20px}
+@media(min-width:800px){.cards{grid-template-columns:repeat(2,1fr)}}
+blockquote{background:#fff;border-radius:20px;padding:20px 22px;box-shadow:0 18px 36px -26px rgba(10,63,181,.6);position:relative}
+blockquote:before{content:"“";font-family:var(--disp);font-size:64px;line-height:.6;color:var(--sun-d);position:absolute;top:22px;left:14px}
+blockquote p{padding-left:30px;font-weight:600}
+blockquote cite{display:block;margin-top:10px;padding-left:30px;font-style:normal;font-size:14px;color:var(--muted)}
+.stars{color:var(--sun-d);letter-spacing:2px}
+.src{font-size:14px;color:var(--muted);margin-top:16px}
+.hours{display:grid;gap:28px}
+@media(min-width:820px){.hours{grid-template-columns:1fr 1fr}}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 18px 36px -26px rgba(10,63,181,.6)}
+td{padding:11px 18px;border-bottom:1px solid var(--sky)}td+td{text-align:right;font-weight:800;color:var(--blue-d)}
+tr:last-child td{border:0}
+.contact .big{font-family:var(--disp);font-size:clamp(28px,6vw,40px);font-weight:800;color:var(--red);text-decoration:none;display:inline-block;margin:6px 0}
+.contact p{margin-bottom:6px;overflow-wrap:anywhere}
+footer{text-align:center;padding:32px var(--pad);font-size:14px;color:var(--muted)}
+footer b{display:block;font-family:var(--disp);font-size:22px;color:var(--blue-d)}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px;background:rgba(255,251,239,.96);border:2px solid var(--blue-d);border-radius:999px;padding:5px;box-shadow:0 12px 30px -12px rgba(0,0,0,.4)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:800;font-size:15px}
+.bar a.m{background:var(--blue-d);color:#fff}
+@media(min-width:900px){.bar{left:auto;right:24px;width:380px}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}.reveal.seen{opacity:1;transform:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bob{50%{transform:translateY(-10px) rotate(2deg)}}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour Sunny Pizza</div>
+<header class="hero">
+  <div class="rays" aria-hidden="true"></div>
+  <div class="in">
+    <div>
+      <p class="kicker">Pizzeria · La Montagne, Saint-Denis</p>
+      <h1>Du soleil <em>dans&nbsp;chaque</em> pizza</h1>
+      <p class="lede">Pâte fine, garniture généreuse et accueil souriant, à emporter tous les soirs dès 17h.</p>
+      <div class="cta">
+        <a class="btn main" href="tel:+262262500000">Appeler le 02 62 50 00 00</a>
+        <a class="btn ghost" href="https://www.facebook.com/people/SUNNY-PIZZA/61550741849076/" target="_blank" rel="noopener">Nous suivre sur Facebook</a>
+      </div>
+    </div>
+    <img class="logo" src="img/logo.jpg" alt="Logo Sunny Pizza : un chef souriant qui tient une pizza, pouce levé">
+  </div>
+</header>
+<div class="marquee" aria-hidden="true"><div><span>☀ Pâte fine</span><span>🍕 Pizza norvégienne</span><span>🍕 Pizza créole</span><span>☀ À emporter</span><span>🍕 Petite pizza à 7 €</span><span>☀ Accueil souriant</span><span>☀ Pâte fine</span><span>🍕 Pizza norvégienne</span><span>🍕 Pizza créole</span><span>☀ À emporter</span><span>🍕 Petite pizza à 7 €</span><span>☀ Accueil souriant</span></div></div>
+
+<section><div class="wrap about reveal">
+  <div>
+    <p class="kicker" style="color:var(--red)">Notre pizzeria</p>
+    <h2>Une adresse de quartier, au cœur de La Montagne</h2>
+    <p>Sunny Pizza vous accueille au 29bis route des Eucalyptus, avec des pizzas à emporter et à retirer sur place.</p>
+    <p>Les clients parlent d’une pâte très fine, de pizzas bien garnies et d’un accueil chaleureux, de quoi revenir régulièrement.</p>
+  </div>
+  <ul class="facts">
+    <li><i>🍕</i>Pizzas à la pâte très fine</li>
+    <li><i>🥡</i>Vente à emporter et retrait sur place</li>
+    <li><i>🅿️</i>Parking gratuit dans la rue</li>
+    <li><i>💳</i>Paiement par carte bancaire</li>
+  </ul>
+</div></section>
+<section class="reviews"><div class="wrap reveal">
+  <p class="kicker">Ils en parlent</p>
+  <h2>Les mots des clients</h2>
+  <div class="cards">
+    <blockquote><p>Accueil et ponctualité des commandes au top, je recommande vivement 👍👍</p><cite><span class="stars">★★★★★</span> · février 2026</cite></blockquote>
+    <blockquote><p>Nous avons pris 2 pizzas. Elles étaient DELICIEUSES! Une pâte très fine et beaucoup de garniture un vrai délice !</p><cite><span class="stars">★★★★★</span> · octobre 2024</cite></blockquote>
+    <blockquote><p>Pris deux pizza norvégienne et créole elles étaient super bonnes pâte fine viande et poisson excellent et enfin on trouve du citron sur la norvégienne pas des zestes 👍</p><cite><span class="stars">★★★★★</span> · décembre 2024</cite></blockquote>
+    <blockquote><p>Pizza délicieuse la petite à 7€ et pas chère et rempli bien le ventre quand on est tout seul je recommande</p><cite><span class="stars">★★★★★</span> · novembre 2023</cite></blockquote>
+  </div>
+  <p class="src">Avis publics laissés sur la fiche Google de Sunny Pizza (4,5/5 sur 17 avis), relayés par exa.ai.</p>
+</div></section>
+
+<section><div class="wrap hours reveal">
+  <div>
+    <p class="kicker" style="color:var(--red)">Quand passer</p>
+    <h2>Ouvert tous les soirs</h2>
+    <p>Du lundi au dimanche, de 17h jusqu’à 21h (21h30 le vendredi et le samedi).</p>
+  </div>
+  <table>
+    <tr><td>Lundi – Jeudi</td><td>17h – 21h</td></tr>
+    <tr><td>Vendredi</td><td>17h – 21h30</td></tr>
+    <tr><td>Samedi</td><td>17h – 21h30</td></tr>
+    <tr><td>Dimanche</td><td>17h – 21h</td></tr>
+  </table>
+</div></section>
+
+<section class="contact" style="background:var(--sun)"><div class="wrap reveal">
+  <p class="kicker">Venez nous voir</p>
+  <h2>29bis route des Eucalyptus</h2>
+  <p>La Montagne, 97417 Saint-Denis</p>
+  <a class="big" href="tel:+262262500000">02 62 50 00 00</a>
+  <p><a href="mailto:sunnypizzarun@gmail.com">sunnypizzarun@gmail.com</a></p>
+  <p><a href="https://www.facebook.com/people/SUNNY-PIZZA/61550741849076/" target="_blank" rel="noopener">Page Facebook Sunny Pizza</a> · <a href="https://maps.google.com/maps?q=29bis+route+des+eucalyptus,+La+Montagne,+R%C3%A9union" target="_blank" rel="noopener">Itinéraire</a></p>
+</div></section>
+
+<footer><b>Sunny Pizza</b>Maquette privée réalisée par Aurélie &amp; Jonathan à partir d’informations publiques.</footer>
+<nav class="bar" aria-label="Actions rapides"><a class="m" href="tel:+262262500000">📞 Appeler</a><a href="https://www.facebook.com/people/SUNNY-PIZZA/61550741849076/" target="_blank" rel="noopener">Facebook</a></nav>
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("seen");io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
