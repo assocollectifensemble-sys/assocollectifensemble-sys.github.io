@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>Saint-Hubert Brasserie — brasserie au cœur de Saint-Denis</title>
+<meta name="description" content="Brasserie du centre-ville de Saint-Denis, 4 rue Victor Mac Auliffe. Cuisine maison, déjeuner et dîner, soirées karaoké et grands matchs entre amis.">
+<meta property="og:title" content="Saint-Hubert Brasserie — Saint-Denis">
+<meta property="og:description" content="Une maquette offerte par Aurélie &amp; Jonathan : le cygne, la terrasse, les belles assiettes et les soirées du Saint-Hub'.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/saint-hubert-brasserie/img/logo.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/saint-hubert-brasserie/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0C0C0D; --black-2:#1B1B1E; --white:#FFFFFF; --cream:#F6F2EA; --cream-2:#ECE5D8;
+  --gold:#C9A45C; --gold-l:#E6CD91; --gold-d:#8F6E2C;
+  --ink:#17171A; --muted:#62615E; --line:rgba(12,12,13,.14);
+  --serif:'Playfair Display',Georgia,serif; --sans:'Karla',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:76px}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.ribbon{background:var(--gold);color:var(--black);font-size:13px;padding:9px var(--pad);text-align:center}
+.ribbon b{font-weight:700}
+.hero{background:var(--black);color:var(--white);position:relative;overflow:hidden;padding:clamp(36px,7vw,90px) var(--pad)}
+.hero::before{content:"";position:absolute;inset:-30%;background:radial-gradient(circle at 70% 30%,rgba(201,164,92,.22),transparent 45%);animation:glow 9s ease-in-out infinite alternate}
+@keyframes glow{to{transform:translate(-6%,6%) scale(1.1)}}
+.hero .in{position:relative;max-width:1100px;margin:0 auto;display:grid;gap:34px;align-items:center}
+@media(min-width:860px){.hero .in{grid-template-columns:1.1fr .9fr}}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--gold-l)}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,10vw,88px);line-height:1;margin:12px 0 18px}
+h1 em{color:var(--gold-l);font-weight:500}
+.lede{max-width:38ch;font-size:clamp(18px,2.2vw,21px);color:#E3DFD6}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--gold);transition:transform .2s,background .2s,color .2s}
+.btn.main{background:var(--gold);color:var(--black)}
+.btn.main:hover{transform:translateY(-2px);background:var(--gold-l)}
+.btn.ghost{color:var(--white)}
+.btn.ghost:hover{background:var(--gold);color:var(--black)}
+.logo{justify-self:center;width:min(78vw,380px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:1.5px solid var(--gold);box-shadow:0 0 0 10px rgba(201,164,92,.12),0 30px 60px -20px #000;animation:float 7s ease-in-out infinite}
+.logo img{width:100%;height:100%;object-fit:cover}
+@keyframes float{50%{transform:translateY(-10px)}}
+.marquee{background:var(--black-2);color:var(--gold-l);overflow:hidden;white-space:nowrap;border-block:1px solid rgba(201,164,92,.35)}
+.marquee div{display:inline-block;padding:12px 0;animation:slide 40s linear infinite;font-family:var(--serif);font-style:italic;font-size:18px}
+.marquee span{margin:0 22px}
+@keyframes slide{to{transform:translateX(-50%)}}
+section{padding:clamp(54px,9vw,104px) var(--pad)}
+.wrap{max-width:1080px;margin:0 auto}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(30px,5.4vw,54px);line-height:1.05;margin:10px 0 16px;color:var(--black)}
+.kicker.d{color:var(--gold-d)}
+.about .wrap{display:grid;gap:30px}
+@media(min-width:860px){.about .wrap{grid-template-columns:1fr 1fr;align-items:start}}
+.about p{max-width:52ch;color:#34332F}
+.about p+p{margin-top:12px}
+.facts{list-style:none;padding:0;display:grid;gap:12px}
+.facts li{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:14px 18px}
+.facts b{display:block;font-family:var(--serif);font-size:20px}
+.facts span{color:var(--muted);font-size:15px}
+.gallery{background:var(--black);color:var(--white)}
+.gallery h2{color:var(--white)}
+.grid{display:grid;gap:16px;margin-top:26px}
+@media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr)}}
+figure{border-radius:16px;overflow:hidden;background:var(--black-2);border:1px solid rgba(201,164,92,.3)}
+figure img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .8s ease}
+figure:hover img{transform:scale(1.05)}
+figcaption{padding:12px 16px;font-family:var(--serif);font-style:italic;color:var(--gold-l)}
+.note{color:#B8B4AA;font-size:14px;margin-top:16px}
+.review{text-align:center}
+.review .score{font-family:var(--serif);font-size:clamp(64px,16vw,120px);color:var(--gold-d);line-height:1}
+.review .score small{font-size:.4em;display:inline;margin:0;color:inherit}
+.review p{max-width:46ch;margin:8px auto 0;color:#34332F}
+.review small{display:block;margin-top:10px;color:var(--muted)}
+.services{background:var(--cream-2)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.chips span{background:var(--black);color:var(--gold-l);border-radius:999px;padding:8px 18px;font-size:15px;font-weight:500}
+.visit .wrap{display:grid;gap:30px}
+@media(min-width:860px){.visit .wrap{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(22px,4vw,34px);box-shadow:0 24px 50px -34px rgba(0,0,0,.5)}
+.card dl{display:grid;gap:14px}
+.card dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold-d)}
+.card dd{font-size:18px}
+.card a{text-underline-offset:3px}
+footer{background:var(--black);color:#CFCBC1;text-align:center;padding:30px var(--pad);font-size:14px}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--black);border-top:2px solid var(--gold);display:flex;gap:10px;padding:10px 14px}
+.dock a{flex:1;min-height:48px;display:flex;align-items:center;justify-content:center;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px}
+.dock .c{background:var(--gold);color:var(--black)}
+.dock .f{border:2px solid var(--gold);color:var(--gold-l)}
+@media(min-width:900px){.dock{display:none}body{padding-bottom:0}}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour Saint-Hubert Brasserie</div>
+
+<header class="hero">
+  <div class="in">
+    <div>
+      <p class="kicker">Brasserie · Centre-ville de Saint-Denis</p>
+      <h1>Saint-Hubert <em>Brasserie</em></h1>
+      <p class="lede">Une adresse chaleureuse au cœur de Saint-Denis : cuisine maison au déjeuner et au dîner, belles assiettes et soirées entre amis.</p>
+      <div class="cta">
+        <a class="btn main" href="tel:+262692679623">Appeler la brasserie</a>
+        <a class="btn ghost" href="https://www.facebook.com/people/Saint-Hubert-Brasserie/100063638497370" target="_blank" rel="noopener">Suivre sur Facebook</a>
+      </div>
+    </div>
+    <div class="logo"><img src="img/logo.jpg" alt="Logo Saint-Hubert Brasserie : un cygne et les lettres SH, blanc sur fond noir" width="720" height="720"></div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div>
+  <span>Cuisine maison</span>✦<span>Repas de groupe</span>✦<span>Terrasse</span>✦<span>Menu enfants</span>✦<span>Climatisation</span>✦<span>Soirées karaoké</span>✦
+  <span>Cuisine maison</span>✦<span>Repas de groupe</span>✦<span>Terrasse</span>✦<span>Menu enfants</span>✦<span>Climatisation</span>✦<span>Soirées karaoké</span>✦
+  <span>Cuisine maison</span>✦<span>Repas de groupe</span>✦<span>Terrasse</span>✦<span>Menu enfants</span>✦<span>Climatisation</span>✦<span>Soirées karaoké</span>✦
+  <span>Cuisine maison</span>✦<span>Repas de groupe</span>✦<span>Terrasse</span>✦<span>Menu enfants</span>✦<span>Climatisation</span>✦<span>Soirées karaoké</span>✦
+</div></div>
+
+<section class="about">
+  <div class="wrap">
+    <div class="rv">
+      <p class="kicker d">Le Saint-Hub'</p>
+      <h2>Une table, un comptoir, une bonne bande</h2>
+      <p>Installée en centre-ville, rue Victor Mac Auliffe, la Saint-Hubert Brasserie accueille jusqu'à 74 convives dans un établissement chaleureux et coloré, où toute l'équipe veille à ce que chacun se sente bien.</p>
+      <p>Karaoké dès 19h, puis France-Italie sur écran : le Saint-Hubert sait faire d'une soirée un vrai rendez-vous, où l'on vient chanter et vibrer ensemble.</p>
+    </div>
+    <ul class="facts rv">
+      <li><b>74 couverts</b><span>Un cadre pensé pour les tablées entre amis et en famille</span></li>
+      <li><b>12h – 14h · 19h – 22h</b><span>Le service du déjeuner et du dîner</span></li>
+      <li><b>7,8 K abonnés</b><span>suivent la page Facebook de la brasserie</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <p class="kicker">À l'assiette</p>
+    <h2 class="rv">Des assiettes qui donnent envie</h2>
+    <div class="grid">
+      <figure class="rv"><img src="img/poisson.jpg" alt="Filet de poisson doré sur sauce crémeuse, légumes rôtis et salade colorée" loading="lazy" width="1900" height="1080"><figcaption>Poisson, sauce crémeuse &amp; légumes rôtis</figcaption></figure>
+      <figure class="rv"><img src="img/gambas.jpg" alt="Gambas dorées, tomates, chou rouge, brocoli et citron" loading="lazy" width="1900" height="1080"><figcaption>Gambas &amp; légumes croquants</figcaption></figure>
+      <figure class="rv"><img src="img/viande.jpg" alt="Viande grillée en tranches avec pâtes et sauce violette" loading="lazy" width="1900" height="1080"><figcaption>Viande grillée en tranches</figcaption></figure>
+    </div>
+    <p class="note">Photos de la fiche de la brasserie sur reunion.fr (Île de la Réunion Tourisme).</p>
+  </div>
+</section>
+
+<section class="review">
+  <div class="wrap rv">
+    <p class="kicker d">Ils en parlent</p>
+    <div class="score">4,3<small>/5</small></div>
+    <p>Une note moyenne de 4,3 sur 5 sur 408 avis Google : le Saint-Hub' a ses habitués.</p>
+    <small>Source : fiche Google de l'établissement, relayée par exa.ai</small>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap rv">
+    <p class="kicker d">Sur place</p>
+    <h2>Tout pour passer un bon moment</h2>
+    <div class="chips">
+      <span>Brasserie</span><span>Cuisine maison</span><span>Repas de groupe</span><span>Terrasse</span><span>Menu pour enfants</span><span>Climatisation</span><span>Accès handicapés</span><span>Chiens bienvenus</span>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <div class="rv">
+      <p class="kicker d">Venir nous voir</p>
+      <h2>Rendez-vous en centre-ville</h2>
+      <p style="max-width:40ch;color:#34332F">Au cœur de Saint-Denis, la brasserie vous accueille au déjeuner et au dîner, réservations au 0692 67 96 23.</p>
+    </div>
+    <div class="card rv">
+      <dl>
+        <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=4+rue+Victor+Mac+Auliffe+97400+Saint-Denis" target="_blank" rel="noopener">4 rue Victor Mac Auliffe<br>97400 Saint-Denis</a></dd></div>
+        <div><dt>Horaires</dt><dd>Déjeuner 12h – 14h<br>Dîner 19h – 22h</dd></div>
+        <div><dt>Téléphone</dt><dd><a href="tel:+262692679623">0692 67 96 23</a></dd></div>
+        <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/people/Saint-Hubert-Brasserie/100063638497370" target="_blank" rel="noopener">Saint-Hubert Brasserie | Saint-Denis</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<footer>Maquette privée réalisée par Aurélie &amp; Jonathan à partir d'informations publiques.</footer>
+
+<nav class="dock" aria-label="Contact rapide">
+  <a class="c" href="tel:+262692679623">Appeler</a>
+  <a class="f" href="https://www.facebook.com/people/Saint-Hubert-Brasserie/100063638497370" target="_blank" rel="noopener">Facebook</a>
+</nav>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
