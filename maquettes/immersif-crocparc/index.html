@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Croc Parc — Une journée extraordinaire à l'Étang-Salé</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--vert:#1f6b3a;--vert2:#7ed957;--jaune:#ffd23f;--nuit:#0b1a10;--creme:#fffbea}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--nuit);color:var(--creme);font-family:Nunito,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{overflow-x:hidden}
+h1,h2,.t{font-family:"Baloo 2",system-ui,sans-serif;font-weight:800;letter-spacing:-.01em}
+/* barre pratique toujours visible */
+#pratique{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;gap:.6rem;padding:.55rem max(14px,env(safe-area-inset-left));background:rgba(11,26,16,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:.82rem}
+#pratique .logo{font-family:"Baloo 2";font-weight:800;font-size:1.05rem;color:var(--jaune);margin-right:auto}
+#pratique a{color:var(--creme);text-decoration:none;padding:.4rem .75rem;border-radius:999px;border:1px solid rgba(255,255,255,.25);white-space:nowrap}
+#pratique a.go{background:var(--jaune);color:#1b1b0a;border-color:var(--jaune);font-weight:700}
+.only-m{display:none}@media(max-width:560px){.hide-m{display:none}.only-m{display:inline}#skip{padding:.55rem .9rem;opacity:.9}}
+#intro{height:100svh;position:relative;overflow:hidden}
+#intro .bg{position:absolute;inset:-5%;background:url(img/c1_oeil.webp) center/cover}
+#intro .in{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 7vw 16svh;background:linear-gradient(transparent 40%,rgba(5,15,8,.85))}
+#intro h1{font-size:clamp(2.4rem,8vw,6rem);line-height:.95;text-shadow:0 4px 30px rgba(0,0,0,.5)}
+#intro h1 span{color:var(--jaune)}
+#intro p{margin-top:.8rem;font-size:clamp(1rem,2vw,1.25rem);max-width:30em;opacity:.95}
+.choose{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.95rem 1.4rem;border-radius:999px;font:700 1rem Nunito;text-decoration:none;cursor:pointer;border:2px solid var(--jaune);color:var(--creme);background:rgba(0,0,0,.25)}
+.btn.p{background:var(--jaune);color:#1b1b0a}
+.scene{position:relative;height:260vh}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.bg{position:absolute;inset:-6%;background-size:cover;background-position:center;will-change:transform}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),transparent 25%,transparent 50%,rgba(5,15,8,.85))}
+.card{position:absolute;left:5vw;bottom:9svh;max-width:min(560px,90vw);padding:1.3rem 1.5rem;border-radius:22px;background:rgba(11,26,16,.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.15);opacity:0;transform:translateY(40px)}
+.card .k{font:700 .72rem Nunito;letter-spacing:.2em;text-transform:uppercase;color:var(--vert2);margin-bottom:.4rem}
+.card h2{font-size:clamp(1.6rem,4.4vw,3rem);line-height:1}
+.card p{margin-top:.6rem;line-height:1.5;opacity:.95}
+.card .when{display:inline-block;margin-top:.8rem;padding:.3rem .7rem;border-radius:999px;background:var(--jaune);color:#1b1b0a;font-weight:700;font-size:.85rem}
+.right .card{left:auto;right:5vw}
+#fin{min-height:100svh;padding:16vh 6vw 8vh;background:linear-gradient(#123a20,var(--nuit))}
+#fin h2{font-size:clamp(2.2rem,6vw,4.6rem);line-height:1}
+#fin h2 span{color:var(--jaune)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:2rem 0}
+.box{padding:1.2rem 1.3rem;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);line-height:1.6}
+.box b{display:block;font:800 1.1rem "Baloo 2";color:var(--jaune);margin-bottom:.3rem}
+.note{font-size:.72rem;opacity:.5;margin-top:2rem}
+#skip{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:60;padding:.75rem 1.15rem;border-radius:999px;border:0;background:var(--jaune);color:#1b1b0a;font:700 .85rem Nunito;cursor:pointer;box-shadow:0 8px 30px rgba(0,0,0,.35);transition:opacity .4s}
+#skip.hide{opacity:0;pointer-events:none}
+#bar{position:fixed;left:0;bottom:0;height:4px;width:100%;background:var(--vert2);transform-origin:left;transform:scaleX(0);z-index:59}
+@media(max-width:699px){.card{left:4vw;right:4vw;bottom:calc(80px + env(safe-area-inset-bottom));max-width:none}.right .card{right:4vw}}
+@media (prefers-reduced-motion:reduce){.scene{height:auto}.stage{position:relative;min-height:100svh;height:auto}.card{opacity:1!important;transform:none!important}.bg{transform:none!important}}
+</style>
+</head>
+<body>
+<nav id="pratique" aria-label="Infos pratiques">
+  <span class="logo">Croc Parc</span>
+  <a class="hide-m" href="#infos" data-ev="nav_horaires">Horaires &amp; tarifs</a>
+  <a href="tel:+262262914041" data-ev="nav_appel">📞 Appeler</a>
+  <a class="go" href="#infos" data-ev="nav_venir">Venir</a>
+</nav>
+<div id="bar"></div>
+<button id="skip" type="button"><span class="hide-m">Passer l'histoire → infos pratiques</span><span class="only-m">Passer ⏭</span></button>
+
+<section id="intro">
+  <div class="bg"></div>
+  <div class="in">
+    <h1>Il y a quelqu'un<br>qui vous <span>attend</span>…</h1>
+    <p>Une journée à Croc Parc, racontée en une minute. Faites défiler, ou filez directement aux infos.</p>
+    <div class="choose">
+      <a class="btn p" href="#s1" data-ev="intro_histoire">▼ Raconte-moi</a>
+      <a class="btn" href="#infos" data-ev="intro_infos">Horaires, tarifs, accès</a>
+    </div>
+  </div>
+</section>
+
+<section class="scene" id="s1" data-k="entree"><div class="stage"><div class="bg" data-src="c2_entree"></div><div class="shade"></div>
+  <div class="card"><div class="k">10h · L'aventure commence</div><h2>Bienvenue dans la jungle de l'Étang-Salé.</h2><p>Un chemin de terre, des bambous, des cris d'oiseaux… et toute une famille d'animaux qui vous attend.</p></div></div></section>
+
+<section class="scene right" id="s2" data-k="voliere"><div class="stage"><div class="bg" data-src="c3_voliere"></div><div class="shade"></div>
+  <div class="card"><div class="k">À tout moment</div><h2>On entre dans la grande volière.</h2><p>Les oiseaux passent au ras des têtes. On a vraiment l'impression d'être avec les oiseaux.</p></div></div></section>
+
+<section class="scene" id="s3" data-k="ferme"><div class="stage"><div class="bg" data-src="c4_ferme"></div><div class="shade"></div>
+  <div class="card"><div class="k">La mini-ferme</div><h2>Arthur, Bambou et les chèvres naines.</h2><p>Le cochon nain, le poney, et l'enclos des chèvres où les enfants peuvent entrer.</p><span class="when">11h · les mini-chèvres</span></div></div></section>
+
+<section class="scene right" id="s4" data-k="makis"><div class="stage"><div class="bg" data-src="c5_makis"></div><div class="shade"></div>
+  <div class="card"><div class="k">Les makis catta</div><h2>Roméo, Juliette et leurs trois petits.</h2><p>Bain de soleil, queues rayées, grands yeux orange : la famille la plus photogénique du parc.</p><span class="when">Mer. &amp; dim. 15h · nourrissage (lémuriens ou crocos)</span></div></div></section>
+
+<section class="scene" id="s5" data-k="tortues"><div class="stage"><div class="bg" data-src="c6_tortues"></div><div class="shade"></div>
+  <div class="card"><div class="k">Le goûter</div><h2>Papouilles aux tortues, roue des paons.</h2><p>Les tortues géantes prennent leur temps. Les paons, eux, font le spectacle.</p><span class="when">14h · papouilles aux tortues</span></div></div></section>
+
+<section class="scene right" id="s6" data-k="cirque"><div class="stage"><div class="bg" data-src="c7_cirque"></div><div class="shade"></div>
+  <div class="card"><div class="k">Pendant les vacances</div><h2>Le spectacle de cirque.</h2><p>Jonglerie et numéros pour toute la famille, inclus dans l'entrée. Et pendant que les enfants jouent, les parents ont leur blind test-karaoké.</p><span class="when">14h30 · vacances scolaires</span></div></div></section>
+
+<section class="scene" id="s7" data-k="croco"><div class="stage"><div class="bg" data-src="c8_croco"></div><div class="shade"></div>
+  <div class="card"><div class="k">Le grand moment</div><h2>Les crocodiles sortent de l'eau.</h2><p>Visibles toute la journée. Mais certains mercredis et dimanches, le nourrissage transforme la visite.</p><span class="when">Mer. &amp; dim. 15h · nourrissage (crocos ou lémuriens)</span></div></div></section>
+
+<section class="scene right" id="s8" data-k="tresor"><div class="stage"><div class="bg" data-src="c9_tresor"></div><div class="shade"></div>
+  <div class="card"><div class="k">Pour les petits aventuriers</div><h2>La chasse au trésor.</h2><p>Une carte, des indices, toute la bande à la recherche du trésor : le final de la journée.</p><span class="when">15h30 · vacances scolaires</span></div></div></section>
+
+<section class="scene" id="s9" data-k="fin"><div class="stage"><div class="bg" data-src="c10_fin"></div><div class="shade"></div>
+  <div class="card"><div class="k">17h</div><h2>Une journée qu'ils vont raconter longtemps.</h2><p>Et vous, c'est quand qu'on vous voit ?</p></div></div></section>
+
+<section id="infos">
+  <div id="fin">
+  <h2>Venez <span>en vrai</span>.</h2>
+  <div class="grid">
+    <div class="box"><b>Horaires</b>Mardi au dimanche, 10h–17h.<br>Tous les jours pendant les vacances scolaires.</div>
+    <div class="box"><b>Tarifs</b>Adulte 14 € · Enfant 3-12 ans 12 €<br>Gratuit -3 ans · 15 € tarif unique en vacances</div>
+    <div class="box"><b>Accès</b>1 route forestière, Étang-Salé<br>Parking sécurisé</div>
+    <div class="box"><b>Contact</b><a href="tel:+262262914041" style="color:inherit">0262 91 40 41</a><br>contact@croc-parc.re</div>
+  </div>
+  <div class="choose"><a class="btn p" href="https://croc-parc.re/" data-ev="fin_site">Réserver / anniversaires</a><button class="btn" id="replay" type="button">↺ Revoir l'histoire</button></div>
+  <p class="note">Maquette de démonstration — illustrations générées par IA, non contractuelles. Conception : Jonathan Bou.</p>
+  </div>
+</section>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script>
+(()=>{
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches, mob=matchMedia('(max-width:699px)').matches;
+document.querySelectorAll('.bg[data-src]').forEach(b=>b.style.backgroundImage=`url(img/${b.dataset.src}${mob?'-m':''}.webp)`);
+const log=(e,d)=>{try{const a=JSON.parse(localStorage.getItem('cp_ev')||'[]');a.push([e,d||'',Date.now()]);localStorage.setItem('cp_ev',JSON.stringify(a.slice(-200)))}catch(_){}console.log('[mesure]',e,d||'')};
+log('arrivee');
+document.querySelectorAll('[data-ev]').forEach(a=>a.addEventListener('click',()=>log(a.dataset.ev)));
+const infos=document.getElementById('infos'),skip=document.getElementById('skip');
+skip.onclick=()=>{log('passer_histoire');infos.scrollIntoView({behavior:'auto'})};
+document.getElementById('replay').onclick=()=>{log('revoir');scrollTo({top:innerHeight,behavior:'auto'})};
+new IntersectionObserver(es=>es.forEach(e=>{skip.classList.toggle('hide',e.isIntersecting);if(e.isIntersecting)log('infos_vues')}),{threshold:.2}).observe(infos);
+if(RM||!window.gsap)return;
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('#bar',{scaleX:1,ease:'none',scrollTrigger:{trigger:document.body,start:'top top',end:()=>infos.offsetTop,scrub:.3}});
+gsap.to('#intro .bg',{scale:1.25,ease:'none',scrollTrigger:{trigger:'#intro',start:'top top',end:'bottom top',scrub:true}});
+const moves=[{scale:1.3,xPercent:-3},{scale:1.05,xPercent:3},{scale:1.25,yPercent:-3},{scale:1.08,yPercent:3}];
+document.querySelectorAll('.scene').forEach((sc,i)=>{
+  const bg=sc.querySelector('.bg'),card=sc.querySelector('.card'),m=moves[i%4];
+  const tl=gsap.timeline({scrollTrigger:{trigger:sc,start:'top top',end:'bottom bottom',scrub:.6,onEnter:()=>log('scene',sc.dataset.k)}});
+  tl.fromTo(bg,{scale:m.scale===1.05||m.scale===1.08?1.3:1.05,xPercent:-(m.xPercent||0),yPercent:-(m.yPercent||0)},{...m,ease:'none',duration:1},0)
+    .to(card,{opacity:1,y:0,duration:.18,ease:'back.out(1.6)'},.18)
+    .to(card,{opacity:0,y:-30,duration:.12},.86);
+});
+})();
+</script>
+</body>
+</html>

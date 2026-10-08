@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>La Maison du Curcuma — Avant le jaune, il y a eu la terre</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Démo de récit immersif non officielle — histoire publique de la Maison du Curcuma, Saint-Joseph, La Réunion.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/s1_aube.webp" media="(min-width:700px)">
+<link rel="preload" as="image" href="img/s1_aube-m.webp" media="(max-width:699px)">
+<style>
+:root{--or:#E8A317;--or2:#F6C445;--nuit:#120c07;--creme:#FFF6E3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--nuit);color:var(--creme);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{overflow-x:hidden}
+h1,h2,.serif{font-family:Fraunces,Georgia,serif;font-weight:300;letter-spacing:-.01em}
+/* --- intro --- */
+#intro{height:100svh;display:grid;place-items:center;text-align:center;background:#000;position:relative}
+#intro .k{font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--or2);opacity:.8}
+#intro h1{font-size:clamp(2.2rem,7vw,5.5rem);line-height:1.02;margin:.6em 0 .4em}
+#intro p{opacity:.7;font-size:.95rem}
+.hint{position:absolute;bottom:4svh;left:50%;transform:translateX(-50%);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;opacity:.7;display:flex;flex-direction:column;align-items:center;gap:.6rem}
+.hint i{display:block;width:1px;height:42px;background:linear-gradient(var(--or2),transparent);animation:drip 1.8s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* --- scenes --- */
+.scene{position:relative;height:320vh}
+.scene.short{height:240vh}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.bg{position:absolute;inset:-6%;background-size:cover;background-position:center;will-change:transform}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,0) 30%,rgba(0,0,0,0) 55%,rgba(10,6,2,.75))}
+.fg{position:absolute;inset:-10% -15%;background:url(img/fg_feuilles.webp) center/cover no-repeat;pointer-events:none;will-change:transform}
+.mist{position:absolute;inset:-20%;pointer-events:none;opacity:.55;mix-blend-mode:screen;
+ background:radial-gradient(40% 20% at 30% 70%,rgba(255,255,255,.35),transparent 70%),radial-gradient(35% 18% at 75% 60%,rgba(255,240,220,.28),transparent 70%);will-change:transform}
+.txt{position:absolute;left:0;right:0;bottom:12svh;padding:0 7vw;max-width:980px}
+.txt .k{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--or2);margin-bottom:.9rem}
+.txt h2{font-size:clamp(1.9rem,5.2vw,4.2rem);line-height:1.05;text-shadow:0 2px 30px rgba(0,0,0,.6)}
+.txt p{margin-top:1rem;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.55;max-width:34em;opacity:.92;text-shadow:0 1px 14px rgba(0,0,0,.8)}
+.line{opacity:0;transform:translateY(30px)}
+.year{position:absolute;right:6vw;top:14svh;font-family:Fraunces,serif;font-size:clamp(4rem,16vw,13rem);font-weight:600;color:transparent;-webkit-text-stroke:1px rgba(246,196,69,.75);opacity:0}
+/* --- choice --- */
+#choix{min-height:100svh;display:grid;place-items:center;text-align:center;padding:10vh 6vw;background:radial-gradient(60% 50% at 50% 40%,#2a1a08,var(--nuit))}
+#choix h2{font-size:clamp(1.8rem,5vw,3.6rem);margin-bottom:.5rem}
+#choix p{opacity:.75;margin-bottom:2.4rem}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:clamp(.8rem,2vw,1.6rem);max-width:980px;margin:auto}
+.choice{position:relative;aspect-ratio:3/4;border:0;border-radius:18px;overflow:hidden;cursor:pointer;color:var(--creme);text-align:left;background:#000;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.choice img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75;transition:transform 1.2s,opacity .5s}
+.choice span{position:absolute;left:0;right:0;bottom:0;padding:1.4rem;background:linear-gradient(transparent,rgba(0,0,0,.85));font-family:Fraunces,serif;font-size:clamp(1.05rem,2.2vw,1.6rem);line-height:1.2}
+.choice small{display:block;font-family:Inter;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--or2);margin-bottom:.5rem}
+.choice:hover,.choice:focus-visible{transform:translateY(-6px);box-shadow:0 20px 60px rgba(232,163,23,.25);outline:none}
+.choice:hover img{transform:scale(1.06);opacity:1}
+.branch{display:none}
+.branch.on{display:block}
+/* --- gold finale --- */
+#or .stage{background:#000}
+#gold{position:absolute;inset:0;width:100%;height:100%}
+/* --- end --- */
+#fin{min-height:100svh;padding:14vh 7vw 10vh;background:linear-gradient(#1a1006,#0d0904);display:flex;flex-direction:column;justify-content:center}
+#fin h2{font-size:clamp(2rem,6vw,4.6rem);line-height:1.02;max-width:12em}
+#fin h2 em{font-style:normal;color:var(--or2)}
+#fin .lead{margin:1.2rem 0 2.2rem;opacity:.8;max-width:34em;line-height:1.6}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;font-size:.95rem;border:1px solid rgba(246,196,69,.5);color:var(--creme);background:transparent;cursor:pointer}
+.btn.p{background:var(--or);color:#1a1006;border-color:var(--or)}
+.infos{margin-top:3rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.4rem;border-top:1px solid rgba(255,255,255,.12);padding-top:2rem;font-size:.92rem;line-height:1.6;opacity:.85}
+.infos b{display:block;color:var(--or2);font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;margin-bottom:.3rem}
+.note{margin-top:2.5rem;font-size:.72rem;opacity:.45}
+/* --- UI --- */
+#skip{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:50;padding:.7rem 1.1rem;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(18,12,7,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--creme);font:600 .8rem Inter;cursor:pointer;transition:opacity .4s}
+#skip.hide{opacity:0;pointer-events:none}
+#bar{position:fixed;left:0;top:0;height:2px;width:100%;background:var(--or);transform-origin:left;transform:scaleX(0);z-index:50}
+#sound{position:fixed;left:max(16px,env(safe-area-inset-left));bottom:max(16px,env(safe-area-inset-bottom));z-index:50;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(18,12,7,.55);color:var(--creme);cursor:pointer;font-size:1rem}
+@media (max-width:699px){
+ .choices{grid-template-columns:1fr}.choice{aspect-ratio:16/10}
+ .txt{bottom:auto;top:auto;bottom:calc(84px + env(safe-area-inset-bottom));padding:0 6vw}
+ .txt p{font-size:.98rem;line-height:1.5}
+ .year{top:8svh}
+ #skip{top:max(12px,env(safe-area-inset-top));bottom:auto;padding:.55rem .9rem;font-size:.72rem}
+ .shade{background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,0) 25%,rgba(0,0,0,.15) 45%,rgba(10,6,2,.88))}
+}
+@media (prefers-reduced-motion:reduce){
+ .scene,.scene.short{height:auto}.stage{position:relative;height:auto;min-height:100svh}
+ .line,.year{opacity:1!important;transform:none!important}.bg,.fg,.mist{transform:none!important}.hint i{animation:none}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<button id="skip" type="button">Passer l'histoire →</button>
+<button id="sound" type="button" aria-label="Activer le son" title="Son d'ambiance">♪</button>
+
+<section id="intro">
+  <div>
+    <div class="k">Saint-Joseph · La Réunion</div>
+    <h1 class="serif">Avant le jaune,<br>il y a eu la terre.</h1>
+    <p>Une histoire de famille, racontée en deux minutes.</p>
+  </div>
+  <div class="hint">Faites défiler<i></i></div>
+</section>
+
+<section class="scene" id="s1" data-scene="aube">
+  <div class="stage">
+    <div class="bg" data-src="s1_aube"></div><div class="mist"></div><div class="shade"></div>
+    <div class="fg"></div>
+    <div class="txt">
+      <div class="k line">Plaine des Grègues</div>
+      <h2 class="line">Ici, le jour se lève sur une mer de nuages.</h2>
+      <p class="line">Sur ces pentes du Sud sauvage, une famille cultive la même terre depuis quatre générations.</p>
+    </div>
+  </div>
+</section>
+
+<section class="scene" id="s2" data-scene="terre">
+  <div class="stage">
+    <div class="bg" data-src="s2_terre"></div><div class="shade"></div>
+    <div class="txt">
+      <div class="k line">Les arrière-grands-parents</div>
+      <h2 class="line">Des parcelles gagnées « goutte à goutte de sueur ».</h2>
+      <p class="line">Curcuma, gingembre, arrow-root, canne : ils étaient agriculteurs et éleveurs, et chaque morceau de terre a été acquis à force de travail.</p>
+    </div>
+  </div>
+</section>
+
+<section class="scene" id="s3" data-scene="chombli">
+  <div class="stage">
+    <div class="bg" data-src="s3_chombli"></div><div class="mist"></div><div class="shade"></div>
+    <div class="year">Avant</div>
+    <div class="txt">
+      <div class="k line">Cyrille &amp; Elisabeth</div>
+      <h2 class="line">À pied et à « chombli », avant l'aube.</h2>
+      <p class="line">Ils descendaient leurs récoltes au marché tôt le matin. Les rares touristes de l'époque découvraient le dur labeur de la terre… et l'hospitalité de la famille.</p>
+    </div>
+  </div>
+</section>
+
+<section class="scene" id="s4" data-scene="maison">
+  <div class="stage">
+    <div class="bg" data-src="s4_maison"></div><div class="shade"></div>
+    <div class="year">1989</div>
+    <div class="txt">
+      <div class="k line">Mémé ouvre la maison</div>
+      <h2 class="line">La porte s'ouvre. La Maison du Curcuma est née.</h2>
+      <p class="line">Avec le soutien de toute la famille, la petite exploitation devient une entreprise qui fait travailler une douzaine de familles du village.</p>
+    </div>
+  </div>
+</section>
+
+<section id="choix">
+  <div>
+    <h2 class="serif">Et vous, où partez-vous&nbsp;?</h2>
+    <p>Choisissez un chemin. L'autre vous attendra.</p>
+    <div class="choices">
+      <button class="choice" data-branch="marche" type="button"><img src="img/s5a_marche-m.webp" alt="" loading="lazy"><span><small>← À gauche</small>Descendre au marché à l'aube</span></button>
+      <button class="choice" data-branch="sechoir" type="button"><img src="img/s5b_sechoir-m.webp" alt="" loading="lazy"><span><small>À droite →</small>Rester au séchoir avec Mémé</span></button>
+    </div>
+  </div>
+</section>
+
+<div class="branch" id="b-marche">
+<section class="scene short" data-scene="marche">
+  <div class="stage">
+    <div class="bg" data-src="s5a_marche"></div><div class="shade"></div>
+    <div class="txt">
+      <div class="k line">Le marché</div>
+      <h2 class="line">Les racines encore pleines de terre rouge.</h2>
+      <p class="line">Curcuma, gingembre, piments : tout ce qui sort du champ le matin se retrouve sur l'étal. Directement du champ jusqu'à votre assiette.</p>
+    </div>
+  </div>
+</section>
+</div>
+<div class="branch" id="b-sechoir">
+<section class="scene short" data-scene="sechoir">
+  <div class="stage">
+    <div class="bg" data-src="s5b_sechoir"></div><div class="shade"></div>
+    <div class="txt">
+      <div class="k line">Le séchoir</div>
+      <h2 class="line">La saison bat son plein, le curcuma sèche au soleil.</h2>
+      <p class="line">Quand vient la fête du Curcuma, toutes les mains du village s'y mettent. On retourne les tranches, une à une, jusqu'à ce qu'elles deviennent or.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<section class="scene" id="or" data-scene="or">
+  <div class="stage">
+    <div class="bg" data-src="s6_or"></div>
+    <canvas id="gold"></canvas>
+    <div class="txt">
+      <div class="k line">Aujourd'hui · Jessie &amp; Cyrille</div>
+      <h2 class="line">De la terre rouge naît l'or de Saint-Joseph.</h2>
+      <p class="line">Ils perpétuent la tradition familiale, avec une ambition : transmettre cette culture et la partager avec vous.</p>
+    </div>
+  </div>
+</section>
+
+<section id="fin">
+  <div class="k serif" style="color:var(--or2);letter-spacing:.3em;font-size:.72rem;text-transform:uppercase;font-family:Inter">La suite s'écrit avec vous</div>
+  <h2 class="serif">Venez le voir <em>en vrai</em>.</h2>
+  <p class="lead">Visitez la maison, sentez le curcuma frais, repartez avec les épices de la famille.</p>
+  <div class="cta">
+    <a class="btn p" href="tel:+262262375466" data-ev="cta_appel">Réserver une visite</a>
+    <a class="btn" href="https://www.la-maison-du-curcuma.fr/" target="_blank" rel="noopener" data-ev="cta_site">Découvrir les produits</a>
+    <button class="btn" id="other" type="button">↺ Voir l'autre chemin</button>
+  </div>
+  <div class="infos">
+    <div><b>Adresse</b>14 chemin du Rond<br>97480 Saint-Joseph</div>
+    <div><b>Horaires</b>Tous les jours<br>9h–12h · 13h30–17h</div>
+    <div><b>Téléphone</b><a href="tel:+262262375466" style="color:inherit">02 62 37 54 66</a></div>
+  </div>
+  <p class="note">Démonstration non officielle de récit immersif, réalisée à partir de l'histoire publiée par la Maison du Curcuma. Illustrations générées par IA, non contractuelles. Conception : Jonathan Bou.</p>
+</section>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script>
+(()=>{
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const mob = matchMedia('(max-width:699px)').matches;
+// images
+document.querySelectorAll('.bg[data-src]').forEach(b=>{b.style.backgroundImage=`url(img/${b.dataset.src}${mob?'-m':''}.webp)`});
+
+// mesure (démo : console + localStorage ; en prod : outil exempté CNIL)
+const log=(e,d)=>{try{const a=JSON.parse(localStorage.getItem('mdc_ev')||'[]');a.push([e,d||'',Date.now()]);localStorage.setItem('mdc_ev',JSON.stringify(a.slice(-200)))}catch(_){} console.log('[mesure]',e,d||'')};
+log('arrivee');
+document.querySelectorAll('[data-ev]').forEach(a=>a.addEventListener('click',()=>log(a.dataset.ev)));
+
+const skip=document.getElementById('skip'), fin=document.getElementById('fin');
+skip.onclick=()=>{log('passer_histoire');fin.scrollIntoView({behavior:RM?'auto':'smooth'})};
+
+// branche
+const choose=(b,scroll=true)=>{
+  document.querySelectorAll('.branch').forEach(x=>x.classList.toggle('on',x.id==='b-'+b));
+  localStorage.setItem('mdc_path',b); log('choix',b);
+  if(window.ScrollTrigger){ScrollTrigger.refresh()}
+  if(scroll) document.getElementById('b-'+b).scrollIntoView({behavior:RM?'auto':'smooth'});
+};
+document.querySelectorAll('.choice').forEach(c=>c.onclick=()=>choose(c.dataset.branch));
+document.getElementById('other').onclick=()=>{
+  const cur=localStorage.getItem('mdc_path')||'marche'; const o=cur==='marche'?'sechoir':'marche';
+  log('autre_chemin',o); choose(o);
+};
+// par défaut aucune branche : le récit attend le choix
+// observer la fin
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){log('fin_atteinte');skip.classList.add('hide')}else skip.classList.remove('hide')}),{threshold:.35}).observe(fin);
+
+// son d'ambiance (généré, aucune ressource externe)
+let ctx,on=false,nodes=[];
+document.getElementById('sound').onclick=function(){
+  if(!ctx){ctx=new (window.AudioContext||window.webkitAudioContext)();
+    const len=ctx.sampleRate*4,buf=ctx.createBuffer(2,len,ctx.sampleRate);
+    for(let c=0;c<2;c++){const d=buf.getChannelData(c);let l=0;for(let i=0;i<len;i++){l=(l+.02*(Math.random()*2-1))/1.02;d[i]=l*3.5}}
+    const src=ctx.createBufferSource();src.buffer=buf;src.loop=true;
+    const f=ctx.createBiquadFilter();f.type='lowpass';f.frequency.value=900;
+    const g=ctx.createGain();g.gain.value=0;src.connect(f).connect(g).connect(ctx.destination);src.start();
+    const o=ctx.createOscillator(),og=ctx.createGain();o.type='sine';o.frequency.value=110;og.gain.value=0;o.connect(og).connect(ctx.destination);o.start();
+    nodes=[g,og];}
+  on=!on;const t=ctx.currentTime;nodes[0].gain.linearRampToValueAtTime(on?.35:0,t+1.5);nodes[1].gain.linearRampToValueAtTime(on?.025:0,t+1.5);
+  this.textContent=on?'♫':'♪';this.setAttribute('aria-label',on?'Couper le son':'Activer le son');log('son',on);
+};
+
+// particules d'or
+const cv=document.getElementById('gold'),g=cv.getContext('2d');let P=[],goldP=0;
+const rs=()=>{cv.width=innerWidth*devicePixelRatio;cv.height=innerHeight*devicePixelRatio};rs();addEventListener('resize',rs);
+for(let i=0;i<(mob?140:320);i++)P.push({x:Math.random(),y:Math.random(),r:Math.random()*2.2+.4,s:Math.random()*.6+.2,a:Math.random()*6.28});
+(function loop(){g.clearRect(0,0,cv.width,cv.height);
+  if(goldP>0.01){const W=cv.width,H=cv.height;for(const p of P){p.a+=.01*p.s;p.y-=.0008*p.s;if(p.y<0)p.y=1;
+    const x=(p.x+Math.sin(p.a)*.02)*W,y=(.5+(p.y-.5)*(0.3+goldP*1.2))*H;
+    g.globalAlpha=Math.min(1,goldP*1.4)*(.4+.6*Math.abs(Math.sin(p.a*2)));g.fillStyle=p.r>1.6?'#FFD56A':'#E8A317';
+    g.beginPath();g.arc(x,y,p.r*devicePixelRatio*(1+goldP),0,6.28);g.fill()}}
+  requestAnimationFrame(loop)})();
+
+if(RM || !window.gsap){goldP=.6;return;}
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to('#bar',{scaleX:1,ease:'none',scrollTrigger:{trigger:document.body,start:'top top',end:()=>fin.offsetTop,scrub:.3}});
+gsap.to('#intro h1',{y:-80,opacity:0,scrollTrigger:{trigger:'#intro',start:'top top',end:'bottom top',scrub:true}});
+
+const cam={aube:{from:{scale:1.35,yPercent:-8},to:{scale:1.05,yPercent:4}},
+           terre:{from:{scale:1.05,xPercent:-3},to:{scale:1.3,xPercent:2}},
+           chombli:{from:{scale:1.2,xPercent:4},to:{scale:1.05,xPercent:-4}},
+           maison:{from:{scale:1.25,yPercent:3},to:{scale:1.05,yPercent:-2}},
+           marche:{from:{scale:1.08,xPercent:-3},to:{scale:1.22,xPercent:3}},
+           sechoir:{from:{scale:1.08},to:{scale:1.25}},
+           or:{from:{scale:1.6},to:{scale:1.05}}};
+
+document.querySelectorAll('.scene').forEach(sc=>{
+  const k=sc.dataset.scene,bg=sc.querySelector('.bg'),lines=sc.querySelectorAll('.line'),yr=sc.querySelector('.year'),fg=sc.querySelector('.fg'),mist=sc.querySelectorAll('.mist');
+  const tl=gsap.timeline({scrollTrigger:{trigger:sc,start:'top top',end:'bottom bottom',scrub:.6,
+    onEnter:()=>log('scene',k)}});
+  tl.fromTo(bg,cam[k].from,{...cam[k].to,ease:'none',duration:1},0);
+  if(fg) tl.fromTo(fg,{scale:1,xPercent:0},{scale:1.9,ease:'power1.in',duration:.55},0);
+  mist.forEach(m=>tl.fromTo(m,{xPercent:-8},{xPercent:10,ease:'none',duration:1},0));
+  if(yr) tl.fromTo(yr,{opacity:0,y:60},{opacity:1,y:0,duration:.25},.1).to(yr,{opacity:0,duration:.15},.8);
+  tl.to(lines,{opacity:1,y:0,stagger:.08,duration:.18,ease:'power2.out'},.2)
+    .to(lines,{opacity:0,y:-30,stagger:.04,duration:.12},.86);
+  if(k==='or') tl.to({},{duration:1,onUpdate:function(){goldP=this.progress()}},0);
+});
+// relancer au retour : retient le chemin déjà vu
+if(localStorage.getItem('mdc_path')) document.querySelector('#choix p').textContent='Vous êtes déjà venu. Et cette fois, quel chemin ?';
+})();
+</script>
+</body>
+</html>
