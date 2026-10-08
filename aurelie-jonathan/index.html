@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Aurélie &amp; Jonathan — votre site, votre admin, vos réseaux, entre de bonnes mains</title>
+<meta name="description" content="Un duo pour les solopreneurs et les entrepreneurs : création de site, maintenance, administratif et réseaux sociaux. Prix clairs, sans engagement.">
+<meta property="og:title" content="Aurélie &amp; Jonathan — on s'occupe du digital, vous de votre métier">
+<meta property="og:description" content="Création de site, maintenance, administratif et réseaux sociaux pour solopreneurs et entrepreneurs.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/aurelie-jonathan/img/nous.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="img/logo.svg">
+<style>
+@font-face{font-family:Fraunces;font-weight:600;font-display:swap;src:url(fonts/fraunces-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Fraunces;font-weight:700;font-display:swap;src:url(fonts/fraunces-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Fraunces;font-weight:500;font-style:italic;font-display:swap;src:url(fonts/fraunces-latin-500-italic.woff2) format('woff2')}
+@font-face{font-family:'DM Sans';font-weight:400;font-display:swap;src:url(fonts/dm-sans-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'DM Sans';font-weight:500;font-display:swap;src:url(fonts/dm-sans-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'DM Sans';font-weight:700;font-display:swap;src:url(fonts/dm-sans-latin-700-normal.woff2) format('woff2')}
+:root{
+  --cream:#FBF6EE; --cream-2:#F3EADC; --white:#fff;
+  --ink:#1F2A30; --muted:#5B666B; --line:rgba(31,42,48,.12);
+  --coral:#E8613C; --coral-d:#C44A28; --coral-l:#FCE3D9;
+  --teal:#145C5A; --teal-d:#0E4341; --teal-l:#DCEDEA;
+  --sun:#F4B740;
+  --serif:Fraunces,Georgia,serif; --sans:'DM Sans',system-ui,-apple-system,sans-serif;
+  --pad:clamp(20px,5vw,64px); --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.12;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,5.6vw,4.2rem)}
+h2{font-size:clamp(1.8rem,3.8vw,2.8rem)}
+h3{font-size:1.3rem}
+em.accent{font-style:italic;font-weight:500;color:var(--coral)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 var(--pad)}
+section{padding:clamp(64px,9vw,120px) 0}
+.kicker{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.lead{font-size:clamp(1.05rem,1.6vw,1.22rem);color:var(--muted);max-width:640px}
+.center{text-align:center}.center .lead{margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font:inherit;font-weight:700;transition:transform .15s,background .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--coral);color:#fff;box-shadow:0 8px 22px rgba(232,97,60,.32)}
+.btn-primary:hover{background:var(--coral-d)}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-d)}
+.btn-block{width:100%;justify-content:center}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(251,246,238,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--serif);font-weight:700;font-size:1.15rem}
+.brand img{width:40px;height:40px}
+.menu{display:flex;gap:28px;list-style:none;align-items:center}
+.menu a{text-decoration:none;font-weight:500;font-size:.96rem}
+.menu a:not(.btn):hover{color:var(--coral)}
+.menu .btn{padding:10px 20px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px auto;transition:.2s}
+@media(max-width:880px){
+  .burger{display:block}
+  .menu{position:fixed;inset:70px 0 auto 0;flex-direction:column;gap:0;background:var(--cream);border-bottom:1px solid var(--line);padding:8px var(--pad) 22px;display:none}
+  .menu.open{display:flex}
+  .menu li{width:100%}
+  .menu a:not(.btn){display:block;padding:14px 0;border-bottom:1px solid var(--line)}
+  .menu .btn{margin-top:16px;width:100%;justify-content:center}
+}
+
+/* hero */
+.hero{padding:clamp(48px,7vw,96px) 0 clamp(64px,8vw,110px);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,var(--coral-l),transparent 70%);top:-220px;right:-160px;z-index:-1}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero p.lead{margin:22px 0 32px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.reassure{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px;font-size:.93rem;color:var(--muted)}
+.reassure span::before{content:"✓";color:var(--teal);font-weight:700;margin-right:7px}
+.hero-photo{position:relative}
+.hero-photo img{border-radius:var(--r);aspect-ratio:4/5;object-fit:cover;object-position:45% 35%;width:100%;box-shadow:0 30px 60px -20px rgba(31,42,48,.35)}
+.hero-photo .badge{position:absolute;left:-22px;bottom:28px;background:var(--white);border-radius:16px;padding:14px 18px;box-shadow:0 14px 30px rgba(31,42,48,.16);font-size:.92rem;max-width:230px}
+.hero-photo .badge b{display:block;font-family:var(--serif);font-size:1.05rem}
+.hero-photo .dot{position:absolute;right:-14px;top:-14px;width:78px;height:78px;border-radius:50%;background:var(--sun);display:grid;place-items:center;font-size:2rem;transform:rotate(-8deg)}
+@media(max-width:880px){.hero-grid{grid-template-columns:1fr}.hero-photo{max-width:440px;margin:0 auto}.hero-photo .badge{left:12px}}
+
+/* pain */
+.pain{background:var(--white)}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.pain-card{background:var(--cream);border-radius:var(--r);padding:28px}
+.pain-card .q{font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.18rem;margin-bottom:10px}
+.pain-card p{color:var(--muted)}
+@media(max-width:880px){.pain-grid{grid-template-columns:1fr}}
+
+/* services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.svc{background:var(--white);border-radius:var(--r);padding:32px 28px;border:1px solid var(--line);display:flex;flex-direction:column}
+.svc .ico{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;font-size:1.6rem;margin-bottom:18px}
+.svc:nth-child(1) .ico{background:var(--coral-l)}
+.svc:nth-child(2) .ico{background:var(--teal-l)}
+.svc:nth-child(3) .ico{background:#FDEFC8}
+.svc p{color:var(--muted);margin:10px 0 16px}
+.svc ul{list-style:none;margin-bottom:22px}
+.svc li{padding:6px 0 6px 26px;position:relative;font-size:.97rem}
+.svc li::before{content:"";position:absolute;left:0;top:13px;width:14px;height:8px;border-left:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(-45deg)}
+.svc .who{margin-top:auto;font-size:.9rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px}
+.svc .who b{color:var(--ink)}
+@media(max-width:960px){.services-grid{grid-template-columns:1fr}}
+
+/* pricing */
+.pricing{background:var(--teal);color:#fff}
+.pricing .kicker{color:var(--sun)}
+.pricing .lead{color:rgba(255,255,255,.8)}
+.tabs{display:inline-flex;background:rgba(255,255,255,.1);border-radius:999px;padding:5px;margin:36px auto 40px;flex-wrap:wrap;justify-content:center}
+.tab{background:none;border:0;color:#fff;font:inherit;font-weight:700;padding:11px 22px;border-radius:999px;cursor:pointer}
+.tab[aria-selected=true]{background:#fff;color:var(--teal)}
+.panel{display:none}.panel.active{display:block}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:left}
+.plan{background:#fff;color:var(--ink);border-radius:var(--r);padding:32px 28px;display:flex;flex-direction:column;position:relative}
+.plan.star{outline:3px solid var(--sun);transform:translateY(-8px)}
+.plan .flag{position:absolute;top:-14px;left:28px;background:var(--sun);color:var(--ink);font-size:.78rem;font-weight:700;padding:5px 12px;border-radius:999px;letter-spacing:.04em}
+.plan h3{font-size:1.4rem}
+.plan .for{color:var(--muted);font-size:.95rem;margin:6px 0 18px;min-height:3em}
+.price{font-family:var(--serif);font-size:2.8rem;font-weight:700;line-height:1}
+.price small{font-family:var(--sans);font-size:1rem;font-weight:500;color:var(--muted)}
+.price-note{font-size:.88rem;color:var(--muted);margin:6px 0 20px;min-height:1.4em}
+.plan ul{list-style:none;margin-bottom:26px;flex:1}
+.plan li{padding:7px 0 7px 26px;position:relative;font-size:.96rem;border-bottom:1px solid var(--line)}
+.plan li:last-child{border-bottom:0}
+.plan li::before{content:"";position:absolute;left:0;top:14px;width:14px;height:8px;border-left:2px solid var(--coral);border-bottom:2px solid var(--coral);transform:rotate(-45deg)}
+.pricing-foot{margin-top:34px;font-size:.92rem;color:rgba(255,255,255,.78)}
+.pricing-foot a{color:#fff}
+.extra{margin-top:26px;background:rgba(255,255,255,.08);border:1px dashed rgba(255,255,255,.35);border-radius:var(--r);padding:22px 26px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;text-align:left}
+.extra b{font-family:var(--serif);font-size:1.2rem}
+@media(max-width:960px){.plans{grid-template-columns:1fr}.plan.star{transform:none}}
+
+/* how */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:48px;counter-reset:s}
+.step{position:relative;padding-top:58px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;width:44px;height:44px;border-radius:50%;background:var(--coral);color:#fff;font-family:var(--serif);font-weight:700;font-size:1.3rem;display:grid;place-items:center}
+.step h3{font-size:1.15rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.97rem}
+@media(max-width:880px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* about */
+.about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.about-photo img{border-radius:var(--r);aspect-ratio:1;object-fit:cover;object-position:45% 35%}
+.about p{color:var(--muted);margin-top:16px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.duo div{background:var(--cream);border-radius:16px;padding:18px 20px}
+.duo b{font-family:var(--serif);font-size:1.15rem;display:block;margin-bottom:4px}
+.duo span{font-size:.94rem;color:var(--muted)}
+@media(max-width:880px){.about-grid{grid-template-columns:1fr}.about-photo{max-width:440px}}
+@media(max-width:480px){.duo{grid-template-columns:1fr}}
+
+/* proof */
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.proof{background:var(--white);border-radius:var(--r);padding:26px;border:1px solid var(--line)}
+.proof .tag{display:inline-block;font-size:.78rem;font-weight:700;background:var(--teal-l);color:var(--teal);padding:4px 10px;border-radius:999px;margin-bottom:12px}
+.proof p{color:var(--muted);font-size:.96rem;margin-top:8px}
+@media(max-width:880px){.proof-grid{grid-template-columns:1fr}}
+
+/* faq */
+.faq{background:var(--cream-2)}
+.faq-list{max-width:820px;margin:40px auto 0}
+details{background:var(--white);border-radius:16px;margin-bottom:12px;padding:0 24px}
+summary{cursor:pointer;list-style:none;padding:20px 30px 20px 0;font-weight:700;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:14px;font-size:1.6rem;color:var(--coral);font-weight:400;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 20px;color:var(--muted)}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,72px)}
+.contact-info p{color:var(--muted);margin:16px 0 26px}
+.contact-info a.line{display:flex;gap:12px;align-items:center;text-decoration:none;font-weight:500;margin-bottom:12px}
+.contact-info a.line span{width:42px;height:42px;border-radius:12px;background:var(--coral-l);display:grid;place-items:center}
+form{background:var(--white);border-radius:var(--r);padding:clamp(24px,4vw,40px);box-shadow:0 20px 50px -24px rgba(31,42,48,.25)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-weight:700;font-size:.9rem;margin:14px 0 6px}
+input,select,textarea{width:100%;font:inherit;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;background:var(--cream);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);background:#fff}
+textarea{min-height:120px;resize:vertical}
+form .btn{margin-top:22px}
+.form-note{font-size:.84rem;color:var(--muted);margin-top:12px}
+@media(max-width:880px){.contact-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.row{grid-template-columns:1fr}}
+
+/* final cta + footer */
+.final{background:var(--coral);color:#fff;text-align:center;padding:clamp(56px,7vw,90px) 0}
+.final p{opacity:.9;margin:14px auto 28px;max-width:560px}
+.final .btn{background:#fff;color:var(--coral-d)}
+footer{background:var(--ink);color:rgba(255,255,255,.75);padding:44px 0;font-size:.9rem}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer a{color:#fff}
+footer .brand{color:#fff}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn{transition:none}}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Accueil Aurélie et Jonathan"><img src="img/logo.svg" alt="" width="40" height="40">Aurélie &amp; Jonathan</a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#tarifs">Tarifs</a></li>
+      <li><a href="#nous">Qui sommes-nous</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li><a class="btn btn-primary" href="#contact">Discutons 20 min</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">Pour les solopreneurs et les entrepreneurs</span>
+      <h1>Votre site, votre admin, vos réseaux&nbsp;: <em class="accent">entre de bonnes mains.</em></h1>
+      <p class="lead">Vous avez lancé votre activité pour exercer votre métier. Votre site, vos factures et vos réseaux, nous les prenons en charge, à deux, avec des prix clairs et des réponses rapides.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact">Réserver un échange de 20 min</a>
+        <a class="btn btn-ghost" href="#tarifs">Voir les tarifs</a>
+      </div>
+      <div class="reassure"><span>Résiliable à tout moment</span><span>Prix annoncés à l'avance</span><span>Vous gardez la main sur tout</span></div>
+    </div>
+    <div class="hero-photo">
+      <img src="img/nous.jpg" alt="Aurélie et Jonathan, souriants, à côté de leur 2CV blanche" width="1080" height="734" fetchpriority="high">
+      <div class="dot" aria-hidden="true">👋</div>
+      <div class="badge"><b>Aurélie &amp; Jonathan</b>Un couple, deux métiers complémentaires, une seule adresse pour vous.</div>
+    </div>
+  </div>
+</section>
+
+<section class="pain">
+  <div class="wrap center">
+    <span class="kicker">Ça vous parle&nbsp;?</span>
+    <h2>Le digital vous prend <em class="accent">le temps de votre métier</em></h2>
+    <div class="pain-grid">
+      <div class="pain-card reveal"><p class="q">« Mon site date de 2019 et je n'ose plus y toucher. »</p><p>Une mise à jour peut tout casser, alors vous n'en faites plus aucune, et votre site prend du retard.</p></div>
+      <div class="pain-card reveal"><p class="q">« Je poste quand j'ai le temps… donc rarement. »</p><p>Vos réseaux restent silencieux des semaines, alors que vos clients vous cherchent en ligne.</p></div>
+      <div class="pain-card reveal"><p class="q">« Les devis et les relances, je les fais le dimanche. »</p><p>L'administratif grignote vos soirées, et vos week-ends avec.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="center">
+      <span class="kicker">Ce que nous faisons</span>
+      <h2>Trois façons de vous libérer du temps</h2>
+      <p class="lead">Prenez un seul service ou les trois. Nous travaillons ensemble, donc vous n'avez à tout expliquer qu'une fois.</p>
+    </div>
+    <div class="services-grid">
+      <article class="svc reveal">
+        <div class="ico" aria-hidden="true">✨</div>
+        <h3>Créer votre site</h3>
+        <p>Un site clair, rapide et beau sur téléphone, qui dit en 5 secondes ce que vous faites et comment vous joindre.</p>
+        <ul><li>Une page ou un site de plusieurs pages</li><li>Textes rédigés avec vous</li><li>Selon la formule : fiche Google, référencement local, formulaire de contact</li></ul>
+        <div class="who">Avec <b>Jonathan</b>, web et design</div>
+      </article>
+      <article class="svc reveal">
+        <div class="ico" aria-hidden="true">🛡️</div>
+        <h3>Garder votre site en forme</h3>
+        <p>Vous avez déjà un site, WordPress ou autre&nbsp;? Nous le surveillons, le sauvegardons et le mettons à jour pour vous.</p>
+        <ul><li>Surveillance automatique, alerte immédiate</li><li>Sauvegardes et mises à jour testées</li><li>Remise en ligne incluse en cas de panne</li><li>Petites modifications dès la formule Sérénité</li></ul>
+        <div class="who">Avec <b>Jonathan</b>, maintenance</div>
+      </article>
+      <article class="svc reveal">
+        <div class="ico" aria-hidden="true">🗂️</div>
+        <h3>Alléger votre admin et vos réseaux</h3>
+        <p>Les tâches répétitives qui vous pèsent, nous les prenons en charge ou nous les automatisons.</p>
+        <ul><li>Publications sur vos réseaux, avec vos visuels</li><li>Devis, factures et relances</li><li>Tri des mails et agenda</li><li>Les tâches qui se répètent s'enchaînent toutes seules</li></ul>
+        <div class="who">Avec <b>Aurélie</b>, admin et réseaux sociaux</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="tarifs">
+  <div class="wrap center">
+    <span class="kicker">Tarifs</span>
+    <h2>Des prix clairs, affichés avant de commencer</h2>
+    <p class="lead">Chaque prix est annoncé avant de commencer, et l'admin sur mesure fait l'objet d'un devis chiffré. Les abonnements se résilient à tout moment, et en annuel vous payez 10 mois au lieu de 12.</p>
+
+    <div class="tabs" role="tablist" aria-label="Choisir une catégorie de tarifs">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-site" id="t-site">Création de site</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-suivi" id="t-suivi">Suivi mensuel</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-admin" id="t-admin">Admin &amp; réseaux</button>
+    </div>
+
+    <div class="panel active" id="p-site" role="tabpanel" aria-labelledby="t-site">
+      <div class="plans">
+        <div class="plan">
+          <h3>Essentielle</h3><p class="for">Pour être trouvé et contacté, vite et bien.</p>
+          <div class="price">400 €</div><p class="price-note">une fois</p>
+          <ul><li>Une page complète, pensée pour le téléphone</li><li>Vos textes et vos photos mis en valeur</li><li>Boutons appel, mail, WhatsApp</li><li>2 séries de retouches</li></ul>
+          <a class="btn btn-ghost btn-block" data-offer="Création — Essentielle 400 €" href="#contact">Demander Essentielle</a>
+        </div>
+        <div class="plan star"><span class="flag">NOTRE CONSEIL</span>
+          <h3>Signature</h3><p class="for">Pour être bien présent sur Google et convaincre au premier coup d'œil.</p>
+          <div class="price">750 €</div><p class="price-note">une fois</p>
+          <ul><li>Tout Essentielle</li><li>Fiche Google (Google Maps) complétée et soignée</li><li>Mise en place du référencement local</li><li>Galerie photos</li><li>Formulaire de contact ou de demande</li></ul>
+          <a class="btn btn-primary btn-block" data-offer="Création — Signature 750 €" href="#contact">Demander Signature</a>
+        </div>
+        <div class="plan">
+          <h3>Vitrine Artiste</h3><p class="for">Pour une activité qui se raconte en images.</p>
+          <div class="price">1 400 €</div><p class="price-note">une fois</p>
+          <ul><li>Tout Signature</li><li>Site de 3 à 5 pages</li><li>Une demi-journée de photo et vidéo (sur place à La Réunion)</li></ul>
+          <a class="btn btn-ghost btn-block" data-offer="Création — Vitrine Artiste 1 400 €" href="#contact">Demander Vitrine Artiste</a>
+        </div>
+      </div>
+      <div class="extra"><div><b>Site en panne ou piraté&nbsp;?</b><br>Pour les sites sans suivi : réparation à 150 €, payée seulement si votre site revient en ligne.</div><a class="btn btn-teal" data-offer="Réparation de site — 150 € si réussite" href="#contact">Demander une réparation</a></div>
+    </div>
+
+    <div class="panel" id="p-suivi" role="tabpanel" aria-labelledby="t-suivi" hidden>
+      <div class="plans">
+        <div class="plan">
+          <h3>Veille</h3><p class="for">Pour dormir tranquille, le site est surveillé.</p>
+          <div class="price">19 € <small>/mois</small></div><p class="price-note">ou 190 € par an</p>
+          <ul><li>Surveillance automatique en continu</li><li>Sauvegardes</li><li>Mises à jour de sécurité, pour protéger votre site</li><li>Remise en ligne incluse en cas de panne</li></ul>
+          <a class="btn btn-ghost btn-block" data-offer="Suivi — Veille 19 €/mois" href="#contact">Demander Veille</a>
+        </div>
+        <div class="plan star"><span class="flag">NOTRE CONSEIL</span>
+          <h3>Sérénité</h3><p class="for">Pour un site toujours à jour, sans y penser.</p>
+          <div class="price">49 € <small>/mois</small></div><p class="price-note">ou 490 € par an</p>
+          <ul><li>Tout Veille</li><li>2 petites modifications par mois</li><li>Fiche Google tenue à jour</li><li>Rapport mensuel</li></ul>
+          <a class="btn btn-primary btn-block" data-offer="Suivi — Sérénité 49 €/mois" href="#contact">Demander Sérénité</a>
+        </div>
+        <div class="plan">
+          <h3>Boutique</h3><p class="for">Pour un site qui vend en ligne.</p>
+          <div class="price">99 € <small>/mois</small></div><p class="price-note">ou 990 € par an</p>
+          <ul><li>Tout Sérénité</li><li>Suivi de la boutique et des paiements</li><li>5 modifications par mois</li></ul>
+          <a class="btn btn-ghost btn-block" data-offer="Suivi — Boutique 99 €/mois" href="#contact">Demander Boutique</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-admin" role="tabpanel" aria-labelledby="t-admin" hidden>
+      <div class="plans">
+        <div class="plan">
+          <h3>Coup de main</h3><p class="for">Une tâche précise, une fois : remettre à plat vos factures, préparer un mois de publications…</p>
+          <div class="price"><small>sur devis</small></div><p class="price-note">chiffré avant de commencer</p>
+          <ul><li>Échange de 20 min pour cadrer</li><li>Prix fixé à l'avance</li><li>Livré, expliqué, à vous</li></ul>
+          <a class="btn btn-ghost btn-block" data-offer="Admin & réseaux — Coup de main" href="#contact">En parler</a>
+        </div>
+        <div class="plan star"><span class="flag">SUR MESURE</span>
+          <h3>À vos côtés</h3><p class="for">Chaque mois, Aurélie s'occupe de ce que vous ne voulez plus faire.</p>
+          <div class="price"><small>forfait mensuel</small></div><p class="price-note">selon le volume, sans engagement</p>
+          <ul><li>Publications réseaux sociaux</li><li>Devis, factures, relances</li><li>Tri des mails, agenda</li><li>Point mensuel ensemble</li></ul>
+          <a class="btn btn-primary btn-block" data-offer="Admin & réseaux — Forfait mensuel" href="#contact">Construire mon forfait</a>
+        </div>
+        <div class="plan">
+          <h3>Automatisations</h3><p class="for">Vos tâches répétitives s'enchaînent toutes seules.</p>
+          <div class="price">dès 150 €</div><p class="price-note">une fois · suivi 25 €/mois</p>
+          <ul><li>Simple : 1 automatisation, 150 €</li><li>Standard : 3 automatisations, 390 €</li><li>Complète : jusqu'à 6, 790 €</li></ul>
+          <a class="btn btn-ghost btn-block" data-offer="Automatisations" href="#contact">Demander mes automatisations</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="pricing-foot">Prix nets, TVA non applicable (art. 293 B du CGI). Règlement indiqué sur votre proposition.</p>
+  </div>
+</section>
+
+<section id="comment">
+  <div class="wrap">
+    <div class="center">
+      <span class="kicker">Comment ça se passe</span>
+      <h2>Simple, du premier appel au résultat</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>On se parle 20 min</h3><p>Vous nous racontez votre activité et ce qui vous pèse. C'est gratuit.</p></div>
+      <div class="step reveal"><h3>On vous propose</h3><p>Une formule claire, un prix fixe, un délai. Vous validez quand tout vous convient.</p></div>
+      <div class="step reveal"><h3>On s'y met</h3><p>Vous voyez le travail avancer et vous donnez votre avis à chaque étape.</p></div>
+      <div class="step reveal"><h3>On reste là</h3><p>Une question, un changement : un message suffit, et on vous répond.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="nous">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal"><img src="img/nous.jpg" alt="Aurélie et Jonathan" width="1080" height="734" loading="lazy"></div>
+    <div>
+      <span class="kicker">Qui sommes-nous</span>
+      <h2>Un couple, deux métiers, <em class="accent">une seule équipe</em></h2>
+      <p>Nous sommes Aurélie et Jonathan, installés à La Réunion. Nous sommes nous-mêmes indépendants, alors nous connaissons bien ces journées où le métier passe après les mails, les factures et le site à mettre à jour.</p>
+      <p>Jonathan est artiste de scène et conçoit les sites de sa compagnie comme ceux d'entreprises locales. Aurélie gère l'administratif, la facturation et les réseaux sociaux, avec méthode et bonne humeur. Ensemble, nous prenons en charge ce qui vous détourne de votre métier.</p>
+      <div class="duo">
+        <div><b>Aurélie</b><span>Administratif, facturation, réseaux sociaux</span></div>
+        <div><b>Jonathan</b><span>Sites web, design, maintenance, automatisations</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="realisations">
+  <div class="wrap">
+    <div class="center">
+      <span class="kicker">Quelques réalisations</span>
+      <h2>Nos projets, à découvrir</h2>
+    </div>
+    <div class="proof-grid">
+      <div class="proof reveal"><span class="tag">Parc animalier</span><h3>Croc Parc</h3><p>Une application de visite sur téléphone pour un parc animalier, et le suivi de sa communication digitale.</p></div>
+      <div class="proof reveal"><span class="tag">École de formation</span><h3>Yoga Doula</h3><p>Site WordPress, parcours d'inscription en ligne avec paiement, réseaux sociaux et automatisations.</p></div>
+      <div class="proof reveal"><span class="tag">Notre propre activité</span><h3>Une 2CV, mille histoires</h3><p>Le site de notre activité de location et de spectacles, que nous faisons vivre au quotidien.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="center">
+      <span class="kicker">Questions fréquentes</span>
+      <h2>Vous vous demandez sûrement…</h2>
+    </div>
+    <div class="faq-list">
+      <details><summary>Je suis engagé combien de temps ?</summary><p>Vous restez libre : les abonnements se résilient à tout moment, d'un simple message. Le paiement annuel est une option pour économiser deux mois.</p></details>
+      <details><summary>Le site m'appartient-il ?</summary><p>Oui. Votre nom de domaine, vos textes et vos photos restent à vous. Si un jour vous changez de prestataire, nous vous transmettons vos fichiers et vos accès.</p></details>
+      <details><summary>Vous travaillez uniquement à La Réunion ?</summary><p>Nous travaillons partout : nous sommes à La Réunion, et tout se fait très bien à distance, en appel vidéo, à l'heure qui vous arrange.</p></details>
+      <details><summary>Mon site est sur WordPress, Wix ou autre : vous pouvez le reprendre ?</summary><p>Oui pour WordPress et les sites classiques. Pour les autres outils, nous regardons ensemble lors de l'échange de 20 minutes et nous vous disons franchement ce qui est possible.</p></details>
+      <details><summary>Je ne suis pas à l'aise avec l'informatique. C'est un problème ?</summary><p>Parfait, c'est précisément pour vous. Nous expliquons simplement, et vous n'avez rien à installer.</p></details>
+      <details><summary>Comment se passe le paiement ?</summary><p>Les modalités (en une fois ou en plusieurs) sont écrites sur votre proposition avant de commencer. Vous recevez une facture à chaque paiement.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <span class="kicker">Contact</span>
+      <h2>Parlons de votre activité</h2>
+      <p>Dites-nous en deux lignes ce qui vous prend du temps. Nous vous répondons sous 48 h ouvrées pour caler un échange de 20 minutes, offert et sans engagement.</p>
+      <a class="line" href="mailto:aurelie.jonathanb@gmail.com"><span aria-hidden="true">✉️</span>aurelie.jonathanb@gmail.com</a>
+      <a class="line" href="tel:+262693828108"><span aria-hidden="true">📞</span>0693 82 81 08</a>
+    </div>
+    <form class="reveal" method="POST" action="https://formsubmit.co/aurelie.jonathanb@gmail.com">
+      <input type="hidden" name="_subject" value="Nouvelle demande depuis le site Aurélie & Jonathan">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://une2cvmillehistoires.re/aurelie-jonathan/merci.html">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="row">
+        <div><label for="nom">Votre prénom et nom</label><input id="nom" name="nom" required autocomplete="name"></div>
+        <div><label for="activite">Votre activité</label><input id="activite" name="activite" placeholder="Ex. : naturopathe, artisan, café…"></div>
+      </div>
+      <div class="row">
+        <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div><label for="tel">Téléphone (facultatif)</label><input id="tel" name="telephone" type="tel" autocomplete="tel"></div>
+      </div>
+      <label for="offre">Ce qui vous intéresse</label>
+      <select id="offre" name="offre">
+        <option value="Je ne sais pas encore">Je ne sais pas encore, conseillez-moi</option>
+        <option>Création — Essentielle 400 €</option>
+        <option>Création — Signature 750 €</option>
+        <option>Création — Vitrine Artiste 1 400 €</option>
+        <option>Réparation de site — 150 € si réussite</option>
+        <option>Suivi — Veille 19 €/mois</option>
+        <option>Suivi — Sérénité 49 €/mois</option>
+        <option>Suivi — Boutique 99 €/mois</option>
+        <option>Admin &amp; réseaux — Coup de main</option>
+        <option>Admin &amp; réseaux — Forfait mensuel</option>
+        <option>Automatisations</option>
+      </select>
+      <label for="msg">En deux lignes, votre besoin</label>
+      <textarea id="msg" name="message" required placeholder="Ex. : mon site ne s'affiche plus bien sur téléphone, et je n'ai plus le temps de poster sur Instagram."></textarea>
+      <button class="btn btn-primary btn-block" type="submit">Envoyer ma demande</button>
+      <p class="form-note">Vos informations servent uniquement à vous répondre.</p>
+    </form>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Et si vous repreniez vos soirées&nbsp;?</h2>
+    <p>Vingt minutes au téléphone suffisent pour savoir si nous pouvons vous aider. Promis, on parle simplement.</p>
+    <a class="btn" href="#contact">Réserver mon échange</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top"><img src="img/logo.svg" alt="" width="36" height="36">Aurélie &amp; Jonathan</a>
+    <div>© 2026 · <a href="mentions-legales.html">Mentions légales</a> · Prix nets, TVA non applicable (art. 293 B du CGI)</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded','false')})});
+  var tabs=document.querySelectorAll('.tab');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false');var p=document.getElementById(x.getAttribute('aria-controls'));p.classList.remove('active');p.hidden=true});
+    t.setAttribute('aria-selected','true');var p=document.getElementById(t.getAttribute('aria-controls'));p.classList.add('active');p.hidden=false;
+  })});
+  var sel=document.getElementById('offre');
+  document.querySelectorAll('[data-offer]').forEach(function(a){a.addEventListener('click',function(){
+    var v=a.getAttribute('data-offer');for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===v||sel.options[i].value===v){sel.selectedIndex=i}}
+  })});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  }else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
