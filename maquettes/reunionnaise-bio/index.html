@@ -5,94 +5,124 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="data:,">
-<title>La Réunionnaise Bio — fruits et légumes en gros à L'Étang-Salé</title>
-<meta name="description" content="Grossiste de fruits et légumes à L'Étang-Salé, pour les professionnels et les particuliers. Commande par WhatsApp au 0692 36 36 31.">
-<meta property="og:title" content="La Réunionnaise Bio — fruits et légumes à L'Étang-Salé">
-<meta property="og:description" content="Des fruits et légumes de chez nous, pour les pros et les particuliers : une maquette offerte par Aurélie &amp; Jonathan.">
-<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/reunionnaise-bio/img/og.png">
+<title>La Réunionnaise Bio — productrice-grossiste de fruits et légumes à L'Étang-Salé</title>
+<meta name="description" content="Productrice-grossiste de fruits et légumes à L'Étang-Salé, pour restaurateurs, épiceries, cantines et particuliers. Commande par WhatsApp au 0692 36 36 31.">
+<meta property="og:title" content="La Réunionnaise Bio — productrice-grossiste, L'Étang-Salé">
+<meta property="og:description" content="Fruits et légumes de La Réunion pour les professionnels et les particuliers. Maquette offerte par Aurélie &amp; Jonathan.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/reunionnaise-bio/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/reunionnaise-bio/">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--green:#2E7D32;--green-d:#1B4D20;--leaf:#7CB342;--tomato:#E53935;--pepper:#FBC02D;--earth:#6D4C2F;--cream:#FBF6EA;--sand:#EFE4CB;--ink:#1F2A1C;--muted:#5C6657;
---disp:"Fraunces",Georgia,serif;--body:"Nunito",system-ui,sans-serif;--pad:clamp(20px,5vw,64px)}
+:root{
+  --lime:#8CC63F;--forest:#1C3319;--forest-2:#264523;--earth:#7A5A3A;--sand:#E9E1CF;--paper:#F6F3EA;
+  --ink:#1B241A;--muted:#5A6455;--line:#D9D2BE;
+  --disp:"Bricolage Grotesque","Arial Narrow",Arial,sans-serif;--body:"Public Sans",Arial,sans-serif;
+  --pad:clamp(20px,5vw,72px)
+}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;overflow-x:clip}
-body{font-family:var(--body);background:var(--cream);color:var(--ink);font-size:17px;line-height:1.6;padding-bottom:84px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-img,svg{display:block;max-width:100%}a{color:inherit}
-:focus-visible{outline:3px solid var(--pepper);outline-offset:3px;border-radius:6px}
-.ribbon{background:var(--earth);color:#fff;font-size:13px;padding:9px var(--pad)}
-.ribbon b{color:var(--pepper)}
-.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--green-d),var(--green) 55%,var(--leaf));color:#fff;padding:clamp(40px,7vw,90px) var(--pad) clamp(70px,9vw,120px)}
-.hero:after{content:"";position:absolute;left:-5%;right:-5%;bottom:-1px;height:46px;background:var(--cream);border-radius:50% 50% 0 0/100% 100% 0 0}
-.hero .in{position:relative;max-width:1080px;margin:0 auto;display:grid;gap:30px;align-items:center}
-@media(min-width:860px){.hero .in{grid-template-columns:1.1fr .9fr}}
-.kicker{font-weight:800;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--pepper)}
-h1{font-family:var(--disp);font-weight:800;font-size:clamp(38px,9vw,78px);line-height:1;margin:10px 0 14px;overflow-wrap:anywhere}
-h1 em{font-style:normal;color:var(--pepper)}
-.lede{font-size:clamp(18px,2.3vw,21px);max-width:36ch;font-weight:600}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:999px;font-weight:800;text-decoration:none;border:3px solid var(--pepper);transition:transform .2s,background .2s,color .2s;cursor:pointer;font-family:inherit;font-size:17px}
-.btn.main{background:var(--pepper);color:var(--green-d)}.btn.main:hover{transform:translateY(-3px) rotate(-1deg)}
-.btn.ghost{background:transparent;color:#fff}.btn.ghost:hover{background:#fff;color:var(--green-d);border-color:#fff}
-.btn.wa{background:#25D366;border-color:#1da851;color:#0b3d1c}
-.basket{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:360px;justify-self:center}
-.basket span{font-size:clamp(48px,12vw,74px);text-align:center;background:rgba(255,255,255,.14);border-radius:26px;padding:12px 0;animation:bob 5s ease-in-out infinite;backdrop-filter:blur(2px)}
-.basket span:nth-child(2n){animation-delay:-1.5s}.basket span:nth-child(3n){animation-delay:-3s}
-.marquee{background:var(--earth);color:var(--sand);overflow:hidden;white-space:nowrap;font-family:var(--disp);font-weight:600;font-size:19px;padding:10px 0}
-.marquee div{display:inline-block;animation:slide 30s linear infinite}.marquee span{margin:0 22px}
-section{padding:clamp(52px,8vw,100px) var(--pad)}
-.wrap{max-width:1000px;margin:0 auto}
-h2{overflow-wrap:anywhere;font-family:var(--disp);font-weight:800;color:var(--green-d);font-size:clamp(28px,5.5vw,50px);line-height:1.05;margin:8px 0 16px}
-.eyebrow{font-weight:800;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--tomato)}
-.about{display:grid;gap:28px}
-@media(min-width:860px){.about{grid-template-columns:1.2fr .8fr;align-items:start}}
-.about p+p{margin-top:12px}
-.todo{font-size:15px;color:var(--muted);background:#fff;border-left:5px solid var(--leaf);padding:12px 16px;border-radius:0 14px 14px 0;margin-top:16px}
-.facts{list-style:none;padding:0;display:grid;gap:12px}
-.facts li{background:#fff;border:2px solid var(--sand);border-radius:18px;padding:14px 18px;display:flex;gap:14px;align-items:center;font-weight:600;transition:transform .25s}
-.facts li:hover{transform:translateX(6px)}.facts i{font-style:normal;font-size:26px}
-.cat{background:var(--sand)}
-.tag{display:inline-block;background:var(--tomato);color:#fff;font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:999px}
-.grid{display:grid;gap:14px;margin-top:22px;grid-template-columns:repeat(2,1fr)}
-@media(min-width:760px){.grid{grid-template-columns:repeat(4,1fr)}}
-.card{background:#fff;border-radius:20px;padding:18px 12px 16px;text-align:center;box-shadow:0 16px 30px -24px rgba(27,77,32,.7);transition:transform .25s}
-.card:hover{transform:translateY(-6px) rotate(-1deg)}
-.card .e{font-size:48px;line-height:1.1}
-.card h3{font-family:var(--disp);font-size:19px;color:var(--green-d);margin:6px 0 2px}
-.card p{font-size:14px;color:var(--muted)}
-.card button{margin-top:10px;min-height:40px;padding:0 16px;border-radius:999px;border:2px solid var(--green);background:transparent;color:var(--green-d);font-weight:800;font-family:inherit;cursor:pointer;font-size:14px}
-.card button.on{background:var(--green);color:#fff}
-.order{margin-top:26px;background:var(--green-d);color:#fff;border-radius:24px;padding:22px;display:grid;gap:12px;justify-items:start}
-.order p{font-weight:600;overflow-wrap:anywhere}
-.pros{background:linear-gradient(180deg,var(--cream),#fff)}
-.cols{display:grid;gap:16px;margin-top:22px}
-@media(min-width:760px){.cols{grid-template-columns:repeat(3,1fr)}}
-.col{background:#fff;border:2px solid var(--sand);border-radius:22px;padding:22px;transition:transform .25s,border-color .25s}
-.col:hover{transform:translateY(-5px);border-color:var(--leaf)}
-.col .e{font-size:40px}.col h3{font-family:var(--disp);color:var(--green-d);font-size:22px;margin:6px 0}
-.dl{display:grid;gap:28px}
-@media(min-width:820px){.dl{grid-template-columns:1fr 1fr}}
-.form{display:grid;gap:12px;background:#fff;border-radius:22px;padding:22px;box-shadow:0 18px 36px -26px rgba(27,77,32,.7)}
-label{font-weight:800;font-size:14px;display:grid;gap:4px}
-input,select,textarea{font:inherit;padding:11px 14px;border:2px solid var(--sand);border-radius:12px;background:var(--cream);width:100%}
-.demo{font-size:13px;color:var(--muted)}
-.map{margin-top:18px;border-radius:22px;overflow:hidden;border:2px solid var(--sand);background:#fff}
-.map iframe{width:100%;height:280px;border:0;display:block}
-.contact{background:var(--green-d);color:#fff}.contact h2{color:#fff}
-.contact .big{font-family:var(--disp);font-size:clamp(30px,7vw,46px);font-weight:800;color:var(--pepper);text-decoration:none;display:inline-block;margin:6px 0}
-.contact p{margin-bottom:6px;overflow-wrap:anywhere}
-footer{text-align:center;padding:32px var(--pad);font-size:14px;color:var(--muted)}
-footer b{display:block;font-family:var(--disp);font-size:20px;color:var(--green-d)}
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;gap:10px;padding:10px 14px;background:rgba(251,246,234,.96);border-top:2px solid var(--sand)}
-.bar a{flex:1;display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:999px;font-weight:800;text-decoration:none}
-.bar .c{background:var(--green);color:#fff}.bar .w{background:#25D366;color:#0b3d1c}
-@media(min-width:900px){.bar{display:none}body{padding-bottom:0}}
-.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
-@keyframes bob{50%{transform:translateY(-10px)}}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;padding-bottom:76px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.ribbon{background:var(--forest);color:#dfe8d6;font-size:13px;padding:9px var(--pad);line-height:1.4}
+.ribbon b{color:var(--lime)}
+
+.hero{position:relative;min-height:min(92svh,820px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--forest)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:drift 22s ease-out both}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,28,12,.92) 0%,rgba(14,28,12,.55) 45%,rgba(14,28,12,.15) 100%);z-index:1}
+.hero .in{position:relative;z-index:2;width:100%;max-width:1160px;margin:0 auto;padding:60px var(--pad) clamp(36px,6vw,80px)}
+.tag{display:inline-block;background:var(--lime);color:var(--forest);font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;padding:6px 12px}
+h1{font-family:var(--disp);font-weight:800;font-size:clamp(44px,11vw,108px);line-height:.92;letter-spacing:-.02em;margin:18px 0 16px;overflow-wrap:anywhere}
+h1 span{color:var(--lime)}
+.lede{font-size:clamp(18px,2.2vw,22px);max-width:34ch;color:#eef3e8}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;font-weight:700;text-decoration:none;border:2px solid var(--lime);font-family:inherit;font-size:16px;cursor:pointer;transition:background .2s,color .2s}
+.btn.main{background:var(--lime);color:var(--forest)}.btn.main:hover{background:#fff;border-color:#fff}
+.btn.ghost{background:transparent;color:#fff}.btn.ghost:hover{background:var(--lime);color:var(--forest)}
+.btn.dark{background:var(--forest);border-color:var(--forest);color:#fff}.btn.dark:hover{background:var(--lime);border-color:var(--lime);color:var(--forest)}
+@keyframes drift{from{transform:scale(1.08)}to{transform:scale(1)}}
+
+.strip{background:var(--lime);color:var(--forest);overflow:hidden;white-space:nowrap;font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:.08em;text-transform:uppercase;padding:11px 0}
+.strip div{display:inline-block;animation:slide 40s linear infinite}.strip span{margin:0 26px}.strip i{font-style:normal;opacity:.5}
 @keyframes slide{to{transform:translateX(-50%)}}
+
+section{padding:clamp(56px,8vw,112px) var(--pad)}
+.wrap{max-width:1160px;margin:0 auto}
+h2{font-family:var(--disp);font-weight:800;font-size:clamp(30px,5.4vw,56px);line-height:1;letter-spacing:-.015em;color:var(--forest);margin:10px 0 18px;overflow-wrap:anywhere}
+.eyebrow{font-weight:700;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--earth);display:flex;align-items:center;gap:12px}
+.eyebrow:before{content:"";width:34px;height:3px;background:var(--lime)}
+p+p{margin-top:12px}
+figure{position:relative;overflow:hidden}
+figure img{width:100%;height:100%;object-fit:cover}
+.ill{position:absolute;left:0;bottom:0;background:rgba(14,28,12,.78);color:#fff;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px}
+
+.split{display:grid;gap:34px;align-items:center}
+@media(min-width:900px){.split{grid-template-columns:1.05fr .95fr;gap:70px}}
+.big-fig{aspect-ratio:4/3}
+.facts{list-style:none;padding:0;margin-top:26px;border-top:1px solid var(--line)}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-weight:600}
+.facts li span{color:var(--muted);font-weight:400;text-align:right}
+.note{font-size:14.5px;color:var(--muted);margin-top:18px}
+
+.cat{background:var(--sand)}
+.exemple{display:inline-block;border:1.5px solid var(--earth);color:var(--earth);font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:2px 9px;vertical-align:middle;margin-left:10px}
+.cat-grid{display:grid;gap:34px;margin-top:30px}
+@media(min-width:900px){.cat-grid{grid-template-columns:1fr 1fr;gap:60px;align-items:start}}
+.list{list-style:none;padding:0;border-top:2px solid var(--forest)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);min-height:56px}
+.row b{font-family:var(--disp);font-size:20px;color:var(--forest);font-weight:700}
+.row small{display:block;color:var(--muted);font-size:13.5px;line-height:1.3}
+.row button{min-height:44px;min-width:104px;border:2px solid var(--forest);background:transparent;color:var(--forest);font:600 14.5px var(--body);cursor:pointer;transition:background .2s,color .2s}
+.row button:hover{background:var(--forest-2);color:#fff}
+.row button.on{background:var(--lime);border-color:var(--lime);color:var(--forest)}
+.order{margin-top:26px;background:var(--forest);color:#fff;padding:22px;display:grid;gap:14px;justify-items:start}
+.order p{overflow-wrap:anywhere}
+.btn.wa{background:#25D366;border-color:#25D366;color:#073a1b}.btn.wa:hover{background:#fff;border-color:#fff}
+.cat figure{aspect-ratio:4/3}
+@media(min-width:900px){.cat figure{aspect-ratio:4/5;position:sticky;top:20px}}
+
+.pros{background:var(--forest);color:#e8efe0;padding:0}
+.pros-fig{height:clamp(240px,42vw,520px);position:relative;overflow:hidden}
+.pros-fig img{width:100%;height:100%;object-fit:cover}
+.pros-fig:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--forest) 0%,rgba(28,51,25,0) 55%)}
+.pros-fig .ill{z-index:2;left:auto;right:0;top:0;bottom:auto}
+.pros-in{padding:0 var(--pad) clamp(56px,8vw,100px);margin-top:-30px;position:relative;z-index:2}
+.pros h2{color:#fff;max-width:18ch}.pros .eyebrow{color:var(--lime)}
+.steps{list-style:none;padding:0;margin-top:30px;display:grid;gap:0;counter-reset:s}
+@media(min-width:800px){.steps{grid-template-columns:repeat(3,1fr);gap:40px}}
+.steps li{counter-increment:s;border-top:2px solid var(--lime);padding:16px 0 20px}
+.steps li:before{content:"0" counter(s);font-family:var(--disp);font-weight:800;color:var(--lime);font-size:15px;letter-spacing:.1em}
+.steps h3{font-family:var(--disp);font-size:24px;color:#fff;margin:4px 0 6px}
+.pros .note{color:#b9c9ae}
+
+.dl{display:grid;gap:36px}
+@media(min-width:900px){.dl{grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}}
+.form{display:grid;gap:14px;background:#fff;padding:26px;border:1px solid var(--line);border-top:4px solid var(--lime)}
+label{font-weight:600;font-size:14.5px;display:grid;gap:5px}
+input,select,textarea{font:inherit;padding:12px 14px;border:1.5px solid var(--line);background:var(--paper);width:100%;border-radius:0}
+input:focus,select:focus,textarea:focus{border-color:var(--forest);outline:none}
+.demo{font-size:13.5px;color:var(--muted)}
+
+.contact{background:var(--sand)}
+.c-grid{display:grid;gap:34px}
+@media(min-width:900px){.c-grid{grid-template-columns:.8fr 1.2fr;gap:60px}}
+.big{font-family:var(--disp);font-weight:800;font-size:clamp(36px,8vw,60px);color:var(--forest);text-decoration:none;display:inline-block;line-height:1.1;margin:6px 0 14px;border-bottom:4px solid var(--lime)}
+.contact p{overflow-wrap:anywhere}
+.map{border:1px solid var(--line);background:#fff}.map iframe{width:100%;height:320px;border:0;display:block}
+footer{text-align:center;padding:32px var(--pad);font-size:14px;color:var(--muted)}
+footer b{display:block;font-family:var(--disp);font-size:20px;color:var(--forest)}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;gap:8px;padding:10px 12px;background:rgba(246,243,234,.97);border-top:1px solid var(--line)}
+.bar a{flex:1;display:flex;align-items:center;justify-content:center;min-height:50px;font-weight:700;text-decoration:none}
+.bar .c{background:var(--forest);color:#fff}.bar .w{background:var(--lime);color:var(--forest)}
+@media(min-width:900px){.bar{display:none}body{padding-bottom:0}}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
@@ -100,102 +130,123 @@ footer b{display:block;font-family:var(--disp);font-size:20px;color:var(--green-
 <div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour La Réunionnaise Bio</div>
 
 <header class="hero">
+<img src="img/ia/cagettes-tomates-poivrons.jpg" alt="Cagettes de tomates et de poivrons fraîchement récoltés (illustration)" width="1600" height="894">
 <div class="in">
-<div>
-<div class="kicker">Grossiste · fruits &amp; légumes · L'Étang-Salé</div>
-<h1>La Réunionnaise <em>Bio</em></h1>
-<p class="lede">Des fruits et légumes de chez nous, livrés aux tables, étals et cantines du Sud — et à votre panier.</p>
+<span class="tag">Productrice · Grossiste</span>
+<h1>La Réunionnaise <span>Bio</span></h1>
+<p class="lede">Fruits et légumes de La Réunion, de L'Étang-Salé jusqu'à vos cuisines, vos étals et vos cantines.</p>
 <div class="cta">
-<a class="btn main" href="#commander">Commander</a>
+<a class="btn main" href="#catalogue">Composer une commande</a>
 <a class="btn ghost" href="#pros">Espace professionnels</a>
 </div>
 </div>
-<div class="basket" aria-hidden="true"><span>🍅</span><span>🫑</span><span>🥕</span><span>🍍</span><span>🥭</span><span>🍋</span></div>
-</div>
 </header>
 
-<div class="marquee" aria-hidden="true"><div><span>🍅 Tomates</span><span>🫑 Poivrons</span><span>🥕 Carottes</span><span>🍍 Ananas</span><span>🥭 Mangues</span><span>🍋 Citrons</span><span>🍌 Bananes</span><span>🍅 Tomates</span><span>🫑 Poivrons</span><span>🥕 Carottes</span><span>🍍 Ananas</span><span>🥭 Mangues</span><span>🍋 Citrons</span><span>🍌 Bananes</span></div></div>
+<div class="strip" aria-hidden="true"><div>
+<span>Tomates</span><i>/</i><span>Poivrons</span><i>/</i><span>Brèdes</span><i>/</i><span>Chouchous</span><i>/</i><span>Ananas Victoria</span><i>/</i><span>Patates douces</span><i>/</i><span>Citrons</span><i>/</i><span>Productrice-grossiste</span><i>/</i>
+<span>Tomates</span><i>/</i><span>Poivrons</span><i>/</i><span>Brèdes</span><i>/</i><span>Chouchous</span><i>/</i><span>Ananas Victoria</span><i>/</i><span>Patates douces</span><i>/</i><span>Citrons</span><i>/</i><span>Productrice-grossiste</span><i>/</i>
+</div></div>
 
-<section id="apropos"><div class="wrap about rv">
+<section id="apropos"><div class="wrap split rv">
 <div>
 <div class="eyebrow">Qui sommes-nous</div>
 <h2>Etang-Salé, ma ville</h2>
-<p>La Réunionnaise Bio est installée à L'Étang-Salé, entre mer et forêt. Notre métier : rapprocher les fruits et légumes de celles et ceux qui les cuisinent, les vendent ou les dégustent.</p>
-<p>Notre vidéo « Etang-salé, ma ville » dit l'attachement à notre commune : ici, on travaille avec le cœur du Sud.</p>
-<p class="todo">✏️ Ce texte sera complété avec vous : votre histoire, vos producteurs, vos valeurs, vos engagements.</p>
-</div>
+<p>La Réunionnaise Bio est une productrice-grossiste installée à L'Étang-Salé, entre mer et forêt. Son métier : rapprocher les fruits et légumes de celles et ceux qui les cuisinent, les vendent ou les dégustent.</p>
+<p>La vidéo « Etang-salé, ma ville » dit l'attachement à cette commune du Sud : ici, le travail de la terre se fait au plus près des gens.</p>
 <ul class="facts">
-<li><i>📍</i> L'Étang-Salé, La Réunion</li>
-<li><i>🏪</i> Grossiste en fruits et légumes</li>
-<li><i>🤝</i> Pour les professionnels et les particuliers</li>
-<li><i>💬</i> Commande simple par WhatsApp</li>
+<li>Activité <span>Productrice – Grossiste</span></li>
+<li>Commune <span>L'Étang-Salé, La Réunion</span></li>
+<li>Clientèle <span>Professionnels et particuliers</span></li>
+<li>Paiement <span>Carte bancaire acceptée</span></li>
+<li>Commande <span>WhatsApp · 0692 36 36 31</span></li>
 </ul>
+<p class="note">Votre histoire, vos cultures et vos engagements viendront enrichir ce texte, à votre rythme.</p>
+</div>
+<figure class="big-fig">
+<img src="img/ia/champ-maraicher-matin.jpg" alt="Champ maraîcher du Sud de La Réunion au petit matin (illustration)" width="1600" height="894" loading="lazy">
+<span class="ill">Illustration</span>
+</figure>
 </div></section>
 
 <section class="cat" id="catalogue"><div class="wrap rv">
 <div class="eyebrow">Le catalogue</div>
-<h2>Fruits &amp; légumes <span class="tag">exemple</span></h2>
-<p>Quelques idées de produits pour illustrer la page. La vraie liste de saison, avec vos tarifs et vos conditionnements, sera construite ensemble. Touchez un produit pour l'ajouter à votre message.</p>
-<div class="grid" id="grid"></div>
+<h2>Fruits et légumes<span class="exemple">exemple</span></h2>
+<p style="max-width:60ch">Une liste d'exemple pour montrer le principe. Le vrai catalogue de saison, avec vos conditionnements, se construit ensemble. Touchez un produit pour l'ajouter à votre message.</p>
+<div class="cat-grid">
+<div>
+<ul class="list" id="grid"></ul>
 <div class="order">
-<p id="sel">Votre sélection apparaît ici. Choisissez des produits, puis envoyez-nous votre commande.</p>
-<a class="btn wa" id="waBtn" href="#" target="_blank" rel="noopener">Commander sur WhatsApp</a>
+<p id="sel">Votre sélection apparaît ici. Choisissez des produits, puis envoyez votre commande.</p>
+<a class="btn wa" id="waBtn" href="#" target="_blank" rel="noopener">Commander par WhatsApp</a>
+</div>
+</div>
+<figure>
+<img src="img/ia/ananas-chouchou-bredes.jpg" alt="Ananas Victoria, chouchous et brèdes sur une table en bois (illustration)" width="1600" height="894" loading="lazy">
+<span class="ill">Illustration</span>
+</figure>
 </div>
 </div></section>
 
-<section class="pros" id="pros"><div class="wrap rv">
+<section class="pros" id="pros">
+<div class="pros-fig"><img src="img/ia/livraison-restaurateurs.jpg" alt="Camionnette chargée de cagettes pour une livraison à un restaurant (illustration)" width="1600" height="894" loading="lazy"><span class="ill">Illustration</span></div>
+<div class="wrap pros-in rv">
 <div class="eyebrow">Espace professionnels</div>
-<h2>Pour celles et ceux qui font vivre la table réunionnaise</h2>
-<div class="cols">
-<div class="col"><div class="e">🍽️</div><h3>Restaurants</h3><p>Des produits frais pour vos cartes du jour, avec un interlocuteur proche de vous.</p></div>
-<div class="col"><div class="e">🛒</div><h3>Épiceries &amp; primeurs</h3><p>Garnissez vos étals avec des fruits et légumes de saison.</p></div>
-<div class="col"><div class="e">🏫</div><h3>Cantines &amp; collectivités</h3><p>Des approvisionnements réguliers pour nourrir les plus gourmands.</p></div>
+<h2>Livrer ceux qui font vivre la table réunionnaise</h2>
+<ol class="steps">
+<li><h3>Restaurants</h3><p>Des produits frais pour vos cartes du jour, avec une interlocutrice proche de vous.</p></li>
+<li><h3>Épiceries et primeurs</h3><p>De quoi garnir vos étals de fruits et légumes de saison.</p></li>
+<li><h3>Cantines et collectivités</h3><p>Des approvisionnements réguliers, pensés pour de grands volumes.</p></li>
+</ol>
+<p class="note">Zone et modalités de livraison : à définir avec vous.</p>
 </div>
-<p class="todo">🚚 Zone et modalités de livraison : à définir avec vous.</p>
-</div></section>
+</section>
 
 <section id="devis"><div class="wrap dl rv">
 <div>
 <div class="eyebrow">Demande de devis</div>
 <h2>Parlez-nous de vos besoins</h2>
-<p>Dites-nous ce que vous cherchez : nous revenons vers vous avec une proposition.</p>
-<p class="demo">Formulaire de démonstration : ici, il prépare un message WhatsApp pour le 0692 36 36 31.</p>
+<p>Indiquez ce que vous cherchez : la réponse arrive avec une proposition adaptée.</p>
+<p class="demo">Formulaire de démonstration : il prépare ici un message WhatsApp pour le 0692 36 36 31.</p>
 </div>
 <form class="form" id="quote">
 <label>Votre nom ou établissement<input name="n" required autocomplete="organization"></label>
 <label>Vous êtes
 <select name="t"><option>Restaurant</option><option>Épicerie / primeur</option><option>Cantine / collectivité</option><option>Particulier</option></select></label>
-<label>Produits et quantités souhaités<textarea name="p" rows="3" required></textarea></label>
-<button class="btn wa" type="submit">Préparer ma demande</button>
+<label>Produits et quantités souhaités<textarea name="p" rows="4" required></textarea></label>
+<button class="btn dark" type="submit">Préparer ma demande</button>
 </form>
 </div></section>
 
-<section class="contact" id="contact"><div class="wrap rv">
-<div class="eyebrow" style="color:var(--pepper)">Nous trouver</div>
+<section class="contact" id="contact"><div class="wrap c-grid rv">
+<div>
+<div class="eyebrow">Nous trouver</div>
 <h2>À L'Étang-Salé</h2>
 <a class="big" href="tel:+262692363631">0692 36 36 31</a>
-<p>12 chemin Louis Chabrier, 97427 L'Étang-Salé <span style="opacity:.7">(adresse à confirmer)</span></p>
+<p>lareunionnaise.bio@gmail.com</p>
+<p style="margin-top:12px">12 chemin Louis Chabrier, 97427 L'Étang-Salé <span style="color:var(--muted)">(adresse à confirmer)</span></p>
 <p>Horaires : à compléter avec vous.</p>
+</div>
 <div class="map"><iframe title="Carte de L'Étang-Salé" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=55.34%2C-21.29%2C55.40%2C-21.24&amp;layer=mapnik"></iframe></div>
 </div></section>
 
-<footer><b>La Réunionnaise Bio</b>Maquette privée réalisée par Aurélie &amp; Jonathan à partir d'informations publiques.</footer>
+<footer><b>La Réunionnaise Bio</b>Maquette privée réalisée par Aurélie &amp; Jonathan à partir d'informations publiques.<br>Images « Illustration » : générées par IA, à remplacer par vos propres photos.</footer>
 
-<div class="bar"><a class="c" href="tel:+262692363631">📞 Appeler</a><a class="w" href="https://wa.me/262692363631?text=Bonjour%20La%20R%C3%A9unionnaise%20Bio%2C%20je%20souhaite%20passer%20commande." target="_blank" rel="noopener">💬 WhatsApp</a></div>
+<div class="bar"><a class="c" href="tel:+262692363631">Appeler</a><a class="w" href="https://wa.me/262692363631?text=Bonjour%20La%20R%C3%A9unionnaise%20Bio%2C%20je%20souhaite%20passer%20commande." target="_blank" rel="noopener">WhatsApp</a></div>
 
 <script>
-const items=[["🍅","Tomates"],["🫑","Poivrons"],["🥕","Carottes"],["🥬","Brèdes"],["🥔","Patates douces"],["🥒","Chouchou"],["🍍","Ananas"],["🥭","Mangues"],["🍋","Citrons"],["🍌","Bananes"],["🍈","Papayes"],["🥥","Noix de coco"]];
+const items=[["Tomates","Rondes et allongées"],["Poivrons","Rouges et jaunes"],["Carottes","En vrac ou en cagette"],["Brèdes","Bottes de feuilles fraîches"],["Chouchous","Légume péi"],["Patates douces","Chair ferme"],["Ananas Victoria","Fruit de saison"],["Mangues","Selon la saison"],["Citrons","Pour cuisine et boissons"],["Bananes","Régimes et mains"]];
 const NUM="262692363631",grid=document.getElementById("grid"),sel=document.getElementById("sel"),wa=document.getElementById("waBtn");
 const chosen=new Set();
-items.forEach(([e,n])=>{const c=document.createElement("div");c.className="card";c.innerHTML='<div class="e">'+e+'</div><h3>'+n+'</h3><p>produit exemple</p><button type="button">Ajouter</button>';
-const b=c.querySelector("button");b.onclick=()=>{chosen.has(n)?chosen.delete(n):chosen.add(n);b.classList.toggle("on",chosen.has(n));b.textContent=chosen.has(n)?"Ajouté ✓":"Ajouter";upd()};grid.appendChild(c)});
+items.forEach(([n,d])=>{const li=document.createElement("li");li.className="row";
+li.innerHTML='<div><b>'+n+'</b><small>'+d+' · exemple</small></div><button type="button">Ajouter</button>';
+const b=li.querySelector("button");b.onclick=()=>{chosen.has(n)?chosen.delete(n):chosen.add(n);b.classList.toggle("on",chosen.has(n));b.textContent=chosen.has(n)?"Ajouté":"Ajouter";upd()};grid.appendChild(li)});
 function link(t){return "https://wa.me/"+NUM+"?text="+encodeURIComponent(t)}
 function upd(){const l=[...chosen];const t="Bonjour La Réunionnaise Bio, je souhaite passer commande"+(l.length?" : "+l.join(", ")+".":".");
-sel.textContent=l.length?"Votre sélection : "+l.join(", "):"Votre sélection apparaît ici. Choisissez des produits, puis envoyez-nous votre commande.";wa.href=link(t)}
+sel.textContent=l.length?"Votre sélection : "+l.join(", "):"Votre sélection apparaît ici. Choisissez des produits, puis envoyez votre commande.";wa.href=link(t)}
 upd();
 document.getElementById("quote").addEventListener("submit",e=>{e.preventDefault();const f=new FormData(e.target);
 window.open(link("Bonjour La Réunionnaise Bio, demande de devis.\nNom : "+f.get("n")+"\nProfil : "+f.get("t")+"\nBesoins : "+f.get("p")),"_blank")});
-const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.1});
 document.querySelectorAll(".rv").forEach(x=>io.observe(x));
 </script>
 </body>
