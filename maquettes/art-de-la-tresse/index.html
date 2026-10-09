@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Art de la Tresse · Vacoa tressé et ateliers à Bras-Panon</title>
+<meta name="description" content="Art de la Tresse, Sabine Payet : créations en vacoa tressé et ateliers de tressage à Bras-Panon, La Réunion.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--vert:#5f7f2a;--vert-d:#3d531b;--paille:#D9B84A;--ecru:#f3ead8;--sable:#CDB48A;--bois:#7a5a38;--ink:#2a2418;--muted:#6b604c;--line:#e0d4bb}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Figtree,system-ui,sans-serif;background:var(--ecru);color:var(--ink);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.08}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--vert-d);color:#f3ead8;font-size:.78rem;text-align:center;padding:.45rem 1rem;letter-spacing:.04em}
+.ribbon b{color:var(--paille)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 1.4rem}
+.kicker{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--vert)}
+.weave{height:14px;background:repeating-linear-gradient(90deg,var(--paille) 0 22px,var(--vert) 22px 44px);-webkit-mask:repeating-linear-gradient(0deg,#000 0 7px,transparent 7px 8px);mask:repeating-linear-gradient(0deg,#000 0 7px,transparent 7px 8px);animation:slide 14s linear infinite}
+@keyframes slide{to{background-position:440px 0}}
+.hero{padding:5.4rem 0 3.6rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.hero h1{font-size:clamp(2.7rem,7vw,5.2rem);margin:.7rem 0 1.1rem;color:var(--vert-d)}
+.hero h1 em{font-style:normal;color:var(--bois)}
+.lead{font-size:1.1rem;color:var(--muted);max-width:32rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font:inherit;font-weight:600;border:0;cursor:pointer;transition:transform .25s,background .25s}
+.btn-main{background:var(--vert-d);color:#fff}.btn-main:hover{transform:translateY(-2px);background:var(--vert)}
+.btn-ghost{border:1.5px solid var(--vert-d);color:var(--vert-d);background:transparent}
+.btn:focus-visible,.opt:focus-visible,input:focus{outline:2px solid var(--paille);outline-offset:3px}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 200px;gap:.8rem}
+.mosaic figure{border-radius:18px;overflow:hidden}
+.mosaic figure:first-child{grid-row:span 2;border-radius:180px 180px 18px 18px}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform 1s}
+.mosaic figure:hover img{transform:scale(1.05)}
+section{padding:5rem 0}
+.sec-head{max-width:42rem;margin-bottom:2.4rem}
+.sec-head h2{font-size:clamp(2rem,4.6vw,3.1rem);margin-top:.5rem;color:var(--vert-d)}
+.sec-head p{color:var(--muted);margin-top:.8rem}
+.story{background:#fffaf0;border-block:1px solid var(--line)}
+.story .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:center}
+.story figure{border-radius:20px;overflow:hidden;aspect-ratio:4/5}
+.story figure img{width:100%;height:100%;object-fit:cover}
+.story blockquote{font-family:"Young Serif",serif;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.3;color:var(--vert-d)}
+.story p{color:var(--muted);margin-top:1.2rem}
+.facts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.facts span{padding:.5rem 1rem;border-radius:999px;background:var(--ecru);border:1px solid var(--line);font-size:.9rem;font-weight:500}
+.makes{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.make{background:#fff;border:1px solid var(--line);border-radius:18px;padding:1.4rem;transition:transform .3s,border-color .3s}
+.make:hover{transform:translateY(-4px);border-color:var(--paille)}
+.make h3{font-size:1.3rem;color:var(--vert-d);margin-bottom:.4rem}
+.make p{color:var(--muted);font-size:.95rem}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);max-width:760px;gap:1rem;margin-top:2rem}
+.gallery figure{border-radius:16px;overflow:hidden;aspect-ratio:3/4;position:relative;cursor:zoom-in}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .9s}
+.gallery figure:hover img{transform:scale(1.06)}
+.gallery figcaption{position:absolute;left:.8rem;bottom:.8rem;background:rgba(255,250,240,.92);padding:.35rem .8rem;border-radius:999px;font-size:.82rem;font-weight:600;color:var(--vert-d)}
+.atelier{background:var(--vert-d);color:#f3ead8}
+.atelier .sec-head h2{color:#fff}.atelier .sec-head p{color:#d6dcc4}.atelier .kicker{color:var(--paille)}
+.panel{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:start}
+.field{margin-bottom:1.5rem}
+.field>label,.field>span{display:block;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--paille);font-weight:600;margin-bottom:.6rem}
+.opts{display:flex;flex-wrap:wrap;gap:.6rem}
+.opt{min-height:44px;padding:.6rem 1.1rem;border-radius:999px;border:1.5px solid rgba(243,234,216,.35);background:transparent;color:#f3ead8;font:inherit;cursor:pointer;transition:all .2s}
+.opt[aria-pressed=true]{background:var(--paille);border-color:var(--paille);color:var(--vert-d);font-weight:600}
+.atelier input{width:100%;min-height:48px;border-radius:12px;border:1.5px solid rgba(243,234,216,.35);background:rgba(255,255,255,.07);color:#fff;padding:.7rem 1rem;font:inherit}
+.atelier input::placeholder{color:#b9c2a3}
+.stepper{display:flex;align-items:center;gap:.8rem}
+.stepper button{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(243,234,216,.45);background:transparent;color:#fff;font-size:1.3rem;cursor:pointer}
+.stepper output{font-family:"Young Serif",serif;font-size:1.8rem;min-width:2ch;text-align:center}
+.ticket{background:var(--ecru);color:var(--ink);border-radius:18px;padding:1.6rem;position:sticky;top:4rem}
+.ticket h3{color:var(--vert-d);font-size:1.4rem;margin-bottom:.8rem}
+.ticket pre{white-space:pre-wrap;font-family:inherit;font-size:.95rem;color:var(--muted);background:#fff;border:1px dashed var(--line);border-radius:12px;padding:1rem;min-height:9rem}
+.ticket .btn{width:100%;margin-top:1rem}
+.ticket small{display:block;text-align:center;margin-top:.7rem;color:var(--muted);font-size:.8rem}
+.voices{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.voice{background:#fff;border:1px solid var(--line);border-radius:18px;padding:1.8rem}
+.voice p{font-family:"Young Serif",serif;font-size:1.3rem;line-height:1.35;color:var(--vert-d)}
+.voice span{display:block;margin-top:.9rem;font-size:.85rem;color:var(--muted)}
+.contact .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.contact .grid div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.4rem}
+.contact dt{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bois);font-weight:600;margin-bottom:.4rem}
+.contact a{color:var(--vert-d);font-weight:600;word-break:break-word}
+footer{padding:2.4rem 1.4rem 3rem;text-align:center;font-size:.85rem;color:var(--muted)}
+.lb{position:fixed;inset:0;background:rgba(30,26,16,.9);display:none;align-items:center;justify-content:center;z-index:80;padding:1.4rem}
+.lb.on{display:flex}.lb img{max-height:86vh;border-radius:12px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}.reveal.in{opacity:1;transform:none}
+@media (max-width:860px){
+ .hero,.story .grid,.panel{grid-template-columns:1fr}
+ .hero{padding-top:4.4rem;gap:2rem}
+ .mosaic{grid-template-rows:170px 170px}
+ .makes{grid-template-columns:1fr 1fr}
+ .gallery{grid-template-columns:1fr 1fr}
+ .voices,.contact .grid{grid-template-columns:1fr}
+ .ticket{position:static}
+ section{padding:3.8rem 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> · une idée de page, rien que pour vous</div>
+
+<header class="wrap hero">
+  <div class="reveal">
+    <span class="kicker">Artisanat traditionnel · Bras-Panon</span>
+    <h1>Le vacoa, <em>tressé à la main</em>.</h1>
+    <p class="lead">Art de la Tresse, c’est l’atelier de Sabine Payet : des sacs, corbeilles, sets de table et bijoux en vacoa, et des ateliers pour apprendre ce geste de La Réunion, en famille ou entre amis.</p>
+    <div class="cta"><a class="btn btn-main" href="#atelier">Réserver un atelier</a><a class="btn btn-ghost" href="#creations">Voir les créations</a></div>
+  </div>
+  <div class="mosaic reveal">
+    <figure><img src="img/atelier-tressage-vacoa-mains-2.jpg" alt="Mains qui tressent des lanières de vacoa vertes et jaunes"></figure>
+    <figure><img src="img/tressage-motif-damier-vert-jaune.jpg" alt="Motif en damier vert et jaune en cours de tressage"></figure>
+    <figure><img src="img/corbeille-vacoa-motif-geometrique.jpg" alt="Corbeille en vacoa à motif géométrique"></figure>
+  </div>
+</header>
+<div class="weave" aria-hidden="true"></div>
+
+<section class="story">
+  <div class="wrap grid">
+    <figure class="reveal"><img src="img/tressage-outil-poincon-detail.jpg" alt="Tressage vert et blanc travaillé au poinçon" loading="lazy"></figure>
+    <div class="reveal">
+      <span class="kicker">La tresseuse</span>
+      <blockquote style="margin-top:.8rem">« Le vacoa tressé, entre tradition et savoir-faire. »</blockquote>
+      <p>Sabine tresse le vacoa et transmet ce savoir-faire partout où on l’invite : à l’atelier de Bras-Panon, dans les écoles, les associations, les structures d’accueil. Chaque pièce est faite en vacoa, avec parfois une touche de tissu.</p>
+      <div class="facts"><span>Artisan Qualité</span><span>Ateliers petits &amp; grands</span><span>Pièces sur mesure</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="creations">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Créations</span><h2>Du sac de plage au sous-plat.</h2><p>Tout est tressé à la main. Une envie particulière ? Les modèles sur mesure sont un vrai plaisir de l’atelier.</p></div>
+    <div class="makes">
+      <div class="make reveal"><h3>Sacs</h3><p>Sacs de plage et sacs sur mesure, à votre taille et à vos couleurs.</p></div>
+      <div class="make reveal"><h3>Maison</h3><p>Corbeilles, pots, sets de table et sous-plats.</p></div>
+      <div class="make reveal"><h3>Bijoux</h3><p>Bracelets en fibre de vacoa et pinces à cheveux.</p></div>
+      <div class="make reveal"><h3>Sur mesure</h3><p>Un défi, une idée : on en parle et on tresse.</p></div>
+    </div>
+    <div class="gallery">
+      <figure class="reveal"><img src="img/pot-vacoa-tisse-crayons.jpg" alt="Pot en vacoa tressé" loading="lazy"><figcaption>Pot tressé</figcaption></figure>
+      <figure class="reveal"><img src="img/atelier-tressage-vacoa-mains-1.jpg" alt="Tressage de vacoa en atelier" loading="lazy"><figcaption>En atelier</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="atelier" id="atelier">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Ateliers</span><h2>Apprenez à tresser, repartez avec votre pièce.</h2><p>Éventail, coque, petit décor… Préparez votre demande d’atelier : le message part sur WhatsApp à l’atelier.</p></div>
+    <div class="panel">
+      <div>
+        <div class="field"><span>Pour qui ?</span><div class="opts" data-k="qui"><button class="opt" aria-pressed="true">En famille</button><button class="opt" aria-pressed="false">Entre amis</button><button class="opt" aria-pressed="false">Une école</button><button class="opt" aria-pressed="false">Une association</button></div></div>
+        <div class="field"><span>Participants</span><div class="stepper"><button type="button" data-d="-1" aria-label="Un participant de moins">−</button><output id="nb">3</output><button type="button" data-d="1" aria-label="Un participant de plus">+</button></div></div>
+        <div class="field"><span>Envie de tresser</span><div class="opts" data-k="objet"><button class="opt" aria-pressed="true">Un éventail</button><button class="opt" aria-pressed="false">Une coque</button><button class="opt" aria-pressed="false">Un petit décor</button><button class="opt" aria-pressed="false">Conseillez-moi</button></div></div>
+        <div class="field"><label for="quand">Quand ?</label><input id="quand" type="text" placeholder="ex. un samedi de novembre"></div>
+      </div>
+      <aside class="ticket" aria-live="polite">
+        <h3>Votre message</h3>
+        <pre id="msg"></pre>
+        <a class="btn btn-main" id="wa" href="#" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
+        <small>0692 18 29 91 · ateliers sur réservation</small>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Ils ont tressé</span><h2>« Un super moment en famille. »</h2></div>
+    <div class="voices">
+      <div class="voice reveal"><p>« Nous étions 3, de 17 à 54 ans. Nous nous sommes régalées à apprendre la base du tressage de vacoa. Merci à Sabine… »</p><span>Marie-Noëlle · avis Facebook</span></div>
+      <div class="voice reveal"><p>« Un super moment en famille avec cet atelier ludique. »</p><span>Aude · avis Facebook</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="weave" aria-hidden="true"></div>
+<section class="contact">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Contact</span><h2>Passez à l’atelier.</h2></div>
+    <dl class="grid">
+      <div><dt>Téléphone &amp; WhatsApp</dt><dd><a href="tel:+262692182991">0692 18 29 91</a></dd></div>
+      <div><dt>E-mail</dt><dd><a href="mailto:art.vannerie974@gmail.com">art.vannerie974@gmail.com</a></dd></div>
+      <div><dt>Atelier</dt><dd>23 rue des Limites, Box n°1<br>97412 Bras-Panon<br><a href="https://www.facebook.com/artdelatresse" target="_blank" rel="noopener">Page Facebook</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<footer>Art de la Tresse · vacoa tressé à la main · Bras-Panon, La Réunion<br>Maquette imaginée et offerte par Aurélie &amp; Jonathan</footer>
+<div class="lb" id="lb" role="dialog" aria-label="Photo agrandie"><img alt=""></div>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  var nb=3;
+  function build(){
+    var s={};document.querySelectorAll('.opts').forEach(function(g){s[g.dataset.k]=g.querySelector('[aria-pressed=true]').textContent});
+    document.getElementById('nb').textContent=nb;
+    var q=document.getElementById('quand').value.trim();
+    var t='Bonjour Sabine !\nNous aimerions faire un atelier de tressage de vacoa :\n• '+s.qui+', '+nb+' participant'+(nb>1?'s':'')+'\n• Envie de tresser : '+s.objet+'\n• Quand : '+(q||'à convenir')+'\nMerci et à bientôt !';
+    document.getElementById('msg').textContent=t;
+    document.getElementById('wa').href='https://wa.me/262692182991?text='+encodeURIComponent(t);
+  }
+  document.querySelectorAll('.opts').forEach(function(g){g.addEventListener('click',function(e){var b=e.target.closest('.opt');if(!b)return;g.querySelectorAll('.opt').forEach(function(c){c.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');build()})});
+  document.querySelectorAll('.stepper button').forEach(function(b){b.addEventListener('click',function(){nb=Math.min(30,Math.max(1,nb+(+b.dataset.d)));build()})});
+  document.getElementById('quand').addEventListener('input',build);build();
+  var lb=document.getElementById('lb');
+  document.querySelectorAll('.gallery figure').forEach(function(f){f.addEventListener('click',function(){lb.querySelector('img').src=f.querySelector('img').src;lb.classList.add('on')})});
+  lb.addEventListener('click',function(){lb.classList.remove('on')});
+})();
+</script>
+</body>
+</html>

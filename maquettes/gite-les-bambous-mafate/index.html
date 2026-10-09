@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Gîte Les Bambous · Chambres &amp; table d’hôtes à Mafate, La Nouvelle</title>
+<meta name="description" content="Gîte Les Bambous à La Nouvelle, au cœur du cirque de Mafate : chambres, dortoir et table d’hôtes pour randonneurs.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--rouge:#B0372B;--vert:#2F5E2C;--vert2:#3E7B3A;--creme:#F6F1E7;--ink:#1f241d;--muted:#5d6457;--line:#ddd5c4;--peche:#f3c9a8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Work Sans",system-ui,sans-serif;background:var(--creme);color:var(--ink);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:700;line-height:1.05}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--vert);color:#eef0e6;font-size:.78rem;text-align:center;padding:.45rem 1rem;letter-spacing:.04em}
+.ribbon b{color:var(--peche)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 1.4rem}
+.kicker{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--rouge)}
+.hero{position:relative;min-height:min(100svh,860px);display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:zoom 18s ease-out forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,30,20,.15) 0%,rgba(20,30,20,.25) 45%,rgba(15,22,14,.85) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:4.5rem;width:100%}
+.hero .kicker{color:var(--peche)}
+.hero h1{font-size:clamp(2.8rem,8vw,6rem);margin:.6rem 0 1rem;max-width:12ch}
+.hero p{font-size:1.12rem;max-width:34rem;color:#eef0e6}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font:inherit;font-weight:600;border:0;cursor:pointer;transition:transform .25s,background .25s}
+.btn-main{background:var(--rouge);color:#fff}
+.btn-main:hover{transform:translateY(-2px);background:#9a2e23}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.6)}
+.btn:focus-visible,.opt:focus-visible,input:focus{outline:2px solid var(--peche);outline-offset:3px}
+section{padding:5.2rem 0}
+.sec-head{max-width:42rem;margin-bottom:2.6rem}
+.sec-head h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-top:.5rem;color:var(--vert)}
+.sec-head p{color:var(--muted);margin-top:.8rem}
+.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:center}
+.intro .big{font-family:Fraunces,serif;font-size:clamp(1.6rem,3.2vw,2.3rem);line-height:1.25;color:var(--vert)}
+.intro .big em{color:var(--rouge);font-style:normal}
+.intro p.txt{color:var(--muted);margin-top:1.2rem}
+.polaroids{position:relative;height:460px}
+.polaroids figure{position:absolute;background:#fff;padding:.6rem .6rem 2.2rem;box-shadow:0 18px 40px -20px rgba(0,0,0,.45);border-radius:4px;transition:transform .5s}
+.polaroids figure:hover{transform:rotate(0) scale(1.03)!important;z-index:3}
+.polaroids img{width:100%;height:100%;object-fit:cover}
+.polaroids figcaption{position:absolute;left:0;right:0;bottom:.5rem;text-align:center;font-family:Fraunces,serif;font-size:.95rem;color:var(--muted)}
+.p1{width:58%;height:330px;left:0;top:10px;transform:rotate(-4deg)}
+.p2{width:52%;height:300px;right:0;top:130px;transform:rotate(5deg)}
+.stay{background:#fff;border-block:1px solid var(--line)}
+.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.room{border-radius:20px;overflow:hidden;background:var(--creme);display:flex;flex-direction:column}
+.room .ph{aspect-ratio:4/3;overflow:hidden}
+.room .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.room:hover .ph img{transform:scale(1.05)}
+.room .t{padding:1.4rem}
+.room h3{font-size:1.5rem;color:var(--vert);margin-bottom:.4rem}
+.room p{color:var(--muted);font-size:.97rem}
+.panorama{position:relative;height:420px;overflow:hidden}
+.panorama img{width:100%;height:100%;object-fit:cover}
+.panorama::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(10,20,10,.7))}
+.panorama blockquote{position:absolute;z-index:2;left:1.4rem;right:1.4rem;bottom:1.6rem;max-width:40rem;color:#fff;font-family:Fraunces,serif;font-size:clamp(1.4rem,3vw,2.1rem);line-height:1.25;text-shadow:0 2px 18px rgba(0,0,0,.6)}
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.voice{background:#fff;border:1px solid var(--line);border-radius:18px;padding:1.6rem}
+.voice p{font-family:Fraunces,serif;font-size:1.2rem;line-height:1.35;color:var(--vert)}
+.voice span{display:block;margin-top:.9rem;font-size:.82rem;color:var(--muted)}
+.book{background:var(--vert);color:#eef0e6}
+.book .sec-head h2{color:#fff}.book .sec-head p{color:#cfd8c6}.book .kicker{color:var(--peche)}
+.panel{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:start}
+.field{margin-bottom:1.5rem}
+.field>label,.field>span{display:block;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--peche);font-weight:600;margin-bottom:.6rem}
+.opts{display:flex;flex-wrap:wrap;gap:.6rem}
+.opt{min-height:44px;padding:.6rem 1.1rem;border-radius:999px;border:1.5px solid rgba(238,240,230,.35);background:transparent;color:#eef0e6;font:inherit;cursor:pointer;transition:all .2s}
+.opt[aria-pressed=true]{background:var(--peche);border-color:var(--peche);color:var(--vert);font-weight:600}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.book input{width:100%;min-height:48px;border-radius:12px;border:1.5px solid rgba(238,240,230,.35);background:rgba(255,255,255,.07);color:#fff;padding:.7rem 1rem;font:inherit;color-scheme:dark}
+.book input::placeholder{color:#b9c4ae}
+.stepper{display:flex;align-items:center;gap:.8rem}
+.stepper button{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(238,240,230,.45);background:transparent;color:#fff;font-size:1.3rem;cursor:pointer}
+.stepper output{font-family:Fraunces,serif;font-size:1.8rem;min-width:2ch;text-align:center}
+.ticket{background:var(--creme);color:var(--ink);border-radius:18px;padding:1.6rem;position:sticky;top:4rem}
+.ticket h3{color:var(--vert);font-size:1.45rem;margin-bottom:.8rem}
+.ticket pre{white-space:pre-wrap;font-family:inherit;font-size:.95rem;color:var(--muted);background:#fff;border:1px dashed var(--line);border-radius:12px;padding:1rem;min-height:9rem}
+.ticket .btn{width:100%;margin-top:1rem}
+.ticket small{display:block;text-align:center;margin-top:.7rem;color:var(--muted);font-size:.8rem}
+.access{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+.access ol{list-style:none;counter-reset:s;display:grid;gap:1rem;margin-top:1.4rem}
+.access li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:1rem;align-items:start;color:var(--muted)}
+.access li::before{content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--rouge);color:#fff;display:grid;place-items:center;font-family:Fraunces,serif;font-size:1.2rem}
+.access li b{color:var(--ink);display:block}
+.access figure{border-radius:20px;overflow:hidden;aspect-ratio:4/3}
+.access figure img{width:100%;height:100%;object-fit:cover}
+.contact{background:#fff;border-top:1px solid var(--line)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.cgrid div{padding:1.4rem;border-radius:16px;background:var(--creme)}
+.cgrid dt{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rouge);font-weight:600;margin-bottom:.4rem}
+.cgrid a{color:var(--vert);font-weight:600;word-break:break-word}
+footer{padding:2.4rem 1.4rem 3rem;text-align:center;font-size:.85rem;color:var(--muted)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}.reveal.in{opacity:1;transform:none}
+@media (max-width:860px){
+ .intro,.panel,.access{grid-template-columns:1fr}
+ .rooms,.voices,.cgrid{grid-template-columns:1fr}
+ .polaroids{height:380px}.p1{height:260px}.p2{height:240px;top:120px}
+ .ticket{position:static}
+ .panorama{height:340px}
+ section{padding:3.8rem 0}
+ .row{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> · une idée de page, rien que pour vous</div>
+
+<header class="hero">
+  <img src="img/mafate-montagne-brume.jpg" alt="Les remparts de Mafate dans la brume">
+  <div class="wrap">
+    <span class="kicker">Mafate · La Nouvelle</span>
+    <h1>Gîte Les Bambous</h1>
+    <p>Chambres et table d’hôtes au cœur du cirque. Posez le sac : un lit propre, un bon repas, et les remparts pour horizon.</p>
+    <div class="cta"><a class="btn btn-main" href="#reserver">Préparer ma réservation</a><a class="btn btn-ghost" href="#gite">Découvrir le gîte</a></div>
+  </div>
+</header>
+
+<section id="gite">
+  <div class="wrap intro">
+    <div class="reveal">
+      <span class="kicker">Bienvenue</span>
+      <p class="big" style="margin-top:.8rem">« Marcher au milieu de ces remparts, se sentir tout petit… » puis arriver chez nous, <em>et se sentir accueilli</em>.</p>
+      <p class="txt">Le Gîte Les Bambous, c’est une maison de La Nouvelle aux toits rouges, nichée dans la verdure. Des chambres et un dortoir pour les randonneurs, une table d’hôtes où l’on mange bien, et des hôtes attentifs à chacun, jusqu’aux régimes alimentaires.</p>
+    </div>
+    <div class="polaroids reveal">
+      <figure class="p1"><img src="img/case-toit-rouge-verdure.jpg" alt="Case à toit rouge dans la verdure"><figcaption>La maison</figcaption></figure>
+      <figure class="p2"><img src="img/case-bois-porche.jpg" alt="Case en bois avec porche"><figcaption>Le porche</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="stay">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Séjourner</span><h2>Dormir, manger, repartir léger.</h2></div>
+    <div class="rooms">
+      <article class="room reveal"><div class="ph"><img src="img/chambre-lit-bleu-blanc.jpg" alt="Chambre au lit bleu et blanc" loading="lazy"></div><div class="t"><h3>Chambres &amp; dortoir</h3><p>Des chambres très propres, et un dortoir pour les groupes en itinérance : une vraie nuit de repos après la marche.</p></div></article>
+      <article class="room reveal"><div class="ph"><img src="img/balcon-terrasse-plantes.jpg" alt="Terrasse fleurie du gîte" loading="lazy"></div><div class="t"><h3>Un coin de verdure</h3><p>Les plantes, le balcon, l’air de Mafate : de quoi souffler après l’étape.</p></div></article>
+      <article class="room reveal"><div class="ph"><img src="img/gite-toit-rouge-remparts.jpg" alt="Le gîte sous les remparts" loading="lazy"></div><div class="t"><h3>La table d’hôtes</h3><p>Le repas partagé du soir, et des hôtes à l’écoute de votre régime alimentaire.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Ils sont passés par là</span><h2>On y mange bien, on y dort bien.</h2></div>
+    <div class="voices">
+      <div class="voice reveal"><p>« On y mange bien et on dort bien. Très bon accueil, j’y étais au mois d’août. »</p><span>Un randonneur · octobre 2026</span></div>
+      <div class="voice reveal"><p>« Super accueil… on y mange bien. Les hôtes sont attentifs à notre régime alimentaire. »</p><span>Une visiteuse · octobre 2025</span></div>
+      <div class="voice reveal"><p>« Très bon accueil, endroit calme et reposant, très propre, je recommande fortement. »</p><span>Marie · février 2025</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="reserver">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Réserver</span><h2>Votre demande, prête en trente secondes.</h2><p>Choisissez vos dates et votre formule : le message part directement sur WhatsApp au gîte.</p></div>
+    <div class="panel">
+      <div>
+        <div class="row">
+          <div class="field"><label for="arr">Arrivée</label><input id="arr" type="date"></div>
+          <div class="field"><span>Nuits</span><div class="stepper"><button type="button" data-s="n" data-d="-1" aria-label="Une nuit de moins">−</button><output id="nuits">1</output><button type="button" data-s="n" data-d="1" aria-label="Une nuit de plus">+</button></div></div>
+        </div>
+        <div class="field"><span>Randonneurs</span><div class="stepper"><button type="button" data-s="p" data-d="-1" aria-label="Une personne de moins">−</button><output id="pers">2</output><button type="button" data-s="p" data-d="1" aria-label="Une personne de plus">+</button></div></div>
+        <div class="field"><span>Couchage</span><div class="opts" data-k="lit"><button class="opt" aria-pressed="true">Chambre</button><button class="opt" aria-pressed="false">Dortoir</button></div></div>
+        <div class="field"><span>Table d’hôtes</span><div class="opts" data-k="repas"><button class="opt" aria-pressed="true">Avec repas</button><button class="opt" aria-pressed="false">Nuit seule</button></div></div>
+        <div class="field"><label for="reg">Régime alimentaire (facultatif)</label><input id="reg" type="text" placeholder="ex. végétarien, sans gluten…"></div>
+      </div>
+      <aside class="ticket" aria-live="polite">
+        <h3>Votre message</h3>
+        <pre id="msg"></pre>
+        <a class="btn btn-main" id="wa" href="#" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
+        <small>0693 84 73 71 · le gîte vous confirme les disponibilités</small>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="panorama reveal"><img src="img/gite-et-montagne.jpg" alt="Le gîte face à la montagne" loading="lazy"><blockquote>Au cœur de Mafate, la maison aux toits rouges vous attend.</blockquote></div>
+
+<section>
+  <div class="wrap access">
+    <div class="reveal">
+      <span class="kicker">Venir</span>
+      <h2 style="font-size:clamp(2rem,4.6vw,3.2rem);color:var(--vert);margin-top:.5rem">Le chemin fait partie du voyage.</h2>
+      <ol>
+        <li><span><b>Garez-vous au Col des Bœufs</b>Le point de départ pour descendre vers La Nouvelle.</span></li>
+        <li><span><b>Marchez jusqu’à La Nouvelle</b>Le sentier ouvre peu à peu sur le cirque et ses remparts.</span></li>
+        <li><span><b>Repérez le panneau « Gîte Les Bambous »</b>La maison aux toits rouges vous attend.</span></li>
+      </ol>
+    </div>
+    <figure class="reveal"><img src="img/panneau-gite-les-bambous.jpg" alt="Panneau Gîte Les Bambous" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Contact</span><h2>Au plaisir de vous accueillir.</h2></div>
+    <dl class="cgrid">
+      <div><dt>Téléphone &amp; WhatsApp</dt><dd><a href="tel:+262693847371">0693 84 73 71</a></dd></div>
+      <div><dt>E-mail</dt><dd><a href="mailto:sophiegaze81@gmail.com">sophiegaze81@gmail.com</a></dd></div>
+      <div><dt>Nouvelles du gîte</dt><dd><a href="https://www.facebook.com/Mafategitelesbambous" target="_blank" rel="noopener">Page Facebook</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<footer>Gîte Les Bambous · La Nouvelle, cirque de Mafate (La Possession), La Réunion<br>Maquette imaginée et offerte par Aurélie &amp; Jonathan</footer>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  var n=1,p=2;
+  function fmt(v){if(!v)return 'à préciser';var d=new Date(v+'T12:00');return d.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'})}
+  function build(){
+    var sel={};document.querySelectorAll('.opts').forEach(function(g){sel[g.dataset.k]=g.querySelector('[aria-pressed=true]').textContent});
+    document.getElementById('nuits').textContent=n;document.getElementById('pers').textContent=p;
+    var r=document.getElementById('reg').value.trim();
+    var t='Bonjour le Gîte Les Bambous !\nNous aimerions venir à La Nouvelle :\n• Arrivée : '+fmt(document.getElementById('arr').value)+'\n• '+n+' nuit'+(n>1?'s':'')+', '+p+' personne'+(p>1?'s':'')+'\n• Couchage : '+sel.lit+'\n• Table d’hôtes : '+sel.repas+(r?'\n• Régime : '+r:'')+'\nAvez-vous de la place ? Merci !';
+    document.getElementById('msg').textContent=t;
+    document.getElementById('wa').href='https://wa.me/262693847371?text='+encodeURIComponent(t);
+  }
+  document.querySelectorAll('.opts').forEach(function(g){g.addEventListener('click',function(e){var b=e.target.closest('.opt');if(!b)return;g.querySelectorAll('.opt').forEach(function(c){c.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');build()})});
+  document.querySelectorAll('.stepper button').forEach(function(b){b.addEventListener('click',function(){var d=+b.dataset.d;if(b.dataset.s==='n')n=Math.min(10,Math.max(1,n+d));else p=Math.min(20,Math.max(1,p+d));build()})});
+  ['arr','reg'].forEach(function(id){document.getElementById(id).addEventListener('input',build)});
+  build();
+})();
+</script>
+</body>
+</html>
