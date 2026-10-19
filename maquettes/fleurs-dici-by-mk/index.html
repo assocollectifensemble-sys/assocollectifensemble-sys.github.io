@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fleurs d'ici et d'ailleurs By MK · Fleuriste au Tampon</title>
+<meta name="description" content="Fleuriste au Tampon : bouquets de mariée, compositions pour la fête des mères, orchidées et créations uniques pour toutes les occasions.">
+<meta property="og:title" content="Fleurs d'ici et d'ailleurs By MK · Fleuriste au Tampon">
+<meta property="og:description" content="Des bouquets uniques pour toutes les occasions, rue Marius et Ary Leblond au Tampon.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/fleurs-dici-by-mk/img/og.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/fleurs-dici-by-mk/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f7f2ea;--paper:#fffdf9;--pivoine:#e8b4c8;--rose:#b5617f;--gold:#c79e74;--ink:#3d2832;--muted:#65505b;--line:#ead9d0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ribbon{background:var(--ink);color:#f4e6ec;font-size:.8rem;text-align:center;padding:8px 14px}
+.ribbon b{color:var(--pivoine)}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:600;line-height:1.08}
+.kicker{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rose)}
+.hero{display:grid;gap:28px;padding:34px 0 56px;align-items:center}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.brand img{width:58px;height:58px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold)}
+.brand span{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.15rem;color:var(--muted)}
+.hero h1{font-size:clamp(2.6rem,9vw,4.6rem)}
+.hero h1 em{color:var(--rose);font-weight:500}
+.hero p.lead{font-size:1.1rem;color:var(--muted);margin:18px 0 26px;max-width:34ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:500;text-decoration:none;transition:transform .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.main{background:var(--rose);color:#fff}
+.btn.main:hover{background:#9c4d6a}
+.btn.ghost{border:1.5px solid var(--ink)}
+.btn:focus-visible,.tab:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.frame{position:relative;justify-self:center;width:min(440px,100%)}
+.frame img{border-radius:220px 220px 18px 18px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 30px 60px -30px rgba(61,40,50,.45)}
+.frame::before{content:"";position:absolute;inset:-12px 12px 26px -12px;border:1.5px solid var(--gold);border-radius:230px 230px 22px 22px;z-index:-1}
+.petals{position:absolute;inset:0;overflow:hidden;border-radius:220px 220px 18px 18px;pointer-events:none}
+.petal{position:absolute;top:-30px;width:14px;height:20px;border-radius:70% 0 70% 0;background:var(--pivoine);opacity:.8;animation:fall 9s linear infinite}
+@keyframes fall{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(600px) rotate(260deg);opacity:0}}
+.band{background:var(--paper);border-block:1px solid var(--line);overflow:hidden;padding:16px 0}
+.track{display:flex;gap:42px;width:max-content;animation:slide 28s linear infinite;font-family:"Cormorant Garamond",serif;font-size:1.45rem;font-style:italic;color:var(--rose)}
+.track span::after{content:"✿";margin-left:42px;color:var(--gold);font-style:normal;font-size:1rem}
+@keyframes slide{to{transform:translateX(-50%)}}
+section{padding:72px 0}
+.intro{display:grid;gap:22px;max-width:760px}
+.intro h2,.occ h2,.gal-head h2{font-size:clamp(2rem,6vw,3rem)}
+.intro p{font-size:1.08rem;color:var(--muted)}
+.occ h2{margin:8px 0 26px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+.tab{flex:0 0 auto;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);font:inherit;color:var(--ink);cursor:pointer;transition:.25s}
+.tab[aria-selected=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.panel{display:grid;gap:26px;margin-top:26px;background:var(--paper);border-radius:22px;padding:18px;border:1px solid var(--line)}
+.panel img{border-radius:16px;aspect-ratio:1/1;object-fit:cover;width:100%;transition:opacity .35s}
+.panel h3{font-size:2rem;margin-bottom:10px}
+.panel p{color:var(--muted);margin-bottom:20px}
+.panel .src{font-size:1.05rem;color:var(--rose);font-family:"Cormorant Garamond",serif;font-style:italic;margin-bottom:20px}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.gal figure{overflow:hidden;border-radius:16px}
+.gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;transition:transform .8s}
+.gal figure:hover img{transform:scale(1.05)}
+.gal-head{margin-bottom:24px}
+.visit{background:var(--ink);color:#f6ecef;border-radius:28px;padding:42px 26px;display:grid;gap:26px}
+.visit h2{font-size:clamp(2rem,6vw,2.8rem)}
+.visit .kicker{color:var(--pivoine)}
+.visit dl{display:grid;gap:16px}
+.visit dt{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.visit dd{overflow-wrap:anywhere}
+.visit dd a{text-decoration:none;border-bottom:1px solid rgba(232,180,200,.5)}
+.visit .btn.main{background:var(--pivoine);color:var(--ink)}
+footer{padding:40px 0 60px;text-align:center;font-size:.85rem;color:var(--muted)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.rv.in{opacity:1;transform:none}
+@media(min-width:860px){
+ .hero{grid-template-columns:1.05fr .95fr;padding:60px 0 80px}
+ .panel{grid-template-columns:1fr 1fr;padding:26px;align-items:center}
+ .gal{grid-template-columns:repeat(4,1fr)}
+ .visit{grid-template-columns:1fr 1fr;padding:56px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour Fleurs d'ici et d'ailleurs By MK</div>
+
+<header class="wrap hero">
+  <div>
+    <div class="brand"><img src="img/logo-facebook.jpg" alt="Logo Fleurs d'ici et d'ailleurs By MK"><span>Fleuriste · Le Tampon</span></div>
+    <h1>Fleurs d'ici<br><em>et d'ailleurs</em></h1>
+    <p class="lead">Des bouquets uniques pour toutes les occasions, composés avec soin rue Marius et Ary Leblond.</p>
+    <div class="cta">
+      <a class="btn main" href="tel:+262693038850">Appeler la boutique</a>
+      <a class="btn ghost" href="#occasions">Trouver mon bouquet</a>
+    </div>
+  </div>
+  <div class="frame">
+    <img src="img/composition-ruban.jpg" alt="Composition de roses dans un vase crème, ruban doré">
+    <div class="petals" aria-hidden="true">
+      <i class="petal" style="left:14%;animation-delay:0s"></i>
+      <i class="petal" style="left:55%;animation-delay:3s"></i>
+      <i class="petal" style="left:80%;animation-delay:6s"></i>
+    </div>
+  </div>
+</header>
+
+<div class="band" aria-hidden="true"><div class="track">
+  <span>Bouquets de mariée</span><span>Fête des mères</span><span>Communions</span><span>Cymbidiums de couleur</span><span>Roses éternelles</span>
+  <span>Bouquets de mariée</span><span>Fête des mères</span><span>Communions</span><span>Cymbidiums de couleur</span><span>Roses éternelles</span>
+</div></div>
+
+<section class="wrap intro rv">
+  <span class="kicker">La boutique</span>
+  <h2>Chaque création, préparée avec soin.</h2>
+  <p>Du bouquet de la mariée aux bracelets fleuris, des roses éternelles confectionnées sur place aux cymbidiums fraîchement arrivés : chez Fleurs d'ici et d'ailleurs, chaque composition est pensée pour faire plaisir et laisser un souvenir qui dure.</p>
+</section>
+
+<section class="wrap occ" id="occasions">
+  <span class="kicker">Pour quelle occasion ?</span>
+  <h2>Choisissez, on s'occupe du reste.</h2>
+  <div class="tabs" role="tablist" aria-label="Occasions">
+    <button class="tab" role="tab" aria-selected="true" data-k="mariage">Un mariage</button>
+    <button class="tab" role="tab" aria-selected="false" data-k="maman">Fête des mères</button>
+    <button class="tab" role="tab" aria-selected="false" data-k="amour">Une déclaration</button>
+    <button class="tab" role="tab" aria-selected="false" data-k="orchidee">Des orchidées</button>
+  </div>
+  <div class="panel rv" role="tabpanel">
+    <img id="p-img" src="img/vase-pastel.jpg" alt="">
+    <div>
+      <h3 id="p-title"></h3>
+      <p id="p-text"></p>
+      <p class="src" id="p-src"></p>
+      <a class="btn main" id="p-cta" href="#">Envoyer ma demande sur WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="gal-head rv"><span class="kicker">Quelques créations</span><h2>Sorties de l'atelier</h2></div>
+  <div class="gal">
+    <figure class="rv"><img src="img/orchidee-jaune.jpg" alt="Cymbidiums jaunes" loading="lazy"></figure>
+    <figure class="rv"><img src="img/coeurs-roses.jpg" alt="Cœurs de roses rouges et jaunes" loading="lazy"></figure>
+    <figure class="rv"><img src="img/vase-pastel.jpg" alt="Bouquet pastel de roses et gypsophile" loading="lazy"></figure>
+    <figure class="rv"><img src="img/dome-fete-meres.jpg" alt="Dôme de roses Bonne fête maman" loading="lazy"></figure>
+    
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="visit rv">
+    <div>
+      <span class="kicker">Venir à la boutique</span>
+      <h2>Au cœur du Tampon</h2>
+      <p style="margin:14px 0 24px;opacity:.85">Passez découvrir les créations en magasin ou confiez-nous vos envies : nous créons des bouquets uniques pour toutes les occasions.</p>
+      <a class="btn main" href="https://www.google.com/maps/search/?api=1&amp;query=313+rue+Marius+et+Ary+Leblond+97430+Le+Tampon" target="_blank" rel="noopener">Itinéraire</a>
+    </div>
+    <dl>
+      <div><dt>Adresse</dt><dd>313 rue Marius et Ary Leblond, 97430 Le Tampon</dd></div>
+      <div><dt>Téléphone</dt><dd><a href="tel:+262693038850">0693 03 88 50</a></dd></div>
+      <div><dt>E-mail</dt><dd><a href="mailto:fleursbymk@outlook.fr">fleursbymk@outlook.fr</a></dd></div>
+      <div><dt>Actualités</dt><dd><a href="https://www.facebook.com/p/Fleurs-dici-et-dailleurs-By-MK-61556089288920/" target="_blank" rel="noopener">Notre page Facebook</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<footer class="wrap">
+  <p>© Fleurs d'ici et d'ailleurs By MK · Le Tampon, La Réunion</p>
+  <p style="margin-top:8px">Maquette privée réalisée par <a href="https://une2cvmillehistoires.re">Aurélie &amp; Jonathan</a> à partir des informations publiées par la boutique.</p>
+</footer>
+
+<script>
+const D={
+ mariage:{img:"img/vase-pastel.jpg",alt:"Composition pastel de roses et gypsophile",t:"Le jour J, en fleurs",x:"Bouquet de la mariée, bracelets fleuris, compositions et décorations florales : chaque création est préparée avec soin pour accompagner cette belle journée.",s:"Chaque détail compte pour rendre la journée unique.",m:"Bonjour, je prépare un mariage et j'aimerais parler de la décoration florale."},
+ maman:{img:"img/dome-fete-meres.jpg",alt:"Dôme de roses Bonne fête maman",t:"Pour la fête des mères",x:"Roses éternelles confectionnées sur place, compositions en boîte, sacs et tasses fleuries, plantes fleuries : de quoi dire merci avec élégance.",s:"Un souvenir qui dure dans le temps.",m:"Bonjour, j'aimerais réserver une composition pour la fête des mères."},
+ amour:{img:"img/coeurs-roses.jpg",alt:"Cœurs de roses rouges et jaunes",t:"Une déclaration",x:"63 roses assemblées avec passion pour une personne très spéciale : les commandes particulières sont réalisées avec amour.",s:"Confiez-nous vos envies, nous créons le bouquet qui leur ressemble.",m:"Bonjour, j'aimerais commander un bouquet pour une occasion particulière."},
+ orchidee:{img:"img/orchidee-jaune.jpg",alt:"Orchidée jaune en grappe",t:"Les cymbidiums de couleur",x:"Blanc, rose, jaune, vert, bordeaux… des orchidées élégantes et raffinées, à la floraison généreuse, pour votre intérieur ou en cadeau.",s:"Une touche de couleur et de charme.",m:"Bonjour, avez-vous des cymbidiums en ce moment ? Quelles couleurs ?"}
+};
+const img=document.getElementById("p-img");
+function show(k){const d=D[k];img.style.opacity=0;setTimeout(()=>{img.src=d.img;img.alt=d.alt;img.style.opacity=1},200);
+ document.getElementById("p-title").textContent=d.t;document.getElementById("p-text").textContent=d.x;document.getElementById("p-src").textContent=d.s;
+ document.getElementById("p-cta").href="https://wa.me/262693038850?text="+encodeURIComponent(d.m);
+ document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected",b.dataset.k===k));}
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>show(b.dataset.k)));
+show("mariage");
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
