@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Biotyful · Centre esthétique et spa à Saint-Gilles</title>
+<meta name="description" content="Centre esthétique et spa à l’âme balinaise en plein cœur de Saint-Gilles : soins visage bio, massages, espace détente, regard et sourcils.">
+<meta property="og:title" content="Biotyful · Centre esthétique et spa à l’âme balinaise">
+<meta property="og:description" content="Des soins de beauté durable, en version safe, bio et naturelle, au cœur de Saint-Gilles.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/biotyful/img/og.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/biotyful/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@400;500;600&family=Allura&display=swap" rel="stylesheet">
+<style>
+:root{--turq:#6dbcaa;--mint:#acd9c5;--sapin:#47786d;--deep:#2c4e47;--paper:#fcfdfc;--sand:#f3f1ea;--ink:#22332f;--muted:#55665f;--line:#d8e6df}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Karla,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ribbon{background:var(--deep);color:#e7f3ee;font-size:.8rem;text-align:center;padding:8px 14px}
+.ribbon b{color:var(--mint)}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:Marcellus,serif;font-weight:400;line-height:1.1}
+.kicker{font-size:.76rem;letter-spacing:.24em;text-transform:uppercase;color:var(--sapin);font-weight:600}
+.script{font-family:Allura,cursive;color:var(--turq);font-size:1.5em;line-height:.9;display:block}
+.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo img{width:52px;height:52px;border-radius:50%;object-fit:cover}
+.logo span{font-family:Allura,cursive;font-size:2rem;color:var(--sapin)}
+.top a.call{font-size:.92rem;font-weight:600;color:var(--sapin);text-decoration:none;border-bottom:1.5px solid var(--mint);padding:10px 0}
+.hero{position:relative;display:grid;gap:34px;padding:18px 0 60px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,8.6vw,4.4rem);color:var(--deep)}
+.hero .lead{font-size:1.1rem;color:var(--muted);margin:18px 0 26px;max-width:36ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .25s,background .25s,color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.main{background:var(--sapin);color:#fff}
+.btn.main:hover{background:var(--deep)}
+.btn.ghost{border:1.5px solid var(--sapin);color:var(--sapin)}
+.btn.ghost:hover{background:var(--sapin);color:#fff}
+.btn:focus-visible,.chip:focus-visible{outline:3px solid var(--turq);outline-offset:3px}
+.visual{position:relative;justify-self:center;width:min(460px,100%)}
+.visual .arch{border-radius:240px 240px 24px 24px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 34px 60px -34px rgba(44,78,71,.55)}
+.visual .arch img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:breathe 14s ease-in-out infinite alternate}
+@keyframes breathe{to{transform:scale(1)}}
+.visual .stamp{position:absolute;left:-6px;bottom:30px;width:104px;height:104px;border-radius:50%;border:5px solid var(--paper);box-shadow:0 12px 30px -12px rgba(0,0,0,.35);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+.leaf{position:absolute;right:4px;top:-14px;width:110px;height:110px;border:1.5px solid var(--mint);border-radius:0 100% 0 100%;transform:rotate(12deg);z-index:-1}
+figcaption{font-size:.72rem;color:var(--muted);letter-spacing:.06em;margin-top:8px;text-align:right}
+.band{background:var(--sand);border-block:1px solid var(--line);overflow:hidden;padding:14px 0}
+.track{display:flex;gap:40px;width:max-content;animation:slide 32s linear infinite;font-family:Marcellus,serif;font-size:1.2rem;color:var(--sapin)}
+.track span::after{content:"·";margin-left:40px;color:var(--turq)}
+@keyframes slide{to{transform:translateX(-50%)}}
+section{padding:72px 0}
+.manif{display:grid;gap:32px;align-items:center}
+.manif h2,.spa h2{font-size:clamp(1.9rem,6vw,2.9rem);color:var(--deep);margin:10px 0 16px}
+.manif p{color:var(--muted);max-width:52ch}
+.trio{display:grid;margin-top:26px;border-top:1px solid var(--line)}
+.trio div{display:grid;grid-template-columns:6.5rem 1fr;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.trio b{font-family:Marcellus,serif;font-weight:400;font-size:1.25rem;color:var(--sapin)}
+.trio span{color:var(--muted)}
+.manif figure img{border-radius:18px;aspect-ratio:16/10;object-fit:cover;width:100%}
+.finder{background:var(--deep);color:#eaf4f0;border-radius:28px;padding:44px 22px}
+.finder h2{font-size:clamp(1.8rem,6vw,2.6rem);color:#fff;margin:8px 0 6px}
+.finder .kicker{color:var(--mint)}
+.finder p.sub{color:#bcd4cc;margin-bottom:22px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.chip{min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid rgba(172,217,197,.5);background:transparent;color:#eaf4f0;font:600 .95rem Karla,sans-serif;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.chip[aria-pressed="true"]{background:var(--mint);color:var(--deep);border-color:var(--mint)}
+.panel{display:grid;gap:14px}
+.soin{background:rgba(255,255,255,.06);border:1px solid rgba(172,217,197,.22);border-radius:18px;padding:18px 20px;display:grid;gap:4px;animation:rise .45s ease both}
+.soin:nth-child(2){animation-delay:.08s}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}}
+.soin h3{font-size:1.3rem;color:#fff}
+.soin .meta{font-size:.85rem;color:var(--mint);letter-spacing:.04em}
+.soin p{color:#c6dad3;font-size:.96rem}
+.finder .go{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px}
+.finder .btn.main{background:var(--mint);color:var(--deep)}
+.finder .btn.main:hover{background:#fff}
+.finder .btn.ghost{border-color:var(--mint);color:var(--mint)}
+.finder .btn.ghost:hover{background:var(--mint);color:var(--deep)}
+.spa{display:grid;gap:30px;align-items:center}
+.spa figure img{border-radius:24px 24px 120px 24px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.spa ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+.spa li{background:var(--sand);border-radius:14px;padding:14px 16px;font-family:Marcellus,serif;font-size:1.1rem;color:var(--sapin)}
+.spa .note{color:var(--muted);font-size:.98rem}
+.infos{background:var(--sand);border-top:1px solid var(--line)}
+.infos .grid{display:grid;gap:34px}
+.infos h2{font-size:clamp(1.8rem,6vw,2.6rem);color:var(--deep);margin:8px 0 18px}
+.hours{width:100%;border-collapse:collapse;font-size:.98rem}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours tr.today td{color:var(--sapin);font-weight:600}
+.contact p{margin-bottom:10px;color:var(--muted)}
+.contact a{color:var(--sapin);font-weight:600}
+footer{padding:36px 0 56px;text-align:center;font-size:.85rem;color:var(--muted)}
+footer .script{font-size:2.4rem;margin-bottom:6px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media(min-width:860px){
+ .hero{grid-template-columns:1.05fr .95fr;padding:30px 0 80px}
+ .manif{grid-template-columns:1fr 1fr;gap:60px}
+ .finder{padding:60px 56px}
+ .panel{grid-template-columns:repeat(2,1fr)}
+ .spa{grid-template-columns:.9fr 1.1fr;gap:64px}
+ .infos .grid{grid-template-columns:1fr 1fr;gap:70px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour Biotyful</div>
+
+<header class="wrap top">
+  <a class="logo" href="#"><img src="img/logo.jpg" alt="Logo Biotyful"><span>Biotyful</span></a>
+  <a class="call" href="tel:+262693330703">0693 33 07 03</a>
+</header>
+
+<main>
+<section class="wrap hero">
+  <div>
+    <p class="kicker">Centre esthétique &amp; spa · Saint-Gilles</p>
+    <h1>Un havre de paix <span class="script">à l’âme balinaise</span></h1>
+    <p class="lead">En plein cœur de Saint-Gilles, toutes les prestations de beauté durable dans leur version safe, bio et naturelle.</p>
+    <div class="cta">
+      <a class="btn main" href="https://www.planity.com/biotyful-97434-st-paul" target="_blank" rel="noopener">Réserver en ligne</a>
+      <a class="btn ghost" href="#envies">Trouver mon soin</a>
+    </div>
+  </div>
+  <figure class="visual">
+    <span class="leaf" aria-hidden="true"></span>
+    <div class="arch"><img src="img/salle-soin.jpg" alt="Salle de soin lumineuse ouverte sur un jardin tropical"></div>
+    <img class="stamp" src="img/logo.jpg" alt="" aria-hidden="true">
+    <figcaption>Illustration</figcaption>
+  </figure>
+</section>
+
+<div class="band" aria-hidden="true"><div class="track">
+  <span>Soins visage bio</span><span>Massages</span><span>Espace détente</span><span>Regard &amp; sourcils</span><span>Mains &amp; pieds</span><span>Soins du corps</span>
+  <span>Soins visage bio</span><span>Massages</span><span>Espace détente</span><span>Regard &amp; sourcils</span><span>Mains &amp; pieds</span><span>Soins du corps</span>
+</div></div>
+
+<section class="wrap manif reveal">
+  <div>
+    <p class="kicker">Notre philosophie</p>
+    <h2>Révéler votre beauté naturelle</h2>
+    <p>Toute l’équipe d’esthéticiennes et de facialistes est heureuse de vous accueillir chaleureusement, avec des soins choisis pour leur douceur et pensés pour votre peau.</p>
+    <div class="trio">
+      <div><b>Bio</b><span>Une gamme de soins de naturo-esthétique certifiés bio</span></div>
+      <div><b>Minéral</b><span>Des pigments minéraux pour le maquillage des sourcils</span></div>
+      <div><b>Sur-mesure</b><span>Un rituel adapté aux besoins de votre peau</span></div>
+    </div>
+  </div>
+  <figure>
+    <img src="img/soins-naturels.jpg" alt="Soins naturels, fleurs de frangipanier et feuilles de monstera">
+    <figcaption>Illustration</figcaption>
+  </figure>
+</section>
+
+<section class="wrap" id="envies">
+  <div class="finder reveal">
+    <p class="kicker">Trouver mon soin</p>
+    <h2>Quelle envie aujourd’hui ?</h2>
+    <p class="sub">Choisissez votre envie : voici les soins qui vous ressemblent.</p>
+    <div class="chips" role="group" aria-label="Vos envies">
+      <button class="chip" data-k="detente" aria-pressed="true">Lâcher prise</button>
+      <button class="chip" data-k="visage" aria-pressed="false">Éclat du visage</button>
+      <button class="chip" data-k="corps" aria-pressed="false">Douceur du corps</button>
+      <button class="chip" data-k="regard" aria-pressed="false">Sublimer le regard</button>
+      <button class="chip" data-k="maman" aria-pressed="false">Future maman</button>
+    </div>
+    <div class="panel" id="panel" aria-live="polite"></div>
+    <div class="go">
+      <a class="btn main" href="https://www.planity.com/biotyful-97434-st-paul" target="_blank" rel="noopener">Réserver 24h/24</a>
+      <a class="btn ghost" href="tel:+262693330703">Nous appeler</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap spa reveal">
+  <figure>
+    <img src="img/detente.jpg" alt="Coin détente sous une pergola au milieu des plantes tropicales">
+    <figcaption>Illustration</figcaption>
+  </figure>
+  <div>
+    <p class="kicker">Formule détente</p>
+    <h2>Une heure rien que pour vous</h2>
+    <p class="note">L’accès à l’espace détente, avec une boisson fraîche ou chaude :</p>
+    <ul>
+      <li>Piscine</li><li>Sauna infrarouge</li><li>Jacuzzi</li><li>Transats</li>
+    </ul>
+    <p class="note">Serviettes et peignoirs fournis par la maison : venez simplement avec votre maillot de bain et vos savates.</p>
+  </div>
+</section>
+</main>
+
+<section class="infos">
+  <div class="wrap grid">
+    <div class="reveal">
+      <p class="kicker">Horaires</p>
+      <h2>Quand venir</h2>
+      <table class="hours" id="hours">
+        <tr data-d="1"><td>Lundi</td><td>10h – 16h</td></tr>
+        <tr data-d="2"><td>Mardi</td><td>9h30 – 17h45</td></tr>
+        <tr data-d="3"><td>Mercredi</td><td>9h – 17h45</td></tr>
+        <tr data-d="4"><td>Jeudi</td><td>12h – 17h45</td></tr>
+        <tr data-d="5"><td>Vendredi</td><td>9h – 17h45</td></tr>
+        <tr data-d="6"><td>Samedi</td><td>9h – 16h</td></tr>
+        <tr data-d="0"><td>Dimanche</td><td>Fermé</td></tr>
+      </table>
+    </div>
+    <div class="contact reveal">
+      <p class="kicker">Nous trouver</p>
+      <h2>À Saint-Gilles</h2>
+      <p>4 rue d’Armagnac<br>97434 Saint-Gilles-les-Bains</p>
+      <p><a href="tel:+262693330703">0693 33 07 03</a></p>
+      <p><a href="mailto:contact@biotyful.re">contact@biotyful.re</a></p>
+      <p><a href="https://www.facebook.com/biotyfulreunion/" target="_blank" rel="noopener">Suivre Biotyful sur Facebook</a></p>
+      <div class="cta" style="margin-top:18px"><a class="btn main" href="https://www.planity.com/biotyful-97434-st-paul" target="_blank" rel="noopener">Réserver en ligne</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span class="script">Biotyful</span>
+  Maquette privée réalisée par Aurélie &amp; Jonathan à partir d’informations publiques.<br>Les images légendées « Illustration » sont des visuels d’ambiance.
+</footer>
+<script>
+const soins={
+ detente:[
+  ["Formule Détente · Accès spa","1 h · 35 €","Piscine, sauna infrarouge, jacuzzi et transats, avec une boisson fraîche ou chaude."],
+  ["Massage ciblé","30 min · 55 €","Une zone au choix : face avant, face arrière, haut ou bas du corps, mains et pieds."]],
+ visage:[
+  ["Le soin cocooning","1 h 10 · 120 €","Rituel complet du visage adapté à votre peau, avec un modelage profond et relaxant de 20 minutes."],
+  ["Soins visage bio naturo-esthétique","En soin ou en cure","Une gamme certifiée bio pour une peau saine et resplendissante."]],
+ corps:[
+  ["Gommage corps + massage","1 h · 95 €","Gommage bio et naturel du corps entier, suivi d’un modelage d’environ 40 minutes."],
+  ["Soin du dos","50 min · 55 €","Nettoyage en douceur, gommage, masque purifiant et sérum équilibrant."]],
+ regard:[
+  ["Brow lift + épilation","50 min · 75 €","Des sourcils disciplinés et mis en valeur."],
+  ["Maquillage permanent des sourcils","2 h","Rendu poudré, poil à poil ou hybride, avec des pigments minéraux, par une praticienne certifiée Dermocolor Academy."]],
+ maman:[
+  ["Massage prénatal","1 h · 97 €","Un moment de douceur pensé pour la femme enceinte."]]
+};
+const panel=document.getElementById("panel");
+function show(k){panel.innerHTML=soins[k].map(s=>"<article class=\"soin\"><h3>"+s[0]+"</h3><span class=\"meta\">"+s[1]+"</span><p>"+s[2]+"</p></article>").join("");}
+document.querySelectorAll(".chip").forEach(c=>c.addEventListener("click",()=>{document.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed","false"));c.setAttribute("aria-pressed","true");show(c.dataset.k);}));
+show("detente");
+const r=document.querySelector("#hours tr[data-d=\""+new Date().getDay()+"\"]");if(r)r.classList.add("today");
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
