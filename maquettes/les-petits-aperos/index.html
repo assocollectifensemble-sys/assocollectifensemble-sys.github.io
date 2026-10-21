@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Les Petits Apéros · Apéro box et traiteur au Tampon</title>
+<meta name="description" content="Apéro box, brunch, cocktail dînatoire : des apéros gourmands faits maison, au Tampon.">
+<meta property="og:title" content="Les Petits Apéros · Des apéros gourmands, faits maison">
+<meta property="og:description" content="Apéro box, brunch, réception, cocktail dînatoire au Tampon.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/les-petits-aperos/img/og.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/les-petits-aperos/">
+<meta name="theme-color" content="#1f1a14">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1f1a14;--gold:#d4a73a;--crust:#b8864b;--herb:#5f8a3a;--cream:#f7efe1;--paper:#fffaf2;--muted:#6f6355;--line:rgba(31,26,20,.12);
+--serif:'Fraunces',Georgia,serif;--sans:'Manrope',system-ui,sans-serif;--r:20px;--shadow:0 26px 50px -28px rgba(40,25,5,.6)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.04;letter-spacing:-.015em;text-wrap:balance}
+h1 em,h2 em{font-style:italic;color:var(--crust)}
+h2{font-size:clamp(2rem,5.4vw,3.4rem)}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--herb);margin-bottom:14px}
+.kicker::before{content:"";width:22px;height:2px;background:currentColor}
+.lead{font-size:clamp(1.02rem,2.2vw,1.15rem);color:var(--muted);max-width:54ch;text-wrap:pretty}
+section{padding:clamp(64px,10vw,120px) 0}
+.ribbon{background:var(--gold);color:var(--ink);font-size:.8rem;text-align:center;padding:8px 14px;font-weight:700}
+.nav{position:sticky;top:0;z-index:50;background:rgba(247,239,225,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+.logo{font-family:var(--serif);font-size:1.3rem;text-decoration:none;white-space:nowrap}
+.logo i{color:var(--crust)}
+.nav ul{display:flex;gap:26px;list-style:none;font-weight:700;font-size:.92rem}
+.nav ul a{text-decoration:none;opacity:.7}.nav ul a:hover{opacity:1}
+@media(max-width:880px){.nav ul{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-weight:800;text-decoration:none;border-radius:999px;padding:15px 26px;border:0;cursor:pointer;font-family:var(--sans);font-size:1rem;min-height:48px;transition:transform .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn-ink{background:var(--ink);color:var(--cream)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-line{border:2px solid var(--ink);background:transparent;color:var(--ink)}
+.nav .btn{padding:10px 18px;font-size:.88rem;min-height:44px}
+.hero{padding:clamp(36px,6vw,72px) 0 clamp(60px,8vw,100px)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,8.4vw,5.6rem)}
+.hero .lead{margin:22px 0 30px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.occ{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.occ span{border:1.5px solid var(--line);padding:7px 14px;border-radius:999px;font-weight:700;font-size:.86rem;background:var(--paper)}
+.tray{position:relative;aspect-ratio:1/1.05}
+.tray figure{position:absolute;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.tray img{width:100%;height:100%;object-fit:cover}
+.t1{inset:0 22% 26% 0}
+.t2{width:46%;aspect-ratio:3/4;right:0;bottom:0;border:8px solid var(--cream);animation:bob 8s ease-in-out infinite}
+.t3{width:34%;aspect-ratio:1;left:6%;bottom:0;border:8px solid var(--cream);animation:bob 8s ease-in-out infinite -3s}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.stamp{position:absolute;top:-14px;right:4%;width:118px;height:118px;border-radius:50%;background:var(--ink);color:var(--gold);display:grid;place-items:center;text-align:center;font-family:var(--serif);font-style:italic;font-size:1rem;line-height:1.15;z-index:3;animation:spin 22s linear infinite}
+.stamp span{animation:spin 22s linear infinite reverse;display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.tray{max-width:440px;width:100%;margin:0 auto}.stamp{width:96px;height:96px;font-size:.88rem}}
+.dark{background:var(--ink);color:var(--cream)}
+.dark .lead{color:#cfc2ad}
+.dark .kicker{color:var(--gold)}
+.uses{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);border-radius:var(--r);overflow:hidden;margin-top:44px}
+.use{background:var(--ink);padding:28px 24px;transition:background .3s}
+.use:hover{background:#2a231b}
+.use b{display:block;font-family:var(--serif);font-weight:500;font-size:1.5rem;color:var(--gold);margin-bottom:6px}
+.use p{color:#cfc2ad;font-size:.95rem}
+@media(max-width:860px){.uses{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.uses{grid-template-columns:1fr}}
+.gal{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:44px}
+.gal figure{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);position:relative}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.gal figure:hover img{transform:scale(1.05)}
+.g1{grid-column:span 5;grid-row:span 2}
+.g2{grid-column:span 4;aspect-ratio:4/3}
+.g3{grid-column:span 3;aspect-ratio:3/4}
+.g4{grid-column:span 3;aspect-ratio:3/4}
+.g5{grid-column:span 4;aspect-ratio:4/3}
+.credit{font-size:.82rem;color:var(--muted);margin-top:26px}
+@media(max-width:760px){.gal{grid-template-columns:1fr 1fr}.g1{grid-column:1/-1;grid-row:auto;aspect-ratio:4/3}.g2,.g3,.g4,.g5{grid-column:auto;aspect-ratio:1}}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.2;max-width:24ch;margin-top:10px}
+.qgrid{display:block;text-align:center}.qgrid .quote{margin-inline:auto}.qgrid .lead{margin-inline:auto}
+.qgrid figure{border-radius:var(--r);overflow:hidden;aspect-ratio:1;box-shadow:var(--shadow)}
+.qgrid img{width:100%;height:100%;object-fit:cover}
+@media(max-width:820px){.qgrid{grid-template-columns:1fr}}
+.order{background:var(--paper);border-top:1px solid var(--line)}
+.o-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.box{background:var(--ink);color:var(--cream);border-radius:28px;padding:clamp(22px,4vw,34px);box-shadow:var(--shadow)}
+.lbl{font-weight:800;font-size:.82rem;letter-spacing:.06em;margin:20px 0 10px;display:block;color:var(--gold);text-transform:uppercase}
+.lbl:first-child{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{min-height:44px;padding:8px 16px;border-radius:999px;border:1.5px solid rgba(255,255,255,.25);background:transparent;color:var(--cream);font:700 .92rem var(--sans);cursor:pointer;transition:.2s}
+.chips button.on{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.range{display:flex;align-items:center;gap:16px}
+.range input{flex:1;accent-color:var(--gold);height:44px}
+.range output{font-family:var(--serif);font-size:2.2rem;min-width:3ch;text-align:right;color:var(--gold)}
+.box input[type=date]{width:100%;min-height:48px;padding:10px 14px;border-radius:14px;border:1.5px solid rgba(255,255,255,.25);background:#2a231b;color:var(--cream);font:600 1rem var(--sans);color-scheme:dark}
+.recap{margin:22px 0 16px;background:#2a231b;border-radius:16px;padding:16px;font-size:.93rem;white-space:pre-line;color:#e8dcc6;border:1px dashed rgba(212,167,58,.5)}
+.box .btn{width:100%}
+.note{font-size:.82rem;color:#b9ab94;margin-top:10px;text-align:center}
+@media(max-width:860px){.o-grid{grid-template-columns:1fr}}
+.c-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.cbox{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px;text-decoration:none;display:flex;flex-direction:column;gap:4px;transition:.3s}
+.cbox:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.cbox small{font-weight:800;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--herb)}
+.cbox b{font-family:var(--serif);font-weight:500;font-size:1.3rem;word-break:break-word}
+@media(max-width:760px){.c-grid{grid-template-columns:1fr}}
+footer{background:var(--ink);color:#b9ab94;text-align:center;font-size:.85rem;padding:30px 20px 110px}
+footer a{color:var(--cream)}
+.mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;gap:8px;padding:8px;background:rgba(31,26,20,.94);backdrop-filter:blur(10px);border-radius:999px}
+.mbar a{flex:1;padding:12px}
+@media(max-width:760px){.mbar{display:flex}}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par Aurélie &amp; Jonathan, créée avec plaisir pour Les Petits Apéros</div>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">Les Petits <i>Apéros</i></a>
+    <ul>
+      <li><a href="#occasions">Occasions</a></li>
+      <li><a href="#maison">Fait maison</a></li>
+      <li><a href="#box">Ma box</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-ink" href="#box">Composer ma box</a>
+  </div>
+</header>
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker rv">Traiteur · Le Tampon</span>
+      <h1 class="rv d1">Des apéros <em>gourmands,</em> faits maison.</h1>
+      <p class="lead rv d2">L'apéro box qui arrive toute prête pour un anniversaire, une soirée entre amis ou un événement. Brunch, réception, cocktail dînatoire : Les Petits Apéros régalent toutes vos tablées.</p>
+      <div class="ctas rv d3">
+        <a class="btn btn-ink" href="#box">Composer ma box</a>
+        <a class="btn btn-line" href="tel:+262693020478">06 93 02 04 78</a>
+      </div>
+      <div class="occ rv d3"><span>Apéro box</span><span>Brunch</span><span>Cocktail dînatoire</span><span>Séminaire</span></div>
+    </div>
+    <div class="tray rv d2">
+      <div class="stamp" aria-hidden="true"><span>fait<br>maison</span></div>
+      <figure class="t1"><img src="img/box-1015.jpg" alt="Plateau de mini burgers au sésame"></figure>
+      <figure class="t2"><img src="img/fb-saumon.jpg" alt="Plateau de bouchées apéritives"></figure>
+      <figure class="t3"><img src="img/commande-0606.jpg" alt="Bâtonnets de pain aux graines"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="occasions">
+  <div class="wrap">
+    <span class="kicker rv">Pour toutes les occasions</span>
+    <h2 class="rv d1">De l'apéro entre amis au <em>repas d'entreprise.</em></h2>
+    <div class="uses">
+      <div class="use rv"><b>Apéro box</b><p>Le concept maison : une box garnie, prête à poser sur la table.</p></div>
+      <div class="use rv d1"><b>Brunch</b><p>Pour bien commencer un week-end ou une journée de fête.</p></div>
+      <div class="use rv d2"><b>Réception</b><p>Anniversaire, soirée entre amis, événement : vos invités se régalent.</p></div>
+      <div class="use rv d3"><b>Entreprise</b><p>Séminaire, cocktail dînatoire, repas d'entreprise.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="maison">
+  <div class="wrap">
+    <span class="kicker rv">Les commandes du jour</span>
+    <h2 class="rv d1">Tout est <em>fait maison.</em></h2>
+    <p class="lead rv d2" style="margin-top:16px">Mini burgers, feuilletés, brochettes, petits sandwichs : chaque commande est préparée pour la vôtre, et partagée sur notre page.</p>
+    <div class="gal">
+      <figure class="g1 rv"><img src="img/fb-brochettes.jpg" alt="Plateau de brochettes et boulettes" loading="lazy"></figure>
+      <figure class="g2 rv d1"><img src="img/commande-0710.jpg" alt="Pommes de terre rôties au persil" loading="lazy"></figure>
+      <figure class="g3 rv d2"><img src="img/fb-feuilletes.jpg" alt="Plateau de feuilletés" loading="lazy"></figure>
+      <figure class="g4 rv d1"><img src="img/fb-sandwichs.jpg" alt="Plateau de petits sandwichs" loading="lazy"></figure>
+      <figure class="g5 rv d2"><img src="img/fb-triangles.jpg" alt="Plateau de bouchées salées" loading="lazy"></figure>
+    </div>
+    <p class="credit">Photos : Les Petits Apéros</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap qgrid">
+    <div>
+      <span class="kicker rv">Préparation du jour</span>
+      <p class="quote rv d1">« 60 mini burgers maison, prêts à régaler une cliente sur Saint-Pierre. »</p>
+      <p class="lead rv d2" style="margin-top:18px">Petite tablée ou grande réception : on prépare la quantité qu'il vous faut.</p>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="box">
+  <div class="wrap o-grid">
+    <div>
+      <span class="kicker rv">Composer ma box</span>
+      <h2 class="rv d1">Votre apéro, <em>en trois clics.</em></h2>
+      <p class="lead rv d2" style="margin-top:16px">Choisissez l'occasion, le nombre d'invités et la date : votre demande part en un message WhatsApp, et nous vous répondons avec une proposition sur mesure.</p>
+    </div>
+    <form class="box rv d2" id="bf">
+      <span class="lbl">L'occasion</span>
+      <div class="chips" id="occ"><button type="button" class="on">Apéro box</button><button type="button">Anniversaire</button><button type="button">Brunch</button><button type="button">Cocktail dînatoire</button><button type="button">Entreprise</button></div>
+      <span class="lbl">Nombre d'invités</span>
+      <div class="range"><input type="range" id="nb" min="4" max="80" step="2" value="12" aria-label="Nombre d'invités"><output id="nbo">12</output></div>
+      <label class="lbl" for="dt">Pour le</label>
+      <input type="date" id="dt">
+      <div class="recap" id="recap"></div>
+      <button class="btn btn-gold" type="submit">Envoyer ma demande par WhatsApp</button>
+      <p class="note">Ou par téléphone : 06 93 02 04 78</p>
+    </form>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="kicker rv">Contact</span>
+    <h2 class="rv d1">On prépare <em>votre prochain apéro ?</em></h2>
+    <div class="c-grid">
+      <a class="cbox rv" href="tel:+262693020478"><small>Commandes</small><b>06 93 02 04 78</b></a>
+      <a class="cbox rv d1" href="mailto:lespetitsaperos@gmail.com"><small>E-mail</small><b>lespetitsaperos@gmail.com</b></a>
+      <a class="cbox rv d2" href="https://www.instagram.com/les_petits_aperos/" target="_blank" rel="noopener"><small>Instagram</small><b>@les_petits_aperos</b></a>
+    </div>
+    <p class="lead rv" style="margin-top:26px;font-size:.98rem">155 C chemin Saint-Expédit, Le Tampon</p>
+  </div>
+</section>
+
+<footer>
+  <p>© Les Petits Apéros · Traiteur · Le Tampon, La Réunion</p>
+  <p style="margin-top:8px">Maquette privée réalisée par <a href="https://une2cvmillehistoires.re">Aurélie &amp; Jonathan</a> à partir des informations publiées par Les Petits Apéros.</p>
+</footer>
+<div class="mbar">
+  <a class="btn btn-gold" href="#box">Ma box</a>
+  <a class="btn btn-line" style="color:#fff;border-color:#fff" href="tel:+262693020478">Appeler</a>
+</div>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.hero .rv').forEach(e=>e.classList.add('in')),60);
+const WA='262693020478',st={occ:'Apéro box'};
+const nb=document.getElementById('nb'),dt=document.getElementById('dt');
+document.getElementById('occ').onclick=e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#occ button').forEach(x=>x.classList.toggle('on',x===b));st.occ=b.textContent;upd()};
+nb.oninput=upd;dt.oninput=upd;
+function fd(v){if(!v)return 'date à préciser';const d=new Date(v+'T12:00');return d.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'})}
+function msg(){return "Bonjour Les Petits Apéros !\nOccasion : "+st.occ+"\nInvités : "+nb.value+"\nPour le : "+fd(dt.value)+"\nPouvez-vous me faire une proposition ?"}
+function upd(){document.getElementById('nbo').textContent=nb.value;document.getElementById('recap').textContent=msg()}
+upd();
+document.getElementById('bf').onsubmit=e=>{e.preventDefault();window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg()),'_blank')};
+</script>
+</body>
+</html>

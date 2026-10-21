@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Les Carry d'Emilie · Livraison de repas et traiteur au Tampon</title>
+<meta name="description" content="Cuisine créole et du monde, livrée chez vous sur Le Tampon et Saint-Pierre. Repas complet ou carry seul, commande la veille.">
+<meta property="og:title" content="Les Carry d'Emilie · Un bon carry, livré chez vous">
+<meta property="og:description" content="Livraison de repas et traiteur sur Le Tampon et Saint-Pierre.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/les-carry-d-emilie/img/og.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/les-carry-d-emilie/">
+<meta name="theme-color" content="#f4cf42">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sun:#f4cf42; --sun2:#ffe27a; --carry:#8a3418; --chili:#c8401f; --brede:#3f7a2a;
+  --ink:#24170c; --muted:#6b5a48; --cream:#fff9e8; --paper:#ffffff;
+  --r:22px; --shadow:0 24px 50px -26px rgba(60,30,5,.55);
+  --display:'Bricolage Grotesque',Georgia,sans-serif; --sans:'Figtree',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1140px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);line-height:1.02;letter-spacing:-.02em;font-weight:800;text-wrap:balance}
+h2{font-size:clamp(2rem,5.6vw,3.5rem)}
+.kicker{display:inline-block;font-weight:800;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--chili);margin-bottom:14px}
+.lead{font-size:clamp(1.02rem,2.2vw,1.16rem);color:var(--muted);max-width:56ch;text-wrap:pretty}
+section{padding:clamp(64px,10vw,120px) 0;position:relative}
+.ribbon{background:var(--ink);color:#f5e7c8;font-size:.8rem;text-align:center;padding:8px 14px}
+.ribbon b{color:var(--sun)}
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,249,232,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(36,23,12,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:14px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.12rem;line-height:1}
+.logo small{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.18em;font-weight:800;color:var(--chili);margin-top:4px;text-transform:uppercase}
+.pot{width:40px;height:40px;border-radius:50%;background:var(--sun);display:grid;place-items:center;flex:none;font-family:var(--display);font-weight:800;color:var(--ink);font-size:1.05rem;box-shadow:inset 0 0 0 3px #fff,0 0 0 2px var(--sun)}
+.nav ul{display:flex;gap:26px;list-style:none;font-weight:700;font-size:.95rem}
+.nav ul a{text-decoration:none;opacity:.72}.nav ul a:hover{opacity:1}
+@media(max-width:880px){.nav ul{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-weight:800;text-decoration:none;border-radius:999px;padding:15px 26px;border:0;cursor:pointer;font-family:var(--sans);font-size:1rem;transition:transform .25s,box-shadow .25s,background .25s;min-height:48px}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--chili);outline-offset:3px}
+.btn-ink{background:var(--ink);color:var(--sun)}
+.btn-chili{background:var(--chili);color:#fff;box-shadow:0 12px 26px -14px rgba(200,64,31,.9)}
+.btn-line{background:transparent;border:2px solid var(--ink);color:var(--ink)}
+.btn-sun{background:var(--sun);color:var(--ink)}
+.nav .btn{padding:10px 18px;font-size:.9rem;min-height:44px}
+.hero{background:var(--sun);padding:clamp(34px,6vw,70px) 0 clamp(70px,9vw,110px);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero .kicker{color:var(--carry)}
+.hero h1{font-size:clamp(2.9rem,9.4vw,6.2rem)}
+.hero h1 span{display:block;color:#fff;-webkit-text-stroke:2px var(--ink);paint-order:stroke fill}
+.hero .lead{color:#4a3518;margin:22px 0 30px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.tags span{background:rgba(255,255,255,.55);border:1.5px solid rgba(36,23,12,.15);padding:7px 14px;border-radius:999px;font-weight:700;font-size:.88rem}
+.plates{position:relative;aspect-ratio:1/1.02}
+.plate{position:absolute;border-radius:50%;overflow:hidden;border:10px solid #fff;box-shadow:var(--shadow);animation:float 7s ease-in-out infinite;aspect-ratio:1}
+.plate img{width:100%;height:100%;object-fit:cover;transform:scale(1.15)}
+.p1{width:64%;left:0;top:4%}
+.p2{width:46%;right:0;top:0;animation-delay:-2s}
+.p3{width:50%;right:6%;bottom:0;animation-delay:-4s}
+@keyframes float{50%{transform:translateY(-12px) rotate(2deg)}}
+.steam{position:absolute;left:24%;top:-2%;width:60px;height:80px;z-index:3;opacity:.8}
+.steam i{position:absolute;bottom:0;width:8px;height:40px;border-radius:8px;background:rgba(255,255,255,.9);filter:blur(3px);animation:rise 3s ease-in infinite}
+.steam i:nth-child(2){left:20px;animation-delay:-1s}.steam i:nth-child(3){left:40px;animation-delay:-2s}
+@keyframes rise{0%{transform:translateY(20px) scaleY(.6);opacity:0}40%{opacity:1}100%{transform:translateY(-40px) scaleY(1.2);opacity:0}}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.plates{max-width:420px;width:100%;margin:6px auto 0}}
+.band{background:var(--ink);color:var(--sun);overflow:hidden;padding:18px 0;transform:rotate(-1.4deg) scale(1.03);margin-top:-26px;position:relative;z-index:2}
+.band .track{display:flex;width:max-content;animation:scroll 32s linear infinite}
+.band span{font-family:var(--display);font-weight:800;font-size:clamp(1.15rem,3vw,1.7rem);padding:0 22px;white-space:nowrap;display:flex;align-items:center;gap:44px}
+.band span::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--chili)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.forms{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px}
+.card{background:var(--paper);border-radius:28px;padding:30px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.card h3{font-size:clamp(1.6rem,3.6vw,2.2rem);margin-bottom:10px}
+.card p{color:var(--muted);position:relative;max-width:40ch}
+.card .big{position:absolute;right:-6px;bottom:-30px;font-family:var(--display);font-weight:800;font-size:8rem;line-height:1;color:var(--sun);opacity:.45;pointer-events:none}
+.card.alt{background:var(--carry);color:#fff}
+.card.alt p{color:#f3d9c9}
+.card.alt .big{color:#fff;opacity:.12}
+@media(max-width:760px){.forms{grid-template-columns:1fr}}
+.kitchen{background:var(--paper)}
+.k-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.k-grid figure{border-radius:var(--r);overflow:hidden;aspect-ratio:1/0.85;position:relative;box-shadow:var(--shadow)}
+.k-grid img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.k-grid figure:hover img{transform:scale(1.06)}
+.k-grid figure:nth-child(2){margin-top:26px}
+.credit{font-size:.82rem;color:var(--muted);margin-top:22px}
+@media(max-width:700px){.k-grid{grid-template-columns:1fr 1fr}.k-grid figure:nth-child(3){grid-column:1/-1;aspect-ratio:16/9}.k-grid figure:nth-child(2){margin-top:0}}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px;counter-reset:s}
+.step{background:var(--paper);border-radius:var(--r);padding:26px;border:1.5px solid rgba(36,23,12,.08)}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--sun);font-family:var(--display);font-weight:800;font-size:1.4rem;margin-bottom:16px}
+.step h3{font-size:1.3rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.96rem}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.order{background:var(--ink);color:#fff}
+.order .lead{color:#d9c8a8}
+.order .kicker{color:var(--sun)}
+.o-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+.box{background:#fff;color:var(--ink);border-radius:28px;padding:clamp(22px,4vw,34px);box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.lbl{font-weight:800;font-size:.85rem;margin:18px 0 8px;display:block}
+.lbl:first-child{margin-top:0}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg button{min-height:48px;border-radius:14px;border:2px solid #eadfc8;background:var(--cream);font:800 .95rem var(--sans);color:var(--ink);cursor:pointer;transition:.2s;padding:8px}
+.seg button.on{background:var(--sun);border-color:var(--ink)}
+.count{display:flex;align-items:center;gap:14px}
+.count button{width:48px;height:48px;border-radius:50%;border:0;background:var(--cream);font:800 1.3rem var(--sans);cursor:pointer;color:var(--ink)}
+.count button.plus{background:var(--ink);color:var(--sun)}
+.count output{font-family:var(--display);font-weight:800;font-size:2rem;min-width:2ch;text-align:center}
+.box input{width:100%;font:500 1rem var(--sans);padding:13px 14px;border-radius:14px;border:2px solid #eadfc8;background:#fff;color:var(--ink)}
+.box input:focus{outline:none;border-color:var(--chili)}
+.recap{margin:20px 0 16px;background:var(--cream);border-radius:16px;padding:14px 16px;font-size:.93rem;white-space:pre-line;border:1.5px dashed #e3cf95}
+.box .btn{width:100%}
+.note{font-size:.82rem;color:var(--muted);margin-top:10px;text-align:center}
+@media(max-width:860px){.o-grid{grid-template-columns:1fr}}
+.c-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.cbox{background:var(--paper);border-radius:var(--r);padding:24px;text-decoration:none;display:flex;flex-direction:column;gap:4px;border:1.5px solid rgba(36,23,12,.08);transition:.3s}
+.cbox:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.cbox small{font-weight:800;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--chili)}
+.cbox b{font-family:var(--display);font-size:1.25rem;word-break:break-word}
+@media(max-width:760px){.c-grid{grid-template-columns:1fr}}
+footer{background:var(--ink);color:#cdb995;text-align:center;font-size:.85rem;padding:30px 20px 110px}
+footer a{color:#fff}
+.mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;gap:8px;padding:8px;background:rgba(36,23,12,.94);backdrop-filter:blur(10px);border-radius:999px}
+.mbar a{flex:1;padding:12px}
+@media(max-width:760px){.mbar{display:flex}}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour Les Carry d'Emilie</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="pot">E</span><span>Les Carry d'Emilie<small>Livraison &amp; traiteur</small></span></a>
+    <ul>
+      <li><a href="#formules">Formules</a></li>
+      <li><a href="#cuisine">La cuisine</a></li>
+      <li><a href="#commander">Commander</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-ink" href="#commander">Commander</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker rv">Le Tampon · Saint-Pierre</span>
+      <h1 class="rv d1">Un bon carry, <span>livré chez vous.</span></h1>
+      <p class="lead rv d2">Des plats créoles et du monde, avec trois carrys différents chaque jour, livrés chez vous ou au travail, au Tampon et à Saint-Pierre.</p>
+      <div class="ctas rv d3">
+        <a class="btn btn-ink" href="#commander">Commander pour demain</a>
+        <a class="btn btn-line" href="#formules">Voir les formules</a>
+      </div>
+      <div class="tags rv d3"><span>Cuisine créole</span><span>Cuisine du monde</span><span>Traiteur</span></div>
+    </div>
+    <div class="plates rv d2" aria-hidden="true">
+      <div class="steam"><i></i><i></i><i></i></div>
+      <div class="plate p1"><img src="img/carry-1.jpg" alt=""></div>
+      <div class="plate p2"><img src="img/carry-3.jpg" alt=""></div>
+      <div class="plate p3"><img src="img/carry-2.jpg" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"><div class="track">
+  <span>Repas complet</span><span>Carry seul</span><span>Cuisine créole</span><span>Cuisine du monde</span><span>Le Tampon</span><span>Saint-Pierre</span><span>Traiteur</span>
+  <span>Repas complet</span><span>Carry seul</span><span>Cuisine créole</span><span>Cuisine du monde</span><span>Le Tampon</span><span>Saint-Pierre</span><span>Traiteur</span>
+</div></div>
+
+<section id="formules">
+  <div class="wrap">
+    <span class="kicker rv">Les formules</span>
+    <h2 class="rv d1">Le repas complet, ou le carry tout seul.</h2>
+    <p class="lead rv d2" style="margin-top:16px">Deux façons de se régaler, à choisir selon la journée.</p>
+    <div class="forms">
+      <article class="card rv">
+        <h3>Repas complet</h3>
+        <p>Le repas prêt à déguster, livré chez vous ou sur votre lieu de travail.</p>
+        <span class="big" aria-hidden="true">01</span>
+      </article>
+      <article class="card alt rv d1">
+        <h3>Carry seul</h3>
+        <p>Le carry du jour en barquette, pour l'accompagner à votre façon.</p>
+        <span class="big" aria-hidden="true">02</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="kitchen" id="cuisine">
+  <div class="wrap">
+    <span class="kicker rv">Dans nos marmites</span>
+    <h2 class="rv d1">Cuisine créole et du monde.</h2>
+    <p class="lead rv d2" style="margin-top:16px">Trois carrys différents chaque jour : le goût d'ici, et quelques voyages dans l'assiette.</p>
+    <p class="credit">Photos des plats : Les Carry d'Emilie</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker rv">Comment ça marche</span>
+    <h2 class="rv d1">Trois étapes, et à table.</h2>
+    <div class="steps">
+      <div class="step rv"><h3>Le menu</h3><p>Il est publié sur notre page : trois carrys au choix chaque jour.</p></div>
+      <div class="step rv d1"><h3>Commandez la veille</h3><p>Avant 17 h, par téléphone ou sur Messenger.</p></div>
+      <div class="step rv d2"><h3>On vous livre</h3><p>Au Tampon et à Saint-Pierre, chez vous ou sur votre lieu de travail.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="commander">
+  <div class="wrap o-grid">
+    <div>
+      <span class="kicker rv">Commander</span>
+      <h2 class="rv d1">Votre repas de demain, en trente secondes.</h2>
+      <p class="lead rv d2" style="margin-top:16px">Choisissez la formule, le nombre de parts et votre commune : votre commande part en un message WhatsApp, et nous vous confirmons le menu du jour.</p>
+    </div>
+    <form class="box rv d2" id="of">
+      <span class="lbl">Formule</span>
+      <div class="seg" data-k="formule"><button type="button" class="on">Repas complet</button><button type="button">Carry seul</button></div>
+      <span class="lbl">Nombre de parts</span>
+      <div class="count"><button type="button" data-d="-1" aria-label="Moins">−</button><output id="n">2</output><button type="button" class="plus" data-d="1" aria-label="Plus">+</button></div>
+      <span class="lbl">Livraison</span>
+      <div class="seg" data-k="commune"><button type="button" class="on">Le Tampon</button><button type="button">Saint-Pierre</button></div>
+      <label class="lbl" for="nom">Votre prénom</label>
+      <input id="nom" placeholder="Votre prénom" autocomplete="given-name">
+      <div class="recap" id="recap"></div>
+      <button class="btn btn-chili" type="submit">Envoyer ma commande par WhatsApp</button>
+      <p class="note">Commandes la veille avant 17 h.</p>
+    </form>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="kicker rv">Contact</span>
+    <h2 class="rv d1">Faites-vous livrer un bon carry.</h2>
+    <div class="c-grid">
+      <a class="cbox rv" href="tel:+262692901060"><small>Téléphone</small><b>0692 90 10 60</b></a>
+      <a class="cbox rv d1" href="mailto:lescarrydemilie@gmail.com"><small>E-mail</small><b>lescarrydemilie@gmail.com</b></a>
+      <a class="cbox rv d2" href="https://www.facebook.com/profile.php?id=61586041328320" target="_blank" rel="noopener"><small>Facebook</small><b>Le menu de la semaine</b></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© Les Carry d'Emilie · Livraison de repas et traiteur · Le Tampon, La Réunion</p>
+  <p style="margin-top:8px">Maquette privée réalisée par <a href="https://une2cvmillehistoires.re">Aurélie &amp; Jonathan</a> à partir des informations publiées par Les Carry d'Emilie.</p>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-sun" href="#commander">Commander</a>
+  <a class="btn btn-line" style="color:#fff;border-color:#fff" href="tel:+262692901060">Appeler</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.hero .rv').forEach(e=>e.classList.add('in')),60);
+const WA='262692901060',st={formule:'Repas complet',commune:'Le Tampon',n:2};
+document.querySelectorAll('.seg').forEach(s=>s.onclick=e=>{const b=e.target.closest('button');if(!b)return;s.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));st[s.dataset.k]=b.textContent;upd()});
+document.querySelectorAll('.count button').forEach(b=>b.onclick=()=>{st.n=Math.max(1,Math.min(30,st.n+ +b.dataset.d));upd()});
+document.getElementById('nom').oninput=upd;
+function msg(){const p=document.getElementById('nom').value.trim();return "Bonjour Les Carry d'Emilie !"+(p?" Ici "+p+".":"")+"\nPour demain : "+st.n+" x "+st.formule+"\nLivraison : "+st.commune+"\nQuel est le menu du jour ?"}
+function upd(){document.getElementById('n').textContent=st.n;document.getElementById('recap').textContent=msg()}
+upd();
+document.getElementById('of').onsubmit=e=>{e.preventDefault();window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg()),'_blank')};
+</script>
+</body>
+</html>
