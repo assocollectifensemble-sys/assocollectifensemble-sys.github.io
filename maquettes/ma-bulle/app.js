@@ -25,6 +25,10 @@ function cocherRituel(champ) { const r = rituels(), k = auj(); r[k] = Object.ass
 function serie() { // jours de suite avec le rituel complet (aujourd'hui compte s'il est fini, sinon on part d'hier)
   const d = new Date(); if (rituel(cle(d)).n < 3) d.setDate(d.getDate() - 1);
   let n = 0; while (rituel(cle(d)).n === 3) { n++; d.setDate(d.getDate() - 1); } return n; }
+function rappelSauvegarde() { // une fois par mois, dès qu'il y a une semaine de journal
+  if (Object.keys(journal()).length < 7) return false;
+  return Date.now() - Math.max(S.get("derniereSauvegarde", 0), S.get("sauverPlusTard", 0)) > 30 * 864e5;
+}
 const idxJour = () => Math.floor(new Date(auj()).getTime() / 864e5);
 function marquerExo(id) { const e = exosFaits(), k = auj(); e[k] = [...new Set([...(e[k] || []), id])]; S.set("exos", e); }
 
@@ -63,6 +67,105 @@ function fermer() { stopMinuteurs(); $("#feuille").hidden = true; document.body.
 $("#feuille").addEventListener("click", e => { if (e.target.closest("[data-fermer]")) fermer(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("#feuille").hidden) fermer(); });
 
+/* ---------- Installation sur l'écran d'accueil ---------- */
+const enAppli = () => matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+const estIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+let promptInstall = null;
+addEventListener("beforeinstallprompt", e => { e.preventDefault(); promptInstall = e; if (vue === "accueil" && $("#ecran")) afficher("accueil", true); });
+addEventListener("appinstalled", () => { S.set("installee", true); promptInstall = null; toast("Ma bulle est sur ton écran d'accueil 🎉"); if (vue === "accueil") afficher("accueil", true); });
+function montrerBandeauInstall() {
+  if (enAppli() || S.get("installee", false)) return false;
+  const plusTard = S.get("installPlusTard", 0); return Date.now() - plusTard > 3 * 864e5;
+}
+function guideInstall(html = "") {
+  if (promptInstall) { promptInstall.prompt(); promptInstall.userChoice.then(c => { if (c.outcome === "accepted") S.set("installee", true); promptInstall = null; }); return; }
+  ouvrir(`<div style="font-size:2.2rem">📲</div><h1>Mettre Ma bulle sur ton écran d'accueil</h1>
+    ${estIOS() ? `<ol class="etapes-install">
+        <li>En bas de Safari, touche le bouton <b>Partager</b> <span class="pict">⬆️</span></li>
+        <li>Fais défiler et choisis <b>« Sur l'écran d'accueil »</b> <span class="pict">➕</span></li>
+        <li>Touche <b>Ajouter</b>, puis ouvre Ma bulle depuis son icône.</li></ol>
+        <p class="petit doux">Sur iPhone, l'appli installée garde ses propres données : installe-la avant de commencer à écrire, c'est plus simple.</p>`
+      : `<ol class="etapes-install">
+        <li>Touche le menu du navigateur <span class="pict">⋮</span> (en haut à droite)</li>
+        <li>Choisis <b>« Installer l'application »</b> ou <b>« Ajouter à l'écran d'accueil »</b></li>
+        <li>Ouvre Ma bulle depuis son icône.</li></ol>`}
+    ${html}<button class="bouton plein" data-fermer>J'ai compris</button>`);
+}
+
+/* ---------- Garder les données ---------- */
+async function demanderPersistance() { try { if (navigator.storage && navigator.storage.persist && !(await navigator.storage.persisted())) await navigator.storage.persist(); } catch {} }
+const blobEnTexte = b => new Promise(ok => { const fr = new FileReader(); fr.onload = () => ok(fr.result); fr.readAsDataURL(b); });
+async function sauvegarder() {
+  const donnees = {}; Object.keys(localStorage).filter(k => k.startsWith("mb_") && k !== "mb_pin").forEach(k => donnees[k] = localStorage.getItem(k));
+  const ph = []; for (const p of await photos.tout()) ph.push({ id: p.id, t: p.t, d: await blobEnTexte(p.blob) });
+  const nom = `ma-bulle-sauvegarde-${auj()}.json`;
+  const fichier = new File([JSON.stringify({ appli: "ma-bulle", version: 1, date: new Date().toISOString(), donnees, photos: ph })], nom, { type: "application/json" });
+  S.set("derniereSauvegarde", Date.now());
+  if (navigator.canShare && navigator.canShare({ files: [fichier] })) {
+    try { await navigator.share({ files: [fichier], title: "Sauvegarde Ma bulle" }); toast("Sauvegarde prête 💾"); return; } catch (e) { if (e.name === "AbortError") return; }
+  }
+  const a = document.createElement("a"); a.href = URL.createObjectURL(fichier); a.download = nom; document.body.appendChild(a); a.click(); a.remove();
+  toast("Sauvegarde téléchargée 💾");
+}
+async function restaurer(f) {
+  try {
+    const j = JSON.parse(await f.text()); if (j.appli !== "ma-bulle") throw 0;
+    if (!confirm("Remplacer ce qu'il y a dans l'appli par cette sauvegarde ?")) return;
+    Object.keys(localStorage).filter(k => k.startsWith("mb_") && k !== "mb_pin").forEach(k => localStorage.removeItem(k));
+    Object.entries(j.donnees || {}).forEach(([k, v]) => { if (k.startsWith("mb_") && k !== "mb_pin") localStorage.setItem(k, v); });
+    await photos.vider();
+    const db = await idb();
+    for (const p of j.photos || []) { const blob = await (await fetch(p.d)).blob();
+      await new Promise(ok => { const tx = db.transaction("photos", "readwrite"); tx.objectStore("photos").put({ id: p.id, t: p.t, blob }); tx.oncomplete = ok; }); }
+    S.set("accueilFait", true); toast("Tout est revenu 💛"); afficher("accueil");
+  } catch { toast("Ce fichier n'est pas une sauvegarde Ma bulle"); }
+}
+
+/* ---------- Première ouverture ---------- */
+function bienvenue(etape = 0) {
+  const el = $("#bienvenue"); el.hidden = false; document.body.style.overflow = "hidden";
+  const fin = () => { S.set("accueilFait", true); el.hidden = true; document.body.style.overflow = ""; demanderPersistance(); afficher("accueil"); };
+  const points = n => `<div class="bv-points">${[0,1,2,3].map(i => `<i class="${i === n ? "on" : ""}"></i>`).join("")}</div>`;
+  const E = [
+    () => `<div class="bv-logo"><span class="marque-pastille"></span></div><h1>Bienvenue dans<br>${esc(C.nomAppli)}</h1>
+      <p>Ton espace à toi pour prendre soin de toi, jour après jour.</p>
+      <p class="bv-note">🔒 Tout reste sur ton téléphone. Pas de compte, rien n'est envoyé.</p>
+      ${enAppli() ? "" : `<div class="bv-install"><b>📲 Installe-la d'abord sur ton écran d'accueil</b><small>${estIOS() ? "Sur iPhone, ce que tu écris dans Safari ne passe pas dans l'appli installée." : "Elle s'ouvrira comme une vraie appli, même sans internet."}</small>
+        <button class="bouton blanc" data-bv="install">Comment faire ?</button></div>`}
+      <button class="bouton blanc plein" data-bv="suite">${enAppli() ? "C'est parti" : "Continuer ici"}</button>
+      <button class="lien bv-lien" data-bv="restaurer">J'ai une sauvegarde</button><input type="file" id="bvFichier" accept=".json,application/json" hidden>`,
+    () => `${points(1)}<div class="bv-emoji">👋</div><h1>Comment tu t'appelles ?</h1><p>Ton prénom ou un surnom, juste pour que l'appli te dise bonjour.</p>
+      <form data-bvform="prenom"><input class="champ" name="v" maxlength="30" autocomplete="given-name" placeholder="Ton prénom" value="${esc(S.get("prenom", ""))}">
+      <button class="bouton blanc plein" style="margin-top:14px">Suivant</button></form><button class="lien bv-lien" data-bv="suite">Passer</button>`,
+    () => `${points(2)}<div class="bv-emoji">⏱️</div><h1>On lance ton compteur ?</h1><p>Il compte les jours depuis que tu as décidé d'arrêter ou de lever le pied. Tu pourras le changer quand tu veux.</p>
+      <button class="bouton blanc plein" data-bv="cpt-auj">À partir d'aujourd'hui</button>
+      <form data-bvform="compteur" class="bv-date"><label>Depuis une autre date :</label><input class="champ" type="date" name="v" max="${auj()}"><button class="bouton blanc">OK</button></form>
+      <button class="lien bv-lien" data-bv="suite">Plus tard</button>`,
+    () => `${points(3)}<div class="bv-emoji">💛</div><h1>Pourquoi tu le fais ?</h1><p>Écris une chose qui te donne envie d'avancer. Tu la reliras chaque jour dans ton rituel.</p>
+      <form data-bvform="motiv"><input class="champ" name="v" maxlength="140" placeholder="Ex. : me sentir libre"><button class="bouton blanc plein" style="margin-top:14px">Suivant</button></form>
+      <button class="lien bv-lien" data-bv="suite">Passer</button>`,
+    () => `<div class="bv-emoji">🌟</div><h1>C'est prêt${S.get("prenom", "") ? ", " + esc(S.get("prenom")) : ""} !</h1>
+      <p>Chaque jour, ton rituel t'attend sur l'accueil : 3 petits pas, quelques minutes.</p>
+      <p class="bv-note">Le bouton <b>Besoin d'aide</b>, en haut, est toujours là si ça ne va pas.</p>
+      <button class="bouton blanc plein" data-bv="fin">Entrer dans ma bulle</button>`
+  ];
+  el.innerHTML = `<div class="bv-carte">${E[etape]()}</div>`;
+  const suite = () => bienvenue(etape + 1);
+  el.querySelectorAll("[data-bv]").forEach(b => b.onclick = () => {
+    const a = b.dataset.bv;
+    if (a === "suite") suite(); if (a === "fin") fin(); if (a === "install") guideInstall();
+    if (a === "cpt-auj") { S.set("compteur", auj()); suite(); }
+    if (a === "restaurer") $("#bvFichier", el).click();
+  });
+  const fi = $("#bvFichier", el); if (fi) fi.onchange = async () => { if (fi.files[0]) { await restaurer(fi.files[0]); if (S.get("accueilFait", false)) { el.hidden = true; document.body.style.overflow = ""; demanderPersistance(); } } };
+  el.querySelectorAll("[data-bvform]").forEach(f => f.onsubmit = e => { e.preventDefault(); const v = f.v.value.trim(), t = f.dataset.bvform;
+    if (t === "prenom" && v) S.set("prenom", v);
+    if (t === "compteur") { if (!v) return; S.set("compteur", v); }
+    if (t === "motiv" && v) S.set("motivations", [...S.get("motivations", []), v]);
+    suite(); });
+  const inp = el.querySelector("input.champ:not([type=date])"); if (inp) setTimeout(() => inp.focus(), 300);
+}
+
 /* ---------- Compteur ---------- */
 function joursSans() {
   const d = S.get("compteur", null); if (!d) return null;
@@ -92,6 +195,15 @@ accueil() {
         : `<h2>${n === 0 ? "C'est le début 🌱" : "Bravo, continue 💪"}</h2><p class="petit">Depuis le ${dateLongue(S.get("compteur"))}</p><button class="lien" style="color:#fff" data-act="compteur">Modifier</button>`}
     </div>
   </section>
+
+  ${montrerBandeauInstall() ? `<section class="carte orange bandeau-install">
+    <div><b>📲 Mets ${esc(C.nomAppli)} sur ton écran d'accueil</b><small>Elle s'ouvrira comme une vraie appli, même sans internet.</small></div>
+    <div class="bandeau-btns"><button class="bouton blanc" data-act="installer">Installer</button><button class="lien-blanc" data-act="install-plus-tard">Plus tard</button></div>
+  </section>` : ""}
+  ${rappelSauvegarde() ? `<section class="carte jaune bandeau-install">
+    <div><b>💾 Pense à faire une sauvegarde</b><small>Pour garder ta progression si tu changes de téléphone ou si tu supprimes l'appli.</small></div>
+    <div class="bandeau-btns"><button class="bouton" data-act="sauver">Sauvegarder</button><button class="lien" data-act="sauver-plus-tard">Plus tard</button></div>
+  </section>` : ""}
 
   <section class="carte rituel">
     <div class="rituel-tete"><h2>Mon rituel du jour</h2>${se ? `<span class="serie">🔥 ${se} jour${se > 1 ? "s" : ""} de suite</span>` : ""}</div>
@@ -225,8 +337,13 @@ coffre() {
     <button class="rangee" data-act="prenom"><span class="ico">🙂</span><span><b>Mon prénom</b><small>${esc(S.get("prenom", "") || "Pas encore choisi")}</small></span><span class="fleche">›</span></button>
     <button class="rangee" data-act="code"><span class="ico">🔒</span><span><b>Code secret</b><small>${S.get("pin", null) ? "Activé" : "Désactivé"} · protège l'ouverture de l'appli</small></span><span class="fleche">›</span></button>
     <button class="rangee" data-act="compteur"><span class="ico">⏱️</span><span><b>Mon compteur</b><small>${S.get("compteur", null) ? "Depuis le " + esc(dateLongue(S.get("compteur"))) : "Pas démarré"}</small></span><span class="fleche">›</span></button>
+    ${enAppli() || S.get("installee", false) ? "" : `<button class="rangee" data-act="installer"><span class="ico">📲</span><span><b>Mettre sur l'écran d'accueil</b><small>Pour l'ouvrir comme une vraie appli</small></span><span class="fleche">›</span></button>`}
+    <button class="rangee" data-act="sauver"><span class="ico">💾</span><span><b>Sauvegarder mes données</b><small>${S.get("derniereSauvegarde", 0) ? "Dernière : " + esc(dateLongue(cle(new Date(S.get("derniereSauvegarde"))))) : "Un fichier à garder (fichiers, mail, Drive…)"}</small></span><span class="fleche">›</span></button>
+    <button class="rangee" data-act="restaurer"><span class="ico">📂</span><span><b>Restaurer une sauvegarde</b><small>Nouveau téléphone, appli réinstallée…</small></span><span class="fleche">›</span></button>
+    <input type="file" id="fichierRestau" accept=".json,application/json" hidden>
     <button class="rangee" data-act="effacer"><span class="ico">🗑️</span><span><b>Tout effacer</b><small>Supprime toutes tes données de ce téléphone</small></span><span class="fleche">›</span></button>
-  </section>`;
+  </section>
+  <p class="petit doux" style="text-align:center;margin:4px 12px 0">🔒 Tout reste sur ton téléphone : rien n'est envoyé. Fermer ou rouvrir l'appli ne perd rien. Si tu la supprimes ou changes de téléphone, utilise une sauvegarde.</p>`;
 }
 };
 
@@ -313,6 +430,11 @@ ecran.addEventListener("click", async e => {
   const act = d.act;
   if (act === "enregistrer") { majJour(lireFormulaire()); toast("Journal enregistré 💛"); afficher("journal", true); }
   if (act === "compteur") reglerCompteur();
+  if (act === "installer") guideInstall();
+  if (act === "install-plus-tard") { S.set("installPlusTard", Date.now()); afficher("accueil", true); }
+  if (act === "sauver") { await sauvegarder(); afficher(vue, true); }
+  if (act === "sauver-plus-tard") { S.set("sauverPlusTard", Date.now()); afficher("accueil", true); }
+  if (act === "restaurer") $("#fichierRestau").click();
   if (act === "r-defi") { if (!rituel(auj()).defi) { cocherRituel("defi"); toast("Défi relevé, bravo 💪"); } afficher("accueil"); }
   if (act === "r-motiv") ouvrirMotivations();
   if (act === "victoires") ouvrirVictoires();
@@ -320,7 +442,7 @@ ecran.addEventListener("click", async e => {
       <form data-form="prenom"><input class="champ" name="v" maxlength="30" value="${esc(S.get("prenom", ""))}"><button class="bouton plein" style="margin-top:12px">Enregistrer</button></form>`); }
   if (act === "code") reglerCode();
   if (act === "effacer") { if (confirm("Effacer TOUT ce que tu as noté sur ce téléphone ? Ça ne peut pas être annulé.")) {
-      Object.keys(localStorage).filter(k => k.startsWith("mb_")).forEach(k => localStorage.removeItem(k)); await photos.vider(); toast("Tout est effacé"); afficher("accueil"); } }
+      Object.keys(localStorage).filter(k => k.startsWith("mb_")).forEach(k => localStorage.removeItem(k)); await photos.vider(); toast("Tout est effacé"); afficher("accueil"); bienvenue(0); } }
 });
 ecran.addEventListener("input", e => { if (e.target.id === "envie") $("#envieVal").textContent = e.target.value; });
 ecran.addEventListener("change", async e => {
@@ -492,8 +614,11 @@ $("#btnAide").addEventListener("click", () => ouvrir(`<h1>Besoin d'aide ?</h1>
     el.querySelector("[data-fermer]").addEventListener("click", () => setTimeout(() => ouvrirExercice("coherence"), 50));
   }));
 
+document.addEventListener("change", e => { if (e.target.id === "fichierRestau" && e.target.files[0]) restaurer(e.target.files[0]); });
+
 /* ---------- Démarrage ---------- */
-afficher("accueil");
+if (S.get("accueilFait", false) || Object.keys(localStorage).some(k => k.startsWith("mb_journal") || k === "mb_prenom")) { S.set("accueilFait", true); afficher("accueil"); demanderPersistance(); }
+else { afficher("accueil"); bienvenue(0); }
 verrou();
 if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});
 })();

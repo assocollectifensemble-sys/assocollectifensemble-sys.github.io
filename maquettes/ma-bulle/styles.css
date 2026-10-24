@@ -190,3 +190,58 @@ label.etiquette{display:block;font-weight:800;margin:14px 0 8px}
 .bdg{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;padding:10px 6px;border-radius:16px;background:#F6F1EC;filter:grayscale(1);opacity:.55}
 .bdg span{font-size:1.7rem} .bdg small{font-size:.72rem;font-weight:800;line-height:1.2}
 .bdg.on{background:var(--peche);filter:none;opacity:1;box-shadow:inset 0 0 0 2px #fff}
+
+/* Première ouverture, installation, sauvegarde (V1.3) */
+.bienvenue{position:fixed;inset:0;z-index:19;background:linear-gradient(165deg,#FFA25E 0%,var(--orange) 55%,#F7763A 100%);color:#fff;
+  display:flex;align-items:center;justify-content:center;padding:calc(24px + var(--haut)) 22px calc(24px + var(--bas));overflow:auto}
+.bv-carte{width:100%;max-width:420px;text-align:center;animation:bvIn .35s ease}
+@keyframes bvIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.bienvenue h1{font-size:1.9rem;line-height:1.15;margin:14px 0 10px;font-weight:900}
+.bienvenue p{font-size:1.05rem;line-height:1.45;margin:0 0 16px;color:#FFF3EA}
+.bv-logo .marque-pastille{display:inline-block;width:84px;height:84px;box-shadow:inset 0 0 0 18px var(--peche),0 10px 30px rgba(160,60,0,.25)}
+.bv-emoji{font-size:3rem}
+.bv-note{font-size:.92rem!important;background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.7);border-radius:16px;padding:10px 12px}
+.bv-install{display:flex;flex-direction:column;gap:6px;align-items:center;background:#fff;color:var(--encre);border-radius:20px;padding:14px;margin:0 0 16px}
+.bv-install small{color:var(--doux);line-height:1.35}
+.bv-install .bouton.blanc{background:var(--orange);color:#fff;margin-top:4px}
+.bienvenue .champ{text-align:center;font-size:1.1rem;border:2px solid #fff}
+.bienvenue .bouton.plein{width:100%}
+.bv-lien{display:block;margin:14px auto 0;color:#fff!important;font-weight:800;text-decoration:underline;background:none}
+.bv-date{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.bv-date label{width:100%;font-weight:700}
+.bv-date .champ{flex:1;min-width:0}
+.bv-points{display:flex;gap:6px;justify-content:center}
+.bv-points i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.45)} .bv-points i.on{background:#fff;width:22px;border-radius:99px}
+.bandeau-install{display:flex;flex-direction:column;gap:10px}
+.bandeau-install small{display:block;opacity:.9;line-height:1.35;margin-top:2px}
+.bandeau-btns{display:flex;align-items:center;gap:14px}
+.lien-blanc{color:#fff;font-weight:800;text-decoration:underline;background:none}
+.etapes-install{text-align:left;padding-left:20px;line-height:1.5} .etapes-install li{margin-bottom:10px}
+.pict{display:inline-block;background:var(--peche);border-radius:8px;padding:0 6px;margin-left:4px}
+
+/* ===== Variante B : traits blancs, plus de blanc, gros chiffres ===== */
+.v-trait body,.v-trait{background:#fff}
+.v-trait .ecran{padding-top:22px}
+.v-trait .carte{box-shadow:0 1px 0 rgba(58,42,34,.04),0 8px 24px rgba(58,42,34,.06);border:1px solid #F3E7DE}
+.v-trait .carte.orange{border-color:var(--orange)}
+.v-trait svg{width:100%;height:100%;display:block}
+.v-trait .ico.trait{display:flex;align-items:center;justify-content:center}
+/* tuiles d'exercices : pastille orange, trait blanc */
+.v-trait .tuile .ico.trait{width:48px;height:48px;border-radius:16px;background:var(--orange);color:#fff;padding:11px;box-shadow:0 6px 14px rgba(232,105,26,.25)}
+/* rangées (articles, réglages) */
+.v-trait .rangee{border:1px solid #F3E7DE}
+.v-trait .rangee .ico.trait{background:var(--orange);color:#fff;padding:11px}
+/* barre du bas */
+.v-trait .onglets{border-top:1px solid #F3E7DE;box-shadow:none}
+.v-trait .onglets .ico.trait{width:24px;height:24px;margin-bottom:2px}
+.v-trait .onglets button.actif{background:none;color:var(--orange-f)}
+.v-trait .onglets button.actif .ico.trait{color:#fff;background:var(--orange);border-radius:10px;padding:5px;width:34px;height:34px;margin-top:-5px}
+/* badges */
+.v-trait .bdg > span.trait{width:46px;height:46px;border-radius:50%;padding:11px;margin:0 auto 4px;background:#F1ECE8;color:#B9AAA0}
+.v-trait .bdg.on > span.trait{background:var(--orange);color:#fff;box-shadow:0 6px 14px rgba(232,105,26,.3)}
+/* petites icônes dans le texte */
+.v-trait i.mini{display:inline-block;width:14px;height:14px;vertical-align:-2px;margin-right:4px;color:var(--orange-f)}
+.v-trait .bv-emoji.trait{width:76px;height:76px;margin:0 auto;border:3px solid #fff;border-radius:50%;padding:16px;color:#fff}
+/* gros chiffres */
+.v-trait .compteur-rond{width:118px;height:118px}
+.v-trait .compteur-rond b{font-size:2.9rem;font-weight:900;letter-spacing:-.02em}
