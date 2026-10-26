@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Mes Racines · Pâtisserie de Julien Leveneur à Saint-Pierre</title>
+<meta name="description" content="Carte éphémère chaque mois, entremets à partager sur commande et Pause Salé en semaine, au 5 rue Marius et Ary Leblond à Saint-Pierre.">
+<meta property="og:title" content="Mes Racines · Pâtisserie à Saint-Pierre">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/mes-racines/img/photo-4.jpg">
+<meta name="theme-color" content="#2e3127">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#faf8f2; --cream:#f1ede1; --gold:#a08c5b; --gold2:#7e6c41; --pale:#d9c99a;
+  --olive:#2e3127; --olive2:#3b3f33; --ink:#2b2a22; --muted:#6c6a5c;
+  --serif:"Bodoni Moda",Didot,Georgia,serif; --sans:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.04;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(2.2rem,6vw,3.8rem)}
+h2 em,h1 em{font-style:italic;color:var(--gold)}
+.eyebrow{display:block;font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--gold2);margin-bottom:18px}
+.lead{font-size:clamp(1.02rem,2.1vw,1.14rem);color:var(--muted);max-width:56ch;text-wrap:pretty}
+section{padding:clamp(70px,11vw,130px) 0;position:relative}
+.ribbon{background:var(--olive);color:var(--cream);font-size:.8rem;text-align:center;padding:8px 14px}
+.ribbon b{color:var(--pale);font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font:600 .95rem var(--sans);letter-spacing:.05em;text-decoration:none;border-radius:2px;padding:15px 26px;border:0;cursor:pointer;min-height:48px;transition:transform .3s,background .3s,color .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.btn-dark{background:var(--olive);color:var(--paper)}
+.btn-dark:hover{background:var(--gold2)}
+.btn-line{border:1px solid var(--olive);color:var(--olive);background:transparent}
+.btn-line:hover{background:var(--olive);color:var(--paper)}
+.top{padding:20px 0;border-bottom:1px solid rgba(43,42,34,.1)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mark img{width:46px;height:46px;mix-blend-mode:multiply}
+.mark span{font-family:var(--serif);font-size:1.3rem;font-style:italic}
+.top nav{display:flex;gap:28px;font-size:.9rem;letter-spacing:.04em}
+.top nav a{text-decoration:none;color:var(--muted)}.top nav a:hover{color:var(--ink)}
+@media(max-width:820px){.top nav{display:none}}
+.hero{padding:clamp(40px,7vw,90px) 0 clamp(60px,9vw,110px)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,6vw,80px);align-items:center}
+.hero h1{font-size:clamp(2.9rem,9vw,6.2rem);margin-bottom:24px}
+.hero .lead{margin-bottom:32px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hours{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:36px;font-size:.88rem;color:var(--muted)}
+.hours b{display:block;font-weight:600;color:var(--ink);letter-spacing:.06em;text-transform:uppercase;font-size:.72rem}
+.hero-img{position:relative}
+.hero-img .main{aspect-ratio:4/5;object-fit:cover;width:100%;border-radius:2px;animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
+.seal{position:absolute;left:-26px;bottom:34px;width:118px;height:118px;border-radius:50%;background:var(--paper);display:grid;place-items:center;box-shadow:0 18px 40px -20px rgba(46,49,39,.55)}
+.seal svg{width:100%;height:100%;animation:spin 26s linear infinite}
+.seal i{position:absolute;font-family:var(--serif);font-style:italic;font-size:1.9rem;color:var(--gold)}
+@keyframes rise{from{opacity:0;transform:translateY(30px) scale(1.02)}to{opacity:1;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-img{order:-1}.seal{left:auto;right:14px;bottom:-30px;width:100px;height:100px}}
+.manifesto{background:var(--cream)}
+.manifesto blockquote{font-family:var(--serif);font-size:clamp(1.6rem,4.4vw,3rem);line-height:1.2;max-width:22ch;color:var(--olive)}
+.manifesto blockquote em{color:var(--gold)}
+.sig{margin-top:26px;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2)}
+.manifesto-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(30px,6vw,80px);align-items:end}
+.manifesto-grid img{aspect-ratio:3/4;object-fit:cover;width:100%}
+@media(max-width:820px){.manifesto-grid{grid-template-columns:1fr}}
+.route{background:var(--olive);color:var(--cream)}
+.route .eyebrow{color:var(--pale)}
+.route h2 em{color:var(--pale)}
+.route .lead{color:rgba(241,237,225,.75)}
+.stops{display:flex;margin:48px 0 34px;position:relative;overflow-x:auto;scrollbar-width:none;padding-bottom:6px}
+.stops::-webkit-scrollbar{display:none}
+.stops::before{content:"";position:absolute;left:40px;right:40px;top:21px;height:1px;background:repeating-linear-gradient(90deg,rgba(217,201,154,.6) 0 6px,transparent 6px 12px)}
+.stop{flex:1 0 64px;background:none;border:0;color:inherit;font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;padding:0 4px;position:relative;min-height:44px}
+.stop .dot{width:44px;height:44px;border-radius:50%;border:1px solid rgba(217,201,154,.7);background:var(--olive);display:grid;place-items:center;font-family:var(--serif);font-size:1.05rem;transition:background .35s,color .35s,transform .35s}
+.stop span{font-size:.76rem;letter-spacing:.03em;opacity:.7;line-height:1.3}
+.stop[aria-selected="true"] .dot{background:var(--pale);color:var(--olive);transform:scale(1.12)}
+.stop[aria-selected="true"] span{opacity:1}
+.card{display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,5vw,60px);align-items:start;background:var(--olive2);padding:clamp(24px,4.5vw,52px);border:1px solid rgba(217,201,154,.18);min-height:290px}
+.card .big{font-family:var(--serif);font-style:italic;font-size:clamp(4.5rem,13vw,9rem);line-height:.8;color:var(--pale);opacity:.9}
+.card .place{font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--pale)}
+.card h3{font-size:clamp(1.7rem,4vw,2.6rem);margin:10px 0 14px}
+.card p{color:rgba(241,237,225,.85);max-width:52ch}
+.card ul{list-style:none;margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
+.card li{font-size:.8rem;border:1px solid rgba(217,201,154,.35);padding:6px 12px;border-radius:999px}
+.fade{animation:fadein .5s ease both}
+@keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(max-width:620px){.card{grid-template-columns:1fr}.card .big{font-size:4.2rem}}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+.gal figure{overflow:hidden}
+.gal img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.gal figure:hover img{transform:scale(1.05)}
+.gal figure:nth-child(2){margin-top:48px}
+@media(max-width:700px){.gal{grid-template-columns:1fr 1fr}.gal figure:nth-child(2){margin-top:28px}.gal figure:nth-child(3){grid-column:span 2}.gal figure:nth-child(3) img{aspect-ratio:16/11}}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px}
+.panel{background:var(--cream);padding:clamp(24px,4vw,40px)}
+.panel h3{font-size:1.8rem;margin-bottom:6px}
+.when{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2);font-weight:600;margin-bottom:16px;display:block}
+.panel p{color:var(--muted)}
+.dish{margin-top:18px;padding-top:18px;border-top:1px solid rgba(43,42,34,.12)}
+.dish b{font-family:var(--serif);font-weight:400;font-size:1.25rem;font-style:italic;color:var(--ink);display:block}
+@media(max-width:760px){.duo{grid-template-columns:1fr}}
+.order{background:var(--cream)}
+.order-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);align-items:start}
+form{background:var(--paper);padding:clamp(22px,4vw,40px);border:1px solid rgba(43,42,34,.1);display:grid;gap:18px}
+.lbl{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted);display:grid;gap:8px}
+select,input{font:500 1rem var(--sans);color:var(--ink);background:#fff;border:1px solid rgba(43,42,34,.2);border-radius:2px;padding:12px 14px;min-height:48px;width:100%}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:500 .9rem var(--sans);border:1px solid rgba(43,42,34,.25);background:#fff;padding:10px 16px;border-radius:999px;cursor:pointer;min-height:44px;transition:background .25s,color .25s;text-transform:none;letter-spacing:0}
+.chips button[aria-pressed="true"]{background:var(--olive);color:var(--paper);border-color:var(--olive)}
+.preview{font-size:.92rem;color:var(--muted);background:var(--cream);padding:14px;font-style:italic}
+.note{font-size:.9rem;color:var(--muted);margin-top:14px}
+@media(max-width:820px){.order-grid{grid-template-columns:1fr}}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px)}
+.visit dl{display:grid;grid-template-columns:auto 1fr;gap:14px 24px;margin-top:26px}
+.visit dt{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold2);padding-top:4px}
+.visit iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(.5) sepia(.15)}
+@media(max-width:820px){.visit-grid{grid-template-columns:1fr}}
+footer{background:var(--olive);color:rgba(241,237,225,.7);padding:46px 0;font-size:.86rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer a{color:var(--pale)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> · page privée, créée avec plaisir pour Mes Racines</div>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#"><img src="img/logo.jpg" alt="Logo Julien Leveneur Mes Racines"><span>Mes Racines</span></a>
+    <nav><a href="#carte">La carte d'octobre</a><a href="#sale">Pause Salé</a><a href="#commande">Entremets</a><a href="#venir">Nous trouver</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Pâtisserie · Saint-Pierre</span>
+      <h1>Partir d'un <em>souvenir gourmand</em> et le transformer</h1>
+      <p class="lead">La pâtisserie de Julien Leveneur, au 5 rue Marius et Ary Leblond : une carte éphémère qui change chaque mois, des entremets à partager sur commande et une Pause Salé en semaine.</p>
+      <div class="ctas">
+        <a class="btn btn-dark" href="#carte">Découvrir la carte</a>
+        <a class="btn btn-line" href="#commande">Commander un entremets</a>
+      </div>
+      <div class="hours">
+        <div><b>Samedi</b>10h – 18h</div>
+        <div><b>Dimanche</b>9h – 13h</div>
+        <div><b>Pause Salé</b>lun – ven, 11h – 14h</div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img class="main" src="img/photo-4.jpg" alt="Création de Mes Racines dressée devant des bougainvilliers">
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><defs><path id="c" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs><text font-family="Manrope" font-size="9.4" letter-spacing="3.2" fill="#7e6c41"><textPath href="#c">CARTE ÉPHÉMÈRE · CHAQUE MOIS · </textPath></text></svg>
+        <i>JL</i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="wrap manifesto-grid">
+    <div class="reveal">
+      <span class="eyebrow">La maison</span>
+      <blockquote>« L'exigence du geste, jusque dans les moindres détails. Chaque création est une recherche d'<em>équilibre</em>, de <em>précision</em> et d'<em>émotion</em>. »</blockquote>
+      <p class="sig">Julien Leveneur</p>
+      <p class="lead" style="margin-top:26px">Quelques pâtisseries, des douceurs à partager, une boisson fraîche ou un café, de la vaisselle chinée, un rayon de soleil… tout ce qu'on aime chez Mes Racines.</p>
+    </div>
+    <img class="reveal" src="img/photo-1.jpg" alt="Pâtisserie de Mes Racines" loading="lazy">
+  </div>
+</section>
+
+<section class="route" id="carte">
+  <div class="wrap">
+    <span class="eyebrow">Carte d'octobre</span>
+    <h2>Sur les traces du <em>Grand Raid</em></h2>
+    <p class="lead">À l'approche de ce rendez-vous emblématique, chaque création fait écho à un lieu traversé par l'aventure. Choisissez une escale.</p>
+    <div class="stops" role="tablist" aria-label="Escales de la carte d'octobre"></div>
+    <div class="card" id="card" role="tabpanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="vitrine">
+  <div class="wrap">
+    <span class="eyebrow">En vitrine</span>
+    <h2>Le souvenir, <em>revisité</em></h2>
+    <p class="lead">« Zot i rappel cornet pistach' ? » Des cacahuètes ? Pas vraiment… De petits chocolats Dulcey façonnés, avec un cœur gourmand à la cacahuète, à retrouver en boutique tous les week-ends.</p>
+    <div class="gal">
+      <figure class="reveal"><img src="img/photo-3.jpg" alt="Gourmandise de Mes Racines" loading="lazy"></figure>
+      <figure class="reveal"><img src="img/photo-2.jpg" alt="Tarte aux fraises de Mes Racines" loading="lazy"></figure>
+      <figure class="reveal"><img src="img/photo-5.jpg" alt="Pâtisserie de Mes Racines face aux montagnes de La Réunion" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="sale" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">Aussi chez Mes Racines</span>
+    <h2>Le <em>salé</em>, en semaine et le samedi</h2>
+    <div class="duo">
+      <div class="panel reveal">
+        <span class="when">Lundi – vendredi · 11h – 14h</span>
+        <h3>Pause Salé</h3>
+        <p>Commande par message avant 10h30 au 0692 26 57 13.</p>
+        <div class="dish"><b>Sandwich Poisson Fumé</b><p>Bagel, poisson fumé (selon arrivage), cream-cheese citron, roquette, pickles de concombre et d'oignons, huile d'olive au citron.</p></div>
+      </div>
+      <div class="panel reveal">
+        <span class="when">Le samedi</span>
+        <h3>Quiches maison</h3>
+        <p>Des recettes généreuses qui changent au fil des semaines : viande, poisson ou végétarienne, il ne reste plus qu'à choisir.</p>
+        <div class="dish"><b>Tarte Agrumes</b><p>Suprême d'agrumes, gel agrumes, ganache citron, crème d'amande, pâte sucrée.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="commande">
+  <div class="wrap order-grid">
+    <div class="reveal">
+      <span class="eyebrow">Sur commande</span>
+      <h2>Un entremets <em>à partager</em></h2>
+      <p class="lead">En semaine comme le week-end, les entremets à partager sont disponibles exclusivement sur commande. Préparez votre demande ici : elle part toute prête par message.</p>
+      <p class="note">Informations et commande au <a href="tel:+262692265713">0692 26 57 13</a>.</p>
+    </div>
+    <form class="reveal" onsubmit="return false">
+      <div class="lbl">L'occasion
+        <div class="chips" id="occ">
+          <button type="button" aria-pressed="true">Anniversaire</button>
+          <button type="button" aria-pressed="false">Repas de famille</button>
+          <button type="button" aria-pressed="false">Fête</button>
+          <button type="button" aria-pressed="false">Autre</button>
+        </div>
+      </div>
+      <label class="lbl" for="d">Pour le<input type="date" id="d"></label>
+      <label class="lbl" for="n">Nombre de personnes
+        <select id="n"><option>4 à 6</option><option selected>6 à 8</option><option>8 à 10</option><option>Plus de 10</option></select>
+      </label>
+      <p class="preview" id="pv"></p>
+      <a class="btn btn-dark" id="go" href="#" target="_blank" rel="noopener">Envoyer ma demande</a>
+    </form>
+  </div>
+</section>
+
+<section class="visit" id="venir">
+  <div class="wrap visit-grid">
+    <div class="reveal">
+      <span class="eyebrow">Nous trouver</span>
+      <h2>À très vite <em>chez Mes Racines</em></h2>
+      <dl>
+        <dt>Adresse</dt><dd>5 rue Marius et Ary Leblond<br>Saint-Pierre</dd>
+        <dt>Boutique</dt><dd>Samedi 10h – 18h<br>Dimanche 9h – 13h</dd>
+        <dt>Pause Salé</dt><dd>Lundi au vendredi, 11h – 14h</dd>
+        <dt>Message</dt><dd><a href="tel:+262692265713">0692 26 57 13</a></dd>
+        <dt>Suivre</dt><dd><a href="https://www.facebook.com/jlpatissier/" target="_blank" rel="noopener">Facebook</a></dd>
+      </dl>
+    </div>
+    <iframe class="reveal" loading="lazy" title="Plan d'accès" src="https://www.google.com/maps?q=5+rue+Marius+et+Ary+Leblond,+Saint-Pierre,+La+R%C3%A9union&output=embed"></iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Mes Racines · Pâtisserie Julien Leveneur · Saint-Pierre</span>
+    <span>Maquette privée offerte par <a href="mailto:aurelie.jonathanb@gmail.com">Aurélie &amp; Jonathan</a>, d'après les publications de la page Mes Racines.</span>
+  </div>
+</footer>
+<script>
+var stops=[
+ {n:"1",place:"Domaine Vidot",sub:"Mont-Vert",title:"La fraise péi",txt:"Première escale : une création gourmande autour de la fraise.",tags:["Fraises péi","Gel fraise","Ganache fraise","Crémeux fraise","Confit fraise","Crème d'amande","Pâte sucrée"]},
+ {n:"2",place:"Piton de la Fournaise",sub:"Le volcan",title:"La roche volcanique",txt:"Paysages bruts, terre façonnée par le feu : un trompe-l'œil en forme de roche, entre la puissance du chocolat, l'acidité de la framboise et la chaleur subtile du piment.",tags:["Gelée piment-framboise","Biscuit cacao","Ganache chocolat noir","Sablé cacao"]},
+ {n:"3",place:"Bélouve",sub:"La forêt",title:"La Forêt-Noire revisitée",txt:"Végétation, fraîcheur et brume : le grand classique, relevé d'une note florale et acidulée.",tags:["Cerises amarena","Chocolat","Vanille","Gel hibiscus"]},
+ {n:"4",place:"Piton des Neiges",sub:"Au-dessus des nuages",title:"Le lever du soleil",txt:"La lumière douce qui apparaît peu à peu sur les reliefs de l'île, en dessert réconfortant.",tags:["Crème patate douce","Vanille","Streusel coco","Sablé amande"]},
+ {n:"5",place:"Saint-Philippe",sub:"Le Sud Sauvage",title:"Le Sud Sauvage",txt:"Une gousse de vanille en trompe-l'œil, la création signature : la vanille sous différentes textures, entre douceur, intensité et gourmandise.",tags:["Coque chocolat noir","Biscuit vanille","Gel vanille","Ganache vanille","Croustillant praliné amande"]}
+];
+var sEl=document.querySelector(".stops"),card=document.getElementById("card");
+stops.forEach(function(s,i){var b=document.createElement("button");b.className="stop";b.setAttribute("role","tab");b.setAttribute("aria-selected",i===0);b.innerHTML='<div class="dot">'+s.n+"</div><span>"+s.place+"</span>";b.onclick=function(){show(i)};sEl.appendChild(b)});
+function show(i){var s=stops[i];Array.prototype.forEach.call(sEl.children,function(b,j){b.setAttribute("aria-selected",i===j)});
+ card.innerHTML='<div class="big fade">'+s.n+'</div><div class="fade"><span class="place">Escale '+s.n+" · "+s.sub+"</span><h3>"+s.title+"</h3><p>"+s.txt+"</p><ul>"+s.tags.map(function(t){return "<li>"+t+"</li>"}).join("")+"</ul></div>";}
+show(0);
+var occ="Anniversaire";
+document.querySelectorAll("#occ button").forEach(function(b){b.onclick=function(){document.querySelectorAll("#occ button").forEach(function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");occ=b.textContent;upd()}});
+var d=document.getElementById("d"),n=document.getElementById("n"),pv=document.getElementById("pv"),go=document.getElementById("go");
+var t=new Date();t.setDate(t.getDate()+5);d.value=t.toISOString().slice(0,10);
+function upd(){var dt=d.value?new Date(d.value+"T12:00").toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"}):"(date à préciser)";
+ var m="Bonjour Mes Racines ! Je souhaiterais commander un entremets à partager ("+n.value+" personnes) pour : "+occ.toLowerCase()+", le "+dt+". Merci !";
+ pv.textContent="« "+m+" »";go.href="https://wa.me/262692265713?text="+encodeURIComponent(m);}
+d.oninput=upd;n.onchange=upd;upd();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
