@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Casa Flora Réunion · Artisan fleuriste à Saint-Pierre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--mint:#9FD3C0;--mint-d:#4F957C;--rose:#F4B6C8;--rose-l:#FCE9EF;--gold:#C9A24B;--mag:#C2186B;--ink:#2E2A2B;--muted:#6E6669;--paper:#FFFBF8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:600;line-height:1.08;text-wrap:balance}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--ink);color:#fff;font-size:12.5px;text-align:center;padding:7px 10px;letter-spacing:.02em}
+.ribbon b{color:var(--rose)}
+#petals{position:fixed;inset:0;pointer-events:none;z-index:5}
+.petal{position:absolute;top:-40px;width:14px;height:18px;border-radius:70% 10% 70% 10%;opacity:.75;animation:fall linear forwards}
+@keyframes fall{to{transform:translate(var(--dx),110vh) rotate(var(--rot));opacity:.15}}
+header.hero{position:relative;min-height:min(100svh,880px);display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:4vw;padding:90px 6vw 60px;background:linear-gradient(180deg,var(--rose-l),var(--paper) 70%)}
+.hero .kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--mint-d);font-weight:600}
+.hero h1{font-size:clamp(46px,7.5vw,104px);margin:.15em 0 .2em}
+.hero h1 em{font-style:italic;color:var(--mag)}
+.hero p.lead{font-size:clamp(17px,1.6vw,20px);max-width:34ch;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15.5px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(194,24,107,.18)}
+.btn.main{background:var(--mag);color:#fff}
+.btn.ghost{border:1.5px solid var(--ink)}
+.hero-art{position:relative;height:min(72vh,640px)}
+.hero-art .a{position:absolute;inset:0 18% 12% 0;border-radius:220px 220px 18px 18px;overflow:hidden;box-shadow:0 30px 60px rgba(46,42,43,.18)}
+.hero-art .b{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:3/4;border-radius:18px;overflow:hidden;border:6px solid var(--paper);box-shadow:0 20px 40px rgba(46,42,43,.18);animation:sway 7s ease-in-out infinite}
+.hero-art img{width:100%;height:100%;object-fit:cover}
+@keyframes sway{50%{transform:translateY(-10px) rotate(-1.5deg)}}
+.badge{position:absolute;left:-10px;bottom:14%;background:#fff;border-radius:14px;padding:12px 16px;font-size:14px;box-shadow:0 12px 28px rgba(0,0,0,.1)}
+.badge b{display:block;font-family:"Cormorant Garamond",serif;font-size:22px;color:var(--mint-d)}
+section{position:relative;z-index:6;padding:96px 6vw}
+.eyebrow{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mag);font-weight:600}
+h2{font-size:clamp(34px,4.6vw,60px);margin:.2em 0 .45em}
+.story{display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:center}
+.story .shop{border-radius:18px;overflow:hidden;box-shadow:0 24px 50px rgba(95,165,140,.25)}
+.story p{font-size:18px;color:var(--muted);margin-bottom:14px;max-width:52ch}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.facts span{background:var(--rose-l);border:1px solid var(--rose);padding:8px 14px;border-radius:999px;font-size:14.5px}
+.gallery{background:var(--ink);color:#fff}
+.gallery .eyebrow{color:var(--rose)}
+.masonry{columns:4 220px;column-gap:14px;margin-top:30px}
+.masonry figure{break-inside:avoid;margin-bottom:14px;border-radius:14px;overflow:hidden;position:relative;cursor:zoom-in}
+.masonry img{width:100%;transition:transform .6s}
+.masonry figure:hover img{transform:scale(1.05)}
+.lb{position:fixed;inset:0;z-index:80;background:rgba(20,16,18,.92);display:none;align-items:center;justify-content:center;padding:4vw}
+.lb.on{display:flex}.lb img{max-height:88vh;border-radius:10px}
+.studio{background:linear-gradient(160deg,var(--mint) 0%,#CFEBDF 60%,var(--paper))}
+.composer{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:start;margin-top:20px}
+.step{margin-bottom:22px}.step h3{font-family:Jost;font-size:15px;font-weight:600;margin-bottom:10px;letter-spacing:.04em}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid rgba(46,42,43,.25);background:rgba(255,255,255,.7);font:500 15px Jost,sans-serif;cursor:pointer;transition:all .2s;color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip:focus-visible,.btn:focus-visible{outline:3px solid var(--mag);outline-offset:2px}
+.preview{background:#fff;border-radius:22px;padding:26px;box-shadow:0 24px 50px rgba(46,42,43,.12);position:sticky;top:70px}
+.vase{height:230px;position:relative;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.vase .bloom{position:absolute;border-radius:50%;transition:transform .5s cubic-bezier(.3,1.5,.5,1)}
+.vase .pot{width:110px;height:90px;background:var(--rose-l);border:2px solid var(--rose);border-radius:10px 10px 40px 40px;position:relative;z-index:2}
+.preview .sum{margin:18px 0;font-size:16px;color:var(--muted);min-height:52px}
+.preview .btn{width:100%;justify-content:center}
+.note{font-size:13px;color:var(--muted);margin-top:10px}
+.infos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid #F1E3E7;border-radius:18px;padding:26px}
+.card h3{font-size:26px;margin-bottom:8px}
+.card p,.card li{color:var(--muted);font-size:16px;overflow-wrap:anywhere}.card ul{list-style:none}
+footer{text-align:center;padding:40px 6vw 60px;font-size:14px;color:var(--muted);position:relative;z-index:6}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}.reveal.in{opacity:1;transform:none}
+@media (max-width:860px){header.hero{grid-template-columns:1fr;padding-top:84px}.hero-art{height:430px}.story,.composer{grid-template-columns:1fr}.infos{grid-template-columns:1fr}.preview{position:static}section{padding:70px 6vw}.masonry{columns:2 140px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#petals{display:none}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> · page privée, non référencée</div>
+<div id="petals" aria-hidden="true"></div>
+<header class="hero">
+  <div class="reveal">
+    <div class="kicker">Artisan fleuriste · La Cafrine, Saint-Pierre</div>
+    <h1>Casa <em>Flora</em><br>Réunion</h1>
+    <p class="lead">Bouquets, compositions, fleurs séchées et stabilisées : des fleurs choisies une à une, à emporter en boutique ou à faire livrer.</p>
+    <div class="btns">
+      <a class="btn main" href="#atelier">Composer mon bouquet</a>
+      <a class="btn ghost" href="#boutique">Venir à la boutique</a>
+    </div>
+  </div>
+  <div class="hero-art reveal">
+    <div class="a"><img src="img/bouquet-magenta-gypsophile.jpg" alt="Grand bouquet magenta, rose et violet avec gypsophile"></div>
+    <div class="b"><img src="img/bouquet-rose-corail-doux.jpg" alt="Bouquet de roses roses et corail"></div>
+    <div class="badge"><b>Du mardi au dimanche</b>en boutique à La Cafrine</div>
+  </div>
+</header>
+<section class="story" id="maison">
+  <div class="shop reveal"><img src="img/devanture.jpg" alt="Façade vert menthe et portes roses de la boutique Casa Flora"></div>
+  <div class="reveal">
+    <div class="eyebrow">La maison</div>
+    <h2>Une façade vert menthe, des portes roses, et des fleurs partout</h2>
+    <p>Rue des Terrasses, la boutique se reconnaît de loin : enseigne dorée, balustrades blanches, plantes suspendues. À l'intérieur, chaque bouquet est composé sur place.</p>
+    <p>« Petit bonheur simple… le genre de bouquet qu'on regarde en prenant son café ou son thé. » C'est tout l'esprit de la maison.</p>
+    <div class="facts"><span>Bouquets</span><span>Compositions</span><span>Fleurs séchées et stabilisées</span><span>Peignes floraux de mariée</span><span>Livraison</span></div>
+  </div>
+</section>
+<section class="gallery" id="creations">
+  <div class="eyebrow">Les créations</div>
+  <h2 class="reveal">Toutes les couleurs de la saison</h2>
+  <div class="masonry">
+    <figure><img loading="lazy" src="img/bouquet-fuchsia-orange.jpg" alt="Bouquet fuchsia, roses orange et violet"></figure>
+    <figure><img loading="lazy" src="img/mains-bouquet-mariee.jpg" alt="Bouquet de mariée roses blush et eucalyptus"></figure>
+    <figure><img loading="lazy" src="img/bouquet-hortensia.jpg" alt="Bouquet roses et hortensia bleu"></figure>
+    <figure><img loading="lazy" src="img/bouquet-roses-jaunes.jpg" alt="Bouquet de roses roses et jaunes"></figure>
+    <figure><img loading="lazy" src="img/bouquet-fuchsia.jpg" alt="Composition dense fuchsia et saumon"></figure>
+    <figure><img loading="lazy" src="img/mains-bouquet-pastel.jpg" alt="Petit bouquet pastel"></figure>
+    <figure><img loading="lazy" src="img/bouquet-orange-violet.jpg" alt="Roses orange et fleurs violettes"></figure>
+    <figure><img loading="lazy" src="img/bouquet-roses-corail.jpg" alt="Bouquet roses corail et gypsophile"></figure>
+    <figure><img loading="lazy" src="img/mains-bouquet-hortensia.jpg" alt="Bouquet pastel avec hortensia bleu"></figure>
+    <figure><img loading="lazy" src="img/bouquet-orange-fuchsia.jpg" alt="Bouquet orange et fuchsia"></figure>
+  </div>
+</section>
+<section class="studio" id="atelier">
+  <div class="eyebrow">L'atelier</div>
+  <h2 class="reveal">Composez votre bouquet, Casa Flora s'occupe du reste</h2>
+  <div class="composer">
+    <div>
+      <div class="step"><h3>1. L'occasion</h3><div class="chips" data-k="occ">
+        <button class="chip" aria-pressed="true">Pour faire plaisir</button><button class="chip">Anniversaire</button><button class="chip">Mariage</button><button class="chip">Naissance</button><button class="chip">Pour la maison</button></div></div>
+      <div class="step"><h3>2. Les couleurs</h3><div class="chips" data-k="col">
+        <button class="chip" aria-pressed="true" data-c="#F06BA8,#F7A6C4,#FFFFFF">Rose et blanc</button><button class="chip" data-c="#E6007E,#FF8A3D,#8E44AD">Fuchsia et orange</button><button class="chip" data-c="#F7D9CF,#EADBC8,#A8C3A0">Pastel et eucalyptus</button><button class="chip" data-c="#8DB5E8,#F4B6C8,#B39DDB">Hortensia bleu</button><button class="chip" data-c="#D9B98A,#C9A24B,#EFE3D0">Fleurs séchées</button></div></div>
+      <div class="step"><h3>3. La taille</h3><div class="chips" data-k="size">
+        <button class="chip" data-s="0.75">Petit</button><button class="chip" aria-pressed="true" data-s="1">Moyen</button><button class="chip" data-s="1.25">Généreux</button></div></div>
+      <div class="step"><h3>4. Le retrait</h3><div class="chips" data-k="ret">
+        <button class="chip" aria-pressed="true">En boutique</button><button class="chip">En livraison</button></div></div>
+    </div>
+    <div class="preview">
+      <div class="vase" id="vase"><div class="pot"></div></div>
+      <p class="sum" id="sum"></p>
+      <a class="btn main" id="send" target="_blank" rel="noopener">Envoyer ma demande sur WhatsApp</a>
+      <p class="note">Le message arrive directement chez Casa Flora, qui vous répond avec les fleurs du jour.</p>
+    </div>
+  </div>
+</section>
+<section id="boutique">
+  <div class="eyebrow">Venir nous voir</div>
+  <h2 class="reveal">La boutique</h2>
+  <div class="infos">
+    <div class="card reveal"><h3>Adresse</h3><p>2 rue des Terrasses<br>La Cafrine, 97410 Saint-Pierre</p></div>
+    <div class="card reveal"><h3>Horaires</h3><ul><li>Du mardi au samedi : 9h-12h, 14h-18h</li><li>Dimanche : 9h-12h</li></ul></div>
+    <div class="card reveal"><h3>Contact</h3><p>0262 87 84 93<br>0693 63 04 50<br>casaflorareunion@gmail.com</p></div>
+  </div>
+</section>
+<footer>Casa Flora Réunion · Artisan fleuriste · Saint-Pierre<br>Maquette imaginée par Jonathan · ATMA Digital, à partir de vos publications. Page privée.</footer>
+<div class="lb" id="lb"><img alt=""></div>
+<script>
+const WA="262693630450";
+const st={occ:"Pour faire plaisir",col:"Rose et blanc",cols:["#F06BA8","#F7A6C4","#FFFFFF"],size:"Moyen",s:1,ret:"En boutique"};
+document.querySelectorAll(".chips").forEach(g=>g.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;
+ g.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");
+ const k=g.dataset.k;st[k]=b.textContent;if(b.dataset.c)st.cols=b.dataset.c.split(",");if(b.dataset.s)st.s=+b.dataset.s;draw();}));
+const vase=document.getElementById("vase");
+function draw(){vase.querySelectorAll(".bloom").forEach(n=>n.remove());
+ const n=Math.round(9*st.s);for(let i=0;i<n;i++){const d=document.createElement("div");d.className="bloom";
+  const sz=(34+Math.random()*22)*st.s,a=(i/(n-1))*Math.PI,r=58*st.s;
+  d.style.width=d.style.height=sz+"px";d.style.background="radial-gradient(circle at 35% 35%,#ffffffaa,"+st.cols[i%3]+")";
+  d.style.border="1px solid rgba(46,42,43,.08)";
+  d.style.left="calc(50% + "+(Math.cos(a)*r-sz/2)+"px)";d.style.bottom=(70+Math.sin(a)*r*0.9+Math.random()*14)+"px";
+  d.style.transform="scale(0)";vase.appendChild(d);setTimeout(()=>d.style.transform="scale(1)",30+i*45);}
+ const t="Bonjour Casa Flora ! Je voudrais un bouquet "+st.size.toLowerCase()+", tons "+st.col.toLowerCase()+", occasion : "+st.occ.toLowerCase()+". Retrait : "+st.ret.toLowerCase()+".";
+ document.getElementById("sum").textContent=st.occ+" · "+st.col+" · "+st.size+" · "+st.ret;
+ document.getElementById("send").href="https://wa.me/"+WA+"?text="+encodeURIComponent(t);}
+draw();
+const lb=document.getElementById("lb");document.querySelectorAll(".masonry figure").forEach(f=>f.onclick=()=>{lb.querySelector("img").src=f.querySelector("img").src;lb.classList.add("on")});lb.onclick=()=>lb.classList.remove("on");
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+if(!matchMedia("(prefers-reduced-motion: reduce)").matches){const P=document.getElementById("petals"),C=["#F4B6C8","#F7A6C4","#9FD3C0","#E6007E","#FCE9EF"];
+ setInterval(()=>{if(document.hidden||P.childElementCount>18)return;const p=document.createElement("div");p.className="petal";
+ p.style.left=Math.random()*100+"vw";p.style.background=C[Math.random()*C.length|0];p.style.setProperty("--dx",(Math.random()*160-80)+"px");p.style.setProperty("--rot",(Math.random()*720)+"deg");
+ const d=8+Math.random()*7;p.style.animationDuration=d+"s";P.appendChild(p);setTimeout(()=>p.remove(),d*1000);},700);}
+</script>
+</body>
+</html>

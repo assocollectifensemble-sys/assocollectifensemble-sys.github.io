@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>O’fruits péi · Bar à jus de fruits frais minute, Saint-Leu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--mint:#7FD3EE;--mint-d:#0B7FAE;--rose:#FFD08A;--rose-l:#FFF3DF;--gold:#2E8B3D;--mag:#F07F12;--ink:#123A4A;--muted:#4F6670;--paper:#FFFCF5}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:Fraunces,serif;font-weight:600;line-height:1.08;text-wrap:balance}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--ink);color:#fff;font-size:12.5px;text-align:center;padding:7px 10px;letter-spacing:.02em}
+.ribbon b{color:var(--rose)}
+#petals{position:fixed;inset:0;pointer-events:none;z-index:5}
+.petal{position:absolute;top:-40px;width:14px;height:18px;border-radius:70% 10% 70% 10%;opacity:.75;animation:fall linear forwards}
+@keyframes fall{to{transform:translate(var(--dx),110vh) rotate(var(--rot));opacity:.15}}
+header.hero{position:relative;min-height:min(100svh,880px);display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:4vw;padding:90px 6vw 60px;background:linear-gradient(180deg,var(--rose-l),var(--paper) 70%)}
+.hero .kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--mint-d);font-weight:600}
+.hero h1{font-size:clamp(46px,7.5vw,104px);margin:.15em 0 .2em}
+.hero h1 em{font-style:italic;color:var(--mag)}
+.hero p.lead{font-size:clamp(17px,1.6vw,20px);max-width:34ch;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15.5px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(240,127,18,.25)}
+.btn.main{background:var(--mag);color:#fff}
+.btn.ghost{border:1.5px solid var(--ink)}
+.hero-art{position:relative;height:min(72vh,640px)}
+.hero-art .a{position:absolute;inset:0 18% 12% 0;border-radius:220px 220px 18px 18px;overflow:hidden;box-shadow:0 30px 60px rgba(46,42,43,.18)}
+.hero-art .b{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:3/4;border-radius:18px;overflow:hidden;border:6px solid var(--paper);box-shadow:0 20px 40px rgba(46,42,43,.18);animation:sway 7s ease-in-out infinite}
+.hero-art img{width:100%;height:100%;object-fit:cover}
+@keyframes sway{50%{transform:translateY(-10px) rotate(-1.5deg)}}
+.badge{position:absolute;left:-10px;bottom:14%;background:#fff;border-radius:14px;padding:12px 16px;font-size:14px;box-shadow:0 12px 28px rgba(0,0,0,.1)}
+.badge b{display:block;font-family:Fraunces,serif;font-size:22px;color:var(--mint-d)}
+section{position:relative;z-index:6;padding:96px 6vw}
+.eyebrow{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mag);font-weight:600}
+h2{font-size:clamp(34px,4.6vw,60px);margin:.2em 0 .45em}
+.story{display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:center}
+.story .shop{border-radius:18px;overflow:hidden;box-shadow:0 24px 50px rgba(11,127,174,.25)}
+.story p{font-size:18px;color:var(--muted);margin-bottom:14px;max-width:52ch}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.facts span{background:var(--rose-l);border:1px solid var(--rose);padding:8px 14px;border-radius:999px;font-size:14.5px}
+.gallery{background:var(--ink);color:#fff}
+.gallery .eyebrow{color:var(--rose)}
+.masonry{columns:4 220px;column-gap:14px;margin-top:30px}
+.masonry figure{break-inside:avoid;margin-bottom:14px;border-radius:14px;overflow:hidden;position:relative;cursor:zoom-in}
+.masonry img{width:100%;transition:transform .6s}
+.masonry figure:hover img{transform:scale(1.05)}
+.lb{position:fixed;inset:0;z-index:80;background:rgba(20,16,18,.92);display:none;align-items:center;justify-content:center;padding:4vw}
+.lb.on{display:flex}.lb img{max-height:88vh;border-radius:10px}
+.studio{background:linear-gradient(160deg,var(--mint) 0%,#CFEBDF 60%,var(--paper))}
+.composer{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:start;margin-top:20px}
+.step{margin-bottom:22px}.step h3{font-family:Jost;font-size:15px;font-weight:600;margin-bottom:10px;letter-spacing:.04em}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid rgba(46,42,43,.25);background:rgba(255,255,255,.7);font:500 15px Jost,sans-serif;cursor:pointer;transition:all .2s;color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip:focus-visible,.btn:focus-visible{outline:3px solid var(--mag);outline-offset:2px}
+.preview{background:#fff;border-radius:22px;padding:26px;box-shadow:0 24px 50px rgba(46,42,43,.12);position:sticky;top:70px}
+.vase{height:230px;position:relative;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.vase .bloom{position:absolute;border-radius:50%;transition:transform .5s cubic-bezier(.3,1.5,.5,1)}
+.vase .pot{width:110px;height:90px;background:var(--rose-l);border:2px solid var(--rose);border-radius:10px 10px 40px 40px;position:relative;z-index:2}
+.preview .sum{margin:18px 0;font-size:16px;color:var(--muted);min-height:52px}
+.preview .btn{width:100%;justify-content:center}
+.note{font-size:13px;color:var(--muted);margin-top:10px}
+.infos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid #F1E3E7;border-radius:18px;padding:26px}
+.card h3{font-size:26px;margin-bottom:8px}
+.card p,.card li{color:var(--muted);font-size:16px;overflow-wrap:anywhere}.card ul{list-style:none}
+footer{text-align:center;padding:40px 6vw 60px;font-size:14px;color:var(--muted);position:relative;z-index:6}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}.reveal.in{opacity:1;transform:none}
+@media (max-width:860px){header.hero{grid-template-columns:1fr;padding-top:84px}.hero-art{height:430px}.story,.composer{grid-template-columns:1fr}.infos{grid-template-columns:1fr}.preview{position:static}section{padding:70px 6vw}.masonry{columns:2 140px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#petals{display:none}.reveal{opacity:1;transform:none}}
+</style>
+<style>
+.petal{border-radius:50%!important;border:1.5px solid rgba(255,255,255,.9);animation-name:rise!important;top:auto!important;bottom:-30px}
+@keyframes rise{to{transform:translate(var(--dx),-110vh);opacity:0}}
+.hero{background:linear-gradient(180deg,#DFF4FB,#FFF3DF 75%)!important}
+.studio{background:linear-gradient(160deg,#FFD08A 0%,#FFE9C4 55%,var(--paper))!important}
+.logo-badge{width:84px;height:84px;border-radius:50%;overflow:hidden;box-shadow:0 8px 20px rgba(18,58,74,.2);margin-bottom:14px}
+.logo-badge img{width:100%;height:100%;object-fit:cover}
+.range{width:100%;accent-color:var(--mag);height:44px}
+.big{font-family:Fraunces,serif;font-size:56px;color:var(--mag);line-height:1}
+.bottles{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+.bottles span{background:var(--rose-l);border:1px solid var(--rose);border-radius:12px;padding:8px 12px;font-size:15px}
+.glass{height:150px;width:96px;margin:0 auto 10px;border:3px solid #cfe7ef;border-top:0;border-radius:0 0 26px 26px;position:relative;overflow:hidden;background:#fff}
+.glass i{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(0deg,#F07F12,#FFC24D);transition:height .6s cubic-bezier(.3,1.4,.5,1)}
+.events{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.events figure{border-radius:16px;overflow:hidden;position:relative;aspect-ratio:4/5}
+.events img{width:100%;height:100%;object-fit:cover}
+.events figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 12px;color:#fff;font-size:14.5px;background:linear-gradient(transparent,rgba(10,30,40,.75))}
+@media (max-width:860px){.events{grid-template-columns:1fr 1fr}.events figure:first-child{grid-column:1/-1;aspect-ratio:16/10}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> · page privée, non référencée</div>
+<div id="petals" aria-hidden="true"></div>
+<header class="hero">
+  <div class="reveal">
+    <div class="logo-badge"><img src="img/logo-ofruits-pei.jpg" alt="Logo O’fruits péi Chez Romain"></div>
+    <div class="kicker">Bar à jus · 11 B rue du Lagon, Saint-Leu</div>
+    <h1>O’fruits <em>péi</em></h1>
+    <p class="lead">Des fruits frais pressés minute, une citronnade et un thé maison, des pâtisseries maison pour accompagner : le goût du soleil, au bord du lagon.</p>
+    <div class="btns">
+      <a class="btn main" href="#evenement">Des jus pour mon événement</a>
+      <a class="btn ghost" href="#venir">Passer au bar</a>
+    </div>
+  </div>
+  <div class="hero-art reveal">
+    <div class="a"><img src="img/verres-jus-frais.jpg" alt="Quatre verres de jus frais colorés et brochettes de fruits"></div>
+    <div class="b"><img src="img/stand-coucher-soleil.jpg" alt="Le stand O’fruits péi au coucher du soleil"></div>
+    <div class="badge"><b>Pressé minute</b>du mardi au dimanche</div>
+  </div>
+</header>
+<section class="story" id="carte">
+  <div class="shop reveal"><img src="img/evenement-chapiteau.jpg" alt="Chapiteau blanc et tables orange sous les palmiers" style="aspect-ratio:4/3;object-fit:cover;width:100%"></div>
+  <div class="reveal">
+    <div class="eyebrow">Au comptoir</div>
+    <h2>Des fruits, du soleil, et tout le goût dans le verre</h2>
+    <p>Chaque jus est pressé à la commande, avec les fruits du moment. Pour accompagner : cookies, gâteau au chocolat et cakes faits maison.</p>
+    <div class="facts"><span>Jus frais minute</span><span>Jus détox</span><span>Citronnade maison</span><span>Thé maison</span><span>Salades de fruits</span><span>Pâtisseries maison</span></div>
+  </div>
+</section>
+<section class="gallery" id="evenements">
+  <div class="eyebrow">Sur la route</div>
+  <h2 class="reveal">Le bar à jus voyage dans tout l’Ouest</h2>
+  <p style="max-width:60ch;color:#cfe3ea">Compétitions sportives, soirées en plein air, fêtes privées : le stand s’installe là où on a soif de fraîcheur, comme au Tropical Fit Battle ce mois d’octobre.</p>
+  <div class="events">
+    <figure class="reveal"><img loading="lazy" src="img/evenement-beach-volley-nuit.jpg" alt="Terrain de beach-volley éclairé de nuit"><figcaption>Compétitions en nocturne</figcaption></figure>
+    <figure class="reveal"><img loading="lazy" src="img/stand-coucher-soleil.jpg" alt="Le stand au coucher du soleil"><figcaption>Le stand au coucher du soleil</figcaption></figure>
+    <figure class="reveal"><img loading="lazy" src="img/evenement-stade-drapeaux.jpg" alt="Gradins et drapeaux illuminés de nuit"><figcaption>Grands rendez-vous sportifs</figcaption></figure>
+  </div>
+</section>
+<section class="studio" id="evenement">
+  <div class="eyebrow">Mariage, CE, anniversaire, événement sportif</div>
+  <h2 class="reveal">Préparez vos jus pour l’événement</h2>
+  <div class="composer">
+    <div>
+      <div class="step"><h3>1. L’occasion</h3><div class="chips" data-k="occ">
+        <button class="chip" aria-pressed="true">Mariage</button><button class="chip">Comité d’entreprise</button><button class="chip">Anniversaire</button><button class="chip">Événement sportif</button></div></div>
+      <div class="step"><h3>2. Nombre d’invités : <span id="nbv">50</span></h3><input class="range" id="nb" type="range" min="10" max="300" step="10" value="50" aria-label="Nombre d’invités"></div>
+      <div class="step"><h3>3. Les envies</h3><div class="chips multi" data-k="env">
+        <button class="chip" aria-pressed="true">Jus frais</button><button class="chip">Détox</button><button class="chip">Citronnade maison</button><button class="chip">Salade de fruits</button></div></div>
+      <div class="step"><h3>4. Le format</h3><div class="chips" data-k="fmt">
+        <button class="chip">Bouteilles 1 L</button><button class="chip" aria-pressed="true">Bouteilles 2 L</button><button class="chip">Bouteilles 3 L</button><button class="chip">Le stand sur place</button></div></div>
+    </div>
+    <div class="preview">
+      <div class="glass" aria-hidden="true"><i id="lvl" style="height:40%"></i></div>
+      <p style="text-align:center;margin:0"><span class="big" id="lit">13</span> <b>litres</b></p>
+      <p class="note" style="text-align:center;margin-top:4px">repère indicatif, à ajuster ensemble</p>
+      <p class="sum" id="sum"></p>
+      <a class="btn main" id="send" target="_blank" rel="noopener">Envoyer ma demande sur WhatsApp</a>
+      <p class="note">La demande arrive directement chez O’fruits péi, qui vous répond avec les fruits de saison.</p>
+    </div>
+  </div>
+</section>
+<section id="venir">
+  <div class="eyebrow">Au bord du lagon</div>
+  <h2 class="reveal">Passer au bar</h2>
+  <div class="infos">
+    <div class="card reveal"><h3>Adresse</h3><p>11 B rue du Lagon<br>97436 Saint-Leu</p></div>
+    <div class="card reveal"><h3>Horaires</h3><ul><li>Du mardi au samedi : 9h-18h</li><li>Dimanche : 10h-18h</li></ul></div>
+    <div class="card reveal"><h3>Contact</h3><p>0692 08 01 23<br>ofruitspei@gmail.com<br>Instagram @ofruitspei</p></div>
+  </div>
+</section>
+<footer>O’fruits péi · Bar à jus de fruits frais · Saint-Leu<br>Maquette imaginée par Jonathan · ATMA Digital, à partir de vos publications. Page privée.</footer>
+<script>
+const WA="262692080123";
+const st={occ:"Mariage",fmt:"Bouteilles 2 L",env:["Jus frais"]};
+document.querySelectorAll(".chips").forEach(g=>g.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;const k=g.dataset.k;
+ if(g.classList.contains("multi")){const on=b.getAttribute("aria-pressed")==="true";if(on&&g.querySelectorAll("[aria-pressed=true]").length===1)return;b.setAttribute("aria-pressed",on?"false":"true");st[k]=[...g.querySelectorAll("[aria-pressed=true]")].map(x=>x.textContent);}
+ else{g.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");st[k]=b.textContent;}draw();}));
+const nb=document.getElementById("nb");nb.addEventListener("input",draw);
+function draw(){const n=+nb.value;document.getElementById("nbv").textContent=n;
+ const L=Math.ceil(n*0.25);document.getElementById("lit").textContent=L;
+ document.getElementById("lvl").style.height=Math.min(95,18+n/300*77)+"%";
+ document.getElementById("sum").textContent=st.occ+" · "+n+" invités · "+st.env.join(", ")+" · "+st.fmt;
+ const t="Bonjour O’fruits péi ! Je prépare un événement ("+st.occ.toLowerCase()+", environ "+n+" invités). Envies : "+st.env.join(", ").toLowerCase()+". Format souhaité : "+st.fmt.toLowerCase()+". Pouvez-vous me faire une proposition ?";
+ document.getElementById("send").href="https://wa.me/"+WA+"?text="+encodeURIComponent(t);}
+draw();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+if(!matchMedia("(prefers-reduced-motion: reduce)").matches){const P=document.getElementById("petals"),C=["rgba(255,194,77,.55)","rgba(127,211,238,.5)","rgba(240,127,18,.45)","rgba(255,255,255,.7)"];
+ setInterval(()=>{if(document.hidden||P.childElementCount>16)return;const p=document.createElement("div");p.className="petal";const s=6+Math.random()*14;
+ p.style.width=p.style.height=s+"px";p.style.left=Math.random()*100+"vw";p.style.background=C[Math.random()*C.length|0];p.style.setProperty("--dx",(Math.random()*80-40)+"px");
+ const d=9+Math.random()*7;p.style.animationDuration=d+"s";P.appendChild(p);setTimeout(()=>p.remove(),d*1000);},800);}
+</script>
+</body>
+</html>
