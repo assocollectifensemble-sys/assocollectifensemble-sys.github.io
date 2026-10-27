@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>TOF’ BIKE · Location, vente et réparation de vélos à Cilaos</title>
+<meta property="og:title" content="TOF’ BIKE · Découvrez Cilaos autrement">
+<meta property="og:description" content="Maquette offerte par Jonathan · ATMA Digital">
+<meta property="og:image" content="https://atma-digital.re/maquettes/tof-bike/img/devanture-rangee-velos-location.jpg">
+<meta property="og:url" content="https://atma-digital.re/maquettes/tof-bike/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111214;--coal:#1A1A1A;--paper:#F4F3EF;--white:#fff;--lime:#C8E600;--red:#E10600;--muted:#5D6066}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Barlow,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:"Barlow Condensed",sans-serif;font-weight:800;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:70;background:var(--lime);color:var(--ink);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600;text-align:center;padding:7px 10px}
+#progress{position:fixed;top:31px;left:0;height:3px;width:0;background:var(--red);z-index:69}
+.hero{position:relative;background:var(--coal);color:var(--white);padding:110px 6vw 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:5vw;align-items:end;position:relative;z-index:3}
+.kicker{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--lime)}
+.hero h1{font-size:clamp(58px,10vw,150px);margin:.15em 0 .1em}
+.hero h1 span{color:var(--lime);font-style:italic}
+.tag{font-family:"Barlow Condensed";font-weight:600;font-size:clamp(20px,2.4vw,30px);letter-spacing:.06em;color:#cfd2d6}
+.lead{max-width:40ch;font-size:18px;color:#c4c7cc;margin-top:18px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;font-weight:600;font-size:16px;text-decoration:none;border-radius:4px;transition:transform .2s;cursor:pointer;border:0}
+.btn:hover{transform:translateY(-2px)}
+.btn.lime{background:var(--lime);color:var(--ink)}
+.btn.out{border:2px solid #fff;color:#fff}
+.btn:focus-visible,.chip:focus-visible,.step-btn:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.shop{position:relative;margin-bottom:-1px}
+.shop img{width:100%;aspect-ratio:790/685;object-fit:cover;border:6px solid var(--white);transform:rotate(1.5deg);box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.shop figcaption{position:absolute;left:-10px;bottom:28px;background:var(--red);color:#fff;font-family:"Barlow Condensed";font-weight:800;text-transform:uppercase;font-size:20px;padding:8px 14px;transform:rotate(-3deg)}
+.cirque{position:relative;display:block;width:100%;height:auto;margin-top:-40px;z-index:2}
+.cirque .trail{fill:none;stroke:var(--lime);stroke-width:3;stroke-dasharray:8 9;stroke-linecap:round}
+.rider{fill:var(--red)}
+.ticker{background:var(--lime);color:var(--ink);overflow:hidden;white-space:nowrap;font-family:"Barlow Condensed";font-weight:800;font-size:28px;text-transform:uppercase;padding:10px 0}
+.ticker div{display:inline-block;animation:tick 26s linear infinite}
+.ticker span{margin:0 22px}
+.ticker i{color:var(--red);font-style:normal}
+@keyframes tick{to{transform:translateX(-50%)}}
+section{padding:96px 6vw;position:relative}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+h2{font-size:clamp(42px,6vw,82px);margin:.2em 0 .4em}
+.intro{max-width:56ch;font-size:18px;color:var(--muted)}
+.fleet{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--ink);border:2px solid var(--ink);margin-top:30px}
+.fleet div{background:var(--paper);padding:24px 20px;transition:background .25s,color .25s}
+.fleet div:hover{background:var(--ink);color:#fff}
+.fleet h3{font-size:30px}
+.fleet p{font-size:15px;color:var(--muted)}
+.fleet div:hover p{color:#bfc2c7}
+.helmet{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;margin-top:26px;font-size:17px}
+.helmet b{background:var(--red);color:#fff;padding:4px 10px;font-family:"Barlow Condensed";text-transform:uppercase;font-size:20px;letter-spacing:.04em}
+.atelier{background:var(--ink);color:#fff;overflow:hidden}
+.atelier .eyebrow{color:var(--lime)}
+.split{display:grid;grid-template-columns:1fr 1.2fr;gap:5vw;align-items:center;position:relative;z-index:2}
+.split p{color:#c4c7cc;font-size:18px;max-width:46ch;margin-bottom:14px}
+.services{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.services span{border:1.5px solid var(--lime);color:var(--lime);padding:7px 14px;font-weight:600;font-size:15px}
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:170px;gap:10px}
+.mosaic figure{overflow:hidden;background:#222;cursor:zoom-in}
+.mosaic figure.tall{grid-row:span 2}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.mosaic figure:hover img{transform:scale(1.06)}
+.wheel{position:absolute;right:-90px;top:40px;width:260px;opacity:.12;pointer-events:none;z-index:1}
+.occas{display:grid;grid-template-columns:.8fr 1.2fr;gap:5vw;align-items:center}
+.occas .pic img{width:100%;max-height:560px;object-fit:cover;border:6px solid #fff;box-shadow:0 20px 50px rgba(0,0,0,.18)}
+.occas p{font-size:18px;color:var(--muted);max-width:48ch;margin-bottom:18px}
+.planner{background:linear-gradient(180deg,#e9e8e2,var(--paper))}
+.plan{display:grid;grid-template-columns:1.15fr .85fr;gap:4vw;align-items:start;margin-top:20px}
+.q{margin-bottom:24px}
+.q h3{font-family:Barlow;text-transform:none;font-weight:600;font-size:16px;letter-spacing:.02em;margin-bottom:10px;line-height:1.3}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:46px;padding:0 16px;border:2px solid var(--ink);background:#fff;font:600 15px Barlow,sans-serif;color:var(--ink);cursor:pointer;border-radius:3px;transition:background .2s,color .2s}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--lime)}
+.counter{display:flex;align-items:center;gap:14px}
+.step-btn{width:46px;height:46px;border:2px solid var(--ink);background:#fff;font-size:22px;font-weight:600;cursor:pointer;color:var(--ink)}
+.counter output{font-family:"Barlow Condensed";font-weight:800;font-size:36px;min-width:40px;text-align:center}
+input[type=date]{min-height:46px;border:2px solid var(--ink);padding:0 12px;font:500 16px Barlow,sans-serif;background:#fff;max-width:100%;color:var(--ink)}
+.ticket{background:var(--ink);color:#fff;padding:28px;position:sticky;top:70px;border-top:8px solid var(--lime)}
+.ticket h3{font-size:34px;color:var(--lime);margin-bottom:12px}
+.ticket ul{list-style:none;font-size:16px;margin-bottom:22px}
+.ticket li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed #3a3d42;padding:9px 0}
+.ticket li span:last-child{text-align:right;color:#dfe2e6}
+.ticket .btn{width:100%}
+.note{font-size:13px;color:#9a9ea4;margin-top:12px}
+.infos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:2px solid var(--ink);padding:26px}
+.card h3{font-size:30px;margin-bottom:10px}
+.card p,.card li{color:var(--muted);font-size:16px;overflow-wrap:anywhere}
+.card ul{list-style:none}
+.card .logo{margin-top:14px;border:1px solid #ddd}
+footer{background:var(--coal);color:#9a9ea4;text-align:center;padding:40px 6vw 60px;font-size:14px}
+footer b{color:var(--lime);font-family:"Barlow Condensed";font-size:26px;text-transform:uppercase;display:block;margin-bottom:6px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+.lb{position:fixed;inset:0;z-index:90;background:rgba(10,10,12,.93);display:none;align-items:center;justify-content:center;padding:4vw}
+.lb.on{display:flex}.lb img{max-height:88vh}
+@media (max-width:900px){.hero-grid,.split,.occas,.plan{grid-template-columns:1fr}.fleet{grid-template-columns:1fr 1fr}.infos{grid-template-columns:1fr}.ticket{position:static}section{padding:70px 6vw}.shop{max-width:520px}.cirque{margin-top:10px}}
+@media (max-width:480px){.fleet h3{font-size:23px}.fleet div{padding:18px 14px}.mosaic{grid-auto-rows:120px}.ticker{font-size:22px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par Jonathan · ATMA Digital · page privée</div>
+<div id="progress" aria-hidden="true"></div>
+<header class="hero">
+  <div class="hero-grid">
+    <div class="reveal">
+      <span class="kicker">Location · Vente · Réparation · Cilaos</span>
+      <h1>TOF’<span>BIKE</span></h1>
+      <p class="tag">VTT · VAE · BMX · ROUTE</p>
+      <p class="lead">Découvrez Cilaos autrement : des vélos pour tous les goûts et tous les âges, au cœur du cirque, avec les conseils d’un expert.</p>
+      <div class="btns">
+        <a class="btn lime" href="#sortie">Préparer ma sortie</a>
+        <a class="btn out" href="#atelier">L’atelier</a>
+      </div>
+    </div>
+    <figure class="shop reveal">
+      <img src="img/devanture-rangee-velos-location.jpg" alt="Devanture bleue de TOF’ BIKE à Cilaos, rangée de VTT colorés et montagne en fond">
+      <figcaption>68 rue du Père Boiteau</figcaption>
+    </figure>
+  </div>
+  <svg class="cirque" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 260 L0 150 L90 90 L170 140 L260 40 L340 120 L430 70 L520 150 L610 60 L700 130 L790 30 L880 120 L980 80 L1070 150 L1160 50 L1250 120 L1340 80 L1440 130 L1440 260Z" fill="#26282c"/>
+    <path d="M0 260 L0 200 L120 160 L230 205 L360 150 L480 210 L600 170 L740 220 L860 165 L990 215 L1120 170 L1260 210 L1440 175 L1440 260Z" fill="#F4F3EF"/>
+    <path id="trail" class="trail" d="M0 230 C140 200 220 240 340 205 S560 235 680 200 S900 240 1040 205 S1280 235 1440 200"/>
+    <circle class="rider" r="9"><animateMotion dur="14s" repeatCount="indefinite"><mpath href="#trail"/></animateMotion></circle>
+  </svg>
+</header>
+<div class="ticker" aria-hidden="true"><div>
+  <span>VTT</span><i>●</i><span>VTT à assistance électrique</span><i>●</i><span>BMX</span><i>●</i><span>Tandem électrique</span><i>●</i><span>Trottinette électrique</span><i>●</i><span>Casque offert</span><i>●</i>
+  <span>VTT</span><i>●</i><span>VTT à assistance électrique</span><i>●</i><span>BMX</span><i>●</i><span>Tandem électrique</span><i>●</i><span>Trottinette électrique</span><i>●</i><span>Casque offert</span><i>●</i>
+</div></div>
+<section id="location">
+  <div class="eyebrow">La location</div>
+  <h2 class="reveal">Un vélo<br>pour chacun</h2>
+  <p class="intro reveal">Tous les goûts, tous les âges : on vient en famille, en duo ou entre amis, et chacun repart avec la monture qui lui ressemble.</p>
+  <div class="fleet reveal">
+    <div><h3>VTT</h3><p>Pour les sentiers et les chemins du cirque.</p></div>
+    <div><h3>VTT électrique</h3><p>L’assistance qui donne des ailes dans les montées.</p></div>
+    <div><h3>BMX</h3><p>Pour les plus joueurs.</p></div>
+    <div><h3>Tandem électrique</h3><p>Pédaler à deux, en rythme.</p></div>
+    <div><h3>Trottinette électrique</h3><p>Pour flâner dans le village.</p></div>
+    <div><h3>Remorque</h3><p>Pour embarquer les petits.</p></div>
+    <div><h3>Siège bébé</h3><p>Les tout-petits sont du voyage.</p></div>
+    <div><h3>Porte-bébé rando</h3><p>Et à pied aussi.</p></div>
+  </div>
+  <p class="helmet reveal"><b>Casque gratuit</b> et obligatoire, pour tout le monde.</p>
+</section>
+<section class="atelier" id="atelier">
+  <svg class="wheel" id="wheel" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="#C8E600" stroke-width="3"/><circle cx="50" cy="50" r="6" fill="#C8E600"/><g stroke="#C8E600" stroke-width="1.2"><line x1="50" y1="4" x2="50" y2="96"/><line x1="4" y1="50" x2="96" y2="50"/><line x1="17" y1="17" x2="83" y2="83"/><line x1="83" y1="17" x2="17" y2="83"/><line x1="29" y1="8" x2="71" y2="92"/><line x1="71" y1="8" x2="29" y2="92"/><line x1="8" y1="29" x2="92" y2="71"/><line x1="8" y1="71" x2="92" y2="29"/></g></svg>
+  <div class="split">
+    <div class="reveal">
+      <div class="eyebrow">L’atelier</div>
+      <h2>Faites confiance<br>à un expert</h2>
+      <p>Vente, réparation, équipement et pièces : la boutique de Cilaos prend aussi soin de votre vélo, du réglage aux accessoires.</p>
+      <p>Et la livraison se fait les mardis et jeudis, secteur Sud et Sud-Ouest.</p>
+      <div class="services"><span>Vente</span><span>Réparation</span><span>Équipement</span><span>Pièces</span><span>Livraison mardi et jeudi</span></div>
+    </div>
+    <div class="mosaic reveal">
+      <figure class="tall"><img loading="lazy" src="img/velo-route-cilaos-vtt-electrique.jpg" alt="Vélo blanc et bleu sur une route de montagne"></figure>
+      <figure><img loading="lazy" src="img/roue-velo-fond-bois-1.jpg" alt="Roue de vélo en gros plan sur fond bois"></figure>
+      <figure><img loading="lazy" src="img/compteur-velo-boitier.jpg" alt="Compteur de vélo et accessoires de montage"></figure>
+      <figure><img loading="lazy" src="img/roue-velo-fond-bois-2.jpg" alt="Roue de vélo vue de face sur fond bois"></figure>
+      <figure><img loading="lazy" src="img/compteur-velo-main-anonyme-2.jpg" alt="Compteur de vélo tenu en main"></figure>
+    </div>
+  </div>
+</section>
+<section id="occasions">
+  <div class="occas">
+    <div class="pic reveal"><img loading="lazy" src="img/velo-occasion-fleurs.jpg" alt="Vélo de route bleu et noir d’occasion devant des fleurs"></div>
+    <div class="reveal">
+      <div class="eyebrow">Les occasions</div>
+      <h2>Les belles affaires<br>du moment</h2>
+      <p>Vélos de route, VTT électriques : les occasions de la boutique sont annoncées au fil de l’eau. Ici, chacune aurait sa fiche, ses photos et un bouton pour réserver un essai.</p>
+      <a class="btn lime" href="https://wa.me/262692256161?text=Bonjour%20TOF%E2%80%99%20BIKE%20!%20Je%20voudrais%20des%20infos%20sur%20vos%20v%C3%A9los%20d%E2%80%99occasion." target="_blank" rel="noopener">Demander les occasions</a>
+    </div>
+  </div>
+</section>
+<section class="planner" id="sortie">
+  <div class="eyebrow">Préparer ma sortie</div>
+  <h2 class="reveal">Votre balade en 4 clics</h2>
+  <div class="plan">
+    <div>
+      <div class="q"><h3>1. Les vélos</h3><div class="chips" data-k="velo" data-multi="1">
+        <button class="chip" aria-pressed="true">VTT</button><button class="chip" aria-pressed="false">VTT électrique</button><button class="chip" aria-pressed="false">BMX</button><button class="chip" aria-pressed="false">Tandem électrique</button><button class="chip" aria-pressed="false">Trottinette électrique</button></div></div>
+      <div class="q"><h3>2. Combien de cyclistes ?</h3><div class="counter"><button class="step-btn" id="minus" aria-label="Un de moins">−</button><output id="nb">2</output><button class="step-btn" id="plus" aria-label="Un de plus">+</button></div></div>
+      <div class="q"><h3>3. Avec des petits ?</h3><div class="chips" data-k="bebe" data-multi="1">
+        <button class="chip" aria-pressed="false">Remorque</button><button class="chip" aria-pressed="false">Siège bébé</button><button class="chip" aria-pressed="false">Porte-bébé rando</button></div></div>
+      <div class="q"><h3>4. Quel jour, quel moment ?</h3><div class="chips" data-k="moment">
+        <input type="date" id="jour" aria-label="Date de la sortie"><button class="chip" aria-pressed="true">Matin</button><button class="chip" aria-pressed="false">Après-midi</button></div></div>
+    </div>
+    <aside class="ticket" aria-live="polite">
+      <h3>Ma sortie</h3>
+      <ul id="recap"></ul>
+      <a class="btn lime" id="send" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
+      <p class="note">La demande arrive directement à la boutique, qui confirme la disponibilité. Casques fournis.</p>
+    </aside>
+  </div>
+</section>
+<section id="boutique">
+  <div class="eyebrow">Venir à la boutique</div>
+  <h2 class="reveal">Au cœur du cirque</h2>
+  <div class="infos">
+    <div class="card reveal"><h3>Adresse</h3><p>68 rue du Père Boiteau<br>97413 Cilaos</p><img class="logo" loading="lazy" src="img/logo-cilaos-tof-bike.jpg" alt="Visuel CILAOS TOF BIKE, VTT VAE BMX ROUTE"></div>
+    <div class="card reveal"><h3>Horaires</h3><ul><li>Du lundi au samedi : 8h30-12h et 14h-17h30</li><li>Dimanche : 8h30-12h</li></ul></div>
+    <div class="card reveal"><h3>Contact</h3><p>0692 25 61 61<br>0262 73 42 05<br>tofbike413@live.fr</p><p style="margin-top:10px">Espèces, chèque et carte bancaire.</p></div>
+  </div>
+</section>
+<footer><b>TOF’ BIKE · Découvrez Cilaos autrement</b>Maquette imaginée par Jonathan · ATMA Digital, à partir de vos publications. Page privée.</footer>
+<div class="lb" id="lb"><img alt=""></div>
+<script>
+const WA="262692256161";
+const st={velo:["VTT"],bebe:[],moment:"Matin",nb:2,jour:""};
+document.querySelectorAll(".chips").forEach(g=>g.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;const k=g.dataset.k;
+ if(g.dataset.multi){const on=b.getAttribute("aria-pressed")!=="true";b.setAttribute("aria-pressed",on);st[k]=[...g.querySelectorAll(".chip[aria-pressed=true]")].map(x=>x.textContent);}
+ else{g.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");st[k]=b.textContent;}
+ draw();}));
+const nb=document.getElementById("nb");
+document.getElementById("minus").onclick=()=>{st.nb=Math.max(1,st.nb-1);draw()};
+document.getElementById("plus").onclick=()=>{st.nb=Math.min(20,st.nb+1);draw()};
+const jour=document.getElementById("jour");jour.min=new Date().toISOString().slice(0,10);jour.onchange=()=>{st.jour=jour.value;draw()};
+function fdate(v){if(!v)return"à préciser";const d=new Date(v+"T12:00");return d.toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"})}
+function draw(){nb.textContent=st.nb;
+ const velos=st.velo.length?st.velo.join(", "):"à conseiller";
+ const rows=[["Vélos",velos],["Cyclistes",st.nb],["Pour les petits",st.bebe.length?st.bebe.join(", "):"—"],["Jour",fdate(st.jour)],["Moment",st.moment]];
+ document.getElementById("recap").innerHTML=rows.map(r=>"<li><span>"+r[0]+"</span><span>"+r[1]+"</span></li>").join("");
+ let t="Bonjour TOF’ BIKE ! Nous serions "+st.nb+" pour une sortie à vélo à Cilaos. Vélos : "+velos+".";
+ if(st.bebe.length)t+=" Pour les petits : "+st.bebe.join(", ")+".";
+ t+=" Jour : "+fdate(st.jour)+", le "+st.moment.toLowerCase()+". C’est possible ?";
+ document.getElementById("send").href="https://wa.me/"+WA+"?text="+encodeURIComponent(t);}
+draw();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+const lb=document.getElementById("lb");document.querySelectorAll(".mosaic figure").forEach(f=>f.onclick=()=>{lb.querySelector("img").src=f.querySelector("img").src;lb.classList.add("on")});lb.onclick=()=>lb.classList.remove("on");
+const pr=document.getElementById("progress"),wh=document.getElementById("wheel"),rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+addEventListener("scroll",()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight);pr.style.width=(p*100)+"%";if(!rm)wh.style.transform="rotate("+(h.scrollTop*0.4)+"deg)";},{passive:true});
+</script>
+</body>
+</html>
