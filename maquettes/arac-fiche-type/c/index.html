@@ -1,0 +1,121 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>Ziguilé — proposition C « Mouvement » — ARAC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}img{display:block;max-width:100%}a{color:inherit}
+html{scroll-behavior:smooth}body{-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.demo-bar{position:fixed;z-index:99;left:12px;bottom:12px;display:flex;gap:10px;align-items:center;background:#111;color:#fff;
+ font:600 12px/1 system-ui,sans-serif;padding:8px 12px;border-radius:30px;box-shadow:0 4px 18px rgba(0,0,0,.3)}
+.demo-bar a{color:#fff;text-decoration:none;opacity:.8}.demo-bar span{color:#ff6b5e}
+.arac{display:flex;align-items:center;justify-content:space-between;padding:10px 5vw;background:#fff;border-bottom:1px solid #eee;
+ font:500 13px/1.2 Poppins,system-ui,sans-serif;color:#333;position:relative;z-index:5}
+.arac img{height:34px;width:auto}.arac nav{display:flex;gap:22px}.arac nav a{text-decoration:none}
+.arac nav a.on{color:#e02b20;font-weight:700}
+@media(max-width:700px){.arac nav a:not(.on){display:none}}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.lb{position:fixed;inset:0;background:rgba(10,8,12,.94);display:none;align-items:center;justify-content:center;z-index:100;padding:4vw;cursor:zoom-out}
+.lb.on{display:flex}.lb img{max-height:86vh;width:auto;border-radius:6px}.lb p{position:absolute;bottom:22px;color:#ddd;font:14px system-ui}
+.arac-foot{background:#3f3f3f;color:#ddd;padding:34px 5vw;font:14px/1.6 Poppins,system-ui,sans-serif;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
+.arac-foot a{color:#fff}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+body{background:#fff;color:#14141a;font:400 17px/1.65 Inter,system-ui,sans-serif}
+.wrap{max-width:1240px;margin:auto;padding:0 5vw}
+.hero{display:grid;grid-template-columns:1fr 1.1fr;min-height:86vh;align-items:center;position:relative;overflow:hidden}
+.hero .txt{padding:60px 5vw;position:relative;z-index:2}
+.hero h1{font:800 clamp(72px,10vw,150px)/.9 Syne,sans-serif;letter-spacing:-.04em}
+.hero h1 .dot{color:#e02b20}
+.hero .lbl{display:inline-flex;gap:8px;align-items:center;font:600 13px Inter;letter-spacing:.14em;text-transform:uppercase;color:#e02b20;margin-bottom:22px}
+.hero .lbl:before{content:"";width:34px;height:2px;background:#e02b20}
+.hero p.tag{font-size:clamp(19px,1.8vw,24px);max-width:28ch;margin:22px 0 30px;color:#3a3a44}
+.slides{position:relative;height:100%;min-height:86vh;clip-path:polygon(16% 0,100% 0,100% 100%,0 100%)}
+.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1.2s,transform 6s ease-out}
+.slides img.on{opacity:1;transform:scale(1)}
+.dots{position:absolute;right:30px;bottom:30px;display:flex;gap:8px;z-index:3}.dots button{width:30px;height:4px;border:0;background:rgba(255,255,255,.5);cursor:pointer;border-radius:3px}
+.dots button.on{background:#fff;width:52px;transition:width .4s}
+.btn{display:inline-flex;align-items:center;gap:10px;background:#e02b20;color:#fff;text-decoration:none;font:700 15px/1 Inter;padding:17px 26px;border-radius:12px;transition:.25s}
+.btn:hover{background:#14141a;transform:translateY(-2px)}.btn.ol{background:#fff;color:#14141a;box-shadow:inset 0 0 0 2px #14141a}.btn.ol:hover{background:#14141a;color:#fff}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-50px;position:relative;z-index:4}
+.facts div{background:#fff;border-radius:16px;padding:26px;box-shadow:0 14px 40px rgba(20,20,40,.1)}
+.facts b{display:block;font:800 clamp(38px,4vw,56px)/1 Syne,sans-serif;color:#e02b20}.facts small{color:#55555f;font-size:14px}
+section{padding:100px 0}h2{font:800 clamp(40px,5vw,72px)/1 Syne,sans-serif;letter-spacing:-.03em;margin-bottom:34px}
+.ey{font:600 13px Inter;letter-spacing:.16em;text-transform:uppercase;color:#e02b20;margin-bottom:12px}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:70px}.intro .lead{font-size:clamp(19px,1.6vw,22px);color:#2b2b33}
+.pills{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pills span{background:#f5f3f1;border-radius:12px;padding:16px 18px;font-weight:600;transition:.25s;position:relative;padding-left:44px}
+.pills span:before{content:"";position:absolute;left:18px;top:50%;width:12px;height:12px;border-radius:50%;background:#e02b20;transform:translateY(-50%)}
+.pills span:hover{background:#e02b20;color:#fff}.pills span:hover:before{background:#fff}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:30px}
+.tabs button{font:700 17px Syne,sans-serif;border:2px solid #14141a;background:#fff;padding:13px 22px;border-radius:40px;cursor:pointer;transition:.25s}
+.tabs button.on,.tabs button:hover{background:#14141a;color:#fff}
+.panel{display:none;grid-template-columns:1.2fr 1fr;gap:0;background:#14141a;color:#fff;border-radius:22px;overflow:hidden;min-height:480px}
+.panel.on{display:grid;animation:sw .6s cubic-bezier(.2,.8,.2,1)}@keyframes sw{from{opacity:0;transform:translateX(40px)}}
+.panel img{width:100%;height:100%;object-fit:cover;min-height:320px}.panel .bd{padding:46px 42px;display:flex;flex-direction:column;justify-content:center}
+.panel .yr{color:#ff6b5e;font:700 13px Inter;letter-spacing:.14em;text-transform:uppercase}
+.panel h3{font:800 clamp(42px,4.4vw,64px)/1 Syne,sans-serif;margin:10px 0}.panel .hk{font-size:20px;color:#ffb3ab;margin-bottom:14px}
+.panel p{color:#d6d6de}.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.meta span{background:rgba(255,255,255,.1);padding:8px 14px;border-radius:30px;font-size:14px}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;cursor:grab}
+.strip a{flex:0 0 auto;height:360px;scroll-snap-align:start;border-radius:16px;overflow:hidden}.strip img{height:100%;width:auto;transition:transform .6s}
+.strip a:hover img{transform:scale(1.05)}
+.ag{display:grid;gap:14px}.ag a{display:grid;grid-template-columns:110px 1fr auto;align-items:center;gap:22px;text-decoration:none;background:#f5f3f1;border-radius:16px;padding:20px 26px;transition:.25s}
+.ag a:hover{background:#14141a;color:#fff}.ag .d{font:800 44px/1 Syne,sans-serif;color:#e02b20}.ag .d small{display:block;font:600 12px Inter;color:inherit;opacity:.7}
+.ag h4{font:800 22px Syne,sans-serif}.ag .ar{font-size:26px;transition:transform .25s}.ag a:hover .ar{transform:translateX(6px)}
+.itw{display:grid;grid-template-columns:320px 1fr;gap:50px}.qs button{display:block;width:100%;text-align:left;font:700 17px/1.35 Inter;background:none;border:0;border-left:3px solid #e5e2df;padding:14px 18px;cursor:pointer;color:#77777f;transition:.25s}
+.qs button.on{border-color:#e02b20;color:#14141a}.ans p{display:none;font-size:clamp(20px,2vw,26px);line-height:1.5}.ans p.on{display:block;animation:sw .5s}
+.cta{background:#e02b20;color:#fff;border-radius:28px;padding:70px 6vw;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;margin:0 5vw 80px}
+.cta h2{margin-bottom:10px}.cta .ls{display:grid;gap:10px}.cta .btn{background:#fff;color:#14141a;justify-content:space-between}.cta .btn:hover{background:#14141a;color:#fff}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.slides{min-height:56vh;clip-path:polygon(0 8%,100% 0,100% 100%,0 100%);order:-1}
+ .facts{grid-template-columns:1fr 1fr;margin-top:20px}.intro,.panel.on,.itw,.cta{grid-template-columns:1fr}.panel .bd{padding:30px 24px}
+ .strip a{height:240px}.ag a{grid-template-columns:76px 1fr}.ag .ar{display:none}.ag .d{font-size:34px}section{padding:66px 0}
+ .qs{display:flex;overflow-x:auto;gap:6px}.qs button{flex:0 0 72%;border-left:0;border-top:3px solid #e5e2df}.qs button.on{border-color:#e02b20}}
+</style></head><body class="">
+<div class="demo-bar"><a href="../">← Les 3 propositions</a><span>C · Mouvement</span></div>
+<header class="arac"><a href="https://arac.re/"><img src="../img/arac-mini.png" alt="ARAC"></a><nav><a href="#">Présentation</a><a class="on" href="#">Les compagnies</a><a href="#">Les écoles</a><a href="#">Contact</a></nav></header><section class="hero" style="padding:0"><div class="txt"><div class="lbl">Compagnie de cirque · Saint-Paul, La Réunion</div>
+<h1>Ziguilé<span class="dot">.</span></h1><p class="tag">Un retour vers les sources créatrices de l&#x27;enfance.</p>
+<a class="btn" href="#spectacles">Découvrir les spectacles</a> <a class="btn ol" href="mailto:compagnie.ziguile@gmail.com">Contacter</a></div>
+<div class="slides" id="sld"><img class="on" src="../img/hero.jpg" alt=""><img class="" src="../img/zig-equilibre.jpg" alt=""><img class="" src="../img/tinn-cordes2.jpg" alt=""><img class="" src="../img/zig-saut.jpg" alt=""><div class="dots"><button aria-label="Photo 1" class="on"></button><button aria-label="Photo 2" class=""></button><button aria-label="Photo 3" class=""></button><button aria-label="Photo 4" class=""></button></div></div></section>
+<div class="wrap"><div class="facts"><div class="rv"><b><span data-n="130">130</span>+</b><small>représentations de Ziguilé</small></div><div class="rv"><b>2017</b><small>naissance de la compagnie</small></div><div class="rv"><b><span data-n="3">3</span></b><small>spectacles au répertoire</small></div><div class="rv"><b><span data-n="3">3</span></b><small>territoires : Réunion, Hexagone, Suisse</small></div></div>
+<section class="intro"><div class="rv"><div class="ey">La compagnie</div><h2>Deux corps, un terrain de jeu.</h2><p class="lead">Créée en 2017, la compagnie Ziguilé est née de la rencontre d&#x27;Émilie Smith, danseuse, et d&#x27;Éric Maufrois, acrobate de rue. Faute d&#x27;école de cirque à La Réunion, ils se forment au main à main et aux équilibres auprès des artistes de l&#x27;île et de passage. En créole, « ziguilé » évoque l&#x27;univers de l&#x27;enfance : le jeu, l&#x27;adresse, le partage et le dialogue entre les générations.</p></div>
+<div class="rv"><div class="ey">Disciplines</div><div class="pills"><span>Portés acrobatiques</span><span>Main à main</span><span>Équilibres</span><span>Aérien</span><span>Danse</span><span>Parkour</span></div>
+<div class="ey" style="margin-top:28px">Activités</div><div class="pills"><span>Spectacles</span><span>Ateliers</span><span>Masterclass</span><span>Résidences de territoire</span></div></div></section>
+<section id="spectacles" style="padding-top:0"><div class="ey">Répertoire</div><h2 class="rv">Les spectacles</h2><div class="tabs"><button class="on" data-t="tinn">Tinn tout&#x27; !</button><button class="" data-t="zig">Ziguilé</button><button class="" data-t="vav">Vavang&#x27;</button></div><div class="panel on" id="p-tinn"><img loading="lazy" src="../img/tinn-canape.jpg" alt="Tinn tout&#x27; !">
+<div class="bd"><span class="yr">Création 2025</span><h3>Tinn tout&#x27; !</h3><p class="hk">« Éteignez tout ! » en créole réunionnais.</p><p>L&#x27;équipe s&#x27;est enfermée trois jours dans une maison de la Plaine des Cafres, sans téléphone, ni écran, ni jeu. De cette expérience est né un spectacle joyeux et inventif : trois acrobates explorent un agrès inédit qui les relie en contrepoids. Parce qu&#x27;on n&#x27;est rien l&#x27;un sans les autres.</p>
+<div class="meta"><span>Dès 4 ans</span><span>55 min</span><span>Portés · aérien · musique</span></div></div></div><div class="panel" id="p-zig"><img loading="lazy" src="../img/zig-papier.jpg" alt="Ziguilé">
+<div class="bd"><span class="yr">Création 2019</span><h3>Ziguilé</h3><p class="hk">Un ring de boulettes de papier.</p><p>Au cœur d&#x27;un ring de boulettes de papier, deux enfants se chamaillent. Ils se portent, voltigent et enchaînent les acrobaties avec une énergie joyeuse. Entre danse et cirque, ce duo réveille l&#x27;âme d&#x27;enfant des adultes.</p>
+<div class="meta"><span>Dès 4 ans</span><span>55 min</span><span>Duo</span><span>130+ dates</span></div></div></div><div class="panel" id="p-vav"><img loading="lazy" src="../img/vav-quatre.jpg" alt="Vavang&#x27;">
+<div class="bd"><span class="yr">En création</span><h3>Vavang&#x27;</h3><p class="hk">Le nouveau projet de la compagnie.</p><p>Entre acrobaties, danse et cirque, Vavang&#x27; est en cours de création avec le collectif Bat Kare.</p>
+<div class="meta"><span>En création</span><span>Acrobaties · danse</span></div></div></div></section>
+<section style="padding-top:0"><div class="ey">Galerie</div><h2 class="rv">En mouvement</h2><div class="strip"><a href="../img/hero.jpg" data-lb="Tinn tout&#x27; · © S. Mardémoutou"><img loading="lazy" src="../img/hero.jpg" alt="Tinn tout&#x27; · © S. Mardémoutou"></a><a href="../img/zig-poirier.jpg" data-lb="Ziguilé · © O. Padre"><img loading="lazy" src="../img/zig-poirier.jpg" alt="Ziguilé · © O. Padre"></a><a href="../img/tinn-cordes2.jpg" data-lb="Tinn tout&#x27;"><img loading="lazy" src="../img/tinn-cordes2.jpg" alt="Tinn tout&#x27;"></a><a href="../img/zig-equilibre.jpg" data-lb="Ziguilé · © S. Gaillochon"><img loading="lazy" src="../img/zig-equilibre.jpg" alt="Ziguilé · © S. Gaillochon"></a><a href="../img/tinn-canape2.jpg" data-lb="Tinn tout&#x27;"><img loading="lazy" src="../img/tinn-canape2.jpg" alt="Tinn tout&#x27;"></a><a href="../img/zig-saut.jpg" data-lb="Ziguilé"><img loading="lazy" src="../img/zig-saut.jpg" alt="Ziguilé"></a></div></section>
+<section style="padding-top:0"><div class="ey">Agenda</div><h2 class="rv">Prochaines dates</h2><div class="ag"><a class="rv" href="mailto:compagnie.ziguile@gmail.com"><div class="d">17<small>avr. 2027</small></div><div><h4>Tinn tout&#x27; !</h4><div>samedi · 11h · Le Plongeoir, Pôle national Cirque · Le Mans</div></div><span class="ar">→</span></a><a class="rv" href="mailto:compagnie.ziguile@gmail.com"><div class="d">19<small>avr. 2027</small></div><div><h4>Ziguilé</h4><div>lundi · 14h30 · Le Plongeoir, Pôle national Cirque · Le Mans</div></div><span class="ar">→</span></a><a class="rv" href="mailto:compagnie.ziguile@gmail.com"><div class="d">20<small>avr. 2027</small></div><div><h4>Ziguilé</h4><div>mardi · 10h30 · Le Plongeoir, Pôle national Cirque · Le Mans</div></div><span class="ar">→</span></a></div></section>
+<section style="padding-top:0"><div class="ey">L'interview cirque de l'ARAC</div><h2 class="rv">Émilie Smith et Éric Maufrois racontent.</h2>
+<div class="itw"><div class="qs"><button class="on" data-q="0">Comment est née votre passion du cirque ?</button><button class="" data-q="1">Quelle est la spécificité de votre pratique ?</button><button class="" data-q="2">Comment élaborez-vous vos spectacles ?</button><button class="" data-q="3">Qu&#x27;est-ce qui vous plaît dans l&#x27;ARAC ?</button></div><div class="ans"><p class="on" id="a0">En mars 2016, Émilie et Éric, tous deux réunionnais, travaillent pour la première fois en duo. Elle danseuse, lui acrobate de rue : ils se tournent naturellement vers le porté acrobatique. C&#x27;est avec Cirquons Flex qu&#x27;ils découvrent le cirque contemporain et acquièrent leurs bases en main à main.</p><p class="" id="a1">Des artistes autodidactes, formés auprès des circassiens réunionnais et des artistes de passage. Et l&#x27;envie d&#x27;aller là où le public n&#x27;est pas toujours sensibilisé : résidences dans les quartiers et dans les hauts de l&#x27;île.</p><p class="" id="a2">Pour « Ziguilé », créé en décembre 2019, ils font appel à Vincent Maillot (Cirquons Flex) pour la mise en scène. Le cirque contemporain leur permet d&#x27;allier prouesses techniques et propos artistique.</p><p class="" id="a3">« Novices dans le monde du cirque, l&#x27;ARAC a été pour nous d&#x27;un grand soutien : une source d&#x27;informations et de rencontres, conviviale et pleine de bienveillance. »</p></div></div></section></div>
+<div class="cta"><div><h2 class="rv">On joue ensemble ?</h2><p style="font-size:19px">Programmer, rencontrer, écrire à la compagnie.</p>
+<p style="margin-top:20px;font-weight:700">#cirquecontemporain #portéacrobatique #SaintPaul</p><p style="font-size:13px;opacity:.85;margin-top:8px">Photos © Siegfried Mardémoutou, Olivier Padre, Stéphane Gaillochon, Cédric Demaison</p></div>
+<div class="ls"><a class="btn" href="mailto:compagnie.ziguile@gmail.com">compagnie.ziguile@gmail.com <span>→</span></a><a class="btn" href="https://www.facebook.com/ziguile/" target="_blank" rel="noopener">Facebook <span>→</span></a>
+<a class="btn" href="https://www.instagram.com/cie.ziguile/" target="_blank" rel="noopener">Instagram <span>→</span></a></div></div>
+<script>
+(()=>{const im=[...document.querySelectorAll('#sld img')],dt=[...document.querySelectorAll('.dots button')];let k=0;
+const go=n=>{im[k].classList.remove('on');dt[k].classList.remove('on');k=n;im[k].classList.add('on');dt[k].classList.add('on')};
+dt.forEach((d,i)=>d.onclick=()=>go(i));setInterval(()=>go((k+1)%im.length),5000);
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button,.panel').forEach(x=>x.classList.remove('on'));
+b.classList.add('on');document.getElementById('p-'+b.dataset.t).classList.add('on')});
+document.querySelectorAll('.qs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.qs button,.ans p').forEach(x=>x.classList.remove('on'));
+b.classList.add('on');document.getElementById('a'+b.dataset.q).classList.add('on')});})();
+</script><footer class="arac-foot"><div><b>ARAC</b> · Association Réunionnaise des Arts du Cirque<br>8 rue Babef, 97422 La Saline</div><div><a href="#">Toutes les compagnies</a> · <a href="#">Contacter le bureau</a></div></footer><div class="lb" id="lb"><img alt=""><p></p></div>
+<script>
+document.documentElement.classList.add('js');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rv').forEach(el=>el.classList.add('in')),4000);
+const lb=document.getElementById('lb');
+document.querySelectorAll('[data-lb]').forEach(a=>a.addEventListener('click',ev=>{ev.preventDefault();
+ lb.querySelector('img').src=a.getAttribute('href');lb.querySelector('p').textContent=a.dataset.lb;lb.classList.add('on')}));
+lb.addEventListener('click',()=>lb.classList.remove('on'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+const cnt=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,end=+el.dataset.n;let t0=null;
+ const step=t=>{t0??=t;const p=Math.min((t-t0)/1400,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)};
+ if(end>100&&end<1000||end<100)requestAnimationFrame(step);cnt.unobserve(el)}),{threshold:.5});
+document.querySelectorAll('[data-n]').forEach(el=>cnt.observe(el));
+</script></body></html>
