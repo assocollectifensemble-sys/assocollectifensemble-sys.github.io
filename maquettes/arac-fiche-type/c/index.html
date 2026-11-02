@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}img{display:block;max-width:100%}a{color:inherit}
-html{scroll-behavior:smooth}body{-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}html,body{overflow-x:clip}body{-webkit-font-smoothing:antialiased}
 .demo-bar{position:fixed;z-index:99;left:12px;bottom:12px;display:flex;gap:10px;align-items:center;background:#111;color:#fff;
  font:600 12px/1 system-ui,sans-serif;padding:8px 12px;border-radius:30px;box-shadow:0 4px 18px rgba(0,0,0,.3)}
 .demo-bar a{color:#fff;text-decoration:none;opacity:.8}.demo-bar span{color:#ff6b5e}
@@ -51,7 +51,7 @@ section{padding:100px 0}h2{font:800 clamp(40px,5vw,72px)/1 Syne,sans-serif;lette
 .tabs button{font:700 17px Syne,sans-serif;border:2px solid #14141a;background:#fff;padding:13px 22px;border-radius:40px;cursor:pointer;transition:.25s}
 .tabs button.on,.tabs button:hover{background:#14141a;color:#fff}
 .panel{display:none;grid-template-columns:1.2fr 1fr;gap:0;background:#14141a;color:#fff;border-radius:22px;overflow:hidden;min-height:480px}
-.panel.on{display:grid;animation:sw .6s cubic-bezier(.2,.8,.2,1)}@keyframes sw{from{opacity:0;transform:translateX(40px)}}
+.panel>*,.intro>*,.itw>*,.cta>*,.hero>*{min-width:0}.panel.on{display:grid;animation:sw .6s cubic-bezier(.2,.8,.2,1)}@keyframes sw{from{opacity:0;transform:translateX(40px)}}
 .panel img{width:100%;height:100%;object-fit:cover;min-height:320px}.panel .bd{padding:46px 42px;display:flex;flex-direction:column;justify-content:center}
 .panel .yr{color:#ff6b5e;font:700 13px Inter;letter-spacing:.14em;text-transform:uppercase}
 .panel h3{font:800 clamp(42px,4.4vw,64px)/1 Syne,sans-serif;margin:10px 0}.panel .hk{font-size:20px;color:#ffb3ab;margin-bottom:14px}

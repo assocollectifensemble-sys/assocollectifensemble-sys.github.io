@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..900,0..100,0..1;1,9..144,400..900,0..100,0..1&family=DM+Sans:wght@400;500;700;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}img{display:block;max-width:100%}a{color:inherit}
-html{scroll-behavior:smooth}body{-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}html,body{overflow-x:clip}body{-webkit-font-smoothing:antialiased}
 .demo-bar{position:fixed;z-index:99;left:12px;bottom:12px;display:flex;gap:10px;align-items:center;background:#111;color:#fff;
  font:600 12px/1 system-ui,sans-serif;padding:8px 12px;border-radius:30px;box-shadow:0 4px 18px rgba(0,0,0,.3)}
 .demo-bar a{color:#fff;text-decoration:none;opacity:.8}.demo-bar span{color:#ff6b5e}
@@ -53,7 +53,7 @@ section{padding:90px 0}
 .band{background:#1b1414;color:#f4ece0;padding:50px 0}.band .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .band b{display:block;font:900 clamp(46px,5vw,72px)/1 Fraunces,serif;color:#ff5a4e}
 .show{display:grid;grid-template-columns:1.15fr 1fr;gap:50px;align-items:center;margin-bottom:90px}
-.show:nth-child(even){grid-template-columns:1fr 1.15fr}.show:nth-child(even) .pic{order:2}
+.show:nth-child(even){grid-template-columns:1fr 1.15fr}.show>*,.intro>*,.q>*{min-width:0}.ticket{width:auto}.show:nth-child(even) .pic{order:2}
 .pic{position:relative}.pic img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:4px;transform:rotate(-1.5deg);transition:transform .5s;box-shadow:0 20px 40px rgba(60,30,20,.2)}
 .show:nth-child(even) .pic img{transform:rotate(1.5deg)}.show:hover .pic img{transform:rotate(0) scale(1.02)}
 .yr{display:inline-block;background:#e02b20;color:#fff;font:800 12px/1 "DM Sans";letter-spacing:.14em;text-transform:uppercase;padding:9px 14px;transform:rotate(-2deg);margin-bottom:14px}
