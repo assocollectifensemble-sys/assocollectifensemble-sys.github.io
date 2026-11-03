@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#16301f">
+<title>La Cabane aux épices · Cuisine créole dans un verger de letchis · Saint-Benoît</title>
+<meta name="description" content="Maquette : La Cabane aux épices, restaurant familial de Saint-Benoît où la cuisine créole se découvre dans un verger de letchis.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="La Cabane aux épices — une page imaginée pour vous">
+<meta property="og:description" content="Restaurant familial, cuisine créole dans un verger de letchis à Saint-Benoît : une maquette offerte par Jonathan, ATMA Digital.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/la-cabane-aux-epices/img/verger-pergola.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/la-cabane-aux-epices/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --foret:#16301f;      /* verdure du verger */
+  --foret-2:#1f4129;
+  --feuille:#3f7a46;
+  --epice:#d4601f;      /* paprika / cannelle */
+  --safran:#e9a935;
+  --letchi:#b23a48;     /* le rouge du letchi */
+  --creme:#f8f0df;
+  --creme-2:#efe3c8;
+  --encre:#1d1a14;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Karla',system-ui,sans-serif;
+  --bar:64px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-size:1.0625rem;line-height:1.65;color:var(--encre);background:var(--creme);padding-bottom:var(--bar);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--safran);outline-offset:3px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:900;line-height:1.05;letter-spacing:-.02em;text-wrap:balance}
+p{text-wrap:pretty}
+
+.ruban{background:#0d1e13;color:#cfdcc8;font-size:.8rem;line-height:1.35;text-align:center;padding:.55rem 1rem}
+.ruban b{color:var(--safran)}
+
+/* HERO */
+.hero{position:relative;min-height:min(92svh,760px);display:flex;align-items:flex-end;color:var(--creme);overflow:hidden;background:var(--foret)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;animation:kb 26s ease-in-out infinite alternate;transform-origin:60% 50%}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.13) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,30,19,.35) 0%,rgba(13,30,19,.15) 30%,rgba(13,30,19,.88) 88%)}
+#air{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.hero .wrap{position:relative;z-index:3;padding:3rem 0 3.4rem}
+.kicker{font-size:.8rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--safran)}
+.hero h1{font-size:clamp(3.3rem,15vw,8.5rem);margin:.45rem 0 .5rem;font-variation-settings:"opsz" 144;opacity:0;transform:translateY(24px);animation:in 1.3s .2s ease forwards}
+.hero h1 em{display:block;font-style:italic;font-weight:700;color:var(--safran);font-size:.46em;letter-spacing:0;margin-top:.1em}
+.accroche{font-family:var(--serif);font-size:clamp(1.2rem,3.6vw,1.75rem);line-height:1.3;font-weight:500;max-width:32ch;opacity:0;animation:in 1.3s .6s ease forwards}
+@keyframes in{to{opacity:1;transform:none}}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem;opacity:0;animation:in 1.3s 1s ease forwards}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.8rem 1.4rem;border-radius:999px;font-weight:700;font-size:1.02rem;text-decoration:none;transition:transform .2s,background .2s,color .2s;border:0;cursor:pointer;font-family:inherit}
+.btn-epice{background:var(--epice);color:#fff;animation:souffle 3.2s ease-in-out infinite}
+@keyframes souffle{50%{transform:scale(1.04)}}
+.btn-wa{background:#1f9a55;color:#fff}
+.btn-ligne{border:2px solid var(--creme-2);color:var(--creme)}
+.btn:hover{transform:translateY(-2px) scale(1.02)}
+
+/* marquee */
+.defile{background:var(--epice);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:var(--serif);font-style:italic;font-weight:700;font-size:1.15rem}
+.defile .piste{display:inline-flex;animation:defile 38s linear infinite}
+.defile span{padding:0 1.6rem}
+.defile span::after{content:"✦";margin-left:3.2rem;color:var(--safran)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:clamp(3.5rem,9vw,6.5rem) 0}
+.etiquette{font-size:.8rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--letchi);margin-bottom:.8rem}
+h2{font-size:clamp(2.2rem,7vw,4.2rem);margin-bottom:1.3rem}
+h2 span{color:var(--epice);font-style:italic}
+.lead{font-family:var(--serif);font-size:1.3rem;line-height:1.45;font-weight:500}
+.texte p+p{margin-top:1.1rem}
+.grid{display:grid;gap:2.4rem}
+
+/* histoire */
+.chiffres{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:1.8rem}
+.chiffres div{background:var(--creme-2);border-radius:14px;padding:1rem 1.1rem}
+.chiffres b{display:block;font-family:var(--serif);font-size:2rem;font-weight:900;color:var(--feuille);line-height:1}
+.chiffres small{font-size:.85rem;color:#5b5240}
+.duo{position:relative;min-height:380px}
+.duo figure{position:absolute;border:5px solid #fff;box-shadow:0 14px 30px rgba(22,48,31,.28);background:#fff}
+.duo img{width:100%;height:100%;object-fit:cover}
+.duo .a{left:0;top:0;width:70%;aspect-ratio:4/3;transform:rotate(-2.2deg)}
+.duo .b{right:0;bottom:0;width:62%;aspect-ratio:4/3;transform:rotate(2.4deg)}
+
+/* galerie */
+.galerie{background:var(--foret);color:var(--creme);padding-bottom:0}
+.galerie h2{color:var(--creme)}
+.galerie .etiquette{color:var(--safran)}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 1.25rem 3rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 78%;max-width:420px;scroll-snap-align:center;border-radius:18px;overflow:hidden;background:var(--foret-2);transition:transform .4s}
+.rail figure:hover{transform:translateY(-6px)}
+.rail img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.rail figcaption{padding:.7rem 1rem .9rem;font-size:.9rem;color:#cfdcc8}
+.vague{display:block;width:100%;height:50px;margin-top:-1px;background:var(--foret)}
+
+/* spécialités */
+.carte{background:var(--creme)}
+.plats{display:grid;gap:1rem;margin-top:1.4rem}
+.plat{background:#fff;border-left:6px solid var(--epice);border-radius:6px 16px 16px 6px;padding:1.2rem 1.3rem;box-shadow:0 8px 22px rgba(22,48,31,.08);transition:transform .3s}
+.plat:hover{transform:translateX(6px)}
+.plat h3{font-size:1.55rem;font-weight:700;letter-spacing:-.01em}
+.plat p{font-size:.95rem;color:#5b5240;margin-top:.25rem}
+.sur-photo{position:relative;border-radius:18px;overflow:hidden}
+.sur-photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.sur-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.4rem 1rem .8rem;color:#fff;font-size:.88rem;background:linear-gradient(transparent,rgba(13,30,19,.8))}
+
+/* avis */
+.avis{background:var(--safran);position:relative;overflow:hidden}
+.avis h2{max-width:14ch}
+.avis .etiquette{color:var(--foret)}
+.note{margin-top:1rem;max-width:36ch;font-size:.95rem}
+blockquote{font-family:var(--serif);font-weight:500;line-height:1.28}
+blockquote p{font-size:clamp(1.25rem,4.4vw,1.7rem)}
+blockquote.grande p{font-size:clamp(1.4rem,5vw,2.2rem);font-weight:700}
+cite{display:block;margin-top:.7rem;font-family:var(--sans);font-style:normal;font-size:.85rem;font-weight:700}
+.citations{display:grid;gap:2rem}
+.citations blockquote+blockquote{padding-top:2rem;border-top:2px solid rgba(22,48,31,.25)}
+.score{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.4rem}
+.score div{background:rgba(255,255,255,.55);border-radius:14px;padding:.8rem 1.1rem}
+.score b{display:block;font-family:var(--serif);font-size:1.9rem;line-height:1}
+.score small{font-size:.82rem}
+
+/* réserver */
+.reserver{background:var(--foret);color:var(--creme)}
+.reserver h2{color:var(--creme)}
+.reserver .etiquette{color:var(--safran)}
+.form{display:grid;gap:.9rem;background:var(--foret-2);border-radius:20px;padding:1.4rem}
+.form label{font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--safran);display:grid;gap:.3rem}
+.form input,.form select{font:inherit;font-size:1rem;min-height:48px;border-radius:12px;border:0;padding:.6rem .9rem;background:var(--creme);color:var(--encre);width:100%}
+.form .deux{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.form p.petit{font-size:.85rem;color:#b9cdb4}
+.cta-bis{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.2rem}
+
+/* venir */
+.venir{background:var(--creme)}
+.dl{display:grid;gap:1.3rem}
+.dl dt{font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--letchi)}
+.dl dd{font-family:var(--serif);font-size:1.3rem;line-height:1.3;font-weight:500;margin-top:.15rem}
+.dl dd small{display:block;font-family:var(--sans);font-size:.92rem;color:#5b5240;margin-top:.3rem}
+.dl a{text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-color:var(--epice)}
+.plan{display:flex;flex-direction:column;justify-content:flex-end;min-height:260px;padding:1.5rem;border-radius:20px;color:var(--creme);text-decoration:none;position:relative;overflow:hidden;
+ background:repeating-linear-gradient(0deg,rgba(248,240,223,.08) 0 1px,transparent 1px 36px),repeating-linear-gradient(90deg,rgba(248,240,223,.08) 0 1px,transparent 1px 36px),var(--feuille)}
+.plan::after{content:"";position:absolute;right:2rem;top:2.2rem;width:26px;height:26px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--epice);box-shadow:0 0 0 8px rgba(212,96,31,.3);animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 16px rgba(212,96,31,.08)}}
+.plan strong{font-family:var(--serif);font-size:1.6rem;line-height:1.1}
+.plan span{margin-top:.4rem;font-size:.95rem;text-decoration:underline;text-underline-offset:4px}
+.acces{margin-top:1.2rem;font-size:.95rem;background:var(--creme-2);padding:1rem 1.2rem;border-radius:12px}
+
+footer{background:#0d1e13;color:#a9bda4;padding:2.2rem 0 2.4rem;font-size:.9rem}
+footer .nom{font-family:var(--serif);font-weight:900;color:var(--creme);font-size:1.5rem}
+footer p{margin-top:.5rem;max-width:62ch}
+
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--foret);border-top:2px solid var(--epice);height:var(--bar)}
+.barre a{display:flex;align-items:center;justify-content:center;font-weight:700;text-decoration:none;color:var(--creme);font-size:.98rem;min-height:44px}
+.barre a:first-child{background:var(--epice);color:#fff}
+
+.js .rev{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.js .rev.in{opacity:1;transform:none}
+
+@media (min-width:820px){
+  body{padding-bottom:0}
+  .barre{display:none}
+  .grid.deux-col{grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+  .duo{min-height:520px}
+  .plats{grid-template-columns:1fr 1fr}
+  .avis .grid{grid-template-columns:.8fr 1.2fr;gap:5rem}
+  .rail figure{flex-basis:380px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .hero h1,.accroche,.cta{opacity:1;transform:none}
+  .js .rev{opacity:1;transform:none}
+  #air{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour La Cabane aux épices</div>
+
+<header class="hero">
+  <img class="hero-img" src="img/verger-pergola.jpg" alt="La pergola en bois de La Cabane aux épices au milieu de son jardin verdoyant" width="1200" height="750">
+  <canvas id="air" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kicker">Restaurant familial · Saint-Benoît</p>
+    <h1>La Cabane<br>aux épices<em>un verger de letchis, la cuisine créole en cadeau</em></h1>
+    <p class="accroche">Un écrin de verdure où les épices dansent et les saveurs s’épanouissent.</p>
+    <div class="cta">
+      <a class="btn btn-epice" href="#reserver">Réserver une table</a>
+      <a class="btn btn-ligne" href="#histoire">Entrer dans le verger</a>
+    </div>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div class="piste">
+  <span>Cuisine créole</span><span>Spécialités chinoises</span><span>Inspirations métropolitaines</span><span>Produits frais, locaux et de saison</span><span>Grande terrasse ouverte</span><span>Un verger de letchis</span>
+  <span>Cuisine créole</span><span>Spécialités chinoises</span><span>Inspirations métropolitaines</span><span>Produits frais, locaux et de saison</span><span>Grande terrasse ouverte</span><span>Un verger de letchis</span>
+</div></div>
+
+<section id="histoire">
+  <div class="wrap grid deux-col">
+    <div class="texte rev">
+      <p class="etiquette">Bienvenue</p>
+      <h2>Un restaurant <span>familial</span>, authentique et généreux</h2>
+      <p class="lead">« Bienvenue dans notre restaurant familial où la cuisine créole se découvre dans un verger de letchis. »</p>
+      <p>À cinq minutes du centre-ville de Saint-Benoît, entre mer et végétation, La Cabane aux épices accueille avec une grande terrasse ouverte et une salle bois-métal, pour se retrouver en toute simplicité.</p>
+      <p>La cuisine est métissée et généreuse : plats créoles mijotés, spécialités chinoises, inspirations métropolitaines, avec des produits frais, locaux et de saison.</p>
+      <div class="chiffres">
+        <div><b>4,5 ★</b><small>sur Google, pour plus de 500 avis</small></div>
+        <div><b>98 %</b><small>recommandent la page Facebook (678 avis)</small></div>
+      </div>
+    </div>
+    <div class="duo rev" aria-label="Photos du restaurant">
+      <figure class="a"><img src="img/terrasse.jpg" alt="La terrasse sous pergola aux tables noires, entourée de plantes tropicales" width="640" height="480" loading="lazy"></figure>
+      <figure class="b"><img src="img/entree-pierre.jpg" alt="L’entrée en pierre volcanique et sa porte en bois, bordée de verdure" width="640" height="480" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="galerie" id="galerie">
+  <div class="wrap rev">
+    <p class="etiquette">Le lieu</p>
+    <h2>Un cadre verdoyant, une déco soignée</h2>
+  </div>
+  <div class="rail" tabindex="0" aria-label="Galerie photos, à faire défiler">
+    <figure><img src="img/salle.jpg" alt="La salle couverte aux poutres apparentes, ouverte sur le jardin" width="640" height="480" loading="lazy"><figcaption>La salle, ouverte sur le jardin</figcaption></figure>
+    <figure><img src="img/assiette.jpg" alt="Une assiette de dégustation aux petites portions colorées" width="640" height="480" loading="lazy"><figcaption>Une assiette de dégustation soignée</figcaption></figure>
+    <figure><img src="img/planche.jpg" alt="Une planche de fromages et charcuterie avec un verre de vin blanc" width="640" height="480" loading="lazy"><figcaption>Une planche à partager</figcaption></figure>
+    <figure><img src="img/salade.jpg" alt="Une assiette de salade verte décorée d’une fleur blanche" width="640" height="480" loading="lazy"><figcaption>Fraîcheur du jour</figcaption></figure>
+    <figure><img src="img/reception.jpg" alt="La salle de réception aux tables dressées de nappes blanches" width="640" height="480" loading="lazy"><figcaption>La salle de réception</figcaption></figure>
+  </div>
+  <svg class="vague" viewBox="0 0 1200 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1200V10C1000 50 800 0 600 25S200 50 0 10Z" fill="#f8f0df"/></svg>
+</section>
+
+<section class="carte" id="carte">
+  <div class="wrap grid deux-col">
+    <div class="rev">
+      <p class="etiquette">À la carte</p>
+      <h2>Des <span>pépites</span> à découvrir</h2>
+      <p>Plats créoles mijotés, spécialités chinoises, inspirations métropolitaines : chaque assiette célèbre les produits frais, locaux et de saison, avec une touche d’audace et beaucoup de goût.</p>
+      <div class="plats">
+        <div class="plat"><h3>Magret de canard au miel de letchis</h3><p>Cité par l’Office de Tourisme de l’Est parmi les pépites de la maison.</p></div>
+        <div class="plat"><h3>Gâteau patate façon mamie</h3><p>Cité par l’Office de Tourisme de l’Est parmi les pépites de la maison.</p></div>
+      </div>
+    </div>
+    <figure class="sur-photo rev">
+      <img src="img/assiette.jpg" alt="Assiette de dégustation en petites portions, cœur rouge, mousse et fruits" width="640" height="480" loading="lazy">
+      <figcaption>Une assiette de la maison</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap grid">
+    <div class="rev">
+      <p class="etiquette">Ce qu’on en dit</p>
+      <h2>Une table qu’on recommande</h2>
+      <p class="note">Sur Google, les avis parlent beaucoup du cadre verdoyant et de la déco « bijou ».</p>
+      <div class="score">
+        <div><b>4,5 ★</b><small>503 avis Google</small></div>
+        <div><b>98 %</b><small>678 avis Facebook</small></div>
+      </div>
+    </div>
+    <div class="citations rev">
+      <blockquote class="grande">
+        <p>« Very highly recommended family-run restaurant. Very friendly and tasty. »</p>
+        <cite>Martin K · avis Google</cite>
+      </blockquote>
+      <blockquote>
+        <p>« Great location. Friendly staff. Good food. Unfortunately only for lunch. »</p>
+        <cite>Jean-luc P · avis Google, 5/5 · octobre 2021</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="reserver" id="reserver">
+  <div class="wrap grid deux-col">
+    <div class="texte rev">
+      <p class="etiquette">Réserver</p>
+      <h2>Une table dans le verger ?</h2>
+      <p>Déjeuner entre collègues, dîner en amoureux ou réception en famille : choisissez votre jour, le message part directement sur WhatsApp, prêt à envoyer.</p>
+      <p style="margin-top:1rem">La maison propose aussi une salle de réception (100 personnes en tables rondes) et une salle de séminaire (150 en mode conférence).</p>
+      <div class="cta-bis">
+        <a class="btn btn-ligne" href="tel:+262692433934">Appeler · 0692 43 39 34</a>
+      </div>
+    </div>
+    <form class="form rev" id="resa" onsubmit="return false">
+      <div class="deux">
+        <label>Jour<input type="date" id="jour" required></label>
+        <label>Personnes<select id="nb"><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>8</option><option>10</option><option>12</option></select></label>
+      </div>
+      <label>Nom<input type="text" id="nom" autocomplete="name" placeholder="Votre nom"></label>
+      <button class="btn btn-wa" type="submit" id="envoi">Réserver par WhatsApp</button>
+      <p class="petit">Le restaurant reçoit votre message et confirme directement avec vous.</p>
+    </form>
+  </div>
+</section>
+
+<section class="venir" id="venir">
+  <div class="wrap grid deux-col">
+    <div class="rev">
+      <p class="etiquette">Venir</p>
+      <h2>Au fond du chemin Maingard</h2>
+      <dl class="dl">
+        <div><dt>Adresse</dt><dd>22 chemin Maingard<br>97470 Saint-Benoît<small>Parking privé, Wi-Fi gratuit et climatisation.</small></dd></div>
+        <div><dt>Ouvert</dt><dd>Le midi, du lundi au samedi<small>Horaires du jour sur leur fiche Google.</small></dd></div>
+        <div><dt>Réserver</dt><dd><a href="tel:+262692433934">0692 43 39 34</a><small>Aussi sur WhatsApp et par mail : <a href="mailto:lacabaneauxepices@gmail.com">lacabaneauxepices@gmail.com</a></small></dd></div>
+        <div><dt>On y parle</dt><dd>Français, créole, anglais</dd></div>
+      </dl>
+      <p class="acces"><b>Plan d’accès.</b> Depuis Saint-Denis, la 2×2 voies direction Saint-Benoît, sortie Takamaka. Au rond-point, à gauche direction Bras-Panon sur la RN 2002, puis à gauche 150 m plus loin, entre l’agence immobilière et l’entreprise de pneus : le restaurant se trouve au fond du chemin Maingard.</p>
+    </div>
+    <a class="plan rev" href="https://www.google.com/maps/dir/?api=1&destination=-21.0264375,55.70017397" target="_blank" rel="noopener">
+      <strong>22 chemin Maingard, Saint-Benoît</strong>
+      <span>Ouvrir l’itinéraire dans Google Maps</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="nom" style="margin-top:0">La Cabane aux épices</p>
+    <p>Restaurant familial · 22 chemin Maingard, Saint-Benoît · 0692 43 39 34</p>
+    <p>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de La Cabane aux épices. Photos : fiche Île de La Réunion Tourisme.</p>
+  </div>
+</footer>
+
+<nav class="barre" aria-label="Actions rapides">
+  <a href="#reserver">Réserver</a>
+  <a href="tel:+262692433934">Appeler</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=-21.0264375,55.70017397" target="_blank" rel="noopener">Itinéraire</a>
+</nav>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=document.querySelectorAll('.rev');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+/* WhatsApp */
+(function(){
+  var j=document.getElementById('jour'),t=new Date();
+  j.min=t.toISOString().slice(0,10);
+  document.getElementById('envoi').addEventListener('click',function(){
+    var d=j.value?new Date(j.value+'T12:00:00').toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'}):'';
+    var n=document.getElementById('nb').value,nom=document.getElementById('nom').value.trim();
+    var m='Bonjour, je voudrais réserver une table'+(d?' le '+d:'')+' pour '+n+' personnes'+(nom?', au nom de '+nom:'')+'. Merci !';
+    window.open('https://wa.me/262692433934?text='+encodeURIComponent(m),'_blank','noopener');
+  });
+})();
+/* Ambiance : feuilles et pétales d'épices qui flottent */
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  var c=document.getElementById('air'),x=c.getContext('2d'),W,H,P=[],run=true,N=26;
+  var cols=['rgba(95,160,98,.55)','rgba(63,122,70,.5)','rgba(233,169,53,.5)','rgba(212,96,31,.5)','rgba(178,58,72,.45)'];
+  function size(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}
+  function mk(i){return{x:Math.random()*W,y:i?-20:Math.random()*H,r:4+Math.random()*7,v:.25+Math.random()*.55,s:Math.random()*6,a:Math.random()*6,w:.4+Math.random()*.8,c:cols[Math.floor(Math.random()*cols.length)]}}
+  size();for(var i=0;i<N;i++)P.push(mk(0));
+  addEventListener('resize',size);
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)f()});
+  function f(){
+    if(!run)return;x.clearRect(0,0,W,H);
+    P.forEach(function(p,i){
+      p.y+=p.v;p.s+=.012;p.a+=.01;p.x+=Math.sin(p.s)*p.w;
+      if(p.y>H+20)P[i]=mk(1);
+      x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle=p.c;
+      x.beginPath();x.ellipse(0,0,p.r,p.r*.45,0,0,6.283);x.fill();x.restore();
+    });
+    requestAnimationFrame(f);
+  }
+  f();
+})();
+</script>
+</body>
+</html>
