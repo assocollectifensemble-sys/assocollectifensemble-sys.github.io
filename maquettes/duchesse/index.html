@@ -155,5 +155,6 @@ footer b{font-family:var(--serif);font-size:24px;color:var(--plum);display:block
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('seen');io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
+<script src="https://maquettes.atma-digital.re/outils/cta.js" data-nom="Duchesse" defer></script>
 </body>
 </html>

@@ -252,5 +252,6 @@ const r=document.querySelector("#hours tr[data-d=\""+new Date().getDay()+"\"]");
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 </script>
+<script src="https://maquettes.atma-digital.re/outils/cta.js" data-nom="Biotyful" defer></script>
 </body>
 </html>
