@@ -1,0 +1,1 @@
+import{t as e}from"./lecteur.CZiqRx7B.js";e(`.mq-voix--page .mq-temvideo`);
