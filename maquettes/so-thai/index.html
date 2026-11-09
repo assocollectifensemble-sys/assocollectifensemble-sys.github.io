@@ -6,9 +6,9 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="data:,">
 <title>So Thai — cuisine thaï à Sainte-Clotilde</title>
-<meta name="description" content="La cuisine thaïlandaise de Néo, un menu qui change chaque jour au gré du marché. 115 route de Bois de Nèfles, Sainte-Clotilde.">
+<meta name="description" content="Cuisine thaïlandaise faite maison, un menu qui change chaque jour au gré du marché. 115 route de Bois de Nèfles, Sainte-Clotilde.">
 <meta property="og:title" content="So Thai — cuisine thaï à Sainte-Clotilde">
-<meta property="og:description" content="Pad thaï, curry panang, bol renversé : une maquette offerte par Aurélie &amp; Jonathan.">
+<meta property="og:description" content="Pad thaï, curry Massaman, bol renversé : la cuisine thaï de Sainte-Clotilde.">
 <meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/so-thai/img/kaphrao.jpg">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,8 +34,8 @@ a{color:inherit}
 .ribbon b{color:var(--gold-l);font-weight:700}
 .hero{overflow:hidden;max-width:1180px;margin:0 auto;padding:clamp(28px,6vw,80px) var(--pad);display:grid;gap:40px;align-items:center}
 @media(min-width:900px){.hero{grid-template-columns:1.05fr .95fr}}
-.brand{display:flex;align-items:center;gap:14px}
-.brand img{width:76px;height:76px;border-radius:50%;border:2px solid var(--gold);object-fit:cover}
+.brand{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.brand img{width:clamp(190px,30vw,300px);height:auto;border-radius:22px;border:2px solid var(--gold);background:#fff;box-shadow:0 18px 40px -22px rgba(34,50,74,.55)}
 .brand span{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-d);font-weight:700}
 .sawadee{font-family:var(--serif);font-style:italic;color:var(--gold-d);font-size:clamp(22px,3vw,28px);margin-top:26px}
 h1{font-family:var(--serif);font-weight:600;color:var(--navy);font-size:clamp(44px,9vw,92px);line-height:.98;letter-spacing:-.01em;margin:6px 0 20px}
@@ -63,6 +63,21 @@ h1 em{color:var(--gold-d)}
 .story p{color:#D9DEE6;max-width:58ch}
 .story p+p{margin-top:14px}
 .story .quote{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.8vw,28px);color:var(--gold-l);border-top:1px solid rgba(228,201,119,.35);padding-top:18px;margin-top:24px}
+.craft{background:var(--navy);color:var(--paper);padding:clamp(56px,9vw,110px) var(--pad)}
+.craft .in{max-width:1080px;margin:0 auto}
+.craft h2{font-family:var(--serif);font-weight:600;font-size:clamp(34px,5.4vw,56px);line-height:1.02;margin:10px 0 14px;max-width:18ch}
+.craft .intro{color:#D9DEE6;max-width:58ch}
+.craft .grid{display:grid;gap:18px;margin-top:34px}
+@media(min-width:760px){.craft .grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.craft .grid{grid-template-columns:repeat(4,1fr)}}
+.craft .card{border:1px solid rgba(228,201,119,.35);border-radius:18px;padding:22px 20px;background:rgba(255,255,255,.04)}
+.craft .card .num{font-family:var(--serif);font-size:38px;color:var(--gold-l);line-height:1}
+.craft .card h3{font-family:var(--serif);font-size:24px;margin:8px 0 6px;color:#fff}
+.craft .card p{color:#D9DEE6;font-size:16px}
+.craft .photos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
+.craft .photos img{aspect-ratio:1;object-fit:cover;border-radius:16px;width:100%}
+.craft .quote{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.8vw,28px);color:var(--gold-l);border-top:1px solid rgba(228,201,119,.35);padding-top:18px;margin-top:30px}
+
 .board{max-width:1080px;margin:0 auto;padding:clamp(56px,9vw,110px) var(--pad);display:grid;gap:40px}
 @media(min-width:900px){.board{grid-template-columns:1fr 1fr;align-items:start}}
 .board h2{font-family:var(--serif);font-weight:600;color:var(--navy);font-size:clamp(34px,5vw,54px);line-height:1.02;margin:10px 0 14px}
@@ -106,16 +121,16 @@ footer b{font-family:var(--serif);font-size:22px;color:var(--navy);display:block
 </style>
 </head>
 <body>
-<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — imaginée avec gourmandise pour So Thai</div>
+<div class="ribbon">Maquette V2 · proposition pour So Thai · Aurélie &amp; Jonathan</div>
 <header class="hero">
   <div>
-    <div class="brand"><img src="img/logo.jpg" alt="Logo So Thai"><span>Cuisine thaï · Sainte-Clotilde</span></div>
+    <div class="brand"><img src="img/logo.jpg" alt="Logo So Thai, cuisine thaï"><span>Cuisine thaï · Sainte-Clotilde</span></div>
     <p class="sawadee">Sawadee !</p>
     <h1>La Thaïlande, <em>servie chaque jour</em> au coin de la rue Tessan</h1>
-    <p class="lede">Pad thaï maison, curry Massaman au combava, bol renversé de la mer : un menu qui change tous les jours, au gré du marché.</p>
+    <p class="lede">Pad thaï à la sauce maison, curry Massaman au combava, bol renversé de la mer : une cuisine faite sur place, avec un menu qui change tous les jours, au gré du marché.</p>
     <div class="cta">
       <a class="btn main" href="#ardoise">Voir le menu du jour</a>
-      <a class="btn ghost" href="https://www.facebook.com/SoThai974/">Réserver par Messenger</a>
+      <a class="btn ghost" href="https://www.facebook.com/SoThai974/">Commander par Messenger</a>
     </div>
   </div>
   <div class="plate" aria-hidden="true">
@@ -129,24 +144,32 @@ footer b{font-family:var(--serif);font-size:22px;color:var(--navy);display:block
     <div class="tag"><small>Dans les barquettes</small><strong id="dish">Pad Kaphrao Kai</strong></div>
   </div>
 </header>
-<section class="story">
+<section class="craft" id="savoir-faire">
   <div class="in">
     <div class="reveal">
-      <p class="kicker">L’histoire</p>
-      <h2>Du Barachois à sa propre maison</h2>
+      <p class="kicker" style="color:var(--gold-l)">Le savoir-faire</p>
+      <h2>Une cuisine thaï faite sur place, chaque jour</h2>
+      <p class="intro">Chez So Thai, tout se prépare à la maison : les sauces, les nems, le dessert. La carte change chaque jour selon ce que le marché offre de meilleur, et tout part en barquettes, prêt à emporter.</p>
     </div>
-    <div class="reveal">
-      <p>Pendant plusieurs années, Néo a régalé les gourmands de l’Arbradélis, sur le Barachois, avec ses spécialités thaïlandaises. En juillet 2022, elle a ouvert sa maison à elle : So Thai, à Sainte-Clotilde.</p>
-      <p>Le principe est le même depuis le premier jour : des ingrédients ultra frais, des sauces maison, et une carte qui se réinvente chaque matin. À emporter, ou à savourer sur la petite terrasse.</p>
-      <p class="quote">« Le menu change tous les jours, au gré du marché. »</p>
+    <div class="grid">
+      <div class="card reveal"><div class="num">01</div><h3>Sauces maison</h3><p>Sauce pad thaï, curry Massaman au lait de coco et combava, sauce poivre noir : préparées sur place.</p></div>
+      <div class="card reveal"><div class="num">02</div><h3>Ingrédients frais</h3><p>Légumes frais, basilic thaï, riz jasmin : une carte qui s’adapte au marché du jour.</p></div>
+      <div class="card reveal"><div class="num">03</div><h3>Recettes thaï</h3><p>Pad thaï, Kuaitiao Nam Kai, Pad Kaphrao Kai, bol renversé de la mer : les grands classiques, bien faits.</p></div>
+      <div class="card reveal"><div class="num">04</div><h3>Barquettes sans plastique</h3><p>Vos plats à emporter voyagent dans des barquettes non plastiques : bon pour vous, bon pour l’île.</p></div>
     </div>
+    <div class="photos reveal">
+      <img src="img/padthai.jpg" alt="Pad thaï poulet" loading="lazy">
+      <img src="img/kaphrao.jpg" alt="Pad Kaphrao Kai" loading="lazy">
+      <img src="img/panang.jpg" alt="Curry panang" loading="lazy">
+    </div>
+    <p class="quote reveal">« Le menu change tous les jours, au gré du marché. »</p>
   </div>
 </section>
 <section class="board" id="ardoise">
   <div class="reveal">
     <p class="kicker">L’ardoise</p>
     <h2>Le menu du vendredi 2 octobre</h2>
-    <p class="note">Chaque jour, la carte de So Thai part sur Facebook. Ici, elle aurait sa place d’honneur : lisible en un coup d’œil, avec les photos des plats.</p>
+    <p class="note">Le menu du jour, lisible en un coup d’œil, mis à jour en même temps que Facebook et Instagram.</p>
   </div>
   <div class="menu" id="menu">
     <div class="day"><b>Vendredi</b><span>11h30–14h · 18h–20h</span></div>
@@ -160,7 +183,7 @@ footer b{font-family:var(--serif);font-size:22px;color:var(--navy);display:block
       <li><span class="n">Nems légumes ou poulet</span><span class="p">1,5 €</span></li>
       <li><span class="n">Banoffee maison<small>caramel, banane, chantilly maison, spéculos</small></span><span class="p">3,5 €</span></li>
     </ul>
-    <p class="foot">Réservation par Messenger jusqu’à 11h pour le midi et 17h30 pour le soir, à retirer au comptoir.</p>
+    <p class="foot">Commande par Messenger jusqu’à 11h pour le midi et 17h30 pour le soir, à retirer au comptoir.</p>
   </div>
 </section>
 <section class="gallery">
@@ -178,12 +201,12 @@ footer b{font-family:var(--serif);font-size:22px;color:var(--navy);display:block
   <div class="in">
     <div class="reveal"><h3>Venir</h3><p>115 route de Bois de Nèfles,<br>à l’angle de la rue Tessan,<br>Sainte-Clotilde</p></div>
     <div class="reveal"><h3>Horaires</h3><p>Du mardi au vendredi<br>11h30–14h et 18h–20h<br>Le samedi 11h30–14h</p></div>
-    <div class="reveal"><h3>Réserver</h3><p>Par Messenger, jusqu’à 11h pour le midi et 17h30 pour le soir.</p><p class="big">Kob Koon Ka !</p></div>
+    <div class="reveal"><h3>Commander</h3><p>Par Messenger, jusqu’à 11h pour le midi et 17h30 pour le soir, à retirer au comptoir.</p><p class="big">Kob Koon Ka !</p></div>
   </div>
 </section>
-<footer><b>So Thai</b>Authentique cuisine thaï à emporter, et quelques places assises.<br>so.thai.reunion@gmail.com</footer>
+<footer><img src="img/logo.jpg" alt="So Thai" style="width:150px;margin:0 auto 10px;border-radius:14px"><b>So Thai</b>Authentique cuisine thaï à emporter, et quelques places assises.<br>so.thai.reunion@gmail.com</footer>
 <nav class="bar" aria-label="Actions rapides">
-  <a class="m" href="https://www.facebook.com/SoThai974/">Réserver</a>
+  <a class="m" href="https://www.facebook.com/SoThai974/">Commander</a>
   <a href="#infos">Venir</a>
 </nav>
 <script>
