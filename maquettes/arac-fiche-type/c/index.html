@@ -1,121 +1,481 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow">
-<title>Ziguilé — proposition C « Mouvement » — ARAC</title>
+<title>Ziguilé — proposition C « Mouvement » v2 — ARAC</title>
+<meta name="description" content="Compagnie Ziguilé, cirque contemporain à Saint-Paul, La Réunion : portés acrobatiques, main à main, équilibres, aérien, danse et parkour.">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}img{display:block;max-width:100%}a{color:inherit}
-html{scroll-behavior:smooth}html,body{overflow-x:clip}body{-webkit-font-smoothing:antialiased}
+/* ===== Base (commune à toutes les compagnies) ===== */
+*{box-sizing:border-box;margin:0;padding:0}img{display:block;max-width:100%}a{color:inherit}button{font:inherit;color:inherit}
+html{scroll-behavior:smooth}html,body{overflow-x:clip}
+:root{--red:#e02b20;--ink:#14141a;--mute:#55555f;--soft:#f5f3f1;--ease:cubic-bezier(.2,.75,.2,1);--pad:clamp(20px,5vw,64px)}
+body{background:#fff;color:var(--ink);font:400 17px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1240px;margin:auto;padding:0 var(--pad)}
+section{padding:clamp(70px,9vw,120px) 0}
+.ey{display:inline-flex;align-items:center;gap:10px;font:600 13px/1 Inter;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:16px}
+.ey:before{content:"";width:28px;height:2px;background:currentColor;transform-origin:left}
+h2{font:800 clamp(38px,5.4vw,76px)/1 Syne,sans-serif;letter-spacing:-.035em;margin-bottom:30px;max-width:16ch}
+.lead{font-size:clamp(18px,1.6vw,21px);color:#2b2b33;max-width:58ch}
+
+/* Barre de démo + en-tête ARAC */
 .demo-bar{position:fixed;z-index:99;left:12px;bottom:12px;display:flex;gap:10px;align-items:center;background:#111;color:#fff;
  font:600 12px/1 system-ui,sans-serif;padding:8px 12px;border-radius:30px;box-shadow:0 4px 18px rgba(0,0,0,.3)}
-.demo-bar a{color:#fff;text-decoration:none;opacity:.8}.demo-bar span{color:#ff6b5e}
-.arac{display:flex;align-items:center;justify-content:space-between;padding:10px 5vw;background:#fff;border-bottom:1px solid #eee;
+.demo-bar a{color:#fff;text-decoration:none;opacity:.85}.demo-bar span{color:#ff6b5e}
+.arac{display:flex;align-items:center;justify-content:space-between;padding:10px var(--pad);background:#fff;border-bottom:1px solid #eee;
  font:500 13px/1.2 Poppins,system-ui,sans-serif;color:#333;position:relative;z-index:5}
-.arac img{height:34px;width:auto}.arac nav{display:flex;gap:22px}.arac nav a{text-decoration:none}
-.arac nav a.on{color:#e02b20;font-weight:700}
+.arac img{height:34px;width:auto}.arac nav{display:flex;gap:22px}.arac nav a{text-decoration:none;padding:12px 0}
+.arac nav a.on{color:var(--red);font-weight:700}
 @media(max-width:700px){.arac nav a:not(.on){display:none}}
-.rv{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
-.rv.in{opacity:1;transform:none}
-.lb{position:fixed;inset:0;background:rgba(10,8,12,.94);display:none;align-items:center;justify-content:center;z-index:100;padding:4vw;cursor:zoom-out}
-.lb.on{display:flex}.lb img{max-height:86vh;width:auto;border-radius:6px}.lb p{position:absolute;bottom:22px;color:#ddd;font:14px system-ui}
-.arac-foot{background:#3f3f3f;color:#ddd;padding:34px 5vw;font:14px/1.6 Poppins,system-ui,sans-serif;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
-.arac-foot a{color:#fff}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 
-body{background:#fff;color:#14141a;font:400 17px/1.65 Inter,system-ui,sans-serif}
-.wrap{max-width:1240px;margin:auto;padding:0 5vw}
-.hero{display:grid;grid-template-columns:1fr 1.1fr;min-height:86vh;align-items:center;position:relative;overflow:hidden}
-.hero .txt{padding:60px 5vw;position:relative;z-index:2}
-.hero h1{font:800 clamp(72px,10vw,150px)/.9 Syne,sans-serif;letter-spacing:-.04em}
-.hero h1 .dot{color:#e02b20}
-.hero .lbl{display:inline-flex;gap:8px;align-items:center;font:600 13px Inter;letter-spacing:.14em;text-transform:uppercase;color:#e02b20;margin-bottom:22px}
-.hero .lbl:before{content:"";width:34px;height:2px;background:#e02b20}
-.hero p.tag{font-size:clamp(19px,1.8vw,24px);max-width:28ch;margin:22px 0 30px;color:#3a3a44}
-.slides{position:relative;height:100%;min-height:86vh;clip-path:polygon(16% 0,100% 0,100% 100%,0 100%)}
-.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1.2s,transform 6s ease-out}
-.slides img.on{opacity:1;transform:scale(1)}
-.dots{position:absolute;right:30px;bottom:30px;display:flex;gap:8px;z-index:3}.dots button{width:30px;height:4px;border:0;background:rgba(255,255,255,.5);cursor:pointer;border-radius:3px}
-.dots button.on{background:#fff;width:52px;transition:width .4s}
-.btn{display:inline-flex;align-items:center;gap:10px;background:#e02b20;color:#fff;text-decoration:none;font:700 15px/1 Inter;padding:17px 26px;border-radius:12px;transition:.25s}
-.btn:hover{background:#14141a;transform:translateY(-2px)}.btn.ol{background:#fff;color:#14141a;box-shadow:inset 0 0 0 2px #14141a}.btn.ol:hover{background:#14141a;color:#fff}
-.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-50px;position:relative;z-index:4}
-.facts div{background:#fff;border-radius:16px;padding:26px;box-shadow:0 14px 40px rgba(20,20,40,.1)}
-.facts b{display:block;font:800 clamp(38px,4vw,56px)/1 Syne,sans-serif;color:#e02b20}.facts small{color:#55555f;font-size:14px}
-section{padding:100px 0}h2{font:800 clamp(40px,5vw,72px)/1 Syne,sans-serif;letter-spacing:-.03em;margin-bottom:34px}
-.ey{font:600 13px Inter;letter-spacing:.16em;text-transform:uppercase;color:#e02b20;margin-bottom:12px}
-.intro{display:grid;grid-template-columns:1fr 1fr;gap:70px}.intro .lead{font-size:clamp(19px,1.6vw,22px);color:#2b2b33}
-.pills{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pills span{background:#f5f3f1;border-radius:12px;padding:16px 18px;font-weight:600;transition:.25s;position:relative;padding-left:44px}
-.pills span:before{content:"";position:absolute;left:18px;top:50%;width:12px;height:12px;border-radius:50%;background:#e02b20;transform:translateY(-50%)}
-.pills span:hover{background:#e02b20;color:#fff}.pills span:hover:before{background:#fff}
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:30px}
-.tabs button{font:700 17px Syne,sans-serif;border:2px solid #14141a;background:#fff;padding:13px 22px;border-radius:40px;cursor:pointer;transition:.25s}
-.tabs button.on,.tabs button:hover{background:#14141a;color:#fff}
-.panel{display:none;grid-template-columns:1.2fr 1fr;gap:0;background:#14141a;color:#fff;border-radius:22px;overflow:hidden;min-height:480px}
-.panel>*,.intro>*,.itw>*,.cta>*,.hero>*{min-width:0}.panel.on{display:grid;animation:sw .6s cubic-bezier(.2,.8,.2,1)}@keyframes sw{from{opacity:0;transform:translateX(40px)}}
-.panel img{width:100%;height:100%;object-fit:cover;min-height:320px}.panel .bd{padding:46px 42px;display:flex;flex-direction:column;justify-content:center}
-.panel .yr{color:#ff6b5e;font:700 13px Inter;letter-spacing:.14em;text-transform:uppercase}
-.panel h3{font:800 clamp(42px,4.4vw,64px)/1 Syne,sans-serif;margin:10px 0}.panel .hk{font-size:20px;color:#ffb3ab;margin-bottom:14px}
-.panel p{color:#d6d6de}.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.meta span{background:rgba(255,255,255,.1);padding:8px 14px;border-radius:30px;font-size:14px}
-.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;cursor:grab}
-.strip a{flex:0 0 auto;height:360px;scroll-snap-align:start;border-radius:16px;overflow:hidden}.strip img{height:100%;width:auto;transition:transform .6s}
-.strip a:hover img{transform:scale(1.05)}
-.ag{display:grid;gap:14px}.ag a{display:grid;grid-template-columns:110px 1fr auto;align-items:center;gap:22px;text-decoration:none;background:#f5f3f1;border-radius:16px;padding:20px 26px;transition:.25s}
-.ag a:hover{background:#14141a;color:#fff}.ag .d{font:800 44px/1 Syne,sans-serif;color:#e02b20}.ag .d small{display:block;font:600 12px Inter;color:inherit;opacity:.7}
-.ag h4{font:800 22px Syne,sans-serif}.ag .ar{font-size:26px;transition:transform .25s}.ag a:hover .ar{transform:translateX(6px)}
-.itw{display:grid;grid-template-columns:320px 1fr;gap:50px}.qs button{display:block;width:100%;text-align:left;font:700 17px/1.35 Inter;background:none;border:0;border-left:3px solid #e5e2df;padding:14px 18px;cursor:pointer;color:#77777f;transition:.25s}
-.qs button.on{border-color:#e02b20;color:#14141a}.ans p{display:none;font-size:clamp(20px,2vw,26px);line-height:1.5}.ans p.on{display:block;animation:sw .5s}
-.cta{background:#e02b20;color:#fff;border-radius:28px;padding:70px 6vw;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;margin:0 5vw 80px}
-.cta h2{margin-bottom:10px}.cta .ls{display:grid;gap:10px}.cta .btn{background:#fff;color:#14141a;justify-content:space-between}.cta .btn:hover{background:#14141a;color:#fff}
-@media(max-width:900px){.hero{grid-template-columns:1fr}.slides{min-height:56vh;clip-path:polygon(0 8%,100% 0,100% 100%,0 100%);order:-1}
- .facts{grid-template-columns:1fr 1fr;margin-top:20px;gap:10px}.facts div{padding:18px 16px;min-width:0}.facts b{font-size:34px}.hero h1{font-size:15vw}.intro,.panel.on,.itw,.cta{grid-template-columns:1fr}.panel .bd{padding:30px 24px}
- .strip a{height:240px}.ag a{grid-template-columns:76px 1fr}.ag .ar{display:none}.ag .d{font-size:34px}section{padding:66px 0}
- .qs{display:flex;overflow-x:auto;gap:6px}.qs button{flex:0 0 72%;border-left:0;border-top:3px solid #e5e2df}.qs button.on{border-color:#e02b20}}
-</style></head><body class="">
-<div class="demo-bar"><a href="../">← Les 3 propositions</a><span>C · Mouvement</span></div>
-<header class="arac"><a href="https://arac.re/"><img src="../img/arac-mini.png" alt="ARAC"></a><nav><a href="#">Présentation</a><a class="on" href="#">Les compagnies</a><a href="#">Les écoles</a><a href="#">Contact</a></nav></header><section class="hero" style="padding:0"><div class="txt"><div class="lbl">Compagnie de cirque · Saint-Paul, La Réunion</div>
-<h1>Ziguilé<span class="dot">.</span></h1><p class="tag">Un retour vers les sources créatrices de l&#x27;enfance.</p>
-<a class="btn" href="#spectacles">Découvrir les spectacles</a> <a class="btn ol" href="mailto:compagnie.ziguile@gmail.com">Contacter</a></div>
-<div class="slides" id="sld"><img class="on" src="../img/hero.jpg" alt=""><img class="" src="../img/zig-equilibre.jpg" alt=""><img class="" src="../img/tinn-cordes2.jpg" alt=""><img class="" src="../img/zig-saut.jpg" alt=""><div class="dots"><button aria-label="Photo 1" class="on"></button><button aria-label="Photo 2" class=""></button><button aria-label="Photo 3" class=""></button><button aria-label="Photo 4" class=""></button></div></div></section>
-<div class="wrap"><div class="facts"><div class="rv"><b><span data-n="130">130</span>+</b><small>représentations de Ziguilé</small></div><div class="rv"><b>2017</b><small>naissance de la compagnie</small></div><div class="rv"><b><span data-n="3">3</span></b><small>spectacles au répertoire</small></div><div class="rv"><b><span data-n="3">3</span></b><small>territoires : Réunion, Hexagone, Suisse</small></div></div>
-<section class="intro"><div class="rv"><div class="ey">La compagnie</div><h2>Deux corps, un terrain de jeu.</h2><p class="lead">Créée en 2017, la compagnie Ziguilé est née de la rencontre d&#x27;Émilie Smith, danseuse, et d&#x27;Éric Maufrois, acrobate de rue. Faute d&#x27;école de cirque à La Réunion, ils se forment au main à main et aux équilibres auprès des artistes de l&#x27;île et de passage. En créole, « ziguilé » évoque l&#x27;univers de l&#x27;enfance : le jeu, l&#x27;adresse, le partage et le dialogue entre les générations.</p></div>
-<div class="rv"><div class="ey">Disciplines</div><div class="pills"><span>Portés acrobatiques</span><span>Main à main</span><span>Équilibres</span><span>Aérien</span><span>Danse</span><span>Parkour</span></div>
-<div class="ey" style="margin-top:28px">Activités</div><div class="pills"><span>Spectacles</span><span>Ateliers</span><span>Masterclass</span><span>Résidences de territoire</span></div></div></section>
-<section id="spectacles" style="padding-top:0"><div class="ey">Répertoire</div><h2 class="rv">Les spectacles</h2><div class="tabs"><button class="on" data-t="tinn">Tinn tout&#x27; !</button><button class="" data-t="zig">Ziguilé</button><button class="" data-t="vav">Vavang&#x27;</button></div><div class="panel on" id="p-tinn"><img loading="lazy" src="../img/tinn-canape.jpg" alt="Tinn tout&#x27; !">
-<div class="bd"><span class="yr">Création 2025</span><h3>Tinn tout&#x27; !</h3><p class="hk">« Éteignez tout ! » en créole réunionnais.</p><p>L&#x27;équipe s&#x27;est enfermée trois jours dans une maison de la Plaine des Cafres, sans téléphone, ni écran, ni jeu. De cette expérience est né un spectacle joyeux et inventif : trois acrobates explorent un agrès inédit qui les relie en contrepoids. Parce qu&#x27;on n&#x27;est rien l&#x27;un sans les autres.</p>
-<div class="meta"><span>Dès 4 ans</span><span>55 min</span><span>Portés · aérien · musique</span></div></div></div><div class="panel" id="p-zig"><img loading="lazy" src="../img/zig-papier.jpg" alt="Ziguilé">
-<div class="bd"><span class="yr">Création 2019</span><h3>Ziguilé</h3><p class="hk">Un ring de boulettes de papier.</p><p>Au cœur d&#x27;un ring de boulettes de papier, deux enfants se chamaillent. Ils se portent, voltigent et enchaînent les acrobaties avec une énergie joyeuse. Entre danse et cirque, ce duo réveille l&#x27;âme d&#x27;enfant des adultes.</p>
-<div class="meta"><span>Dès 4 ans</span><span>55 min</span><span>Duo</span><span>130+ dates</span></div></div></div><div class="panel" id="p-vav"><img loading="lazy" src="../img/vav-quatre.jpg" alt="Vavang&#x27;">
-<div class="bd"><span class="yr">En création</span><h3>Vavang&#x27;</h3><p class="hk">Le nouveau projet de la compagnie.</p><p>Entre acrobaties, danse et cirque, Vavang&#x27; est en cours de création avec le collectif Bat Kare.</p>
-<div class="meta"><span>En création</span><span>Acrobaties · danse</span></div></div></div></section>
-<section style="padding-top:0"><div class="ey">Galerie</div><h2 class="rv">En mouvement</h2><div class="strip"><a href="../img/hero.jpg" data-lb="Tinn tout&#x27; · © S. Mardémoutou"><img loading="lazy" src="../img/hero.jpg" alt="Tinn tout&#x27; · © S. Mardémoutou"></a><a href="../img/zig-poirier.jpg" data-lb="Ziguilé · © O. Padre"><img loading="lazy" src="../img/zig-poirier.jpg" alt="Ziguilé · © O. Padre"></a><a href="../img/tinn-cordes2.jpg" data-lb="Tinn tout&#x27;"><img loading="lazy" src="../img/tinn-cordes2.jpg" alt="Tinn tout&#x27;"></a><a href="../img/zig-equilibre.jpg" data-lb="Ziguilé · © S. Gaillochon"><img loading="lazy" src="../img/zig-equilibre.jpg" alt="Ziguilé · © S. Gaillochon"></a><a href="../img/tinn-canape2.jpg" data-lb="Tinn tout&#x27;"><img loading="lazy" src="../img/tinn-canape2.jpg" alt="Tinn tout&#x27;"></a><a href="../img/zig-saut.jpg" data-lb="Ziguilé"><img loading="lazy" src="../img/zig-saut.jpg" alt="Ziguilé"></a></div></section>
-<section style="padding-top:0"><div class="ey">Agenda</div><h2 class="rv">Prochaines dates</h2><div class="ag"><a class="rv" href="mailto:compagnie.ziguile@gmail.com"><div class="d">17<small>avr. 2027</small></div><div><h4>Tinn tout&#x27; !</h4><div>samedi · 11h · Le Plongeoir, Pôle national Cirque · Le Mans</div></div><span class="ar">→</span></a><a class="rv" href="mailto:compagnie.ziguile@gmail.com"><div class="d">19<small>avr. 2027</small></div><div><h4>Ziguilé</h4><div>lundi · 14h30 · Le Plongeoir, Pôle national Cirque · Le Mans</div></div><span class="ar">→</span></a><a class="rv" href="mailto:compagnie.ziguile@gmail.com"><div class="d">20<small>avr. 2027</small></div><div><h4>Ziguilé</h4><div>mardi · 10h30 · Le Plongeoir, Pôle national Cirque · Le Mans</div></div><span class="ar">→</span></a></div></section>
-<section style="padding-top:0"><div class="ey">L'interview cirque de l'ARAC</div><h2 class="rv">Émilie Smith et Éric Maufrois racontent.</h2>
-<div class="itw"><div class="qs"><button class="on" data-q="0">Comment est née votre passion du cirque ?</button><button class="" data-q="1">Quelle est la spécificité de votre pratique ?</button><button class="" data-q="2">Comment élaborez-vous vos spectacles ?</button><button class="" data-q="3">Qu&#x27;est-ce qui vous plaît dans l&#x27;ARAC ?</button></div><div class="ans"><p class="on" id="a0">En mars 2016, Émilie et Éric, tous deux réunionnais, travaillent pour la première fois en duo. Elle danseuse, lui acrobate de rue : ils se tournent naturellement vers le porté acrobatique. C&#x27;est avec Cirquons Flex qu&#x27;ils découvrent le cirque contemporain et acquièrent leurs bases en main à main.</p><p class="" id="a1">Des artistes autodidactes, formés auprès des circassiens réunionnais et des artistes de passage. Et l&#x27;envie d&#x27;aller là où le public n&#x27;est pas toujours sensibilisé : résidences dans les quartiers et dans les hauts de l&#x27;île.</p><p class="" id="a2">Pour « Ziguilé », créé en décembre 2019, ils font appel à Vincent Maillot (Cirquons Flex) pour la mise en scène. Le cirque contemporain leur permet d&#x27;allier prouesses techniques et propos artistique.</p><p class="" id="a3">« Novices dans le monde du cirque, l&#x27;ARAC a été pour nous d&#x27;un grand soutien : une source d&#x27;informations et de rencontres, conviviale et pleine de bienveillance. »</p></div></div></section></div>
-<div class="cta"><div><h2 class="rv">On joue ensemble ?</h2><p style="font-size:19px">Programmer, rencontrer, écrire à la compagnie.</p>
-<p style="margin-top:20px;font-weight:700">#cirquecontemporain #portéacrobatique #SaintPaul</p><p style="font-size:13px;opacity:.85;margin-top:8px">Photos © Siegfried Mardémoutou, Olivier Padre, Stéphane Gaillochon, Cédric Demaison</p></div>
-<div class="ls"><a class="btn" href="mailto:compagnie.ziguile@gmail.com">compagnie.ziguile@gmail.com <span>→</span></a><a class="btn" href="https://www.facebook.com/ziguile/" target="_blank" rel="noopener">Facebook <span>→</span></a>
-<a class="btn" href="https://www.instagram.com/cie.ziguile/" target="_blank" rel="noopener">Instagram <span>→</span></a></div></div>
+/* Progression de lecture : fil + balle qui rebondit */
+.prog{position:fixed;left:0;right:0;top:0;height:3px;z-index:60;pointer-events:none}
+.prog i{position:absolute;inset:0;background:var(--red);transform-origin:left;transform:scaleX(var(--p,0))}
+.prog b{position:absolute;top:-5px;left:0;width:13px;height:13px;border-radius:50%;background:var(--red);box-shadow:0 2px 6px rgba(224,43,32,.45);
+ transform:translateX(calc(var(--p,0) * (100vw - 13px)))}
+.prog b:after{content:"";position:absolute;inset:3px 6px 6px 3px;border-radius:50%;background:rgba(255,255,255,.55)}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;background:var(--red);color:#fff;text-decoration:none;font:700 16px/1.1 Inter;
+ padding:15px 24px;border-radius:40px;transition:background .25s,color .25s,transform .25s var(--ease),box-shadow .25s;position:relative;overflow:hidden}
+.btn:hover{background:var(--ink);transform:translateY(-2px)}
+.btn .ar{transition:transform .3s var(--ease)}.btn:hover .ar{transform:translateX(5px)}
+.btn.ol{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}.btn.ol:hover{background:var(--ink);color:#fff}
+
+/* ===== HERO ===== */
+.hero{position:relative;padding:clamp(34px,6vw,70px) 0 clamp(40px,6vw,80px);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(30px,5vw,70px);align-items:center}
+.lbl{font:600 13px/1.4 Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+h1{font:800 clamp(64px,10.5vw,156px)/.92 Syne,sans-serif;letter-spacing:-.045em;white-space:nowrap}
+h1 .ch{display:inline-block}
+h1 .dot{display:inline-block;width:.2em;height:.2em;border-radius:50%;background:var(--red);margin-left:.05em;vertical-align:baseline}
+.tag{font-size:clamp(19px,1.9vw,25px);line-height:1.4;color:#33333d;max-width:24ch;margin:20px 0 28px}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+/* jongle : 3 balles sur une trajectoire en huit */
+.juggle{position:absolute;right:var(--pad);top:clamp(14px,3vw,40px);width:200px;height:120px;transform-origin:top right;transform:scale(.62);pointer-events:none}
+.juggle svg{position:absolute;inset:0;overflow:visible}
+.juggle .ball{position:absolute;left:0;top:0;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:var(--red);
+ offset-path:path("M100,60 C125,10 185,5 185,60 C185,112 125,110 100,60 C75,10 15,5 15,60 C15,112 75,110 100,60Z");offset-rotate:0deg;
+ animation:orbit 3.6s linear infinite}
+.juggle .ball:nth-of-type(2){animation-delay:-1.2s;background:var(--ink)}.juggle .ball:nth-of-type(3){animation-delay:-2.4s}
+@keyframes orbit{from{offset-distance:0%}to{offset-distance:100%}}
+@supports not (offset-path:path("M0,0 L1,1")){.juggle .ball{display:none}}
+
+/* Rail photo (hero + galerie) : défilement horizontal tactile */
+.rail{display:flex;align-items:flex-start;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+ padding:6px var(--pad) 18px;margin:0 calc(var(--pad) * -1);scroll-padding:0 var(--pad)}
+.rail::-webkit-scrollbar{display:none}
+.card{flex:0 0 auto;scroll-snap-align:start;position:relative;border-radius:20px;overflow:hidden;background:#e9e6e3;aspect-ratio:4/5;margin:0}
+.card img{width:100%;height:100%;object-fit:cover}
+.hero .card{width:min(78vw,400px);transition:transform .6s var(--ease),opacity .6s}
+.hero .card figcaption,.gal .card figcaption{position:absolute;left:12px;bottom:12px;background:rgba(20,20,26,.72);color:#fff;font:600 13px/1 Inter;padding:9px 12px;border-radius:20px;backdrop-filter:blur(4px)}
+.js .hero .card:not(.cur){transform:scale(.94);opacity:.75}
+.ctl{display:flex;align-items:center;gap:6px;margin-top:4px}
+.ctl .dots{display:flex;gap:0;flex:1}
+.ctl .dots button{width:44px;height:44px;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+.ctl .dots button:before{content:"";width:22px;height:4px;border-radius:3px;background:#d9d5d1;transition:width .4s var(--ease),background .4s}
+.ctl .dots button.on:before{width:38px;background:var(--red)}
+.arrow{width:48px;height:48px;border-radius:50%;border:2px solid var(--ink);background:#fff;cursor:pointer;font-size:20px;display:grid;place-items:center;transition:.25s}
+.arrow:hover{background:var(--ink);color:#fff}
+.nojs-hide{display:none}.js .nojs-hide{display:flex}
+
+/* Bandeau défilant des disciplines */
+.marq{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;padding:16px 0;font:800 clamp(24px,3vw,38px)/1 Syne,sans-serif;letter-spacing:-.02em}
+.marq .tr{display:inline-flex;will-change:transform}
+.marq span{display:inline-flex;align-items:center;gap:22px;padding-right:22px}
+.marq span:after{content:"";width:.42em;height:.42em;border-radius:50%;background:#fff;display:inline-block}
+
+/* Chiffres */
+.facts{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fact{background:#fff;border-radius:20px;padding:26px 24px;border:1.5px solid #ece8e4;position:relative;z-index:1;transition:transform .35s var(--ease),border-color .35s}
+.fact:hover{transform:translateY(-4px) rotate(-1deg);border-color:var(--red)}
+.fact b{display:block;font:800 clamp(40px,4.4vw,62px)/1 Syne,sans-serif;color:var(--red);letter-spacing:-.03em}
+.fact small{display:block;margin-top:8px;color:var(--mute);font-size:16px;line-height:1.4}
+.draw{position:absolute;pointer-events:none;overflow:visible}
+.draw path{fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--d,1))}
+.draw path.ghost{stroke:#e9e4df;stroke-dasharray:.012 .018;stroke-dashoffset:0}
+.draw circle{fill:var(--red)}
+.facts .draw{left:-2%;top:-70px;width:104%;height:120px}
+
+/* Présentation */
+.intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(36px,6vw,90px);align-items:center}
+.mask{position:relative;border-radius:24px;overflow:hidden;margin:0}
+.mask img{width:100%;height:100%;object-fit:cover}
+.intro .mask{aspect-ratio:4/5}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 26px}
+.chips span{display:inline-flex;align-items:center;gap:9px;min-height:44px;background:var(--soft);border-radius:30px;padding:10px 16px;font-weight:600;font-size:16px;transition:background .25s,color .25s,transform .3s var(--ease)}
+.chips span:before{content:"";width:10px;height:10px;border-radius:50%;background:var(--red);transition:background .25s}
+.chips span:hover{background:var(--red);color:#fff;transform:translateY(-3px) rotate(-2deg)}.chips span:hover:before{background:#fff}
+.chips.ol span{background:#fff;box-shadow:inset 0 0 0 1.5px #dcd7d2}
+.sub{font:600 13px Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-top:28px}
+
+/* Spectacles : pastilles avec pastille rouge qui glisse */
+.sh-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+.sh-head h2{margin-bottom:0}
+.tabs{position:relative;display:inline-flex;gap:4px;padding:5px;background:var(--soft);border-radius:40px;max-width:100%;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{position:relative;z-index:1;flex:0 0 auto;min-height:46px;padding:10px 20px;border:0;background:none;border-radius:30px;cursor:pointer;font:700 17px/1 Syne,sans-serif;white-space:nowrap;transition:color .35s}
+.tabs button[aria-selected=true]{color:#fff}
+.tabs .ind{position:absolute;z-index:0;top:5px;bottom:5px;left:0;width:0;border-radius:30px;background:var(--red);transition:transform .5s var(--ease),width .5s var(--ease)}
+.panels{position:relative}
+.panel{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);background:var(--ink);color:#fff;border-radius:26px;overflow:hidden;margin-bottom:18px}
+.js .panel{margin-bottom:0}.js .panel[hidden]{display:none}
+.panel .ph{aspect-ratio:4/5;position:relative;overflow:hidden}
+.panel .ph img{width:100%;height:100%;object-fit:cover}
+.panel.go .ph img{animation:zin 1.1s var(--ease)}
+@keyframes zin{from{transform:scale(1.14)}}
+.panel.go .bd>*{animation:pin .7s var(--ease) both}
+.panel.go .bd>*:nth-child(2){animation-delay:.06s}.panel.go .bd>*:nth-child(3){animation-delay:.12s}.panel.go .bd>*:nth-child(4){animation-delay:.18s}.panel.go .bd>*:nth-child(5){animation-delay:.24s}
+@keyframes pin{from{opacity:0;transform:translateY(22px)}}
+.panel .bd{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:center}
+.panel .yr{color:#ff7a6f;font:700 13px Inter;letter-spacing:.14em;text-transform:uppercase}
+.panel h3{font:800 clamp(40px,4.6vw,68px)/1 Syne,sans-serif;letter-spacing:-.03em;margin:10px 0 12px}
+.panel .hk{font-size:20px;line-height:1.4;color:#ffb3ab;margin-bottom:14px}
+.panel p{color:#dcdce3;max-width:52ch}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.meta span{background:rgba(255,255,255,.12);padding:9px 14px;border-radius:30px;font-size:15px}
+.count{font:700 14px Inter;color:var(--mute);margin-top:14px;display:flex;align-items:center;gap:12px}
+.count i{flex:1;height:2px;background:#e4e0dc;position:relative;overflow:hidden;max-width:220px}
+.count i:after{content:"";position:absolute;inset:0;background:var(--red);transform-origin:left;transform:scaleX(var(--k,.333));transition:transform .5s var(--ease)}
+
+/* Galerie */
+.gal .card{width:min(72vw,330px);cursor:zoom-in}
+.gal .card img{width:118%;max-width:none;margin-left:-9%;transform:translateX(calc(var(--px,0) * 8%));transition:scale .7s var(--ease)}
+.gal .card:hover img{scale:1.05}
+.gal-foot{display:flex;align-items:center;gap:14px;margin-top:6px}
+.bar{flex:1;height:3px;background:#ece8e4;border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--red);transform-origin:left;transform:scaleX(var(--g,.2))}
+
+/* Agenda */
+.ag{display:grid;gap:14px}
+.ag a{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:22px;text-decoration:none;background:var(--soft);border-radius:20px;padding:20px 26px;transition:background .3s,color .3s,transform .35s var(--ease)}
+.ag a:hover{background:var(--ink);color:#fff;transform:translateX(6px)}
+.ag .d{font:800 48px/1 Syne,sans-serif;color:var(--red);text-align:center;min-width:86px;padding-right:22px;border-right:2px dashed #dcd5cf}
+.ag .d small{display:block;font:600 13px Inter;color:var(--mute);margin-top:6px;letter-spacing:.04em}
+.ag a:hover .d small{color:#ccc}
+.ag h3{font:800 23px/1.15 Syne,sans-serif;margin-bottom:4px}.ag .pl{font-size:16px;line-height:1.45}
+.ag .go{width:46px;height:46px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;font-size:20px;transition:transform .3s var(--ease)}
+.ag a:hover .go{transform:rotate(-45deg)}
+
+/* Interview : accordéon */
+.itw{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(30px,5vw,80px);align-items:start}
+.itw .mask{aspect-ratio:4/5;max-width:440px}
+.qa details{border-bottom:1.5px solid #e6e1dc}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;padding:16px 0;font:700 clamp(18px,1.7vw,21px)/1.35 Inter;transition:color .25s}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary:hover{color:var(--red)}
+.qa summary .pm{flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:var(--soft);position:relative;transition:background .3s,transform .45s var(--ease)}
+.qa summary .pm:before,.qa summary .pm:after{content:"";position:absolute;left:12px;right:12px;top:19px;height:2px;background:currentColor;border-radius:2px}
+.qa summary .pm:after{transform:rotate(90deg);transition:transform .45s var(--ease)}
+.qa details[open] summary .pm{background:var(--red);color:#fff;transform:rotate(180deg)}
+.qa details[open] summary .pm:after{transform:rotate(0)}
+.qa details p{padding:0 0 24px;font-size:clamp(17px,1.4vw,19px);color:#33333d;max-width:60ch}
+.qa details[open] p{animation:pin .55s var(--ease)}
+.qa .q-n{color:var(--red);font:800 15px Syne,sans-serif;margin-right:4px}
+
+/* Contact */
+.cta{position:relative;overflow:hidden;background:var(--red);color:#fff;border-radius:30px;padding:clamp(48px,7vw,90px) clamp(24px,6vw,80px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center}
+.cta>*{position:relative;z-index:1}
+.cta h2{margin-bottom:12px}.cta p{font-size:19px}
+.cta .tags{margin-top:20px;font-weight:700}.cta .cred{font-size:15px;opacity:.9;margin-top:10px}
+.cta .ls{display:grid;gap:10px}
+.cta .btn{background:#fff;color:var(--ink);justify-content:space-between;word-break:break-word}.cta .btn:hover{background:var(--ink);color:#fff}
+.cta .draw{z-index:0;right:-4%;top:-10%;width:70%;height:120%}
+.cta .draw path{stroke:rgba(255,255,255,.55);stroke-width:2.5}.cta .draw circle{fill:#fff}
+.wrap-cta{padding-bottom:clamp(60px,8vw,100px)}
+
+.arac-foot{background:#3f3f3f;color:#ddd;padding:34px var(--pad) 80px;font:15px/1.6 Poppins,system-ui,sans-serif;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
+.arac-foot a{color:#fff;display:inline-block;padding:10px 0}
+
+/* Lightbox */
+.lb{position:fixed;inset:0;background:rgba(14,12,16,.94);display:none;align-items:center;justify-content:center;z-index:100;padding:60px 4vw}
+.lb.on{display:flex;animation:fade .3s}.lb img{max-height:80vh;width:auto;max-width:100%;border-radius:10px;animation:zin .5s var(--ease)}
+.lb p{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#eee;font:15px Inter}
+.lb button{position:absolute;top:14px;right:14px;width:48px;height:48px;border-radius:50%;border:0;background:#fff;font-size:22px;cursor:pointer}
+@keyframes fade{from{opacity:0}}
+
+/* Curseur (souris uniquement) */
+.cur-dot{position:fixed;left:0;top:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--red);z-index:98;pointer-events:none;
+ transition:width .25s,height .25s,margin .25s,background .25s;mix-blend-mode:multiply;display:none}
+.cur-dot.big{width:46px;height:46px;margin:-23px 0 0 -23px;background:rgba(224,43,32,.25)}
+@media(hover:hover) and (pointer:fine){.cur-dot{display:block}}
+
+/* ===== États animés (seulement si JS + mouvement accepté) ===== */
+@media(prefers-reduced-motion:no-preference){
+ .js .rv{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+ .js .rv.in{opacity:1;transform:none}
+ .js [data-split] .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
+ .js [data-split] .w>span{display:inline-block;transform:translateY(108%);transition:transform .9s var(--ease);transition-delay:calc(var(--i) * 70ms)}
+ .js [data-split].in .w>span{transform:none}
+ .js .mask{clip-path:inset(100% 0 0 0 round 24px);transition:clip-path 1.2s var(--ease)}
+ .js .mask img{transform:scale(1.18);transition:transform 1.6s var(--ease)}
+ .js .mask.in{clip-path:inset(0 0 0 0 round 24px)}.js .mask.in img{transform:none}
+ .js h1 .ch{transform:translateY(-120%) rotate(-12deg);opacity:0;animation:drop .9s cubic-bezier(.3,1.5,.5,1) forwards;animation-delay:calc(.15s + var(--i) * 65ms)}
+ @keyframes drop{to{transform:none;opacity:1}}
+ .js h1 .dot{animation:hop 2.6s cubic-bezier(.3,0,.4,1) 1.2s infinite}
+ @keyframes hop{0%,62%,100%{transform:translateY(0) scale(1,1)}68%{transform:translateY(0) scale(1.25,.75)}80%{transform:translateY(-1.1em) scale(.92,1.08)}92%{transform:translateY(0) scale(1.15,.85)}}
+ .prog b{animation:bob 1.1s ease-in-out infinite}
+ @keyframes bob{50%{top:-9px}}
+ .js .ey:before{transform:scaleX(0);transition:transform .8s var(--ease) .2s}.js .in .ey:before,.js .ey.in:before{transform:none}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .juggle .ball{offset-distance:20%}.juggle .ball:nth-of-type(2){offset-distance:52%}.juggle .ball:nth-of-type(3){offset-distance:84%}}
+
+/* ===== Mobile ===== */
+@media(max-width:900px){
+ .hero-grid,.intro,.itw,.cta{grid-template-columns:minmax(0,1fr)}
+ .hero{padding-top:28px}
+ h1{font-size:clamp(52px,17vw,96px)}
+ .tag{margin:14px 0 22px}
+ .row .btn{flex:1 1 auto}
+ .juggle{transform:scale(.48);top:20px}
+ h2{font-size:clamp(30px,9vw,76px)}
+ .lbl{padding-right:104px}
+ .facts{grid-template-columns:1fr 1fr;gap:10px}
+ .fact{padding:20px 16px}.fact b{font-size:42px}
+ .facts .draw{top:-56px;height:90px}
+ .intro .mask{order:-1;max-width:520px}
+ .panel{grid-template-columns:minmax(0,1fr)}
+ .panel .ph{aspect-ratio:4/5}
+ .sh-head{display:block}.tabs{margin-top:20px;display:flex;width:max-content}
+ .ag a{grid-template-columns:auto minmax(0,1fr);gap:16px;padding:18px}
+ .ag .go{display:none}.ag .d{font-size:40px;min-width:70px;padding-right:16px}
+ .itw .mask{order:-1;max-width:none;aspect-ratio:4/3}
+ .cta{border-radius:24px}.cta .draw{width:130%;right:-50%;top:-20%;height:70%}
+}
+@media(max-width:380px){.fact b{font-size:36px}.tabs button{padding:10px 15px;font-size:16px}}
+</style></head><body>
+<div class="prog" aria-hidden="true"><i></i><b></b></div>
+<div class="demo-bar"><a href="../">← Les propositions</a><span>C · Mouvement v2</span></div>
+<div class="cur-dot" aria-hidden="true"></div>
+<header class="arac"><a href="https://arac.re/"><img src="../img/arac-mini.png" alt="ARAC, réseau des arts du cirque de La Réunion" width="147" height="70"></a><nav aria-label="ARAC"><a href="#">Présentation</a><a class="on" href="#">Les compagnies</a><a href="#">Les écoles</a><a href="#">Contact</a></nav></header>
+
+<main>
+<!-- HERO -->
+<section class="hero" aria-labelledby="t-cie">
+ <div class="juggle" aria-hidden="true"><svg viewBox="0 0 200 120"><path d="M100,60 C125,10 185,5 185,60 C185,112 125,110 100,60 C75,10 15,5 15,60 C15,112 75,110 100,60Z" fill="none" stroke="#e7e2dd" stroke-width="1.5" stroke-dasharray="3 5"/></svg><i class="ball"></i><i class="ball"></i><i class="ball"></i></div>
+ <div class="wrap hero-grid">
+  <div class="hero-txt">
+   <p class="lbl">Compagnie de cirque · Saint-Paul, La Réunion</p>
+   <h1 id="t-cie" aria-label="Ziguilé">Ziguilé<span class="dot"></span></h1>
+   <p class="tag">Un retour vers les sources créatrices de l'enfance.</p>
+   <div class="row"><a class="btn" href="#spectacles">Les spectacles <span class="ar">↓</span></a><a class="btn ol" href="mailto:compagnie.ziguile@gmail.com">Programmer la compagnie</a></div>
+  </div>
+  <div class="hero-media">
+   <div class="rail" id="hr" tabindex="0" aria-label="Photos de la compagnie, faire glisser pour parcourir">
+    <figure class="card"><img src="../img/hero.jpg" width="1500" height="844" style="object-position:53% 30%" alt="Tinn tout' ! : trois acrobates, l'une portée en l'air au bout d'une corde"><figcaption>Tinn tout' !</figcaption></figure>
+    <figure class="card"><img src="../img/vav-envol.jpg" width="1200" height="1800" style="object-position:50% 45%" alt="Vavang' : une acrobate lancée dans le ciel par son partenaire"><figcaption>Vavang'</figcaption></figure>
+    <figure class="card"><img src="../img/zig-equilibre.jpg" width="1500" height="844" style="object-position:50% 35%" loading="lazy" alt="Ziguilé : équilibre sur les mains au-dessus du porteur"><figcaption>Ziguilé</figcaption></figure>
+    <figure class="card"><img src="../img/tinn-colline.jpg" width="1200" height="1800" style="object-position:50% 40%" loading="lazy" alt="Tinn tout' ! : porté acrobatique sur un canapé en pleine nature"><figcaption>Tinn tout' !</figcaption></figure>
+    <figure class="card"><img src="../img/zig-poirier.jpg" width="1500" height="825" style="object-position:52% 40%" loading="lazy" alt="Ziguilé : salto et sourire complice sur un sol de papier"><figcaption>Ziguilé</figcaption></figure>
+   </div>
+   <div class="ctl nojs-hide"><div class="dots" id="hd"></div><button class="arrow" data-dir="-1" aria-label="Photo précédente">←</button><button class="arrow" data-dir="1" aria-label="Photo suivante">→</button></div>
+  </div>
+ </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="tr"><span>Portés acrobatiques</span><span>Main à main</span><span>Équilibres</span><span>Aérien</span><span>Danse</span><span>Parkour</span><span>Portés acrobatiques</span><span>Main à main</span><span>Équilibres</span><span>Aérien</span><span>Danse</span><span>Parkour</span></div></div>
+
+<!-- CHIFFRES -->
+<section style="padding-bottom:0;padding-top:clamp(90px,10vw,140px)">
+ <div class="wrap"><div class="facts">
+  <svg class="draw" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"><path class="ghost" pathLength="1" d="M10,110 C140,-20 260,-20 380,100 C480,0 600,0 700,100 C790,10 900,10 990,95"/><path pathLength="1" d="M10,110 C140,-20 260,-20 380,100 C480,0 600,0 700,100 C790,10 900,10 990,95"/><circle r="7" cx="10" cy="110"/></svg>
+  <div class="fact rv"><b><span data-n="130">130</span>+</b><small>représentations de Ziguilé</small></div>
+  <div class="fact rv"><b>2017</b><small>naissance de la compagnie</small></div>
+  <div class="fact rv"><b><span data-n="3">3</span></b><small>spectacles au répertoire</small></div>
+  <div class="fact rv"><b><span data-n="3">3</span></b><small>territoires : Réunion, Hexagone, Suisse</small></div>
+ </div></div>
+</section>
+
+<!-- PRÉSENTATION -->
+<section>
+ <div class="wrap intro">
+  <div>
+   <p class="ey rv">La compagnie</p>
+   <h2 data-split>Deux corps, un terrain de jeu.</h2>
+   <p class="lead rv">Créée en 2017, la compagnie Ziguilé est née de la rencontre d'Émilie Smith, danseuse, et d'Éric Maufrois, acrobate de rue. Autodidactes, ils se forment au main à main et aux équilibres auprès des artistes de l'île et de passage. En créole, « ziguilé » évoque l'univers de l'enfance : le jeu, l'adresse, le partage et le dialogue entre les générations.</p>
+   <p class="sub rv">Disciplines</p>
+   <div class="chips rv"><span>Portés acrobatiques</span><span>Main à main</span><span>Équilibres</span><span>Aérien</span><span>Danse</span><span>Parkour</span></div>
+   <p class="sub rv" style="margin-top:6px">Activités</p>
+   <div class="chips ol rv"><span>Spectacles</span><span>Ateliers</span><span>Masterclass</span><span>Résidences de territoire</span></div>
+  </div>
+  <figure class="mask"><img loading="lazy" src="../img/zig-porte.jpg" width="1500" height="825" style="object-position:72% 50%" alt="Duo de la compagnie Ziguilé en porté acrobatique, la voltigeuse renversée en arrière"></figure>
+ </div>
+</section>
+
+<!-- SPECTACLES -->
+<section id="spectacles" style="padding-top:0">
+ <div class="wrap">
+  <div class="sh-head"><div><p class="ey rv">Répertoire</p><h2 data-split>Les spectacles</h2></div>
+   <div class="tabs nojs-hide" role="tablist" aria-label="Spectacles"><span class="ind" aria-hidden="true"></span>
+    <button role="tab" id="t-tinn" aria-controls="p-tinn" aria-selected="true">Tinn tout' !</button><button role="tab" id="t-zig" aria-controls="p-zig" aria-selected="false" tabindex="-1">Ziguilé</button><button role="tab" id="t-vav" aria-controls="p-vav" aria-selected="false" tabindex="-1">Vavang'</button></div></div>
+  <div class="panels" id="panels">
+   <article class="panel" id="p-tinn" role="tabpanel" aria-labelledby="t-tinn">
+    <div class="ph"><img loading="lazy" src="../img/tinn-colline.jpg" width="1200" height="1800" style="object-position:50% 45%" alt="Tinn tout' ! : un porteur assis sur un canapé soulève une acrobate, dans l'herbe sous un grand arbre"></div>
+    <div class="bd"><span class="yr">Création 2025</span><h3>Tinn tout' !</h3><p class="hk">« Éteignez tout ! » en créole réunionnais.</p>
+     <p>L'équipe s'est retirée trois jours dans une maison de la Plaine des Cafres, téléphones et écrans éteints, jeux rangés. De cette expérience est né un spectacle joyeux et inventif : trois acrobates explorent un agrès inédit qui les relie en contrepoids. Parce que chacun tient grâce aux autres.</p>
+     <div class="meta"><span>Dès 4 ans</span><span>55 min</span><span>Portés · aérien · musique</span></div></div>
+   </article>
+   <article class="panel" id="p-zig" role="tabpanel" aria-labelledby="t-zig">
+    <div class="ph"><img loading="lazy" src="../img/zig-papier.jpg" width="1500" height="825" style="object-position:50% 45%" alt="Ziguilé : équilibre sur la tête au milieu d'un ring de boulettes de papier"></div>
+    <div class="bd"><span class="yr">Création 2019</span><h3>Ziguilé</h3><p class="hk">Un ring de boulettes de papier.</p>
+     <p>Au cœur d'un ring de boulettes de papier, deux enfants se chamaillent. Ils se portent, voltigent et enchaînent les acrobaties avec une énergie joyeuse. Entre danse et cirque, ce duo réveille l'âme d'enfant des adultes.</p>
+     <div class="meta"><span>Dès 4 ans</span><span>55 min</span><span>Duo</span><span>130+ dates</span></div></div>
+   </article>
+   <article class="panel" id="p-vav" role="tabpanel" aria-labelledby="t-vav">
+    <div class="ph"><img loading="lazy" src="../img/vav-pyramide.jpg" width="1200" height="1800" style="object-position:50% 40%" alt="Vavang' : pyramide humaine à trois étages en plein air, devant le public"></div>
+    <div class="bd"><span class="yr">En création</span><h3>Vavang'</h3><p class="hk">Le nouveau projet de la compagnie.</p>
+     <p>Entre acrobaties, danse et cirque, Vavang' est en cours de création avec le collectif Bat Kare.</p>
+     <div class="meta"><span>En création</span><span>Acrobaties · danse</span></div></div>
+   </article>
+  </div>
+  <p class="count nojs-hide" aria-hidden="true"><span id="cn">01 / 03</span><i id="ck"></i><span>glisser pour changer</span></p>
+ </div>
+</section>
+
+<!-- GALERIE -->
+<section class="gal" style="padding-top:0">
+ <div class="wrap">
+  <p class="ey rv">Galerie</p><h2 data-split>En mouvement</h2>
+  <div class="rail" id="gr" tabindex="0" aria-label="Galerie photo, faire glisser pour parcourir">
+   <a class="card" href="../img/hero.jpg" data-lb="Tinn tout' · © S. Mardémoutou"><img loading="lazy" src="../img/hero.jpg" width="1500" height="844" style="object-position:53% 30%" alt="Tinn tout' ! sur scène, voltigeuse suspendue · © S. Mardémoutou"><figcaption>© S. Mardémoutou</figcaption></a>
+   <a class="card" href="../img/zig-poirier.jpg" data-lb="Ziguilé · © O. Padre"><img loading="lazy" src="../img/zig-poirier.jpg" width="1500" height="825" style="object-position:52% 40%" alt="Ziguilé, salto arrière · © O. Padre"><figcaption>© O. Padre</figcaption></a>
+   <a class="card" href="../img/vav-envol.jpg" data-lb="Vavang'"><img loading="lazy" src="../img/vav-envol.jpg" width="1200" height="1800" style="object-position:50% 45%" alt="Vavang', envol d'une acrobate en noir et blanc"><figcaption>Vavang'</figcaption></a>
+   <a class="card" href="../img/zig-equilibre.jpg" data-lb="Ziguilé · © S. Gaillochon"><img loading="lazy" src="../img/zig-equilibre.jpg" width="1500" height="844" style="object-position:50% 35%" alt="Ziguilé, équilibre sur les mains · © S. Gaillochon"><figcaption>© S. Gaillochon</figcaption></a>
+   <a class="card" href="../img/tinn-canape2.jpg" data-lb="Tinn tout'"><img loading="lazy" src="../img/tinn-canape2.jpg" width="1500" height="1000" style="object-position:50% 45%" alt="Tinn tout' !, acrobaties autour d'un canapé dans l'herbe"><figcaption>Tinn tout' !</figcaption></a>
+   <a class="card" href="../img/zig-saut.jpg" data-lb="Ziguilé"><img loading="lazy" src="../img/zig-saut.jpg" width="1500" height="1000" style="object-position:52% 40%" alt="Ziguilé, saut sur scène"><figcaption>Ziguilé</figcaption></a>
+  </div>
+  <div class="gal-foot nojs-hide"><div class="bar"><i id="gb"></i></div><button class="arrow" data-g="-1" aria-label="Photos précédentes">←</button><button class="arrow" data-g="1" aria-label="Photos suivantes">→</button></div>
+ </div>
+</section>
+
+<!-- AGENDA -->
+<section style="padding-top:0">
+ <div class="wrap">
+  <p class="ey rv">Agenda</p><h2 data-split>Prochaines dates</h2>
+  <div class="ag">
+   <a class="rv" href="mailto:compagnie.ziguile@gmail.com"><div class="d">17<small>avr. 2027</small></div><div><h3>Tinn tout' !</h3><div class="pl">samedi · 11h · Le Plongeoir, Pôle national Cirque · Le Mans</div></div><span class="go" aria-hidden="true">→</span></a>
+   <a class="rv" href="mailto:compagnie.ziguile@gmail.com"><div class="d">19<small>avr. 2027</small></div><div><h3>Ziguilé</h3><div class="pl">lundi · 14h30 · Le Plongeoir, Pôle national Cirque · Le Mans</div></div><span class="go" aria-hidden="true">→</span></a>
+   <a class="rv" href="mailto:compagnie.ziguile@gmail.com"><div class="d">20<small>avr. 2027</small></div><div><h3>Ziguilé</h3><div class="pl">mardi · 10h30 · Le Plongeoir, Pôle national Cirque · Le Mans</div></div><span class="go" aria-hidden="true">→</span></a>
+  </div>
+ </div>
+</section>
+
+<!-- INTERVIEW -->
+<section style="padding-top:0">
+ <div class="wrap">
+  <p class="ey rv">L'interview cirque de l'ARAC</p><h2 data-split>Émilie Smith et Éric Maufrois racontent.</h2>
+  <div class="itw">
+   <figure class="mask"><img loading="lazy" src="../img/zig-equilibre.jpg" width="1500" height="844" style="object-position:50% 35%" alt="Émilie Smith et Éric Maufrois en équilibre main à main"></figure>
+   <div class="qa">
+    <details class="rv" open><summary><span><span class="q-n">01</span> Comment est née votre passion du cirque ?</span><span class="pm" aria-hidden="true"></span></summary><p>En mars 2016, Émilie et Éric, tous deux réunionnais, travaillent pour la première fois en duo. Elle danseuse, lui acrobate de rue : ils se tournent naturellement vers le porté acrobatique. C'est avec Cirquons Flex qu'ils découvrent le cirque contemporain et acquièrent leurs bases en main à main.</p></details>
+    <details class="rv"><summary><span><span class="q-n">02</span> Quelle est la spécificité de votre pratique ?</span><span class="pm" aria-hidden="true"></span></summary><p>Des artistes autodidactes, formés auprès des circassiens réunionnais et des artistes de passage. Et l'envie d'aller à la rencontre de nouveaux publics : résidences dans les quartiers et dans les hauts de l'île.</p></details>
+    <details class="rv"><summary><span><span class="q-n">03</span> Comment élaborez-vous vos spectacles ?</span><span class="pm" aria-hidden="true"></span></summary><p>Pour « Ziguilé », créé en décembre 2019, ils font appel à Vincent Maillot (Cirquons Flex) pour la mise en scène. Le cirque contemporain leur permet d'allier prouesses techniques et propos artistique.</p></details>
+    <details class="rv"><summary><span><span class="q-n">04</span> Qu'est-ce qui vous plaît dans l'ARAC ?</span><span class="pm" aria-hidden="true"></span></summary><p>« Novices dans le monde du cirque, l'ARAC a été pour nous d'un grand soutien : une source d'informations et de rencontres, conviviale et pleine de bienveillance. »</p></details>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<div class="wrap wrap-cta">
+ <div class="cta">
+  <svg class="draw" viewBox="0 0 600 400" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M20,380 C80,60 260,20 320,200 C380,380 560,340 580,40"/><circle r="9" cx="20" cy="380"/></svg>
+  <div><h2 data-split>On joue ensemble ?</h2><p>Programmer, rencontrer, écrire à la compagnie.</p>
+   <p class="tags">#cirquecontemporain #portéacrobatique #SaintPaul</p><p class="cred">Photos © Siegfried Mardémoutou, Olivier Padre, Stéphane Gaillochon, Cédric Demaison</p></div>
+  <div class="ls"><a class="btn" href="mailto:compagnie.ziguile@gmail.com">compagnie.ziguile@gmail.com <span class="ar">→</span></a><a class="btn" href="https://www.facebook.com/ziguile/" target="_blank" rel="noopener">Facebook <span class="ar">→</span></a><a class="btn" href="https://www.instagram.com/cie.ziguile/" target="_blank" rel="noopener">Instagram <span class="ar">→</span></a></div>
+ </div>
+</div>
+</main>
+
+<footer class="arac-foot"><div><b>ARAC</b> · Association Réunionnaise des Arts du Cirque<br>8 rue Babef, 97422 La Saline</div><div><a href="#">Toutes les compagnies</a> · <a href="#">Contacter le bureau</a></div></footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo agrandie"><button type="button" aria-label="Fermer la photo">✕</button><img alt=""><p></p></div>
+
 <script>
-(()=>{const im=[...document.querySelectorAll('#sld img')],dt=[...document.querySelectorAll('.dots button')];let k=0;
-const go=n=>{im[k].classList.remove('on');dt[k].classList.remove('on');k=n;im[k].classList.add('on');dt[k].classList.add('on')};
-dt.forEach((d,i)=>d.onclick=()=>go(i));setInterval(()=>go((k+1)%im.length),5000);
-document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button,.panel').forEach(x=>x.classList.remove('on'));
-b.classList.add('on');document.getElementById('p-'+b.dataset.t).classList.add('on')});
-document.querySelectorAll('.qs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.qs button,.ans p').forEach(x=>x.classList.remove('on'));
-b.classList.add('on');document.getElementById('a'+b.dataset.q).classList.add('on')});})();
-</script><footer class="arac-foot"><div><b>ARAC</b> · Association Réunionnaise des Arts du Cirque<br>8 rue Babef, 97422 La Saline</div><div><a href="#">Toutes les compagnies</a> · <a href="#">Contacter le bureau</a></div></footer><div class="lb" id="lb"><img alt=""><p></p></div>
-<script>
-document.documentElement.classList.add('js');
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-setTimeout(()=>document.querySelectorAll('.rv').forEach(el=>el.classList.add('in')),4000);
-const lb=document.getElementById('lb');
-document.querySelectorAll('[data-lb]').forEach(a=>a.addEventListener('click',ev=>{ev.preventDefault();
- lb.querySelector('img').src=a.getAttribute('href');lb.querySelector('p').textContent=a.dataset.lb;lb.classList.add('on')}));
-lb.addEventListener('click',()=>lb.classList.remove('on'));
-document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
-const cnt=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,end=+el.dataset.n;let t0=null;
- const step=t=>{t0??=t;const p=Math.min((t-t0)/1400,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)};
- if(end>100&&end<1000||end<100)requestAnimationFrame(step);cnt.unobserve(el)}),{threshold:.5});
-document.querySelectorAll('[data-n]').forEach(el=>cnt.observe(el));
-</script></body></html>
+(()=>{
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const root=document.documentElement;
+
+/* Titres mot par mot */
+$$('[data-split]').forEach(el=>{const ws=el.textContent.trim().split(/\s+/);el.setAttribute('aria-label',el.textContent.trim());
+ el.innerHTML=ws.map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${w}</span></span>`).join(' ')});
+/* h1 lettre par lettre */
+const h1=$('h1');const dot=$('.dot',h1);h1.textContent='';
+[...'Ziguilé'].forEach((c,i)=>{const s=document.createElement('span');s.className='ch';s.style.setProperty('--i',i);s.textContent=c;s.setAttribute('aria-hidden','true');h1.appendChild(s)});h1.appendChild(dot);
+
+/* Révélations au scroll */
+const rvEls=$$('.rv,[data-split],.mask');
+if('IntersectionObserver' in window&&!calm){
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+ rvEls.forEach(el=>io.observe(el));
+}else rvEls.forEach(el=>el.classList.add('in'));
+
+/* Compteurs */
+const cnt=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cnt.unobserve(e.target);if(calm)return;const el=e.target,end=+el.dataset.n;let t0;
+ const st=t=>{t0??=t;const p=Math.min((t-t0)/1500,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(st)};requestAnimationFrame(st)}),{threshold:.6});
+$$('[data-n]').forEach(el=>cnt.observe(el));
+
+/* Trajectoires SVG qui se dessinent au scroll + balle au bout */
+const draws=$$('svg.draw').map(svg=>{const p=svg.querySelector('path:not(.ghost)'),c=svg.querySelector('circle');return{svg,p,c,len:p.getTotalLength()}});
+/* Marquee */
+const tr=$('.marq .tr');let mx=0,vel=0,lastY=scrollY;
+/* Progression */
+const prog=$('.prog');
+let ticking=false;
+function frame(){ticking=false;const vh=innerHeight,max=root.scrollHeight-vh;
+ prog.style.setProperty('--p',max>0?Math.min(scrollY/max,1):0);
+ draws.forEach(d=>{const r=d.svg.getBoundingClientRect();let k=calm?1:Math.min(Math.max((vh*.92-r.top)/(vh*.55+r.height*.6),0),1);
+  d.svg.style.setProperty('--d',k.toFixed(3));if(d.c){const pt=d.p.getPointAtLength(k*d.len);d.c.setAttribute('cx',pt.x);d.c.setAttribute('cy',pt.y)}});}
+addEventListener('scroll',()=>{vel+=Math.abs(scrollY-lastY)*.04;lastY=scrollY;if(!ticking){ticking=true;requestAnimationFrame(frame)}},{passive:true});
+addEventListener('resize',frame);frame();
+if(!calm){const half=()=>tr.scrollWidth/2;(function loop(){vel*=.92;mx-=.6+Math.min(vel,14);if(-mx>half())mx+=half();tr.style.transform=`translate3d(${mx}px,0,0)`;requestAnimationFrame(loop)})();}
+
+/* Rails photo : points, flèches, carte courante, défilement auto doux */
+function rail(el,{dots,bar,arrows,auto}){
+ const cards=$$('.card',el);let cur=0,hold=0;
+ const step=()=>cards[1]?cards[1].offsetLeft-cards[0].offsetLeft:el.clientWidth;
+ const go=i=>{i=(i+cards.length)%cards.length;el.scrollTo({left:cards[i].offsetLeft-cards[0].offsetLeft,behavior:calm?'auto':'smooth'})};
+ if(dots){cards.forEach((c,i)=>{const b=document.createElement('button');b.setAttribute('aria-label','Photo '+(i+1));b.onclick=()=>{hold=Date.now();go(i)};dots.appendChild(b)})}
+ const upd=()=>{const s=el.scrollLeft,w=step();cur=Math.round(s/w);const maxS=el.scrollWidth-el.clientWidth;if(maxS>0&&s>=maxS-4)cur=cards.length-1;
+  cards.forEach((c,i)=>{c.classList.toggle('cur',i===cur);
+   const r=c.getBoundingClientRect(),cx=(r.left+r.width/2)/innerWidth-.5;c.style.setProperty('--px',Math.max(-1,Math.min(1,cx)).toFixed(3))});
+  if(dots)$$('button',dots).forEach((b,i)=>b.classList.toggle('on',i===cur));
+  if(bar)bar.style.setProperty('--g',(maxS>0?(.15+.85*s/maxS):1).toFixed(3))};
+ el.addEventListener('scroll',()=>requestAnimationFrame(upd),{passive:true});addEventListener('resize',upd);upd();
+ arrows.forEach(a=>a.onclick=()=>{hold=Date.now();const d=+(a.dataset.dir||a.dataset.g);go(cur+d)});
+ ['pointerdown','touchstart','wheel'].forEach(t=>el.addEventListener(t,()=>hold=Date.now(),{passive:true}));
+ if(auto&&!calm){let vis=true;new IntersectionObserver(es=>vis=es[0].isIntersecting).observe(el);
+  setInterval(()=>{if(vis&&Date.now()-hold>7000&&!document.hidden)go(cur+1)},4200)}
+}
+rail($('#hr'),{dots:$('#hd'),arrows:$$('.hero .arrow'),auto:true});
+rail($('#gr'),{bar:$('#gb'),arrows:$$('.gal .arrow'),auto:false});
+
+/* Onglets spectacles : pastille qui glisse + balayage tactile */
+const tabs=$$('[role=tab]'),ind=$('.tabs .ind'),panels=$$('.panel'),cn=$('#cn'),ck=$('#ck');let ti=0;
+const place=()=>{const b=tabs[ti];ind.style.width=b.offsetWidth+'px';ind.style.transform=`translateX(${b.offsetLeft}px)`};
+function sel(i,focus){ti=(i+tabs.length)%tabs.length;tabs.forEach((b,j)=>{const on=j===ti;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;panels[j].hidden=!on;panels[j].classList.toggle('go',on)});
+ place();cn.textContent=`0${ti+1} / 0${tabs.length}`;ck.style.setProperty('--k',(ti+1)/tabs.length);if(focus)tabs[ti].focus()}
+tabs.forEach((b,i)=>{b.onclick=()=>sel(i);b.onkeydown=e=>{if(e.key==='ArrowRight')sel(ti+1,1);if(e.key==='ArrowLeft')sel(ti-1,1)}});
+sel(0);addEventListener('resize',place);document.fonts&&document.fonts.ready.then(place);
+let sx=null,sy=0;const pz=$('#panels');
+pz.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
+pz.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.4)sel(ti+(dx<0?1:-1));sx=null},{passive:true});
+
+/* Accordéon : une question ouverte à la fois */
+$$('.qa details').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)$$('.qa details').forEach(o=>{if(o!==d)o.open=false})}));
+
+/* Visionneuse */
+const lb=$('#lb'),li=$('img',lb);let back;
+$$('[data-lb]').forEach(a=>a.addEventListener('click',ev=>{ev.preventDefault();back=a;li.src=a.getAttribute('href');li.alt=a.querySelector('img').alt;$('p',lb).textContent=a.dataset.lb;lb.classList.add('on');$('button',lb).focus()}));
+const close=()=>{lb.classList.remove('on');back&&back.focus()};
+lb.addEventListener('click',e=>{if(e.target!==li)close()});addEventListener('keydown',e=>{if(e.key==='Escape'&&lb.classList.contains('on'))close()});
+
+/* Curseur balle (souris) */
+const cd=$('.cur-dot');if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!calm){let x=-50,y=-50,tx=-50,ty=-50;
+ addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});
+ document.addEventListener('mouseover',e=>cd.classList.toggle('big',!!e.target.closest('a,button,summary,.card')));
+ (function l(){x+=(tx-x)*.2;y+=(ty-y)*.2;cd.style.transform=`translate3d(${x}px,${y}px,0)`;requestAnimationFrame(l)})();}
+})();
+</script>
+</body></html>
