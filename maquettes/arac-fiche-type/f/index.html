@@ -16,7 +16,7 @@
  --creme:#fbf5ec;--sable:#f5e8d4;--blanc:#fffcf7;--texte:#4a3b32;--mute:#7a685c;--line:rgba(36,23,15,.14);
  --ease:cubic-bezier(.2,.8,.2,1);--boing:cubic-bezier(.34,1.56,.64,1);--pad:clamp(20px,6vw,72px);--hh:56px;--nh:52px;interpolate-size:allow-keywords}
 *{box-sizing:border-box;margin:0;padding:0}img{display:block;max-width:100%}a{color:inherit}button{font:inherit;color:inherit}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--nh) + 8px)}html,body{overflow-x:clip}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:var(--nh)}html,body{overflow-x:clip}
 body{background:var(--creme);color:var(--texte);font:400 17px/1.7 Poppins,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 :focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
 ::selection{background:var(--red);color:#fff}
@@ -51,7 +51,7 @@ body{background:var(--creme);color:var(--texte);font:400 17px/1.7 Poppins,system
 .toc li{flex:0 0 auto}
 .toc a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:30px;text-decoration:none;white-space:nowrap;
  font:600 14px/1 Poppins,system-ui;color:var(--ink3);transition:background .25s,color .25s}
-.toc a:hover{color:var(--red-f);background:#fde7d2}
+@media(hover:hover){.toc a:hover{color:var(--red-f);background:#fde7d2}}
 .toc a[aria-current="true"]{background:var(--red);color:#fff}
 .toc .in:after{content:"";position:absolute;right:0;top:0;bottom:0;width:28px;pointer-events:none;background:linear-gradient(90deg,rgba(255,252,247,0),rgba(255,252,247,.97))}
 
@@ -239,7 +239,7 @@ details[open] .ans{animation:ans .6s var(--ease)}
 .cta h2{font-size:clamp(52px,14vw,140px);margin-bottom:18px;line-height:.95;color:#fff}
 .cta h2 .wd{display:inline-block;white-space:nowrap}
 .cta h2 .l{display:inline-block;transition:transform .4s var(--boing)}
-.cta h2:hover .l{animation:hop .7s var(--boing) calc(var(--i) * 45ms)}
+@media(hover:hover){.cta h2:hover .l{animation:hop .7s var(--boing) calc(var(--i) * 45ms)}}
 .cta p{font-size:19px;margin:0 auto 30px;max-width:40ch}
 .cta .btn{background:var(--ink)}.cta .btn:hover{background:#000}
 .cta .btn.sun{background:var(--soleil);color:var(--ink)}
