@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Ju &amp; You Wedding Planner — mariages à La Réunion</title>
-<meta name="description" content="Juliette, organisatrice et coordinatrice de mariages à La Réunion. Un mariage qui te ressemble.">
+<meta name="description" content="Juliette, organisatrice et coordinatrice de mariages à La Réunion. Un mariage qui vous ressemble.">
 <meta property="og:title" content="Ju &amp; You Wedding Planner — un mariage qui vous ressemble">
 <meta property="og:description" content="Une maquette offerte par Jonathan, imaginée avec plaisir pour Juliette.">
 <meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/ju-you-wedding-planner-v2/img/hero-dsc3743.jpg">
@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
 <style>
-:root{--terra:#b5482f;--peche:#fde8dd;--taupe:#d4c4c0;--taupe-d:#b9a39e;--creme:#f5f1ef;--ink:#1a1a1a;--soft:#6f625e;--line:#1a1a1a2e;--pad:clamp(20px,6vw,90px)}
+:root{--terra:#b87560;--peche:#fde8dd;--taupe:#d4c4c0;--taupe-d:#b9a39e;--creme:#f5f1ef;--ink:#1a1a1a;--soft:#6f625e;--line:#1a1a1a2e;--pad:clamp(20px,6vw,90px)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--creme);color:var(--ink);font-family:"Jost","Futura","Century Gothic",sans-serif;font-weight:300;line-height:1.75;overflow-x:hidden}
@@ -23,8 +23,8 @@ h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;line-hei
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 .cap{text-transform:uppercase;letter-spacing:.3em;font-size:.7rem;font-weight:400}
-.ribbon{background:var(--ink);color:var(--creme);font-size:.8rem;padding:9px var(--pad);text-align:center;letter-spacing:.03em}
-.ribbon b{font-weight:400;color:var(--taupe)}
+.ribbon{background:var(--terra);color:var(--ink);font-size:.8rem;padding:9px var(--pad);text-align:center;letter-spacing:.03em}
+.ribbon b{font-weight:500;color:var(--ink)}
 nav{display:flex;justify-content:space-between;align-items:center;padding:16px var(--pad);position:sticky;top:0;background:#f5f1efee;backdrop-filter:blur(8px);z-index:10;border-bottom:1px solid var(--line)}
 nav .logo{display:flex;align-items:center;gap:12px;font-family:"Cormorant Garamond",serif;font-size:1.35rem;font-style:italic}
 nav .logo img{width:42px;height:42px;border-radius:50%;object-fit:cover}
@@ -59,7 +59,7 @@ nav ul a:hover::after{width:100%}
 .hero .txt>*:nth-child(2){animation-delay:.12s}.hero .txt>*:nth-child(3){animation-delay:.24s}.hero .txt>*:nth-child(4){animation-delay:.36s}
 
 /* bandeau */
-.band{border-block:1px solid var(--line);padding:18px 0;overflow:hidden;white-space:nowrap;background:var(--taupe)}
+.band{border-block:1px solid var(--line);padding:18px 0;overflow:hidden;white-space:nowrap;background:var(--terra);color:var(--ink)}
 .band div{display:inline-block;animation:run 38s linear infinite}
 .band span{margin:0 26px}
 @keyframes run{to{transform:translateX(-50%)}}
@@ -72,31 +72,33 @@ h2 em{font-style:italic}
 /* histoire */
 .intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:7vw;align-items:center}
 .duo{position:relative;height:min(620px,92vw)}
-.duo .a{position:absolute;left:0;top:0;width:68%;aspect-ratio:3/4;object-fit:cover;border-radius:200px 200px 0 0}
-.duo .a{object-position:50% 30%}
-.duo .b{position:absolute;right:0;bottom:0;width:50%;aspect-ratio:1;object-fit:cover;object-position:55% 30%;box-shadow:0 0 0 10px var(--creme)}
+.duo .a{position:absolute;left:0;top:0;width:68%;aspect-ratio:3/4;border-radius:200px 200px 0 0;overflow:hidden}
+.duo .b{position:absolute;right:0;bottom:0;width:50%;aspect-ratio:1;box-shadow:0 0 0 10px var(--creme)}
+.duo img{width:100%;height:100%;object-fit:cover}
+.duo .a img{object-position:50% 30%}
+.duo .b img{object-position:55% 30%}
 .intro p{color:#3b3532;margin-top:18px;max-width:520px}
 .sign{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:2.1rem;margin-top:24px}
 
 /* formules */
-.f{background:var(--terra);color:var(--creme)}
+.f{background:var(--terra);color:var(--ink)}
 .f .head{text-align:center;margin-bottom:60px}
-.f .head p{max-width:640px;margin:22px auto 0;color:var(--creme)}
-.f .kick{color:var(--peche)}
-.cols{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #f5f1ef55}
-.cols article{padding:48px 34px;border-right:1px solid #f5f1ef55;display:flex;flex-direction:column;gap:16px;transition:background .5s}
+.f .head p{max-width:640px;margin:22px auto 0;color:var(--ink)}
+.f .kick{color:var(--ink);font-weight:400}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #1a1a1a40}
+.cols article{padding:48px 34px;border-right:1px solid #1a1a1a40;display:flex;flex-direction:column;gap:16px;transition:background .5s}
 .cols article:hover{background:#0000000f}
 .cols article:last-child{border:0}
-.cols .n{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:2.6rem;color:var(--peche);line-height:1}
+.cols .n{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:2.6rem;color:var(--creme);line-height:1}
 .cols h3{font-size:2rem}
-.cols p{color:var(--creme);font-size:.95rem}
-.cols .inc{color:var(--peche);margin-top:6px}
-.cols ul{list-style:none;color:var(--creme);font-size:.9rem}
-.cols li{padding:7px 0 7px 18px;border-top:1px solid #f5f1ef40;position:relative;line-height:1.5}
-.cols li::before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--peche)}
-.cols a{margin-top:auto;padding-top:18px;color:var(--peche);align-self:flex-start;border-bottom:1px solid;line-height:1.6}
-.cols a:hover{color:var(--creme)}
-.f .outro{text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.4rem,2.4vw,1.9rem);margin-top:54px;color:var(--creme)}
+.cols p{color:var(--ink);font-size:.95rem}
+.cols .inc{color:var(--ink);font-weight:400;margin-top:6px}
+.cols ul{list-style:none;color:var(--ink);font-size:.9rem}
+.cols li{padding:7px 0 7px 18px;border-top:1px solid #1a1a1a30;position:relative;line-height:1.5}
+.cols li::before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--creme)}
+.cols a{margin-top:auto;padding-top:18px;color:var(--ink);font-weight:400;align-self:flex-start;border-bottom:1px solid;line-height:1.6}
+.cols a:hover{color:var(--creme);border-color:var(--creme)}
+.f .outro{text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.4rem,2.4vw,1.9rem);margin-top:54px;color:var(--ink)}
 
 /* parcours */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:56px}
@@ -122,7 +124,11 @@ h2 em{font-style:italic}
 .contact .l{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:38px}
 .contact .l a{border-bottom:1px solid transparent}
 .contact .l a:hover{border-color:var(--ink)}
-footer{padding:26px var(--pad);display:flex;justify-content:space-between;font-size:.78rem;color:var(--soft);flex-wrap:wrap;gap:10px}
+footer{background:var(--terra);padding:26px var(--pad);display:flex;justify-content:space-between;font-size:.78rem;color:var(--ink);flex-wrap:wrap;gap:10px}
+footer .credits{flex-basis:100%;font-size:.72rem}
+/* crédits photo */
+.cr{position:absolute;right:8px;bottom:6px;z-index:2;font-size:.62rem;letter-spacing:.04em;color:#fff;text-shadow:0 0 4px #000a,0 0 1px #000;opacity:.9;pointer-events:none;line-height:1.3}
+.arch .photo,.gal figure{position:relative}
 
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
 .reveal.seen{opacity:1;transform:none}
@@ -133,7 +139,7 @@ nav ul{display:none}
 .hero{padding-top:34px;gap:50px}
 .arch{width:min(340px,86%)}
 .seal{left:-18px;width:96px;height:96px}
-.cols article{border-right:0;border-bottom:1px solid #f5f1ef55}
+.cols article{border-right:0;border-bottom:1px solid #1a1a1a40}
 .gal{grid-template-columns:1fr 1fr;gap:10px;grid-auto-flow:dense;grid-auto-rows:calc((100cqw - 10px) / 2 * .68)}
 .cols article{padding:40px 24px}
 .duo{height:auto;aspect-ratio:1/1.12}
@@ -153,12 +159,12 @@ nav .btn{padding:11px 16px;font-size:.62rem;letter-spacing:.2em}
 <header class="hero">
   <div class="txt">
     <span class="cap">Wedding planner · La Réunion</span>
-    <h1>Un mariage<br>qui te<br>ressemble.<span>Ju &amp; You</span></h1>
-    <p>Tu te maries à La Réunion&nbsp;? Je t'accompagne pour créer ensemble un mariage qui vous ressemble.</p>
-    <div class="acts"><a class="btn fill cap" href="#contact">Parlons de ton mariage</a><a class="btn cap" href="#formules">Découvrir les packages</a></div>
+    <h1>Un mariage<br>qui vous<br>ressemble.<span>Ju &amp; You</span></h1>
+    <p>Vous vous mariez à La Réunion&nbsp;? Je vous accompagne pour créer ensemble un mariage qui vous ressemble.</p>
+    <div class="acts"><a class="btn fill cap" href="#contact">Parlons de votre mariage</a><a class="btn cap" href="#formules">Découvrir les packages</a></div>
   </div>
   <div class="arch">
-    <div class="photo"><img src="img/hero-dsc3743.jpg" alt="Le marié soulève sa mariée pour un baiser, près d'un scooter blanc fleuri, sous les palmiers"></div>
+    <div class="photo"><img src="img/hero-dsc3743.jpg" alt="Le marié soulève sa mariée pour un baiser, près d'un scooter blanc fleuri, sous les palmiers"><span class="cr">© vg.photographe</span></div>
     <div class="seal"><img src="img/logo.jpg" alt="Badge Ju &amp; You Wedding Planner"></div>
   </div>
 </header>
@@ -169,14 +175,14 @@ nav .btn{padding:11px 16px;font-size:.62rem;letter-spacing:.2em}
 
 <section class="intro" id="histoire">
   <div class="duo reveal">
-    <img class="a" src="img/bienvenue-fanny-495.jpg" alt="Des mariés complices en lunettes de soleil, ombrelle rose et bouquet coloré" loading="lazy">
-    <img class="b" src="img/juliette-20.jpg" alt="Juliette, wedding planner Ju &amp; You, tout sourire" loading="lazy">
+    <div class="a"><img src="img/bienvenue-fanny-495.jpg" alt="Des mariés complices en lunettes de soleil, ombrelle rose et bouquet coloré" loading="lazy"><span class="cr">© Fanny Tiara Photographie</span></div>
+    <div class="b"><img src="img/juliette-20.jpg" alt="Juliette, wedding planner Ju &amp; You, tout sourire" loading="lazy"><span class="cr">© Carmen Legros</span></div>
   </div>
   <div class="reveal">
     <span class="cap kick">Bienvenue</span>
-    <h2>Ton histoire d'abord, <em>le reste suit.</em></h2>
+    <h2>Votre histoire d'abord, <em>le reste suit.</em></h2>
     <p>Chaque couple a sa façon d'aimer, ses invités, ses traditions et l'île qu'il a choisie. Mon rôle : partir de tout ça pour créer, ensemble, un mariage qui vous ressemble.</p>
-    <p>Je m'occupe de ce qui se voit, et de tout ce qui doit rester invisible, pour que tu vives ton jour&nbsp;J le cœur léger.</p>
+    <p>Je m'occupe de ce qui se voit, et de tout ce qui doit rester invisible, pour que vous viviez votre jour&nbsp;J le cœur léger.</p>
     <p>Après 25 ans d'expérience dans l'organisation d'évènements, dans des établissements de prestige, l'hôtellerie-restauration et le tourisme, je me consacre pleinement à ma passion&nbsp;: créer des mariages uniques et sur mesure, tels que vous les rêvez.</p>
     <div class="sign">Juliette</div>
   </div>
@@ -185,7 +191,7 @@ nav .btn{padding:11px 16px;font-size:.62rem;letter-spacing:.2em}
 <section class="f" id="formules">
   <div class="head reveal"><span class="cap kick">Mes packages</span><h2>Choisissez votre <em>niveau d'accompagnement</em></h2><p>Pour vous accompagner avec dynamisme, disponibilité et réactivité, et faire de votre mariage une journée exceptionnelle, remplie d'émotions, de moments inoubliables et de magie.</p></div>
   <div class="cols reveal">
-    <article><span class="n">01</span><h3>Mariage en toute sérénité</h3><p>Confiez-moi l'organisation, gardez le plaisir des choix. Ensemble, on façonne votre mariage à votre image.</p><span class="cap inc">Ce package comprend</span><ul><li>Rendez-vous découverte pour cerner vos envies</li><li>Conseils &amp; accompagnement tout au long des préparatifs</li><li>Recherche &amp; sélection des prestataires adaptés</li><li>Suivi &amp; optimisation du budget</li><li>Élaboration du planning détaillé de votre journée</li><li>Présence et coordination du Jour J</li></ul><a class="cap" href="#contact">Racontez-moi votre projet</a></article>
+    <article><span class="n">01</span><h3>Mariage en toute sérénité</h3><p>Confiez-moi l'organisation, gardez le plaisir des choix. Ensemble, nous façonnons votre mariage à votre image.</p><span class="cap inc">Ce package comprend</span><ul><li>Rendez-vous découverte pour cerner vos envies</li><li>Conseils &amp; accompagnement tout au long des préparatifs</li><li>Recherche &amp; sélection des prestataires adaptés</li><li>Suivi &amp; optimisation du budget</li><li>Élaboration du planning détaillé de votre journée</li><li>Présence et coordination du Jour J</li></ul><a class="cap" href="#contact">Racontez-moi votre projet</a></article>
     <article><span class="n">02</span><h3>Main dans la main</h3><p>Ce package s'adresse aux couples qui ont déjà bien avancé dans leurs préparatifs et qui souhaitent un coup de main pour finaliser l'organisation.</p><span class="cap inc">Ce package comprend</span><ul><li>Rendez-vous découverte</li><li>Conseils &amp; accompagnement</li><li>Recherche et sélection des derniers prestataires (4 maximum)</li><li>Suivi &amp; optimisation du budget</li><li>Élaboration du planning détaillé de votre journée</li><li>Présence et coordination du Jour J</li></ul><a class="cap" href="#contact">Racontez-moi votre projet</a></article>
     <article><span class="n">03</span><h3>Coordination du Jour J</h3><p>Vous avez bouclé l'organisation de votre mariage et vous souhaitez profiter pleinement de votre journée&nbsp;: la coordination du Jour J est faite pour vous.</p><span class="cap inc">Ce package comprend</span><ul><li>Rendez-vous découverte</li><li>Visite technique du lieu pour anticiper l'organisation</li><li>Prise de contact avec tous les prestataires pour finaliser les détails</li><li>Élaboration du planning détaillé de votre journée</li><li>Présence et coordination du Jour J jusqu'au dessert</li></ul><a class="cap" href="#contact">Racontez-moi votre projet</a></article>
   </div>
@@ -195,37 +201,40 @@ nav .btn{padding:11px 16px;font-size:.62rem;letter-spacing:.2em}
 <section id="parcours">
   <div class="reveal"><span class="cap kick">Le parcours</span><h2>Simple, comme <em>une belle journée.</em></h2></div>
   <div class="steps reveal">
-    <div><b>I.</b><h3>Rencontre</h3><p>On fait connaissance et tu me racontes ton projet.</p></div>
-    <div><b>II.</b><h3>Création</h3><p>On définit ensemble l'ambiance, le budget et vos envies.</p></div>
+    <div><b>I.</b><h3>Rencontre</h3><p>Nous faisons connaissance et vous me racontez votre projet.</p></div>
+    <div><b>II.</b><h3>Création</h3><p>Nous définissons ensemble l'ambiance, le budget et vos envies.</p></div>
     <div><b>III.</b><h3>Préparation</h3><p>Prestataires, planning, détails : je coordonne tout.</p></div>
-    <div><b>IV.</b><h3>Jour J</h3><p>Tu profites de chaque instant, je veille sur le reste.</p></div>
+    <div><b>IV.</b><h3>Jour J</h3><p>Vous profitez de chaque instant, je veille sur le reste.</p></div>
   </div>
 </section>
 
 <section id="univers" style="padding-top:0">
   <div class="reveal"><span class="cap kick">L'univers Ju &amp; You</span><h2>Des histoires <em>à La Réunion</em></h2></div>
   <div class="galwrap"><div class="gal reveal">
-    <figure class="l"><img src="img/gal-barque.jpg" alt="Vue du ciel : les mariés dans une barque fleurie sur une eau turquoise" style="object-position:50% 50%" loading="lazy"></figure>
-    <figure class="p"><img src="img/gal-chapiteau.jpg" alt="Les mariés sous un grand chapiteau illuminé de guirlandes, à la tombée du jour" style="object-position:50% 50%" loading="lazy"></figure>
-    <figure class="p"><img src="img/gal-couple-dos.jpg" alt="Les mariés main dans la main face au paysage, entre les fleurs rouges et jaunes" style="object-position:50% 60%" loading="lazy"></figure>
-    <figure class="p"><img src="img/gal-arche-nb.jpg" alt="Les mariés assis sous une arche fleurie, photo en noir et blanc" style="object-position:50% 50%" loading="lazy"></figure>
-    <figure class="l"><img src="img/gal-parapluie.jpg" alt="Couple enlacé sous un grand arbre, voile de mariée au vent" style="object-position:50% 45%" loading="lazy"></figure>
-    <figure class="p"><img src="img/gal-table.jpg" alt="Table de réception dressée avec fleurs roses et vaisselle dorée" style="object-position:50% 50%" loading="lazy"></figure>
-    <figure class="p"><img src="img/gal-lunettes.jpg" alt="Les mariés tout sourire sur un scooter" style="object-position:50% 45%" loading="lazy"></figure>
-    <figure class="p"><img src="img/gal-ceremonie.jpg" alt="Cérémonie en plein air : les mariés émus sous un drapé rose" style="object-position:40% 50%" loading="lazy"></figure>
-    <figure class="l"><img src="img/gal-ombrelles.jpg" alt="Robes colorées et ombrelles blanches suspendues pour la séance photo" style="object-position:50% 40%" loading="lazy"></figure>
+    <figure class="l"><img src="img/gal-barque.jpg" alt="Vue du ciel : les mariés dans une barque fleurie sur une eau turquoise" style="object-position:50% 50%" loading="lazy"><span class="cr">© Mathieu Dete</span></figure>
+    <figure class="p"><img src="img/gal-chapiteau.jpg" alt="Les mariés sous un grand chapiteau illuminé de guirlandes, à la tombée du jour" style="object-position:50% 50%" loading="lazy"><span class="cr">© insulae_misceo</span></figure>
+    <figure class="p"><img src="img/gal-couple-dos.jpg" alt="Les mariés main dans la main face au paysage, entre les fleurs rouges et jaunes" style="object-position:50% 60%" loading="lazy"><span class="cr">© Fanny Tiara Photographie</span></figure>
+    <figure class="p"><img src="img/gal-arche-nb.jpg" alt="Les mariés assis sous une arche fleurie, photo en noir et blanc" style="object-position:50% 50%" loading="lazy"><span class="cr">© Mathieu Dete</span></figure>
+    <figure class="l"><img src="img/gal-parapluie.jpg" alt="Couple enlacé sous un grand arbre, voile de mariée au vent" style="object-position:50% 45%" loading="lazy"><span class="cr">© insulae_misceo</span></figure>
+    <figure class="p"><img src="img/gal-table.jpg" alt="Table de réception dressée, fleurs et vaisselle dorée" style="object-position:50% 50%" loading="lazy"><span class="cr">© Carmen Legros</span></figure>
+    <figure class="p"><img src="img/gal-lunettes.jpg" alt="Les mariés tout sourire sur un scooter" style="object-position:50% 45%" loading="lazy"><span class="cr">© vg.photographe</span></figure>
+    <figure class="p"><img src="img/gal-voiture.jpg" alt="Les mariés devant une voiture ancienne, au bout d'une allée arborée" style="object-position:50% 50%" loading="lazy"></figure>
+    <figure class="l"><img src="img/gal-ombrelles.jpg" alt="Robes colorées et ombrelles blanches pour la séance photo" style="object-position:50% 40%" loading="lazy"><span class="cr">© Fanny Tiara Photographie</span></figure>
+    <figure class="l"><img src="img/gal-attelage.jpg" alt="La mariée près d'une charrette attelée, au cœur de la campagne" style="object-position:50% 50%" loading="lazy"></figure>
+    <figure class="p"><img src="img/gal-charrette.jpg" alt="Charrette ancienne habillée de fleurs roses et blanches" style="object-position:50% 50%" loading="lazy"></figure>
+    <figure class="p"><img src="img/gal-alliances-nb.jpg" alt="Les mains des mariés et leurs alliances, en noir et blanc" style="object-position:50% 50%" loading="lazy"></figure>
   </div></div>
   <div class="ig"><a class="btn cap" href="https://www.instagram.com/juyouweddingplanner" target="_blank" rel="noopener">Voir plus sur @juyouweddingplanner</a></div>
 </section>
 
 <section class="contact" id="contact">
-  <span class="cap">Tu te maries à La Réunion&nbsp;?</span>
+  <span class="cap">Vous vous mariez à La Réunion&nbsp;?</span>
   <h2 class="reveal">Et si on en parlait ensemble ?</h2>
-  <p>Raconte-moi ton projet, on crée ensemble un mariage qui vous ressemble.</p>
+  <p>Racontez-moi votre projet, et créons ensemble un mariage qui vous ressemble.</p>
   <a class="btn fill cap" href="mailto:jyweddingplan@gmail.com">Écrire à Juliette</a>
   <div class="l cap"><a href="mailto:jyweddingplan@gmail.com">jyweddingplan@gmail.com</a><a href="tel:+262693132805">+262 693 13 28 05</a><a href="https://www.instagram.com/juyouweddingplanner" target="_blank" rel="noopener">Instagram</a></div>
 </section>
-<footer><span>© Ju &amp; You Wedding Planner · L'Étang-Salé, La Réunion</span><span>Maquette privée réalisée par Jonathan avec les textes et photos de Juliette (dont Fanny Tiara Photographie).</span></footer>
+<footer><span>© Ju &amp; You Wedding Planner · L'Étang-Salé, La Réunion</span><span>Maquette privée réalisée par Jonathan avec les textes et photos de Juliette.</span><span class="credits">Photos&nbsp;: vg.photographe · Fanny Tiara Photographie · Carmen Legros · Mathieu Dete · insulae_misceo</span></footer>
 <script>
 (function(){
   var els=document.querySelectorAll(".reveal");
